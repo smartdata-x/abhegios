@@ -5,11 +5,36 @@
 
 #import "WBLogin.h"
 #import "WeiboSDK.h"
-
+#define kRedirectURI @"https://api.weibo.com/oauth2/default.html"
+#define kWeiboUserShowURI @"https://api.weibo.com/2/users/show.json"
+@interface WBLogin()<WeiboSDKDelegate>
+@end
 
 @implementation WBLogin {
-
+    WBAuthorizeResponse *_authorizeResponse;
 }
+- (void)login {
+    WBAuthorizeRequest *request = [WBAuthorizeRequest request];
+    request.redirectURI = kRedirectURI;
+    request.scope = @"all";
+    request.userInfo = @{@"SSO_From": @"LoginTableViewController",
+            @"Other_Info_1": [NSNumber numberWithInt:123],
+            @"Other_Info_2": @[@"obj1", @"obj2"],
+            @"Other_Info_3": @{@"key1": @"obj1", @"key2": @"obj2"}};
+
+
+    [WeiboSDK sendRequest:request];
+}
+
+- (id)init:(Login_Source)source {
+    self = [super init:source];
+    if (self) {
+        [WeiboSDK registerApp:kWeiboAppID];
+    }
+
+    return self;
+}
+
 
 -(NSString*) getKey
 {
@@ -18,5 +43,46 @@
 -(BOOL) handleOpenURL:(NSURL *)url
 {
     return [WeiboSDK handleOpenURL:url delegate:self];
+}
+
+-(void) didReceiveWeiboResponse:(WBBaseResponse *)response
+{
+    if ([response isKindOfClass:WBAuthorizeResponse.class])
+    {
+        switch (response.statusCode) {
+            case WeiboSDKResponseStatusCodeSuccess:{//成功
+                _authorizeResponse = (WBAuthorizeResponse*)response;
+                 _loginInfo.session = _authorizeResponse.userID;
+
+                break;
+            }
+            case WeiboSDKResponseStatusCodeUserCancel://用户取消发送
+                [self didStrError:@"您取消了微博登录！！"];
+                break;
+            case WeiboSDKResponseStatusCodeSentFail://发送失败
+                [self didStrError:@"发送失败！"];
+                break;
+            case WeiboSDKResponseStatusCodeAuthDeny://授权失败
+                [self didStrError:@"授权失败\n尚未安装微博客户端程序！"];
+                break;
+            case WeiboSDKResponseStatusCodeUserCancelInstall://用户取消安装微博客户端
+                [self didStrError:@"用户取消安装微博客户端！"];
+                break;
+            case WeiboSDKResponseStatusCodeUnsupport://不支持的请求
+                [self didStrError:@"不支持的请求！"];
+                break;
+            default:
+                break;
+        }
+    }
+}
+
+-(void) didWBUserInfo:(NSDictionary*) wbUserInfo;
+{
+    [_loginInfo setNickname:[wbUserInfo objectForKey:@"screen_name"]];
+    [_loginInfo setBirthday: [wbUserInfo objectForKey:@"year"]];
+    [_loginInfo setHead:[wbUserInfo objectForKey:@"avatar_large"]];
+    [_loginInfo setLocation:[NSString stringWithFormat:@"%@",[wbUserInfo objectForKey:@"location"]]];
+    [_loginInfo setSex:[wbUserInfo objectForKey:@"gender"]];
 }
 @end

@@ -12,6 +12,7 @@
 		1AD6407932CF4CF9417DEF43 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AD64688EC1876C19A332D96 /* Info.plist */; };
 		1AD640B8FC0E65AABA263577 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64E62E8BF24E1E8CAFF9B /* SecondViewController.m */; };
 		1AD640D53115EC417A230BDD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AD644FB93BF0B06901FCD5E /* LaunchScreen.xib */; };
+		1AD6414DA6EE3852763DFC2D /* NSString+NSStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64427A49BA909B4E8785B /* NSString+NSStringCategory.m */; };
 		1AD6419EC3E465BEDDED654B /* WXLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64BA5F04C0E11205B12FF /* WXLogin.m */; };
 		1AD641A9B657652F6B6DCAAB /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD6400B313AC7FEE3D78518 /* libWeChatSDK.a */; };
 		1AD641D66B96305DB64E42F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD6437A050D67745B214ABC /* main.m */; };
@@ -49,6 +50,7 @@
 		1AD6430F93A186116AD7355C /* TencentApiInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TencentApiInterface.h; sourceTree = "<group>"; };
 		1AD6432947FE4430D644F23B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1AD6437A050D67745B214ABC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1AD64427A49BA909B4E8785B /* NSString+NSStringCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringCategory.m"; sourceTree = "<group>"; };
 		1AD64449F648BB6A56A09C54 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		1AD644987F2FAB7C23365EC3 /* TencentOAuthObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TencentOAuthObject.h; sourceTree = "<group>"; };
 		1AD645258726FA3EC5005605 /* ILogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILogin.h; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 		1AD647E1033918C7E5AE25A2 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		1AD64811342BC7DCF625AF76 /* HelperProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelperProtocol.h; sourceTree = "<group>"; };
 		1AD6482492CCDF431E3E73F8 /* QQApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQApi.h; sourceTree = "<group>"; };
+		1AD6483601E377850FE6F46C /* NSString+NSStringCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSStringCategory.h"; sourceTree = "<group>"; };
 		1AD6485A940C71B93C1841E6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		1AD648C331E9E9DEE2764A4D /* UserHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserHelper.h; sourceTree = "<group>"; };
 		1AD64906666AE7E8636FF430 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
@@ -199,8 +202,18 @@
 				1AD64312167A9B94F9502A10 /* User */,
 				1AD64E767514ABADB117A29B /* Entity */,
 				1AD647813E42C6C0F8BDFC97 /* abhegios-Prefix.pch */,
+				1AD647F0115B5FF608FC515B /* Comm */,
 			);
 			path = Class;
+			sourceTree = "<group>";
+		};
+		1AD644B03C45E3DC5CB1038F /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				1AD6483601E377850FE6F46C /* NSString+NSStringCategory.h */,
+				1AD64427A49BA909B4E8785B /* NSString+NSStringCategory.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		1AD645DB90778183AB08ECFD /* WX */ = {
@@ -218,6 +231,14 @@
 			children = (
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		1AD647F0115B5FF608FC515B /* Comm */ = {
+			isa = PBXGroup;
+			children = (
+				1AD644B03C45E3DC5CB1038F /* Category */,
+			);
+			path = Comm;
 			sourceTree = "<group>";
 		};
 		1AD6494C57C1C431706C77B5 /* User */ = {
@@ -446,6 +467,7 @@
 				1AD64625B4F594E287714029 /* QQLogin.m in Sources */,
 				1AD6419EC3E465BEDDED654B /* WXLogin.m in Sources */,
 				1AD64DA54158CF05FAE8F2A6 /* WBLogin.m in Sources */,
+				1AD6414DA6EE3852763DFC2D /* NSString+NSStringCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

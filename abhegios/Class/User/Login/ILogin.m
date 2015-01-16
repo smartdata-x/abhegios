@@ -36,6 +36,13 @@
         [self.delegate didLoginError:err];
 }
 
+-(void) didStrError:(NSString*) err
+{
+    NSDictionary *userInfo = [NSDictionary dictionaryWithObject:err forKey:NSLocalizedDescriptionKey];
+    NSError *error = [NSError errorWithDomain:@"com.user.login" code:-1 userInfo:userInfo];
+    [self didError:error];
+}
+
 @end
 
 

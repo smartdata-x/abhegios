@@ -7,6 +7,8 @@
 #import "ThirdLoginInfo.h"
 #import "HandleOpenURLHelper.h"
 
+#define LOGIN_ERROR @"登录失败！"
+#define NOT_NETWORK @"无网络连接，请设置网络!"
 typedef NS_ENUM(NSInteger, Login_Source) {
     WeiboLogin_Source = 1,
     WXLogin_Source = 2,
@@ -20,6 +22,7 @@ typedef NS_ENUM(NSInteger, Login_Source) {
 -(void) didLoginStart;
 -(void) didLoginOk:(User*) user;
 -(void) didLoginError:(NSError*) err;
+
 @end
 
 @interface ILogin : NSObject
@@ -28,6 +31,7 @@ typedef NS_ENUM(NSInteger, Login_Source) {
 -(void) didStart;
 -(void) didOk:(User*) user;
 -(void) didError:(NSError*) err;
+-(void) didStrError:(NSString*) err;
 @end
 
 @interface IThirdLogin : ILogin<HandleOpenURLDelegate>
