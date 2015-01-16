@@ -45,6 +45,10 @@
     return [WeiboSDK handleOpenURL:url delegate:self];
 }
 
+- (void)didReceiveWeiboRequest:(WBBaseRequest *)request {
+
+}
+
 -(void) didReceiveWeiboResponse:(WBBaseResponse *)response
 {
     if ([response isKindOfClass:WBAuthorizeResponse.class])

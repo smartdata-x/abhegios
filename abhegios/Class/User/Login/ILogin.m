@@ -27,12 +27,12 @@
 
 - (void)didOk:(User *)user {
 
-    if ([self.delegate respondsToSelector:@selector(didLoginOk)])
+    if ([self.delegate respondsToSelector:@selector(didLoginOk:)])
         [self.delegate didLoginOk:user];
 }
 
 - (void)didError:(NSError *)err {
-    if ([self.delegate respondsToSelector:@selector(didLoginError)])
+    if ([self.delegate respondsToSelector:@selector(didLoginError:)])
         [self.delegate didLoginError:err];
 }
 
@@ -73,5 +73,12 @@
     [[HandleOpenURLHelper shared] removeHandleDelegate:self];
 }
 
+- (BOOL)handleOpenURL:(NSURL *)url {
+    return NO;
+}
+
+- (NSString *)getKey {
+    return @"nil";
+}
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIImage.h>
 /////////////////////////////////////////////////////////////
 
 enum  WXErrCode {

@@ -35,6 +35,19 @@
 		1AD64DA54158CF05FAE8F2A6 /* WBLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64ADF6021C604900147BF /* WBLogin.m */; };
 		1AD64FD02129F4B4779CC864 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AD647E1033918C7E5AE25A2 /* close.png */; };
 		1AD64FFC32CBAE27C98D3718 /* BaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD647A4E5E362E78DE97404 /* BaseEntity.m */; };
+		EA8E8F4E1A68F07500FEA027 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F4D1A68F07500FEA027 /* UIKit.framework */; };
+		EA8E8F551A68F11800FEA027 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F4F1A68F0E600FEA027 /* Foundation.framework */; };
+		EA8E8F561A68F13300FEA027 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F511A68F11000FEA027 /* CoreFoundation.framework */; };
+		EA8E8F571A68F13300FEA027 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F521A68F11000FEA027 /* CoreGraphics.framework */; };
+		EA8E8F5A1A68F17E00FEA027 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F581A68F17100FEA027 /* OpenGLES.framework */; };
+		EA8E8F5D1A68F25100FEA027 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F5B1A68F23300FEA027 /* TencentOpenAPI.framework */; };
+		EA8E8F601A68F2EA00FEA027 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F5E1A68F2C900FEA027 /* CoreTelephony.framework */; };
+		EA8E8F631A68F33800FEA027 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F611A68F31300FEA027 /* QuartzCore.framework */; };
+		EA8E8F661A68F34F00FEA027 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F641A68F34600FEA027 /* SystemConfiguration.framework */; };
+		EA8E8F691A68F46800FEA027 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F671A68F45D00FEA027 /* CoreImage.framework */; };
+		EA8E8F6B1A68F54400FEA027 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F6A1A68F54400FEA027 /* libsqlite3.dylib */; };
+		EA8E8F6D1A68F56000FEA027 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F6C1A68F56000FEA027 /* libz.1.1.3.dylib */; };
+		EA8E8F6F1A68F5E000FEA027 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F6E1A68F5E000FEA027 /* libstdc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +108,19 @@
 		1AD64EC338CEFF6147A40C44 /* success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = success.png; sourceTree = "<group>"; };
 		1AD64FDCA86FD9856133C0D9 /* qqicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qqicon.png; sourceTree = "<group>"; };
 		EA83390D1A68B04200F3A9E9 /* abhegios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = abhegios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA8E8F4D1A68F07500FEA027 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EA8E8F4F1A68F0E600FEA027 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EA8E8F511A68F11000FEA027 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		EA8E8F521A68F11000FEA027 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EA8E8F581A68F17100FEA027 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		EA8E8F5B1A68F23300FEA027 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TencentOpenAPI.framework; path = Class/Third/Tencent/TencentOpenAPI.framework; sourceTree = "<group>"; };
+		EA8E8F5E1A68F2C900FEA027 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		EA8E8F611A68F31300FEA027 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EA8E8F641A68F34600FEA027 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EA8E8F671A68F45D00FEA027 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		EA8E8F6A1A68F54400FEA027 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		EA8E8F6C1A68F56000FEA027 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		EA8E8F6E1A68F5E000FEA027 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +128,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA8E8F6F1A68F5E000FEA027 /* libstdc++.dylib in Frameworks */,
+				EA8E8F6D1A68F56000FEA027 /* libz.1.1.3.dylib in Frameworks */,
+				EA8E8F6B1A68F54400FEA027 /* libsqlite3.dylib in Frameworks */,
+				EA8E8F631A68F33800FEA027 /* QuartzCore.framework in Frameworks */,
+				EA8E8F601A68F2EA00FEA027 /* CoreTelephony.framework in Frameworks */,
+				EA8E8F5D1A68F25100FEA027 /* TencentOpenAPI.framework in Frameworks */,
+				EA8E8F5A1A68F17E00FEA027 /* OpenGLES.framework in Frameworks */,
+				EA8E8F661A68F34F00FEA027 /* SystemConfiguration.framework in Frameworks */,
+				EA8E8F561A68F13300FEA027 /* CoreFoundation.framework in Frameworks */,
+				EA8E8F571A68F13300FEA027 /* CoreGraphics.framework in Frameworks */,
+				EA8E8F551A68F11800FEA027 /* Foundation.framework in Frameworks */,
+				EA8E8F691A68F46800FEA027 /* CoreImage.framework in Frameworks */,
+				EA8E8F4E1A68F07500FEA027 /* UIKit.framework in Frameworks */,
 				1AD641A9B657652F6B6DCAAB /* libWeChatSDK.a in Frameworks */,
 				1AD6424E41815985501DAFD3 /* libWeiboSDK.a in Frameworks */,
 			);
@@ -274,6 +313,19 @@
 		1AD64A771B77170782A88465 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				EA8E8F6E1A68F5E000FEA027 /* libstdc++.dylib */,
+				EA8E8F6C1A68F56000FEA027 /* libz.1.1.3.dylib */,
+				EA8E8F6A1A68F54400FEA027 /* libsqlite3.dylib */,
+				EA8E8F671A68F45D00FEA027 /* CoreImage.framework */,
+				EA8E8F641A68F34600FEA027 /* SystemConfiguration.framework */,
+				EA8E8F611A68F31300FEA027 /* QuartzCore.framework */,
+				EA8E8F5E1A68F2C900FEA027 /* CoreTelephony.framework */,
+				EA8E8F5B1A68F23300FEA027 /* TencentOpenAPI.framework */,
+				EA8E8F581A68F17100FEA027 /* OpenGLES.framework */,
+				EA8E8F511A68F11000FEA027 /* CoreFoundation.framework */,
+				EA8E8F521A68F11000FEA027 /* CoreGraphics.framework */,
+				EA8E8F4F1A68F0E600FEA027 /* Foundation.framework */,
+				EA8E8F4D1A68F07500FEA027 /* UIKit.framework */,
 			);
 			name = Framework;
 			sourceTree = "<group>";
@@ -573,6 +625,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/abhegios/Class/Third/Tencent",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "abhegios/Class/abhegios-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/abhegios/Resources/Info.plist";
@@ -591,6 +647,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/abhegios/Class/Third/Tencent",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "abhegios/Class/abhegios-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/abhegios/Resources/Info.plist";

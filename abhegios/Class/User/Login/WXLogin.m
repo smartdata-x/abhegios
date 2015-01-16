@@ -79,4 +79,5 @@
     return kWXAppID;
 }
 
+
 @end
