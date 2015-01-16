@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "HandleOpenURLHelper.h"
 
 @interface AppDelegate ()
 
@@ -41,5 +42,12 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return [[HandleOpenURLHelper shared] handleOpenURL:url];
+}
+
 
 @end

@@ -10,26 +10,39 @@
 		1AD64049F3F7AA6F294AAE32 /* error.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AD649A2F2D6D83B5DB8AB91 /* error.png */; };
 		1AD64077DE8389AC54925C71 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AD642E117F70E24DD88C3BD /* Info.plist */; };
 		1AD6407932CF4CF9417DEF43 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AD64688EC1876C19A332D96 /* Info.plist */; };
+		1AD640B8FC0E65AABA263577 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64E62E8BF24E1E8CAFF9B /* SecondViewController.m */; };
 		1AD640D53115EC417A230BDD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AD644FB93BF0B06901FCD5E /* LaunchScreen.xib */; };
+		1AD6419EC3E465BEDDED654B /* WXLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64BA5F04C0E11205B12FF /* WXLogin.m */; };
 		1AD641A9B657652F6B6DCAAB /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD6400B313AC7FEE3D78518 /* libWeChatSDK.a */; };
 		1AD641D66B96305DB64E42F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD6437A050D67745B214ABC /* main.m */; };
 		1AD6424E41815985501DAFD3 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD64CC1D3FCEB41E30B3D46 /* libWeiboSDK.a */; };
 		1AD6444BCD81D3E62537781A /* qqicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AD64FDCA86FD9856133C0D9 /* qqicon.png */; };
+		1AD6455F3CEB60EEE78C0C77 /* UserHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD6408FC527AE4826BBFD19 /* UserHelper.m */; };
+		1AD64565F18F3ED26CC48D25 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64906666AE7E8636FF430 /* User.m */; };
 		1AD6460C6803B48F071D6E89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AD6432947FE4430D644F23B /* Images.xcassets */; };
+		1AD64625B4F594E287714029 /* QQLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD646C9517398D2CE12BFE0 /* QQLogin.m */; };
 		1AD6466F8E60BA95319C4EF1 /* local.html in Resources */ = {isa = PBXBuildFile; fileRef = 1AD64755F74B126543E3297C /* local.html */; };
 		1AD6470ECF340D8FC98FD7FD /* success.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AD64EC338CEFF6147A40C44 /* success.png */; };
 		1AD6472DAB2AD1A2A898A90C /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AD6496ABCF0D1F28CE180AB /* close@2x.png */; };
+		1AD6472DE59595EBD1B1F8D0 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64568A8808045F8093DEC /* FirstViewController.m */; };
 		1AD64804C9FA33B5797A36AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD6492B19568EF4CBFC4EA6 /* AppDelegate.m */; };
 		1AD64850016A35AAE41E0C11 /* TencentOpenAPI in Resources */ = {isa = PBXBuildFile; fileRef = 1AD642C0A4FA8B5FB88F2722 /* TencentOpenAPI */; };
-		1AD649404878134E54E2856C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64D5C0A2F22B7A21911AA /* FirstViewController.m */; };
+		1AD64903B17F5D12DC09D1BB /* ThirdLoginInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64A4A58510940FB83B455 /* ThirdLoginInfo.m */; };
+		1AD649CD0AF8969FFF4B9641 /* ILogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64D36FCBA289B16C1A832 /* ILogin.m */; };
 		1AD64A18A09DBE2DC5BE8086 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD64B4D5E1BC035B41C15E2 /* Main.storyboard */; };
-		1AD64A8763E3322F9FBB027A /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD647E2B2A1BBDF3EE993B6 /* SecondViewController.m */; };
+		1AD64A7E02E7FE36F6F1B45D /* HandleOpenURLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD641DD2208878E496A9A4D /* HandleOpenURLHelper.m */; };
+		1AD64DA54158CF05FAE8F2A6 /* WBLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64ADF6021C604900147BF /* WBLogin.m */; };
 		1AD64FD02129F4B4779CC864 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AD647E1033918C7E5AE25A2 /* close.png */; };
+		1AD64FFC32CBAE27C98D3718 /* BaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD647A4E5E362E78DE97404 /* BaseEntity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1AD6400B313AC7FEE3D78518 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		1AD6408FC527AE4826BBFD19 /* UserHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserHelper.m; sourceTree = "<group>"; };
+		1AD640F884FE1B88F0A9CA5F /* WXLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXLogin.h; sourceTree = "<group>"; };
+		1AD641DD2208878E496A9A4D /* HandleOpenURLHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandleOpenURLHelper.m; sourceTree = "<group>"; };
 		1AD641EE7503CA0E22DE8D2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = abhegios/Base.lproj/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
+		1AD64216AAA3AF60302C9D86 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		1AD64222AABA8F74FD6A4B06 /* sdkdef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sdkdef.h; sourceTree = "<group>"; };
 		1AD642C0A4FA8B5FB88F2722 /* TencentOpenAPI */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TencentOpenAPI; sourceTree = "<group>"; };
 		1AD642E117F70E24DD88C3BD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
@@ -38,27 +51,43 @@
 		1AD6437A050D67745B214ABC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1AD64449F648BB6A56A09C54 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		1AD644987F2FAB7C23365EC3 /* TencentOAuthObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TencentOAuthObject.h; sourceTree = "<group>"; };
+		1AD645258726FA3EC5005605 /* ILogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILogin.h; sourceTree = "<group>"; };
 		1AD64542409348C62ED06463 /* QQApiInterfaceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQApiInterfaceObject.h; sourceTree = "<group>"; };
+		1AD64568A8808045F8093DEC /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		1AD6457719B447546DFDBF31 /* WeiyunAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiyunAPI.h; sourceTree = "<group>"; };
+		1AD6467CD21BDFAB504D3527 /* ThirdLoginInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdLoginInfo.h; sourceTree = "<group>"; };
 		1AD64688EC1876C19A332D96 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
+		1AD646C9517398D2CE12BFE0 /* QQLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQLogin.m; sourceTree = "<group>"; };
 		1AD64755F74B126543E3297C /* local.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = local.html; sourceTree = "<group>"; };
+		1AD647813E42C6C0F8BDFC97 /* abhegios-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "abhegios-Prefix.pch"; sourceTree = "<group>"; };
+		1AD647A4E5E362E78DE97404 /* BaseEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseEntity.m; sourceTree = "<group>"; };
+		1AD647DF9B122EFEA68E6170 /* HandleOpenURLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandleOpenURLHelper.h; sourceTree = "<group>"; };
 		1AD647E1033918C7E5AE25A2 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
-		1AD647E2B2A1BBDF3EE993B6 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		1AD647EFE2BC2F6C2EA1E315 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		1AD64811342BC7DCF625AF76 /* HelperProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelperProtocol.h; sourceTree = "<group>"; };
 		1AD6482492CCDF431E3E73F8 /* QQApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQApi.h; sourceTree = "<group>"; };
-		1AD648B17E6589F47661ED7D /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		1AD6485A940C71B93C1841E6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		1AD648C331E9E9DEE2764A4D /* UserHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserHelper.h; sourceTree = "<group>"; };
+		1AD64906666AE7E8636FF430 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		1AD6492B19568EF4CBFC4EA6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1AD6492E835291780D12BA9F /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		1AD6496ABCF0D1F28CE180AB /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
 		1AD649A2F2D6D83B5DB8AB91 /* error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = error.png; sourceTree = "<group>"; };
+		1AD64A4A58510940FB83B455 /* ThirdLoginInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdLoginInfo.m; sourceTree = "<group>"; };
+		1AD64ADF6021C604900147BF /* WBLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBLogin.m; sourceTree = "<group>"; };
 		1AD64B734EC6BB4C73EA65F2 /* WeiBoAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiBoAPI.h; sourceTree = "<group>"; };
 		1AD64BA0EAC25B5DE5518049 /* QQApiInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQApiInterface.h; sourceTree = "<group>"; };
+		1AD64BA5F04C0E11205B12FF /* WXLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXLogin.m; sourceTree = "<group>"; };
+		1AD64BFCCE9AD6B9B8D4C795 /* BaseEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseEntity.h; sourceTree = "<group>"; };
 		1AD64BFFD81F6015240307A4 /* TencentOAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TencentOAuth.h; sourceTree = "<group>"; };
+		1AD64C0BB094B03E4664C418 /* QQLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQLogin.h; sourceTree = "<group>"; };
+		1AD64C19994BC814CEF48214 /* WBLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBLogin.h; sourceTree = "<group>"; };
 		1AD64CC1D3FCEB41E30B3D46 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
 		1AD64CF095795DD4A9A7E679 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
-		1AD64D5C0A2F22B7A21911AA /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		1AD64D36FCBA289B16C1A832 /* ILogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILogin.m; sourceTree = "<group>"; };
 		1AD64E2EBB91352776CFA0DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = abhegios/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		1AD64E4DA1F75B75C2D8692E /* TencentMessageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TencentMessageObject.h; sourceTree = "<group>"; };
 		1AD64E4E9A3FC7858429AD99 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1AD64E62E8BF24E1E8CAFF9B /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		1AD64E8024E42C94BF567A4E /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
 		1AD64EC338CEFF6147A40C44 /* success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = success.png; sourceTree = "<group>"; };
 		1AD64FDCA86FD9856133C0D9 /* qqicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qqicon.png; sourceTree = "<group>"; };
@@ -117,6 +146,29 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		1AD64203B2F7226234808742 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1AD64E62E8BF24E1E8CAFF9B /* SecondViewController.m */,
+				1AD64216AAA3AF60302C9D86 /* FirstViewController.h */,
+				1AD64568A8808045F8093DEC /* FirstViewController.m */,
+				1AD6492E835291780D12BA9F /* SecondViewController.h */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		1AD6423BCE5B69D4D865227B /* SharedHelper */ = {
+			isa = PBXGroup;
+			children = (
+				1AD64811342BC7DCF625AF76 /* HelperProtocol.h */,
+				1AD641DD2208878E496A9A4D /* HandleOpenURLHelper.m */,
+				1AD647DF9B122EFEA68E6170 /* HandleOpenURLHelper.h */,
+				1AD6408FC527AE4826BBFD19 /* UserHelper.m */,
+				1AD648C331E9E9DEE2764A4D /* UserHelper.h */,
+			);
+			path = SharedHelper;
+			sourceTree = "<group>";
+		};
 		1AD642444F343CF1D6EFBF04 /* TencentOpenAPI.framework */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,17 +179,26 @@
 			path = TencentOpenAPI.framework;
 			sourceTree = "<group>";
 		};
+		1AD64312167A9B94F9502A10 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				1AD64CAD5CD8F222AD40B6EB /* Login */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		1AD6431F4343F9E4FB9CA2CF /* Class */ = {
 			isa = PBXGroup;
 			children = (
 				1AD6492B19568EF4CBFC4EA6 /* AppDelegate.m */,
-				1AD648B17E6589F47661ED7D /* FirstViewController.h */,
 				1AD64E4E9A3FC7858429AD99 /* AppDelegate.h */,
-				1AD64D5C0A2F22B7A21911AA /* FirstViewController.m */,
-				1AD647E2B2A1BBDF3EE993B6 /* SecondViewController.m */,
-				1AD647EFE2BC2F6C2EA1E315 /* SecondViewController.h */,
 				1AD6437A050D67745B214ABC /* main.m */,
 				1AD64A22A31483C3558E4E0E /* Third */,
+				1AD6423BCE5B69D4D865227B /* SharedHelper */,
+				1AD64203B2F7226234808742 /* Main */,
+				1AD64312167A9B94F9502A10 /* User */,
+				1AD64E767514ABADB117A29B /* Entity */,
+				1AD647813E42C6C0F8BDFC97 /* abhegios-Prefix.pch */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -157,6 +218,17 @@
 			children = (
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		1AD6494C57C1C431706C77B5 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				1AD6467CD21BDFAB504D3527 /* ThirdLoginInfo.h */,
+				1AD64A4A58510940FB83B455 /* ThirdLoginInfo.m */,
+				1AD64906666AE7E8636FF430 /* User.m */,
+				1AD6485A940C71B93C1841E6 /* User.h */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		1AD64A22A31483C3558E4E0E /* Third */ = {
@@ -213,6 +285,21 @@
 			path = libWeiboSDK;
 			sourceTree = "<group>";
 		};
+		1AD64CAD5CD8F222AD40B6EB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1AD64D36FCBA289B16C1A832 /* ILogin.m */,
+				1AD645258726FA3EC5005605 /* ILogin.h */,
+				1AD646C9517398D2CE12BFE0 /* QQLogin.m */,
+				1AD64C0BB094B03E4664C418 /* QQLogin.h */,
+				1AD64BA5F04C0E11205B12FF /* WXLogin.m */,
+				1AD640F884FE1B88F0A9CA5F /* WXLogin.h */,
+				1AD64ADF6021C604900147BF /* WBLogin.m */,
+				1AD64C19994BC814CEF48214 /* WBLogin.h */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		1AD64D3A87E20CDBFABB3C6F /* Tencent */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +307,16 @@
 				1AD64012CED7FC5D229D02B8 /* TencentOpenApi_IOS_Bundle.bundle */,
 			);
 			path = Tencent;
+			sourceTree = "<group>";
+		};
+		1AD64E767514ABADB117A29B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				1AD6494C57C1C431706C77B5 /* User */,
+				1AD647A4E5E362E78DE97404 /* BaseEntity.m */,
+				1AD64BFCCE9AD6B9B8D4C795 /* BaseEntity.h */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		1AD64EDA5A9290F62330313D /* WeiboSDK.bundle */ = {
@@ -337,9 +434,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AD64804C9FA33B5797A36AC /* AppDelegate.m in Sources */,
-				1AD649404878134E54E2856C /* FirstViewController.m in Sources */,
-				1AD64A8763E3322F9FBB027A /* SecondViewController.m in Sources */,
 				1AD641D66B96305DB64E42F7 /* main.m in Sources */,
+				1AD64A7E02E7FE36F6F1B45D /* HandleOpenURLHelper.m in Sources */,
+				1AD640B8FC0E65AABA263577 /* SecondViewController.m in Sources */,
+				1AD6472DE59595EBD1B1F8D0 /* FirstViewController.m in Sources */,
+				1AD6455F3CEB60EEE78C0C77 /* UserHelper.m in Sources */,
+				1AD649CD0AF8969FFF4B9641 /* ILogin.m in Sources */,
+				1AD64903B17F5D12DC09D1BB /* ThirdLoginInfo.m in Sources */,
+				1AD64565F18F3ED26CC48D25 /* User.m in Sources */,
+				1AD64FFC32CBAE27C98D3718 /* BaseEntity.m in Sources */,
+				1AD64625B4F594E287714029 /* QQLogin.m in Sources */,
+				1AD6419EC3E465BEDDED654B /* WXLogin.m in Sources */,
+				1AD64DA54158CF05FAE8F2A6 /* WBLogin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +551,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "abhegios/Class/abhegios-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/abhegios/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -461,6 +569,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "abhegios/Class/abhegios-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/abhegios/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
