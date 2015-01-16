@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>DF068F5A-3D2A-4C11-A519-8967C59AE932</string>
+	<key>IDESourceControlProjectName</key>
+	<string>abhegios</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4368D80768DC2E9DF81F83623A659BB7DE86F942</key>
+		<string>https://github.com/miglabmiyo/abhegios</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>abhegios.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4368D80768DC2E9DF81F83623A659BB7DE86F942</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/miglabmiyo/abhegios</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>4368D80768DC2E9DF81F83623A659BB7DE86F942</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4368D80768DC2E9DF81F83623A659BB7DE86F942</string>
+			<key>IDESourceControlWCCName</key>
+			<string>abhegios</string>
+		</dict>
+	</array>
+</dict>
+</plist>
