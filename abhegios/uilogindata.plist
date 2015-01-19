@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>type</key>
+		<integer>4</integer>
+		<key>title</key>
+		<string>手机登录</string>
+		<key>icon</key>
+		<string>phone_ico</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>3</integer>
+		<key>title</key>
+		<string>QQ登录</string>
+		<key>icon</key>
+		<string>qq_ico</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>新浪微博登录</string>
+		<key>icon</key>
+		<string>weibo_ico</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>2</integer>
+		<key>title</key>
+		<string>微信登录</string>
+		<key>icon</key>
+		<string>weixin_ico</string>
+	</dict>
+	<dict>
+		<key>type</key>
+		<integer>5</integer>
+		<key>title</key>
+		<string>游客登录</string>
+		<key>icon</key>
+		<string>youke_ico</string>
+	</dict>
+</array>
+</plist>
