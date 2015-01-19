@@ -423,9 +423,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EA83390C1A68B04200F3A9E9 /* abhegios */ = {
+		EA83390C1A68B04200F3A9E9 /* abheg */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA8339331A68B04200F3A9E9 /* Build configuration list for PBXNativeTarget "abhegios" */;
+			buildConfigurationList = EA8339331A68B04200F3A9E9 /* Build configuration list for PBXNativeTarget "abheg" */;
 			buildPhases = (
 				EA8339091A68B04200F3A9E9 /* Sources */,
 				EA83390A1A68B04200F3A9E9 /* Frameworks */,
@@ -435,7 +435,7 @@
 			);
 			dependencies = (
 			);
-			name = abhegios;
+			name = abheg;
 			productName = abhegios;
 			productReference = EA83390D1A68B04200F3A9E9 /* abhegios.app */;
 			productType = "com.apple.product-type.application";
@@ -468,7 +468,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EA83390C1A68B04200F3A9E9 /* abhegios */,
+				EA83390C1A68B04200F3A9E9 /* abheg */,
 			);
 		};
 /* End PBXProject section */
@@ -673,7 +673,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EA8339331A68B04200F3A9E9 /* Build configuration list for PBXNativeTarget "abhegios" */ = {
+		EA8339331A68B04200F3A9E9 /* Build configuration list for PBXNativeTarget "abheg" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA8339341A68B04200F3A9E9 /* Debug */,

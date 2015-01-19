@@ -11,12 +11,9 @@
 @implementation LoginTableViewCell
 - (void)layoutSubviews {
     [super layoutSubviews];
-    CGRect rect =  [self.imageView frame];
-    rect.origin.x = kLeftOff;
-    [self.imageView setFrame:rect];
-    rect =  [self.textLabel frame];
-    rect.origin.x += kLeftOff;
-    [self.textLabel setFrame:rect];
+    [self.imageView setFrame:CGRectOffset([self.imageView frame],kLeftOff,0)];
+    [self.textLabel setFrame:CGRectOffset([self.textLabel frame],kLeftOff,0)];
+
 }
 
 @end
