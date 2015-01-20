@@ -26,4 +26,12 @@
 #define kWeiboSecret @"26f20d0827dc2b6abb37487ab00181a4"
 #define kWeiboRedirectURI @"http://42.121.14.108/abheg/sinaweibo/callback.php"
 
+
+#pragma mark - Screen相关
+#define kMainScreenFrame [[UIScreen mainScreen] bounds]
+#define kMainScreenWidth kMainScreenFrame.size.width
+#define kMainScreenHeight kMainScreenFrame.size.height
+#define kApplicationFrame [[UIScreen mainScreen] applicationFrame]
+#define kScreenScale [[UIScreen mainScreen] scale]
+
 #endif

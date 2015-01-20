@@ -8,7 +8,7 @@
 		<key>title</key>
 		<string>应用</string>
 		<key>icon</key>
-		<string>phone_ico</string>
+		<string>first</string>
 	</dict>
 	<dict>
 		<key>identifier</key>
@@ -16,7 +16,7 @@
 		<key>title</key>
 		<string>游戏</string>
 		<key>icon</key>
-		<string>phone_ico</string>
+		<string>first</string>
 	</dict>
 	<dict>
 		<key>identifier</key>
@@ -24,7 +24,7 @@
 		<key>title</key>
 		<string>书籍</string>
 		<key>icon</key>
-		<string>phone_ico</string>
+		<string>first</string>
 	</dict>
 	<dict>
 		<key>identifier</key>
@@ -32,7 +32,7 @@
 		<key>title</key>
 		<string>音乐</string>
 		<key>icon</key>
-		<string>phone_ico</string>
+		<string>first</string>
 	</dict>
 	<dict>
 		<key>identifier</key>
@@ -40,7 +40,7 @@
 		<key>title</key>
 		<string>电影</string>
 		<key>icon</key>
-		<string>phone_ico</string>
+		<string>first</string>
 	</dict>
 </array>
 </plist>

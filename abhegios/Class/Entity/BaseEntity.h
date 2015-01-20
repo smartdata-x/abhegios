@@ -7,4 +7,5 @@
 
 
 @interface BaseEntity : NSObject
+-(id) init:(NSDictionary*) json;
 @end

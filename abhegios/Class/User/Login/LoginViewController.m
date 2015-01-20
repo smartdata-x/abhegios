@@ -71,9 +71,6 @@
             case QQLogin_Source:
                 [[UserHelper shared] login:type delegate:self];
                 break;
-            case 5:
-                [self.navigationController pushViewController:[[LoginViewController alloc] init] animated:TRUE];
-                break;
         }
     }
 }
