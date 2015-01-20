@@ -5,7 +5,6 @@
 
 #import "WBLogin.h"
 #import "WeiboSDK.h"
-#define kRedirectURI @"https://api.weibo.com/oauth2/default.html"
 #define kWeiboUserShowURI @"https://api.weibo.com/2/users/show.json"
 @interface WBLogin()<WeiboSDKDelegate>
 @end
@@ -15,7 +14,7 @@
 }
 - (void)login {
     WBAuthorizeRequest *request = [WBAuthorizeRequest request];
-    request.redirectURI = kRedirectURI;
+    request.redirectURI = kWeiboRedirectURI;
     request.scope = @"all";
     request.userInfo = @{@"SSO_From": @"LoginTableViewController",
             @"Other_Info_1": [NSNumber numberWithInt:123],

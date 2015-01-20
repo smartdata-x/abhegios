@@ -20,9 +20,10 @@
 #define kUIColorWithRGB(rgbValue) kUIColorWithRGBAlpha(rgbValue,1.0f)
 
 #pragma mark - 第三方SDK key appid
-#define kQQAppID @"1103385"
-#define kWXAppID @"wx1ee48ac6631f2"
-#define kWeiboAppID @"3745753"
-#define kWeiboSecret @"2fc329b09d602b3d6f4efb53f65a8a"
+#define kQQAppID @"1104090941"
+#define kWXAppID @"wx20f71fed62b78fb3"
+#define kWeiboAppID @"2783192662"
+#define kWeiboSecret @"26f20d0827dc2b6abb37487ab00181a4"
+#define kWeiboRedirectURI @"http://42.121.14.108/abheg/sinaweibo/callback.php"
 
 #endif

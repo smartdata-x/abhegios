@@ -29,6 +29,14 @@
     [super viewWillAppear:animated];
 }
 
+- (void)setSelectedViewController:(UIViewController *)selectedViewController {
+    [self setTitle:[selectedViewController title]];
+    [super setSelectedViewController:selectedViewController];
+    if( selectedViewController == [[self childViewControllers] objectAtIndex:3])
+        [self.navigationController pushViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"] animated:TRUE];
+}
+
+
 
 
 @end

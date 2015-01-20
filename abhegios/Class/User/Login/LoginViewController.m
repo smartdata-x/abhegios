@@ -13,17 +13,12 @@
 @interface LoginViewController()<UITableViewDataSource,UITableViewDelegate,LoginDelegate>
 @end
 @implementation LoginViewController {
-    UITableView *   _tableView;
     NSMutableArray * _dataArrays;
 }
 
 - (void)loadView {
     [super loadView];
-    _tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
-    [_tableView setDataSource:self];
-    [_tableView setDelegate:self];
-    [_tableView setBackgroundColor:kUIColorWithRGB(0xfbfbfb)];
-    [self.view addSubview:_tableView];
+    [self.tableView setBackgroundColor:kUIColorWithRGB(0xfbfbfb)];
     NSString        *plistPath  = [[NSBundle mainBundle] pathForResource:@"uilogindata" ofType:@"plist"];
     _dataArrays  = [[NSMutableArray alloc] initWithContentsOfFile:plistPath];
 }
@@ -77,14 +72,15 @@
                 [[UserHelper shared] login:type delegate:self];
                 break;
             case 5:
-                [self.tabBarController.navigationController pushViewController:[[LoginViewController alloc] init] animated:TRUE];
+                [self.navigationController pushViewController:[[LoginViewController alloc] init] animated:TRUE];
                 break;
         }
     }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *viewCell =  [[LoginTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    
+    UITableViewCell *viewCell = [tableView dequeueReusableCellWithIdentifier:@"LoginTableViewCell"];
     if (indexPath.section == 0)
     {
         NSDictionary *dictionary = [_dataArrays objectAtIndex:indexPath.row];

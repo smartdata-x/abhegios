@@ -27,6 +27,7 @@
 		1AD64903B17F5D12DC09D1BB /* ThirdLoginInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64A4A58510940FB83B455 /* ThirdLoginInfo.m */; };
 		1AD649CD0AF8969FFF4B9641 /* ILogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64D36FCBA289B16C1A832 /* ILogin.m */; };
 		1AD64A7E02E7FE36F6F1B45D /* HandleOpenURLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD641DD2208878E496A9A4D /* HandleOpenURLHelper.m */; };
+		1AD64CFE026B051E8189BAD5 /* uifounddata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AD6442C1D90169FA2631B1E /* uifounddata.plist */; };
 		1AD64DA54158CF05FAE8F2A6 /* WBLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64ADF6021C604900147BF /* WBLogin.m */; };
 		1AD64FFC32CBAE27C98D3718 /* BaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD647A4E5E362E78DE97404 /* BaseEntity.m */; };
 		EA3D07721A6CD88A00189765 /* LoginTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3D076F1A6CD88A00189765 /* LoginTableViewCell.m */; };
@@ -35,6 +36,8 @@
 		EA3D07761A6CD9A600189765 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD64B4D5E1BC035B41C15E2 /* Main.storyboard */; };
 		EA3D07771A6CD9A600189765 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AD644FB93BF0B06901FCD5E /* LaunchScreen.xib */; };
 		EA3D07791A6CDA2000189765 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EA3D07781A6CDA2000189765 /* WeiboSDK.bundle */; };
+		EA54A1171A6E0E6100322C42 /* FoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA54A1161A6E0E6100322C42 /* FoundViewController.m */; };
+		EA54A11A1A6E16D900322C42 /* AppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA54A1191A6E16D900322C42 /* AppViewController.m */; };
 		EA8E8F4E1A68F07500FEA027 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F4D1A68F07500FEA027 /* UIKit.framework */; };
 		EA8E8F551A68F11800FEA027 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F4F1A68F0E600FEA027 /* Foundation.framework */; };
 		EA8E8F561A68F13300FEA027 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F511A68F11000FEA027 /* CoreFoundation.framework */; };
@@ -64,6 +67,7 @@
 		1AD6432947FE4430D644F23B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1AD6437A050D67745B214ABC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1AD64427A49BA909B4E8785B /* NSString+NSStringCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringCategory.m"; sourceTree = "<group>"; };
+		1AD6442C1D90169FA2631B1E /* uifounddata.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = uifounddata.plist; sourceTree = "<group>"; };
 		1AD64449F648BB6A56A09C54 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		1AD644987F2FAB7C23365EC3 /* TencentOAuthObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TencentOAuthObject.h; sourceTree = "<group>"; };
 		1AD645258726FA3EC5005605 /* ILogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILogin.h; sourceTree = "<group>"; };
@@ -108,6 +112,10 @@
 		EA3D07711A6CD88A00189765 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		EA3D07741A6CD89200189765 /* uilogindata.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = uilogindata.plist; sourceTree = "<group>"; };
 		EA3D07781A6CDA2000189765 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
+		EA54A1151A6E0E6100322C42 /* FoundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundViewController.h; sourceTree = "<group>"; };
+		EA54A1161A6E0E6100322C42 /* FoundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundViewController.m; sourceTree = "<group>"; };
+		EA54A1181A6E16D900322C42 /* AppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppViewController.h; sourceTree = "<group>"; };
+		EA54A1191A6E16D900322C42 /* AppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppViewController.m; sourceTree = "<group>"; };
 		EA83390D1A68B04200F3A9E9 /* abheg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = abheg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8E8F4D1A68F07500FEA027 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EA8E8F4F1A68F0E600FEA027 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -196,6 +204,8 @@
 			children = (
 				EA9486371A6DE09C003EE99B /* MainViewController.h */,
 				EA9486381A6DE09C003EE99B /* MainViewController.m */,
+				EA54A1151A6E0E6100322C42 /* FoundViewController.h */,
+				EA54A1161A6E0E6100322C42 /* FoundViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -243,6 +253,8 @@
 				1AD64E767514ABADB117A29B /* Entity */,
 				1AD647813E42C6C0F8BDFC97 /* abhegios-Prefix.pch */,
 				1AD647F0115B5FF608FC515B /* Comm */,
+				EA54A1181A6E16D900322C42 /* AppViewController.h */,
+				EA54A1191A6E16D900322C42 /* AppViewController.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -307,6 +319,7 @@
 			children = (
 				EA3D07741A6CD89200189765 /* uilogindata.plist */,
 				1AD64688EC1876C19A332D96 /* Info.plist */,
+				1AD6442C1D90169FA2631B1E /* uifounddata.plist */,
 			);
 			name = "Supporting Files";
 			path = abhegios;
@@ -485,6 +498,7 @@
 				EA3D07751A6CD89200189765 /* uilogindata.plist in Resources */,
 				1AD6470ECF340D8FC98FD7FD /* success.png in Resources */,
 				EA3D07791A6CDA2000189765 /* WeiboSDK.bundle in Resources */,
+				1AD64CFE026B051E8189BAD5 /* uifounddata.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +520,8 @@
 				1AD64565F18F3ED26CC48D25 /* User.m in Sources */,
 				EA3D07721A6CD88A00189765 /* LoginTableViewCell.m in Sources */,
 				1AD64FFC32CBAE27C98D3718 /* BaseEntity.m in Sources */,
+				EA54A1171A6E0E6100322C42 /* FoundViewController.m in Sources */,
+				EA54A11A1A6E16D900322C42 /* AppViewController.m in Sources */,
 				1AD64625B4F594E287714029 /* QQLogin.m in Sources */,
 				1AD6419EC3E465BEDDED654B /* WXLogin.m in Sources */,
 				1AD64DA54158CF05FAE8F2A6 /* WBLogin.m in Sources */,
@@ -630,6 +646,7 @@
 					"\"${PROJECT_DIR}/abhegios/Class/Third/libWeiboSDK\"/**",
 					"\"${PROJECT_DIR}/abhegios/Class/Third/libWeiboSDK\"/**",
 				);
+				OTHER_LDFLAGS = "-fobjc-arc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -653,6 +670,7 @@
 					"\"${PROJECT_DIR}/abhegios/Class/Third/libWeiboSDK\"/**",
 					"\"${PROJECT_DIR}/abhegios/Class/Third/libWeiboSDK\"/**",
 				);
+				OTHER_LDFLAGS = "-fobjc-arc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

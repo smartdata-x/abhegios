@@ -15,7 +15,7 @@
 HELPER_SHARED
 
 -(void) login:(Login_Source) source delegate:(id<LoginDelegate>) delegate{
-    ILogin *login = nil;
+    static ILogin *login = nil;
     switch (source)
     {
        case WeiboLogin_Source:

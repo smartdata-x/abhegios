@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>identifier</key>
+		<string>AppViewController</string>
+		<key>title</key>
+		<string>应用</string>
+		<key>icon</key>
+		<string>phone_ico</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string></string>
+		<key>title</key>
+		<string>游戏</string>
+		<key>icon</key>
+		<string>phone_ico</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string></string>
+		<key>title</key>
+		<string>书籍</string>
+		<key>icon</key>
+		<string>phone_ico</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string></string>
+		<key>title</key>
+		<string>音乐</string>
+		<key>icon</key>
+		<string>phone_ico</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string></string>
+		<key>title</key>
+		<string>电影</string>
+		<key>icon</key>
+		<string>phone_ico</string>
+	</dict>
+</array>
+</plist>
