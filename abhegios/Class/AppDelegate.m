@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HandleOpenURLHelper.h"
-
+#import "MainViewController.h"
 @interface AppDelegate ()
 
 @end

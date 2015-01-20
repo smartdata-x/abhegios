@@ -10,7 +10,6 @@
 		1AD64049F3F7AA6F294AAE32 /* error.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AD649A2F2D6D83B5DB8AB91 /* error.png */; };
 		1AD64077DE8389AC54925C71 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AD642E117F70E24DD88C3BD /* Info.plist */; };
 		1AD6407932CF4CF9417DEF43 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AD64688EC1876C19A332D96 /* Info.plist */; };
-		1AD640B8FC0E65AABA263577 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64E62E8BF24E1E8CAFF9B /* SecondViewController.m */; };
 		1AD6414DA6EE3852763DFC2D /* NSString+NSStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64427A49BA909B4E8785B /* NSString+NSStringCategory.m */; };
 		1AD6419EC3E465BEDDED654B /* WXLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64BA5F04C0E11205B12FF /* WXLogin.m */; };
 		1AD641A9B657652F6B6DCAAB /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD6400B313AC7FEE3D78518 /* libWeChatSDK.a */; };
@@ -23,7 +22,6 @@
 		1AD64625B4F594E287714029 /* QQLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD646C9517398D2CE12BFE0 /* QQLogin.m */; };
 		1AD6466F8E60BA95319C4EF1 /* local.html in Resources */ = {isa = PBXBuildFile; fileRef = 1AD64755F74B126543E3297C /* local.html */; };
 		1AD6470ECF340D8FC98FD7FD /* success.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AD64EC338CEFF6147A40C44 /* success.png */; };
-		1AD6472DE59595EBD1B1F8D0 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64568A8808045F8093DEC /* FirstViewController.m */; };
 		1AD64804C9FA33B5797A36AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD6492B19568EF4CBFC4EA6 /* AppDelegate.m */; };
 		1AD64850016A35AAE41E0C11 /* TencentOpenAPI in Resources */ = {isa = PBXBuildFile; fileRef = 1AD642C0A4FA8B5FB88F2722 /* TencentOpenAPI */; };
 		1AD64903B17F5D12DC09D1BB /* ThirdLoginInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64A4A58510940FB83B455 /* ThirdLoginInfo.m */; };
@@ -50,6 +48,7 @@
 		EA8E8F6B1A68F54400FEA027 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F6A1A68F54400FEA027 /* libsqlite3.dylib */; };
 		EA8E8F6D1A68F56000FEA027 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F6C1A68F56000FEA027 /* libz.1.1.3.dylib */; };
 		EA8E8F6F1A68F5E000FEA027 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F6E1A68F5E000FEA027 /* libstdc++.dylib */; };
+		EA9486391A6DE09C003EE99B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9486381A6DE09C003EE99B /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,7 +57,6 @@
 		1AD640F884FE1B88F0A9CA5F /* WXLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXLogin.h; sourceTree = "<group>"; };
 		1AD641DD2208878E496A9A4D /* HandleOpenURLHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandleOpenURLHelper.m; sourceTree = "<group>"; };
 		1AD641EE7503CA0E22DE8D2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = abhegios/Base.lproj/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
-		1AD64216AAA3AF60302C9D86 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		1AD64222AABA8F74FD6A4B06 /* sdkdef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sdkdef.h; sourceTree = "<group>"; };
 		1AD642C0A4FA8B5FB88F2722 /* TencentOpenAPI */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TencentOpenAPI; sourceTree = "<group>"; };
 		1AD642E117F70E24DD88C3BD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
@@ -70,7 +68,6 @@
 		1AD644987F2FAB7C23365EC3 /* TencentOAuthObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TencentOAuthObject.h; sourceTree = "<group>"; };
 		1AD645258726FA3EC5005605 /* ILogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILogin.h; sourceTree = "<group>"; };
 		1AD64542409348C62ED06463 /* QQApiInterfaceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQApiInterfaceObject.h; sourceTree = "<group>"; };
-		1AD64568A8808045F8093DEC /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		1AD6457719B447546DFDBF31 /* WeiyunAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiyunAPI.h; sourceTree = "<group>"; };
 		1AD6467CD21BDFAB504D3527 /* ThirdLoginInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdLoginInfo.h; sourceTree = "<group>"; };
 		1AD64688EC1876C19A332D96 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
@@ -86,7 +83,6 @@
 		1AD648C331E9E9DEE2764A4D /* UserHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserHelper.h; sourceTree = "<group>"; };
 		1AD64906666AE7E8636FF430 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		1AD6492B19568EF4CBFC4EA6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1AD6492E835291780D12BA9F /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		1AD649A2F2D6D83B5DB8AB91 /* error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = error.png; sourceTree = "<group>"; };
 		1AD64A4A58510940FB83B455 /* ThirdLoginInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdLoginInfo.m; sourceTree = "<group>"; };
 		1AD64ADF6021C604900147BF /* WBLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBLogin.m; sourceTree = "<group>"; };
@@ -103,7 +99,6 @@
 		1AD64E2EBB91352776CFA0DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = abhegios/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		1AD64E4DA1F75B75C2D8692E /* TencentMessageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TencentMessageObject.h; sourceTree = "<group>"; };
 		1AD64E4E9A3FC7858429AD99 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		1AD64E62E8BF24E1E8CAFF9B /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		1AD64E8024E42C94BF567A4E /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
 		1AD64EC338CEFF6147A40C44 /* success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = success.png; sourceTree = "<group>"; };
 		1AD64FDCA86FD9856133C0D9 /* qqicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qqicon.png; sourceTree = "<group>"; };
@@ -113,7 +108,7 @@
 		EA3D07711A6CD88A00189765 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		EA3D07741A6CD89200189765 /* uilogindata.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = uilogindata.plist; sourceTree = "<group>"; };
 		EA3D07781A6CDA2000189765 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
-		EA83390D1A68B04200F3A9E9 /* abhegios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = abhegios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA83390D1A68B04200F3A9E9 /* abheg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = abheg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8E8F4D1A68F07500FEA027 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EA8E8F4F1A68F0E600FEA027 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EA8E8F511A68F11000FEA027 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
@@ -127,6 +122,8 @@
 		EA8E8F6A1A68F54400FEA027 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		EA8E8F6C1A68F56000FEA027 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
 		EA8E8F6E1A68F5E000FEA027 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		EA9486371A6DE09C003EE99B /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		EA9486381A6DE09C003EE99B /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,10 +194,8 @@
 		1AD64203B2F7226234808742 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				1AD64E62E8BF24E1E8CAFF9B /* SecondViewController.m */,
-				1AD64216AAA3AF60302C9D86 /* FirstViewController.h */,
-				1AD64568A8808045F8093DEC /* FirstViewController.m */,
-				1AD6492E835291780D12BA9F /* SecondViewController.h */,
+				EA9486371A6DE09C003EE99B /* MainViewController.h */,
+				EA9486381A6DE09C003EE99B /* MainViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -405,7 +400,7 @@
 		EA83390E1A68B04200F3A9E9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EA83390D1A68B04200F3A9E9 /* abhegios.app */,
+				EA83390D1A68B04200F3A9E9 /* abheg.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -437,7 +432,7 @@
 			);
 			name = abheg;
 			productName = abhegios;
-			productReference = EA83390D1A68B04200F3A9E9 /* abhegios.app */;
+			productReference = EA83390D1A68B04200F3A9E9 /* abheg.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -503,10 +498,9 @@
 				1AD64804C9FA33B5797A36AC /* AppDelegate.m in Sources */,
 				1AD641D66B96305DB64E42F7 /* main.m in Sources */,
 				1AD64A7E02E7FE36F6F1B45D /* HandleOpenURLHelper.m in Sources */,
-				1AD640B8FC0E65AABA263577 /* SecondViewController.m in Sources */,
-				1AD6472DE59595EBD1B1F8D0 /* FirstViewController.m in Sources */,
 				1AD6455F3CEB60EEE78C0C77 /* UserHelper.m in Sources */,
 				1AD649CD0AF8969FFF4B9641 /* ILogin.m in Sources */,
+				EA9486391A6DE09C003EE99B /* MainViewController.m in Sources */,
 				1AD64903B17F5D12DC09D1BB /* ThirdLoginInfo.m in Sources */,
 				EA3D07731A6CD88A00189765 /* LoginViewController.m in Sources */,
 				1AD64565F18F3ED26CC48D25 /* User.m in Sources */,
@@ -628,6 +622,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "abhegios/Class/abhegios-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/abhegios/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"\"${PROJECT_DIR}/abhegios/Class/Third/WX\"/**",
@@ -650,6 +645,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "abhegios/Class/abhegios-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/abhegios/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"\"${PROJECT_DIR}/abhegios/Class/Third/WX\"/**",

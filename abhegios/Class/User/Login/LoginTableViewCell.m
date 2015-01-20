@@ -13,7 +13,6 @@
     [super layoutSubviews];
     [self.imageView setFrame:CGRectOffset([self.imageView frame],kLeftOff,0)];
     [self.textLabel setFrame:CGRectOffset([self.textLabel frame],kLeftOff,0)];
-
 }
 
 @end
