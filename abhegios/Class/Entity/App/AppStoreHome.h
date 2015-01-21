@@ -8,5 +8,5 @@
 
 
 @interface AppStoreHome : BaseEntity
-@property (nonatomic,retain)    NSArray   *list;
+@property (nonatomic,retain)    NSArray   *appInfoGroups;
 @end

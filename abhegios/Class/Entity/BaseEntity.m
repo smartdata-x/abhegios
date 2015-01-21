@@ -34,4 +34,23 @@
         }
     }
 }
+
++(NSArray*) initWithsDictionarys:(NSArray*) dics
+{
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    for (NSDictionary *dic in dics) {
+        [array addObject:[[[self class] alloc] init:dic]];
+    }
+    return array;
+}
++(NSArray*) initWithsContentsOfFile:(NSString *)path
+{
+    return [self initWithsDictionarys:[[NSMutableArray alloc] initWithContentsOfFile:path]];
+}
+
++(NSArray*) initWithsResource:(NSString *)name ofType:(NSString *)ext
+{
+    NSString   *plistPath  = [[NSBundle mainBundle] pathForResource:name ofType:ext];
+    return [self initWithsContentsOfFile:plistPath];
+}
 @end

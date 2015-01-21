@@ -148,7 +148,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AppTableViewCellSytle1" rowHeight="80" id="xYJ-8g-ImL" customClass="AppTableViewCellSytle1">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AppTableViewCellStyle1" rowHeight="80" id="xYJ-8g-ImL" customClass="AppTableViewCellStyle1">
                                 <rect key="frame" x="0.0" y="22" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xYJ-8g-ImL" id="67e-64-4Ca">
@@ -210,6 +210,47 @@
                                     <outlet property="summary" destination="nrq-j8-EOu" id="emO-eq-AK2"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AppTableViewCellStyle2" id="d6q-gZ-Rsf" customClass="BaseTableViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d6q-gZ-Rsf" id="oSW-CI-uGl">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="s_banner" translatesAutoresizingMaskIntoConstraints="NO" id="ilX-X8-IvX">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="ilX-X8-IvX" secondAttribute="trailing" id="Aa2-Gv-eFY"/>
+                                        <constraint firstAttribute="bottom" secondItem="ilX-X8-IvX" secondAttribute="bottom" id="F08-6k-qnh"/>
+                                        <constraint firstItem="ilX-X8-IvX" firstAttribute="leading" secondItem="oSW-CI-uGl" secondAttribute="leading" id="Jkt-oZ-T9q"/>
+                                        <constraint firstItem="ilX-X8-IvX" firstAttribute="top" secondItem="oSW-CI-uGl" secondAttribute="top" id="Mao-Ay-Esj"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AppTableViewCellStyle3" id="x5v-2m-zc2" customClass="BaseTableViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x5v-2m-zc2" id="niP-Op-FNN">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AppTableViewCellStyle4" id="fHv-t5-hxi" customClass="BaseTableViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fHv-t5-hxi" id="KgU-BO-s8Q">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="app_banner" translatesAutoresizingMaskIntoConstraints="NO" id="dcO-dR-AhD">
+                                            <rect key="frame" x="12" y="4" width="296" height="72"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="dcO-dR-AhD" secondAttribute="trailing" constant="12" id="WCR-Mh-kec"/>
+                                        <constraint firstItem="dcO-dR-AhD" firstAttribute="leading" secondItem="KgU-BO-s8Q" secondAttribute="leading" constant="12" id="zD3-Is-kyw"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="o4P-FE-cmg" id="aXt-v6-I14"/>
@@ -258,6 +299,8 @@
     </scenes>
     <resources>
         <image name="app-icon-default" width="53" height="53"/>
+        <image name="app_banner" width="296" height="71"/>
         <image name="first" width="30" height="30"/>
+        <image name="s_banner" width="320" height="80"/>
     </resources>
 </document>

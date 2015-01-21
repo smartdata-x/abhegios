@@ -8,10 +8,10 @@
 
 #import "FoundViewController.h"
 #import "NSString+NSStringCategory.h"
-
+#import "FoundItemInfo.h"
 @interface FoundViewController ()
 {
-    NSMutableArray * _dataArrays;
+    NSArray * _foundItemInfos;
 }
 @end
 
@@ -19,8 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString        *plistPath  = [[NSBundle mainBundle] pathForResource:@"uifounddata" ofType:@"plist"];
-    _dataArrays  = [[NSMutableArray alloc] initWithContentsOfFile:plistPath];
+    _foundItemInfos =[FoundItemInfo initWithsResource:@"uifounddata" ofType:@"plist"];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,7 +34,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if( section == 0)
-        return [_dataArrays count];
+        return [_foundItemInfos count];
     return 0;
 }
 
@@ -44,9 +44,9 @@
     UITableViewCell *viewCell = [tableView dequeueReusableCellWithIdentifier:@"FoundTableViewCell"];
     if (indexPath.section == 0)
     {
-        NSDictionary *dictionary = [_dataArrays objectAtIndex:indexPath.row];
-        [[viewCell textLabel] setText:[ dictionary objectForKey:@"title"]];
-        [[viewCell imageView] setImage:[UIImage imageNamed:[ dictionary objectForKey:@"icon"]]];
+        FoundItemInfo *foundItemInfo = [_foundItemInfos objectAtIndex:indexPath.row];
+        [[viewCell textLabel] setText:[foundItemInfo title]];
+        [[viewCell imageView] setImage:[UIImage imageNamed:[foundItemInfo icon]]];
 
     }
     return viewCell;
@@ -56,7 +56,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if ([indexPath section] == 0)
     {
-        NSString *identifier = [[_dataArrays objectAtIndex:[indexPath row]] objectForKey:@"identifier"];
+        NSString *identifier = [[_foundItemInfos objectAtIndex:[indexPath row]] identifier];
         if (  [identifier isNotEmpty] ) {
               [self.tabBarController.navigationController pushViewController:[self.storyboard instantiateViewControllerWithIdentifier:identifier] animated:YES];
         }

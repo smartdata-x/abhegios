@@ -9,7 +9,7 @@
 
 
 #import <UIKit/UIKit.h>
-
-@interface LoginTableViewCell : UITableViewCell
+#import "BaseTableViewCell.h"
+@interface LoginTableViewCell : BaseTableViewCell
 
 @end

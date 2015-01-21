@@ -9,5 +9,5 @@
 
 
 @interface UserHelper : NSObject<HelperProtocol>
--(void) login:(Login_Source) source delegate:(id<LoginDelegate>) delegate;
+-(void) login:(LoginType) source delegate:(id<LoginDelegate>) delegate;
 @end

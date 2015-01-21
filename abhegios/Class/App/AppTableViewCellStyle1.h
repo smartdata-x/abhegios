@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-@class AppInfo;
-@interface AppTableViewCellSytle1 : UITableViewCell
+#import "BaseTableViewCell.h"
+@interface AppTableViewCellStyle1 : BaseTableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *logo;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *summary;
 @property (weak, nonatomic) IBOutlet UIButton *setupButton;
--(void) setData:(AppInfo*) appinfo;
 @end

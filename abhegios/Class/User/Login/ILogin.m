@@ -49,7 +49,7 @@
 @implementation IThirdLogin
 
 
-- (id)init:(Login_Source)source {
+- (id)init:(LoginType)source {
     self = [super init];
     if (self) {
         _loginInfo = [[ThirdLoginInfo alloc] init];

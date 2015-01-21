@@ -8,10 +8,13 @@
 
 #define LOGIN_ERROR @"登录失败！"
 #define NOT_NETWORK @"无网络连接，请设置网络!"
-typedef NS_ENUM(NSInteger, Login_Source) {
-    WeiboLogin_Source = 1,
-    WXLogin_Source = 2,
-    QQLogin_Source  = 3,
+typedef NS_ENUM(NSInteger, LoginType) {
+    LoginTypeNone = 0,
+    LoginTypeWeibo ,
+    LoginTypeWX ,
+    LoginTypeQQ ,
+    LoginTypePhone ,
+    LoginTypeGuest
 };
 
 @class ILogin;
@@ -38,6 +41,6 @@ typedef NS_ENUM(NSInteger, Login_Source) {
 @protected
     ThirdLoginInfo*   _loginInfo;
 }
--(id) init:(Login_Source) source;
+-(id) init:(LoginType) source;
 -(void) login;
 @end

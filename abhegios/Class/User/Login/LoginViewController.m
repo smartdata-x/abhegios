@@ -8,19 +8,22 @@
 #import "ILogin.h"
 #import "UserHelper.h"
 #import "User.h"
+#import "LoginItemInfo.h"
+#import "BaseEntity.h"
 
 #define kTopHeaderHeight 132
 @interface LoginViewController()<UITableViewDataSource,UITableViewDelegate,LoginDelegate>
 @end
 @implementation LoginViewController {
-    NSMutableArray * _dataArrays;
+    NSArray * _loginItemInfos;
 }
 
 - (void)loadView {
     [super loadView];
     [self.tableView setBackgroundColor:kUIColorWithRGB(0xfbfbfb)];
-    NSString        *plistPath  = [[NSBundle mainBundle] pathForResource:@"uilogindata" ofType:@"plist"];
-    _dataArrays  = [[NSMutableArray alloc] initWithContentsOfFile:plistPath];
+    _loginItemInfos =[LoginItemInfo initWithsResource:@"uilogindata" ofType:@"plist"];
+
+   
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -54,7 +57,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if( section== 0)
-        return [_dataArrays count];
+        return [_loginItemInfos count];
     return  0;
 }
 
@@ -63,13 +66,15 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if ([indexPath section] == 0)
     {
-        NSInteger type = [[[_dataArrays objectAtIndex:[indexPath row]] objectForKey:@"type"] integerValue];
-        switch (type)
+        LoginItemInfo *info = [_loginItemInfos objectAtIndex:[indexPath row]];
+        switch ([info type])
         {
-            case WeiboLogin_Source:
-            case WXLogin_Source:
-            case QQLogin_Source:
-                [[UserHelper shared] login:type delegate:self];
+            case LoginTypeWeibo:
+            case LoginTypeWX:
+            case LoginTypeQQ:
+                [[UserHelper shared] login:[info type] delegate:self];
+                break;
+            default:
                 break;
         }
     }
@@ -77,13 +82,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *viewCell = [tableView dequeueReusableCellWithIdentifier:@"LoginTableViewCell"];
+    BaseTableViewCell *viewCell = [tableView dequeueReusableCellWithIdentifier:@"LoginTableViewCell"];
     if (indexPath.section == 0)
     {
-        NSDictionary *dictionary = [_dataArrays objectAtIndex:indexPath.row];
-        [[viewCell textLabel] setText:[ dictionary objectForKey:@"title"]];
-        [[viewCell imageView] setImage:[UIImage imageNamed:[ dictionary objectForKey:@"icon"]]];
-
+        [viewCell setData:[_loginItemInfos objectAtIndex:indexPath.row]];
     }
     return viewCell;
 }

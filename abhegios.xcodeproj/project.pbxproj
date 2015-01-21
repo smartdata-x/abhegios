@@ -16,9 +16,11 @@
 		1AD641D66B96305DB64E42F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD6437A050D67745B214ABC /* main.m */; };
 		1AD6424E41815985501DAFD3 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD64CC1D3FCEB41E30B3D46 /* libWeiboSDK.a */; };
 		1AD642F6A5749FB0E91F1A4E /* appstorehome.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AD646EFABD27B8535BB7F1C /* appstorehome.plist */; };
+		1AD643033AA98B7B2100F27E /* LoginItemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64AB9124C5214618D2B3B /* LoginItemInfo.m */; };
 		1AD6444BCD81D3E62537781A /* qqicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AD64FDCA86FD9856133C0D9 /* qqicon.png */; };
 		1AD6455F3CEB60EEE78C0C77 /* UserHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD6408FC527AE4826BBFD19 /* UserHelper.m */; };
 		1AD64565F18F3ED26CC48D25 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64906666AE7E8636FF430 /* User.m */; };
+		1AD645A28AA3934B882BD885 /* FoundItemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64BD02B289E09F1CFB1ED /* FoundItemInfo.m */; };
 		1AD6460C6803B48F071D6E89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AD6432947FE4430D644F23B /* Images.xcassets */; };
 		1AD64625B4F594E287714029 /* QQLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD646C9517398D2CE12BFE0 /* QQLogin.m */; };
 		1AD6466F8E60BA95319C4EF1 /* local.html in Resources */ = {isa = PBXBuildFile; fileRef = 1AD64755F74B126543E3297C /* local.html */; };
@@ -27,12 +29,14 @@
 		1AD64850016A35AAE41E0C11 /* TencentOpenAPI in Resources */ = {isa = PBXBuildFile; fileRef = 1AD642C0A4FA8B5FB88F2722 /* TencentOpenAPI */; };
 		1AD648B3BA85A32392AD7DD7 /* appstorehome_test.json in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64849042CDCBD5AF28B41 /* appstorehome_test.json */; };
 		1AD64903B17F5D12DC09D1BB /* ThirdLoginInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64A4A58510940FB83B455 /* ThirdLoginInfo.m */; };
+		1AD6499081D9DEF2C11C321E /* AppInfoGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD6477F61BA0655FCC24CBD /* AppInfoGroup.m */; };
 		1AD649CD0AF8969FFF4B9641 /* ILogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64D36FCBA289B16C1A832 /* ILogin.m */; };
 		1AD64A7E02E7FE36F6F1B45D /* HandleOpenURLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD641DD2208878E496A9A4D /* HandleOpenURLHelper.m */; };
 		1AD64CFE026B051E8189BAD5 /* uifounddata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AD6442C1D90169FA2631B1E /* uifounddata.plist */; };
 		1AD64D9C70E0A1325B3F2A09 /* AppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64937DADE448C8201DFCF /* AppViewController.m */; };
 		1AD64DA54158CF05FAE8F2A6 /* WBLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64ADF6021C604900147BF /* WBLogin.m */; };
-		1AD64FA1B56D863D5F1E2761 /* AppStoreHome.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64E17C8DDDCA04A8C7D58 /* AppStoreHome.m */; };
+		1AD64E1713AD0CE098E0019C /* AppStoreHome.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64A5F0046E17B443BDAFB /* AppStoreHome.m */; };
+		1AD64F3A04AFCBB948106908 /* AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64A85039C51E682F19BA9 /* AppInfo.m */; };
 		1AD64FFC32CBAE27C98D3718 /* BaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD647A4E5E362E78DE97404 /* BaseEntity.m */; };
 		EA3D07721A6CD88A00189765 /* LoginTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3D076F1A6CD88A00189765 /* LoginTableViewCell.m */; };
 		EA3D07731A6CD88A00189765 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3D07711A6CD88A00189765 /* LoginViewController.m */; };
@@ -41,10 +45,10 @@
 		EA3D07771A6CD9A600189765 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AD644FB93BF0B06901FCD5E /* LaunchScreen.xib */; };
 		EA3D07791A6CDA2000189765 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EA3D07781A6CDA2000189765 /* WeiboSDK.bundle */; };
 		EA54A1171A6E0E6100322C42 /* FoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA54A1161A6E0E6100322C42 /* FoundViewController.m */; };
-		EA54C16C1A6E384B00B7312D /* AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA54C16B1A6E384B00B7312D /* AppInfo.m */; };
 		EA6049501A6E492500FBA10F /* appstorehome_test.json in Resources */ = {isa = PBXBuildFile; fileRef = 1AD64849042CDCBD5AF28B41 /* appstorehome_test.json */; };
-		EA6049531A6E4ACC00FBA10F /* AppInfoGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6049521A6E4ACC00FBA10F /* AppInfoGroup.m */; };
-		EA8D74931A6E7CF9004C17C2 /* AppTableViewCellSytle1.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8D74921A6E7CF9004C17C2 /* AppTableViewCellSytle1.m */; };
+		EA8D74931A6E7CF9004C17C2 /* AppTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8D74921A6E7CF9004C17C2 /* AppTableViewCellStyle1.m */; };
+		EA8D74961A6E958D004C17C2 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8D74951A6E958D004C17C2 /* BaseTableViewCell.m */; };
+		EA8D74991A6E9DC2004C17C2 /* AppTableViewCellStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8D74981A6E9DC2004C17C2 /* AppTableViewCellStyle2.m */; };
 		EA8E8F4E1A68F07500FEA027 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F4D1A68F07500FEA027 /* UIKit.framework */; };
 		EA8E8F551A68F11800FEA027 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F4F1A68F0E600FEA027 /* Foundation.framework */; };
 		EA8E8F561A68F13300FEA027 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F511A68F11000FEA027 /* CoreFoundation.framework */; };
@@ -66,6 +70,7 @@
 		1AD6405047562177033B2A56 /* AppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppViewController.h; sourceTree = "<group>"; };
 		1AD6408FC527AE4826BBFD19 /* UserHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserHelper.m; sourceTree = "<group>"; };
 		1AD640F884FE1B88F0A9CA5F /* WXLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXLogin.h; sourceTree = "<group>"; };
+		1AD6416E67F1CB405BA07E24 /* AppInfoGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfoGroup.h; sourceTree = "<group>"; };
 		1AD641DD2208878E496A9A4D /* HandleOpenURLHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandleOpenURLHelper.m; sourceTree = "<group>"; };
 		1AD641EE7503CA0E22DE8D2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = abhegios/Base.lproj/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
 		1AD64222AABA8F74FD6A4B06 /* sdkdef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sdkdef.h; sourceTree = "<group>"; };
@@ -81,15 +86,19 @@
 		1AD645258726FA3EC5005605 /* ILogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILogin.h; sourceTree = "<group>"; };
 		1AD64542409348C62ED06463 /* QQApiInterfaceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQApiInterfaceObject.h; sourceTree = "<group>"; };
 		1AD6457719B447546DFDBF31 /* WeiyunAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiyunAPI.h; sourceTree = "<group>"; };
+		1AD646601B30C099C2E3B36C /* FoundItemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundItemInfo.h; sourceTree = "<group>"; };
 		1AD6467CD21BDFAB504D3527 /* ThirdLoginInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdLoginInfo.h; sourceTree = "<group>"; };
 		1AD64688EC1876C19A332D96 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		1AD646C9517398D2CE12BFE0 /* QQLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQLogin.m; sourceTree = "<group>"; };
 		1AD646EFABD27B8535BB7F1C /* appstorehome.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = appstorehome.plist; sourceTree = "<group>"; };
 		1AD64755F74B126543E3297C /* local.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = local.html; sourceTree = "<group>"; };
+		1AD6477EB2BCEFB8D0A0B92E /* AppStoreHome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppStoreHome.h; sourceTree = "<group>"; };
+		1AD6477F61BA0655FCC24CBD /* AppInfoGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfoGroup.m; sourceTree = "<group>"; };
 		1AD647813E42C6C0F8BDFC97 /* abhegios-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "abhegios-Prefix.pch"; sourceTree = "<group>"; };
 		1AD647A4E5E362E78DE97404 /* BaseEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseEntity.m; sourceTree = "<group>"; };
 		1AD647DF9B122EFEA68E6170 /* HandleOpenURLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandleOpenURLHelper.h; sourceTree = "<group>"; };
 		1AD64811342BC7DCF625AF76 /* HelperProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelperProtocol.h; sourceTree = "<group>"; };
+		1AD648157C36BD3C412A127D /* LoginItemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginItemInfo.h; sourceTree = "<group>"; };
 		1AD6482492CCDF431E3E73F8 /* QQApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQApi.h; sourceTree = "<group>"; };
 		1AD6483601E377850FE6F46C /* NSString+NSStringCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSStringCategory.h"; sourceTree = "<group>"; };
 		1AD64849042CDCBD5AF28B41 /* appstorehome_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = appstorehome_test.json; sourceTree = "<group>"; };
@@ -100,19 +109,22 @@
 		1AD64937DADE448C8201DFCF /* AppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppViewController.m; sourceTree = "<group>"; };
 		1AD649A2F2D6D83B5DB8AB91 /* error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = error.png; sourceTree = "<group>"; };
 		1AD64A4A58510940FB83B455 /* ThirdLoginInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdLoginInfo.m; sourceTree = "<group>"; };
+		1AD64A4EF1E9A486E508A25A /* AppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfo.h; sourceTree = "<group>"; };
+		1AD64A5F0046E17B443BDAFB /* AppStoreHome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppStoreHome.m; sourceTree = "<group>"; };
+		1AD64A85039C51E682F19BA9 /* AppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfo.m; sourceTree = "<group>"; };
+		1AD64AB9124C5214618D2B3B /* LoginItemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginItemInfo.m; sourceTree = "<group>"; };
 		1AD64ADF6021C604900147BF /* WBLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBLogin.m; sourceTree = "<group>"; };
 		1AD64B734EC6BB4C73EA65F2 /* WeiBoAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiBoAPI.h; sourceTree = "<group>"; };
 		1AD64BA0EAC25B5DE5518049 /* QQApiInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQApiInterface.h; sourceTree = "<group>"; };
 		1AD64BA5F04C0E11205B12FF /* WXLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXLogin.m; sourceTree = "<group>"; };
+		1AD64BD02B289E09F1CFB1ED /* FoundItemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundItemInfo.m; sourceTree = "<group>"; };
 		1AD64BFCCE9AD6B9B8D4C795 /* BaseEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseEntity.h; sourceTree = "<group>"; };
 		1AD64BFFD81F6015240307A4 /* TencentOAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TencentOAuth.h; sourceTree = "<group>"; };
 		1AD64C0BB094B03E4664C418 /* QQLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQLogin.h; sourceTree = "<group>"; };
 		1AD64C19994BC814CEF48214 /* WBLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBLogin.h; sourceTree = "<group>"; };
 		1AD64CC1D3FCEB41E30B3D46 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
 		1AD64CF095795DD4A9A7E679 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
-		1AD64D03A051EE4DDB46EFF1 /* AppStoreHome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppStoreHome.h; sourceTree = "<group>"; };
 		1AD64D36FCBA289B16C1A832 /* ILogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILogin.m; sourceTree = "<group>"; };
-		1AD64E17C8DDDCA04A8C7D58 /* AppStoreHome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppStoreHome.m; sourceTree = "<group>"; };
 		1AD64E2EBB91352776CFA0DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = abhegios/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		1AD64E4DA1F75B75C2D8692E /* TencentMessageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TencentMessageObject.h; sourceTree = "<group>"; };
 		1AD64E4E9A3FC7858429AD99 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -127,13 +139,13 @@
 		EA3D07781A6CDA2000189765 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
 		EA54A1151A6E0E6100322C42 /* FoundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundViewController.h; sourceTree = "<group>"; };
 		EA54A1161A6E0E6100322C42 /* FoundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundViewController.m; sourceTree = "<group>"; };
-		EA54C16A1A6E384B00B7312D /* AppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfo.h; sourceTree = "<group>"; };
-		EA54C16B1A6E384B00B7312D /* AppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfo.m; sourceTree = "<group>"; };
-		EA6049511A6E4ACC00FBA10F /* AppInfoGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfoGroup.h; sourceTree = "<group>"; };
-		EA6049521A6E4ACC00FBA10F /* AppInfoGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfoGroup.m; sourceTree = "<group>"; };
 		EA83390D1A68B04200F3A9E9 /* abheg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = abheg.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA8D74911A6E7CF9004C17C2 /* AppTableViewCellSytle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTableViewCellSytle1.h; sourceTree = "<group>"; };
-		EA8D74921A6E7CF9004C17C2 /* AppTableViewCellSytle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTableViewCellSytle1.m; sourceTree = "<group>"; };
+		EA8D74911A6E7CF9004C17C2 /* AppTableViewCellStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTableViewCellStyle1.h; sourceTree = "<group>"; };
+		EA8D74921A6E7CF9004C17C2 /* AppTableViewCellStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTableViewCellStyle1.m; sourceTree = "<group>"; };
+		EA8D74941A6E958D004C17C2 /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
+		EA8D74951A6E958D004C17C2 /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
+		EA8D74971A6E9DC2004C17C2 /* AppTableViewCellStyle2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTableViewCellStyle2.h; sourceTree = "<group>"; };
+		EA8D74981A6E9DC2004C17C2 /* AppTableViewCellStyle2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTableViewCellStyle2.m; sourceTree = "<group>"; };
 		EA8E8F4D1A68F07500FEA027 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EA8E8F4F1A68F0E600FEA027 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EA8E8F511A68F11000FEA027 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
@@ -305,6 +317,8 @@
 			isa = PBXGroup;
 			children = (
 				1AD644B03C45E3DC5CB1038F /* Category */,
+				EA8D74941A6E958D004C17C2 /* BaseTableViewCell.h */,
+				EA8D74951A6E958D004C17C2 /* BaseTableViewCell.m */,
 			);
 			path = Comm;
 			sourceTree = "<group>";
@@ -314,8 +328,10 @@
 			children = (
 				1AD64937DADE448C8201DFCF /* AppViewController.m */,
 				1AD6405047562177033B2A56 /* AppViewController.h */,
-				EA8D74911A6E7CF9004C17C2 /* AppTableViewCellSytle1.h */,
-				EA8D74921A6E7CF9004C17C2 /* AppTableViewCellSytle1.m */,
+				EA8D74911A6E7CF9004C17C2 /* AppTableViewCellStyle1.h */,
+				EA8D74921A6E7CF9004C17C2 /* AppTableViewCellStyle1.m */,
+				EA8D74971A6E9DC2004C17C2 /* AppTableViewCellStyle2.h */,
+				EA8D74981A6E9DC2004C17C2 /* AppTableViewCellStyle2.m */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -327,6 +343,8 @@
 				1AD64A4A58510940FB83B455 /* ThirdLoginInfo.m */,
 				1AD64906666AE7E8636FF430 /* User.m */,
 				1AD6485A940C71B93C1841E6 /* User.h */,
+				1AD648157C36BD3C412A127D /* LoginItemInfo.h */,
+				1AD64AB9124C5214618D2B3B /* LoginItemInfo.m */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -353,6 +371,15 @@
 			name = "Supporting Files";
 			path = abhegios;
 			sourceTree = SOURCE_ROOT;
+		};
+		1AD64A6B49ADE51E835BF731 /* Found */ = {
+			isa = PBXGroup;
+			children = (
+				1AD646601B30C099C2E3B36C /* FoundItemInfo.h */,
+				1AD64BD02B289E09F1CFB1ED /* FoundItemInfo.m */,
+			);
+			path = Found;
+			sourceTree = "<group>";
 		};
 		1AD64A771B77170782A88465 /* Framework */ = {
 			isa = PBXGroup;
@@ -393,6 +420,19 @@
 			path = libWeiboSDK;
 			sourceTree = "<group>";
 		};
+		1AD64C16765A173319FC3054 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1AD6477EB2BCEFB8D0A0B92E /* AppStoreHome.h */,
+				1AD6477F61BA0655FCC24CBD /* AppInfoGroup.m */,
+				1AD64A4EF1E9A486E508A25A /* AppInfo.h */,
+				1AD64A5F0046E17B443BDAFB /* AppStoreHome.m */,
+				1AD64A85039C51E682F19BA9 /* AppInfo.m */,
+				1AD6416E67F1CB405BA07E24 /* AppInfoGroup.h */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		1AD64CAD5CD8F222AD40B6EB /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -427,12 +467,8 @@
 				1AD6494C57C1C431706C77B5 /* User */,
 				1AD647A4E5E362E78DE97404 /* BaseEntity.m */,
 				1AD64BFCCE9AD6B9B8D4C795 /* BaseEntity.h */,
-				EA54C16A1A6E384B00B7312D /* AppInfo.h */,
-				EA54C16B1A6E384B00B7312D /* AppInfo.m */,
-				1AD64E17C8DDDCA04A8C7D58 /* AppStoreHome.m */,
-				1AD64D03A051EE4DDB46EFF1 /* AppStoreHome.h */,
-				EA6049511A6E4ACC00FBA10F /* AppInfoGroup.h */,
-				EA6049521A6E4ACC00FBA10F /* AppInfoGroup.m */,
+				1AD64C16765A173319FC3054 /* App */,
+				1AD64A6B49ADE51E835BF731 /* Found */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -552,12 +588,12 @@
 				1AD6455F3CEB60EEE78C0C77 /* UserHelper.m in Sources */,
 				1AD649CD0AF8969FFF4B9641 /* ILogin.m in Sources */,
 				EA9486391A6DE09C003EE99B /* MainViewController.m in Sources */,
+				EA8D74961A6E958D004C17C2 /* BaseTableViewCell.m in Sources */,
 				1AD64903B17F5D12DC09D1BB /* ThirdLoginInfo.m in Sources */,
 				EA3D07731A6CD88A00189765 /* LoginViewController.m in Sources */,
-				EA6049531A6E4ACC00FBA10F /* AppInfoGroup.m in Sources */,
-				EA8D74931A6E7CF9004C17C2 /* AppTableViewCellSytle1.m in Sources */,
+				EA8D74991A6E9DC2004C17C2 /* AppTableViewCellStyle2.m in Sources */,
+				EA8D74931A6E7CF9004C17C2 /* AppTableViewCellStyle1.m in Sources */,
 				1AD64565F18F3ED26CC48D25 /* User.m in Sources */,
-				EA54C16C1A6E384B00B7312D /* AppInfo.m in Sources */,
 				EA3D07721A6CD88A00189765 /* LoginTableViewCell.m in Sources */,
 				1AD64FFC32CBAE27C98D3718 /* BaseEntity.m in Sources */,
 				EA54A1171A6E0E6100322C42 /* FoundViewController.m in Sources */,
@@ -566,8 +602,12 @@
 				1AD64DA54158CF05FAE8F2A6 /* WBLogin.m in Sources */,
 				1AD6414DA6EE3852763DFC2D /* NSString+NSStringCategory.m in Sources */,
 				1AD64D9C70E0A1325B3F2A09 /* AppViewController.m in Sources */,
-				1AD64FA1B56D863D5F1E2761 /* AppStoreHome.m in Sources */,
 				1AD648B3BA85A32392AD7DD7 /* appstorehome_test.json in Sources */,
+				1AD6499081D9DEF2C11C321E /* AppInfoGroup.m in Sources */,
+				1AD64E1713AD0CE098E0019C /* AppStoreHome.m in Sources */,
+				1AD64F3A04AFCBB948106908 /* AppInfo.m in Sources */,
+				1AD645A28AA3934B882BD885 /* FoundItemInfo.m in Sources */,
+				1AD643033AA98B7B2100F27E /* LoginItemInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

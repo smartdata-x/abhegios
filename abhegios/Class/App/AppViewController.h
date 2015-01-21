@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
+    AppTableViewCellStyleNone = 0,
+    AppTableViewCellStyleOne,
+    AppTableViewCellStyleTwo ,
+    AppTableViewCellStyleThree ,
+    AppTableViewCellStyleFour
+};
 @interface AppViewController : UITableViewController
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "LoginTableViewCell.h"
+#import "LoginItemInfo.h"
 #define kLeftOff 85
 @implementation LoginTableViewCell
 - (void)layoutSubviews {
@@ -15,4 +16,10 @@
     [self.textLabel setFrame:CGRectOffset([self.textLabel frame],kLeftOff,0)];
 }
 
+-(void) setData:(id)data
+{
+    [super setData:data];
+    [self.textLabel setText:[ data title]];
+    [self.imageView setImage:[UIImage imageNamed:[(LoginItemInfo*)data icon]]];
+}
 @end

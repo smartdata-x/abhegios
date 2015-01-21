@@ -14,17 +14,17 @@
 }
 HELPER_SHARED
 
--(void) login:(Login_Source) source delegate:(id<LoginDelegate>) delegate{
+-(void) login:(LoginType) source delegate:(id<LoginDelegate>) delegate{
     static ILogin *login = nil;
     switch (source)
     {
-       case WeiboLogin_Source:
+       case LoginTypeWeibo:
            login =  [[WBLogin alloc] init:source];
             break;
-       case WXLogin_Source:
+       case LoginTypeWX:
            login =  [[WXLogin alloc] init:source];
             break;
-       case QQLogin_Source:
+       case LoginTypeQQ:
            login = [[QQLogin alloc] init:source];
             break;
         default:

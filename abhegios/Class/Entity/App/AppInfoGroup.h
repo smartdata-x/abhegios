@@ -9,7 +9,9 @@
 #import "BaseEntity.h"
 
 @interface AppInfoGroup : BaseEntity
+@property NSInteger             style;
 @property(nonatomic, copy)      NSString *title;
 @property(nonatomic, copy)      NSString *key;
-@property (nonatomic,retain)    NSArray  *list;
+@property (nonatomic,retain)    NSArray  *appInfos;
+-(void) setAppInfosDictionarys:(NSArray *)array;
 @end

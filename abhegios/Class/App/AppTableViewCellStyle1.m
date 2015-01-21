@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年 180. All rights reserved.
 //
 
-#import "AppTableViewCellSytle1.h"
+#import "AppTableViewCellStyle1.h"
 #import "AppInfo.h"
-@implementation AppTableViewCellSytle1
+@implementation AppTableViewCellStyle1
 
 - (void)awakeFromNib {
     [[_logo layer] setCornerRadius:8.0f];
@@ -19,10 +19,13 @@
     [_setupButton.layer setBorderColor:[kUIColorWithRGB(0xbcbcbc) CGColor]];//边框颜色
 }
 
--(void) setData:(AppInfo*) appinfo
+
+
+-(void) setData:(id)data
 {
-    [_name setText:[appinfo name]];
-    [_summary setText:[appinfo summary]];
+    [super setData:data];
+    [_name setText:[data name]];
+    [_summary setText:[data summary]];
 }
 
 @end

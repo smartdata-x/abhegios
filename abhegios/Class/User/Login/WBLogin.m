@@ -25,7 +25,7 @@
     [WeiboSDK sendRequest:request];
 }
 
-- (id)init:(Login_Source)source {
+- (id)init:(LoginType)source {
     self = [super init:source];
     if (self) {
         [WeiboSDK registerApp:kWeiboAppID];
