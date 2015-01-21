@@ -15,7 +15,7 @@
     if (self) {
         static NSArray *g_array = nil;
         if (g_array == nil) {
-            g_array =  [AppInfoGroup initWithsResource:@"appstorehome"  ofType:@"plist"];
+            g_array =  [AppInfoGroup initWithsPlistResource:@"appstorehome"  ofType:@"plist"];
         }
         for (AppInfoGroup *group in g_array) {
                 [group setAppInfosDictionarys:[json objectForKey:[group key]]];

@@ -21,7 +21,7 @@
 - (void)loadView {
     [super loadView];
     [self.tableView setBackgroundColor:kUIColorWithRGB(0xfbfbfb)];
-    _loginItemInfos =[LoginItemInfo initWithsResource:@"uilogindata" ofType:@"plist"];
+    _loginItemInfos =[LoginItemInfo initWithsPlistResource:@"uilogindata" ofType:@"plist"];
 
    
 }

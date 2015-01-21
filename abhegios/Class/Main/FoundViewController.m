@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _foundItemInfos =[FoundItemInfo initWithsResource:@"uifounddata" ofType:@"plist"];
+    _foundItemInfos =[FoundItemInfo initWithsPlistResource:@"uifounddata" ofType:@"plist"];
 
 }
 

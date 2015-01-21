@@ -43,14 +43,36 @@
     }
     return array;
 }
-+(NSArray*) initWithsContentsOfFile:(NSString *)path
++(NSArray*) initWithsContentsOfPlistFile:(NSString *)path
 {
     return [self initWithsDictionarys:[[NSMutableArray alloc] initWithContentsOfFile:path]];
 }
 
-+(NSArray*) initWithsResource:(NSString *)name ofType:(NSString *)ext
++(NSArray*) initWithsPlistResource:(NSString *)name ofType:(NSString *)ext
 {
     NSString   *plistPath  = [[NSBundle mainBundle] pathForResource:name ofType:ext];
-    return [self initWithsContentsOfFile:plistPath];
+    return [self initWithsContentsOfPlistFile:plistPath];
+}
+
++(NSArray*) initWithsJsonResource:(NSString *)name ofType:(NSString *)ext
+{
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:ext];
+    if( path != nil)
+    {
+        NSData *data = [NSData dataWithContentsOfFile:path];
+        if( data != nil)
+        {
+            NSError *error = nil;
+            id json =[NSJSONSerialization JSONObjectWithData:data
+                                                     options:NSJSONReadingAllowFragments
+                                                       error:&error];
+            if( error == nil && [json isKindOfClass:[NSArray class]] )
+            {
+                return [self initWithsDictionarys:json];
+            }
+        }
+    }
+    return nil;
 }
 @end

@@ -262,6 +262,24 @@
             </objects>
             <point key="canvasLocation" x="2738" y="71"/>
         </scene>
+        <!--APP详情-->
+        <scene sceneID="gvH-jK-faA">
+            <objects>
+                <viewController storyboardIdentifier="AppDetailsViewController" title="APP详情" id="jLC-IE-n8s" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ab6-pG-fA7"/>
+                        <viewControllerLayoutGuide type="bottom" id="frt-un-ZeL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="taC-Ta-jch">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iNk-IY-0hc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3366" y="71"/>
+        </scene>
         <!--登录-->
         <scene sceneID="SrF-nv-kzf">
             <objects>
