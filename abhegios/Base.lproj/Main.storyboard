@@ -195,11 +195,11 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="K8d-VK-gxo" firstAttribute="leading" secondItem="67e-64-4Ca" secondAttribute="leadingMargin" constant="74" id="7Zo-q0-ouM"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="nrq-j8-EOu" secondAttribute="trailing" constant="70" id="MJF-gJ-ux1"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="zq4-Rd-RDG" secondAttribute="trailing" constant="10" id="RFS-Xv-hF7"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="nrq-j8-EOu" secondAttribute="trailing" constant="60" id="MJF-gJ-ux1"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="zq4-Rd-RDG" secondAttribute="trailing" id="RFS-Xv-hF7"/>
                                         <constraint firstItem="nrq-j8-EOu" firstAttribute="leading" secondItem="67e-64-4Ca" secondAttribute="leadingMargin" constant="74" id="hKH-pP-2JR"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="1Oi-IY-yGI" secondAttribute="trailing" constant="70" id="iWf-rj-WCT"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="K8d-VK-gxo" secondAttribute="trailing" constant="70" id="o2d-bu-V0E"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="1Oi-IY-yGI" secondAttribute="trailing" constant="60" id="iWf-rj-WCT"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="K8d-VK-gxo" secondAttribute="trailing" constant="60" id="o2d-bu-V0E"/>
                                         <constraint firstItem="1Oi-IY-yGI" firstAttribute="leading" secondItem="67e-64-4Ca" secondAttribute="leadingMargin" constant="74" id="tk1-cT-jEP"/>
                                     </constraints>
                                 </tableViewCellContentView>

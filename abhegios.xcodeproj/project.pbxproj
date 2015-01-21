@@ -16,7 +16,6 @@
 		1AD641D66B96305DB64E42F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD6437A050D67745B214ABC /* main.m */; };
 		1AD6424E41815985501DAFD3 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD64CC1D3FCEB41E30B3D46 /* libWeiboSDK.a */; };
 		1AD642F6A5749FB0E91F1A4E /* appstorehome.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AD646EFABD27B8535BB7F1C /* appstorehome.plist */; };
-		1AD643033AA98B7B2100F27E /* LoginItemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64AB9124C5214618D2B3B /* LoginItemInfo.m */; };
 		1AD6444BCD81D3E62537781A /* qqicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AD64FDCA86FD9856133C0D9 /* qqicon.png */; };
 		1AD6455F3CEB60EEE78C0C77 /* UserHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD6408FC527AE4826BBFD19 /* UserHelper.m */; };
 		1AD64565F18F3ED26CC48D25 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64906666AE7E8636FF430 /* User.m */; };
@@ -46,6 +45,7 @@
 		EA3D07791A6CDA2000189765 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EA3D07781A6CDA2000189765 /* WeiboSDK.bundle */; };
 		EA54A1171A6E0E6100322C42 /* FoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA54A1161A6E0E6100322C42 /* FoundViewController.m */; };
 		EA6049501A6E492500FBA10F /* appstorehome_test.json in Resources */ = {isa = PBXBuildFile; fileRef = 1AD64849042CDCBD5AF28B41 /* appstorehome_test.json */; };
+		EA6500AE1A6F34630043C4F2 /* LoginItemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6500AD1A6F34630043C4F2 /* LoginItemInfo.m */; };
 		EA8D74931A6E7CF9004C17C2 /* AppTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8D74921A6E7CF9004C17C2 /* AppTableViewCellStyle1.m */; };
 		EA8D74961A6E958D004C17C2 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8D74951A6E958D004C17C2 /* BaseTableViewCell.m */; };
 		EA8D74991A6E9DC2004C17C2 /* AppTableViewCellStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8D74981A6E9DC2004C17C2 /* AppTableViewCellStyle2.m */; };
@@ -98,7 +98,6 @@
 		1AD647A4E5E362E78DE97404 /* BaseEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseEntity.m; sourceTree = "<group>"; };
 		1AD647DF9B122EFEA68E6170 /* HandleOpenURLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandleOpenURLHelper.h; sourceTree = "<group>"; };
 		1AD64811342BC7DCF625AF76 /* HelperProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelperProtocol.h; sourceTree = "<group>"; };
-		1AD648157C36BD3C412A127D /* LoginItemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginItemInfo.h; sourceTree = "<group>"; };
 		1AD6482492CCDF431E3E73F8 /* QQApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQApi.h; sourceTree = "<group>"; };
 		1AD6483601E377850FE6F46C /* NSString+NSStringCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSStringCategory.h"; sourceTree = "<group>"; };
 		1AD64849042CDCBD5AF28B41 /* appstorehome_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = appstorehome_test.json; sourceTree = "<group>"; };
@@ -112,7 +111,6 @@
 		1AD64A4EF1E9A486E508A25A /* AppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfo.h; sourceTree = "<group>"; };
 		1AD64A5F0046E17B443BDAFB /* AppStoreHome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppStoreHome.m; sourceTree = "<group>"; };
 		1AD64A85039C51E682F19BA9 /* AppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfo.m; sourceTree = "<group>"; };
-		1AD64AB9124C5214618D2B3B /* LoginItemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginItemInfo.m; sourceTree = "<group>"; };
 		1AD64ADF6021C604900147BF /* WBLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBLogin.m; sourceTree = "<group>"; };
 		1AD64B734EC6BB4C73EA65F2 /* WeiBoAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiBoAPI.h; sourceTree = "<group>"; };
 		1AD64BA0EAC25B5DE5518049 /* QQApiInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQApiInterface.h; sourceTree = "<group>"; };
@@ -139,6 +137,8 @@
 		EA3D07781A6CDA2000189765 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
 		EA54A1151A6E0E6100322C42 /* FoundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundViewController.h; sourceTree = "<group>"; };
 		EA54A1161A6E0E6100322C42 /* FoundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundViewController.m; sourceTree = "<group>"; };
+		EA6500AC1A6F34630043C4F2 /* LoginItemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginItemInfo.h; sourceTree = "<group>"; };
+		EA6500AD1A6F34630043C4F2 /* LoginItemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginItemInfo.m; sourceTree = "<group>"; };
 		EA83390D1A68B04200F3A9E9 /* abheg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = abheg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8D74911A6E7CF9004C17C2 /* AppTableViewCellStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTableViewCellStyle1.h; sourceTree = "<group>"; };
 		EA8D74921A6E7CF9004C17C2 /* AppTableViewCellStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTableViewCellStyle1.m; sourceTree = "<group>"; };
@@ -343,8 +343,8 @@
 				1AD64A4A58510940FB83B455 /* ThirdLoginInfo.m */,
 				1AD64906666AE7E8636FF430 /* User.m */,
 				1AD6485A940C71B93C1841E6 /* User.h */,
-				1AD648157C36BD3C412A127D /* LoginItemInfo.h */,
-				1AD64AB9124C5214618D2B3B /* LoginItemInfo.m */,
+				EA6500AC1A6F34630043C4F2 /* LoginItemInfo.h */,
+				EA6500AD1A6F34630043C4F2 /* LoginItemInfo.m */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -582,6 +582,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA6500AE1A6F34630043C4F2 /* LoginItemInfo.m in Sources */,
 				1AD64804C9FA33B5797A36AC /* AppDelegate.m in Sources */,
 				1AD641D66B96305DB64E42F7 /* main.m in Sources */,
 				1AD64A7E02E7FE36F6F1B45D /* HandleOpenURLHelper.m in Sources */,
@@ -607,7 +608,6 @@
 				1AD64E1713AD0CE098E0019C /* AppStoreHome.m in Sources */,
 				1AD64F3A04AFCBB948106908 /* AppInfo.m in Sources */,
 				1AD645A28AA3934B882BD885 /* FoundItemInfo.m in Sources */,
-				1AD643033AA98B7B2100F27E /* LoginItemInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
