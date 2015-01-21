@@ -20,7 +20,7 @@
 	</dict>
 	<dict>
 		<key>identifier</key>
-		<string></string>
+		<string>BookStoreViewController</string>
 		<key>title</key>
 		<string>书籍</string>
 		<key>icon</key>
