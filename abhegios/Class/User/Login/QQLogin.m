@@ -6,7 +6,6 @@
 #import "QQLogin.h"
 #import "TencentOAuth.h"
 #import "NSString+NSStringCategory.h"
-
 @interface QQLogin()<TencentSessionDelegate>
 @end
 

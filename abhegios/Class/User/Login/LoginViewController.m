@@ -9,7 +9,6 @@
 #import "UserHelper.h"
 #import "User.h"
 #import "LoginItemInfo.h"
-#import "BaseEntity.h"
 
 #define kTopHeaderHeight 132
 @interface LoginViewController()<UITableViewDataSource,UITableViewDelegate,LoginDelegate>

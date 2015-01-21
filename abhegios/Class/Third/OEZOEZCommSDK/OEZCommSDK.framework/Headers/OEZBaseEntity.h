@@ -5,11 +5,14 @@
 
 #import <Foundation/Foundation.h>
 
+//yaobanglin 本引擎只限内部使用
+@interface OEZBaseEntity : NSObject
+-(instancetype) initWithDictionary:(NSDictionary *) dict;
 
-@interface BaseEntity : NSObject
--(id) init:(NSDictionary*) json;
-+(NSArray*) initWithsDictionarys:(NSArray*) dics;
++(instancetype) initWithDictionary:(NSDictionary *) dict;
++(NSArray*) initWithsDictionarys:(NSArray*) dicts;
 +(NSArray*) initWithsContentsOfPlistFile:(NSString *)path;
 +(NSArray*) initWithsPlistResource:(NSString *)name ofType:(NSString *)ext;
 +(NSArray*) initWithsJsonResource:(NSString *)name ofType:(NSString *)ext;
++(instancetype) initWithJsonResource:(NSString *)name ofType:(NSString *)ext;
 @end

@@ -4,10 +4,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BaseEntity.h"
 
 
-@interface ThirdLoginInfo : BaseEntity
+@interface ThirdLoginInfo : OEZBaseEntity
 @property NSInteger source;
 @property NSInteger machine;
 @property NSInteger imei;

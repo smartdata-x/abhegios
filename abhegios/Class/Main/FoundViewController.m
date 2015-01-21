@@ -7,8 +7,8 @@
 //
 
 #import "FoundViewController.h"
-#import "NSString+NSStringCategory.h"
 #import "FoundItemInfo.h"
+#import "NSString+NSStringCategory.h"
 @interface FoundViewController ()
 {
     NSArray * _foundItemInfos;
@@ -58,7 +58,7 @@
     {
         NSString *identifier = [[_foundItemInfos objectAtIndex:[indexPath row]] identifier];
         if (  [identifier isNotEmpty] ) {
-              [self.tabBarController.navigationController pushViewController:[self.storyboard instantiateViewControllerWithIdentifier:identifier] animated:YES];
+              [self.tabBarController.navigationController pushViewControllerWithIdentifier:identifier animated:YES];
         }
     }
 }

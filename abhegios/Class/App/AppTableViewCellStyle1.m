@@ -25,7 +25,7 @@
 {
     [super setData:data];
     [_name setText:[data name]];
-    [_summary setText:[data summary]];
+    [_summary setText:[(AppInfo*)data summary]];
 }
 
 @end

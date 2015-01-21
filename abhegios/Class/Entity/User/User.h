@@ -4,8 +4,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BaseEntity.h"
 
 
-@interface User : BaseEntity
+@interface User : OEZBaseEntity
 @end

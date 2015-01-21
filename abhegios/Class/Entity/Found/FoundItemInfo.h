@@ -6,9 +6,7 @@
 //  Copyright (c) 2015年 180. All rights reserved.
 //
 
-#import "BaseEntity.h"
-
-@interface FoundItemInfo : BaseEntity
+@interface FoundItemInfo : OEZBaseEntity
 @property(nonatomic, copy) NSString *identifier;
 @property(nonatomic, copy) NSString *title;
 @property(nonatomic, copy) NSString *icon;

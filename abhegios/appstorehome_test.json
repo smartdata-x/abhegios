@@ -1,5 +1,4 @@
 {
-  "result": {
     "advert": [
       {
         "id": 3,
@@ -171,6 +170,4 @@
         "pic": "http://pic.desgin.miglab.com/abheg/store/app/special/special.png"
       }
     ]
-  },
-  "status": 1
-}
+  }

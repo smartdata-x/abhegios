@@ -4,9 +4,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BaseEntity.h"
 
 
-@interface AppStoreHome : BaseEntity
+@interface AppStoreHome : OEZBaseEntity
 @property (nonatomic,retain)    NSArray   *appInfoGroups;
 @end

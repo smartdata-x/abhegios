@@ -10,7 +10,7 @@
 @implementation AppStoreHome {
 
 }
-- (id)init:(NSDictionary *)json {
+- (id)initWithDictionary:(NSDictionary *)dict {
     self = [super init];
     if (self) {
         static NSArray *g_array = nil;
@@ -18,7 +18,7 @@
             g_array =  [AppInfoGroup initWithsPlistResource:@"appstorehome"  ofType:@"plist"];
         }
         for (AppInfoGroup *group in g_array) {
-                [group setAppInfosDictionarys:[json objectForKey:[group key]]];
+                [group setAppInfosDictionarys:[dict objectForKey:[group key]]];
         }
         _appInfoGroups = g_array;
     }

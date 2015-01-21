@@ -33,7 +33,7 @@
     [self setTitle:[selectedViewController title]];
     [super setSelectedViewController:selectedViewController];
     if( selectedViewController == [[self childViewControllers] objectAtIndex:3])
-        [self.navigationController pushViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"] animated:TRUE];
+        [self.navigationController pushViewControllerWithIdentifier:@"LoginViewController" animated:TRUE];
 }
 
 

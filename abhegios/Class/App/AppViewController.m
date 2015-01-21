@@ -27,16 +27,7 @@
 
 -(void) testData
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"appstorehome_test" ofType:@"json"];
-    NSData *data=[NSData dataWithContentsOfFile:path];
-    NSError *error = nil;
-    id json =[NSJSONSerialization JSONObjectWithData:data
-                                             options:NSJSONReadingAllowFragments
-                                               error:&error];
-    if( json != nil && [json isKindOfClass:[NSDictionary class]] )
-    {
-        _appStoreHome = [[AppStoreHome alloc] init:[json objectForKey:@"result"]];
-    }
+    _appStoreHome = [AppStoreHome initWithJsonResource:@"appstorehome_test" ofType:@"json"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -88,7 +79,7 @@
     BaseTableViewCell* viewCell = nil;
     if ( [self isSingleLine:group])
     {
-        viewCell = [tableView dequeueReusableCellWithIdentifier:[NSString stringWithFormat:@"AppTableViewCellStyle%u",[group style]]];
+        viewCell = [tableView dequeueReusableCellWithIdentifier:[NSString stringWithFormat:@"AppTableViewCellStyle%ld",[group style]]];
         [viewCell setData:group];
     }
     else{
@@ -115,7 +106,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self.navigationController pushViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"AppDetailsViewController"] animated:TRUE];
+    [self.navigationController pushViewControllerWithIdentifier:@"AppDetailsViewController" animated:TRUE];
 }
 
 @end
