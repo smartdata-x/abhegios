@@ -77,7 +77,23 @@
         "type": 1,
         "summary": "享受高效会议,无需额外准备演示文稿,一键按下,以精美版式全屏演示笔记",
         "order": 5
-      }
+                  },
+                  {
+                  "id": 9,
+                  "logo": "http://pic.desgin.miglab.com/abheg/store/app/products/9/logo.png",
+                  "name": "新浪微博",
+                  "type": 1,
+                  "summary": "新浪微博是全中国最主流，最具人气，当前最火爆的微博产品。用一句话随意记录生活，用手机随时随地发微博",
+                  "order": 4
+                  },
+                  {
+                  "id": 10,
+                  "logo": "http://pic.desgin.miglab.com/abheg/store/app/products/10/logo.jpg",
+                  "name": "印象笔记",
+                  "type": 1,
+                  "summary": "享受高效会议,无需额外准备演示文稿,一键按下,以精美版式全屏演示笔记",
+                  "order": 5
+                  }
     ],
     "popularity": [
       {

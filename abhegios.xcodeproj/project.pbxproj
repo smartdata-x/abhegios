@@ -41,6 +41,7 @@
 		EA13DDD41A6F8DF9004AB7E6 /* AppDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDD21A6F8DF9004AB7E6 /* AppDetailsViewController.m */; };
 		EA13DDD61A6F8E5D004AB7E6 /* appdetailspage_test.json in Resources */ = {isa = PBXBuildFile; fileRef = EA13DDD51A6F8E5D004AB7E6 /* appdetailspage_test.json */; };
 		EA13DDDC1A6F961E004AB7E6 /* MyNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDDB1A6F961E004AB7E6 /* MyNavigationViewController.m */; };
+		EA13DDDF1A6FA0D0004AB7E6 /* AppTableViewCellStyle3.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDDE1A6FA0D0004AB7E6 /* AppTableViewCellStyle3.m */; };
 		EA3D07721A6CD88A00189765 /* LoginTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3D076F1A6CD88A00189765 /* LoginTableViewCell.m */; };
 		EA3D07731A6CD88A00189765 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3D07711A6CD88A00189765 /* LoginViewController.m */; };
 		EA3D07751A6CD89200189765 /* uilogindata.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA3D07741A6CD89200189765 /* uilogindata.plist */; };
@@ -138,6 +139,8 @@
 		EA13DDD51A6F8E5D004AB7E6 /* appdetailspage_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = appdetailspage_test.json; sourceTree = "<group>"; };
 		EA13DDDA1A6F961E004AB7E6 /* MyNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNavigationViewController.h; sourceTree = "<group>"; };
 		EA13DDDB1A6F961E004AB7E6 /* MyNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNavigationViewController.m; sourceTree = "<group>"; };
+		EA13DDDD1A6FA0D0004AB7E6 /* AppTableViewCellStyle3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTableViewCellStyle3.h; sourceTree = "<group>"; };
+		EA13DDDE1A6FA0D0004AB7E6 /* AppTableViewCellStyle3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTableViewCellStyle3.m; sourceTree = "<group>"; };
 		EA3D076E1A6CD88A00189765 /* LoginTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginTableViewCell.h; sourceTree = "<group>"; };
 		EA3D076F1A6CD88A00189765 /* LoginTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTableViewCell.m; sourceTree = "<group>"; };
 		EA3D07701A6CD88A00189765 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -336,6 +339,8 @@
 				EA8D74921A6E7CF9004C17C2 /* AppTableViewCellStyle1.m */,
 				EA8D74971A6E9DC2004C17C2 /* AppTableViewCellStyle2.h */,
 				EA8D74981A6E9DC2004C17C2 /* AppTableViewCellStyle2.m */,
+				EA13DDDD1A6FA0D0004AB7E6 /* AppTableViewCellStyle3.h */,
+				EA13DDDE1A6FA0D0004AB7E6 /* AppTableViewCellStyle3.m */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -621,6 +626,7 @@
 				EA13DDCE1A6F8A35004AB7E6 /* NSString+NSStringCategory.m in Sources */,
 				1AD64903B17F5D12DC09D1BB /* ThirdLoginInfo.m in Sources */,
 				EA3D07731A6CD88A00189765 /* LoginViewController.m in Sources */,
+				EA13DDDF1A6FA0D0004AB7E6 /* AppTableViewCellStyle3.m in Sources */,
 				EA8D74991A6E9DC2004C17C2 /* AppTableViewCellStyle2.m in Sources */,
 				EA8D74931A6E7CF9004C17C2 /* AppTableViewCellStyle1.m in Sources */,
 				1AD64565F18F3ED26CC48D25 /* User.m in Sources */,

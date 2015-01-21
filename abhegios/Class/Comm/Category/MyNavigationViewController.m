@@ -10,4 +10,9 @@
 
 @implementation MyNavigationViewController
 
+-(void) viewDidLoad
+{
+    [super viewDidLoad];
+    //[self.navigationBar setBarTintColor:kUIColorWithRGB(0x339ee2)];
+}
 @end
