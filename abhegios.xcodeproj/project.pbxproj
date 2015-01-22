@@ -42,7 +42,6 @@
 		CB6A21CA1A6FFAEF0087546F /* BookInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21C91A6FFAEF0087546F /* BookInfo.m */; };
 		CB6A21CC1A6FFCC20087546F /* bookstorehome_test.json in Resources */ = {isa = PBXBuildFile; fileRef = CB6A21CB1A6FFCC20087546F /* bookstorehome_test.json */; };
 		CB6A21CE1A7007970087546F /* bookstorehome.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB6A21CD1A7007970087546F /* bookstorehome.plist */; };
-		EA13DDC61A6F8651004AB7E6 /* OEZCommSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA13DDC51A6F8651004AB7E6 /* OEZCommSDK.framework */; };
 		EA13DDCE1A6F8A35004AB7E6 /* NSString+NSStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDCD1A6F8A35004AB7E6 /* NSString+NSStringCategory.m */; };
 		EA13DDD11A6F8D3A004AB7E6 /* AppDetailsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDCF1A6F8D3A004AB7E6 /* AppDetailsInfo.m */; };
 		EA13DDD41A6F8DF9004AB7E6 /* AppDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDD21A6F8DF9004AB7E6 /* AppDetailsViewController.m */; };
@@ -74,6 +73,7 @@
 		EA8E8F6D1A68F56000FEA027 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F6C1A68F56000FEA027 /* libz.1.1.3.dylib */; };
 		EA8E8F6F1A68F5E000FEA027 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F6E1A68F5E000FEA027 /* libstdc++.dylib */; };
 		EA9486391A6DE09C003EE99B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9486381A6DE09C003EE99B /* MainViewController.m */; };
+		EAA454441A70DEAF0057A770 /* OEZCommSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA454431A70DEAF0057A770 /* OEZCommSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -148,7 +148,6 @@
 		CB6A21C91A6FFAEF0087546F /* BookInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookInfo.m; sourceTree = "<group>"; };
 		CB6A21CB1A6FFCC20087546F /* bookstorehome_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bookstorehome_test.json; sourceTree = "<group>"; };
 		CB6A21CD1A7007970087546F /* bookstorehome.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bookstorehome.plist; sourceTree = "<group>"; };
-		EA13DDC51A6F8651004AB7E6 /* OEZCommSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OEZCommSDK.framework; sourceTree = "<group>"; };
 		EA13DDCD1A6F8A35004AB7E6 /* NSString+NSStringCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringCategory.m"; sourceTree = "<group>"; };
 		EA13DDCF1A6F8D3A004AB7E6 /* AppDetailsInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsInfo.m; sourceTree = "<group>"; };
 		EA13DDD01A6F8D3A004AB7E6 /* AppDetailsInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailsInfo.h; sourceTree = "<group>"; };
@@ -189,6 +188,7 @@
 		EA8E8F6E1A68F5E000FEA027 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		EA9486371A6DE09C003EE99B /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		EA9486381A6DE09C003EE99B /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		EAA454431A70DEAF0057A770 /* OEZCommSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OEZCommSDK.framework; sourceTree = "<group>"; };
 		EADD5B571A6F7A4700CA6633 /* NSString+NSStringCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSStringCategory.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -209,7 +209,7 @@
 				EA8E8F571A68F13300FEA027 /* CoreGraphics.framework in Frameworks */,
 				EA8E8F551A68F11800FEA027 /* Foundation.framework in Frameworks */,
 				EA8E8F691A68F46800FEA027 /* CoreImage.framework in Frameworks */,
-				EA13DDC61A6F8651004AB7E6 /* OEZCommSDK.framework in Frameworks */,
+				EAA454441A70DEAF0057A770 /* OEZCommSDK.framework in Frameworks */,
 				EA8E8F4E1A68F07500FEA027 /* UIKit.framework in Frameworks */,
 				1AD641A9B657652F6B6DCAAB /* libWeChatSDK.a in Frameworks */,
 				1AD6424E41815985501DAFD3 /* libWeiboSDK.a in Frameworks */,
@@ -376,7 +376,7 @@
 		1AD64A22A31483C3558E4E0E /* Third */ = {
 			isa = PBXGroup;
 			children = (
-				EA13DDC41A6F8651004AB7E6 /* OEZOEZCommSDK */,
+				EAA454421A70DEAF0057A770 /* OEZCommSDK */,
 				1AD645DB90778183AB08ECFD /* WX */,
 				1AD64D3A87E20CDBFABB3C6F /* Tencent */,
 				1AD64B84392924A52AE6FE1B /* libWeiboSDK */,
@@ -526,14 +526,6 @@
 			path = Book;
 			sourceTree = "<group>";
 		};
-		EA13DDC41A6F8651004AB7E6 /* OEZOEZCommSDK */ = {
-			isa = PBXGroup;
-			children = (
-				EA13DDC51A6F8651004AB7E6 /* OEZCommSDK.framework */,
-			);
-			path = OEZOEZCommSDK;
-			sourceTree = "<group>";
-		};
 		EA8339041A68B04200F3A9E9 = {
 			isa = PBXGroup;
 			children = (
@@ -558,6 +550,14 @@
 				1AD64A771B77170782A88465 /* Framework */,
 			);
 			path = abhegios;
+			sourceTree = "<group>";
+		};
+		EAA454421A70DEAF0057A770 /* OEZCommSDK */ = {
+			isa = PBXGroup;
+			children = (
+				EAA454431A70DEAF0057A770 /* OEZCommSDK.framework */,
+			);
+			path = OEZCommSDK;
 			sourceTree = "<group>";
 		};
 		EADD5B451A6F702600CA6633 /* Category */ = {
@@ -669,7 +669,6 @@
 				EA9486391A6DE09C003EE99B /* MainViewController.m in Sources */,
 				CB6A21CA1A6FFAEF0087546F /* BookInfo.m in Sources */,
 				EA13DDDC1A6F961E004AB7E6 /* MyNavigationViewController.m in Sources */,
-				EA8D74961A6E958D004C17C2 /* BaseTableViewCell.m in Sources */,
 				CB6A21C41A6FFA4E0087546F /* BookStoreHome.m in Sources */,
 				EA13DDCE1A6F8A35004AB7E6 /* NSString+NSStringCategory.m in Sources */,
 				1AD64903B17F5D12DC09D1BB /* ThirdLoginInfo.m in Sources */,
@@ -800,6 +799,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/abhegios/Class/Third/Tencent",
 					"$(PROJECT_DIR)/abhegios/Class/Third/OEZOEZCommSDK",
+					"$(PROJECT_DIR)/abhegios/Class/Third/OEZCommSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "abhegios/Class/abhegios-Prefix.pch";
@@ -827,6 +827,7 @@
 					"$(PROJECT_DIR)/abhegios/Class/Third/OEZSDK",
 					/Volumes/Public/project/OEZSDK/Products,
 					"$(PROJECT_DIR)/abhegios/Class/Third/OEZOEZCommSDK",
+					"$(PROJECT_DIR)/abhegios/Class/Third/OEZCommSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "abhegios/Class/abhegios-Prefix.pch";
