@@ -107,11 +107,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    //[self.navigationController pushViewControllerWithIdentifier:@"BookShelfViewController" animated:YES];
     BookInfoGroup *group = [[_bookStoreHome bookInfoGroups] objectAtIndex:indexPath.section];
-    BookShelfViewController *bookShelfView = [[self storyboard] instantiateViewControllerWithIdentifier:@"BookShelfViewController"];
-    [bookShelfView setData:group];
-    [self.navigationController pushViewController:bookShelfView animated:YES];
+    [self.navigationController pushViewControllerWithIdentifier:@"BookShelfViewController" completion:^(UIViewController *viewController) {
+        BookShelfViewController *bookShelfView = (BookShelfViewController *)viewController;
+        [bookShelfView setData:group];
+    } animated:YES];
 }
 
 /*

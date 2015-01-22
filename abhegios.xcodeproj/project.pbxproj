@@ -42,7 +42,7 @@
 		CB6A21D11A711CD50087546F /* BookStoreTableViewCellStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21D01A711CD50087546F /* BookStoreTableViewCellStyle2.m */; };
 		CB6A21D41A711CEC0087546F /* BookStoreTableViewCellStyle3.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21D31A711CEC0087546F /* BookStoreTableViewCellStyle3.m */; };
 		CB6A21D71A712FBD0087546F /* BookStoreTableViewCellStyle4.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21D61A712FBD0087546F /* BookStoreTableViewCellStyle4.m */; };
-		CB6A21DA1A71364B0087546F /* BookShelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21D91A71364B0087546F /* BookShelfViewController.m */; };
+		CB6A21DB1A7155750087546F /* BookShelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21D91A71364B0087546F /* BookShelfViewController.m */; };
 		EA13DDCE1A6F8A35004AB7E6 /* NSString+NSStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDCD1A6F8A35004AB7E6 /* NSString+NSStringCategory.m */; };
 		EA13DDD11A6F8D3A004AB7E6 /* AppDetailsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDCF1A6F8D3A004AB7E6 /* AppDetailsInfo.m */; };
 		EA13DDD41A6F8DF9004AB7E6 /* AppDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDD21A6F8DF9004AB7E6 /* AppDetailsViewController.m */; };
@@ -676,6 +676,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB6A21DB1A7155750087546F /* BookShelfViewController.m in Sources */,
 				EA6500AE1A6F34630043C4F2 /* LoginItemInfo.m in Sources */,
 				1AD64804C9FA33B5797A36AC /* AppDelegate.m in Sources */,
 				1AD641D66B96305DB64E42F7 /* main.m in Sources */,
@@ -706,11 +707,6 @@
 				1AD6419EC3E465BEDDED654B /* WXLogin.m in Sources */,
 				1AD64DA54158CF05FAE8F2A6 /* WBLogin.m in Sources */,
 				1AD64D9C70E0A1325B3F2A09 /* AppViewController.m in Sources */,
-<<<<<<< HEAD
-				CB6A21DA1A71364B0087546F /* BookShelfViewController.m in Sources */,
-				1AD648B3BA85A32392AD7DD7 /* appstorehome_test.json in Sources */,
-=======
->>>>>>> db7362d7295795156ab2646e5f75f8c4d022f93f
 				1AD6499081D9DEF2C11C321E /* AppInfoGroup.m in Sources */,
 				1AD64E1713AD0CE098E0019C /* AppStoreHome.m in Sources */,
 				CB6A21D11A711CD50087546F /* BookStoreTableViewCellStyle2.m in Sources */,
