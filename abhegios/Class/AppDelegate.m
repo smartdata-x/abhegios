@@ -17,6 +17,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    NSLog(@"%@",NSStringFromCGRect(kMainScreenFrame));
     // Override point for customization after application launch.
     return YES;
 }

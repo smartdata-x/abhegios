@@ -20,7 +20,6 @@
     self = [super initWithFrame:frame];
     if (self != nil)
     {
-        
         _logo = [UIButton buttonWithType:UIButtonTypeCustom];
         [_logo setFrame:CGRectMake((CGRectGetWidth(frame)-54)/2, 10, 54, 54)];
         [_logo setImage:[UIImage imageNamed:@"app-icon-default"] forState:UIControlStateNormal];
@@ -51,9 +50,6 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    CGRect rect = self.frame;
-    rect.size.height = kViewCellHeigth;
-    [self.scrollView setFrame:rect];
     for (int i = 0; i < kMaxViewItems; ++i) {
         [self addViewItem];
     }
@@ -62,7 +58,7 @@
 -(void) addViewItem
 {
     CGFloat x = [[self subviews] count] * kVitemWidth;
-    ViewItem* viewItem = [[ViewItem alloc] initWithFrame:CGRectMake(x, 0, kVitemWidth, CGRectGetHeight(self.frame))];
+    ViewItem* viewItem = [[ViewItem alloc] initWithFrame:CGRectMake(x, 0, kVitemWidth,kViewCellHeigth)];
     [viewItem setTag:[[self subviews] count]];
     [self addSubview:viewItem];
     

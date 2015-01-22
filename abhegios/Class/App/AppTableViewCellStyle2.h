@@ -7,6 +7,6 @@
 //
 
 #import <OEZCommSDK/OEZCommSDK.h>
-@interface AppTableViewCellStyle2 : OEZTableViewCell
+@interface AppTableViewCellStyle2 : OEZTableViewCell<OEZPageViewDelegate>
 
 @end
