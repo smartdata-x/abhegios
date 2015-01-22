@@ -9,6 +9,7 @@
 #import "FoundViewController.h"
 #import "FoundItemInfo.h"
 #import "NSString+NSStringCategory.h"
+#import <OEZCommSDK/OEZCommSDK.h>
 @interface FoundViewController ()
 {
     NSArray * _foundItemInfos;

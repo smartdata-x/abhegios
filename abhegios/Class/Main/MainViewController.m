@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "LoginViewController.h"
+#import <OEZCommSDK/OEZCommSDK.h>
 @interface MainViewController ()
 
 @end
