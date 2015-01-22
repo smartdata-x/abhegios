@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OEZPageView : UIView
+@interface OEZPageView : UIView<UIScrollViewDelegate>
 @property (readonly) UIScrollView*  scrollView;
 @property (readonly) NSArray     *  pageViews;
 
