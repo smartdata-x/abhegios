@@ -10,7 +10,7 @@
 #import "BookInfo.h"
 #import "BookInfoGroup.h"
 
-@interface BookItemView : UIView
+@interface BookItemView ()
 @property UIButton *logo;
 @property UILabel *name;
 @property UILabel *summary;

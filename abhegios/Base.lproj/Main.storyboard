@@ -420,6 +420,24 @@
             </objects>
             <point key="canvasLocation" x="4017" y="59"/>
         </scene>
+        <!--书架-->
+        <scene sceneID="chd-w2-5Xy">
+            <objects>
+                <viewController storyboardIdentifier="BookShelfViewController" id="pYb-4h-WyD" userLabel="书架" customClass="BookShelfViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rB9-Yo-3eJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="brh-Z2-TX4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x9w-l3-M3j">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RcE-Vm-191" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4663" y="59"/>
+        </scene>
         <!--登录-->
         <scene sceneID="SrF-nv-kzf">
             <objects>

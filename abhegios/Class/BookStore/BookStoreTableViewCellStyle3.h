@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <OEZCommSDK/OEZCommSDK.h>
+
+@interface BookItemView : UIView
+@end
+
 @interface BookStoreTableViewCellStyle3 : OEZHScrollTableViewCell
 
 @end
