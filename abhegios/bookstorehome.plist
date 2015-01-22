@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>item 0</key>
+<array>
 	<dict>
 		<key>style</key>
 		<integer>2</integer>
@@ -11,7 +10,6 @@
 		<key>title</key>
 		<string>advert</string>
 	</dict>
-	<key>item 1</key>
 	<dict>
 		<key>style</key>
 		<integer>3</integer>
@@ -20,7 +18,6 @@
 		<key>title</key>
 		<string>精品推荐</string>
 	</dict>
-	<key>item 2</key>
 	<dict>
 		<key>style</key>
 		<integer>1</integer>
@@ -29,5 +26,5 @@
 		<key>title</key>
 		<string>热门推荐</string>
 	</dict>
-</dict>
+</array>
 </plist>

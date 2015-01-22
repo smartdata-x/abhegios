@@ -5,21 +5,24 @@
 "name": "广告1",
 "type": 1,
 "order": 1,
-"pic": "http://pic.desgin.miglab.com/abheg/store/app/advert/3.png",
+"logo": "http://pic.desgin.miglab.com/abheg/store/app/advert/3.png",
+"favRate": 5,
 },
 {
 "id": 2,
 "name": "广告2",
 "type": 1,
 "order": 2,
-"pic": "http://pic.desgin.miglab.com/abheg/store/app/advert/3.png",
+"logo": "http://pic.desgin.miglab.com/abheg/store/app/advert/3.png",
+"favRate": 5,
 },
 {
 "id": 3,
 "name": "广告3",
 "type": 1,
 "order": 3,
-"pic": "http://pic.desgin.miglab.com/abheg/store/app/advert/3.png",
+"logo": "http://pic.desgin.miglab.com/abheg/store/app/advert/3.png",
+"favRate": 5,
 }
 ],
 "important": [
@@ -29,7 +32,8 @@
 "name": "城市主题阅读",
 "type": 1,
 "summary": "1099 关注",
-"order": 1
+"order": 1,
+"favRate": 3,
 },
 {
 "id": 5,
@@ -37,7 +41,8 @@
 "name": "理性小说集",
 "type": 1,
 "summary": "221 关注",
-"order": 2
+"order": 2,
+"favRate": 3,
 },
 {
 "id": 6,
@@ -45,7 +50,8 @@
 "name": "人生一次路过",
 "type": 1,
 "summary": "334 关注",
-"order": 3
+"order": 3,
+"favRate": 3,
 }
 ],
 "hot": [
@@ -55,7 +61,8 @@
 "name": "耶路撒冷三千年",
 "type": 1,
 "summary": "你会忍不住爱上这座城市，它是人类的瑰宝。而这本书值得你一读再读。--比尔.克林顿（美国前总统）",
-"order": 1
+"order": 1,
+"favRate": 2,
 },
 {
 "id": 8,
@@ -63,7 +70,8 @@
 "name": "再烂的电影也能卖出去",
 "type": 1,
 "summary": "作为一个收入颇丰的独立电影人，罗伊德.考夫曼拍出了自己的独立电影，然后还将其变成百老汇的音乐剧、电视儿童动画、漫威漫画",
-"order": 2
+"order": 2,
+"favRate": 2,
 },
 {
 "id": 9,
@@ -71,7 +79,8 @@
 "name": "再烂的电影也能卖出去",
 "type": 1,
 "summary": "作为一个收入颇丰的独立电影人，罗伊德.考夫曼拍出了自己的独立电影，然后还将其变成百老汇的音乐剧、电视儿童动画、漫威漫画",
-"order": 3
+"order": 3,
+"favRate": 2,
 },
 {
 "id": 10,
@@ -79,7 +88,8 @@
 "name": "再烂的电影也能卖出去",
 "type": 1,
 "summary": "作为一个收入颇丰的独立电影人，罗伊德.考夫曼拍出了自己的独立电影，然后还将其变成百老汇的音乐剧、电视儿童动画、漫威漫画",
-"order": 4
+"order": 4,
+"favRate": 2,
 },
 {
 "id": 11,
@@ -87,7 +97,8 @@
 "name": "再烂的电影也能卖出去",
 "type": 1,
 "summary": "作为一个收入颇丰的独立电影人，罗伊德.考夫曼拍出了自己的独立电影，然后还将其变成百老汇的音乐剧、电视儿童动画、漫威漫画",
-"order": 5
+"order": 5,
+"favRate": 2,
 },
 ]
 }

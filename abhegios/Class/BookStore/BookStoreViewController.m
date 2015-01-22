@@ -27,13 +27,19 @@
 }
 
 - (void)testData {
-    
-    _bookStoreHome = [BookStoreHome initWithJsonResource:@"appstorehome_test" ofType:@"json"];
+    _bookStoreHome = [BookStoreHome initWithJsonResource:@"bookstorehome_test" ofType:@"json"];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)isSingleLine:(BookInfoGroup *)group {
+    if ([group style] == BookStoreTableViewCellStyleOne) {
+        return NO;
+    }
+    return YES;
 }
 
 #pragma mark - Table view data source
@@ -60,6 +66,10 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     BookInfoGroup *group = [[_bookStoreHome bookInfoGroups] objectAtIndex:section];
+    if ([self isSingleLine:group]) {
+        int maxrows = [[group bookInfos] count];
+        return MIN(1, maxrows);
+    }
     return [[group bookInfos] count];
 }
 
@@ -80,8 +90,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BookInfoGroup *group = [[_bookStoreHome bookInfoGroups] objectAtIndex:indexPath.section];
     OEZTableViewCell *viewCell = nil;
-    if ([group style] != BookStoreTableViewCellStyleOne) {
-        viewCell = [tableView dequeueReusableCellWithIdentifier:[NSString stringWithFormat:@"BookStoreTableViewCellStyle%d", 1]];
+    if ([self isSingleLine:group]) {
+        viewCell = [tableView dequeueReusableCellWithIdentifier:[NSString stringWithFormat:@"BookStoreTableViewCellStyle%d", [group style]]];
+        [viewCell setData:group];
+    }
+    else {
+        viewCell = [tableView dequeueReusableCellWithIdentifier:[NSString stringWithFormat:@"BookStoreTableViewCellStyle%d", [group style]]];
         [viewCell setData:[[group bookInfos] objectAtIndex:indexPath.row]];
     }
     return viewCell;

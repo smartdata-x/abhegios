@@ -7,15 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AppInfo.h"
 
-@interface BookInfo : OEZBaseEntity
-@property NSUInteger id;
-@property NSUInteger type;
-@property NSUInteger order;
-@property NSUInteger down;
-@property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSString *logo;
-@property (nonatomic, copy) NSString *summary;
-@property (nonatomic, copy) NSString *favRate;
-
+@interface BookInfo : AppInfo
+@property NSUInteger favRate;
 @end
