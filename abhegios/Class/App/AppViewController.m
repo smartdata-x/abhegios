@@ -23,7 +23,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self testData];
-
 }
 
 -(void) testData
@@ -65,9 +64,9 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
      AppInfoGroup *group = [[_appStoreHome appInfoGroups] objectAtIndex:indexPath.section];
     if ( group.style == AppTableViewCellStyleThree) {
-        return 90;
+        return 90.5;
     }
-    return 80;
+    return 80.5;
 }
 
 
@@ -84,8 +83,9 @@
     OEZTableViewCell* viewCell = nil;
     if ( [self isSingleLine:group])
     {
-        viewCell = [tableView dequeueReusableCellWithIdentifier:[NSString stringWithFormat:@"AppTableViewCellStyle%ld",[group style]]];
+        viewCell = [tableView dequeueReusableCellWithIdentifier:[NSString stringWithFormat:@"AppTableViewCellStyle%@",@([group style])]];
         [viewCell setData:group];
+        [viewCell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     else{
         viewCell = [tableView dequeueReusableCellWithIdentifier:@"AppTableViewCellStyle1"];
