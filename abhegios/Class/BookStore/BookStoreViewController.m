@@ -61,6 +61,9 @@
     if (group.style == BookStoreTableViewCellStyleOne) {
         return 100;
     }
+    else if (group.style == BookStoreTableViewCellStyleFour) {
+        return 245;
+    }
     return 80;
 }
 

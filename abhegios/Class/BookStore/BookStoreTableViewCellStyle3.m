@@ -47,7 +47,7 @@
 }
 @end
 
-#define kMaxBookItemView 8
+#define kMaxBookItemView 3
 #define kBookItemWidth 100
 #define kBookCellHeight 80
 

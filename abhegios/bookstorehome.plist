@@ -26,5 +26,21 @@
 		<key>title</key>
 		<string>热门推荐</string>
 	</dict>
+	<dict>
+		<key>style</key>
+		<integer>4</integer>
+		<key>key</key>
+		<string>boys</string>
+		<key>title</key>
+		<string>男生原创</string>
+	</dict>
+	<dict>
+		<key>style</key>
+		<integer>4</integer>
+		<key>key</key>
+		<string>girls</string>
+		<key>title</key>
+		<string>浪漫女生</string>
+	</dict>
 </array>
 </plist>

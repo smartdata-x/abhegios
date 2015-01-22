@@ -13,6 +13,8 @@ typedef NS_ENUM(NSInteger, BookStoreTableViewCellStyle) {
     BookStoreTableViewCellStyleNone = 0,
     BookStoreTableViewCellStyleOne,
     BookStoreTableViewCellStyleTwo,
+    BookStoreTableViewCellStyleThree,
+    BookStoreTableViewCellStyleFour,
 };
 
 @interface BookStoreViewController : UITableViewController

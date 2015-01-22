@@ -23,12 +23,8 @@
 - (void)setData:(id)data {
     
     [super setData:data];
-    if ([data name]) {
-        [_name setText:[data name]];
-    }
-    if ([(BookInfo *)data summary]) {
-        [_summary setText:[(BookInfo *)data summary]];
-    }
+    [_name setText:[data name]];
+    [_summary setText:[(BookInfo *)data summary]];
 }
 
 @end
