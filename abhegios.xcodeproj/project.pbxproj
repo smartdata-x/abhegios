@@ -669,11 +669,8 @@
 				EA9486391A6DE09C003EE99B /* MainViewController.m in Sources */,
 				CB6A21CA1A6FFAEF0087546F /* BookInfo.m in Sources */,
 				EA13DDDC1A6F961E004AB7E6 /* MyNavigationViewController.m in Sources */,
-<<<<<<< HEAD
-=======
 				EA8D74961A6E958D004C17C2 /* BaseTableViewCell.m in Sources */,
 				CB6A21C41A6FFA4E0087546F /* BookStoreHome.m in Sources */,
->>>>>>> e0158890755eed21de990afa6b1eb83f06c06bd9
 				EA13DDCE1A6F8A35004AB7E6 /* NSString+NSStringCategory.m in Sources */,
 				1AD64903B17F5D12DC09D1BB /* ThirdLoginInfo.m in Sources */,
 				EA3D07731A6CD88A00189765 /* LoginViewController.m in Sources */,

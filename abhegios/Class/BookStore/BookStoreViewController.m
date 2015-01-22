@@ -11,7 +11,7 @@
 #import "BookInfoGroup.h"
 #import "BookInfo.h"
 #import "BookStoreTableViewCellStyle1.h"
-
+#import <OEZCommSDK/OEZCommSDK.h>
 @interface BookStoreViewController ()
 {
     BookStoreHome *_bookStoreHome;
@@ -79,7 +79,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BookInfoGroup *group = [[_bookStoreHome bookInfoGroups] objectAtIndex:indexPath.section];
-    BaseTableViewCell *viewCell = nil;
+    OEZTableViewCell *viewCell = nil;
     if ([group style] != BookStoreTableViewCellStyleOne) {
         viewCell = [tableView dequeueReusableCellWithIdentifier:[NSString stringWithFormat:@"BookStoreTableViewCellStyle%d", 1]];
         [viewCell setData:[[group bookInfos] objectAtIndex:indexPath.row]];

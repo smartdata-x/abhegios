@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseTableViewCell.h"
-
-@interface BookStoreTableViewCellStyle1 : BaseTableViewCell
+#import <OEZCommSDK/OEZCommSDK.h>
+@interface BookStoreTableViewCellStyle1 : OEZTableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *logo;
 @property (weak, nonatomic) IBOutlet UIImageView *favRate;
 @property (weak, nonatomic) IBOutlet UILabel *name;
