@@ -1,8 +1,7 @@
 //
-// Created by 180 on 15/1/16.
-// Copyright (c) 2015 180. All rights reserved.
+//  Created by 180 on 14/9/21.
+//  Copyright (c) 2014年 180. All rights reserved.
 //
-
 #import <Foundation/Foundation.h>
 
 //yaobanglin 本引擎只限内部使用

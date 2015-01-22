@@ -46,16 +46,14 @@
 #define kViewCellHeigth 90
 @implementation AppTableViewCellStyle3
 {
-    UIScrollView        *_scrollView;
+    
 }
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
     CGRect rect = self.frame;
     rect.size.height = kViewCellHeigth;
-    _scrollView = [[UIScrollView alloc] initWithFrame:rect];
-    [_scrollView setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
-    [_scrollView setShowsHorizontalScrollIndicator:NO];
-    [self addSubview:_scrollView];
+    [self.scrollView setFrame:rect];
     for (int i = 0; i < kMaxViewItems; ++i) {
         [self addViewItem];
     }
@@ -63,26 +61,28 @@
 
 -(void) addViewItem
 {
-    CGFloat x = [[_scrollView subviews] count] * kVitemWidth;
+    CGFloat x = [[self subviews] count] * kVitemWidth;
     ViewItem* viewItem = [[ViewItem alloc] initWithFrame:CGRectMake(x, 0, kVitemWidth, CGRectGetHeight(self.frame))];
-    [_scrollView addSubview:viewItem];
-    [viewItem setTag:[[_scrollView subviews] count]];
+    [viewItem setTag:[[self subviews] count]];
+    [self addSubview:viewItem];
+    
 }
 
+//使用了scrollView的subviews存储 viewitem ，如遇添加其它view到scrollView请做处理
 -(void) setData:(id)data
 {
     [super setData:data];
     AppInfoGroup* appInfoGroup = data;
     NSUInteger count = [[appInfoGroup appInfos] count];
      count = count > kMaxViewItems ? kMaxViewItems: count;
-    [_scrollView setContentSize:CGSizeMake(kVitemWidth*count, kViewCellHeigth)];
+    [self setContentWidth:kVitemWidth*count];
     NSUInteger i = 0;
     for (; i < count; ++i)
     {
-        [[_scrollView.subviews objectAtIndex:i] setData:[[appInfoGroup appInfos] objectAtIndex:i]];
+        [[[self subviews] objectAtIndex:i] setData:[[appInfoGroup appInfos] objectAtIndex:i]];
     }
     for (; i < kMaxViewItems; ++i) {
-        [[_scrollView.subviews objectAtIndex:i] setHidden:YES];
+        [[[self subviews] objectAtIndex:i] setHidden:YES];
     }
 }
 

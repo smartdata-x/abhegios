@@ -4,7 +4,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <OEZCommSDK/OEZBaseEntity.h>
 
 @interface User : OEZBaseEntity
 @end

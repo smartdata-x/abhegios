@@ -6,8 +6,7 @@
 //  Copyright (c) 2015年 180. All rights reserved.
 //
 
-#import "BaseTableViewCell.h"
-
-@interface AppTableViewCellStyle2 : BaseTableViewCell
+#import <OEZCommSDK/OEZCommSDK.h>
+@interface AppTableViewCellStyle2 : OEZTableViewCell
 
 @end

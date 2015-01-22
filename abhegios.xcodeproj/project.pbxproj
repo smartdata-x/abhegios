@@ -52,7 +52,6 @@
 		EA6049501A6E492500FBA10F /* appstorehome_test.json in Resources */ = {isa = PBXBuildFile; fileRef = 1AD64849042CDCBD5AF28B41 /* appstorehome_test.json */; };
 		EA6500AE1A6F34630043C4F2 /* LoginItemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6500AD1A6F34630043C4F2 /* LoginItemInfo.m */; };
 		EA8D74931A6E7CF9004C17C2 /* AppTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8D74921A6E7CF9004C17C2 /* AppTableViewCellStyle1.m */; };
-		EA8D74961A6E958D004C17C2 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8D74951A6E958D004C17C2 /* BaseTableViewCell.m */; };
 		EA8D74991A6E9DC2004C17C2 /* AppTableViewCellStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8D74981A6E9DC2004C17C2 /* AppTableViewCellStyle2.m */; };
 		EA8E8F4E1A68F07500FEA027 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F4D1A68F07500FEA027 /* UIKit.framework */; };
 		EA8E8F551A68F11800FEA027 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F4F1A68F0E600FEA027 /* Foundation.framework */; };
@@ -154,8 +153,6 @@
 		EA83390D1A68B04200F3A9E9 /* abheg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = abheg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8D74911A6E7CF9004C17C2 /* AppTableViewCellStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTableViewCellStyle1.h; sourceTree = "<group>"; };
 		EA8D74921A6E7CF9004C17C2 /* AppTableViewCellStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTableViewCellStyle1.m; sourceTree = "<group>"; };
-		EA8D74941A6E958D004C17C2 /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
-		EA8D74951A6E958D004C17C2 /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
 		EA8D74971A6E9DC2004C17C2 /* AppTableViewCellStyle2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTableViewCellStyle2.h; sourceTree = "<group>"; };
 		EA8D74981A6E9DC2004C17C2 /* AppTableViewCellStyle2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTableViewCellStyle2.m; sourceTree = "<group>"; };
 		EA8E8F4D1A68F07500FEA027 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -322,8 +319,6 @@
 			isa = PBXGroup;
 			children = (
 				EADD5B451A6F702600CA6633 /* Category */,
-				EA8D74941A6E958D004C17C2 /* BaseTableViewCell.h */,
-				EA8D74951A6E958D004C17C2 /* BaseTableViewCell.m */,
 			);
 			path = Comm;
 			sourceTree = "<group>";
@@ -622,7 +617,6 @@
 				1AD649CD0AF8969FFF4B9641 /* ILogin.m in Sources */,
 				EA9486391A6DE09C003EE99B /* MainViewController.m in Sources */,
 				EA13DDDC1A6F961E004AB7E6 /* MyNavigationViewController.m in Sources */,
-				EA8D74961A6E958D004C17C2 /* BaseTableViewCell.m in Sources */,
 				EA13DDCE1A6F8A35004AB7E6 /* NSString+NSStringCategory.m in Sources */,
 				1AD64903B17F5D12DC09D1BB /* ThirdLoginInfo.m in Sources */,
 				EA3D07731A6CD88A00189765 /* LoginViewController.m in Sources */,

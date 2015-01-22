@@ -9,7 +9,7 @@
 #import "UserHelper.h"
 #import "User.h"
 #import "LoginItemInfo.h"
-
+#import <OEZCommSDK/OEZCommSDK.h>
 #define kTopHeaderHeight 132
 @interface LoginViewController()<UITableViewDataSource,UITableViewDelegate,LoginDelegate>
 @end
@@ -81,7 +81,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    BaseTableViewCell *viewCell = [tableView dequeueReusableCellWithIdentifier:@"LoginTableViewCell"];
+    OEZTableViewCell *viewCell = [tableView dequeueReusableCellWithIdentifier:@"LoginTableViewCell"];
     if (indexPath.section == 0)
     {
         [viewCell setData:[_loginItemInfos objectAtIndex:indexPath.row]];

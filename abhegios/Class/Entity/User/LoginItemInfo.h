@@ -7,6 +7,7 @@
 //
 
 #import "ILogin.h"
+#import <OEZCommSDK/OEZBaseEntity.h>
 @interface LoginItemInfo : OEZBaseEntity
 @property LoginType type;
 @property(nonatomic, copy) NSString *title;

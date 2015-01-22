@@ -11,6 +11,7 @@
 #import "AppInfoGroup.h"
 #import "AppInfo.h"
 #import "AppTableViewCellStyle1.h"
+#import <OEZCommSDK/OEZCommSDK.h>
 @interface AppViewController ()
 {
     AppStoreHome* _appStoreHome;
@@ -80,7 +81,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AppInfoGroup *group = [[_appStoreHome appInfoGroups] objectAtIndex:[indexPath section]];
-    BaseTableViewCell* viewCell = nil;
+    OEZTableViewCell* viewCell = nil;
     if ( [self isSingleLine:group])
     {
         viewCell = [tableView dequeueReusableCellWithIdentifier:[NSString stringWithFormat:@"AppTableViewCellStyle%ld",[group style]]];
