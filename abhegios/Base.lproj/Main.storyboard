@@ -41,7 +41,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="推荐" image="first" id="oD3-Vz-kGs"/>
+                    <tabBarItem key="tabBarItem" title="推荐" image="recommend_ico" id="oD3-Vz-kGs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hmi-rV-K5E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -60,7 +60,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="WIFI" image="first" id="scm-Yu-AZ2"/>
+                    <tabBarItem key="tabBarItem" title="WIFI" image="wifi_ico" id="scm-Yu-AZ2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hpc-iI-C1P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -98,7 +98,7 @@
                             <outlet property="delegate" destination="OqO-Fl-P5t" id="ncj-N5-je6"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="发现" image="first" id="Fk9-Ug-qzr"/>
+                    <tabBarItem key="tabBarItem" title="发现" image="found_ico" id="Fk9-Ug-qzr"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="61T-rQ-xC4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -117,7 +117,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="我的" image="first" id="NMy-A0-cBP"/>
+                    <tabBarItem key="tabBarItem" title="我的" image="my_ico" id="NMy-A0-cBP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ydV-mI-b0y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -458,7 +458,10 @@
     <resources>
         <image name="app-icon-default" width="53" height="53"/>
         <image name="app_banner" width="296" height="71"/>
-        <image name="first" width="30" height="30"/>
+        <image name="found_ico" width="23" height="22"/>
+        <image name="my_ico" width="23" height="22"/>
+        <image name="recommend_ico" width="23" height="22"/>
         <image name="s_banner" width="320" height="80"/>
+        <image name="wifi_ico" width="23" height="22"/>
     </resources>
 </document>
