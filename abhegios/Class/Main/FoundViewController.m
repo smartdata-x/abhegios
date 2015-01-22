@@ -59,7 +59,10 @@
     {
         NSString *identifier = [[_foundItemInfos objectAtIndex:[indexPath row]] identifier];
         if (  [identifier isNotEmpty] ) {
-              [self.tabBarController.navigationController pushViewControllerWithIdentifier:identifier animated:YES];
+            [self.tabBarController.navigationController pushViewControllerWithIdentifier:identifier completion:^(UIViewController *viewController) {
+                NSLog(@"%@",viewController);
+            } animated:YES];
+//              [self.tabBarController.navigationController pushViewControllerWithIdentifier:identifier animated:YES];
         }
     }
 }
