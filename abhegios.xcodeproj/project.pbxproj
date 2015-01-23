@@ -60,6 +60,10 @@
 		EA7599901A7120A50027FC8B /* appstorehome_test.json in Resources */ = {isa = PBXBuildFile; fileRef = EA75998C1A7120A50027FC8B /* appstorehome_test.json */; };
 		EA7599911A7120A50027FC8B /* appdetailspage_test.json in Resources */ = {isa = PBXBuildFile; fileRef = EA75998D1A7120A50027FC8B /* appdetailspage_test.json */; };
 		EA7599931A7120CB0027FC8B /* uifounddata.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA7599921A7120CB0027FC8B /* uifounddata.plist */; };
+		EA89882E1A726A7000877E63 /* AppInfoViewStyle1.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA89882D1A726A7000877E63 /* AppInfoViewStyle1.xib */; };
+		EA8988311A726EAA00877E63 /* AppInfoViewStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8988301A726EAA00877E63 /* AppInfoViewStyle1.m */; };
+		EA8988381A72841B00877E63 /* AppInfoViewStyle3.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA8988371A72841B00877E63 /* AppInfoViewStyle3.xib */; };
+		EA89883D1A7285BB00877E63 /* AppInfoViewStyle3.m in Sources */ = {isa = PBXBuildFile; fileRef = EA89883C1A7285BB00877E63 /* AppInfoViewStyle3.m */; };
 		EA8D74931A6E7CF9004C17C2 /* AppTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8D74921A6E7CF9004C17C2 /* AppTableViewCellStyle1.m */; };
 		EA8D74991A6E9DC2004C17C2 /* AppTableViewCellStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8D74981A6E9DC2004C17C2 /* AppTableViewCellStyle2.m */; };
 		EA8E8F4E1A68F07500FEA027 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F4D1A68F07500FEA027 /* UIKit.framework */; };
@@ -182,6 +186,12 @@
 		EA75998D1A7120A50027FC8B /* appdetailspage_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = appdetailspage_test.json; path = Resources/appdetailspage_test.json; sourceTree = "<group>"; };
 		EA7599921A7120CB0027FC8B /* uifounddata.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = uifounddata.plist; path = Resources/uifounddata.plist; sourceTree = "<group>"; };
 		EA83390D1A68B04200F3A9E9 /* abheg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = abheg.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA89882D1A726A7000877E63 /* AppInfoViewStyle1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppInfoViewStyle1.xib; sourceTree = SOURCE_ROOT; };
+		EA89882F1A726EAA00877E63 /* AppInfoViewStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfoViewStyle1.h; sourceTree = "<group>"; };
+		EA8988301A726EAA00877E63 /* AppInfoViewStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfoViewStyle1.m; sourceTree = "<group>"; };
+		EA8988371A72841B00877E63 /* AppInfoViewStyle3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppInfoViewStyle3.xib; sourceTree = SOURCE_ROOT; };
+		EA89883B1A7285BB00877E63 /* AppInfoViewStyle3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfoViewStyle3.h; sourceTree = "<group>"; };
+		EA89883C1A7285BB00877E63 /* AppInfoViewStyle3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfoViewStyle3.m; sourceTree = "<group>"; };
 		EA8D74911A6E7CF9004C17C2 /* AppTableViewCellStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTableViewCellStyle1.h; sourceTree = "<group>"; };
 		EA8D74921A6E7CF9004C17C2 /* AppTableViewCellStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTableViewCellStyle1.m; sourceTree = "<group>"; };
 		EA8D74971A6E9DC2004C17C2 /* AppTableViewCellStyle2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTableViewCellStyle2.h; sourceTree = "<group>"; };
@@ -355,6 +365,7 @@
 		1AD647F0115B5FF608FC515B /* Comm */ = {
 			isa = PBXGroup;
 			children = (
+				EA89882A1A72698300877E63 /* View */,
 				EADD5B451A6F702600CA6633 /* Category */,
 			);
 			path = Comm;
@@ -455,6 +466,8 @@
 			children = (
 				1AD64B4D5E1BC035B41C15E2 /* Main.storyboard */,
 				1AD644FB93BF0B06901FCD5E /* LaunchScreen.xib */,
+				EA89882D1A726A7000877E63 /* AppInfoViewStyle1.xib */,
+				EA8988371A72841B00877E63 /* AppInfoViewStyle3.xib */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -581,6 +594,17 @@
 			path = abhegios;
 			sourceTree = "<group>";
 		};
+		EA89882A1A72698300877E63 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA89882F1A726EAA00877E63 /* AppInfoViewStyle1.h */,
+				EA8988301A726EAA00877E63 /* AppInfoViewStyle1.m */,
+				EA89883B1A7285BB00877E63 /* AppInfoViewStyle3.h */,
+				EA89883C1A7285BB00877E63 /* AppInfoViewStyle3.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		EAA454421A70DEAF0057A770 /* OEZCommSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -663,6 +687,8 @@
 				1AD6460C6803B48F071D6E89 /* Images.xcassets in Resources */,
 				EA75998F1A7120A50027FC8B /* appstorehome.plist in Resources */,
 				1AD6407932CF4CF9417DEF43 /* Info.plist in Resources */,
+				EA89882E1A726A7000877E63 /* AppInfoViewStyle1.xib in Resources */,
+				EA8988381A72841B00877E63 /* AppInfoViewStyle3.xib in Resources */,
 				CB6A21CC1A6FFCC20087546F /* bookstorehome_test.json in Resources */,
 				1AD64850016A35AAE41E0C11 /* TencentOpenAPI in Resources */,
 				EA7599911A7120A50027FC8B /* appdetailspage_test.json in Resources */,
@@ -696,6 +722,7 @@
 				1AD6455F3CEB60EEE78C0C77 /* UserHelper.m in Sources */,
 				1AD649CD0AF8969FFF4B9641 /* ILogin.m in Sources */,
 				CB6A21D41A711CEC0087546F /* BookStoreTableViewCellStyle3.m in Sources */,
+				EA89883D1A7285BB00877E63 /* AppInfoViewStyle3.m in Sources */,
 				CB6A21D71A712FBD0087546F /* BookStoreTableViewCellStyle4.m in Sources */,
 				CB6A21BD1A6FF2AA0087546F /* BookStoreViewController.m in Sources */,
 				EA9486391A6DE09C003EE99B /* MainViewController.m in Sources */,
@@ -708,6 +735,7 @@
 				EA13DDDF1A6FA0D0004AB7E6 /* AppTableViewCellStyle3.m in Sources */,
 				EAA7738B1A72241B00EBD512 /* AppTableViewCellStyle4.m in Sources */,
 				EA8D74991A6E9DC2004C17C2 /* AppTableViewCellStyle2.m in Sources */,
+				EA8988311A726EAA00877E63 /* AppInfoViewStyle1.m in Sources */,
 				EA8D74931A6E7CF9004C17C2 /* AppTableViewCellStyle1.m in Sources */,
 				1AD64565F18F3ED26CC48D25 /* User.m in Sources */,
 				EA3D07721A6CD88A00189765 /* LoginTableViewCell.m in Sources */,

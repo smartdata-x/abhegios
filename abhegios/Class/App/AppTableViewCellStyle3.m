@@ -9,37 +9,8 @@
 #import "AppTableViewCellStyle3.h"
 #import "AppInfo.h"
 #import "AppInfoGroup.h"
-@interface ViewItem : UIView
-@property UIButton *logo;
-@property UILabel *name;
-@end
+#import "AppInfoViewStyle3.h"
 
-@implementation ViewItem
--(id) initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self != nil)
-    {
-        _logo = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_logo setFrame:CGRectMake((CGRectGetWidth(frame)-54)/2, 10, 54, 54)];
-        [_logo setImage:[UIImage imageNamed:@"app-icon-default"] forState:UIControlStateNormal];
-        [[_logo layer] setCornerRadius:8.0f];
-        [[_logo layer] setMasksToBounds:YES];
-        [self addSubview:_logo];
-        _name = [[UILabel alloc] initWithFrame:CGRectMake((CGRectGetWidth(frame)-54)/2-5, 64, 64, 20)];
-        [_name setFont:[UIFont systemFontOfSize:14.0f]];
-        [_name setTextColor:kUIColorWithRGB(0x9e9e9e)];
-        [_name setTextAlignment:NSTextAlignmentCenter];
-        [self addSubview:_name];
-    }
-    return self;
-}
--(void) setData:(AppInfo*) appInfo
-{
-    [_name setText:[appInfo name]];
-    [self setHidden:NO];
-}
-@end
 #define kMaxViewItems 8
 #define kVitemWidth  78
 #define kViewCellHeigth 90
@@ -58,7 +29,10 @@
 -(void) addViewItem
 {
     CGFloat x = [[self subviews] count] * kVitemWidth;
-    ViewItem* viewItem = [[ViewItem alloc] initWithFrame:CGRectMake(x, 0, kVitemWidth,kViewCellHeigth)];
+    AppInfoViewStyle3* viewItem = [AppInfoViewStyle3 loadFromNib];
+    CGRect rect = [viewItem frame];
+    rect.origin.x = x;
+    [viewItem setFrame:rect];
     [viewItem setTag:[[self subviews] count]];
     [self addSubview:viewItem];
     
