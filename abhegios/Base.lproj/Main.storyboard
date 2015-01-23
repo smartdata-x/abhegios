@@ -256,9 +256,6 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app-icon-default" translatesAutoresizingMaskIntoConstraints="NO" id="BKi-Vn-2oW">
                                             <rect key="frame" x="10" y="10" width="84" height="112"/>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app-icon-default" translatesAutoresizingMaskIntoConstraints="NO" id="2Kp-O3-Ut4">
-                                            <rect key="frame" x="104" y="10" width="150" height="23"/>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1i6-7a-3PE">
                                             <rect key="frame" x="104" y="43" width="180" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -268,13 +265,19 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTS-dU-qtI">
                                             <rect key="frame" x="104" y="75" width="450" height="48"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wq7-wC-h1B">
+                                            <rect key="frame" x="104" y="11" width="120" height="23"/>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="favRate" destination="2Kp-O3-Ut4" id="krh-FY-AO8"/>
+                                    <outlet property="favRate" destination="Wq7-wC-h1B" id="GHp-p4-Qcs"/>
                                     <outlet property="logo" destination="BKi-Vn-2oW" id="xU4-M2-Z8S"/>
                                     <outlet property="name" destination="1i6-7a-3PE" id="sKo-wm-AhL"/>
                                     <outlet property="summary" destination="cTS-dU-qtI" id="Pfs-fn-K0U"/>
@@ -340,7 +343,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3t7-hl-81L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4017" y="58"/>
+            <point key="canvasLocation" x="4017" y="57"/>
         </scene>
         <!--书架-->
         <scene sceneID="chd-w2-5Xy">

@@ -126,8 +126,6 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
     if (indexPath.section == 0 || indexPath.section == 1) {
         
         [self.navigationController pushViewControllerWithIdentifier:@"BookReaderViewController" animated:YES];
@@ -139,6 +137,7 @@
             [bookShelfView setData:group];
         } animated:YES];
     }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end
