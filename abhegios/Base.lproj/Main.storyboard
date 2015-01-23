@@ -168,7 +168,7 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8d-VK-gxo" userLabel="summary">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8d-VK-gxo" userLabel="down">
                                             <rect key="frame" x="82" y="30" width="171" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.42745098039215684" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
@@ -204,10 +204,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="down" destination="K8d-VK-gxo" id="ofG-dm-yTx"/>
                                     <outlet property="logo" destination="dM4-Fo-WNo" id="vLG-Mo-TZC"/>
                                     <outlet property="name" destination="1Oi-IY-yGI" id="IV2-4B-ZtG"/>
                                     <outlet property="setupButton" destination="zq4-Rd-RDG" id="d1d-gL-Fwb"/>
-                                    <outlet property="summary" destination="nrq-j8-EOu" id="emO-eq-AK2"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AppTableViewCellStyle2" id="d6q-gZ-Rsf" customClass="AppTableViewCellStyle2">
