@@ -7,7 +7,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppInfoViewStyle1">
             <connections>
-                <outlet property="contentView" destination="iN0-l3-epB" id="sNT-xx-Tyf"/>
                 <outlet property="down" destination="O1Z-wZ-HjU" id="wSD-Dc-Csg"/>
                 <outlet property="logo" destination="ogz-Y9-TOT" id="ctt-wV-1DP"/>
                 <outlet property="name" destination="jgT-p7-bsH" id="7im-qW-nON"/>
