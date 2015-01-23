@@ -112,8 +112,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self performSegueWithIdentifier:@"AppDetailsViewController" sender:self];
-    //[self.navigationController pushViewControllerWithIdentifier:@"AppDetailsViewController" animated:TRUE];
+    [self.navigationController pushViewControllerWithIdentifier:@"AppDetailsViewController" animated:TRUE];
 }
 
 @end

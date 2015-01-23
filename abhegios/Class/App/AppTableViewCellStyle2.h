@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 180. All rights reserved.
 //
 
-#import <OEZCommSDK/OEZCommSDK.h>
-@interface AppTableViewCellStyle2 : OEZTableViewCell<OEZPageViewDelegate>
+#import "AppTableViewCellPage.h"
+@interface AppTableViewCellStyle2 : AppTableViewCellPage
 
 @end
