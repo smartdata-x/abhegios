@@ -75,6 +75,7 @@
 		EA8E8F6D1A68F56000FEA027 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F6C1A68F56000FEA027 /* libz.1.1.3.dylib */; };
 		EA8E8F6F1A68F5E000FEA027 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F6E1A68F5E000FEA027 /* libstdc++.dylib */; };
 		EA9486391A6DE09C003EE99B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9486381A6DE09C003EE99B /* MainViewController.m */; };
+		EA9521001A720256005CB96B /* AppTableViewCellStyle.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9520FE1A720256005CB96B /* AppTableViewCellStyle.xib */; };
 		EAA454441A70DEAF0057A770 /* OEZCommSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA454431A70DEAF0057A770 /* OEZCommSDK.framework */; };
 /* End PBXBuildFile section */
 
@@ -196,6 +197,7 @@
 		EA8E8F6E1A68F5E000FEA027 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		EA9486371A6DE09C003EE99B /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		EA9486381A6DE09C003EE99B /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		EA9520FE1A720256005CB96B /* AppTableViewCellStyle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppTableViewCellStyle.xib; sourceTree = "<group>"; };
 		EAA454431A70DEAF0057A770 /* OEZCommSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OEZCommSDK.framework; sourceTree = "<group>"; };
 		EADD5B571A6F7A4700CA6633 /* NSString+NSStringCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSStringCategory.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -364,6 +366,7 @@
 				EA8D74981A6E9DC2004C17C2 /* AppTableViewCellStyle2.m */,
 				EA13DDDD1A6FA0D0004AB7E6 /* AppTableViewCellStyle3.h */,
 				EA13DDDE1A6FA0D0004AB7E6 /* AppTableViewCellStyle3.m */,
+				EA9520FE1A720256005CB96B /* AppTableViewCellStyle.xib */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -659,6 +662,7 @@
 				1AD6466F8E60BA95319C4EF1 /* local.html in Resources */,
 				1AD6444BCD81D3E62537781A /* qqicon.png in Resources */,
 				1AD6470ECF340D8FC98FD7FD /* success.png in Resources */,
+				EA9521001A720256005CB96B /* AppTableViewCellStyle.xib in Resources */,
 				CB6A21CE1A7007970087546F /* bookstorehome.plist in Resources */,
 				EA3D07791A6CDA2000189765 /* WeiboSDK.bundle in Resources */,
 			);

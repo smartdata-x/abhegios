@@ -79,6 +79,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    //NSLog(@"%@ %@",@(indexPath.section),@(indexPath.row));
     AppInfoGroup *group = [[_appStoreHome appInfoGroups] objectAtIndex:[indexPath section]];
     OEZTableViewCell* viewCell = nil;
     if ( [self isSingleLine:group])
@@ -111,7 +112,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self.navigationController pushViewControllerWithIdentifier:@"AppDetailsViewController" animated:TRUE];
+    [self performSegueWithIdentifier:@"AppDetailsViewController" sender:self];
+    //[self.navigationController pushViewControllerWithIdentifier:@"AppDetailsViewController" animated:TRUE];
 }
 
 @end

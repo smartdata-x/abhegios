@@ -11,6 +11,7 @@
 @implementation AppTableViewCellStyle1
 
 - (void)awakeFromNib {
+//    [self addSubview:[[[NSBundle mainBundle] loadNibNamed:@"AppTableViewCellStyle" owner:self options:nil] objectAtIndex:0]];
     [[_logo layer] setCornerRadius:8.0f];
     [[_logo layer] setMasksToBounds:YES];
     [_setupButton.layer setMasksToBounds:YES];

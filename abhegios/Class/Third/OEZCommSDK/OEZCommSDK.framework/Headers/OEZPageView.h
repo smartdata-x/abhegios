@@ -8,14 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+
+@interface OEZPageViewCell : UIView
+@end
+
 @class OEZPageView;
 @protocol OEZPageViewDelegate <NSObject>
 -(NSInteger) numberPageCountPageView:(OEZPageView*) pageView;
--(UIView*)   pageView:(OEZPageView*) pageView viewForPageAtIndex:(NSInteger) pageIndex;
+-(OEZPageViewCell*)   pageView:(OEZPageView*) pageView viewForPageAtIndex:(NSInteger) pageIndex;
 -(void )     pageView:(OEZPageView*) pageView didSelectPageAtIndex:(NSInteger) pageIndex;
 @end
 @interface OEZPageView : UIView<UIScrollViewDelegate>
 @property (readonly) UIScrollView*  scrollView;
 @property(nonatomic,assign) id<OEZPageViewDelegate>     delegate;
+- (id)dequeueReusablePageViewWithIdentifier:(NSString *)identifier;
 - (void)reloadData; 
 @end

@@ -14,24 +14,14 @@
 @implementation AppTableViewCellStyle2
 {
     OEZPageView*    _pageView;
-    NSMutableArray *_pages;
-    UIEdgeInsets    _imgInsets;
 }
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    _pages = [[NSMutableArray alloc] init];
     _pageView = [[OEZPageView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, kTableViewCellHieght)];
     [self.contentView setHidden:YES];
     [_pageView setDelegate:self];
-     [self addSubview:_pageView];
-    
-    for (int i  = 0 ; i < kMaxViewItems; ++i) {
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenHeight, 80)];
-        [imageView setImage:[UIImage imageNamed:@"s_banner"]];
-        [_pages addObject:imageView];
-    }
-
+    [self addSubview:_pageView];
 }
 
 
@@ -40,9 +30,6 @@
     if( self.data != data)
     {
         [super setData:data];
-        AppInfoGroup* appInfoGroup = data;
-        NSUInteger count = [[appInfoGroup appInfos] count];
-        count = count > kMaxViewItems ? kMaxViewItems: count;
         [_pageView reloadData];
     }
 }
@@ -57,9 +44,24 @@
     NSLog(@"didSelectRPageAtIndex %@",@(pageIndex));
 }
 
--(UIView*) pageView:(OEZPageView *)pageView viewForPageAtIndex:(NSInteger)pageIndex
+-(OEZPageViewCell*) pageView:(OEZPageView *)pageView viewForPageAtIndex:(NSInteger)pageIndex
 {
-    NSLog(@"viewForPageAtIndex %@",@(pageIndex));
-    return [_pages objectAtIndex:pageIndex];
+    OEZPageViewCell *cell = [pageView dequeueReusablePageViewWithIdentifier:nil];
+    //NSLog(@"pageIndex:%@ %@",@(pageIndex),[[cell subviews] objectAtIndex:0]);
+    if( cell == nil)
+    {
+        cell = [[OEZPageViewCell alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, kTableViewCellHieght)];
+    
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:cell.frame];
+        [cell addSubview:imageView];
+        
+        [imageView setImage:[UIImage imageNamed:@"s_banner"]];
+        UILabel *lable = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 20, 20)];
+        
+        [cell addSubview:lable];
+        
+    }
+    [[[cell subviews] objectAtIndex:1] setText:[NSString stringWithFormat:@"%@",@(pageIndex)]];
+    return cell;
 }
 @end
