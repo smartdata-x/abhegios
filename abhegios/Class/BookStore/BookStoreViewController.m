@@ -60,13 +60,14 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     BookInfoGroup *group = [[_bookStoreHome bookInfoGroups] objectAtIndex:indexPath.section];
-    if (group.style == BookStoreTableViewCellStyleOne) {
-        return 100;
+    switch (group.style) {
+        case BookStoreTableViewCellStyleOne:    return 132; break;
+        case BookStoreTableViewCellStyleTwo:    return 80;  break;
+        case BookStoreTableViewCellStyleThree:  return 153; break;
+        case BookStoreTableViewCellStyleFour:   return 245; break;
+        default: return 80; break;
     }
-    else if (group.style == BookStoreTableViewCellStyleFour) {
-        return 245;
-    }
-    return 80;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
