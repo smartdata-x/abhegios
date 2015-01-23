@@ -44,6 +44,8 @@
 		CB6A21D71A712FBD0087546F /* BookStoreTableViewCellStyle4.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21D61A712FBD0087546F /* BookStoreTableViewCellStyle4.m */; };
 		CB6A21DB1A7155750087546F /* BookShelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21D91A71364B0087546F /* BookShelfViewController.m */; };
 		CB6A21DE1A7268EA0087546F /* BookReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21DD1A7268EA0087546F /* BookReaderViewController.m */; };
+		CB6A21E11A729B050087546F /* BookInfoViewStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21E01A729B050087546F /* BookInfoViewStyle1.m */; };
+		CB6A21E31A729F1E0087546F /* BookInfoViewStyle1.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB6A21E21A729F1E0087546F /* BookInfoViewStyle1.xib */; };
 		EA13DDCE1A6F8A35004AB7E6 /* NSString+NSStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDCD1A6F8A35004AB7E6 /* NSString+NSStringCategory.m */; };
 		EA13DDD11A6F8D3A004AB7E6 /* AppDetailsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDCF1A6F8D3A004AB7E6 /* AppDetailsInfo.m */; };
 		EA13DDD41A6F8DF9004AB7E6 /* AppDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDD21A6F8DF9004AB7E6 /* AppDetailsViewController.m */; };
@@ -165,6 +167,9 @@
 		CB6A21D91A71364B0087546F /* BookShelfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookShelfViewController.m; sourceTree = "<group>"; };
 		CB6A21DC1A7268EA0087546F /* BookReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookReaderViewController.h; sourceTree = "<group>"; };
 		CB6A21DD1A7268EA0087546F /* BookReaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookReaderViewController.m; sourceTree = "<group>"; };
+		CB6A21DF1A729B050087546F /* BookInfoViewStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookInfoViewStyle1.h; sourceTree = "<group>"; };
+		CB6A21E01A729B050087546F /* BookInfoViewStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookInfoViewStyle1.m; sourceTree = "<group>"; };
+		CB6A21E21A729F1E0087546F /* BookInfoViewStyle1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookInfoViewStyle1.xib; sourceTree = SOURCE_ROOT; };
 		EA13DDCD1A6F8A35004AB7E6 /* NSString+NSStringCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringCategory.m"; sourceTree = "<group>"; };
 		EA13DDCF1A6F8D3A004AB7E6 /* AppDetailsInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsInfo.m; sourceTree = "<group>"; };
 		EA13DDD01A6F8D3A004AB7E6 /* AppDetailsInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailsInfo.h; sourceTree = "<group>"; };
@@ -471,6 +476,7 @@
 				1AD644FB93BF0B06901FCD5E /* LaunchScreen.xib */,
 				EA89882D1A726A7000877E63 /* AppInfoViewStyle1.xib */,
 				EA8988371A72841B00877E63 /* AppInfoViewStyle3.xib */,
+				CB6A21E21A729F1E0087546F /* BookInfoViewStyle1.xib */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -606,6 +612,8 @@
 				EA8988301A726EAA00877E63 /* AppInfoViewStyle1.m */,
 				EA89883B1A7285BB00877E63 /* AppInfoViewStyle3.h */,
 				EA89883C1A7285BB00877E63 /* AppInfoViewStyle3.m */,
+				CB6A21DF1A729B050087546F /* BookInfoViewStyle1.h */,
+				CB6A21E01A729B050087546F /* BookInfoViewStyle1.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -697,6 +705,7 @@
 				CB6A21CC1A6FFCC20087546F /* bookstorehome_test.json in Resources */,
 				1AD64850016A35AAE41E0C11 /* TencentOpenAPI in Resources */,
 				EA7599911A7120A50027FC8B /* appdetailspage_test.json in Resources */,
+				CB6A21E31A729F1E0087546F /* BookInfoViewStyle1.xib in Resources */,
 				1AD64049F3F7AA6F294AAE32 /* error.png in Resources */,
 				EA7599931A7120CB0027FC8B /* uifounddata.plist in Resources */,
 				EA75998E1A7120A50027FC8B /* uilogindata.plist in Resources */,
@@ -754,6 +763,7 @@
 				1AD64D9C70E0A1325B3F2A09 /* AppViewController.m in Sources */,
 				1AD6499081D9DEF2C11C321E /* AppInfoGroup.m in Sources */,
 				1AD64E1713AD0CE098E0019C /* AppStoreHome.m in Sources */,
+				CB6A21E11A729B050087546F /* BookInfoViewStyle1.m in Sources */,
 				CB6A21D11A711CD50087546F /* BookStoreTableViewCellStyle2.m in Sources */,
 				EAA773881A7222C400EBD512 /* AppTableViewCellPage.m in Sources */,
 				1AD64F3A04AFCBB948106908 /* AppInfo.m in Sources */,
