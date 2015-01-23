@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface OEZNibView : UIView
-@property (strong, nonatomic) IBOutlet UIView *contentView;
 + (id) loadFromNib;
 @end
