@@ -43,6 +43,7 @@
 		CB6A21D41A711CEC0087546F /* BookStoreTableViewCellStyle3.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21D31A711CEC0087546F /* BookStoreTableViewCellStyle3.m */; };
 		CB6A21D71A712FBD0087546F /* BookStoreTableViewCellStyle4.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21D61A712FBD0087546F /* BookStoreTableViewCellStyle4.m */; };
 		CB6A21DB1A7155750087546F /* BookShelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21D91A71364B0087546F /* BookShelfViewController.m */; };
+		CB6A21DE1A7268EA0087546F /* BookReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21DD1A7268EA0087546F /* BookReaderViewController.m */; };
 		EA13DDCE1A6F8A35004AB7E6 /* NSString+NSStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDCD1A6F8A35004AB7E6 /* NSString+NSStringCategory.m */; };
 		EA13DDD11A6F8D3A004AB7E6 /* AppDetailsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDCF1A6F8D3A004AB7E6 /* AppDetailsInfo.m */; };
 		EA13DDD41A6F8DF9004AB7E6 /* AppDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDD21A6F8DF9004AB7E6 /* AppDetailsViewController.m */; };
@@ -158,6 +159,8 @@
 		CB6A21D61A712FBD0087546F /* BookStoreTableViewCellStyle4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookStoreTableViewCellStyle4.m; sourceTree = "<group>"; };
 		CB6A21D81A71364B0087546F /* BookShelfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookShelfViewController.h; sourceTree = "<group>"; };
 		CB6A21D91A71364B0087546F /* BookShelfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookShelfViewController.m; sourceTree = "<group>"; };
+		CB6A21DC1A7268EA0087546F /* BookReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookReaderViewController.h; sourceTree = "<group>"; };
+		CB6A21DD1A7268EA0087546F /* BookReaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookReaderViewController.m; sourceTree = "<group>"; };
 		EA13DDCD1A6F8A35004AB7E6 /* NSString+NSStringCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringCategory.m"; sourceTree = "<group>"; };
 		EA13DDCF1A6F8D3A004AB7E6 /* AppDetailsInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsInfo.m; sourceTree = "<group>"; };
 		EA13DDD01A6F8D3A004AB7E6 /* AppDetailsInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailsInfo.h; sourceTree = "<group>"; };
@@ -538,6 +541,8 @@
 				CB6A21D61A712FBD0087546F /* BookStoreTableViewCellStyle4.m */,
 				CB6A21D81A71364B0087546F /* BookShelfViewController.h */,
 				CB6A21D91A71364B0087546F /* BookShelfViewController.m */,
+				CB6A21DC1A7268EA0087546F /* BookReaderViewController.h */,
+				CB6A21DD1A7268EA0087546F /* BookReaderViewController.m */,
 			);
 			path = BookStore;
 			sourceTree = "<group>";
@@ -687,6 +692,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB6A21DB1A7155750087546F /* BookShelfViewController.m in Sources */,
+				CB6A21DE1A7268EA0087546F /* BookReaderViewController.m in Sources */,
 				EA6500AE1A6F34630043C4F2 /* LoginItemInfo.m in Sources */,
 				1AD64804C9FA33B5797A36AC /* AppDelegate.m in Sources */,
 				1AD641D66B96305DB64E42F7 /* main.m in Sources */,
