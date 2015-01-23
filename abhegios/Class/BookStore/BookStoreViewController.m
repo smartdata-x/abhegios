@@ -11,6 +11,7 @@
 #import "BookInfoGroup.h"
 #import "BookInfo.h"
 #import "BookStoreTableViewCellStyle1.h"
+#import "BookShelfViewController.h"
 #import <OEZCommSDK/OEZCommSDK.h>
 @interface BookStoreViewController ()
 {
@@ -106,6 +107,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    BookInfoGroup *group = [[_bookStoreHome bookInfoGroups] objectAtIndex:indexPath.section];
+    [self.navigationController pushViewControllerWithIdentifier:@"BookShelfViewController" completion:^(UIViewController *viewController) {
+        BookShelfViewController *bookShelfView = (BookShelfViewController *)viewController;
+        [bookShelfView setData:group];
+    } animated:YES];
 }
 
 /*
