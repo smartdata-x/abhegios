@@ -8,10 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <OEZCommSDK/OEZCommSDK.h>
+#import "AppInfoViewStyle1.h"
 @interface AppTableViewCellStyle1 : OEZTableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *logo;
-@property (weak, nonatomic) IBOutlet UILabel *name;
-@property (weak, nonatomic) IBOutlet UILabel *summary;
-@property (weak, nonatomic) IBOutlet UIButton *setupButton;
-@property (weak, nonatomic) IBOutlet UILabel *down;
+@property (weak, nonatomic) IBOutlet AppInfoViewStyle1 *appInfoView;
+
 @end

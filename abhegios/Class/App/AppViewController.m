@@ -12,6 +12,7 @@
 #import "AppInfo.h"
 #import "AppTableViewCellStyle1.h"
 #import <OEZCommSDK/OEZCommSDK.h>
+#import "AppInfoViewStyle3.h"
 @interface AppViewController ()
 {
     AppStoreHome* _appStoreHome;

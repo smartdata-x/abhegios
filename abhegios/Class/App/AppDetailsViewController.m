@@ -8,6 +8,7 @@
 
 #import "AppDetailsViewController.h"
 #import "AppDetailsInfo.h"
+#import "AppInfoViewStyle3.h"
 @interface AppDetailsViewController ()
 {
     AppDetailsPage *_appDetailsPage;
