@@ -26,20 +26,11 @@
     [super setData:data];
     BookInfoGroup *bookInfoGroup = data;
     int count = [[bookInfoGroup bookInfos] count];
+    count = count >= 1 ? 1 : count;
     for (int i=0; i<count; i++) {
         BookInfo *bookInfo = [[bookInfoGroup bookInfos] objectAtIndex:i];
-        switch (i) {
-            case 0:
-                [_name setText:bookInfo.name];
-                [_summary setText:bookInfo.summary];
-                break;
-            case 1: [_name1 setText:bookInfo.name]; break;
-            case 2: [_name2 setText:bookInfo.name]; break;
-            case 3: [_name3 setText:bookInfo.name]; break;
-                
-            default:
-                break;
-        }
+        [_name setText:bookInfo.name];
+        [_summary setText:bookInfo.summary];
     }
 }
 

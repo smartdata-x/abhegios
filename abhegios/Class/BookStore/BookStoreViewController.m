@@ -50,6 +50,18 @@
     return [[_bookStoreHome bookInfoGroups] count];
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    BookInfoGroup *group = [[_bookStoreHome bookInfoGroups] objectAtIndex:section];
+    if ([self isSingleLine:group]) {
+        int maxrows = [[group bookInfos] count];
+        if ([group style] == BookStoreTableViewCellStyleFour) {
+            return MIN(2, maxrows);
+        }
+        return MIN(1, maxrows);
+    }
+    return [[group bookInfos] count];
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     BookInfoGroup *group = [[_bookStoreHome bookInfoGroups] objectAtIndex:section];
     if ([group style] == BookStoreTableViewCellStyleTwo) {
@@ -64,19 +76,13 @@
         case BookStoreTableViewCellStyleOne:    return 132; break;
         case BookStoreTableViewCellStyleTwo:    return 80;  break;
         case BookStoreTableViewCellStyleThree:  return 153; break;
-        case BookStoreTableViewCellStyleFour:   return 245; break;
+        case BookStoreTableViewCellStyleFour:
+            if (indexPath.row == 0) return 112;
+            else return 153;
+            break;
         default: return 80; break;
     }
     return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    BookInfoGroup *group = [[_bookStoreHome bookInfoGroups] objectAtIndex:section];
-    if ([self isSingleLine:group]) {
-        int maxrows = [[group bookInfos] count];
-        return MIN(1, maxrows);
-    }
-    return [[group bookInfos] count];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
@@ -96,12 +102,24 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BookInfoGroup *group = [[_bookStoreHome bookInfoGroups] objectAtIndex:indexPath.section];
     OEZTableViewCell *viewCell = nil;
+    NSString *bookCellStyle = [NSString stringWithFormat:@"BookStoreTableViewCellStyle%d", [group style]];
     if ([self isSingleLine:group]) {
-        viewCell = [tableView dequeueReusableCellWithIdentifier:[NSString stringWithFormat:@"BookStoreTableViewCellStyle%d", [group style]]];
-        [viewCell setData:group];
+        if ([group style] == 4) {
+            if (indexPath.row == 0) {
+                viewCell = [tableView dequeueReusableCellWithIdentifier:bookCellStyle];
+            }
+            else {
+                viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookStoreTableViewCellStyle3"];
+            }
+            [viewCell setData:group];
+        }
+        else {
+            viewCell = [tableView dequeueReusableCellWithIdentifier:bookCellStyle];
+            [viewCell setData:group];
+        }
     }
     else {
-        viewCell = [tableView dequeueReusableCellWithIdentifier:[NSString stringWithFormat:@"BookStoreTableViewCellStyle%d", [group style]]];
+        viewCell = [tableView dequeueReusableCellWithIdentifier:bookCellStyle];
         [viewCell setData:[[group bookInfos] objectAtIndex:indexPath.row]];
     }
     return viewCell;
