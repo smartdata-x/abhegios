@@ -102,16 +102,17 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BookInfoGroup *group = [[_bookStoreHome bookInfoGroups] objectAtIndex:indexPath.section];
     OEZTableViewCell *viewCell = nil;
-    NSString *bookCellStyle = [NSString stringWithFormat:@"BookStoreTableViewCellStyle%d", [group style]];
+    NSString *bookCellStyle = [NSString stringWithFormat:@"BookStoreTableViewCellStyle%ld", (long)[group style]];
     if ([self isSingleLine:group]) {
         if ([group style] == 4) {
             if (indexPath.row == 0) {
                 viewCell = [tableView dequeueReusableCellWithIdentifier:bookCellStyle];
+                [viewCell setData:group];
             }
             else {
                 viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookStoreTableViewCellStyle3"];
+                [viewCell setData:group];
             }
-            [viewCell setData:group];
         }
         else {
             viewCell = [tableView dequeueReusableCellWithIdentifier:bookCellStyle];
