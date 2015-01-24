@@ -10,11 +10,11 @@
 #define kMinFavRate 0
 #define kMaxFavRate 10
 @interface FavRateViewStyle : OEZNibView
-@property (weak, nonatomic) IBOutlet UIView *rate0;
-@property (weak, nonatomic) IBOutlet UIView *rate1;
-@property (weak, nonatomic) IBOutlet UIView *rate2;
-@property (weak, nonatomic) IBOutlet UIView *rate3;
-@property (weak, nonatomic) IBOutlet UIView *rate4;
+@property (weak, nonatomic) IBOutlet UIImageView *rate0;
+@property (weak, nonatomic) IBOutlet UIImageView *rate1;
+@property (weak, nonatomic) IBOutlet UIImageView *rate2;
+@property (weak, nonatomic) IBOutlet UIImageView *rate3;
+@property (weak, nonatomic) IBOutlet UIImageView *rate4;
 - (void)setData:(NSUInteger)rate;
 - (void)setDataWithBgColor:(NSUInteger)rate Color:(UIColor *)color;
 @end
