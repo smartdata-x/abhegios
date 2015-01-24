@@ -268,16 +268,9 @@
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wq7-wC-h1B">
-                                            <rect key="frame" x="104" y="11" width="120" height="23"/>
-                                            <state key="normal">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="favRate" destination="Wq7-wC-h1B" id="GHp-p4-Qcs"/>
                                     <outlet property="logo" destination="BKi-Vn-2oW" id="xU4-M2-Z8S"/>
                                     <outlet property="name" destination="1i6-7a-3PE" id="sKo-wm-AhL"/>
                                     <outlet property="summary" destination="cTS-dU-qtI" id="Pfs-fn-K0U"/>
