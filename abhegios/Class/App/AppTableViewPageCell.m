@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年 180. All rights reserved.
 //
 
-#import "AppTableViewCellPage.h"
+#import "AppTableViewPageCell.h"
 #import "AppInfoGroup.h"
-@implementation AppTableViewCellPage
+@implementation AppTableViewPageCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

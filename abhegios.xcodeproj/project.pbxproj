@@ -88,7 +88,7 @@
 		EA8E8F6F1A68F5E000FEA027 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F6E1A68F5E000FEA027 /* libstdc++.dylib */; };
 		EA9486391A6DE09C003EE99B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9486381A6DE09C003EE99B /* MainViewController.m */; };
 		EAA454441A70DEAF0057A770 /* OEZCommSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA454431A70DEAF0057A770 /* OEZCommSDK.framework */; };
-		EAA773881A7222C400EBD512 /* AppTableViewCellPage.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA773871A7222C400EBD512 /* AppTableViewCellPage.m */; };
+		EAA773881A7222C400EBD512 /* AppTableViewPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA773871A7222C400EBD512 /* AppTableViewPageCell.m */; };
 		EAA7738B1A72241B00EBD512 /* AppTableViewCellStyle4.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA7738A1A72241B00EBD512 /* AppTableViewCellStyle4.m */; };
 /* End PBXBuildFile section */
 
@@ -229,8 +229,8 @@
 		EA9486371A6DE09C003EE99B /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		EA9486381A6DE09C003EE99B /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		EAA454431A70DEAF0057A770 /* OEZCommSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OEZCommSDK.framework; sourceTree = "<group>"; };
-		EAA773861A7222C400EBD512 /* AppTableViewCellPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTableViewCellPage.h; sourceTree = "<group>"; };
-		EAA773871A7222C400EBD512 /* AppTableViewCellPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTableViewCellPage.m; sourceTree = "<group>"; };
+		EAA773861A7222C400EBD512 /* AppTableViewPageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTableViewPageCell.h; sourceTree = "<group>"; };
+		EAA773871A7222C400EBD512 /* AppTableViewPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTableViewPageCell.m; sourceTree = "<group>"; };
 		EAA773891A72241B00EBD512 /* AppTableViewCellStyle4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTableViewCellStyle4.h; sourceTree = "<group>"; };
 		EAA7738A1A72241B00EBD512 /* AppTableViewCellStyle4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTableViewCellStyle4.m; sourceTree = "<group>"; };
 		EADD5B571A6F7A4700CA6633 /* NSString+NSStringCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSStringCategory.h"; sourceTree = "<group>"; };
@@ -401,8 +401,8 @@
 				EA8D74981A6E9DC2004C17C2 /* AppTableViewCellStyle2.m */,
 				EA13DDDD1A6FA0D0004AB7E6 /* AppTableViewCellStyle3.h */,
 				EA13DDDE1A6FA0D0004AB7E6 /* AppTableViewCellStyle3.m */,
-				EAA773861A7222C400EBD512 /* AppTableViewCellPage.h */,
-				EAA773871A7222C400EBD512 /* AppTableViewCellPage.m */,
+				EAA773861A7222C400EBD512 /* AppTableViewPageCell.h */,
+				EAA773871A7222C400EBD512 /* AppTableViewPageCell.m */,
 				EAA773891A72241B00EBD512 /* AppTableViewCellStyle4.h */,
 				EAA7738A1A72241B00EBD512 /* AppTableViewCellStyle4.m */,
 			);
@@ -783,7 +783,7 @@
 				1AD64E1713AD0CE098E0019C /* AppStoreHome.m in Sources */,
 				CB6A21E11A729B050087546F /* BookInfoViewStyle1.m in Sources */,
 				CB6A21D11A711CD50087546F /* BookStoreTableViewCellStyle2.m in Sources */,
-				EAA773881A7222C400EBD512 /* AppTableViewCellPage.m in Sources */,
+				EAA773881A7222C400EBD512 /* AppTableViewPageCell.m in Sources */,
 				1AD64F3A04AFCBB948106908 /* AppInfo.m in Sources */,
 				1AD645A28AA3934B882BD885 /* FoundItemInfo.m in Sources */,
 			);

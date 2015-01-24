@@ -438,7 +438,6 @@
     </scenes>
     <resources>
         <image name="app-icon-default" width="53" height="53"/>
-        <image name="app_banner" width="296" height="71"/>
         <image name="big_shade" width="277" height="112"/>
         <image name="found_ico" width="23" height="22"/>
         <image name="my_ico" width="23" height="22"/>

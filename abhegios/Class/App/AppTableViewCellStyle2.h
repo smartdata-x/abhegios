@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 180. All rights reserved.
 //
 
-#import "AppTableViewCellPage.h"
-@interface AppTableViewCellStyle2 : AppTableViewCellPage
+#import "AppTableViewPageCell.h"
+@interface AppTableViewCellStyle2 : AppTableViewPageCell
 
 @end

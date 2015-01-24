@@ -8,7 +8,7 @@
 
 #import <OEZCommSDK/OEZCommSDK.h>
 #define kTableViewCellHieght 80
-@interface AppTableViewCellPage : OEZTableViewPageCell
+@interface AppTableViewPageCell : OEZTableViewPageCell
 {
     
 }
