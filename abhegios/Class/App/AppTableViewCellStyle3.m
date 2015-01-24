@@ -8,7 +8,6 @@
 
 #import "AppTableViewCellStyle3.h"
 #import "AppInfo.h"
-#import "AppInfoGroup.h"
 #import "AppInfoViewStyle3.h"
 
 #define kMaxViewItems 8
@@ -42,14 +41,13 @@
 -(void) setData:(id)data
 {
     [super setData:data];
-    AppInfoGroup* appInfoGroup = data;
-    NSUInteger count = [[appInfoGroup appInfos] count];
+    NSUInteger count = [data count];
      count = count > kMaxViewItems ? kMaxViewItems: count;
     [self setContentWidth:kVitemWidth*count];
     NSUInteger i = 0;
     for (; i < count; ++i)
     {
-        [[[self subviews] objectAtIndex:i] setData:[[appInfoGroup appInfos] objectAtIndex:i]];
+        [[[self subviews] objectAtIndex:i] setData:[data objectAtIndex:i]];
     }
     for (; i < kMaxViewItems; ++i) {
         [[[self subviews] objectAtIndex:i] setHidden:YES];

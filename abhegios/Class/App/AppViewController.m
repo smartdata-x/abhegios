@@ -86,7 +86,7 @@
     if ( [self isSingleLine:group])
     {
         viewCell = [tableView dequeueReusableCellWithIdentifier:[NSString stringWithFormat:@"AppTableViewCellStyle%@",@([group style])]];
-        [viewCell setData:group];
+        [viewCell setData:[group appInfos]];
         [viewCell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     else{

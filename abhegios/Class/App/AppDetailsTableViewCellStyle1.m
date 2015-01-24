@@ -37,10 +37,11 @@
 -(void) setData:(id)data
 {
     [super setData:data];
+    AppDetailsInfo* info = data;
     [_pageView reloadData];
     [_logo setImage:[UIImage imageNamed:@"app_logo1"]];
     [_name setText:[self.data name]];
-    [_sizeAndVer setText:[NSString stringWithFormat:@"大小:23.23M  版本1.09"]];
+    [_sizeAndVer setText:[NSString stringWithFormat:@"大小:%0.2fM  版本%@",[info size],[info version]]];
     
 }
 @end

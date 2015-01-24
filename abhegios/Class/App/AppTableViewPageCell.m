@@ -21,7 +21,7 @@
 
 -(NSInteger) numberPageCountPageView:(OEZPageView *)pageView
 {
-    return [[self.data appInfos] count];
+    return [self.data count];
 }
 
 -(void) pageView:(OEZPageView *)pageView didSelectPageAtIndex:(NSInteger)pageIndex
