@@ -27,11 +27,8 @@
     [_name setText:[data name]];
     [_summary setText:[(BookInfo *)data summary]];
     
-    NSInteger fav = [(BookInfo *)data favRate];
-    CGSize size = [BookFavRateViewStyle sizeOfFavRate:fav];
-    BookFavRateViewStyle *favView = [[BookFavRateViewStyle alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
-    [favView setData:[(BookInfo *)data favRate]];
-    [favView setBackgroundColor:[UIColor greenColor]];
+    BookFavRateViewStyle *favView = [BookFavRateViewStyle loadFromNib];
+    [favView setData:data];
     _favRate = favView;
 }
 

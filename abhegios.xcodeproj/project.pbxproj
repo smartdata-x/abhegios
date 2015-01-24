@@ -47,6 +47,7 @@
 		CB6A21E11A729B050087546F /* BookInfoViewStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21E01A729B050087546F /* BookInfoViewStyle1.m */; };
 		CB6A21E31A729F1E0087546F /* BookInfoViewStyle1.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB6A21E21A729F1E0087546F /* BookInfoViewStyle1.xib */; };
 		CB6A21E61A72B3B80087546F /* BookFavRateViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21E51A72B3B80087546F /* BookFavRateViewStyle.m */; };
+		CB6A21E81A732F840087546F /* BookFavRateViewStyle.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB6A21E71A732F840087546F /* BookFavRateViewStyle.xib */; };
 		EA13DDCE1A6F8A35004AB7E6 /* NSString+NSStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDCD1A6F8A35004AB7E6 /* NSString+NSStringCategory.m */; };
 		EA13DDD11A6F8D3A004AB7E6 /* AppDetailsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDCF1A6F8D3A004AB7E6 /* AppDetailsInfo.m */; };
 		EA13DDD41A6F8DF9004AB7E6 /* AppDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDD21A6F8DF9004AB7E6 /* AppDetailsViewController.m */; };
@@ -173,6 +174,7 @@
 		CB6A21E21A729F1E0087546F /* BookInfoViewStyle1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookInfoViewStyle1.xib; sourceTree = SOURCE_ROOT; };
 		CB6A21E41A72B3B80087546F /* BookFavRateViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookFavRateViewStyle.h; sourceTree = "<group>"; };
 		CB6A21E51A72B3B80087546F /* BookFavRateViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookFavRateViewStyle.m; sourceTree = "<group>"; };
+		CB6A21E71A732F840087546F /* BookFavRateViewStyle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookFavRateViewStyle.xib; sourceTree = SOURCE_ROOT; };
 		EA13DDCD1A6F8A35004AB7E6 /* NSString+NSStringCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringCategory.m"; sourceTree = "<group>"; };
 		EA13DDCF1A6F8D3A004AB7E6 /* AppDetailsInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsInfo.m; sourceTree = "<group>"; };
 		EA13DDD01A6F8D3A004AB7E6 /* AppDetailsInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailsInfo.h; sourceTree = "<group>"; };
@@ -480,6 +482,7 @@
 				EA89882D1A726A7000877E63 /* AppInfoViewStyle1.xib */,
 				EA8988371A72841B00877E63 /* AppInfoViewStyle3.xib */,
 				CB6A21E21A729F1E0087546F /* BookInfoViewStyle1.xib */,
+				CB6A21E71A732F840087546F /* BookFavRateViewStyle.xib */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -719,6 +722,7 @@
 				1AD6466F8E60BA95319C4EF1 /* local.html in Resources */,
 				1AD6444BCD81D3E62537781A /* qqicon.png in Resources */,
 				1AD6470ECF340D8FC98FD7FD /* success.png in Resources */,
+				CB6A21E81A732F840087546F /* BookFavRateViewStyle.xib in Resources */,
 				CB6A21CE1A7007970087546F /* bookstorehome.plist in Resources */,
 				EA3D07791A6CDA2000189765 /* WeiboSDK.bundle in Resources */,
 			);

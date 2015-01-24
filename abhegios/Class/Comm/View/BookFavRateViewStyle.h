@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 #define kMinFavRate 0
 #define kMaxFavRate 10
-@interface BookFavRateViewStyle : UIView
-+ (CGSize)sizeOfFavRate:(NSInteger)favRate;
-- (void)setData:(NSInteger)favRate;
+@interface BookFavRateViewStyle : OEZNibView
+@property (weak, nonatomic) IBOutlet UIView *rate0;
+@property (weak, nonatomic) IBOutlet UIView *rate1;
+@property (weak, nonatomic) IBOutlet UIView *rate2;
+@property (weak, nonatomic) IBOutlet UIView *rate3;
+@property (weak, nonatomic) IBOutlet UIView *rate4;
+- (void)setData:(id)data;
 @end
