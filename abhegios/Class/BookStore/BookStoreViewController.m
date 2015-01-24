@@ -13,6 +13,7 @@
 #import "BookStoreTableViewCellStyle1.h"
 #import "BookShelfViewController.h"
 #import "BookReaderViewController.h"
+#import "BookDetailInfoTableViewController.h"
 #import <OEZCommSDK/OEZCommSDK.h>
 @interface BookStoreViewController ()
 {
@@ -129,6 +130,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 2) {
         [self.navigationController pushViewControllerWithIdentifier:@"BookReaderViewController" animated:YES];
+    }
+    else if (indexPath.section == 3) {
+        [self.navigationController pushViewControllerWithIdentifier:@"BookDetailInfoTableViewController" animated:YES];
     }
     else {
         BookInfoGroup *group = [[_bookStoreHome bookInfoGroups] objectAtIndex:indexPath.section];

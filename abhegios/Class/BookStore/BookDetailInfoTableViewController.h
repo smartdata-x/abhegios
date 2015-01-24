@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
+typedef NS_ENUM(NSInteger, BookDetailInfoSection) {
+    BookDetailInfoSectionHeaderCell = 0,
+    BookDetailInfoSectionReadSave,
+    BookDetailInfoSectionIntroduction,
+    BookDetailInfoSectionChapterInfo,
+    BookDetailInfoSectionTagInfo,
+    BookDetailInfoSectionReadDownload,
+    BookDetailInfoSectionMAX,
+};
 @interface BookDetailInfoTableViewController : UITableViewController
 
 @end

@@ -505,17 +505,138 @@
         <!--书籍详情-->
         <scene sceneID="Php-V2-iIm">
             <objects>
-                <tableViewController id="QBn-zm-4Z3" userLabel="书籍详情" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="BookDetailInfoTableViewController" id="QBn-zm-4Z3" userLabel="书籍详情" customClass="BookDetailInfoTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jvJ-R7-NtA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="af9-uF-U11">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookDetailInfoTableViewCellStyle0" rowHeight="132" id="Cu4-T0-IbN" customClass="BookDetailInfoTableViewCellStyle0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cu4-T0-IbN" id="Nai-ZG-fTj">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TQy-lf-Xsg" customClass="BookInfoViewStyle2">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="132"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bookInfoView" destination="TQy-lf-Xsg" id="8tf-Vu-yp4"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookDetailInfoTableViewCellStyle1" rowHeight="49" id="af9-uF-U11" customClass="BookDetailInfoTableViewCellStyle1">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="af9-uF-U11" id="TmI-D7-LTS">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDA-f6-7A5">
+                                            <rect key="frame" x="10" y="5" width="138" height="39"/>
+                                            <state key="normal" title="免费试读">
+                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6o-dl-fuU">
+                                            <rect key="frame" x="172" y="5" width="138" height="39"/>
+                                            <state key="normal" title="保存书架">
+                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="freeRead" destination="eDA-f6-7A5" id="5hx-C2-e0f"/>
+                                    <outlet property="saveShelf" destination="w6o-dl-fuU" id="sFb-Ct-Dcq"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookDetailInfoTableViewCellStyle2" rowHeight="100" id="eou-S0-13F" userLabel="BookDetailInfoTableViewCellStyle2" customClass="BookDetailInfoTableViewCellStyle2">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eou-S0-13F" id="K0d-jZ-uAE">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOc-GF-QgG">
+                                            <rect key="frame" x="10" y="5" width="300" height="90"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="introduction" destination="cOc-GF-QgG" id="TQx-iR-cbx"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookDetailInfoTableViewCellStyle3" rowHeight="47" id="4Tj-cv-iJS" customClass="BookDetailInfoTableViewCellStyle3">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Tj-cv-iJS" id="2jm-qT-aIO">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rin-wG-b0f" customClass="BookInfoViewStyle3">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="47"/>
+                                            <color key="backgroundColor" red="0.94117647059999998" green="0.92179860039999995" blue="0.92567859080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="allChapter" destination="rin-wG-b0f" id="scR-ZU-FGf"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookDetailInfoTableViewCellStyle4" rowHeight="45" id="1yA-JW-t8A" customClass="BookDetailInfoTableViewCellStyle4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1yA-JW-t8A" id="kcX-H5-l06">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9R-oL-yTv">
+                                            <rect key="frame" x="10" y="0.0" width="90" height="45"/>
+                                            <color key="backgroundColor" red="0.94117647059999998" green="0.92179860039999995" blue="0.92567859080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DaH-lc-hDV">
+                                            <rect key="frame" x="115" y="0.0" width="90" height="45"/>
+                                            <color key="backgroundColor" red="0.94117647059999998" green="0.92179860039999995" blue="0.92567859080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yg2-mq-BXy">
+                                            <rect key="frame" x="220" y="0.0" width="90" height="45"/>
+                                            <color key="backgroundColor" red="0.94117647058823528" green="0.92179860035285732" blue="0.92567859084939064" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookDetailInfoTableViewCellStyle5" rowHeight="47" id="4fi-Ea-OVG" customClass="BookDetailInfoTableViewCellStyle5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4fi-Ea-OVG" id="iHu-Ge-oc9">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KGe-VR-msf" customClass="BookInfoViewStyle3">
+                                            <rect key="frame" x="45" y="8" width="105" height="30"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2eb-m6-2Ob" customClass="BookInfoViewStyle3">
+                                            <rect key="frame" x="170" y="8" width="105" height="30"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="download" destination="2eb-m6-2Ob" id="VI9-6E-Yrc"/>
+                                    <outlet property="freeRead" destination="KGe-VR-msf" id="NkL-5a-CcL"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

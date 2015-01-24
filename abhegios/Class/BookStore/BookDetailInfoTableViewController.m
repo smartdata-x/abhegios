@@ -32,38 +32,91 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return BookDetailInfoSectionMAX;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
+    if (section == BookDetailInfoSectionTagInfo) {
+        return 5;
+    }
+    return 1;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (BookDetailInfoSectionTagInfo) {
+        return 22;
+    }
     return 0;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.section) {
-        case 0:
-            return 1;
-            break;
-            
+        case BookDetailInfoSectionHeaderCell:   return 132; break;
+        case BookDetailInfoSectionReadSave:     return 49; break;
+        case BookDetailInfoSectionIntroduction: return 100; break;
+        case BookDetailInfoSectionChapterInfo:  return 47; break;
+        case BookDetailInfoSectionTagInfo:      return 45; break;
+        case BookDetailInfoSectionReadDownload: return 47; break;
         default:
             break;
     }
     return 0;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView *view = nil;
+    if( section == BookDetailInfoSectionTagInfo )
+    {
+        view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.tableView.frame), 22)];
+        [view setBackgroundColor:kUIColorWithRGB(0xf3f3f3)];
+        UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(10, 1, CGRectGetWidth(self.tableView.frame)-20, 21)];
+        [label setText:@"图书标签"];
+        [label setFont:[UIFont systemFontOfSize:14.0f]];
+        [view addSubview:label];
+    }
+    return view;
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    OEZTableViewCell *viewCell = nil;
+    switch (indexPath.section) {
+        case BookDetailInfoSectionHeaderCell:
+            viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDetailInfoTableViewCellStyle0"];
+            [viewCell setData:nil];
+            break;
+            
+        case BookDetailInfoSectionReadSave:
+            viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDetailInfoTableViewCellStyle1"];
+            [viewCell setData:nil];
+            break;
+            
+        case BookDetailInfoSectionIntroduction:
+            viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDetailInfoTableViewCellStyle2"];
+            [viewCell setData:nil];
+            break;
+            
+        case BookDetailInfoSectionChapterInfo:
+            viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDetailInfoTableViewCellStyle3"];
+            [viewCell setData:nil];
+            break;
+            
+        case BookDetailInfoSectionTagInfo:
+            viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDetailInfoTableViewCellStyle4"];
+            [viewCell setData:nil];
+            break;
+            
+        case BookDetailInfoSectionReadDownload:
+            viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDetailInfoTableViewCellStyle5"];
+            [viewCell setData:nil];
+            break;
+            
+        default:
+            break;
+    }
+    
+    return viewCell;
+}
 
 /*
 // Override to support conditional editing of the table view.
