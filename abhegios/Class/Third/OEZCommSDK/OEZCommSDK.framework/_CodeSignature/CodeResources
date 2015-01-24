@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/OEZCommSDK.h</key>
 		<data>
-		zah0TvPeRfWRTn01flIk3ElhcDk=
+		WfASA5K1sHUV5HvqoGjMlTMTUAs=
 		</data>
 		<key>Headers/OEZHScrollTableViewCell.h</key>
 		<data>
@@ -26,11 +26,15 @@
 		</data>
 		<key>Headers/OEZPageView.h</key>
 		<data>
-		6kXLPJzmEa8rDVIaFiAh259VFhA=
+		lEKFOgaKoF853lykHJpztxqLoc4=
 		</data>
 		<key>Headers/OEZTableViewCell.h</key>
 		<data>
 		KphgrbaM6m0ZP1qQNrjV/yTXTSE=
+		</data>
+		<key>Headers/OEZTableViewPageCell.h</key>
+		<data>
+		Fg7mqXcZ7UiULE2DtqQICmfD1Dc=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -49,7 +53,7 @@
 		</data>
 		<key>Headers/OEZCommSDK.h</key>
 		<data>
-		zah0TvPeRfWRTn01flIk3ElhcDk=
+		WfASA5K1sHUV5HvqoGjMlTMTUAs=
 		</data>
 		<key>Headers/OEZHScrollTableViewCell.h</key>
 		<data>
@@ -65,11 +69,15 @@
 		</data>
 		<key>Headers/OEZPageView.h</key>
 		<data>
-		6kXLPJzmEa8rDVIaFiAh259VFhA=
+		lEKFOgaKoF853lykHJpztxqLoc4=
 		</data>
 		<key>Headers/OEZTableViewCell.h</key>
 		<data>
 		KphgrbaM6m0ZP1qQNrjV/yTXTSE=
+		</data>
+		<key>Headers/OEZTableViewPageCell.h</key>
+		<data>
+		Fg7mqXcZ7UiULE2DtqQICmfD1Dc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>

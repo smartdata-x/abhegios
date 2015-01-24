@@ -9,19 +9,13 @@
 #import "AppTableViewCellStyle2.h"
 #import "AppInfo.h"
 #import "AppInfoGroup.h"
+#import  <OEZCommSDK/OEZCommSDK.h>
 @implementation AppTableViewCellStyle2
 
 
 -(OEZPageViewCell*) pageView:(OEZPageView *)pageView viewForPageAtIndex:(NSInteger)pageIndex
 {
-    OEZPageViewCell *cell = [pageView dequeueReusablePageViewWithIdentifier:nil];
-    if( cell == nil)
-    {
-        cell = [[OEZPageViewCell alloc] init];
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, kTableViewCellHieght)];
-        [imageView setImage:[UIImage imageNamed:@"s_banner"]];
-        [cell addSubview:imageView];
-    }
+    OEZPageViewImageCell *cell = [pageView dequeueReusablePageViewWithIdentifier:@"PageViewImageCell"];
     return cell;
 }
 

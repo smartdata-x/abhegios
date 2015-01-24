@@ -13,6 +13,7 @@
 #import <OEZCommSDK/OEZHScrollTableViewCell.h>
 #import <OEZCommSDK/OEZPageView.h>
 #import <OEZCommSDK/OEZNibView.h>
+#import <OEZCommSDK/OEZTableViewPageCell.h>
 FOUNDATION_EXPORT double OEZCommSDKVersionNumber;
 
 

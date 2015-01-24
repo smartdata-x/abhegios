@@ -12,6 +12,10 @@
 @interface OEZPageViewCell : UIView
 @end
 
+@interface OEZPageViewImageCell : OEZPageViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *contentImage;
+@end
+
 @class OEZPageView;
 @protocol OEZPageViewDelegate <NSObject>
 @required
