@@ -13,11 +13,5 @@
 @property (weak, nonatomic) IBOutlet UIImageView *favRate;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *summary;
-
-@property (weak, nonatomic) IBOutlet UIImageView *logo1;
-@property (weak, nonatomic) IBOutlet UILabel *name1;
-@property (weak, nonatomic) IBOutlet UIImageView *logo2;
-@property (weak, nonatomic) IBOutlet UILabel *name2;
-@property (weak, nonatomic) IBOutlet UIImageView *logo3;
-@property (weak, nonatomic) IBOutlet UILabel *name3;
+@property (weak, nonatomic) IBOutlet UIImageView *hilightBg;
 @end

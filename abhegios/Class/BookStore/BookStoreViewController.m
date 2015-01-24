@@ -50,6 +50,18 @@
     return [[_bookStoreHome bookInfoGroups] count];
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    BookInfoGroup *group = [[_bookStoreHome bookInfoGroups] objectAtIndex:section];
+    if ([self isSingleLine:group]) {
+        int maxrows = [[group bookInfos] count];
+        if ([group style] == BookStoreTableViewCellStyleFour) {
+            return MIN(2, maxrows);
+        }
+        return MIN(1, maxrows);
+    }
+    return [[group bookInfos] count];
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     BookInfoGroup *group = [[_bookStoreHome bookInfoGroups] objectAtIndex:section];
     if ([group style] == BookStoreTableViewCellStyleTwo) {
@@ -60,22 +72,17 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     BookInfoGroup *group = [[_bookStoreHome bookInfoGroups] objectAtIndex:indexPath.section];
-    if (group.style == BookStoreTableViewCellStyleOne) {
-        return 100;
+    switch (group.style) {
+        case BookStoreTableViewCellStyleOne:    return 132; break;
+        case BookStoreTableViewCellStyleTwo:    return 80;  break;
+        case BookStoreTableViewCellStyleThree:  return 153; break;
+        case BookStoreTableViewCellStyleFour:
+            if (indexPath.row == 0) return 112;
+            else return 153;
+            break;
+        default: return 80; break;
     }
-    else if (group.style == BookStoreTableViewCellStyleFour) {
-        return 245;
-    }
-    return 80;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    BookInfoGroup *group = [[_bookStoreHome bookInfoGroups] objectAtIndex:section];
-    if ([self isSingleLine:group]) {
-        int maxrows = [[group bookInfos] count];
-        return MIN(1, maxrows);
-    }
-    return [[group bookInfos] count];
+    return 0;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
@@ -95,20 +102,30 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BookInfoGroup *group = [[_bookStoreHome bookInfoGroups] objectAtIndex:indexPath.section];
     OEZTableViewCell *viewCell = nil;
+    NSString *bookCellStyle = [NSString stringWithFormat:@"BookStoreTableViewCellStyle%d", [group style]];
     if ([self isSingleLine:group]) {
-        viewCell = [tableView dequeueReusableCellWithIdentifier:[NSString stringWithFormat:@"BookStoreTableViewCellStyle%d", [group style]]];
-        [viewCell setData:group];
+        if ([group style] == 4) {
+            if (indexPath.row == 0) {
+                viewCell = [tableView dequeueReusableCellWithIdentifier:bookCellStyle];
+            }
+            else {
+                viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookStoreTableViewCellStyle3"];
+            }
+            [viewCell setData:group];
+        }
+        else {
+            viewCell = [tableView dequeueReusableCellWithIdentifier:bookCellStyle];
+            [viewCell setData:group];
+        }
     }
     else {
-        viewCell = [tableView dequeueReusableCellWithIdentifier:[NSString stringWithFormat:@"BookStoreTableViewCellStyle%d", [group style]]];
+        viewCell = [tableView dequeueReusableCellWithIdentifier:bookCellStyle];
         [viewCell setData:[[group bookInfos] objectAtIndex:indexPath.row]];
     }
     return viewCell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
     if (indexPath.section == 0 || indexPath.section == 1) {
         
         [self.navigationController pushViewControllerWithIdentifier:@"BookReaderViewController" animated:YES];
@@ -120,6 +137,7 @@
             [bookShelfView setData:group];
         } animated:YES];
     }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

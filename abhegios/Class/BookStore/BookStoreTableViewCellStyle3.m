@@ -9,47 +9,11 @@
 #import "BookStoreTableViewCellStyle3.h"
 #import "BookInfo.h"
 #import "BookInfoGroup.h"
-
-@interface BookItemView ()
-@property UIButton *logo;
-@property UILabel *name;
-@property UILabel *summary;
-@end
-
-@implementation BookItemView
-- (id)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    if (self) {
-        _logo = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_logo setFrame:CGRectMake(5, 5, frame.size.width - 10, frame.size.height - 10)];
-        [_logo setImage:[UIImage imageNamed:@"app-icon-default"] forState:UIControlStateNormal];
-        [self addSubview:_logo];
-        
-        _name = [[UILabel alloc] initWithFrame:CGRectMake(5, 15, frame.size.width - 10, 21)];
-        [_name setFont:[UIFont systemFontOfSize:14.0]];
-        [_name setTextColor:[UIColor whiteColor]];
-        [_name setTextAlignment:NSTextAlignmentLeft];
-        [self addSubview:_name];
-        
-        _summary = [[UILabel alloc] initWithFrame:CGRectMake(5, frame.size.height - 36, frame.size.width - 10, 21)];
-        [_summary setFont:[UIFont systemFontOfSize:14.0]];
-        [_summary setTextColor:[UIColor whiteColor]];
-        [_summary setTextAlignment:NSTextAlignmentLeft];
-        [self addSubview:_summary];
-    }
-    return self;
-}
-
-- (void)setData:(BookInfo *)bookInfo {
-    [_name setText:[bookInfo name]];
-    [_summary setText:[bookInfo summary]];
-    [self setHidden:NO];
-}
-@end
+#import "BookInfoViewStyle1.h"
 
 #define kMaxBookItemView 3
-#define kBookItemWidth 100
-#define kBookCellHeight 80
+#define kBookItemWidth 108
+#define kBookCellHeight 153
 
 @implementation BookStoreTableViewCellStyle3
 
@@ -63,7 +27,10 @@
 
 - (void)addViewItem {
     CGFloat x = [[self subviews] count] * kBookItemWidth;
-    BookItemView *viewItem = [[BookItemView alloc] initWithFrame:CGRectMake(x, 0, kBookItemWidth, kBookCellHeight)];
+    BookInfoViewStyle1 *viewItem = [BookInfoViewStyle1 loadFromNib];
+    CGRect rect = [viewItem frame];
+    rect.origin.x = x;
+    [viewItem setFrame:rect];
     [viewItem setTag:[[self subviews] count]];
     [self addSubview:viewItem];
 }
