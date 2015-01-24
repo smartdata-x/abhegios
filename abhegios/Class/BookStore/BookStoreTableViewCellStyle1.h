@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <OEZCommSDK/OEZCommSDK.h>
+#import "FavRateViewStyle.h"
 @interface BookStoreTableViewCellStyle1 : OEZTableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *logo;
-@property (weak, nonatomic) IBOutlet UIView *favRate;
+@property (weak, nonatomic) IBOutlet FavRateViewStyle *favRate;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *summary;
 @end

@@ -31,6 +31,7 @@
         BookInfo *bookInfo = [[bookInfoGroup bookInfos] objectAtIndex:i];
         [_name setText:bookInfo.name];
         [_summary setText:bookInfo.summary];
+        [_favRate setData:bookInfo];
     }
 }
 

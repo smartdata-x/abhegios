@@ -8,7 +8,7 @@
 
 #import "BookStoreTableViewCellStyle1.h"
 #import "bookInfo.h"
-#import "BookFavRateViewStyle.h"
+#import "FavRateViewStyle.h"
 
 @implementation BookStoreTableViewCellStyle1
 
@@ -26,12 +26,7 @@
     [super setData:data];
     [_name setText:[data name]];
     [_summary setText:[(BookInfo *)data summary]];
-    
-    BookFavRateViewStyle *favView = [BookFavRateViewStyle loadFromNib];
-    [favView setFrame:CGRectMake(104, 11, 120, 23)];
-    [favView setData:data];
-    [self addSubview:favView];
-    //_favRate = favView;
+    [_favRate setData:data];
 }
 
 @end
