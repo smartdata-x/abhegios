@@ -22,11 +22,8 @@
 }
 
 - (void)setData:(id)data {
-    
     [super setData:data];
-    [_name setText:[data name]];
-    [_summary setText:[(BookInfo *)data summary]];
-    [_favRate setDataWithBgColor:[(BookInfo *)data favRate] Color:[UIColor orangeColor]];
+    [_bookInfoView setData:data];
 }
 
 @end

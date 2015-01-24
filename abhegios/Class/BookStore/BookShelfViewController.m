@@ -59,7 +59,7 @@
 
 - (void)addShelfGapper:(NSUInteger)count {
     for (int i=0; i<count; i++) {
-        UIImageView *bgImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"app-icon-default"]];
+        UIImageView *bgImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"shelf.png"]];
         bgImgView.frame = CGRectMake(0, kBookItemHeight + kBookShelfCellHeight * i, CGRectGetWidth(_bookShelfView.frame), kBookShelfGapperHeight);
         [_bookShelfView addSubview:bgImgView];
     }

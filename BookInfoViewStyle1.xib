@@ -19,7 +19,7 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7I-l3-fR7">
                     <rect key="frame" x="12" y="10" width="84" height="112"/>
-                    <state key="normal" image="app-icon-default">
+                    <state key="normal" image="app_banner">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
@@ -47,6 +47,6 @@
         </view>
     </objects>
     <resources>
-        <image name="app-icon-default" width="53" height="53"/>
+        <image name="app_banner" width="296" height="71"/>
     </resources>
 </document>
