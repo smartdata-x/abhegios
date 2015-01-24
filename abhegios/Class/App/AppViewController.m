@@ -65,9 +65,9 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
      AppInfoGroup *group = [[_appStoreHome appInfoGroups] objectAtIndex:indexPath.section];
     if ( group.style == AppTableViewCellStyleThree) {
-        return 90.5;
+        return 90;
     }
-    return 80.5;
+    return 80;
 }
 
 

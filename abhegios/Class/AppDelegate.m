@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "HandleOpenURLHelper.h"
 #import "MainViewController.h"
+#import <OEZCommSDK/OEZCommSDK.h>
 @interface AppDelegate ()
 
 @end

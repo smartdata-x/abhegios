@@ -12,17 +12,13 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    _pageView = [[OEZPageView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, kTableViewCellHieght)];
-    [self.contentView setHidden:YES];
-    [_pageView setDelegate:self];
-    [self addSubview:_pageView];
 }
 
 
 -(void) setData:(id)data
 {
     [super setData:data];
-    [_pageView reloadData];
+    [self.pageView reloadData];
 }
 
 
