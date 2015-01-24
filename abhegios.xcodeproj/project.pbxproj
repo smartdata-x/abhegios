@@ -48,6 +48,9 @@
 		CB6A21E31A729F1E0087546F /* BookInfoViewStyle1.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB6A21E21A729F1E0087546F /* BookInfoViewStyle1.xib */; };
 		CB6A21E61A72B3B80087546F /* FavRateViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21E51A72B3B80087546F /* FavRateViewStyle.m */; };
 		CB6A21E81A732F840087546F /* FavRateViewStyle.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB6A21E71A732F840087546F /* FavRateViewStyle.xib */; };
+		CB6A21EB1A73C57C0087546F /* BookDetailInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21EA1A73C57C0087546F /* BookDetailInfoTableViewController.m */; };
+		CB6A21EE1A73C6840087546F /* BookInfoViewStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21ED1A73C6840087546F /* BookInfoViewStyle2.m */; };
+		CB6A21F01A73C7430087546F /* BookInfoViewStyle2.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB6A21EF1A73C7430087546F /* BookInfoViewStyle2.xib */; };
 		EA02913E1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = EA02913D1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.m */; };
 		EA13DDCE1A6F8A35004AB7E6 /* NSString+NSStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDCD1A6F8A35004AB7E6 /* NSString+NSStringCategory.m */; };
 		EA13DDD11A6F8D3A004AB7E6 /* AppDetailsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDCF1A6F8D3A004AB7E6 /* AppDetailsInfo.m */; };
@@ -178,6 +181,11 @@
 		CB6A21E41A72B3B80087546F /* FavRateViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavRateViewStyle.h; sourceTree = "<group>"; };
 		CB6A21E51A72B3B80087546F /* FavRateViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavRateViewStyle.m; sourceTree = "<group>"; };
 		CB6A21E71A732F840087546F /* FavRateViewStyle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavRateViewStyle.xib; sourceTree = SOURCE_ROOT; };
+		CB6A21E91A73C57C0087546F /* BookDetailInfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookDetailInfoTableViewController.h; sourceTree = "<group>"; };
+		CB6A21EA1A73C57C0087546F /* BookDetailInfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookDetailInfoTableViewController.m; sourceTree = "<group>"; };
+		CB6A21EC1A73C6840087546F /* BookInfoViewStyle2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookInfoViewStyle2.h; sourceTree = "<group>"; };
+		CB6A21ED1A73C6840087546F /* BookInfoViewStyle2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookInfoViewStyle2.m; sourceTree = "<group>"; };
+		CB6A21EF1A73C7430087546F /* BookInfoViewStyle2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookInfoViewStyle2.xib; sourceTree = SOURCE_ROOT; };
 		EA02913C1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailsTableViewCellStyle1.h; sourceTree = "<group>"; };
 		EA02913D1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsTableViewCellStyle1.m; sourceTree = "<group>"; };
 		EA13DDCD1A6F8A35004AB7E6 /* NSString+NSStringCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringCategory.m"; sourceTree = "<group>"; };
@@ -491,6 +499,7 @@
 				EA89882D1A726A7000877E63 /* AppInfoViewStyle1.xib */,
 				EA8988371A72841B00877E63 /* AppInfoViewStyle3.xib */,
 				CB6A21E21A729F1E0087546F /* BookInfoViewStyle1.xib */,
+				CB6A21EF1A73C7430087546F /* BookInfoViewStyle2.xib */,
 				EA8C83301A731FFF00901CFC /* PageViewImageCell.xib */,
 				EA8C83321A7320B400901CFC /* PageViewImageCell1.xib */,
 				CB6A21E71A732F840087546F /* FavRateViewStyle.xib */,
@@ -579,6 +588,8 @@
 				CB6A21D91A71364B0087546F /* BookShelfViewController.m */,
 				CB6A21DC1A7268EA0087546F /* BookReaderViewController.h */,
 				CB6A21DD1A7268EA0087546F /* BookReaderViewController.m */,
+				CB6A21E91A73C57C0087546F /* BookDetailInfoTableViewController.h */,
+				CB6A21EA1A73C57C0087546F /* BookDetailInfoTableViewController.m */,
 			);
 			path = BookStore;
 			sourceTree = "<group>";
@@ -631,6 +642,8 @@
 				EA89883C1A7285BB00877E63 /* AppInfoViewStyle3.m */,
 				CB6A21DF1A729B050087546F /* BookInfoViewStyle1.h */,
 				CB6A21E01A729B050087546F /* BookInfoViewStyle1.m */,
+				CB6A21EC1A73C6840087546F /* BookInfoViewStyle2.h */,
+				CB6A21ED1A73C6840087546F /* BookInfoViewStyle2.m */,
 				CB6A21E41A72B3B80087546F /* FavRateViewStyle.h */,
 				CB6A21E51A72B3B80087546F /* FavRateViewStyle.m */,
 			);
@@ -714,6 +727,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB6A21F01A73C7430087546F /* BookInfoViewStyle2.xib in Resources */,
 				EA3D07761A6CD9A600189765 /* Main.storyboard in Resources */,
 				EA3D07771A6CD9A600189765 /* LaunchScreen.xib in Resources */,
 				1AD6460C6803B48F071D6E89 /* Images.xcassets in Resources */,
@@ -770,6 +784,7 @@
 				EA13DDCE1A6F8A35004AB7E6 /* NSString+NSStringCategory.m in Sources */,
 				1AD64903B17F5D12DC09D1BB /* ThirdLoginInfo.m in Sources */,
 				EA3D07731A6CD88A00189765 /* LoginViewController.m in Sources */,
+				CB6A21EB1A73C57C0087546F /* BookDetailInfoTableViewController.m in Sources */,
 				EA13DDDF1A6FA0D0004AB7E6 /* AppTableViewCellStyle3.m in Sources */,
 				EAA7738B1A72241B00EBD512 /* AppTableViewCellStyle4.m in Sources */,
 				EA8D74991A6E9DC2004C17C2 /* AppTableViewCellStyle2.m in Sources */,
@@ -789,6 +804,7 @@
 				1AD64E1713AD0CE098E0019C /* AppStoreHome.m in Sources */,
 				CB6A21E11A729B050087546F /* BookInfoViewStyle1.m in Sources */,
 				CB6A21D11A711CD50087546F /* BookStoreTableViewCellStyle2.m in Sources */,
+				CB6A21EE1A73C6840087546F /* BookInfoViewStyle2.m in Sources */,
 				EAA773881A7222C400EBD512 /* AppTableViewPageCell.m in Sources */,
 				1AD64F3A04AFCBB948106908 /* AppInfo.m in Sources */,
 				1AD645A28AA3934B882BD885 /* FoundItemInfo.m in Sources */,

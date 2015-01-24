@@ -23,9 +23,7 @@
 
 - (void)setData:(id)data {
     [super setData:data];
-    [_name setText:[data name]];
-    [_summary setText:[(BookInfo *)data summary]];
-    [_favRate setData:[(BookInfo *)data favRate]];
+    [_bookInfoView setData:data];
 }
 
 @end
