@@ -40,13 +40,17 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return 1;
 }
 
+-(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 294;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AppDetailsTableViewCellStyle1"];
-    
+    OEZTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AppDetailsTableViewCellStyle1"];
+    [cell setData:[_appDetailsPage intro]];
     return cell;
 }
 

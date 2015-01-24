@@ -13,10 +13,10 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    [_setup.layer setMasksToBounds:YES];
-    [_setup.layer setCornerRadius:8.0];
-    [_setup.layer setBorderWidth:1.0];
-    [_setup.layer setBorderColor:[kUIColorWithRGB(0xbcbcbc) CGColor]];//边框颜色
+    [_setupButton.layer setMasksToBounds:YES];
+    [_setupButton.layer setCornerRadius:8.0];
+    [_setupButton.layer setBorderWidth:1.0];
+    [_setupButton.layer setBorderColor:[ [[_setupButton titleLabel] textColor]CGColor]];//边框颜色
     
 }
 

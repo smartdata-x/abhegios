@@ -10,9 +10,6 @@
 #import "AppInfo.h"
 @implementation AppTableViewCellStyle1
 
-- (void)awakeFromNib {
-    
-}
 
 
 

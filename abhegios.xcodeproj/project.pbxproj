@@ -48,6 +48,7 @@
 		CB6A21E31A729F1E0087546F /* BookInfoViewStyle1.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB6A21E21A729F1E0087546F /* BookInfoViewStyle1.xib */; };
 		CB6A21E61A72B3B80087546F /* FavRateViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21E51A72B3B80087546F /* FavRateViewStyle.m */; };
 		CB6A21E81A732F840087546F /* FavRateViewStyle.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB6A21E71A732F840087546F /* FavRateViewStyle.xib */; };
+		EA02913E1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = EA02913D1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.m */; };
 		EA13DDCE1A6F8A35004AB7E6 /* NSString+NSStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDCD1A6F8A35004AB7E6 /* NSString+NSStringCategory.m */; };
 		EA13DDD11A6F8D3A004AB7E6 /* AppDetailsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDCF1A6F8D3A004AB7E6 /* AppDetailsInfo.m */; };
 		EA13DDD41A6F8DF9004AB7E6 /* AppDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDD21A6F8DF9004AB7E6 /* AppDetailsViewController.m */; };
@@ -177,6 +178,8 @@
 		CB6A21E41A72B3B80087546F /* FavRateViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavRateViewStyle.h; sourceTree = "<group>"; };
 		CB6A21E51A72B3B80087546F /* FavRateViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavRateViewStyle.m; sourceTree = "<group>"; };
 		CB6A21E71A732F840087546F /* FavRateViewStyle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavRateViewStyle.xib; sourceTree = SOURCE_ROOT; };
+		EA02913C1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailsTableViewCellStyle1.h; sourceTree = "<group>"; };
+		EA02913D1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsTableViewCellStyle1.m; sourceTree = "<group>"; };
 		EA13DDCD1A6F8A35004AB7E6 /* NSString+NSStringCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringCategory.m"; sourceTree = "<group>"; };
 		EA13DDCF1A6F8D3A004AB7E6 /* AppDetailsInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsInfo.m; sourceTree = "<group>"; };
 		EA13DDD01A6F8D3A004AB7E6 /* AppDetailsInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailsInfo.h; sourceTree = "<group>"; };
@@ -405,6 +408,8 @@
 				EAA773871A7222C400EBD512 /* AppTableViewPageCell.m */,
 				EAA773891A72241B00EBD512 /* AppTableViewCellStyle4.h */,
 				EAA7738A1A72241B00EBD512 /* AppTableViewCellStyle4.m */,
+				EA02913C1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.h */,
+				EA02913D1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.m */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -749,6 +754,7 @@
 				1AD64804C9FA33B5797A36AC /* AppDelegate.m in Sources */,
 				1AD641D66B96305DB64E42F7 /* main.m in Sources */,
 				1AD64A7E02E7FE36F6F1B45D /* HandleOpenURLHelper.m in Sources */,
+				EA02913E1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.m in Sources */,
 				CB6A21C71A6FFA680087546F /* BookInfoGroup.m in Sources */,
 				EA13DDD11A6F8D3A004AB7E6 /* AppDetailsInfo.m in Sources */,
 				1AD6455F3CEB60EEE78C0C77 /* UserHelper.m in Sources */,

@@ -10,7 +10,7 @@
                 <outlet property="down" destination="O1Z-wZ-HjU" id="wSD-Dc-Csg"/>
                 <outlet property="logo" destination="ogz-Y9-TOT" id="ctt-wV-1DP"/>
                 <outlet property="name" destination="jgT-p7-bsH" id="7im-qW-nON"/>
-                <outlet property="setup" destination="jA8-EY-QT7" id="zDO-jz-jhi"/>
+                <outlet property="setupButton" destination="jA8-EY-QT7" id="Ln7-Tq-ZXg"/>
                 <outlet property="summary" destination="L6m-hF-5bX" id="mpl-Gg-XxV"/>
             </connections>
         </placeholder>

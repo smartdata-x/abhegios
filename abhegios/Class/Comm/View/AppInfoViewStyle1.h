@@ -11,7 +11,7 @@
 #import "AppInfoViewStyle3.h"
 @interface AppInfoViewStyle1 : AppInfoViewStyle3
 @property (weak, nonatomic) IBOutlet UILabel *down;
-@property (weak, nonatomic) IBOutlet UIButton *setup;
+@property (weak, nonatomic) IBOutlet UIButton *setupButton;
 @property (weak, nonatomic) IBOutlet UILabel *summary;
 -(void) setData:(id)data;
 @end
