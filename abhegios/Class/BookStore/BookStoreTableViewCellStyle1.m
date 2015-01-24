@@ -28,8 +28,10 @@
     [_summary setText:[(BookInfo *)data summary]];
     
     BookFavRateViewStyle *favView = [BookFavRateViewStyle loadFromNib];
+    [favView setFrame:CGRectMake(104, 11, 120, 23)];
     [favView setData:data];
-    _favRate = favView;
+    [self addSubview:favView];
+    //_favRate = favView;
 }
 
 @end

@@ -31,23 +31,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _chapterGroup = [[NSMutableArray alloc] init];
-    
-#if 0
-    _textView.font = textfont;
-    _textView.textColor = MIG_COLOR_111111;
-    _textView.editable = NO;
-    [_textView setUserInteractionEnabled:NO];
-    [_textView setContentOffset:CGPointMake(0, 0)];
-    [_textView setBackgroundColor:[UIColor clearColor]];
-#endif
+    [self initView];
 }
 
 - (void)initView {
     [_readerView setFont:[UIFont systemFontOfSize:14.0f]];
-    [_readerView setTextColor:[UIColor whiteColor]];
+    [_readerView setTextColor:[UIColor blackColor]];
     [_readerView setEditable:NO];
     [_readerView setUserInteractionEnabled:NO];
     [_readerView setContentOffset:CGPointMake(0, 0)];
+    
+    //
+    _chapterCount = 10;
+    _currentChapter = 0;
+    [self loadNewChapter];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -59,7 +56,7 @@
 }
 
 - (BOOL)isCurrentChapterExist {
-    return NO;
+    return YES;
 }
 
 - (BOOL)isNeedDownload {

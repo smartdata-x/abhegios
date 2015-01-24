@@ -126,11 +126,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0 || indexPath.section == 1) {
-        
+    if (indexPath.section == 2) {
         [self.navigationController pushViewControllerWithIdentifier:@"BookReaderViewController" animated:YES];
     }
-    {
+    else {
         BookInfoGroup *group = [[_bookStoreHome bookInfoGroups] objectAtIndex:indexPath.section];
         [self.navigationController pushViewControllerWithIdentifier:@"BookShelfViewController" completion:^(UIViewController *viewController) {
             BookShelfViewController *bookShelfView = (BookShelfViewController *)viewController;
