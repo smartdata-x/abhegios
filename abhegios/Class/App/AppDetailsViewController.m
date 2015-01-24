@@ -28,6 +28,7 @@ typedef NS_ENUM(NSInteger, AppDetailsTableViewCellStyle) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     [self testData];
     
 }
@@ -59,11 +60,15 @@ typedef NS_ENUM(NSInteger, AppDetailsTableViewCellStyle) {
         case AppDetailsTableViewCellStyleOne:
             return 294;
         case AppDetailsTableViewCellStyleTwo:
-            return 100;
+        {
+            CGFloat height = [[[_appDetailsPage intro] summary] sizeWithFont:[UIFont systemFontOfSize:14] constrainedToSize:CGSizeMake(kMainScreenWidth-30, MAXFLOAT) lineBreakMode:NSLineBreakByCharWrapping].height;
+            height += 80;
+            return height;
+        }
         case AppDetailsTableViewCellStyleThree:
-            return 90;
+            return 110;
         case AppDetailsTableViewCellStyleFour:
-            return 173;
+            return 200;
     }
     return 0;
 }

@@ -1,5 +1,5 @@
 //
-//  AppDetailsTableViewCellStyle2.h
+//  AppDetailsTableViewCellStyle4.h
 //  abhegios
 //
 //  Created by 180 on 15/1/24.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <OEZCommSDK/OEZCommSDK.h>
-@interface AppDetailsTableViewCellStyle2 : OEZTableViewCell
+@interface AppDetailsTableViewCellStyle4 : OEZTableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *contentText;
 
 @end

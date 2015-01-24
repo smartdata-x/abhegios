@@ -63,6 +63,7 @@
 		EA3D07771A6CD9A600189765 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AD644FB93BF0B06901FCD5E /* LaunchScreen.xib */; };
 		EA3D07791A6CDA2000189765 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EA3D07781A6CDA2000189765 /* WeiboSDK.bundle */; };
 		EA40430A1A73C0F800D904C5 /* AppDetailsTableViewCellStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4043091A73C0F800D904C5 /* AppDetailsTableViewCellStyle2.m */; };
+		EA40430D1A73CF8B00D904C5 /* AppDetailsTableViewCellStyle4.m in Sources */ = {isa = PBXBuildFile; fileRef = EA40430C1A73CF8B00D904C5 /* AppDetailsTableViewCellStyle4.m */; };
 		EA54A1171A6E0E6100322C42 /* FoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA54A1161A6E0E6100322C42 /* FoundViewController.m */; };
 		EA6500AE1A6F34630043C4F2 /* LoginItemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6500AD1A6F34630043C4F2 /* LoginItemInfo.m */; };
 		EA75998E1A7120A50027FC8B /* uilogindata.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA75998A1A7120A50027FC8B /* uilogindata.plist */; };
@@ -205,6 +206,8 @@
 		EA3D07781A6CDA2000189765 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
 		EA4043081A73C0F800D904C5 /* AppDetailsTableViewCellStyle2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailsTableViewCellStyle2.h; sourceTree = "<group>"; };
 		EA4043091A73C0F800D904C5 /* AppDetailsTableViewCellStyle2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsTableViewCellStyle2.m; sourceTree = "<group>"; };
+		EA40430B1A73CF8B00D904C5 /* AppDetailsTableViewCellStyle4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailsTableViewCellStyle4.h; sourceTree = "<group>"; };
+		EA40430C1A73CF8B00D904C5 /* AppDetailsTableViewCellStyle4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsTableViewCellStyle4.m; sourceTree = "<group>"; };
 		EA54A1151A6E0E6100322C42 /* FoundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundViewController.h; sourceTree = "<group>"; };
 		EA54A1161A6E0E6100322C42 /* FoundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundViewController.m; sourceTree = "<group>"; };
 		EA6500AC1A6F34630043C4F2 /* LoginItemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginItemInfo.h; sourceTree = "<group>"; };
@@ -423,6 +426,8 @@
 				EA02913D1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.m */,
 				EA4043081A73C0F800D904C5 /* AppDetailsTableViewCellStyle2.h */,
 				EA4043091A73C0F800D904C5 /* AppDetailsTableViewCellStyle2.m */,
+				EA40430B1A73CF8B00D904C5 /* AppDetailsTableViewCellStyle4.h */,
+				EA40430C1A73CF8B00D904C5 /* AppDetailsTableViewCellStyle4.m */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -776,6 +781,7 @@
 				EA40430A1A73C0F800D904C5 /* AppDetailsTableViewCellStyle2.m in Sources */,
 				EA02913E1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.m in Sources */,
 				CB6A21C71A6FFA680087546F /* BookInfoGroup.m in Sources */,
+				EA40430D1A73CF8B00D904C5 /* AppDetailsTableViewCellStyle4.m in Sources */,
 				EA13DDD11A6F8D3A004AB7E6 /* AppDetailsInfo.m in Sources */,
 				1AD6455F3CEB60EEE78C0C77 /* UserHelper.m in Sources */,
 				1AD649CD0AF8969FFF4B9641 /* ILogin.m in Sources */,
