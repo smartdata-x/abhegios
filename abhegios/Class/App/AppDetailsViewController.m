@@ -50,25 +50,28 @@ typedef NS_ENUM(NSInteger, AppDetailsTableViewCellStyle) {
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return AppDetailsTableViewCellStyleFour;
 }
 
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    switch ([indexPath row] + 1)
+    if( [indexPath section] == 0 )
     {
-        case AppDetailsTableViewCellStyleOne:
-            return 294;
-        case AppDetailsTableViewCellStyleTwo:
+        switch ([indexPath row] + 1)
         {
-            CGFloat height = [[[_appDetailsPage intro] summary] sizeWithFont:[UIFont systemFontOfSize:14] constrainedToSize:CGSizeMake(kMainScreenWidth-30, MAXFLOAT) lineBreakMode:NSLineBreakByCharWrapping].height;
-            height += 80;
-            return height;
+            case AppDetailsTableViewCellStyleOne:
+                return 294;
+            case AppDetailsTableViewCellStyleTwo:
+            {
+                CGFloat height = [[[_appDetailsPage intro] summary] sizeWithFont:[UIFont systemFontOfSize:14] constrainedToSize:CGSizeMake(kMainScreenWidth-30, MAXFLOAT) lineBreakMode:NSLineBreakByCharWrapping].height;
+                height += 80;
+                return height;
+            }
+            case AppDetailsTableViewCellStyleThree:
+                return 110;
+            case AppDetailsTableViewCellStyleFour:
+                return 200;
         }
-        case AppDetailsTableViewCellStyleThree:
-            return 110;
-        case AppDetailsTableViewCellStyleFour:
-            return 200;
     }
     return 0;
 }
