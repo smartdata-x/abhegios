@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UIView *rate2;
 @property (weak, nonatomic) IBOutlet UIView *rate3;
 @property (weak, nonatomic) IBOutlet UIView *rate4;
-- (void)setData:(id)data;
+- (void)setData:(NSUInteger)rate;
+- (void)setDataWithBgColor:(NSUInteger)rate Color:(UIColor *)color;
 @end

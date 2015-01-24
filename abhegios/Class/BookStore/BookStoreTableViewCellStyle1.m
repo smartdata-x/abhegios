@@ -26,7 +26,7 @@
     [super setData:data];
     [_name setText:[data name]];
     [_summary setText:[(BookInfo *)data summary]];
-    [_favRate setData:data];
+    [_favRate setDataWithBgColor:[(BookInfo *)data favRate] Color:[UIColor orangeColor]];
 }
 
 @end

@@ -333,7 +333,7 @@
                                         </label>
                                         <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="545-MH-i45" customClass="FavRateViewStyle">
                                             <rect key="frame" x="10" y="68" width="120" height="23"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="23" id="XHu-4y-6ZT"/>
                                                 <constraint firstAttribute="width" constant="120" id="wD3-2r-acd"/>

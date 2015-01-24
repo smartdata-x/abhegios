@@ -5,13 +5,13 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookFavRateViewStyle">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavRateViewStyle">
             <connections>
-                <outlet property="rate0" destination="2mw-lM-D4y" id="YmC-8w-7zj"/>
-                <outlet property="rate1" destination="aUp-LD-2pL" id="upX-JY-amt"/>
-                <outlet property="rate2" destination="2WK-XZ-j7V" id="E1V-Ck-Wz9"/>
-                <outlet property="rate3" destination="aAY-2g-DOa" id="ekc-U1-zrf"/>
-                <outlet property="rate4" destination="PP6-ku-Byo" id="G5b-uu-LEw"/>
+                <outlet property="rate0" destination="2mw-lM-D4y" id="zIH-rK-f6e"/>
+                <outlet property="rate1" destination="aUp-LD-2pL" id="c3z-gy-Qx8"/>
+                <outlet property="rate2" destination="2WK-XZ-j7V" id="Gy9-Lo-uZG"/>
+                <outlet property="rate3" destination="aAY-2g-DOa" id="kcb-a5-5T9"/>
+                <outlet property="rate4" destination="PP6-ku-Byo" id="kH5-SU-tK8"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -50,7 +50,7 @@
                     </state>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
