@@ -10,14 +10,14 @@
 #import "BookInfo.h"
 #import "BookInfoGroup.h"
 #import "BookStoreHome.h"
-#import "BookStoreTableViewCellStyle4.h"
+#import "BookInfoViewStyle1.h"
 
 #define kMaxBookNumber 99
 #define kBookNumberPerRow 3
-#define kBookShelfCellHeight 111
+#define kBookShelfCellHeight 153
 #define kBookShelfGapperHeight 21
-#define kBookItemHeight 90
-#define kBookItemWidth 100
+#define kBookItemHeight 132
+#define kBookItemWidth 108
 
 @interface BookShelfViewController ()
 @property UIScrollView *bookShelfView;
@@ -41,12 +41,20 @@
     CGSize size = CGSizeMake(CGRectGetWidth(self.view.frame), height);
     [_bookShelfView setContentSize:size];
     
-    [self addShelfGapper:ceilf((float)count / kBookNumberPerRow)];
     [self addViewItem:count];
+    [self addShelfGapper:ceilf((float)count / kBookNumberPerRow)];
 }
 
 - (void)addViewItem:(NSUInteger)count {
-    
+    for (int i=0; i<count; i++) {
+        float x = i % 3;
+        float y = i / 3;
+        BookInfo *bookinfo = [[_bookInfoGroup bookInfos] objectAtIndex:i];
+        BookInfoViewStyle1 *bookitem = [BookInfoViewStyle1 loadFromNib];
+        [bookitem setFrame:CGRectMake(x*kBookItemWidth, y*kBookShelfCellHeight, kBookItemWidth, kBookShelfCellHeight)];
+        [bookitem setDataWithFormat:bookinfo Format:BookInfoViewStyle1Format2];
+        [_bookShelfView addSubview:bookitem];
+    }
 }
 
 - (void)addShelfGapper:(NSUInteger)count {

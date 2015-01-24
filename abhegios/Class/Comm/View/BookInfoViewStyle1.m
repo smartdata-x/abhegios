@@ -7,6 +7,7 @@
 //
 
 #import "BookInfoViewStyle1.h"
+#import "BookInfo.h"
 
 @implementation BookInfoViewStyle1
 - (void)awakeFromNib {
@@ -15,12 +16,22 @@
 
 - (void)setData:(id)data {
     [_name setText:[data name]];
-    [_summary setText:[data summary]];
+    [_summary setText:[(BookInfo *)data summary]];
 }
 
-- (void)setDataHideSummary:(id)data Hide:(BOOL)hide {
+- (void)showAll {
+    [_name setHidden:NO];
+    [_summary setHidden:NO];
+}
+
+- (void)setDataWithFormat:(id)data Format:(NSInteger)format {
     [self setData:data];
-    [_summary setHidden:hide];
+    [self showAll];
+    switch (format) {
+        case BookInfoViewStyle1Format2: [_name setHidden:YES];
+        case BookInfoViewStyle1Format1: [_summary setHidden:YES];
+        default: break;
+    }
 }
 
 @end

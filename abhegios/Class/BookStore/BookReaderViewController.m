@@ -44,7 +44,7 @@
     //
     _chapterCount = 10;
     _currentChapter = 0;
-    [self loadNewChapter];
+    //[self loadNewChapter];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
