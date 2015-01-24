@@ -10,9 +10,6 @@
 #import "AppInfoGroup.h"
 @implementation AppTableViewPageCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-}
 
 
 -(void) setData:(id)data
