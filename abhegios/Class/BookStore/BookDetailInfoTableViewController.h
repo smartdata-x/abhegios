@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BookDetailInfo.h"
 typedef NS_ENUM(NSInteger, BookDetailInfoSection) {
     BookDetailInfoSectionHeaderCell = 0,
     BookDetailInfoSectionReadSave,
@@ -17,5 +18,5 @@ typedef NS_ENUM(NSInteger, BookDetailInfoSection) {
     BookDetailInfoSectionMAX,
 };
 @interface BookDetailInfoTableViewController : UITableViewController
-
+- (void)setData:(id)data;
 @end

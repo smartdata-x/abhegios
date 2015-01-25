@@ -7,6 +7,7 @@
 //
 
 #import "BookDetailInfoTableViewCellStyle0.h"
+#import "BookInfo.h"
 
 @implementation BookDetailInfoTableViewCellStyle0
 
@@ -22,6 +23,12 @@
 
 - (void)setData:(id)data {
     [super setData:data];
+    
+    BookInfo *info = [[BookInfo alloc] init];
+    info.name = @"金刚经";
+    info.summary = @"作者:释迦摩尼";
+    info.favRate = 10;
+    
     [_bookInfoView setData:data];
 }
 

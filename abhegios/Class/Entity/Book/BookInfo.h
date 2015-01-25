@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "AppInfo.h"
 
-@interface BookInfo : AppInfo
+@interface BookInfo : BaseInfoMoreONS
+@property (nonatomic, copy) NSString *logo;
 @property NSUInteger favRate;
 @end

@@ -12,6 +12,10 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    [[_freeRead layer] setCornerRadius:2.0f];
+    [[_freeRead layer] setMasksToBounds:YES];
+    [[_saveShelf layer] setCornerRadius:2.0f];
+    [[_saveShelf layer] setMasksToBounds:YES];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -22,8 +26,6 @@
 
 - (void)setData:(id)data {
     [super setData:data];
-    [_freeRead setBackgroundColor:[UIColor lightGrayColor]];
-    [_saveShelf setBackgroundColor:[UIColor lightGrayColor]];
 }
 
 @end

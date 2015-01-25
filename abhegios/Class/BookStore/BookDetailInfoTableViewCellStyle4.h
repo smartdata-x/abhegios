@@ -12,4 +12,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblTag0;
 @property (weak, nonatomic) IBOutlet UILabel *lblTag1;
 @property (weak, nonatomic) IBOutlet UILabel *lblTag2;
+- (void)setDataWithIndex:(id)data Index:(NSInteger)index;
 @end

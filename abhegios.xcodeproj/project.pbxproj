@@ -59,6 +59,11 @@
 		CB6A22011A73DC440087546F /* BookDetailInfoTableViewCellStyle4.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A22001A73DC440087546F /* BookDetailInfoTableViewCellStyle4.m */; };
 		CB6A22041A73DF160087546F /* BookDetailInfoTableViewCellStyle5.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A22031A73DF160087546F /* BookDetailInfoTableViewCellStyle5.m */; };
 		CB6A22071A73E43F0087546F /* BookDetailInfoTableViewCellStyle0.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A22061A73E43F0087546F /* BookDetailInfoTableViewCellStyle0.m */; };
+		CB6A220A1A749CE50087546F /* BookDetailInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A22091A749CE50087546F /* BookDetailInfo.m */; };
+		CB6A220D1A74B48E0087546F /* BookSearchResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A220C1A74B48E0087546F /* BookSearchResultTableViewController.m */; };
+		CB6A22101A74B4C10087546F /* BookDirectoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A220F1A74B4C10087546F /* BookDirectoryTableViewController.m */; };
+		CB6A22131A74BE6B0087546F /* BookSearchResultTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A22121A74BE6B0087546F /* BookSearchResultTableViewCellStyle1.m */; };
+		CB6A22161A74C09E0087546F /* BookSearchResultTableViewCellStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A22151A74C09E0087546F /* BookSearchResultTableViewCellStyle2.m */; };
 		EA02913E1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = EA02913D1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.m */; };
 		EA13DDCE1A6F8A35004AB7E6 /* NSString+NSStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDCD1A6F8A35004AB7E6 /* NSString+NSStringCategory.m */; };
 		EA13DDD11A6F8D3A004AB7E6 /* AppDetailsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDCF1A6F8D3A004AB7E6 /* AppDetailsInfo.m */; };
@@ -215,6 +220,16 @@
 		CB6A22031A73DF160087546F /* BookDetailInfoTableViewCellStyle5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookDetailInfoTableViewCellStyle5.m; sourceTree = "<group>"; };
 		CB6A22051A73E43F0087546F /* BookDetailInfoTableViewCellStyle0.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookDetailInfoTableViewCellStyle0.h; sourceTree = "<group>"; };
 		CB6A22061A73E43F0087546F /* BookDetailInfoTableViewCellStyle0.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookDetailInfoTableViewCellStyle0.m; sourceTree = "<group>"; };
+		CB6A22081A749CE50087546F /* BookDetailInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookDetailInfo.h; sourceTree = "<group>"; };
+		CB6A22091A749CE50087546F /* BookDetailInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookDetailInfo.m; sourceTree = "<group>"; };
+		CB6A220B1A74B48E0087546F /* BookSearchResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookSearchResultTableViewController.h; sourceTree = "<group>"; };
+		CB6A220C1A74B48E0087546F /* BookSearchResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookSearchResultTableViewController.m; sourceTree = "<group>"; };
+		CB6A220E1A74B4C10087546F /* BookDirectoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookDirectoryTableViewController.h; sourceTree = "<group>"; };
+		CB6A220F1A74B4C10087546F /* BookDirectoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookDirectoryTableViewController.m; sourceTree = "<group>"; };
+		CB6A22111A74BE6B0087546F /* BookSearchResultTableViewCellStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookSearchResultTableViewCellStyle1.h; sourceTree = "<group>"; };
+		CB6A22121A74BE6B0087546F /* BookSearchResultTableViewCellStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookSearchResultTableViewCellStyle1.m; sourceTree = "<group>"; };
+		CB6A22141A74C09E0087546F /* BookSearchResultTableViewCellStyle2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookSearchResultTableViewCellStyle2.h; sourceTree = "<group>"; };
+		CB6A22151A74C09E0087546F /* BookSearchResultTableViewCellStyle2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookSearchResultTableViewCellStyle2.m; sourceTree = "<group>"; };
 		EA02913C1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailsTableViewCellStyle1.h; sourceTree = "<group>"; };
 		EA02913D1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsTableViewCellStyle1.m; sourceTree = "<group>"; };
 		EA13DDCD1A6F8A35004AB7E6 /* NSString+NSStringCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringCategory.m"; sourceTree = "<group>"; };
@@ -545,10 +560,10 @@
 				EA8988371A72841B00877E63 /* AppInfoViewStyle3.xib */,
 				CB6A21E21A729F1E0087546F /* BookInfoViewStyle1.xib */,
 				CB6A21EF1A73C7430087546F /* BookInfoViewStyle2.xib */,
+				CB6A21FA1A73D77B0087546F /* BookInfoViewStyle3.xib */,
 				EA8C83301A731FFF00901CFC /* PageViewImageCell.xib */,
 				EA8C83321A7320B400901CFC /* PageViewImageCell1.xib */,
 				CB6A21E71A732F840087546F /* FavRateViewStyle.xib */,
-				CB6A21FA1A73D77B0087546F /* BookInfoViewStyle3.xib */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -654,6 +669,14 @@
 				CB6A22001A73DC440087546F /* BookDetailInfoTableViewCellStyle4.m */,
 				CB6A22021A73DF160087546F /* BookDetailInfoTableViewCellStyle5.h */,
 				CB6A22031A73DF160087546F /* BookDetailInfoTableViewCellStyle5.m */,
+				CB6A220B1A74B48E0087546F /* BookSearchResultTableViewController.h */,
+				CB6A220C1A74B48E0087546F /* BookSearchResultTableViewController.m */,
+				CB6A22111A74BE6B0087546F /* BookSearchResultTableViewCellStyle1.h */,
+				CB6A22121A74BE6B0087546F /* BookSearchResultTableViewCellStyle1.m */,
+				CB6A22141A74C09E0087546F /* BookSearchResultTableViewCellStyle2.h */,
+				CB6A22151A74C09E0087546F /* BookSearchResultTableViewCellStyle2.m */,
+				CB6A220E1A74B4C10087546F /* BookDirectoryTableViewController.h */,
+				CB6A220F1A74B4C10087546F /* BookDirectoryTableViewController.m */,
 			);
 			path = BookStore;
 			sourceTree = "<group>";
@@ -667,6 +690,8 @@
 				CB6A21C61A6FFA680087546F /* BookInfoGroup.m */,
 				CB6A21C81A6FFAEF0087546F /* BookInfo.h */,
 				CB6A21C91A6FFAEF0087546F /* BookInfo.m */,
+				CB6A22081A749CE50087546F /* BookDetailInfo.h */,
+				CB6A22091A749CE50087546F /* BookDetailInfo.m */,
 			);
 			path = Book;
 			sourceTree = "<group>";
@@ -864,9 +889,11 @@
 				1AD6455F3CEB60EEE78C0C77 /* UserHelper.m in Sources */,
 				1AD649CD0AF8969FFF4B9641 /* ILogin.m in Sources */,
 				CB6A21D41A711CEC0087546F /* BookStoreTableViewCellStyle3.m in Sources */,
+				CB6A220A1A749CE50087546F /* BookDetailInfo.m in Sources */,
 				CB6A21F61A73D4BD0087546F /* BookDetailInfoTableViewCellStyle2.m in Sources */,
 				CB6A21F91A73D6430087546F /* BookInfoViewStyle3.m in Sources */,
 				EA89883D1A7285BB00877E63 /* AppInfoViewStyle3.m in Sources */,
+				CB6A220D1A74B48E0087546F /* BookSearchResultTableViewController.m in Sources */,
 				EA88BFB11A7497B0004885A0 /* ADInfo.m in Sources */,
 				CB6A21D71A712FBD0087546F /* BookStoreTableViewCellStyle4.m in Sources */,
 				CB6A21BD1A6FF2AA0087546F /* BookStoreViewController.m in Sources */,
@@ -883,16 +910,19 @@
 				CB6A21EB1A73C57C0087546F /* BookDetailInfoTableViewController.m in Sources */,
 				EA13DDDF1A6FA0D0004AB7E6 /* AppTableViewCellStyle3.m in Sources */,
 				EAA7738B1A72241B00EBD512 /* AppTableViewCellStyle4.m in Sources */,
+				CB6A22161A74C09E0087546F /* BookSearchResultTableViewCellStyle2.m in Sources */,
 				EA8D74991A6E9DC2004C17C2 /* AppTableViewCellStyle2.m in Sources */,
 				EA8988311A726EAA00877E63 /* AppInfoViewStyle1.m in Sources */,
 				EA8D74931A6E7CF9004C17C2 /* AppTableViewCellStyle1.m in Sources */,
 				1AD64565F18F3ED26CC48D25 /* User.m in Sources */,
 				EA3D07721A6CD88A00189765 /* LoginTableViewCell.m in Sources */,
+				CB6A22131A74BE6B0087546F /* BookSearchResultTableViewCellStyle1.m in Sources */,
 				EA54A1171A6E0E6100322C42 /* FoundViewController.m in Sources */,
 				CB6A21C01A6FF5600087546F /* BookStoreTableViewCellStyle1.m in Sources */,
 				CB6A22011A73DC440087546F /* BookDetailInfoTableViewCellStyle4.m in Sources */,
 				1AD64625B4F594E287714029 /* QQLogin.m in Sources */,
 				EA13DDD41A6F8DF9004AB7E6 /* AppDetailsViewController.m in Sources */,
+				CB6A22101A74B4C10087546F /* BookDirectoryTableViewController.m in Sources */,
 				1AD6419EC3E465BEDDED654B /* WXLogin.m in Sources */,
 				1AD64DA54158CF05FAE8F2A6 /* WBLogin.m in Sources */,
 				CB6A21E61A72B3B80087546F /* FavRateViewStyle.m in Sources */,
