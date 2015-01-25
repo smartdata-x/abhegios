@@ -7,10 +7,10 @@
 //
 
 #import "BookDirectoryTableViewController.h"
-#import "BookInfoGroup.h"
+#import "GroupInfo.h"
 
 @interface BookDirectoryTableViewController ()
-@property (nonatomic, retain) BookInfoGroup *bookInfoGroup;
+@property (nonatomic, retain) GroupInfo *bookInfoGroup;
 @end
 
 @implementation BookDirectoryTableViewController
@@ -41,7 +41,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[_bookInfoGroup bookInfos] count];
+    return [[_bookInfoGroup entitys] count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -64,7 +64,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     OEZTableViewCell *viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDirectoryTableViewCellStyle1"];
-    [viewCell setData:[[_bookInfoGroup bookInfos] objectAtIndex:indexPath.row]];
+    [viewCell setData:[[_bookInfoGroup entitys] objectAtIndex:indexPath.row]];
     return viewCell;
 }
 

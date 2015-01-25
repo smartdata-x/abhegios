@@ -8,8 +8,7 @@
 
 #import "BookShelfViewController.h"
 #import "BookInfo.h"
-#import "BookInfoGroup.h"
-#import "BookStoreHome.h"
+#import "GroupInfo.h"
 #import "BookInfoViewStyle1.h"
 
 #define kMaxBookNumber 99
@@ -21,7 +20,7 @@
 
 @interface BookShelfViewController ()
 @property UIScrollView *bookShelfView;
-@property BookInfoGroup *bookInfoGroup;
+@property GroupInfo *bookInfoGroup;
 @end
 
 @implementation BookShelfViewController
@@ -34,7 +33,7 @@
 
 - (void)setData:(id)data {
     _bookInfoGroup = data;
-    NSUInteger count = [[_bookInfoGroup bookInfos] count];
+    NSUInteger count = [[_bookInfoGroup entitys] count];
     count = count > kMaxBookNumber ? kMaxBookNumber : count;
     float height = ceilf((float)count / kBookNumberPerRow) * kBookShelfCellHeight;
     height = height > CGRectGetHeight(_bookShelfView.frame) ? height : CGRectGetHeight(_bookShelfView.frame);
@@ -49,7 +48,7 @@
     for (int i=0; i<count; i++) {
         float x = i % 3;
         float y = i / 3;
-        BookInfo *bookinfo = [[_bookInfoGroup bookInfos] objectAtIndex:i];
+        BookInfo *bookinfo = [[_bookInfoGroup entitys] objectAtIndex:i];
         BookInfoViewStyle1 *bookitem = [BookInfoViewStyle1 loadFromNib];
         [bookitem setFrame:CGRectMake(x*kBookItemWidth, y*kBookShelfCellHeight, kBookItemWidth, kBookShelfCellHeight)];
         [bookitem setDataWithFormat:bookinfo Format:BookInfoViewStyle1Format2];

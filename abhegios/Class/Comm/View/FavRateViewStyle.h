@@ -9,13 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <OEZCommSDK/OEZCommSDK.h>
 #define kMinFavRate 0
-#define kMaxFavRate 10
+#define kMaxFavRate 5
 @interface FavRateViewStyle : OEZNibView
 @property (weak, nonatomic) IBOutlet UIImageView *rate0;
 @property (weak, nonatomic) IBOutlet UIImageView *rate1;
 @property (weak, nonatomic) IBOutlet UIImageView *rate2;
 @property (weak, nonatomic) IBOutlet UIImageView *rate3;
 @property (weak, nonatomic) IBOutlet UIImageView *rate4;
-- (void)setData:(NSUInteger)rate;
-- (void)setDataWithBgColor:(NSUInteger)rate Color:(UIColor *)color;
+- (void)setData:(float)rate;
 @end

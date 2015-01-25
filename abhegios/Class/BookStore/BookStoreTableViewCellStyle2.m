@@ -8,7 +8,7 @@
 
 #import "BookStoreTableViewCellStyle2.h"
 #import "BookInfo.h"
-#import "BookInfoGroup.h"
+#import "GroupInfo.h"
 
 @implementation BookStoreTableViewCellStyle2
 
@@ -24,8 +24,8 @@
 
 - (void)setData:(id)data {
     
-    BookInfoGroup *bookInfoGroup = data;
-    [super setData:[bookInfoGroup bookInfos]];
+    GroupInfo *bookInfoGroup = data;
+    [super setData:[bookInfoGroup entitys]];
     
     //[super setData:data];
 }

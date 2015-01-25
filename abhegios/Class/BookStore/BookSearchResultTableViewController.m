@@ -8,10 +8,10 @@
 
 #import "BookSearchResultTableViewController.h"
 #import "BookInfo.h"
-#import "BookInfoGroup.h"
+#import "GroupInfo.h"
 
 @interface BookSearchResultTableViewController ()
-@property (nonatomic, retain) BookInfoGroup *bookInfoGroup;
+@property (nonatomic, retain) GroupInfo *bookInfoGroup;
 @end
 
 @implementation BookSearchResultTableViewController
@@ -45,7 +45,7 @@
     if (section == BookSearchResultSectionHeader) {
         return 1;
     }
-    return MAX(0, [[_bookInfoGroup bookInfos] count]);
+    return MAX(0, [[_bookInfoGroup entitys] count]);
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -63,7 +63,7 @@
     }
     else {
         viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookSearchResultTableViewCellStyle2"];
-        [viewCell setData:[[_bookInfoGroup bookInfos] objectAtIndex:indexPath.row]];
+        [viewCell setData:[[_bookInfoGroup entitys] objectAtIndex:indexPath.row]];
     }
     return viewCell;
 }
