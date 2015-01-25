@@ -10,6 +10,8 @@
 #import "AppInfo.h"
 
 @interface BookInfo : BaseInfoMoreONS
-@property (nonatomic, copy) NSString *logo;
-@property NSUInteger favRate;
+@property (nonatomic, copy) NSString *pic;
+@property (nonatomic, copy) NSString *author;
+@property float star;
+@property NSInteger follow;
 @end

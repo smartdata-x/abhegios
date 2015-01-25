@@ -9,9 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <OEZCommSDK/OEZCommSDK.h>
 
+@protocol BookStoreTableViewCellStyle3Delegate <NSObject>
+- (void)cellItemClickedAtIndex:(NSInteger)index;
+@end
+
 @interface BookItemView : UIView
 @end
 
 @interface BookStoreTableViewCellStyle3 : OEZHScrollTableViewCell
-
+@property (nonatomic, assign) id <BookStoreTableViewCellStyle3Delegate> delegate;
 @end

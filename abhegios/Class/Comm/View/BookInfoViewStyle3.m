@@ -16,7 +16,7 @@
 }
 
 - (void)setData:(id)data {
-    [_logo setImage:[UIImage imageNamed:[(BookInfo *)data logo]]];
+    [_logo setImage:[UIImage imageNamed:[(BookInfo *)data pic]]];
     [_name setText:[data name]];
 }
 /*

@@ -22,14 +22,13 @@
     [_rate4 setHidden:NO];
 }
 
-- (void)setData:(NSUInteger)rate {
+- (void)setData:(float)rate {
     [self showAll];
-    
-    rate = MAX(kMinFavRate, rate);
-    rate = MIN(kMaxFavRate, rate);
-    BOOL hasHalf = rate % 2;
-    int fullStar = (int)rate / 2;
-    int hideStar = 5 - fullStar;
+    BOOL hasHalf = rate - (int)rate > 0.1;
+    int fullStar = (int)rate;
+    fullStar = MAX(kMinFavRate, fullStar);
+    fullStar = MIN(kMaxFavRate, fullStar);
+    int hideStar = kMaxFavRate - fullStar;
     
     switch (hideStar) {
         case 5:[_rate0 setHidden:YES];
@@ -39,11 +38,6 @@
         case 1:[_rate4 setHidden:YES];
         default: break;
     }
-}
-
-- (void)setDataWithBgColor:(NSUInteger)rate Color:(UIColor *)color {
-    [self setData:rate];
-    [self setBackgroundColor:color];
 }
 
 /*

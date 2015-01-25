@@ -8,7 +8,7 @@
 
 #import "BookStoreTableViewCellStyle4.h"
 #import "BookInfo.h"
-#import "BookInfoGroup.h"
+#import "GroupInfo.h"
 
 @implementation BookStoreTableViewCellStyle4
 
@@ -24,14 +24,14 @@
 
 - (void)setData:(id)data {
     [super setData:data];
-    BookInfoGroup *bookInfoGroup = data;
-    int count = [[bookInfoGroup bookInfos] count];
+    GroupInfo *bookInfoGroup = data;
+    int count = [[bookInfoGroup entitys] count];
     count = count >= 1 ? 1 : count;
     for (int i=0; i<count; i++) {
-        BookInfo *bookInfo = [[bookInfoGroup bookInfos] objectAtIndex:i];
+        BookInfo *bookInfo = [[bookInfoGroup entitys] objectAtIndex:i];
         [_name setText:bookInfo.name];
         [_summary setText:bookInfo.summary];
-        [_favRate setData:bookInfo.favRate];
+        [_favRate setData:bookInfo.star];
     }
 }
 

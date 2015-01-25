@@ -32,8 +32,6 @@
 		1AD64F3A04AFCBB948106908 /* AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64A85039C51E682F19BA9 /* AppInfo.m */; };
 		CB6A21BD1A6FF2AA0087546F /* BookStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21BC1A6FF2AA0087546F /* BookStoreViewController.m */; };
 		CB6A21C01A6FF5600087546F /* BookStoreTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21BF1A6FF5600087546F /* BookStoreTableViewCellStyle1.m */; };
-		CB6A21C41A6FFA4E0087546F /* BookStoreHome.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21C31A6FFA4E0087546F /* BookStoreHome.m */; };
-		CB6A21C71A6FFA680087546F /* BookInfoGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21C61A6FFA680087546F /* BookInfoGroup.m */; };
 		CB6A21CA1A6FFAEF0087546F /* BookInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21C91A6FFAEF0087546F /* BookInfo.m */; };
 		CB6A21CC1A6FFCC20087546F /* bookstorehome_test.json in Resources */ = {isa = PBXBuildFile; fileRef = CB6A21CB1A6FFCC20087546F /* bookstorehome_test.json */; };
 		CB6A21CE1A7007970087546F /* bookstorehome.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB6A21CD1A7007970087546F /* bookstorehome.plist */; };
@@ -175,10 +173,6 @@
 		CB6A21BC1A6FF2AA0087546F /* BookStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookStoreViewController.m; sourceTree = "<group>"; };
 		CB6A21BE1A6FF5600087546F /* BookStoreTableViewCellStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookStoreTableViewCellStyle1.h; sourceTree = "<group>"; };
 		CB6A21BF1A6FF5600087546F /* BookStoreTableViewCellStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookStoreTableViewCellStyle1.m; sourceTree = "<group>"; };
-		CB6A21C21A6FFA4E0087546F /* BookStoreHome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookStoreHome.h; sourceTree = "<group>"; };
-		CB6A21C31A6FFA4E0087546F /* BookStoreHome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookStoreHome.m; sourceTree = "<group>"; };
-		CB6A21C51A6FFA680087546F /* BookInfoGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookInfoGroup.h; sourceTree = "<group>"; };
-		CB6A21C61A6FFA680087546F /* BookInfoGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookInfoGroup.m; sourceTree = "<group>"; };
 		CB6A21C81A6FFAEF0087546F /* BookInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookInfo.h; sourceTree = "<group>"; };
 		CB6A21C91A6FFAEF0087546F /* BookInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookInfo.m; sourceTree = "<group>"; };
 		CB6A21CB1A6FFCC20087546F /* bookstorehome_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bookstorehome_test.json; sourceTree = "<group>"; };
@@ -695,10 +689,6 @@
 		CB6A21C11A6FFA110087546F /* Book */ = {
 			isa = PBXGroup;
 			children = (
-				CB6A21C21A6FFA4E0087546F /* BookStoreHome.h */,
-				CB6A21C31A6FFA4E0087546F /* BookStoreHome.m */,
-				CB6A21C51A6FFA680087546F /* BookInfoGroup.h */,
-				CB6A21C61A6FFA680087546F /* BookInfoGroup.m */,
 				CB6A21C81A6FFAEF0087546F /* BookInfo.h */,
 				CB6A21C91A6FFAEF0087546F /* BookInfo.m */,
 				CB6A22081A749CE50087546F /* BookDetailInfo.h */,
@@ -895,7 +885,6 @@
 				EA40430A1A73C0F800D904C5 /* AppDetailsTableViewCellStyle2.m in Sources */,
 				EA02913E1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.m in Sources */,
 				CB6A21F31A73CFE00087546F /* BookDetailInfoTableViewCellStyle1.m in Sources */,
-				CB6A21C71A6FFA680087546F /* BookInfoGroup.m in Sources */,
 				EA40430D1A73CF8B00D904C5 /* AppDetailsTableViewCellStyle4.m in Sources */,
 				EA88BFA51A748A68004885A0 /* BaseInfo.m in Sources */,
 				EA13DDD11A6F8D3A004AB7E6 /* AppDetailsInfo.m in Sources */,
@@ -915,7 +904,6 @@
 				CB6A21CA1A6FFAEF0087546F /* BookInfo.m in Sources */,
 				EA13DDDC1A6F961E004AB7E6 /* MyNavigationViewController.m in Sources */,
 				EA88BFAA1A748C2A004885A0 /* MusicInfo.m in Sources */,
-				CB6A21C41A6FFA4E0087546F /* BookStoreHome.m in Sources */,
 				EA88BFB41A74CB76004885A0 /* RecommendViewController.m in Sources */,
 				EA13DDCE1A6F8A35004AB7E6 /* NSString+NSStringCategory.m in Sources */,
 				1AD64903B17F5D12DC09D1BB /* ThirdLoginInfo.m in Sources */,

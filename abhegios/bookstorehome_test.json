@@ -1,225 +1,141 @@
 {
-"advert": [
-{
-"id": 1,
-"name": "广告1",
-"type": 1,
-"order": 1,
-"logo": "http://pic.desgin.miglab.com/abheg/store/app/advert/3.png",
-"favRate": 5,
-},
-{
-"id": 2,
-"name": "广告2",
-"type": 1,
-"order": 2,
-"logo": "http://pic.desgin.miglab.com/abheg/store/app/advert/3.png",
-"favRate": 5,
-},
-{
-"id": 3,
-"name": "广告3",
-"type": 1,
-"order": 3,
-"logo": "http://pic.desgin.miglab.com/abheg/store/app/advert/3.png",
-"favRate": 5,
-}
-],
-"important": [
-{
-"id": 4,
-"logo": "http://pic.desgin.miglab.com/abheg/store/app/products/5/logo.jpg",
-"name": "城市主题阅读",
-"type": 1,
-"summary": "1099 关注",
-"order": 1,
-"favRate": 3,
-},
-{
-"id": 5,
-"logo": "http://pic.desgin.miglab.com/abheg/store/app/products/5/logo.jpg",
-"name": "理性小说集",
-"type": 1,
-"summary": "221 关注",
-"order": 2,
-"favRate": 3,
-},
-{
-"id": 6,
-"logo": "http://pic.desgin.miglab.com/abheg/store/app/products/5/logo.jpg",
-"name": "人生一次路过",
-"type": 1,
-"summary": "334 关注",
-"order": 3,
-"favRate": 3,
-}
-],
-"hot": [
-{
-"id": 7,
-"logo": "http://pic.desgin.miglab.com/abheg/store/app/products/14/logo.jpg",
-"name": "耶路撒冷三千年",
-"type": 1,
-"summary": "你会忍不住爱上这座城市，它是人类的瑰宝。而这本书值得你一读再读。--比尔.克林顿（美国前总统）",
-"order": 1,
-"favRate": 0,
-},
-{
-"id": 8,
-"logo": "http://pic.desgin.miglab.com/abheg/store/app/products/15/logo.jpg",
-"name": "再烂的电影也能卖出去",
-"type": 1,
-"summary": "作为一个收入颇丰的独立电影人，罗伊德.考夫曼拍出了自己的独立电影，然后还将其变成百老汇的音乐剧、电视儿童动画、漫威漫画",
-"order": 2,
-"favRate": 1,
-},
-        {
-        "id": 11,
-        "logo": "http://pic.desgin.miglab.com/abheg/store/app/products/15/logo.jpg",
-        "name": "再烂的电影也能卖出去",
-        "type": 1,
-        "summary": "作为一个收入颇丰的独立电影人，罗伊德.考夫曼拍出了自己的独立电影，然后还将其变成百老汇的音乐剧、电视儿童动画、漫威漫画",
-        "order": 5,
-        "favRate": 5,
-        },
-        {
-        "id": 11,
-        "logo": "http://pic.desgin.miglab.com/abheg/store/app/products/15/logo.jpg",
-        "name": "再烂的电影也能卖出去",
-        "type": 1,
-        "summary": "作为一个收入颇丰的独立电影人，罗伊德.考夫曼拍出了自己的独立电影，然后还将其变成百老汇的音乐剧、电视儿童动画、漫威漫画",
-        "order": 5,
-        "favRate": 6,
-        },
-        {
-        "id": 11,
-        "logo": "http://pic.desgin.miglab.com/abheg/store/app/products/15/logo.jpg",
-        "name": "再烂的电影也能卖出去",
-        "type": 1,
-        "summary": "作为一个收入颇丰的独立电影人，罗伊德.考夫曼拍出了自己的独立电影，然后还将其变成百老汇的音乐剧、电视儿童动画、漫威漫画",
-        "order": 5,
-        "favRate": 7,
-        },
-        {
-        "id": 11,
-        "logo": "http://pic.desgin.miglab.com/abheg/store/app/products/15/logo.jpg",
-        "name": "再烂的电影也能卖出去",
-        "type": 1,
-        "summary": "作为一个收入颇丰的独立电影人，罗伊德.考夫曼拍出了自己的独立电影，然后还将其变成百老汇的音乐剧、电视儿童动画、漫威漫画",
-        "order": 5,
-        "favRate": 8,
-        },
-        {
-        "id": 11,
-        "logo": "http://pic.desgin.miglab.com/abheg/store/app/products/15/logo.jpg",
-        "name": "再烂的电影也能卖出去",
-        "type": 1,
-        "summary": "作为一个收入颇丰的独立电影人，罗伊德.考夫曼拍出了自己的独立电影，然后还将其变成百老汇的音乐剧、电视儿童动画、漫威漫画",
-        "order": 5,
-        "favRate": 9,
-        },
-        {
-        "id": 11,
-        "logo": "http://pic.desgin.miglab.com/abheg/store/app/products/15/logo.jpg",
-        "name": "再烂的电影也能卖出去",
-        "type": 1,
-        "summary": "作为一个收入颇丰的独立电影人，罗伊德.考夫曼拍出了自己的独立电影，然后还将其变成百老汇的音乐剧、电视儿童动画、漫威漫画",
-        "order": 5,
-        "favRate": 10,
-        },
-],
-"boys": [
-{
-"id": 7,
-"logo": "http://pic.desgin.miglab.com/abheg/store/app/products/14/logo.jpg",
-"name": "耶路撒冷三千年",
-"type": 1,
-"summary": "你会忍不住爱上这座城市，它是人类的瑰宝。而这本书值得你一读再读。--比尔.克林顿（美国前总统）",
-"order": 1,
-"favRate": 2,
-},
-{
-"id": 8,
-"logo": "http://pic.desgin.miglab.com/abheg/store/app/products/15/logo.jpg",
-"name": "再烂的电影也能卖出去",
-"type": 1,
-"summary": "作为一个收入颇丰的独立电影人，罗伊德.考夫曼拍出了自己的独立电影，然后还将其变成百老汇的音乐剧、电视儿童动画、漫威漫画",
-"order": 2,
-"favRate": 2,
-},
-{
-"id": 9,
-"logo": "http://pic.desgin.miglab.com/abheg/store/app/products/15/logo.jpg",
-"name": "再烂的电影也能卖出去",
-"type": 1,
-"summary": "作为一个收入颇丰的独立电影人，罗伊德.考夫曼拍出了自己的独立电影，然后还将其变成百老汇的音乐剧、电视儿童动画、漫威漫画",
-"order": 3,
-"favRate": 2,
-},
-{
-"id": 10,
-"logo": "http://pic.desgin.miglab.com/abheg/store/app/products/15/logo.jpg",
-"name": "再烂的电影也能卖出去",
-"type": 1,
-"summary": "作为一个收入颇丰的独立电影人，罗伊德.考夫曼拍出了自己的独立电影，然后还将其变成百老汇的音乐剧、电视儿童动画、漫威漫画",
-"order": 4,
-"favRate": 2,
-},
-{
-"id": 11,
-"logo": "http://pic.desgin.miglab.com/abheg/store/app/products/15/logo.jpg",
-"name": "再烂的电影也能卖出去",
-"type": 1,
-"summary": "作为一个收入颇丰的独立电影人，罗伊德.考夫曼拍出了自己的独立电影，然后还将其变成百老汇的音乐剧、电视儿童动画、漫威漫画",
-"order": 5,
-"favRate": 2,
-},
-],
-"girls": [
-{
-"id": 7,
-"logo": "http://pic.desgin.miglab.com/abheg/store/app/products/14/logo.jpg",
-"name": "耶路撒冷三千年",
-"type": 1,
-"summary": "你会忍不住爱上这座城市，它是人类的瑰宝。而这本书值得你一读再读。--比尔.克林顿（美国前总统）",
-"order": 1,
-"favRate": 2,
-},
-{
-"id": 8,
-"logo": "http://pic.desgin.miglab.com/abheg/store/app/products/15/logo.jpg",
-"name": "再烂的电影也能卖出去",
-"type": 1,
-"summary": "作为一个收入颇丰的独立电影人，罗伊德.考夫曼拍出了自己的独立电影，然后还将其变成百老汇的音乐剧、电视儿童动画、漫威漫画",
-"order": 2,
-"favRate": 2,
-},
-{
-"id": 9,
-"logo": "http://pic.desgin.miglab.com/abheg/store/app/products/15/logo.jpg",
-"name": "再烂的电影也能卖出去",
-"type": 1,
-"summary": "作为一个收入颇丰的独立电影人，罗伊德.考夫曼拍出了自己的独立电影，然后还将其变成百老汇的音乐剧、电视儿童动画、漫威漫画",
-"order": 3,
-"favRate": 2,
-},
-{
-"id": 10,
-"logo": "http://pic.desgin.miglab.com/abheg/store/app/products/15/logo.jpg",
-"name": "再烂的电影也能卖出去",
-"type": 1,
-"summary": "作为一个收入颇丰的独立电影人，罗伊德.考夫曼拍出了自己的独立电影，然后还将其变成百老汇的音乐剧、电视儿童动画、漫威漫画",
-"order": 4,
-"favRate": 2,
-},
-{
-"id": 11,
-"logo": "http://pic.desgin.miglab.com/abheg/store/app/products/15/logo.jpg",
-"name": "再烂的电影也能卖出去",
-"type": 1,
-"summary": "作为一个收入颇丰的独立电影人，罗伊德.考夫曼拍出了自己的独立电影，然后还将其变成百老汇的音乐剧、电视儿童动画、漫威漫画",
-"order": 5,
-"favRate": 2,
-},
-],
+        "advert": [
+                   {
+                   "id": 11,
+                   "pic": "http://tp1.sinaimg.cn/1215434384/50/5693231554/1",
+                   "type": 1
+                   },
+                   {
+                   "id": 12,
+                   "pic": "http://tp1.sinaimg.cn/1215434384/50/5693231554/1",
+                   "type": 2
+                   },
+                   {
+                   "id": 13,
+                   "pic": "http://tp1.sinaimg.cn/1215434384/50/5693231554/1",
+                   "type": 3
+                   }
+                   ],
+        "topics": [
+                   {
+                   "id": 11,
+                   "name": "城市主题阅读",
+                   "pic": "http://tp1.sinaimg.cn/1215434384/50/5693231554/1",
+                   "follow": 12
+                   },
+                   {
+                   "id": 11,
+                   "name": "城市主题阅读",
+                   "pic": "http://tp1.sinaimg.cn/1215434384/50/5693231554/1",
+                   "follow": 12
+                   },
+                   {
+                   "id": 11,
+                   "name": "城市主题阅读",
+                   "pic": "http://tp1.sinaimg.cn/1215434384/50/5693231554/1",
+                   "follow": 12
+                   }
+                   ],
+        "hot": [
+                {
+                "id": 11,
+                "name": "金刚经",
+                "star": 1.5,
+                "pic": "http://tp1.sinaimg.cn/1215434384/50/5693231554/1",
+                "summary": "《金刚经》是大乘佛教的重要经典。全称《能断金刚般若波罗蜜经》",
+                "type": 5
+                },
+                {
+                "id": 11,
+                "name": "金刚经",
+                "star": 1.5,
+                "pic": "http://tp1.sinaimg.cn/1215434384/50/5693231554/1",
+                "summary": "《金刚经》是大乘佛教的重要经典。全称《能断金刚般若波罗蜜经》",
+                "type": 5
+                },
+                {
+                "id": 11,
+                "name": "金刚经",
+                "star": 1.5,
+                "pic": "http://tp1.sinaimg.cn/1215434384/50/5693231554/1",
+                "summary": "《金刚经》是大乘佛教的重要经典。全称《能断金刚般若波罗蜜经》",
+                "type": 5
+                }
+                ],
+        "boys": [
+                 {
+                 "id": 11,
+                 "name": "金刚经",
+                 "author": "这么远那么近",
+                 "star": 1.5,
+                 "pic": "http://tp1.sinaimg.cn/1215434384/50/5693231554/1",
+                 "type": 5,
+                 "order": 1
+                 },
+                 {
+                 "id": 11,
+                 "name": "金刚经",
+                 "author": "这么远那么近",
+                 "star": 1.5,
+                 "pic": "http://tp1.sinaimg.cn/1215434384/50/5693231554/1",
+                 "type": 5,
+                 "order": 2
+                 },
+                 {
+                 "id": 11,
+                 "name": "金刚经",
+                 "author": "这么远那么近",
+                 "star": 1.5,
+                 "pic": "http://tp1.sinaimg.cn/1215434384/50/5693231554/1",
+                 "type": 5,
+                 "order": 3
+                 },
+                 {
+                 "id": 11,
+                 "name": "金刚经",
+                 "author": "这么远那么近",
+                 "star": 1.5,
+                 "pic": "http://tp1.sinaimg.cn/1215434384/50/5693231554/1",
+                 "type": 5,
+                 "order": 4
+                 }
+                 ],
+        "girls": [
+                  {
+                  "id": 11,
+                  "name": "金刚经",
+                  "author": "这么远那么近",
+                  "star": 1.5,
+                  "pic": "http://tp1.sinaimg.cn/1215434384/50/5693231554/1",
+                  "type": 5,
+                  "order": 1
+                  },
+                  {
+                  "id": 11,
+                  "name": "金刚经",
+                  "author": "这么远那么近",
+                  "star": 1.5,
+                  "pic": "http://tp1.sinaimg.cn/1215434384/50/5693231554/1",
+                  "type": 5,
+                  "order": 2
+                  },
+                  {
+                  "id": 11,
+                  "name": "金刚经",
+                  "author": "这么远那么近",
+                  "star": 1.5,
+                  "pic": "http://tp1.sinaimg.cn/1215434384/50/5693231554/1",
+                  "type": 5,
+                  "order": 3
+                  },
+                  {
+                  "id": 11,
+                  "name": "金刚经",
+                  "author": "这么远那么近",
+                  "star": 1.5,
+                  "pic": "http://tp1.sinaimg.cn/1215434384/50/5693231554/1",
+                  "type": 5,
+                  "order": 4
+                  }
+        ]
 }

@@ -18,7 +18,7 @@
 - (void)setData:(id)data {
     [_name setText:[data name]];
     [_summary setText:[(BookInfo *)data summary]];
-    [_favRate setData:[(BookInfo *)data favRate]];
+    [_favRate setData:[(BookInfo *)data star]];
 }
 
 /*

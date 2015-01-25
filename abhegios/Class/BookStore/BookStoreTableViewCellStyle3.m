@@ -8,8 +8,8 @@
 
 #import "BookStoreTableViewCellStyle3.h"
 #import "BookInfo.h"
-#import "BookInfoGroup.h"
 #import "BookInfoViewStyle1.h"
+#import "GroupInfo.h"
 
 #define kMaxBookItemView 3
 #define kBookItemWidth 108
@@ -32,29 +32,32 @@
     rect.origin.x = x;
     [viewItem setFrame:rect];
     [viewItem setTag:[[self subviews] count]];
+    [viewItem.logoButton setTag:[[self subviews] count]];
+    [viewItem.logoButton addTarget:self action:@selector(itemClickedAtIndex:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:viewItem];
 }
 
 - (void)setData:(id)data {
     [super setData:data];
-    BookInfoGroup *bookInfoGroup = data;
-    NSUInteger count = [[bookInfoGroup bookInfos] count];
+    GroupInfo *bookInfoGroup = data;
+    NSUInteger count = [[bookInfoGroup entitys] count];
     count = count > kMaxBookItemView ? kMaxBookItemView : count;
     [self setContentWidth:kBookItemWidth * count];
     NSUInteger i = 0;
     for (; i < count; ++i)
     {
-        [[[self subviews] objectAtIndex:i] setData:[[bookInfoGroup bookInfos] objectAtIndex:i]];
+        [[[self subviews] objectAtIndex:i] setData:[[bookInfoGroup entitys] objectAtIndex:i]];
     }
     for (; i < kMaxBookItemView; ++i) {
         [[[self subviews] objectAtIndex:i] setHidden:YES];
     }
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (IBAction)itemClickedAtIndex:(id)sender {
+    if ([_delegate respondsToSelector:@selector(cellItemClickedAtIndex:)]) {
+        UIButton *btn = (UIButton *)sender;
+        [_delegate cellItemClickedAtIndex:btn.tag];
+    }
 }
 
 @end
