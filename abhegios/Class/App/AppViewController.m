@@ -79,7 +79,6 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    //NSLog(@"%@ %@",@(indexPath.section),@(indexPath.row));
     GroupInfo *group = [_appStoreHomeGroups objectAtIndex:[indexPath section]];
     OEZTableViewCell* viewCell = nil;
     if ( [self isSingleLine:group])

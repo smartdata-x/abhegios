@@ -7,7 +7,7 @@
 //
 
 #import "AppInfoViewStyle1.h"
-#import "AppInfo.h"
+#import "BaseInfo.h"
 @implementation AppInfoViewStyle1
 
 - (void)awakeFromNib
@@ -24,8 +24,8 @@
 -(void) setData:(id)data
 {
     [super setData:data];
-    [_summary setText:[(AppInfo*)data summary]];
-    [_down setText:[NSString stringWithFormat:@"%@",[@([(AppInfo*)data down]) stringValue]]];
+    [_summary setText:[data summary]];
+    //[_down setText:[NSString stringWithFormat:@"%@",[@([(AppInfo*)data down]) stringValue]]];
 }
 
 @end
