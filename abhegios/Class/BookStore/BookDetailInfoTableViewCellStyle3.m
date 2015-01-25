@@ -1,16 +1,15 @@
 //
-//  BookStoreTableViewCellStyle1.m
+//  BookDetailInfoTableViewCellStyle3.m
 //  abhegios
 //
-//  Created by Archer_LJ on 15/1/21.
+//  Created by Archer_LJ on 15/1/24.
 //  Copyright (c) 2015年 180. All rights reserved.
 //
 
-#import "BookStoreTableViewCellStyle1.h"
-#import "bookInfo.h"
-#import "FavRateViewStyle.h"
+#import "BookDetailInfoTableViewCellStyle3.h"
+#import "BookInfo.h"
 
-@implementation BookStoreTableViewCellStyle1
+@implementation BookDetailInfoTableViewCellStyle3
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -24,7 +23,10 @@
 
 - (void)setData:(id)data {
     [super setData:data];
-    [_bookInfoView setData:data];
+    BookInfo *bookinfo = [[BookInfo alloc] init];
+    bookinfo.logo = @"bookmark.png";
+    bookinfo.name = @"共22章";
+    [_allChapter setData:bookinfo];
 }
 
 @end

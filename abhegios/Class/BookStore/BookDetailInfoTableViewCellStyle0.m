@@ -1,16 +1,14 @@
 //
-//  BookStoreTableViewCellStyle1.m
+//  BookDetailInfoTableViewCellStyle0.m
 //  abhegios
 //
-//  Created by Archer_LJ on 15/1/21.
+//  Created by Archer_LJ on 15/1/24.
 //  Copyright (c) 2015年 180. All rights reserved.
 //
 
-#import "BookStoreTableViewCellStyle1.h"
-#import "bookInfo.h"
-#import "FavRateViewStyle.h"
+#import "BookDetailInfoTableViewCellStyle0.h"
 
-@implementation BookStoreTableViewCellStyle1
+@implementation BookDetailInfoTableViewCellStyle0
 
 - (void)awakeFromNib {
     [super awakeFromNib];
