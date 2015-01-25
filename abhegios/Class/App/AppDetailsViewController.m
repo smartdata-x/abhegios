@@ -89,7 +89,7 @@ typedef NS_ENUM(NSInteger, AppDetailsTableViewCellStyle) {
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
         return cell;
     }
-    return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCellStyleDefault"];
+    return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"AppDetailsTableViewCellStyleNone"];
 }
 
 
