@@ -27,12 +27,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self addSearchBarItem];
     [self testData];
-    
 }
 
 - (void)testData {
     _bookStoreHomeGroups = [GroupInfo initWithsConfigAndDataJsonFile:@"bookstorehome" jsonName:@"bookstorehome_test" entityClass:[BookInfo class]];
+}
+
+- (void)addSearchBarItem {
+    // 右按钮
+    UIButton *rightButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 20, 38, 44)];
+    [rightButton setBackgroundImage:[UIImage imageNamed:@"book_shade.png"] forState:UIControlStateNormal];
+    [rightButton setTitle:@"搜索" forState:UIControlStateNormal];
+    [rightButton addTarget:self action:@selector(gotoBookSearchView:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -115,6 +124,8 @@
             else {
                 viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookStoreTableViewCellStyle3"];
                 [viewCell setData:group];
+                BookStoreTableViewCellStyle3 *style = (BookStoreTableViewCellStyle3 *)viewCell;
+                style.delegate = self;
             }
         }
         else {
@@ -126,54 +137,53 @@
         viewCell = [tableView dequeueReusableCellWithIdentifier:bookCellStyle];
         [viewCell setData:[[group entitys] objectAtIndex:indexPath.row]];
     }
+    if ([group style] == 3) {
+        BookStoreTableViewCellStyle3 *style = (BookStoreTableViewCellStyle3 *)viewCell;
+        style.delegate = self;
+    }
     return viewCell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 2) {
-        if (indexPath.row == 0) {
-            [self.navigationController pushViewControllerWithIdentifier:@"BookReaderViewController" animated:YES];
-        }
-        else if (indexPath.row == 1) {
-            GroupInfo *group = [_bookStoreHomeGroups objectAtIndex:indexPath.section];
-            BookInfo *bookInfo = [[group entitys] objectAtIndex:0];
-            BookDetailInfo *bookdetail = [[BookDetailInfo alloc] init];
-            bookdetail.name = bookInfo.name;
-            bookdetail.summary = bookInfo.summary;
-            bookdetail.pic = bookInfo.pic;
-            bookdetail.star = bookInfo.star;
-            bookdetail.introduction = @"《金刚经》是大乘佛教的重要经典。全称《能断金刚版若波罗蜜经》：以能断金刚的智慧到彼岸。后秦鸠摩罗什翻译《金刚经》的法本最早，文字流畅，简明扼要，流传最广，是人们常用的译本";
-            bookdetail.labels = [[NSArray alloc] initWithObjects:@"佛经", @"讲义", @"教理", @"阅读", nil];
-            [self.navigationController pushViewControllerWithIdentifier:@"BookDetailInfoTableViewController" completion:^(UIViewController *viewController) {
-                BookDetailInfoTableViewController *bookDetailInfoView = (BookDetailInfoTableViewController *)viewController;
-                [bookDetailInfoView setData:bookdetail];
-            } animated:YES];
-        }
-        else if (indexPath.row == 2) {
-            GroupInfo *group = [_bookStoreHomeGroups objectAtIndex:indexPath.section];
-            [self.navigationController pushViewControllerWithIdentifier:@"BookShelfViewController" completion:^(UIViewController *viewController) {
-                BookShelfViewController *bookShelfView = (BookShelfViewController *)viewController;
-                [bookShelfView setData:group];
-            } animated:YES];
-        }
-        else if (indexPath.row == 3) {
-            [self.navigationController pushViewControllerWithIdentifier:@"BookSearchResultTableViewController" completion:^(UIViewController *viewController) {
-                BookSearchResultTableViewController *bookSearchResultView = (BookSearchResultTableViewController *)viewController;
-                [bookSearchResultView setData:[_bookStoreHomeGroups objectAtIndex:indexPath.section]];
-            } animated:YES];
-        }
-        else if (indexPath.row == 4) {
-            [self.navigationController pushViewControllerWithIdentifier:@"BookDirectoryTableViewController" completion:^(UIViewController *viewController) {
-                BookDirectoryTableViewController *bookDirectoryView = (BookDirectoryTableViewController *)viewController;
-                [bookDirectoryView setData:[_bookStoreHomeGroups objectAtIndex:indexPath.section]];
-            } animated:YES];
-        }
+    int section = indexPath.section;
+    if (section == 0) {
     }
-    else if (indexPath.section == 3) {
+    else if (section == 1) {
     }
-    else {
+    else if (section == 2 || section == 3 || section == 4) {
+        [self gotoBookDetailView:nil];
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (void)cellItemClickedAtIndex:(NSInteger)index {
+    [self.navigationController pushViewControllerWithIdentifier:@"BookSearchResultTableViewController" completion:^(UIViewController *viewController) {
+        BookSearchResultTableViewController *bookSearchResultView = (BookSearchResultTableViewController *)viewController;
+        [bookSearchResultView setData:[_bookStoreHomeGroups objectAtIndex:1]];
+    } animated:YES];
+}
+
+- (IBAction)gotoBookSearchView:(id)sender {
+    [self.navigationController pushViewControllerWithIdentifier:@"BookDirectoryTableViewController" completion:^(UIViewController *viewController) {
+        BookDirectoryTableViewController *bookDirectoryView = (BookDirectoryTableViewController *)viewController;
+        [bookDirectoryView setData:[_bookStoreHomeGroups objectAtIndex:3]];
+    } animated:YES];
+}
+
+- (IBAction)gotoBookDetailView:(id)sender {
+    GroupInfo *group = [_bookStoreHomeGroups objectAtIndex:2];
+    BookInfo *bookInfo = [[group entitys] objectAtIndex:0];
+    BookDetailInfo *bookdetail = [[BookDetailInfo alloc] init];
+    bookdetail.name = bookInfo.name;
+    bookdetail.summary = bookInfo.summary;
+    bookdetail.pic = bookInfo.pic;
+    bookdetail.star = bookInfo.star;
+    bookdetail.introduction = @"《金刚经》是大乘佛教的重要经典。全称《能断金刚版若波罗蜜经》：以能断金刚的智慧到彼岸。后秦鸠摩罗什翻译《金刚经》的法本最早，文字流畅，简明扼要，流传最广，是人们常用的译本";
+    bookdetail.labels = [[NSArray alloc] initWithObjects:@"佛经", @"讲义", @"教理", @"阅读", nil];
+    [self.navigationController pushViewControllerWithIdentifier:@"BookDetailInfoTableViewController" completion:^(UIViewController *viewController) {
+        BookDetailInfoTableViewController *bookDetailInfoView = (BookDetailInfoTableViewController *)viewController;
+        [bookDetailInfoView setData:bookdetail];
+    } animated:YES];
 }
 
 @end

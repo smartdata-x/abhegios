@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookInfoViewStyle1">
             <connections>
                 <outlet property="logo" destination="O7I-l3-fR7" id="JAb-rh-pAR"/>
+                <outlet property="logoButton" destination="O7I-l3-fR7" id="1Du-Er-6he"/>
                 <outlet property="name" destination="xgk-xI-Du6" id="Cg7-Gn-7E5"/>
                 <outlet property="summary" destination="BhC-qj-p9b" id="6ph-Do-wM9"/>
             </connections>
@@ -37,7 +38,7 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>

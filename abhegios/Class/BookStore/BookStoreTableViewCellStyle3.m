@@ -32,6 +32,8 @@
     rect.origin.x = x;
     [viewItem setFrame:rect];
     [viewItem setTag:[[self subviews] count]];
+    [viewItem.logoButton setTag:[[self subviews] count]];
+    [viewItem.logoButton addTarget:self action:@selector(itemClickedAtIndex:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:viewItem];
 }
 
@@ -51,10 +53,11 @@
     }
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (IBAction)itemClickedAtIndex:(id)sender {
+    if ([_delegate respondsToSelector:@selector(cellItemClickedAtIndex:)]) {
+        UIButton *btn = (UIButton *)sender;
+        [_delegate cellItemClickedAtIndex:btn.tag];
+    }
 }
 
 @end

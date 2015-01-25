@@ -19,26 +19,29 @@
 #define kBookItemWidth 108
 
 @interface BookShelfViewController ()
-@property UIScrollView *bookShelfView;
-@property GroupInfo *bookInfoGroup;
+{
+    NSArray *_bookStoreHomeGroups;
+    UIScrollView *bookShelfView;
+}
 @end
 
 @implementation BookShelfViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _bookShelfView = [[UIScrollView alloc] initWithFrame:self.view.frame];
-    [self.view addSubview:_bookShelfView];
+    bookShelfView = [[UIScrollView alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:bookShelfView];
+    [self testData];
 }
 
-- (void)setData:(id)data {
-    _bookInfoGroup = data;
-    NSUInteger count = [[_bookInfoGroup entitys] count];
+- (void)testData {
+    _bookStoreHomeGroups = [GroupInfo initWithsConfigAndDataJsonFile:@"bookstorehome" jsonName:@"bookstorehome_test" entityClass:[BookInfo class]];
+    NSUInteger count = [[[_bookStoreHomeGroups objectAtIndex:1] entitys] count];
     count = count > kMaxBookNumber ? kMaxBookNumber : count;
     float height = ceilf((float)count / kBookNumberPerRow) * kBookShelfCellHeight;
-    height = height > CGRectGetHeight(_bookShelfView.frame) ? height : CGRectGetHeight(_bookShelfView.frame);
+    height = height > CGRectGetHeight(bookShelfView.frame) ? height : CGRectGetHeight(bookShelfView.frame);
     CGSize size = CGSizeMake(CGRectGetWidth(self.view.frame), height);
-    [_bookShelfView setContentSize:size];
+    [bookShelfView setContentSize:size];
     
     [self addViewItem:count];
     [self addShelfGapper:ceilf((float)count / kBookNumberPerRow)];
@@ -48,20 +51,26 @@
     for (int i=0; i<count; i++) {
         float x = i % 3;
         float y = i / 3;
-        BookInfo *bookinfo = [[_bookInfoGroup entitys] objectAtIndex:i];
+        BookInfo *bookinfo = [[[_bookStoreHomeGroups objectAtIndex:1] entitys] objectAtIndex:i];
         BookInfoViewStyle1 *bookitem = [BookInfoViewStyle1 loadFromNib];
         [bookitem setFrame:CGRectMake(x*kBookItemWidth, y*kBookShelfCellHeight, kBookItemWidth, kBookShelfCellHeight)];
         [bookitem setDataWithFormat:bookinfo Format:BookInfoViewStyle1Format2];
-        [_bookShelfView addSubview:bookitem];
+        [bookitem.logoButton addTarget:self action:@selector(gotoBookReader:) forControlEvents:UIControlEventTouchUpInside];
+        [bookShelfView addSubview:bookitem];
     }
 }
 
 - (void)addShelfGapper:(NSUInteger)count {
     for (int i=0; i<count; i++) {
         UIImageView *bgImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"shelf.png"]];
-        bgImgView.frame = CGRectMake(0, kBookItemHeight + kBookShelfCellHeight * i, CGRectGetWidth(_bookShelfView.frame), kBookShelfGapperHeight);
-        [_bookShelfView addSubview:bgImgView];
+        bgImgView.frame = CGRectMake(0, kBookItemHeight + kBookShelfCellHeight * i, CGRectGetWidth(bookShelfView.frame), kBookShelfGapperHeight);
+        [bookShelfView addSubview:bgImgView];
     }
+}
+
+- (IBAction)gotoBookReader:(id)sender {
+    [self.navigationController pushViewControllerWithIdentifier:@"BookReaderViewController" completion:^(UIViewController *viewController) {
+    } animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

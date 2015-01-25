@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Glu-Zl-Ros">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Glu-Zl-Ros">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -361,7 +361,7 @@
         <!--书城-->
         <scene sceneID="fB3-UP-ywa">
             <objects>
-                <tableViewController storyboardIdentifier="BookStoreViewController" title="书籍" id="Pp0-0U-Kdk" userLabel="书城" customClass="BookStoreViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="BookStoreViewController" title="读书" id="Pp0-0U-Kdk" userLabel="书城" customClass="BookStoreViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="zea-Fd-Apd">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -470,14 +470,13 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3t7-hl-81L" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <barButtonItem image="bookmark" width="40" id="M19-V2-apA"/>
             </objects>
             <point key="canvasLocation" x="4017" y="50"/>
         </scene>
         <!--书架-->
         <scene sceneID="chd-w2-5Xy">
             <objects>
-                <viewController storyboardIdentifier="BookShelfViewController" id="pYb-4h-WyD" userLabel="书架" customClass="BookShelfViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BookShelfViewController" title="书架" id="pYb-4h-WyD" userLabel="书架" customClass="BookShelfViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rB9-Yo-3eJ"/>
                         <viewControllerLayoutGuide type="bottom" id="brh-Z2-TX4"/>
@@ -558,15 +557,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <tabBar key="tableFooterView" contentMode="scaleToFill" id="zD3-J3-My1">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <items>
-                                <tabBarItem systemItem="favorites" id="H2b-bN-mGu"/>
-                                <tabBarItem systemItem="more" id="elj-Ki-epP"/>
-                            </items>
-                        </tabBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookDetailInfoTableViewCellStyle0" rowHeight="132" id="Cu4-T0-IbN" customClass="BookDetailInfoTableViewCellStyle0">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -861,7 +851,6 @@
     <resources>
         <image name="app-icon-default" width="53" height="53"/>
         <image name="big_shade" width="277" height="112"/>
-        <image name="bookmark" width="14" height="14"/>
         <image name="found_ico" width="23" height="22"/>
         <image name="my_ico" width="23" height="22"/>
         <image name="recommend_ico" width="23" height="22"/>

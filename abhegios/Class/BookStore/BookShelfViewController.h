@@ -9,5 +9,4 @@
 #import <UIKit/UIKit.h>
 
 @interface BookShelfViewController : UIViewController
-- (void)setData:(id)data;
 @end
