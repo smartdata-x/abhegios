@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <OEZCommSDK/OEZCommSDK.h>
 #define kMinFavRate 0
 #define kMaxFavRate 10
 @interface FavRateViewStyle : OEZNibView

@@ -23,10 +23,12 @@
 -(OEZPageViewCell*)   pageView:(OEZPageView*) pageView viewForPageAtIndex:(NSInteger) pageIndex;
 @optional
 -(void )     pageView:(OEZPageView*) pageView didSelectPageAtIndex:(NSInteger) pageIndex;
+-(void )     pageView:(OEZPageView*) pageView didShowPageAtIndex:(NSInteger) pageIndex;
 @end
 @interface OEZPageView : UIView<UIScrollViewDelegate>
 @property (readonly) UIScrollView*  scrollView;
 @property(nonatomic,assign) id<OEZPageViewDelegate>     delegate;
 - (id)dequeueReusablePageViewWithIdentifier:(NSString *)identifier;
-- (void)reloadData; 
+- (void)reloadData;
+-(void) setPageIndex:(NSInteger) pageIndex;
 @end

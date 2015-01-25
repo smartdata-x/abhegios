@@ -14,8 +14,11 @@
 
 -(void) setData:(id)data
 {
-    [super setData:data];
-    [self.pageView reloadData];
+    if( self.data != data )
+    {
+        [super setData:data];
+        [self.pageView reloadData];
+    }
 }
 
 
@@ -24,11 +27,16 @@
     return [self.data count];
 }
 
--(void) pageView:(OEZPageView *)pageView didSelectPageAtIndex:(NSInteger)pageIndex
+-(void) pageView:(OEZPageView *)pageView didShowPageAtIndex:(NSInteger)pageIndex
 {
-    NSLog(@"didSelectRPageAtIndex %@",@(pageIndex));
+    NSLog(@"didShowPageAtIndex %@",@(pageIndex));
 }
 
+
+-(void) pageView:(OEZPageView *)pageView didSelectPageAtIndex:(NSInteger)pageIndex
+{
+    NSLog(@"didSelectPageAtIndex %@",@(pageIndex));
+}
 
 
 @end
