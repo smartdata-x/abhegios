@@ -13,9 +13,9 @@
 
 
 
--(OEZPageViewCell*) pageView:(OEZPageView *)pageView viewForPageAtIndex:(NSInteger)pageIndex
+-(OEZPageViewCell*) pageView:(OEZPageView *)pageView cellForPageAtIndex:(NSInteger)pageIndex
 {
-    OEZPageViewImageCell *cell = [pageView dequeueReusablePageViewWithIdentifier:@"PageViewImageCell1"];
+    OEZPageViewImageCell *cell = [pageView dequeueReusableCellWithIdentifier:@"PageViewImageCell1"];
     return cell;
 }
 @end

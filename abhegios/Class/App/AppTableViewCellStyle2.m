@@ -12,9 +12,9 @@
 @implementation AppTableViewCellStyle2
 
 
--(OEZPageViewCell*) pageView:(OEZPageView *)pageView viewForPageAtIndex:(NSInteger)pageIndex
+-(OEZPageViewCell*) pageView:(OEZPageView *)pageView cellForPageAtIndex:(NSInteger)pageIndex
 {
-    OEZPageViewImageCell *cell = [pageView dequeueReusablePageViewWithIdentifier:@"PageViewImageCell"];
+    OEZPageViewImageCell *cell = [pageView dequeueReusableCellWithIdentifier:@"PageViewImageCell"];
     return cell;
 }
 

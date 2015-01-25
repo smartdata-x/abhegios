@@ -64,6 +64,7 @@ typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"heightForRowAtIndexPath %@ %@",@([indexPath section]),@([indexPath row]));
     GroupInfo *group = [_recommendHomeGroups objectAtIndex:indexPath.section];
     if ( group.style == RecommendTableViewCellStyleTwo) {
         return 49;

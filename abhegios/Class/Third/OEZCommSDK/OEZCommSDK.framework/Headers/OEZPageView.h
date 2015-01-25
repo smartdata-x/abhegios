@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface OEZPageViewCell : UIView
+@interface OEZPageViewCell : UIView<NSCoding>
 @end
 
 @interface OEZPageViewImageCell : OEZPageViewCell
@@ -20,7 +20,7 @@
 @protocol OEZPageViewDelegate <NSObject>
 @required
 -(NSInteger) numberPageCountPageView:(OEZPageView*) pageView;
--(OEZPageViewCell*)   pageView:(OEZPageView*) pageView viewForPageAtIndex:(NSInteger) pageIndex;
+-(OEZPageViewCell*)   pageView:(OEZPageView*) pageView cellForPageAtIndex:(NSInteger) pageIndex;
 @optional
 -(void )     pageView:(OEZPageView*) pageView didSelectPageAtIndex:(NSInteger) pageIndex;
 -(void )     pageView:(OEZPageView*) pageView didShowPageAtIndex:(NSInteger) pageIndex;
@@ -28,7 +28,7 @@
 @interface OEZPageView : UIView<UIScrollViewDelegate>
 @property (readonly) UIScrollView*  scrollView;
 @property(nonatomic,assign) id<OEZPageViewDelegate>     delegate;
-- (id)dequeueReusablePageViewWithIdentifier:(NSString *)identifier;
+- (id)dequeueReusableCellWithIdentifier:(NSString *)identifier;
 - (void)reloadData;
 -(void) setPageIndex:(NSInteger) pageIndex;
 @end
