@@ -7,9 +7,11 @@
 //
 
 #import "BookSearchResultTableViewController.h"
+#import "BookInfo.h"
+#import "BookInfoGroup.h"
 
 @interface BookSearchResultTableViewController ()
-
+@property (nonatomic, retain) BookInfoGroup *bookInfoGroup;
 @end
 
 @implementation BookSearchResultTableViewController
@@ -29,29 +31,42 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)setData:(id)data {
+    _bookInfoGroup = data;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return BookSearchResultSectionMAX;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    if (section == BookSearchResultSectionHeader) {
+        return 1;
+    }
+    return MAX(0, [[_bookInfoGroup bookInfos] count]);
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == BookSearchResultSectionHeader) {
+        return 70;
+    }
+    return 132;
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    OEZTableViewCell *viewCell = nil;
+    if (indexPath.section == BookSearchResultSectionHeader) {
+        viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookSearchResultTableViewCellStyle1"];
+        [viewCell setData:nil];
+    }
+    else {
+        viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookSearchResultTableViewCellStyle2"];
+        [viewCell setData:[[_bookInfoGroup bookInfos] objectAtIndex:indexPath.row]];
+    }
+    return viewCell;
+}
 
 /*
 // Override to support conditional editing of the table view.

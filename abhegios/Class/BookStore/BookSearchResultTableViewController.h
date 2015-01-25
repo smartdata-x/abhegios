@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+typedef NS_ENUM(NSInteger, BookSearchResultSection) {
+    BookSearchResultSectionHeader = 0,
+    BookSearchResultSectionBooks,
+    BookSearchResultSectionMAX,
+};
 @interface BookSearchResultTableViewController : UITableViewController
-
+- (void)setData:(id)data;
 @end

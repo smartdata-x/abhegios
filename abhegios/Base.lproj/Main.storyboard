@@ -714,20 +714,58 @@
             </objects>
             <point key="canvasLocation" x="5990" y="59"/>
         </scene>
-        <!--Book Search Result Table View Controller-->
+        <!--书籍搜索结果-->
         <scene sceneID="6xm-84-I6t">
             <objects>
-                <tableViewController storyboardIdentifier="BookSearchResultTableViewController" id="ZHX-v6-3tB" customClass="BookSearchResultTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="BookSearchResultTableViewController" id="ZHX-v6-3tB" userLabel="书籍搜索结果" customClass="BookSearchResultTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="I0M-X1-qfP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="j1A-ZM-2Pc">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookSearchResultTableViewCellStyle1" rowHeight="70" id="j1A-ZM-2Pc" customClass="BookSearchResultTableViewCellStyle1">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j1A-ZM-2Pc" id="nxV-eh-Qqz">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SuX-A3-OGs">
+                                            <rect key="frame" x="10" y="15" width="138" height="39"/>
+                                            <color key="backgroundColor" red="0.92549019610000005" green="0.90196078430000004" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal" title="最新小说">
+                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKG-By-s6Z">
+                                            <rect key="frame" x="170" y="15" width="138" height="39"/>
+                                            <color key="backgroundColor" red="0.92549019610000005" green="0.90196078430000004" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal" title="最热小说">
+                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="btnHot" destination="zKG-By-s6Z" id="1LI-oQ-SGy"/>
+                                    <outlet property="btnNew" destination="SuX-A3-OGs" id="Vub-qI-Zkt"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookSearchResultTableViewCellStyle2" rowHeight="132" id="KfH-gl-6pI" customClass="BookSearchResultTableViewCellStyle2">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KfH-gl-6pI" id="SVP-aQ-OgR">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fd4-nJ-gha" customClass="BookInfoViewStyle2">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="132"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bookInfoView" destination="Fd4-nJ-gha" id="yHG-3v-0Uv"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
