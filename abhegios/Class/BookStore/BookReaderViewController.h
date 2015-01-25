@@ -12,10 +12,13 @@
 
 @end
 
-@interface BookReaderViewController : UIViewController
+@interface BookReaderViewController : UIViewController<UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *readerView;
 @property (weak, nonatomic) IBOutlet UILabel *chapterView;
 @property (weak, nonatomic) IBOutlet UILabel *nameView;
 @property (weak, nonatomic) IBOutlet UILabel *progressView;
 @property (weak, nonatomic) IBOutlet UILabel *assistView;
+- (void)doTap:(UIGestureRecognizer *)gesture;
+- (void)doNext:(UIGestureRecognizer *)gesture;
+- (void)doPrev:(UIGestureRecognizer *)gesture;
 @end
