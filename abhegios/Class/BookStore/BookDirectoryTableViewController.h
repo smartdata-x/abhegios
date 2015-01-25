@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface BookDirectoryTableViewController : UITableViewController
-
+- (void)setData:(id)data;
 @end

@@ -30,8 +30,39 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // 左翻页
+    UISwipeGestureRecognizer *nextGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(doNext:)];
+    nextGesture.direction = UISwipeGestureRecognizerDirectionLeft;
+    nextGesture.delegate = self;
+    [self.view addGestureRecognizer:nextGesture];
+    
+    // 右翻页
+    UISwipeGestureRecognizer *prevGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(doPrev:)];
+    prevGesture.direction = UISwipeGestureRecognizerDirectionRight;
+    prevGesture.delegate = self;
+    [self.view addGestureRecognizer:prevGesture];
+    
+    // 点击
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doTap:)];
+    tapGesture.delegate = self;
+    [self.view addGestureRecognizer:tapGesture];
+    
     _chapterGroup = [[NSMutableArray alloc] init];
     [self initView];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+    }
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+    }
 }
 
 - (void)initView {
@@ -44,7 +75,49 @@
     //
     _chapterCount = 10;
     _currentChapter = 0;
-    //[self loadNewChapter];
+    [self loadNewChapter];
+}
+
+- (void)curlUp:(UIView *)view {
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.6];
+    [UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:view cache:YES];
+    [UIView commitAnimations];
+}
+
+- (void)curlDown:(UIView *)view {
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.6];
+    [UIView setAnimationTransition:UIViewAnimationTransitionCurlDown forView:view cache:YES];
+    [UIView commitAnimations];
+}
+
+- (void)curlLeft:(UIView *)view {
+    CATransition *tr = [CATransition animation];
+    tr.duration = 0.6;
+    tr.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    tr.type = @"pageUnCurl";
+    tr.subtype = @"fromLeft";
+    tr.fillMode = kCAFillModeForwards;
+    [tr setFillMode:@"extended"];
+    [tr setRemovedOnCompletion:NO];
+    
+    tr.delegate = self;
+    [view.layer addAnimation:tr forKey:@"pageCurlAnimation"];
+}
+
+- (void)curlRight:(UIView *)view {
+    CATransition *tr = [CATransition animation];
+    tr.duration = 0.6;
+    tr.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    tr.type = @"pageUnCurl";
+    tr.subtype = @"fromRight";
+    tr.fillMode = kCAFillModeForwards;
+    [tr setFillMode:@"extended"];
+    [tr setRemovedOnCompletion:NO];
+    
+    tr.delegate = self;
+    [view.layer addAnimation:tr forKey:@"pageCurlAnimation"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -71,10 +144,29 @@
     
 }
 
+- (void)doTap:(UIGestureRecognizer *)gesture {
+    
+}
+
+- (void)doNext:(UIGestureRecognizer *)gesture {
+    [self nextPage];
+}
+
+- (void)doPrev:(UIGestureRecognizer *)gesture {
+    [self prevPage];
+}
+
 - (void)jumpToLastPosition {
     if ([self isNeedContinueLastPosition]) {
         // TODO:set chapter;
     }
+}
+
+- (float)heightForAttributedString:(NSAttributedString *)srcstr Font:(UIFont *)font Frame:(CGRect)frame {
+    CGSize size = CGSizeMake(frame.size.width, MAXFLOAT);
+    CGRect labelSize = [srcstr boundingRectWithSize:size options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin context:nil];
+    
+    return labelSize.size.height;
 }
 
 - (void)loadNewChapter {
@@ -86,25 +178,30 @@
     }
     
     _bookContent = @"1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n55\n56\n57\n58\n59\n60\n61\n62\n63\n64\n65\n66\n67\n68\n69\n70\n";
-    float fontSize = 14.0f;
-    float lineHeight = 10.0f;
+    float fontSize = 16.0f;
+    float lineHeight = fontSize * 2;
     float hPadding = 16.0f;
-    float maxContentHeight = CGRectGetHeight(_readerView.frame) - hPadding;
+    float readerFrameHeight = CGRectGetHeight(_readerView.frame);
+    float maxContentHeight = readerFrameHeight - hPadding;
     int lines = maxContentHeight / (fontSize + lineHeight);
     _pageHeight = lines * (fontSize + lineHeight);
-    maxContentHeight = _pageHeight + hPadding;
+    readerFrameHeight = _pageHeight + hPadding;
     
     NSMutableParagraphStyle *parastyle = [[NSMutableParagraphStyle alloc] init];
-    parastyle.lineHeightMultiple = lineHeight;
+    parastyle.lineHeightMultiple = 20;
     parastyle.maximumLineHeight = lineHeight;
     parastyle.minimumLineHeight = lineHeight;
-    parastyle.firstLineHeadIndent = lineHeight;
+    parastyle.firstLineHeadIndent = 20;
     parastyle.alignment = NSTextAlignmentJustified;
-    NSDictionary *attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:fontSize], NSParagraphStyleAttributeName:parastyle, NSForegroundColorAttributeName:[UIColor whiteColor]};
+    NSDictionary *attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:fontSize], NSParagraphStyleAttributeName:parastyle, NSForegroundColorAttributeName:kUIColorWithRGB(0x111111)};
     NSAttributedString *attribText = [[NSAttributedString alloc] initWithString:_bookContent attributes:attributes];
     _readerView.attributedText = attribText;
     
-    float contentHeight = 100000;// TODO:
+    CGRect newFrame = CGRectMake(0, 0, CGRectGetWidth(_readerView.frame), _pageHeight);
+    float contentHeight = [self heightForAttributedString:attribText Font:_readerView.font Frame:newFrame];
+    newFrame = [_readerView frame];
+    newFrame.size.height = readerFrameHeight;
+    [_readerView setFrame:newFrame];
     _pageCount = ceilf(contentHeight / _pageHeight);
 }
 
@@ -117,6 +214,7 @@
 
 - (void)nextChapter {
     if (_currentChapter >= _chapterCount - 1) {
+        [self nextChapter];
         return;
     }
     _currentChapter++;
@@ -126,6 +224,7 @@
 
 - (void)prevChapter {
     if (_currentChapter <= 0) {
+        [self prevChapter];
         return;
     }
     _currentChapter--;
@@ -139,8 +238,7 @@
     }
     _currentPage++;
     [self setContentOffsetAnimated:YES];
-    
-    // Page Animation
+    [self curlLeft:self.view];
 }
 
 - (void)prevPage {
@@ -149,7 +247,7 @@
     }
     _currentPage--;
     [self setContentOffsetAnimated:YES];
-    
+    [self curlRight:self.view];
 }
 
 - (void)didReceiveMemoryWarning {
