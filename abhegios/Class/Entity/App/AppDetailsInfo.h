@@ -12,9 +12,9 @@
 @property double star;
 @property NSInteger lang;
 @property (nonatomic,retain)    NSArray     *pic;
-@property (nonatomic,copy)      NSString    *version;
-@property (nonatomic,copy)      NSString    *ontime;
-@property (nonatomic,copy)      NSString    *provide;
+@property (nonatomic,retain)      NSString    *version;
+@property (nonatomic,retain)      NSString    *ontime;
+@property (nonatomic,retain)      NSString    *provide;
 @end
 
 @interface AppDetailsPage : OEZBaseEntity

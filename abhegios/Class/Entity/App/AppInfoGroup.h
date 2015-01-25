@@ -8,8 +8,8 @@
 #import <OEZCommSDK/OEZBaseEntity.h>
 @interface AppInfoGroup : OEZBaseEntity
 @property NSInteger             style;
-@property(nonatomic, copy)      NSString *title;
-@property(nonatomic, copy)      NSString *key;
+@property(nonatomic, retain)      NSString *title;
+@property(nonatomic, retain)      NSString *key;
 @property (nonatomic,retain)    NSArray  *appInfos;
 -(void) setAppInfosDictionarys:(NSArray *)array;
 @end

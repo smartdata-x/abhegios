@@ -24,7 +24,7 @@
 }
 -(NSInteger) numberPageCountPageView:(OEZPageView *)pageView
 {
-    return [[self.data pic] count];
+    return [[(AppDetailsInfo*)self.data pic] count];
 }
 
 -(OEZPageViewCell*) pageView:(OEZPageView *)pageView viewForPageAtIndex:(NSInteger)pageIndex

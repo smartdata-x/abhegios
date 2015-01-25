@@ -9,6 +9,7 @@
 #import "AppDetailsInfo.h"
 
 @implementation AppDetailsInfo
+
 @end
 
 

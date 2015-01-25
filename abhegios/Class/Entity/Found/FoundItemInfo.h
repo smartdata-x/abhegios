@@ -7,7 +7,7 @@
 //
 #import <OEZCommSDK/OEZCommSDK.h>
 @interface FoundItemInfo : OEZBaseEntity
-@property(nonatomic, copy) NSString *identifier;
-@property(nonatomic, copy) NSString *title;
-@property(nonatomic, copy) NSString *icon;
+@property(nonatomic, retain) NSString *identifier;
+@property(nonatomic, retain) NSString *title;
+@property(nonatomic, retain) NSString *icon;
 @end

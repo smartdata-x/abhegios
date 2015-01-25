@@ -100,9 +100,9 @@
     UIView *view = nil;
     if( section != 0 )
     {
-        view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.tableView.frame), 22)];
+        view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, 22)];
         [view setBackgroundColor:kUIColorWithRGB(0xf3f3f3)];
-        UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(10, 1, CGRectGetWidth(self.tableView.frame)-20, 21)];
+        UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(10, 1, kMainScreenWidth-20, 21)];
         [label setText:[[[_appStoreHome appInfoGroups] objectAtIndex:section] title]];
         [label setFont:[UIFont systemFontOfSize:14.0f]];
         [view addSubview:label];
