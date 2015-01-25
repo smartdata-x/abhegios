@@ -470,6 +470,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3t7-hl-81L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <barButtonItem image="bookmark" width="40" id="M19-V2-apA"/>
             </objects>
             <point key="canvasLocation" x="4017" y="50"/>
         </scene>
@@ -557,6 +558,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <tabBar key="tableFooterView" contentMode="scaleToFill" id="zD3-J3-My1">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <items>
+                                <tabBarItem systemItem="favorites" id="H2b-bN-mGu"/>
+                                <tabBarItem systemItem="more" id="elj-Ki-epP"/>
+                            </items>
+                        </tabBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookDetailInfoTableViewCellStyle0" rowHeight="132" id="Cu4-T0-IbN" customClass="BookDetailInfoTableViewCellStyle0">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -851,6 +861,7 @@
     <resources>
         <image name="app-icon-default" width="53" height="53"/>
         <image name="big_shade" width="277" height="112"/>
+        <image name="bookmark" width="14" height="14"/>
         <image name="found_ico" width="23" height="22"/>
         <image name="my_ico" width="23" height="22"/>
         <image name="recommend_ico" width="23" height="22"/>

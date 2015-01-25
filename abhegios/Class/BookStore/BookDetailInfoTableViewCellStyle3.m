@@ -24,7 +24,7 @@
 - (void)setData:(id)data {
     [super setData:data];
     BookInfo *bookinfo = [[BookInfo alloc] init];
-    bookinfo.logo = @"bookmark.png";
+    bookinfo.pic = @"bookmark.png";
     bookinfo.name = @"共22章";
     [_allChapter setData:bookinfo];
 }

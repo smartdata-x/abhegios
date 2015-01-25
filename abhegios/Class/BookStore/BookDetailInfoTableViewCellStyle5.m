@@ -23,12 +23,12 @@
 
 - (void)setData:(id)data {
     BookInfo *bookinfo = [[BookInfo alloc] init];
-    bookinfo.logo = @"tryread_icon.png";
+    bookinfo.pic = @"tryread_icon.png";
     bookinfo.name = @"免费阅读";
     [_freeRead setData:bookinfo];
     [_freeRead.name setTextColor:[UIColor grayColor]];
     
-    bookinfo.logo = @"download_icon.png";
+    bookinfo.pic = @"download_icon.png";
     bookinfo.name = @"下载全本";
     [_download setData:bookinfo];
     [_download.name setTextColor:[UIColor grayColor]];
