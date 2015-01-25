@@ -32,7 +32,7 @@
     appInfoGroup.key = bookInfoGroup.key;
     appInfoGroup.appInfos = bookInfoGroup.bookInfos;
     //[appInfoGroup setAppInfosDictionarys:bookInfoGroup.bookInfos];
-    [super setData:appInfoGroup];
+    [super setData:[bookInfoGroup bookInfos]];
     
     //[super setData:data];
 }
