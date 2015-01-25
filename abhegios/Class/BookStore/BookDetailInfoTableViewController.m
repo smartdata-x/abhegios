@@ -7,6 +7,7 @@
 //
 
 #import "BookDetailInfoTableViewController.h"
+#import "BookDetailInfoTableViewCellStyle4.h"
 
 @interface BookDetailInfoTableViewController ()
 @property (nonatomic, copy) BookDetailInfo *bookDetailInfo;
@@ -42,7 +43,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == BookDetailInfoSectionTagInfo) {
-        return [[_bookDetailInfo labels] count];
+        int labelCount = [[_bookDetailInfo labels] count];
+        int rows = (int)ceilf((float)labelCount / 3.0);
+        return rows;
     }
     return 1;
 }
@@ -59,7 +62,7 @@
         case BookDetailInfoSectionHeaderCell:   return 132; break;
         case BookDetailInfoSectionReadSave:     return 49; break;
         case BookDetailInfoSectionIntroduction: return 100; break;
-        case BookDetailInfoSectionChapterInfo:  return 47; break;
+        case BookDetailInfoSectionChapterInfo:  return 55; break;
         case BookDetailInfoSectionTagInfo:      return 45; break;
         case BookDetailInfoSectionReadDownload: return 47; break;
         default:
@@ -73,7 +76,7 @@
     if( section == BookDetailInfoSectionTagInfo )
     {
         view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.tableView.frame), 22)];
-        [view setBackgroundColor:kUIColorWithRGB(0xf3f3f3)];
+        [view setBackgroundColor:kUIColorWithRGB(0xffffffff)];
         UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(10, 1, CGRectGetWidth(self.tableView.frame)-20, 21)];
         [label setText:@"图书标签"];
         [label setFont:[UIFont systemFontOfSize:14.0f]];
@@ -103,17 +106,19 @@
             
         case BookDetailInfoSectionChapterInfo:
             viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDetailInfoTableViewCellStyle3"];
-            if (_bookDetailInfo) [viewCell setData:_bookDetailInfo];
+            [viewCell setData:_bookDetailInfo];
             break;
             
         case BookDetailInfoSectionTagInfo:
             viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDetailInfoTableViewCellStyle4"];
-            if (_bookDetailInfo) [viewCell setData:_bookDetailInfo];
+            if (_bookDetailInfo) {
+                [(BookDetailInfoTableViewCellStyle4 *)viewCell setDataWithIndex:_bookDetailInfo Index:indexPath.row];
+            }
             break;
             
         case BookDetailInfoSectionReadDownload:
             viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDetailInfoTableViewCellStyle5"];
-            if (_bookDetailInfo) [viewCell setData:_bookDetailInfo];
+            [viewCell setData:_bookDetailInfo];
             break;
             
         default:

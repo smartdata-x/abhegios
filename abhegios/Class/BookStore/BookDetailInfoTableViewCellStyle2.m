@@ -7,6 +7,7 @@
 //
 
 #import "BookDetailInfoTableViewCellStyle2.h"
+#import "BookDetailInfo.h"
 
 @implementation BookDetailInfoTableViewCellStyle2
 
@@ -22,6 +23,7 @@
 
 - (void)setData:(id)data {
     [super setData:data];
+    [_introduction setText:[(BookDetailInfo *)data introduction]];
 }
 
 @end
