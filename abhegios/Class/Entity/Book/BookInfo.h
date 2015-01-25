@@ -13,4 +13,5 @@
 @property (nonatomic, copy) NSString *pic;
 @property (nonatomic, copy) NSString *author;
 @property float star;
+@property NSInteger follow;
 @end

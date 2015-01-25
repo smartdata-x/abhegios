@@ -18,6 +18,5 @@ typedef NS_ENUM(NSInteger, BookInfoViewStyle1Format) {
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *summary;
 - (void)setData:(id)data;
-- (void)setDataHideSummary:(id)data Hide:(BOOL)hide;
 - (void)setDataWithFormat:(id)data Format:(NSInteger)format;
 @end

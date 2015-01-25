@@ -16,7 +16,8 @@
 
 - (void)setData:(id)data {
     [_name setText:[data name]];
-    [_summary setText:[(BookInfo *)data summary]];
+    NSString *follows = [NSString stringWithFormat:@"%d关注", [(BookInfo *)data follow]];
+    [_summary setText:follows];
 }
 
 - (void)showAll {
