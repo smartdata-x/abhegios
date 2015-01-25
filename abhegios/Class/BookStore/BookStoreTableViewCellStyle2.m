@@ -9,7 +9,6 @@
 #import "BookStoreTableViewCellStyle2.h"
 #import "BookInfo.h"
 #import "BookInfoGroup.h"
-#import "AppInfoGroup.h"
 
 @implementation BookStoreTableViewCellStyle2
 
@@ -26,12 +25,6 @@
 - (void)setData:(id)data {
     
     BookInfoGroup *bookInfoGroup = data;
-    AppInfoGroup *appInfoGroup = [[AppInfoGroup alloc] init];
-    appInfoGroup.style = bookInfoGroup.style;
-    appInfoGroup.title = bookInfoGroup.title;
-    appInfoGroup.key = bookInfoGroup.key;
-    appInfoGroup.appInfos = bookInfoGroup.bookInfos;
-    //[appInfoGroup setAppInfosDictionarys:bookInfoGroup.bookInfos];
     [super setData:[bookInfoGroup bookInfos]];
     
     //[super setData:data];

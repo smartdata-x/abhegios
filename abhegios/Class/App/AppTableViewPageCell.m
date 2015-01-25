@@ -7,7 +7,6 @@
 //
 
 #import "AppTableViewPageCell.h"
-#import "AppInfoGroup.h"
 @implementation AppTableViewPageCell
 
 

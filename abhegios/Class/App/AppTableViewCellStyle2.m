@@ -8,7 +8,6 @@
 
 #import "AppTableViewCellStyle2.h"
 #import "AppInfo.h"
-#import "AppInfoGroup.h"
 #import  <OEZCommSDK/OEZCommSDK.h>
 @implementation AppTableViewCellStyle2
 
