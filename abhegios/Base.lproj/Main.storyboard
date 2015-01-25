@@ -18,7 +18,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Mm8-eN-87m" kind="relationship" relationship="viewControllers" id="nCc-Je-OCL"/>
+                        <segue destination="DD1-h7-jRc" kind="relationship" relationship="viewControllers" id="1On-4D-1Zs"/>
                         <segue destination="OqO-Fl-P5t" kind="relationship" relationship="viewControllers" id="A4R-g7-hUY"/>
                         <segue destination="gUz-n7-OsD" kind="relationship" relationship="viewControllers" id="yZM-eH-D8d"/>
                         <segue destination="bNa-5u-Xnt" kind="relationship" relationship="viewControllers" id="ASA-YE-0Gg"/>
@@ -29,23 +29,32 @@
             <point key="canvasLocation" x="700" y="78"/>
         </scene>
         <!--推荐-->
-        <scene sceneID="qrB-fN-VrY">
+        <scene sceneID="bcb-7L-5oE">
             <objects>
-                <viewController title="推荐" id="Mm8-eN-87m" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9a1-9A-L03"/>
-                        <viewControllerLayoutGuide type="bottom" id="77N-VP-yCf"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ixg-cK-JUf">
+                <tableViewController title="推荐" id="DD1-h7-jRc" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="B6p-FI-oZT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="推荐" image="recommend_ico" id="oD3-Vz-kGs"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hmi-rV-K5E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tqd-vv-1KB">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tqd-vv-1KB" id="uhJ-ae-QSR">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="DD1-h7-jRc" id="Jbv-Me-M9A"/>
+                            <outlet property="delegate" destination="DD1-h7-jRc" id="Uqm-Oz-PHe"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="推荐" image="recommend_ico" id="A7W-8h-qzq"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gdM-Wf-wML" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1459" y="78"/>
+            <point key="canvasLocation" x="1363" y="78"/>
         </scene>
         <!--WIFI-->
         <scene sceneID="mUm-PU-tox">
