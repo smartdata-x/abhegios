@@ -25,12 +25,10 @@
 		1AD64804C9FA33B5797A36AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD6492B19568EF4CBFC4EA6 /* AppDelegate.m */; };
 		1AD64850016A35AAE41E0C11 /* TencentOpenAPI in Resources */ = {isa = PBXBuildFile; fileRef = 1AD642C0A4FA8B5FB88F2722 /* TencentOpenAPI */; };
 		1AD64903B17F5D12DC09D1BB /* ThirdLoginInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64A4A58510940FB83B455 /* ThirdLoginInfo.m */; };
-		1AD6499081D9DEF2C11C321E /* AppInfoGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD6477F61BA0655FCC24CBD /* AppInfoGroup.m */; };
 		1AD649CD0AF8969FFF4B9641 /* ILogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64D36FCBA289B16C1A832 /* ILogin.m */; };
 		1AD64A7E02E7FE36F6F1B45D /* HandleOpenURLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD641DD2208878E496A9A4D /* HandleOpenURLHelper.m */; };
 		1AD64D9C70E0A1325B3F2A09 /* AppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64937DADE448C8201DFCF /* AppViewController.m */; };
 		1AD64DA54158CF05FAE8F2A6 /* WBLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64ADF6021C604900147BF /* WBLogin.m */; };
-		1AD64E1713AD0CE098E0019C /* AppStoreHome.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64A5F0046E17B443BDAFB /* AppStoreHome.m */; };
 		1AD64F3A04AFCBB948106908 /* AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64A85039C51E682F19BA9 /* AppInfo.m */; };
 		CB6A21BD1A6FF2AA0087546F /* BookStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21BC1A6FF2AA0087546F /* BookStoreViewController.m */; };
 		CB6A21C01A6FF5600087546F /* BookStoreTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21BF1A6FF5600087546F /* BookStoreTableViewCellStyle1.m */; };
@@ -89,6 +87,10 @@
 		EA88BFAA1A748C2A004885A0 /* MusicInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA88BFA91A748C2A004885A0 /* MusicInfo.m */; };
 		EA88BFAE1A74904B004885A0 /* MovieInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA88BFAD1A74904B004885A0 /* MovieInfo.m */; };
 		EA88BFB11A7497B0004885A0 /* ADInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA88BFB01A7497B0004885A0 /* ADInfo.m */; };
+		EA88BFB41A74CB76004885A0 /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA88BFB31A74CB76004885A0 /* RecommendViewController.m */; };
+		EA88BFB71A74D022004885A0 /* GroupInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA88BFB61A74D022004885A0 /* GroupInfo.m */; };
+		EA88BFBC1A74E37F004885A0 /* recommendhome.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA88BFBA1A74E37F004885A0 /* recommendhome.plist */; };
+		EA88BFBD1A74E37F004885A0 /* recommendhome_test.json in Resources */ = {isa = PBXBuildFile; fileRef = EA88BFBB1A74E37F004885A0 /* recommendhome_test.json */; };
 		EA89882E1A726A7000877E63 /* AppInfoViewStyle1.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA89882D1A726A7000877E63 /* AppInfoViewStyle1.xib */; };
 		EA8988311A726EAA00877E63 /* AppInfoViewStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8988301A726EAA00877E63 /* AppInfoViewStyle1.m */; };
 		EA8988381A72841B00877E63 /* AppInfoViewStyle3.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA8988371A72841B00877E63 /* AppInfoViewStyle3.xib */; };
@@ -121,7 +123,6 @@
 		1AD6405047562177033B2A56 /* AppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppViewController.h; sourceTree = "<group>"; };
 		1AD6408FC527AE4826BBFD19 /* UserHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserHelper.m; sourceTree = "<group>"; };
 		1AD640F884FE1B88F0A9CA5F /* WXLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXLogin.h; sourceTree = "<group>"; };
-		1AD6416E67F1CB405BA07E24 /* AppInfoGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfoGroup.h; sourceTree = "<group>"; };
 		1AD641DD2208878E496A9A4D /* HandleOpenURLHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandleOpenURLHelper.m; sourceTree = "<group>"; };
 		1AD641EE7503CA0E22DE8D2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = abhegios/Base.lproj/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
 		1AD64222AABA8F74FD6A4B06 /* sdkdef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sdkdef.h; sourceTree = "<group>"; };
@@ -140,8 +141,6 @@
 		1AD64688EC1876C19A332D96 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		1AD646C9517398D2CE12BFE0 /* QQLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQLogin.m; sourceTree = "<group>"; };
 		1AD64755F74B126543E3297C /* local.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = local.html; sourceTree = "<group>"; };
-		1AD6477EB2BCEFB8D0A0B92E /* AppStoreHome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppStoreHome.h; sourceTree = "<group>"; };
-		1AD6477F61BA0655FCC24CBD /* AppInfoGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfoGroup.m; sourceTree = "<group>"; };
 		1AD647813E42C6C0F8BDFC97 /* abhegios-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "abhegios-Prefix.pch"; sourceTree = "<group>"; };
 		1AD647DF9B122EFEA68E6170 /* HandleOpenURLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandleOpenURLHelper.h; sourceTree = "<group>"; };
 		1AD64811342BC7DCF625AF76 /* HelperProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelperProtocol.h; sourceTree = "<group>"; };
@@ -154,7 +153,6 @@
 		1AD649A2F2D6D83B5DB8AB91 /* error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = error.png; sourceTree = "<group>"; };
 		1AD64A4A58510940FB83B455 /* ThirdLoginInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdLoginInfo.m; sourceTree = "<group>"; };
 		1AD64A4EF1E9A486E508A25A /* AppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfo.h; sourceTree = "<group>"; };
-		1AD64A5F0046E17B443BDAFB /* AppStoreHome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppStoreHome.m; sourceTree = "<group>"; };
 		1AD64A85039C51E682F19BA9 /* AppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfo.m; sourceTree = "<group>"; };
 		1AD64ADF6021C604900147BF /* WBLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBLogin.m; sourceTree = "<group>"; };
 		1AD64B734EC6BB4C73EA65F2 /* WeiBoAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiBoAPI.h; sourceTree = "<group>"; };
@@ -271,6 +269,12 @@
 		EA88BFAD1A74904B004885A0 /* MovieInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieInfo.m; sourceTree = "<group>"; };
 		EA88BFAF1A7497B0004885A0 /* ADInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADInfo.h; sourceTree = "<group>"; };
 		EA88BFB01A7497B0004885A0 /* ADInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADInfo.m; sourceTree = "<group>"; };
+		EA88BFB21A74CB76004885A0 /* RecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendViewController.h; sourceTree = "<group>"; };
+		EA88BFB31A74CB76004885A0 /* RecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendViewController.m; sourceTree = "<group>"; };
+		EA88BFB51A74D022004885A0 /* GroupInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupInfo.h; sourceTree = "<group>"; };
+		EA88BFB61A74D022004885A0 /* GroupInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupInfo.m; sourceTree = "<group>"; };
+		EA88BFBA1A74E37F004885A0 /* recommendhome.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = recommendhome.plist; path = Resources/recommendhome.plist; sourceTree = "<group>"; };
+		EA88BFBB1A74E37F004885A0 /* recommendhome_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = recommendhome_test.json; path = Resources/recommendhome_test.json; sourceTree = "<group>"; };
 		EA89882D1A726A7000877E63 /* AppInfoViewStyle1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppInfoViewStyle1.xib; sourceTree = SOURCE_ROOT; };
 		EA89882F1A726EAA00877E63 /* AppInfoViewStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfoViewStyle1.h; sourceTree = "<group>"; };
 		EA8988301A726EAA00877E63 /* AppInfoViewStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfoViewStyle1.m; sourceTree = "<group>"; };
@@ -379,6 +383,8 @@
 				EA9486381A6DE09C003EE99B /* MainViewController.m */,
 				EA54A1151A6E0E6100322C42 /* FoundViewController.h */,
 				EA54A1161A6E0E6100322C42 /* FoundViewController.m */,
+				EA88BFB21A74CB76004885A0 /* RecommendViewController.h */,
+				EA88BFB31A74CB76004885A0 /* RecommendViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -512,6 +518,8 @@
 		1AD64A45ECE7FF2A410D90BB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EA88BFBA1A74E37F004885A0 /* recommendhome.plist */,
+				EA88BFBB1A74E37F004885A0 /* recommendhome_test.json */,
 				EA7599921A7120CB0027FC8B /* uifounddata.plist */,
 				EA75998A1A7120A50027FC8B /* uilogindata.plist */,
 				EA75998B1A7120A50027FC8B /* appstorehome.plist */,
@@ -586,12 +594,8 @@
 			children = (
 				EA13DDCF1A6F8D3A004AB7E6 /* AppDetailsInfo.m */,
 				EA13DDD01A6F8D3A004AB7E6 /* AppDetailsInfo.h */,
-				1AD6477EB2BCEFB8D0A0B92E /* AppStoreHome.h */,
-				1AD6477F61BA0655FCC24CBD /* AppInfoGroup.m */,
 				1AD64A4EF1E9A486E508A25A /* AppInfo.h */,
-				1AD64A5F0046E17B443BDAFB /* AppStoreHome.m */,
 				1AD64A85039C51E682F19BA9 /* AppInfo.m */,
-				1AD6416E67F1CB405BA07E24 /* AppInfoGroup.h */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -637,6 +641,8 @@
 				EA88BFA41A748A68004885A0 /* BaseInfo.m */,
 				EA88BFAF1A7497B0004885A0 /* ADInfo.h */,
 				EA88BFB01A7497B0004885A0 /* ADInfo.m */,
+				EA88BFB51A74D022004885A0 /* GroupInfo.h */,
+				EA88BFB61A74D022004885A0 /* GroupInfo.m */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -846,12 +852,14 @@
 				EA3D07771A6CD9A600189765 /* LaunchScreen.xib in Resources */,
 				1AD6460C6803B48F071D6E89 /* Images.xcassets in Resources */,
 				EA75998F1A7120A50027FC8B /* appstorehome.plist in Resources */,
+				EA88BFBD1A74E37F004885A0 /* recommendhome_test.json in Resources */,
 				1AD6407932CF4CF9417DEF43 /* Info.plist in Resources */,
 				EA89882E1A726A7000877E63 /* AppInfoViewStyle1.xib in Resources */,
 				EA8988381A72841B00877E63 /* AppInfoViewStyle3.xib in Resources */,
 				CB6A21CC1A6FFCC20087546F /* bookstorehome_test.json in Resources */,
 				1AD64850016A35AAE41E0C11 /* TencentOpenAPI in Resources */,
 				EA7599911A7120A50027FC8B /* appdetailspage_test.json in Resources */,
+				EA88BFBC1A74E37F004885A0 /* recommendhome.plist in Resources */,
 				EA8C83311A731FFF00901CFC /* PageViewImageCell.xib in Resources */,
 				CB6A21E31A729F1E0087546F /* BookInfoViewStyle1.xib in Resources */,
 				1AD64049F3F7AA6F294AAE32 /* error.png in Resources */,
@@ -908,6 +916,7 @@
 				EA13DDDC1A6F961E004AB7E6 /* MyNavigationViewController.m in Sources */,
 				EA88BFAA1A748C2A004885A0 /* MusicInfo.m in Sources */,
 				CB6A21C41A6FFA4E0087546F /* BookStoreHome.m in Sources */,
+				EA88BFB41A74CB76004885A0 /* RecommendViewController.m in Sources */,
 				EA13DDCE1A6F8A35004AB7E6 /* NSString+NSStringCategory.m in Sources */,
 				1AD64903B17F5D12DC09D1BB /* ThirdLoginInfo.m in Sources */,
 				CB6A22041A73DF160087546F /* BookDetailInfoTableViewCellStyle5.m in Sources */,
@@ -933,13 +942,12 @@
 				CB6A21E61A72B3B80087546F /* FavRateViewStyle.m in Sources */,
 				CB6A22191A74C5180087546F /* BookDirectoryTableViewCellStyle1.m in Sources */,
 				1AD64D9C70E0A1325B3F2A09 /* AppViewController.m in Sources */,
-				1AD6499081D9DEF2C11C321E /* AppInfoGroup.m in Sources */,
-				1AD64E1713AD0CE098E0019C /* AppStoreHome.m in Sources */,
 				CB6A21E11A729B050087546F /* BookInfoViewStyle1.m in Sources */,
 				CB6A21D11A711CD50087546F /* BookStoreTableViewCellStyle2.m in Sources */,
 				CB6A21EE1A73C6840087546F /* BookInfoViewStyle2.m in Sources */,
 				EA88BFAE1A74904B004885A0 /* MovieInfo.m in Sources */,
 				EAA773881A7222C400EBD512 /* AppTableViewPageCell.m in Sources */,
+				EA88BFB71A74D022004885A0 /* GroupInfo.m in Sources */,
 				1AD64F3A04AFCBB948106908 /* AppInfo.m in Sources */,
 				1AD645A28AA3934B882BD885 /* FoundItemInfo.m in Sources */,
 			);

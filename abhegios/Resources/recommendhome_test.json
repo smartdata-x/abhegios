@@ -1,0 +1,158 @@
+{
+    "advert": [
+               {
+               "id": 11,
+               "pic": "http://tp1.sinaimg.cn/1215434384/50/5693231554/1",
+               "type": 1,
+               "subtype": 1
+               },
+               {
+               "id": 12,
+               "pic": "http://tp1.sinaimg.cn/1215434384/50/5693231554/1",
+               "type": 2,
+               "subtype": 1
+               },
+               {
+               "id": 13,
+               "pic": "http://tp1.sinaimg.cn/1215434384/50/5693231554/1",
+               "type": 3,
+               "subtype": 1
+               }
+               ],
+    "app": [
+            {
+            "id": 16,
+            "logo": "http://pic.desgin.miglab.com/abheg/store/app/products/16/logo.jpg",
+            "name": "虾米",
+            "type": 1,
+            "down": 1231,
+            "summary": "提供高品质音乐MP3的个性化推荐、发布、P2P下载服务,以及线下音乐活动等互动内容",
+            "order": 2
+            },
+            {
+            "id": 16,
+            "logo": "http://pic.desgin.miglab.com/abheg/store/app/products/16/logo.jpg",
+            "name": "虾米",
+            "type": 1,
+            "down": 1231,
+            "summary": "提供高品质音乐MP3的个性化推荐、发布、P2P下载服务,以及线下音乐活动等互动内容",
+            "order": 2
+            },
+            {
+            "id": 16,
+            "logo": "http://pic.desgin.miglab.com/abheg/store/app/products/16/logo.jpg",
+            "name": "虾米",
+            "type": 1,
+            "down": 1231,
+            "summary": "提供高品质音乐MP3的个性化推荐、发布、P2P下载服务,以及线下音乐活动等互动内容",
+            "order": 2
+            },
+            {
+            "id": 16,
+            "logo": "http://pic.desgin.miglab.com/abheg/store/app/products/16/logo.jpg",
+            "name": "虾米",
+            "type": 1,
+            "down": 1231,
+            "summary": "提供高品质音乐MP3的个性化推荐、发布、P2P下载服务,以及线下音乐活动等互动内容",
+            "order": 2
+            }
+            ],
+    "game": [
+             {
+             "id": 16,
+             "logo": "http://pic.desgin.miglab.com/abheg/store/app/products/16/logo.jpg",
+             "name": "乱动西游",
+             "type": 1,
+             "down": 1231,
+             "summary": "融合MOBA+RPG的全新对抗玩法，在战场上与对手血战到底！灵活补刀、游走杀人，释放你的超神操作，热血激斗尽在掌中！",
+             "order": 2
+             },
+             {
+             "id": 16,
+             "logo": "http://pic.desgin.miglab.com/abheg/store/app/products/16/logo.jpg",
+             "name": "乱动西游",
+             "type": 1,
+             "down": 1231,
+             "summary": "融合MOBA+RPG的全新对抗玩法，在战场上与对手血战到底！灵活补刀、游走杀人，释放你的超神操作，热血激斗尽在掌中！",
+             "order": 2
+             },
+             {
+             "id": 16,
+             "logo": "http://pic.desgin.miglab.com/abheg/store/app/products/16/logo.jpg",
+             "name": "乱动西游",
+             "type": 1,
+             "down": 1231,
+             "summary": "融合MOBA+RPG的全新对抗玩法，在战场上与对手血战到底！灵活补刀、游走杀人，释放你的超神操作，热血激斗尽在掌中！",
+             "order": 2
+             }
+             ],
+    "book": [
+             {
+             "id": 11,
+             "name": "金刚经",
+             "read": 121312,
+             "pic": "http://tp1.sinaimg.cn/1215434384/50/5693231554/1",
+             "summary": "《金刚经》是大乘佛教的重要经典。全称《能断金刚般若波罗蜜经》",
+             "type": 5,
+             "order": 2
+             },
+             {
+             "id": 11,
+             "name": "金刚经",
+             "read": 121312,
+             "pic": "http://tp1.sinaimg.cn/1215434384/50/5693231554/1",
+             "summary": "《金刚经》是大乘佛教的重要经典。全称《能断金刚般若波罗蜜经》",
+             "type": 5,
+             "order": 2
+             },
+             {
+             "id": 11,
+             "name": "金刚经",
+             "read": 121312,
+             "pic": "http://tp1.sinaimg.cn/1215434384/50/5693231554/1",
+             "summary": "《金刚经》是大乘佛教的重要经典。全称《能断金刚般若波罗蜜经》",
+             "type": 5,
+             "order": 2
+             }
+             ],
+    "music": [
+              {
+              "id": 11,
+              "name": "一块红布",
+              "listen": 112,
+              "pic": "http://tp1.sinaimg.cn/1215434384/50/5693231554/1",
+              "summary": "2005年再版发行成名曲为1986年的《一无所有》",
+              "type": 5,
+              "order": 2
+              },
+              {
+              "id": 11,
+              "name": "一块红布",
+              "listen": 112,
+              "pic": "http://tp1.sinaimg.cn/1215434384/50/5693231554/1",
+              "summary": "2005年再版发行成名曲为1986年的《一无所有》",
+              "type": 5,
+              "order": 2
+              }
+              ],
+    "movie": [
+              {
+              "id": 11,
+              "name": "春光乍泄",
+              "watch": 112,
+              "pic": "http://tp1.sinaimg.cn/1215434384/50/5693231554/1",
+              "summary": "《春光乍泄》是由王家卫执导，张国荣 、梁朝伟、 张震主演的文艺片。",
+              "type": 5,
+              "order": 2
+              },
+              {
+              "id": 11,
+              "name": "春光乍泄",
+              "watch": 112,
+              "pic": "http://tp1.sinaimg.cn/1215434384/50/5693231554/1",
+              "summary": "《春光乍泄》是由王家卫执导，张国荣 、梁朝伟、 张震主演的文艺片。",
+              "taype": 5,
+              "order": 2
+              }
+              ]
+}

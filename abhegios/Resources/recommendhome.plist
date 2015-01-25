@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>style</key>
+		<integer>1</integer>
+		<key>key</key>
+		<string>advert</string>
+		<key>title</key>
+		<string>advert</string>
+		<key>entityClassName</key>
+		<string>ADInfo</string>
+	</dict>
+	<dict>
+		<key>style</key>
+		<integer>1</integer>
+		<key>key</key>
+		<string>app</string>
+		<key>title</key>
+		<string>应用</string>
+		<key>entityClassName</key>
+		<string>AppInfo</string>
+	</dict>
+	<dict>
+		<key>style</key>
+		<integer>1</integer>
+		<key>key</key>
+		<string>game</string>
+		<key>title</key>
+		<string>游戏</string>
+		<key>entityClassName</key>
+		<string>AppInfo</string>
+	</dict>
+	<dict>
+		<key>style</key>
+		<integer>1</integer>
+		<key>key</key>
+		<string>book</string>
+		<key>title</key>
+		<string>书籍</string>
+		<key>entityClassName</key>
+		<string>BookInfo</string>
+	</dict>
+	<dict>
+		<key>style</key>
+		<integer>1</integer>
+		<key>key</key>
+		<string>music</string>
+		<key>title</key>
+		<string>音乐</string>
+		<key>entityClassName</key>
+		<string>MusicInfo</string>
+	</dict>
+	<dict>
+		<key>style</key>
+		<integer>1</integer>
+		<key>key</key>
+		<string>movie</string>
+		<key>title</key>
+		<string>电影</string>
+		<key>entityClassName</key>
+		<string>MovieInfo</string>
+	</dict>
+</array>
+</plist>
