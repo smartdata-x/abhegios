@@ -7,9 +7,10 @@
 //
 
 #import "BookDirectoryTableViewController.h"
+#import "BookInfoGroup.h"
 
 @interface BookDirectoryTableViewController ()
-
+@property (nonatomic, retain) BookInfoGroup *bookInfoGroup;
 @end
 
 @implementation BookDirectoryTableViewController
@@ -29,29 +30,43 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)setData:(id)data {
+    _bookInfoGroup = data;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [[_bookInfoGroup bookInfos] count];
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 49;
 }
-*/
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView *view = nil;
+    view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.tableView.frame), 22)];
+    [view setBackgroundColor:kUIColorWithRGB(0xfff5f5f5)];
+    UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(10, 12, CGRectGetWidth(self.tableView.frame)-20, 21)];
+    [label setFont:[UIFont systemFontOfSize:14.0f]];
+    [label setTextColor:[UIColor lightGrayColor]];
+    [view addSubview:label];
+    if( section == 0 ) [label setText:@"男生频道"];
+    else if ( section == 1 ) [label setText:@"女生频道"];
+    
+    return view;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    OEZTableViewCell *viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDirectoryTableViewCellStyle1"];
+    [viewCell setData:[[_bookInfoGroup bookInfos] objectAtIndex:indexPath.row]];
+    return viewCell;
+}
 
 /*
 // Override to support conditional editing of the table view.

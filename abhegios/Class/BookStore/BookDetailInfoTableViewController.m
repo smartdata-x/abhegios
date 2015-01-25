@@ -32,7 +32,6 @@
 
 - (void)setData:(id)data {
     _bookDetailInfo = data;
-    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source

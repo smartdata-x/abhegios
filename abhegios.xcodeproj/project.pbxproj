@@ -64,6 +64,7 @@
 		CB6A22101A74B4C10087546F /* BookDirectoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A220F1A74B4C10087546F /* BookDirectoryTableViewController.m */; };
 		CB6A22131A74BE6B0087546F /* BookSearchResultTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A22121A74BE6B0087546F /* BookSearchResultTableViewCellStyle1.m */; };
 		CB6A22161A74C09E0087546F /* BookSearchResultTableViewCellStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A22151A74C09E0087546F /* BookSearchResultTableViewCellStyle2.m */; };
+		CB6A22191A74C5180087546F /* BookDirectoryTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A22181A74C5180087546F /* BookDirectoryTableViewCellStyle1.m */; };
 		EA02913E1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = EA02913D1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.m */; };
 		EA13DDCE1A6F8A35004AB7E6 /* NSString+NSStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDCD1A6F8A35004AB7E6 /* NSString+NSStringCategory.m */; };
 		EA13DDD11A6F8D3A004AB7E6 /* AppDetailsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDCF1A6F8D3A004AB7E6 /* AppDetailsInfo.m */; };
@@ -230,6 +231,8 @@
 		CB6A22121A74BE6B0087546F /* BookSearchResultTableViewCellStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookSearchResultTableViewCellStyle1.m; sourceTree = "<group>"; };
 		CB6A22141A74C09E0087546F /* BookSearchResultTableViewCellStyle2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookSearchResultTableViewCellStyle2.h; sourceTree = "<group>"; };
 		CB6A22151A74C09E0087546F /* BookSearchResultTableViewCellStyle2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookSearchResultTableViewCellStyle2.m; sourceTree = "<group>"; };
+		CB6A22171A74C5180087546F /* BookDirectoryTableViewCellStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookDirectoryTableViewCellStyle1.h; sourceTree = "<group>"; };
+		CB6A22181A74C5180087546F /* BookDirectoryTableViewCellStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookDirectoryTableViewCellStyle1.m; sourceTree = "<group>"; };
 		EA02913C1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailsTableViewCellStyle1.h; sourceTree = "<group>"; };
 		EA02913D1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsTableViewCellStyle1.m; sourceTree = "<group>"; };
 		EA13DDCD1A6F8A35004AB7E6 /* NSString+NSStringCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringCategory.m"; sourceTree = "<group>"; };
@@ -677,6 +680,8 @@
 				CB6A22151A74C09E0087546F /* BookSearchResultTableViewCellStyle2.m */,
 				CB6A220E1A74B4C10087546F /* BookDirectoryTableViewController.h */,
 				CB6A220F1A74B4C10087546F /* BookDirectoryTableViewController.m */,
+				CB6A22171A74C5180087546F /* BookDirectoryTableViewCellStyle1.h */,
+				CB6A22181A74C5180087546F /* BookDirectoryTableViewCellStyle1.m */,
 			);
 			path = BookStore;
 			sourceTree = "<group>";
@@ -926,6 +931,7 @@
 				1AD6419EC3E465BEDDED654B /* WXLogin.m in Sources */,
 				1AD64DA54158CF05FAE8F2A6 /* WBLogin.m in Sources */,
 				CB6A21E61A72B3B80087546F /* FavRateViewStyle.m in Sources */,
+				CB6A22191A74C5180087546F /* BookDirectoryTableViewCellStyle1.m in Sources */,
 				1AD64D9C70E0A1325B3F2A09 /* AppViewController.m in Sources */,
 				1AD6499081D9DEF2C11C321E /* AppInfoGroup.m in Sources */,
 				1AD64E1713AD0CE098E0019C /* AppStoreHome.m in Sources */,

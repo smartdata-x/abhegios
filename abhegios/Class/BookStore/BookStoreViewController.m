@@ -16,6 +16,7 @@
 #import "BookReaderViewController.h"
 #import "BookDetailInfoTableViewController.h"
 #import "BookSearchResultTableViewController.h"
+#import "BookDirectoryTableViewController.h"
 #import <OEZCommSDK/OEZCommSDK.h>
 @interface BookStoreViewController ()
 {
@@ -160,6 +161,12 @@
             [self.navigationController pushViewControllerWithIdentifier:@"BookSearchResultTableViewController" completion:^(UIViewController *viewController) {
                 BookSearchResultTableViewController *bookSearchResultView = (BookSearchResultTableViewController *)viewController;
                 [bookSearchResultView setData:[[_bookStoreHome bookInfoGroups] objectAtIndex:indexPath.section]];
+            } animated:YES];
+        }
+        else if (indexPath.row == 4) {
+            [self.navigationController pushViewControllerWithIdentifier:@"BookDirectoryTableViewController" completion:^(UIViewController *viewController) {
+                BookDirectoryTableViewController *bookDirectoryView = (BookDirectoryTableViewController *)viewController;
+                [bookDirectoryView setData:[[_bookStoreHome bookInfoGroups] objectAtIndex:indexPath.section]];
             } animated:YES];
         }
     }

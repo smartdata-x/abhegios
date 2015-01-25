@@ -778,20 +778,31 @@
             </objects>
             <point key="canvasLocation" x="6641" y="59"/>
         </scene>
-        <!--Book Directory Table View Controller-->
+        <!--书籍目录-->
         <scene sceneID="DPJ-dv-p1k">
             <objects>
-                <tableViewController storyboardIdentifier="BookDirectoryTableViewController" id="56J-ua-RmR" customClass="BookDirectoryTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="BookDirectoryTableViewController" title="目录" id="56J-ua-RmR" userLabel="书籍目录" customClass="BookDirectoryTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Bnd-Mp-6xn">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="6pv-fO-7sy">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookDirectoryTableViewCellStyle1" rowHeight="49" id="6pv-fO-7sy" customClass="BookDirectoryTableViewCellStyle1">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6pv-fO-7sy" id="Emn-jf-dEM">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTy-xL-hdN">
+                                            <rect key="frame" x="10" y="14" width="300" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="name" destination="uTy-xL-hdN" id="zSd-T3-dO2"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
