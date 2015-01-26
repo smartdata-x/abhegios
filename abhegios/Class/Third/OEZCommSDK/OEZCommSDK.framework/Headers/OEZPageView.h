@@ -17,7 +17,7 @@
 @end
 
 @class OEZPageView;
-@protocol OEZPageViewDelegate <NSObject>
+@protocol OEZPageViewDelegate <NSObject,UIScrollViewDelegate>
 @required
 -(NSInteger) numberPageCountPageView:(OEZPageView*) pageView;
 -(OEZPageViewCell*)   pageView:(OEZPageView*) pageView cellForPageAtIndex:(NSInteger) pageIndex;
