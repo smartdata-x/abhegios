@@ -21,13 +21,16 @@
     NSArray*  array = [GroupInfo initWithsPlistResource:configName  ofType:@"plist"];
     for (GroupInfo *group in array)
     {
-        if( entityClass == nil )
+       
+        if(  [group entityClassName] != nil )
         {
-            if(  [group entityClassName] != nil )
                 [group setEntitysDictionarys:[groupsData objectForKey:[group key]] entityClass:[NSClassFromString([group entityClassName]) class]];
         }
         else
+        {
+            [group setEntityClassName:NSStringFromClass(entityClass)];
             [group setEntitysDictionarys:[groupsData objectForKey:[group key]] entityClass:entityClass];
+        }
     }
     return array;
 }

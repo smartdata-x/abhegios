@@ -27,7 +27,7 @@
 		1AD64903B17F5D12DC09D1BB /* ThirdLoginInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64A4A58510940FB83B455 /* ThirdLoginInfo.m */; };
 		1AD649CD0AF8969FFF4B9641 /* ILogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64D36FCBA289B16C1A832 /* ILogin.m */; };
 		1AD64A7E02E7FE36F6F1B45D /* HandleOpenURLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD641DD2208878E496A9A4D /* HandleOpenURLHelper.m */; };
-		1AD64D9C70E0A1325B3F2A09 /* AppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64937DADE448C8201DFCF /* AppViewController.m */; };
+		1AD64D9C70E0A1325B3F2A09 /* AppHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64937DADE448C8201DFCF /* AppHomeViewController.m */; };
 		1AD64DA54158CF05FAE8F2A6 /* WBLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64ADF6021C604900147BF /* WBLogin.m */; };
 		1AD64F3A04AFCBB948106908 /* AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64A85039C51E682F19BA9 /* AppInfo.m */; };
 		CB6A21BD1A6FF2AA0087546F /* BookStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21BC1A6FF2AA0087546F /* BookStoreViewController.m */; };
@@ -68,7 +68,6 @@
 		EA02913E1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = EA02913D1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.m */; };
 		EA13DDCE1A6F8A35004AB7E6 /* NSString+NSStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDCD1A6F8A35004AB7E6 /* NSString+NSStringCategory.m */; };
 		EA13DDD11A6F8D3A004AB7E6 /* AppDetailsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDCF1A6F8D3A004AB7E6 /* AppDetailsInfo.m */; };
-		EA13DDD41A6F8DF9004AB7E6 /* AppDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDD21A6F8DF9004AB7E6 /* AppDetailsViewController.m */; };
 		EA13DDDC1A6F961E004AB7E6 /* MyNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDDB1A6F961E004AB7E6 /* MyNavigationViewController.m */; };
 		EA13DDDF1A6FA0D0004AB7E6 /* AppTableViewCellStyle3.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDDE1A6FA0D0004AB7E6 /* AppTableViewCellStyle3.m */; };
 		EA3D07721A6CD88A00189765 /* LoginTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3D076F1A6CD88A00189765 /* LoginTableViewCell.m */; };
@@ -76,8 +75,6 @@
 		EA3D07761A6CD9A600189765 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD64B4D5E1BC035B41C15E2 /* Main.storyboard */; };
 		EA3D07771A6CD9A600189765 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AD644FB93BF0B06901FCD5E /* LaunchScreen.xib */; };
 		EA3D07791A6CDA2000189765 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EA3D07781A6CDA2000189765 /* WeiboSDK.bundle */; };
-		EA40430A1A73C0F800D904C5 /* AppDetailsTableViewCellStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4043091A73C0F800D904C5 /* AppDetailsTableViewCellStyle2.m */; };
-		EA40430D1A73CF8B00D904C5 /* AppDetailsTableViewCellStyle4.m in Sources */ = {isa = PBXBuildFile; fileRef = EA40430C1A73CF8B00D904C5 /* AppDetailsTableViewCellStyle4.m */; };
 		EA54A1171A6E0E6100322C42 /* FoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA54A1161A6E0E6100322C42 /* FoundViewController.m */; };
 		EA6500AE1A6F34630043C4F2 /* LoginItemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6500AD1A6F34630043C4F2 /* LoginItemInfo.m */; };
 		EA75998E1A7120A50027FC8B /* uilogindata.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA75998A1A7120A50027FC8B /* uilogindata.plist */; };
@@ -120,11 +117,19 @@
 		EAA454441A70DEAF0057A770 /* OEZCommSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA454431A70DEAF0057A770 /* OEZCommSDK.framework */; };
 		EAA773881A7222C400EBD512 /* AppTableViewPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA773871A7222C400EBD512 /* AppTableViewPageCell.m */; };
 		EAA7738B1A72241B00EBD512 /* AppTableViewCellStyle4.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA7738A1A72241B00EBD512 /* AppTableViewCellStyle4.m */; };
+		EABA1EB61A76705E00A76BD2 /* GameHomeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EABA1EB51A76705E00A76BD2 /* GameHomeInfo.m */; };
+		EABA1EB81A76738A00A76BD2 /* gamehomeinfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = EABA1EB71A76738A00A76BD2 /* gamehomeinfo.plist */; };
+		EABA1EBA1A76745E00A76BD2 /* gamehomeinfo_test.json in Resources */ = {isa = PBXBuildFile; fileRef = EABA1EB91A76745E00A76BD2 /* gamehomeinfo_test.json */; };
+		EABA1EBD1A7675B100A76BD2 /* GameHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EABA1EBC1A7675B100A76BD2 /* GameHomeViewController.m */; };
+		EABA1EC91A7679F200A76BD2 /* AppDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EABA1EC11A7679F200A76BD2 /* AppDetailsViewController.m */; };
+		EABA1ECA1A7679F200A76BD2 /* AppDetailsTableViewCellStyle4.m in Sources */ = {isa = PBXBuildFile; fileRef = EABA1EC31A7679F200A76BD2 /* AppDetailsTableViewCellStyle4.m */; };
+		EABA1ECB1A7679F200A76BD2 /* AppDetailsTableViewCellStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = EABA1EC51A7679F200A76BD2 /* AppDetailsTableViewCellStyle2.m */; };
+		EABA1ECC1A7679F200A76BD2 /* AppDetailsTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = EABA1EC71A7679F200A76BD2 /* AppDetailsTableViewCellStyle1.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1AD6400B313AC7FEE3D78518 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
-		1AD6405047562177033B2A56 /* AppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppViewController.h; sourceTree = "<group>"; };
+		1AD6405047562177033B2A56 /* AppHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppHomeViewController.h; sourceTree = "<group>"; };
 		1AD6408FC527AE4826BBFD19 /* UserHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserHelper.m; sourceTree = "<group>"; };
 		1AD640F884FE1B88F0A9CA5F /* WXLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXLogin.h; sourceTree = "<group>"; };
 		1AD641DD2208878E496A9A4D /* HandleOpenURLHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandleOpenURLHelper.m; sourceTree = "<group>"; };
@@ -153,7 +158,7 @@
 		1AD648C331E9E9DEE2764A4D /* UserHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserHelper.h; sourceTree = "<group>"; };
 		1AD64906666AE7E8636FF430 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		1AD6492B19568EF4CBFC4EA6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1AD64937DADE448C8201DFCF /* AppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppViewController.m; sourceTree = "<group>"; };
+		1AD64937DADE448C8201DFCF /* AppHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppHomeViewController.m; sourceTree = "<group>"; };
 		1AD649A2F2D6D83B5DB8AB91 /* error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = error.png; sourceTree = "<group>"; };
 		1AD64A4A58510940FB83B455 /* ThirdLoginInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdLoginInfo.m; sourceTree = "<group>"; };
 		1AD64A4EF1E9A486E508A25A /* AppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfo.h; sourceTree = "<group>"; };
@@ -236,14 +241,15 @@
 		CB6A221F1A765F7F0087546F /* BookDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookDownloader.m; sourceTree = "<group>"; };
 		CB6A22211A765F9C0087546F /* BookFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookFileManager.h; sourceTree = "<group>"; };
 		CB6A22221A765F9C0087546F /* BookFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookFileManager.m; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		CB6A22241A7673E60087546F /* booksearchresult_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = booksearchresult_test.json; sourceTree = "<group>"; };
 		EA02913C1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailsTableViewCellStyle1.h; sourceTree = "<group>"; };
 		EA02913D1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsTableViewCellStyle1.m; sourceTree = "<group>"; };
+=======
+>>>>>>> d7d73f8c8cefcf88bb3e52506f44c05095ac03ae
 		EA13DDCD1A6F8A35004AB7E6 /* NSString+NSStringCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringCategory.m"; sourceTree = "<group>"; };
 		EA13DDCF1A6F8D3A004AB7E6 /* AppDetailsInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsInfo.m; sourceTree = "<group>"; };
 		EA13DDD01A6F8D3A004AB7E6 /* AppDetailsInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailsInfo.h; sourceTree = "<group>"; };
-		EA13DDD21A6F8DF9004AB7E6 /* AppDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsViewController.m; sourceTree = "<group>"; };
-		EA13DDD31A6F8DF9004AB7E6 /* AppDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailsViewController.h; sourceTree = "<group>"; };
 		EA13DDDA1A6F961E004AB7E6 /* MyNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNavigationViewController.h; sourceTree = "<group>"; };
 		EA13DDDB1A6F961E004AB7E6 /* MyNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNavigationViewController.m; sourceTree = "<group>"; };
 		EA13DDDD1A6FA0D0004AB7E6 /* AppTableViewCellStyle3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTableViewCellStyle3.h; sourceTree = "<group>"; };
@@ -253,10 +259,6 @@
 		EA3D07701A6CD88A00189765 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		EA3D07711A6CD88A00189765 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		EA3D07781A6CDA2000189765 /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
-		EA4043081A73C0F800D904C5 /* AppDetailsTableViewCellStyle2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailsTableViewCellStyle2.h; sourceTree = "<group>"; };
-		EA4043091A73C0F800D904C5 /* AppDetailsTableViewCellStyle2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsTableViewCellStyle2.m; sourceTree = "<group>"; };
-		EA40430B1A73CF8B00D904C5 /* AppDetailsTableViewCellStyle4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailsTableViewCellStyle4.h; sourceTree = "<group>"; };
-		EA40430C1A73CF8B00D904C5 /* AppDetailsTableViewCellStyle4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsTableViewCellStyle4.m; sourceTree = "<group>"; };
 		EA54A1151A6E0E6100322C42 /* FoundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundViewController.h; sourceTree = "<group>"; };
 		EA54A1161A6E0E6100322C42 /* FoundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundViewController.m; sourceTree = "<group>"; };
 		EA6500AC1A6F34630043C4F2 /* LoginItemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginItemInfo.h; sourceTree = "<group>"; };
@@ -316,6 +318,20 @@
 		EAA773871A7222C400EBD512 /* AppTableViewPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTableViewPageCell.m; sourceTree = "<group>"; };
 		EAA773891A72241B00EBD512 /* AppTableViewCellStyle4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTableViewCellStyle4.h; sourceTree = "<group>"; };
 		EAA7738A1A72241B00EBD512 /* AppTableViewCellStyle4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTableViewCellStyle4.m; sourceTree = "<group>"; };
+		EABA1EB41A76705E00A76BD2 /* GameHomeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHomeInfo.h; sourceTree = "<group>"; };
+		EABA1EB51A76705E00A76BD2 /* GameHomeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameHomeInfo.m; sourceTree = "<group>"; };
+		EABA1EB71A76738A00A76BD2 /* gamehomeinfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = gamehomeinfo.plist; sourceTree = "<group>"; };
+		EABA1EB91A76745E00A76BD2 /* gamehomeinfo_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gamehomeinfo_test.json; sourceTree = "<group>"; };
+		EABA1EBB1A7675B100A76BD2 /* GameHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHomeViewController.h; sourceTree = "<group>"; };
+		EABA1EBC1A7675B100A76BD2 /* GameHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameHomeViewController.m; sourceTree = "<group>"; };
+		EABA1EC11A7679F200A76BD2 /* AppDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsViewController.m; sourceTree = "<group>"; };
+		EABA1EC21A7679F200A76BD2 /* AppDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailsViewController.h; sourceTree = "<group>"; };
+		EABA1EC31A7679F200A76BD2 /* AppDetailsTableViewCellStyle4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsTableViewCellStyle4.m; sourceTree = "<group>"; };
+		EABA1EC41A7679F200A76BD2 /* AppDetailsTableViewCellStyle4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailsTableViewCellStyle4.h; sourceTree = "<group>"; };
+		EABA1EC51A7679F200A76BD2 /* AppDetailsTableViewCellStyle2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsTableViewCellStyle2.m; sourceTree = "<group>"; };
+		EABA1EC61A7679F200A76BD2 /* AppDetailsTableViewCellStyle2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailsTableViewCellStyle2.h; sourceTree = "<group>"; };
+		EABA1EC71A7679F200A76BD2 /* AppDetailsTableViewCellStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsTableViewCellStyle1.m; sourceTree = "<group>"; };
+		EABA1EC81A7679F200A76BD2 /* AppDetailsTableViewCellStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailsTableViewCellStyle1.h; sourceTree = "<group>"; };
 		EADD5B571A6F7A4700CA6633 /* NSString+NSStringCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSStringCategory.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -476,10 +492,9 @@
 		1AD6490FE4B4EC9C6E85AB1A /* App */ = {
 			isa = PBXGroup;
 			children = (
-				EA13DDD21A6F8DF9004AB7E6 /* AppDetailsViewController.m */,
-				EA13DDD31A6F8DF9004AB7E6 /* AppDetailsViewController.h */,
-				1AD64937DADE448C8201DFCF /* AppViewController.m */,
-				1AD6405047562177033B2A56 /* AppViewController.h */,
+				EABA1EC01A7679B600A76BD2 /* Details */,
+				1AD64937DADE448C8201DFCF /* AppHomeViewController.m */,
+				1AD6405047562177033B2A56 /* AppHomeViewController.h */,
 				EA8D74911A6E7CF9004C17C2 /* AppTableViewCellStyle1.h */,
 				EA8D74921A6E7CF9004C17C2 /* AppTableViewCellStyle1.m */,
 				EA8D74971A6E9DC2004C17C2 /* AppTableViewCellStyle2.h */,
@@ -490,14 +505,10 @@
 				EAA773871A7222C400EBD512 /* AppTableViewPageCell.m */,
 				EAA773891A72241B00EBD512 /* AppTableViewCellStyle4.h */,
 				EAA7738A1A72241B00EBD512 /* AppTableViewCellStyle4.m */,
-				EA02913C1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.h */,
-				EA02913D1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.m */,
-				EA4043081A73C0F800D904C5 /* AppDetailsTableViewCellStyle2.h */,
-				EA4043091A73C0F800D904C5 /* AppDetailsTableViewCellStyle2.m */,
-				EA40430B1A73CF8B00D904C5 /* AppDetailsTableViewCellStyle4.h */,
-				EA40430C1A73CF8B00D904C5 /* AppDetailsTableViewCellStyle4.m */,
 				EA9AAD931A7625AE000C4C21 /* AppHScrollViewCell1.h */,
 				EA9AAD941A7625AE000C4C21 /* AppHScrollViewCell1.m */,
+				EABA1EBB1A7675B100A76BD2 /* GameHomeViewController.h */,
+				EABA1EBC1A7675B100A76BD2 /* GameHomeViewController.m */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -538,6 +549,8 @@
 				EA75998D1A7120A50027FC8B /* appdetailspage_test.json */,
 				1AD64688EC1876C19A332D96 /* Info.plist */,
 				CB6A21CD1A7007970087546F /* bookstorehome.plist */,
+				EABA1EB71A76738A00A76BD2 /* gamehomeinfo.plist */,
+				EABA1EB91A76745E00A76BD2 /* gamehomeinfo_test.json */,
 				CB6A21CB1A6FFCC20087546F /* bookstorehome_test.json */,
 				CB6A221A1A765ABF0087546F /* bookdetail_test.json */,
 				CB6A22241A7673E60087546F /* booksearchresult_test.json */,
@@ -645,6 +658,7 @@
 		1AD64E767514ABADB117A29B /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				EABA1EB31A76702200A76BD2 /* Game */,
 				EA88BFAB1A749037004885A0 /* Movie */,
 				EA88BFA71A748C15004885A0 /* Music */,
 				CB6A21C11A6FFA110087546F /* Book */,
@@ -792,6 +806,30 @@
 			path = OEZCommSDK;
 			sourceTree = "<group>";
 		};
+		EABA1EB31A76702200A76BD2 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				EABA1EB41A76705E00A76BD2 /* GameHomeInfo.h */,
+				EABA1EB51A76705E00A76BD2 /* GameHomeInfo.m */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		EABA1EC01A7679B600A76BD2 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				EABA1EC11A7679F200A76BD2 /* AppDetailsViewController.m */,
+				EABA1EC21A7679F200A76BD2 /* AppDetailsViewController.h */,
+				EABA1EC31A7679F200A76BD2 /* AppDetailsTableViewCellStyle4.m */,
+				EABA1EC41A7679F200A76BD2 /* AppDetailsTableViewCellStyle4.h */,
+				EABA1EC51A7679F200A76BD2 /* AppDetailsTableViewCellStyle2.m */,
+				EABA1EC61A7679F200A76BD2 /* AppDetailsTableViewCellStyle2.h */,
+				EABA1EC71A7679F200A76BD2 /* AppDetailsTableViewCellStyle1.m */,
+				EABA1EC81A7679F200A76BD2 /* AppDetailsTableViewCellStyle1.h */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 		EADD5B451A6F702600CA6633 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -867,6 +905,7 @@
 				EA9AAD921A762008000C4C21 /* AppHScrollViewCell1.xib in Resources */,
 				EA3D07771A6CD9A600189765 /* LaunchScreen.xib in Resources */,
 				1AD6460C6803B48F071D6E89 /* Images.xcassets in Resources */,
+				EABA1EB81A76738A00A76BD2 /* gamehomeinfo.plist in Resources */,
 				EA75998F1A7120A50027FC8B /* appstorehome.plist in Resources */,
 				EA88BFBD1A74E37F004885A0 /* recommendhome_test.json in Resources */,
 				1AD6407932CF4CF9417DEF43 /* Info.plist in Resources */,
@@ -879,6 +918,7 @@
 				EA8C83311A731FFF00901CFC /* PageViewImageCell.xib in Resources */,
 				CB6A221B1A765ABF0087546F /* bookdetail_test.json in Resources */,
 				CB6A21E31A729F1E0087546F /* BookInfoViewStyle1.xib in Resources */,
+				EABA1EBA1A76745E00A76BD2 /* gamehomeinfo_test.json in Resources */,
 				1AD64049F3F7AA6F294AAE32 /* error.png in Resources */,
 				EA8C83331A7320B400901CFC /* PageViewImageCell1.xib in Resources */,
 				EA7599931A7120CB0027FC8B /* uifounddata.plist in Resources */,
@@ -902,17 +942,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EABA1EB61A76705E00A76BD2 /* GameHomeInfo.m in Sources */,
 				CB6A21DB1A7155750087546F /* BookShelfViewController.m in Sources */,
 				CB6A21DE1A7268EA0087546F /* BookReaderViewController.m in Sources */,
 				EA6500AE1A6F34630043C4F2 /* LoginItemInfo.m in Sources */,
 				CB6A21FE1A73D8AF0087546F /* BookDetailInfoTableViewCellStyle3.m in Sources */,
 				1AD64804C9FA33B5797A36AC /* AppDelegate.m in Sources */,
+				EABA1ECC1A7679F200A76BD2 /* AppDetailsTableViewCellStyle1.m in Sources */,
 				1AD641D66B96305DB64E42F7 /* main.m in Sources */,
 				1AD64A7E02E7FE36F6F1B45D /* HandleOpenURLHelper.m in Sources */,
-				EA40430A1A73C0F800D904C5 /* AppDetailsTableViewCellStyle2.m in Sources */,
-				EA02913E1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.m in Sources */,
 				CB6A21F31A73CFE00087546F /* BookDetailInfoTableViewCellStyle1.m in Sources */,
-				EA40430D1A73CF8B00D904C5 /* AppDetailsTableViewCellStyle4.m in Sources */,
 				EA88BFA51A748A68004885A0 /* BaseInfo.m in Sources */,
 				EA13DDD11A6F8D3A004AB7E6 /* AppDetailsInfo.m in Sources */,
 				1AD6455F3CEB60EEE78C0C77 /* UserHelper.m in Sources */,
@@ -928,8 +967,10 @@
 				CB6A21D71A712FBD0087546F /* BookStoreTableViewCellStyle4.m in Sources */,
 				CB6A21BD1A6FF2AA0087546F /* BookStoreViewController.m in Sources */,
 				EA9486391A6DE09C003EE99B /* MainViewController.m in Sources */,
+				EABA1EBD1A7675B100A76BD2 /* GameHomeViewController.m in Sources */,
 				CB6A22071A73E43F0087546F /* BookDetailInfoTableViewCellStyle0.m in Sources */,
 				CB6A21CA1A6FFAEF0087546F /* BookInfo.m in Sources */,
+				EABA1EC91A7679F200A76BD2 /* AppDetailsViewController.m in Sources */,
 				EA13DDDC1A6F961E004AB7E6 /* MyNavigationViewController.m in Sources */,
 				EA88BFAA1A748C2A004885A0 /* MusicInfo.m in Sources */,
 				EA88BFB41A74CB76004885A0 /* RecommendViewController.m in Sources */,
@@ -937,6 +978,7 @@
 				1AD64903B17F5D12DC09D1BB /* ThirdLoginInfo.m in Sources */,
 				CB6A22041A73DF160087546F /* BookDetailInfoTableViewCellStyle5.m in Sources */,
 				EA3D07731A6CD88A00189765 /* LoginViewController.m in Sources */,
+				EABA1ECB1A7679F200A76BD2 /* AppDetailsTableViewCellStyle2.m in Sources */,
 				CB6A21EB1A73C57C0087546F /* BookDetailInfoTableViewController.m in Sources */,
 				EA13DDDF1A6FA0D0004AB7E6 /* AppTableViewCellStyle3.m in Sources */,
 				EAA7738B1A72241B00EBD512 /* AppTableViewCellStyle4.m in Sources */,
@@ -952,13 +994,13 @@
 				CB6A21C01A6FF5600087546F /* BookStoreTableViewCellStyle1.m in Sources */,
 				CB6A22011A73DC440087546F /* BookDetailInfoTableViewCellStyle4.m in Sources */,
 				1AD64625B4F594E287714029 /* QQLogin.m in Sources */,
-				EA13DDD41A6F8DF9004AB7E6 /* AppDetailsViewController.m in Sources */,
 				CB6A22101A74B4C10087546F /* BookDirectoryTableViewController.m in Sources */,
+				EABA1ECA1A7679F200A76BD2 /* AppDetailsTableViewCellStyle4.m in Sources */,
 				1AD6419EC3E465BEDDED654B /* WXLogin.m in Sources */,
 				1AD64DA54158CF05FAE8F2A6 /* WBLogin.m in Sources */,
 				CB6A21E61A72B3B80087546F /* FavRateViewStyle.m in Sources */,
 				CB6A22191A74C5180087546F /* BookDirectoryTableViewCellStyle1.m in Sources */,
-				1AD64D9C70E0A1325B3F2A09 /* AppViewController.m in Sources */,
+				1AD64D9C70E0A1325B3F2A09 /* AppHomeViewController.m in Sources */,
 				CB6A21E11A729B050087546F /* BookInfoViewStyle1.m in Sources */,
 				CB6A22231A765F9C0087546F /* BookFileManager.m in Sources */,
 				CB6A21D11A711CD50087546F /* BookStoreTableViewCellStyle2.m in Sources */,

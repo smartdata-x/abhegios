@@ -15,6 +15,6 @@ typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
     AppTableViewCellStyleThree ,
     AppTableViewCellStyleFour
 };
-@interface AppViewController : UITableViewController
+@interface AppHomeViewController : UITableViewController
 
 @end
