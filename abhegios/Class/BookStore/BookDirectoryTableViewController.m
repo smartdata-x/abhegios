@@ -11,19 +11,20 @@
 #import "BookSearchResultTableViewController.h"
 
 @interface BookDirectoryTableViewController ()
-@property (nonatomic, retain) GroupInfo *bookInfoGroup;
+{
+    NSArray *searchType;
+}
 @end
 
 @implementation BookDirectoryTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self testData];
+}
+
+- (void)testData {
+    searchType = [[NSArray alloc] initWithObjects:@"历史军事", @"武侠仙侠", @"玄乎奇幻", @"悬疑推理", nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,7 +33,7 @@
 }
 
 - (void)setData:(id)data {
-    _bookInfoGroup = data;
+    
 }
 
 #pragma mark - Table view data source
@@ -42,7 +43,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[_bookInfoGroup entitys] count];
+    return [searchType count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -65,7 +66,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     OEZTableViewCell *viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDirectoryTableViewCellStyle1"];
-    [viewCell setData:[[_bookInfoGroup entitys] objectAtIndex:indexPath.row]];
+    [viewCell setData:[searchType objectAtIndex:indexPath.row]];
     return viewCell;
 }
 
@@ -73,7 +74,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self.navigationController pushViewControllerWithIdentifier:@"BookSearchResultTableViewController" completion:^(UIViewController *viewController) {
         BookSearchResultTableViewController *bookSearchResultView = (BookSearchResultTableViewController *)viewController;
-        [bookSearchResultView setData:_bookInfoGroup];
+        [bookSearchResultView setData:nil];
     } animated:YES];
 }
 
