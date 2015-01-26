@@ -10,7 +10,7 @@
 #import "BookInfo.h"
 
 @interface BookDetailInfo : BookInfo
-@property NSUInteger chapters;
-@property (nonatomic, copy) NSString *introduction;
-@property (nonatomic, retain) NSArray *labels;
+@property (nonatomic, retain) NSArray *label;
+@property (nonatomic, copy) NSString *free;
+@property (nonatomic, copy) NSString *chapter;
 @end

@@ -9,9 +9,14 @@
 #import "BookDetailInfoTableViewController.h"
 #import "BookDetailInfoTableViewCellStyle1.h"
 #import "BookDetailInfoTableViewCellStyle4.h"
+#import "GroupInfo.h"
+#import "BookDetailInfo.h"
 
 @interface BookDetailInfoTableViewController ()
-@property (nonatomic, copy) BookDetailInfo *bookDetailInfo;
+{
+    NSArray *_bookDetailGroups;
+    BookDetailInfo *_bookDetailInfo;
+}
 @end
 
 @implementation BookDetailInfoTableViewController
@@ -32,7 +37,21 @@
 }
 
 - (void)setData:(id)data {
-    _bookDetailInfo = data;
+    BookInfo *bookInfo = (BookInfo *)data;
+    // assign from super
+    _bookDetailInfo = [[BookDetailInfo alloc] init];
+    _bookDetailInfo.name = bookInfo.name;
+    _bookDetailInfo.summary = bookInfo.summary;
+    _bookDetailInfo.pic = bookInfo.pic;
+    _bookDetailInfo.author = bookInfo.author;
+    
+    // get from local
+    _bookDetailInfo.author = @"达摩祖师";
+    _bookDetailInfo.chapter = @"22";
+    _bookDetailInfo.star = 3.5;
+    _bookDetailInfo.summary = @"《金刚经》是大乘佛教的重要经典。全称《能断金刚般若波罗蜜经》（vájra-cchedikā-prajñā-pāramitā-sūtra 梵文释义：以能断金刚的智慧到彼岸），又称《金刚般若波罗蜜经》，简称《金刚经》。后秦鸠摩罗什翻译《金刚经》的法本最早，文字流畅，简明扼要，流传最广，是人们常用的译本。";
+    _bookDetailInfo.free = @"http://book.free.miyomate.com/type/22.txt";
+    _bookDetailInfo.label = [[NSArray alloc] initWithObjects:@"武侠", @"男生频道", nil];
 }
 
 #pragma mark - Table view data source
@@ -43,7 +62,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == BookDetailInfoSectionTagInfo) {
-        int labelCount = [[_bookDetailInfo labels] count];
+        int labelCount = [[_bookDetailInfo label] count];
         int rows = (int)ceilf((float)labelCount / 3.0);
         return rows;
     }
@@ -117,7 +136,7 @@
         case BookDetailInfoSectionTagInfo:
             viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDetailInfoTableViewCellStyle4"];
             if (_bookDetailInfo) {
-                [(BookDetailInfoTableViewCellStyle4 *)viewCell setDataWithIndex:_bookDetailInfo Index:indexPath.row];
+               [(BookDetailInfoTableViewCellStyle4 *)viewCell setDataWithIndex:_bookDetailInfo Index:indexPath.row];
             }
             break;
             
