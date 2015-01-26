@@ -23,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self testData];
+    
 }
 
 -(void) testData

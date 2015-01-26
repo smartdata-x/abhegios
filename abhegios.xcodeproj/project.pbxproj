@@ -111,6 +111,8 @@
 		EA8E8F6D1A68F56000FEA027 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F6C1A68F56000FEA027 /* libz.1.1.3.dylib */; };
 		EA8E8F6F1A68F5E000FEA027 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8E8F6E1A68F5E000FEA027 /* libstdc++.dylib */; };
 		EA9486391A6DE09C003EE99B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9486381A6DE09C003EE99B /* MainViewController.m */; };
+		EA9AAD921A762008000C4C21 /* AppHScrollViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9AAD911A762008000C4C21 /* AppHScrollViewCell1.xib */; };
+		EA9AAD951A7625AE000C4C21 /* AppHScrollViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9AAD941A7625AE000C4C21 /* AppHScrollViewCell1.m */; };
 		EAA454441A70DEAF0057A770 /* OEZCommSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA454431A70DEAF0057A770 /* OEZCommSDK.framework */; };
 		EAA773881A7222C400EBD512 /* AppTableViewPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA773871A7222C400EBD512 /* AppTableViewPageCell.m */; };
 		EAA7738B1A72241B00EBD512 /* AppTableViewCellStyle4.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA7738A1A72241B00EBD512 /* AppTableViewCellStyle4.m */; };
@@ -296,6 +298,9 @@
 		EA8E8F6E1A68F5E000FEA027 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		EA9486371A6DE09C003EE99B /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		EA9486381A6DE09C003EE99B /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		EA9AAD911A762008000C4C21 /* AppHScrollViewCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppHScrollViewCell1.xib; sourceTree = SOURCE_ROOT; };
+		EA9AAD931A7625AE000C4C21 /* AppHScrollViewCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppHScrollViewCell1.h; sourceTree = "<group>"; };
+		EA9AAD941A7625AE000C4C21 /* AppHScrollViewCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppHScrollViewCell1.m; sourceTree = "<group>"; };
 		EAA454431A70DEAF0057A770 /* OEZCommSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OEZCommSDK.framework; sourceTree = "<group>"; };
 		EAA773861A7222C400EBD512 /* AppTableViewPageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTableViewPageCell.h; sourceTree = "<group>"; };
 		EAA773871A7222C400EBD512 /* AppTableViewPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTableViewPageCell.m; sourceTree = "<group>"; };
@@ -481,6 +486,8 @@
 				EA4043091A73C0F800D904C5 /* AppDetailsTableViewCellStyle2.m */,
 				EA40430B1A73CF8B00D904C5 /* AppDetailsTableViewCellStyle4.h */,
 				EA40430C1A73CF8B00D904C5 /* AppDetailsTableViewCellStyle4.m */,
+				EA9AAD931A7625AE000C4C21 /* AppHScrollViewCell1.h */,
+				EA9AAD941A7625AE000C4C21 /* AppHScrollViewCell1.m */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -569,6 +576,7 @@
 				EA8C83301A731FFF00901CFC /* PageViewImageCell.xib */,
 				EA8C83321A7320B400901CFC /* PageViewImageCell1.xib */,
 				CB6A21E71A732F840087546F /* FavRateViewStyle.xib */,
+				EA9AAD911A762008000C4C21 /* AppHScrollViewCell1.xib */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -839,6 +847,7 @@
 			files = (
 				CB6A21F01A73C7430087546F /* BookInfoViewStyle2.xib in Resources */,
 				EA3D07761A6CD9A600189765 /* Main.storyboard in Resources */,
+				EA9AAD921A762008000C4C21 /* AppHScrollViewCell1.xib in Resources */,
 				EA3D07771A6CD9A600189765 /* LaunchScreen.xib in Resources */,
 				1AD6460C6803B48F071D6E89 /* Images.xcassets in Resources */,
 				EA75998F1A7120A50027FC8B /* appstorehome.plist in Resources */,
@@ -895,6 +904,7 @@
 				CB6A21F61A73D4BD0087546F /* BookDetailInfoTableViewCellStyle2.m in Sources */,
 				CB6A21F91A73D6430087546F /* BookInfoViewStyle3.m in Sources */,
 				EA89883D1A7285BB00877E63 /* AppInfoViewStyle3.m in Sources */,
+				EA9AAD951A7625AE000C4C21 /* AppHScrollViewCell1.m in Sources */,
 				CB6A220D1A74B48E0087546F /* BookSearchResultTableViewController.m in Sources */,
 				EA88BFB11A7497B0004885A0 /* ADInfo.m in Sources */,
 				CB6A21D71A712FBD0087546F /* BookStoreTableViewCellStyle4.m in Sources */,

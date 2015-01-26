@@ -8,7 +8,7 @@
 
 #import "AppTableViewCellStyle3.h"
 #import "AppInfo.h"
-#import "AppInfoViewStyle3.h"
+#import "AppHScrollViewCell1.h"
 
 #define kMaxViewItems 8
 #define kVitemWidth  78
@@ -18,39 +18,32 @@
     
 }
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    for (int i = 0; i < kMaxViewItems; ++i) {
-        [self addViewItem];
-    }
-}
 
--(void) addViewItem
+
+-(NSInteger) numberColumnCountHScrollView:(OEZHScrollView *)hScrollView
 {
-    CGFloat x = [[self subviews] count] * kVitemWidth;
-    AppInfoViewStyle3* viewItem = [AppInfoViewStyle3 loadFromNib];
-    CGRect rect = [viewItem frame];
-    rect.origin.x = x;
-    [viewItem setFrame:rect];
-    [viewItem setTag:[[self subviews] count]];
-    [self addSubview:viewItem];
-    
+    return [self.data count];
 }
 
-//使用了scrollView的subviews存储 viewitem ，如遇添加其它view到scrollView请做处理
+-(CGFloat) hScrollView:(OEZHScrollView *)hScrollView widthForColumnAtIndex:(NSInteger)columnIndex
+{
+    return 78;
+}
+
+-(OEZHScrollViewCell*) hScrollView:(OEZHScrollView *)hScrollView cellForColumnAtIndex:(NSInteger)columnIndex
+{
+    AppHScrollViewCell1 *cell = [hScrollView dequeueReusableCellWithIdentifier:@"AppHScrollViewCell1"];
+    [cell setData:[self.data objectAtIndex:columnIndex]];
+    return cell;
+}
+
+
 -(void) setData:(id)data
 {
-    [super setData:data];
-    NSUInteger count = [data count];
-     count = count > kMaxViewItems ? kMaxViewItems: count;
-    [self setContentWidth:kVitemWidth*count];
-    NSUInteger i = 0;
-    for (; i < count; ++i)
+    if( data != self.data)
     {
-        [[[self subviews] objectAtIndex:i] setData:[data objectAtIndex:i]];
-    }
-    for (; i < kMaxViewItems; ++i) {
-        [[[self subviews] objectAtIndex:i] setHidden:YES];
+        [super setData:data];
+        [self.hScrollView reloadData];
     }
 }
 

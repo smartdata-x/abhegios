@@ -19,6 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSLog(@"%@",NSStringFromCGRect(kMainScreenFrame));
+    OEZHScrollView *view = [[OEZHScrollView alloc] init];
     // Override point for customization after application launch.
     return YES;
 }
