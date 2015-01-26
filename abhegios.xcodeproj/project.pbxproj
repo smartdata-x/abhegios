@@ -116,6 +116,7 @@
 		EAA454441A70DEAF0057A770 /* OEZCommSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA454431A70DEAF0057A770 /* OEZCommSDK.framework */; };
 		EAA773881A7222C400EBD512 /* AppTableViewPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA773871A7222C400EBD512 /* AppTableViewPageCell.m */; };
 		EAA7738B1A72241B00EBD512 /* AppTableViewCellStyle4.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA7738A1A72241B00EBD512 /* AppTableViewCellStyle4.m */; };
+		EABA1EB61A76705E00A76BD2 /* GameHomeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EABA1EB51A76705E00A76BD2 /* GameHomeInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -306,6 +307,8 @@
 		EAA773871A7222C400EBD512 /* AppTableViewPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTableViewPageCell.m; sourceTree = "<group>"; };
 		EAA773891A72241B00EBD512 /* AppTableViewCellStyle4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTableViewCellStyle4.h; sourceTree = "<group>"; };
 		EAA7738A1A72241B00EBD512 /* AppTableViewCellStyle4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTableViewCellStyle4.m; sourceTree = "<group>"; };
+		EABA1EB41A76705E00A76BD2 /* GameHomeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHomeInfo.h; sourceTree = "<group>"; };
+		EABA1EB51A76705E00A76BD2 /* GameHomeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameHomeInfo.m; sourceTree = "<group>"; };
 		EADD5B571A6F7A4700CA6633 /* NSString+NSStringCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSStringCategory.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -633,6 +636,7 @@
 		1AD64E767514ABADB117A29B /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				EABA1EB31A76702200A76BD2 /* Game */,
 				EA88BFAB1A749037004885A0 /* Movie */,
 				EA88BFA71A748C15004885A0 /* Music */,
 				CB6A21C11A6FFA110087546F /* Book */,
@@ -776,6 +780,15 @@
 			path = OEZCommSDK;
 			sourceTree = "<group>";
 		};
+		EABA1EB31A76702200A76BD2 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				EABA1EB41A76705E00A76BD2 /* GameHomeInfo.h */,
+				EABA1EB51A76705E00A76BD2 /* GameHomeInfo.m */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
 		EADD5B451A6F702600CA6633 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -884,6 +897,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EABA1EB61A76705E00A76BD2 /* GameHomeInfo.m in Sources */,
 				CB6A21DB1A7155750087546F /* BookShelfViewController.m in Sources */,
 				CB6A21DE1A7268EA0087546F /* BookReaderViewController.m in Sources */,
 				EA6500AE1A6F34630043C4F2 /* LoginItemInfo.m in Sources */,
