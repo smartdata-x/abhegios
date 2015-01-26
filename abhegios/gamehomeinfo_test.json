@@ -56,6 +56,20 @@
                   "name": "暗黑黎明",
                   "type": 1,
                   "order": 5
+                  },
+                  {
+                  "id": 6,
+                  "logo": "http: //pic.desgin.miglab.com/abheg/store/app/products/6/log.png",
+                  "name": "淘宝",
+                  "type": 1,
+                  "order": 1
+                  },
+                  {
+                  "id": 7,
+                  "logo": "http: //pic.desgin.miglab.com/abheg/store/app/products/7/logo.jpg",
+                  "name": "天天爱消除",
+                  "type": 1,
+                  "order": 2
                   }
                   ],
     "popularity": [
@@ -79,6 +93,41 @@
                    "name": "口袋妖怪",
                    "type": 1,
                    "order": 2
+                   },
+                   {
+                   "id": 6,
+                   "logo": "http: //pic.desgin.miglab.com/abheg/store/app/products/6/log.png",
+                   "name": "淘宝",
+                   "type": 1,
+                   "order": 1
+                   },
+                   {
+                   "id": 7,
+                   "logo": "http: //pic.desgin.miglab.com/abheg/store/app/products/7/logo.jpg",
+                   "name": "天天爱消除",
+                   "type": 1,
+                   "order": 2
+                   },
+                   {
+                   "id": 8,
+                   "logo": "http: //pic.desgin.miglab.com/abheg/store/app/products/8/logo.jpg",
+                   "name": "我的世界",
+                   "type": 1,
+                   "order": 3
+                   },
+                   {
+                   "id": 9,
+                   "logo": "http: //pic.desgin.miglab.com/abheg/store/app/products/9/logo.png",
+                   "name": "狂斩三国2",
+                   "type": 1,
+                   "order": 4
+                   },
+                   {
+                   "id": 10,
+                   "logo": "http: //pic.desgin.miglab.com/abheg/store/app/products/10/logo.jpg",
+                   "name": "暗黑黎明",
+                   "type": 1,
+                   "order": 5
                    }
                    ]
 }

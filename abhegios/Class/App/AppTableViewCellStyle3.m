@@ -10,9 +10,7 @@
 #import "AppInfo.h"
 #import "AppHScrollViewCell1.h"
 
-#define kMaxViewItems 8
-#define kVitemWidth  78
-#define kViewCellHeigth 90
+#define kViewitemWidth  78
 @implementation AppTableViewCellStyle3
 {
     
@@ -27,7 +25,7 @@
 
 -(CGFloat) hScrollView:(OEZHScrollView *)hScrollView widthForColumnAtIndex:(NSInteger)columnIndex
 {
-    return 78;
+    return kViewitemWidth;
 }
 
 -(OEZHScrollViewCell*) hScrollView:(OEZHScrollView *)hScrollView cellForColumnAtIndex:(NSInteger)columnIndex
