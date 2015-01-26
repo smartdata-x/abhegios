@@ -79,13 +79,13 @@
     if (indexPath.section == BookSearchResultSectionHeader) {
         viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookSearchResultTableViewCellStyle1"];
         [viewCell setData:nil];
+        BookSearchResultTableViewCellStyle1 *viewStyle = (BookSearchResultTableViewCellStyle1 *)viewCell;
+        [viewStyle.btnNew addTarget:self action:@selector(showNewResult:) forControlEvents:UIControlEventTouchUpInside];
+        [viewStyle.btnHot addTarget:self action:@selector(showHotResult:) forControlEvents:UIControlEventTouchUpInside];
     }
     else {
         viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookSearchResultTableViewCellStyle2"];
         [viewCell setData:[[[_bookSearchResultGroup objectAtIndex:resultShowType] entitys] objectAtIndex:indexPath.row]];
-        BookSearchResultTableViewCellStyle1 *viewStyle = (BookSearchResultTableViewCellStyle1 *)viewCell;
-        [viewStyle.btnNew addTarget:self action:@selector(showNewResult:) forControlEvents:UIControlEventTouchUpInside];
-        [viewStyle.btnHot addTarget:self action:@selector(showHotResult:) forControlEvents:UIControlEventTouchUpInside];
     }
     return viewCell;
 }

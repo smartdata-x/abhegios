@@ -17,7 +17,7 @@
 
 - (void)setData:(id)data {
     [super setData:data];
-    [_name setText:[(BookInfo *)data name]];
+    [_name setText:(NSString *)data];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
