@@ -9,11 +9,11 @@
 #import "BookReaderViewController.h"
 #import "GroupInfo.h"
 #import "BookChapterInfo.h"
-#import "BookDownloader.h"
 #import "BookFileManager.h"
 
 @interface BookReaderViewController ()
 {
+    BookInfo *_bookInfo;
     NSArray *_bookChapterGroup;
 }
 @property NSMutableArray *chapterGroup;
@@ -24,6 +24,8 @@
 @property NSInteger currentPage;
 @property NSInteger allPageCount;
 @property float pageHeight;
+@property BookFileManager *bookFileMgr;
+@property BookDownloader *bookDownloader;
 @end
 
 @implementation BookReaderViewController
@@ -49,16 +51,34 @@
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doTap:)];
     tapGesture.delegate = self;
     [self.view addGestureRecognizer:tapGesture];
+    
+    // 初始化到第一章
+    _currentChapter = -1;
+}
+
+-(void)setData:(id)data {
+    _bookInfo = data;
 }
 
 - (void)testData {
     _bookChapterGroup = [GroupInfo initWithsConfigAndDataJsonFile:@"bookstorehome" jsonName:@"bookchapter_test" entityClass:[BookChapterInfo class]];
+    _chapterCount = [[[_bookChapterGroup objectAtIndex:BookReaderTypeChapterList] entitys] count];
+    _bookFileMgr = [[BookFileManager alloc] init];
+    _bookDownloader = [[BookDownloader alloc] init];
+    _bookDownloader.delegate = self;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
         self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+    }
+    if ([self isNeedContinueLastPosition]) {
+        [self jumpToLastPosition];
+        [self nextPage];
+    }
+    else {
+        [self nextChapter];
     }
 }
 
@@ -74,11 +94,6 @@
     [_readerView setEditable:NO];
     [_readerView setUserInteractionEnabled:NO];
     [_readerView setContentOffset:CGPointMake(0, 0)];
-    
-    //
-    _chapterCount = 10;
-    _currentChapter = 0;
-    [self loadNewChapter];
 }
 
 - (void)curlUp:(UIView *)view {
@@ -123,16 +138,9 @@
     [view.layer addAnimation:tr forKey:@"pageCurlAnimation"];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [self jumpToLastPosition];
-}
-
-- (void)setData:(id)data {
-    
-}
-
 - (BOOL)isCurrentChapterExist {
-    return YES;
+    NSString *chapterName = [NSString stringWithFormat:@"%@_%d.txt", @"测试", _currentChapter];
+    return [_bookFileMgr isBookExist:chapterName];
 }
 
 - (BOOL)isNeedDownload {
@@ -140,7 +148,7 @@
 }
 
 - (BOOL)isNeedContinueLastPosition {
-    return YES;
+    return NO;
 }
 
 - (void)downloadWholeBook {
@@ -148,7 +156,6 @@
 }
 
 - (void)doTap:(UIGestureRecognizer *)gesture {
-    
 }
 
 - (void)doNext:(UIGestureRecognizer *)gesture {
@@ -160,9 +167,6 @@
 }
 
 - (void)jumpToLastPosition {
-    if ([self isNeedContinueLastPosition]) {
-        // TODO:set chapter;
-    }
 }
 
 - (float)heightForAttributedString:(NSAttributedString *)srcstr Font:(UIFont *)font Frame:(CGRect)frame {
@@ -172,15 +176,33 @@
     return labelSize.size.height;
 }
 
-- (void)loadNewChapter {
+- (BOOL)loadNewChapter {
+    GroupInfo *group = [_bookChapterGroup objectAtIndex:BookReaderTypeChapterList];
+    BookChapterInfo *chapterInfo = [[group entitys] objectAtIndex:_currentChapter];
+    NSString *chapterName = [NSString stringWithFormat:@"%@_%d.txt", @"测试", _currentChapter];
+    NSString *fullName = [_bookFileMgr getBookFullPath:chapterName];
+    
     if (![self isCurrentChapterExist]) {
         if ([self isNeedDownload]) {
-            // TODO:Download
-            return;
+            [_bookDownloader downloadBookFromURL:chapterInfo.url FileName:chapterName];
         }
+        return NO;
     }
     
-    _bookContent = @"1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n55\n56\n57\n58\n59\n60\n61\n62\n63\n64\n65\n66\n67\n68\n69\n70\n";
+    _bookContent = [_bookFileMgr getFileContent:fullName];
+    [self configTextView];
+    return YES;
+}
+
+- (void)bookDownloadFinished:(BOOL)success FileName:(NSString *)filename{
+    if (success) {
+        _bookContent = [_bookFileMgr getFileContent:filename];
+        [self configTextView];
+        [self nextPage];
+    }
+}
+
+- (void)configTextView {
     float fontSize = 16.0f;
     float lineHeight = fontSize * 2;
     float hPadding = 16.0f;
@@ -206,6 +228,10 @@
     newFrame.size.height = readerFrameHeight;
     [_readerView setFrame:newFrame];
     _pageCount = ceilf(contentHeight / _pageHeight);
+    
+    // 配置其他标签显示
+    [_nameView setText:[NSString stringWithFormat:@"《%@》", _bookInfo.name]];
+    [_chapterView setText:[[[[_bookChapterGroup objectAtIndex:BookReaderTypeChapterList] entitys] objectAtIndex:_currentChapter] chaptername]];
 }
 
 - (void)setContentOffsetAnimated:(BOOL)animate {
@@ -217,26 +243,36 @@
 
 - (void)nextChapter {
     if (_currentChapter >= _chapterCount - 1) {
-        [self nextChapter];
         return;
     }
     _currentChapter++;
     _currentPage = -1;
+    
+    if (![self loadNewChapter]) {
+        return;
+    }
     [self nextPage];
 }
 
 - (void)prevChapter {
     if (_currentChapter <= 0) {
-        [self prevChapter];
         return;
     }
     _currentChapter--;
     _currentPage = _pageCount;
+    
+    if (![self loadNewChapter]) {
+        return;
+    }
     [self prevPage];
 }
 
 - (void)nextPage {
     if (_currentPage >= _pageCount - 1) {
+        [self nextChapter];
+        return;
+    }
+    if (_bookContent == nil) {
         return;
     }
     _currentPage++;
@@ -246,6 +282,10 @@
 
 - (void)prevPage {
     if (_currentPage <= 0) {
+        [self prevChapter];
+        return;
+    }
+    if (_bookContent == nil) {
         return;
     }
     _currentPage--;

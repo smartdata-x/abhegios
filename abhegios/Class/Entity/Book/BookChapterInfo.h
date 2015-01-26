@@ -10,5 +10,7 @@
 #import "BookInfo.h"
 
 @interface BookChapterInfo : BookInfo
-
+@property (nonatomic, copy) NSString *url;
+@property (nonatomic, copy) NSString *chaptername;
+@property NSInteger bookid;
 @end

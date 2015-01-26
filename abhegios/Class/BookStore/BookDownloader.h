@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @protocol BookDownloaderDelegate <NSObject>
-- (void)bookDownloadFinished:(BOOL)success;
+- (void)bookDownloadFinished:(BOOL)success FileName:(NSString *)filename;
 @end
 
 @interface BookDownloader : NSObject<NSURLConnectionDataDelegate>

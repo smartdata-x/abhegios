@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BookDownloader.h"
 
-@interface BookReaderViewController : UIViewController<UIGestureRecognizerDelegate>
+typedef NS_ENUM(NSInteger, BookReaderType) {
+    BookReaderTypeChapterList = 6,
+};
+
+@interface BookReaderViewController : UIViewController<UIGestureRecognizerDelegate, BookDownloaderDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *readerView;
 @property (weak, nonatomic) IBOutlet UILabel *chapterView;
 @property (weak, nonatomic) IBOutlet UILabel *nameView;
@@ -17,4 +22,5 @@
 - (void)doTap:(UIGestureRecognizer *)gesture;
 - (void)doNext:(UIGestureRecognizer *)gesture;
 - (void)doPrev:(UIGestureRecognizer *)gesture;
+- (void)setData:(id)data;
 @end

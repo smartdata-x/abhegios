@@ -64,14 +64,14 @@
     self.curLength = 0;
     self.sumLength = 0;
     
-    if ([_delegate respondsToSelector:@selector(bookDownloadFinished:)]) {
-        [_delegate bookDownloadFinished:YES];
+    if ([_delegate respondsToSelector:@selector(bookDownloadFinished:FileName:)]) {
+        [_delegate bookDownloadFinished:YES FileName:self.fileName];
     }
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    if ([_delegate respondsToSelector:@selector(bookDownloadFinished:)]) {
-        [_delegate bookDownloadFinished:NO];
+    if ([_delegate respondsToSelector:@selector(bookDownloadFinished:FileName:)]) {
+        [_delegate bookDownloadFinished:NO FileName:nil];
     }
 }
 
