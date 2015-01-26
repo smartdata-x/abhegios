@@ -8,12 +8,17 @@
 
 #import "BookSearchResultTableViewController.h"
 #import "BookDetailInfoTableViewController.h"
+#import "BookSearchResultTableViewCellStyle1.h"
 #import "BookInfo.h"
 #import "GroupInfo.h"
 #import "BookDetailInfo.h"
 
 @interface BookSearchResultTableViewController ()
-@property (nonatomic, retain) GroupInfo *bookInfoGroup;
+{
+    NSArray *_bookSearchResultGroup;
+    NSInteger resultShowType;
+}
+//@property (nonatomic, retain) GroupInfo *bookInfoGroup;
 @end
 
 @implementation BookSearchResultTableViewController
@@ -34,7 +39,19 @@
 }
 
 - (void)setData:(id)data {
-    _bookInfoGroup = data;
+    //_bookInfoGroup = data;
+    _bookSearchResultGroup = [GroupInfo initWithsConfigAndDataJsonFile:@"bookstorehome" jsonName:@"booksearchresult_test" entityClass:[BookInfo class]];
+    resultShowType = BookSearchResultTypeNew;
+}
+
+- (IBAction)showNewResult:(id)sender {
+    resultShowType = BookSearchResultTypeNew;
+    [self.tableView reloadData];
+}
+
+- (IBAction)showHotResult:(id)sender {
+    resultShowType = BookSearchResultTypeHot;
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -47,7 +64,7 @@
     if (section == BookSearchResultSectionHeader) {
         return 1;
     }
-    return MAX(0, [[_bookInfoGroup entitys] count]);
+    return MAX(0, [[[_bookSearchResultGroup objectAtIndex:resultShowType] entitys] count]);
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -65,7 +82,10 @@
     }
     else {
         viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookSearchResultTableViewCellStyle2"];
-        [viewCell setData:[[_bookInfoGroup entitys] objectAtIndex:indexPath.row]];
+        [viewCell setData:[[[_bookSearchResultGroup objectAtIndex:resultShowType] entitys] objectAtIndex:indexPath.row]];
+        BookSearchResultTableViewCellStyle1 *viewStyle = (BookSearchResultTableViewCellStyle1 *)viewCell;
+        [viewStyle.btnNew addTarget:self action:@selector(showNewResult:) forControlEvents:UIControlEventTouchUpInside];
+        [viewStyle.btnHot addTarget:self action:@selector(showHotResult:) forControlEvents:UIControlEventTouchUpInside];
     }
     return viewCell;
 }
@@ -73,17 +93,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    BookInfo *bookInfo = [[_bookInfoGroup entitys] objectAtIndex:0];
-    BookDetailInfo *bookdetail = [[BookDetailInfo alloc] init];
-    bookdetail.name = bookInfo.name;
-    bookdetail.summary = bookInfo.summary;
-    bookdetail.pic = bookInfo.pic;
-    bookdetail.star = bookInfo.star;
-    bookdetail.summary = @"《金刚经》是大乘佛教的重要经典。全称《能断金刚版若波罗蜜经》：以能断金刚的智慧到彼岸。后秦鸠摩罗什翻译《金刚经》的法本最早，文字流畅，简明扼要，流传最广，是人们常用的译本";
-    bookdetail.label = [[NSArray alloc] initWithObjects:@"佛经", @"讲义", @"教理", @"阅读", nil];
+    GroupInfo *group = [_bookSearchResultGroup objectAtIndex:resultShowType];
+    BookInfo *bookInfo = [[group entitys] objectAtIndex:indexPath.row];
     [self.navigationController pushViewControllerWithIdentifier:@"BookDetailInfoTableViewController" completion:^(UIViewController *viewController) {
         BookDetailInfoTableViewController *bookDetailInfoView = (BookDetailInfoTableViewController *)viewController;
-        [bookDetailInfoView setData:bookdetail];
+        [bookDetailInfoView setData:bookInfo];
     } animated:YES];
 }
 

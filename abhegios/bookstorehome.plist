@@ -42,5 +42,13 @@
 		<key>title</key>
 		<string>浪漫女生</string>
 	</dict>
+	<dict>
+		<key>style</key>
+		<integer>5</integer>
+		<key>key</key>
+		<string>new</string>
+		<key>title</key>
+		<string>最新推荐</string>
+	</dict>
 </array>
 </plist>

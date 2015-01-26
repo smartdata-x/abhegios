@@ -62,9 +62,9 @@
 		CB6A22161A74C09E0087546F /* BookSearchResultTableViewCellStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A22151A74C09E0087546F /* BookSearchResultTableViewCellStyle2.m */; };
 		CB6A22191A74C5180087546F /* BookDirectoryTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A22181A74C5180087546F /* BookDirectoryTableViewCellStyle1.m */; };
 		CB6A221B1A765ABF0087546F /* bookdetail_test.json in Resources */ = {isa = PBXBuildFile; fileRef = CB6A221A1A765ABF0087546F /* bookdetail_test.json */; };
-		CB6A221D1A765B140087546F /* bookdetail.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB6A221C1A765B140087546F /* bookdetail.plist */; };
 		CB6A22201A765F7F0087546F /* BookDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A221F1A765F7F0087546F /* BookDownloader.m */; };
 		CB6A22231A765F9C0087546F /* BookFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A22221A765F9C0087546F /* BookFileManager.m */; };
+		CB6A22251A7673E60087546F /* booksearchresult_test.json in Resources */ = {isa = PBXBuildFile; fileRef = CB6A22241A7673E60087546F /* booksearchresult_test.json */; };
 		EA02913E1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = EA02913D1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.m */; };
 		EA13DDCE1A6F8A35004AB7E6 /* NSString+NSStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDCD1A6F8A35004AB7E6 /* NSString+NSStringCategory.m */; };
 		EA13DDD11A6F8D3A004AB7E6 /* AppDetailsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDCF1A6F8D3A004AB7E6 /* AppDetailsInfo.m */; };
@@ -232,11 +232,11 @@
 		CB6A22171A74C5180087546F /* BookDirectoryTableViewCellStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookDirectoryTableViewCellStyle1.h; sourceTree = "<group>"; };
 		CB6A22181A74C5180087546F /* BookDirectoryTableViewCellStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookDirectoryTableViewCellStyle1.m; sourceTree = "<group>"; };
 		CB6A221A1A765ABF0087546F /* bookdetail_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bookdetail_test.json; sourceTree = "<group>"; };
-		CB6A221C1A765B140087546F /* bookdetail.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bookdetail.plist; sourceTree = "<group>"; };
 		CB6A221E1A765F7F0087546F /* BookDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookDownloader.h; sourceTree = "<group>"; };
 		CB6A221F1A765F7F0087546F /* BookDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookDownloader.m; sourceTree = "<group>"; };
 		CB6A22211A765F9C0087546F /* BookFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookFileManager.h; sourceTree = "<group>"; };
 		CB6A22221A765F9C0087546F /* BookFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookFileManager.m; sourceTree = "<group>"; };
+		CB6A22241A7673E60087546F /* booksearchresult_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = booksearchresult_test.json; sourceTree = "<group>"; };
 		EA02913C1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailsTableViewCellStyle1.h; sourceTree = "<group>"; };
 		EA02913D1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsTableViewCellStyle1.m; sourceTree = "<group>"; };
 		EA13DDCD1A6F8A35004AB7E6 /* NSString+NSStringCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringCategory.m"; sourceTree = "<group>"; };
@@ -539,8 +539,8 @@
 				1AD64688EC1876C19A332D96 /* Info.plist */,
 				CB6A21CD1A7007970087546F /* bookstorehome.plist */,
 				CB6A21CB1A6FFCC20087546F /* bookstorehome_test.json */,
-				CB6A221C1A765B140087546F /* bookdetail.plist */,
 				CB6A221A1A765ABF0087546F /* bookdetail_test.json */,
+				CB6A22241A7673E60087546F /* booksearchresult_test.json */,
 			);
 			name = "Supporting Files";
 			path = abhegios;
@@ -862,6 +862,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB6A21F01A73C7430087546F /* BookInfoViewStyle2.xib in Resources */,
+				CB6A22251A7673E60087546F /* booksearchresult_test.json in Resources */,
 				EA3D07761A6CD9A600189765 /* Main.storyboard in Resources */,
 				EA9AAD921A762008000C4C21 /* AppHScrollViewCell1.xib in Resources */,
 				EA3D07771A6CD9A600189765 /* LaunchScreen.xib in Resources */,
@@ -881,7 +882,6 @@
 				1AD64049F3F7AA6F294AAE32 /* error.png in Resources */,
 				EA8C83331A7320B400901CFC /* PageViewImageCell1.xib in Resources */,
 				EA7599931A7120CB0027FC8B /* uifounddata.plist in Resources */,
-				CB6A221D1A765B140087546F /* bookdetail.plist in Resources */,
 				EA75998E1A7120A50027FC8B /* uilogindata.plist in Resources */,
 				1AD64077DE8389AC54925C71 /* Info.plist in Resources */,
 				EA7599901A7120A50027FC8B /* appstorehome_test.json in Resources */,

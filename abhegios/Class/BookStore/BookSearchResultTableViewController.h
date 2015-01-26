@@ -12,6 +12,10 @@ typedef NS_ENUM(NSInteger, BookSearchResultSection) {
     BookSearchResultSectionBooks,
     BookSearchResultSectionMAX,
 };
+typedef NS_ENUM(NSInteger, BookSearchResultType) {
+    BookSearchResultTypeHot = 2,
+    BookSearchResultTypeNew = 5,
+};
 @interface BookSearchResultTableViewController : UITableViewController
 - (void)setData:(id)data;
 @end
