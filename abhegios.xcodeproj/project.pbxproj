@@ -241,12 +241,9 @@
 		CB6A221F1A765F7F0087546F /* BookDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookDownloader.m; sourceTree = "<group>"; };
 		CB6A22211A765F9C0087546F /* BookFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookFileManager.h; sourceTree = "<group>"; };
 		CB6A22221A765F9C0087546F /* BookFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookFileManager.m; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		CB6A22241A7673E60087546F /* booksearchresult_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = booksearchresult_test.json; sourceTree = "<group>"; };
 		EA02913C1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailsTableViewCellStyle1.h; sourceTree = "<group>"; };
 		EA02913D1A739AB400D5D45F /* AppDetailsTableViewCellStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsTableViewCellStyle1.m; sourceTree = "<group>"; };
-=======
->>>>>>> d7d73f8c8cefcf88bb3e52506f44c05095ac03ae
 		EA13DDCD1A6F8A35004AB7E6 /* NSString+NSStringCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringCategory.m"; sourceTree = "<group>"; };
 		EA13DDCF1A6F8D3A004AB7E6 /* AppDetailsInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsInfo.m; sourceTree = "<group>"; };
 		EA13DDD01A6F8D3A004AB7E6 /* AppDetailsInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailsInfo.h; sourceTree = "<group>"; };
