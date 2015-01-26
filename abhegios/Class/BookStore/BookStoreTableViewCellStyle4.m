@@ -30,7 +30,7 @@
     for (int i=0; i<count; i++) {
         BookInfo *bookInfo = [[bookInfoGroup entitys] objectAtIndex:i];
         [_name setText:bookInfo.name];
-        [_summary setText:bookInfo.summary];
+        [_summary setText:bookInfo.author];
         [_favRate setData:bookInfo.star];
     }
 }
