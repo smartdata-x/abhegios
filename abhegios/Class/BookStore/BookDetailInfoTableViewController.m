@@ -15,6 +15,7 @@
 @interface BookDetailInfoTableViewController ()
 {
     NSArray *_bookDetailGroups;
+    BookDetailInfo *_bookDetailInfo;
 }
 @end
 
@@ -36,8 +37,21 @@
 }
 
 - (void)setData:(id)data {
-    //_bookDetailInfo = data;
-    _bookDetailGroups = [GroupInfo initWithsConfigAndDataJsonFile:@"bookdetail" jsonName:@"bookdetail_test" entityClass:[BookDetailInfo class]];
+    BookInfo *bookInfo = (BookInfo *)data;
+    // assign from super
+    _bookDetailInfo = [[BookDetailInfo alloc] init];
+    _bookDetailInfo.name = bookInfo.name;
+    _bookDetailInfo.summary = bookInfo.summary;
+    _bookDetailInfo.pic = bookInfo.pic;
+    _bookDetailInfo.author = bookInfo.author;
+    
+    // get from local
+    _bookDetailInfo.author = @"达摩祖师";
+    _bookDetailInfo.chapter = @"22";
+    _bookDetailInfo.star = 3.5;
+    _bookDetailInfo.summary = @"《金刚经》是大乘佛教的重要经典。全称《能断金刚般若波罗蜜经》（vájra-cchedikā-prajñā-pāramitā-sūtra 梵文释义：以能断金刚的智慧到彼岸），又称《金刚般若波罗蜜经》，简称《金刚经》。后秦鸠摩罗什翻译《金刚经》的法本最早，文字流畅，简明扼要，流传最广，是人们常用的译本。";
+    _bookDetailInfo.free = @"http://book.free.miyomate.com/type/22.txt";
+    _bookDetailInfo.label = [[NSArray alloc] initWithObjects:@"武侠", @"男生频道", nil];
 }
 
 #pragma mark - Table view data source
@@ -48,8 +62,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == BookDetailInfoSectionTagInfo) {
-        //int labelCount = [[_bookDetailInfo labels] count];
-        int labelCount = [[[_bookDetailGroups objectAtIndex:2] label] count];
+        int labelCount = [[_bookDetailInfo label] count];
         int rows = (int)ceilf((float)labelCount / 3.0);
         return rows;
     }
@@ -97,7 +110,7 @@
     switch (indexPath.section) {
         case BookDetailInfoSectionHeaderCell:
             viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDetailInfoTableViewCellStyle0"];
-            //if (_bookDetailInfo) [viewCell setData:_bookDetailInfo];
+            if (_bookDetailInfo) [viewCell setData:_bookDetailInfo];
             break;
             
         case BookDetailInfoSectionReadSave:
@@ -106,30 +119,30 @@
                 BookDetailInfoTableViewCellStyle1 *cellStyle1 = (BookDetailInfoTableViewCellStyle1 *)viewCell;
                 [cellStyle1.saveShelf addTarget:self action:@selector(gotoBookShelf:) forControlEvents:UIControlEventTouchUpInside];
                 [cellStyle1.freeRead addTarget:self action:@selector(gotoBookReader:) forControlEvents:UIControlEventTouchUpInside];
-                //if (_bookDetailInfo) [viewCell setData:_bookDetailInfo];
+                if (_bookDetailInfo) [viewCell setData:_bookDetailInfo];
             }
             break;
             
         case BookDetailInfoSectionIntroduction:
             viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDetailInfoTableViewCellStyle2"];
-            //if (_bookDetailInfo) [viewCell setData:_bookDetailInfo];
+            if (_bookDetailInfo) [viewCell setData:_bookDetailInfo];
             break;
             
         case BookDetailInfoSectionChapterInfo:
             viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDetailInfoTableViewCellStyle3"];
-            //[viewCell setData:_bookDetailInfo];
+            [viewCell setData:_bookDetailInfo];
             break;
             
         case BookDetailInfoSectionTagInfo:
             viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDetailInfoTableViewCellStyle4"];
-            //if (_bookDetailInfo) {
-            //   [(BookDetailInfoTableViewCellStyle4 *)viewCell setDataWithIndex:_bookDetailInfo Index:indexPath.row];
-            //}
+            if (_bookDetailInfo) {
+               [(BookDetailInfoTableViewCellStyle4 *)viewCell setDataWithIndex:_bookDetailInfo Index:indexPath.row];
+            }
             break;
             
         case BookDetailInfoSectionReadDownload:
             viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDetailInfoTableViewCellStyle5"];
-            //[viewCell setData:_bookDetailInfo];
+            [viewCell setData:_bookDetailInfo];
             break;
             
         default:

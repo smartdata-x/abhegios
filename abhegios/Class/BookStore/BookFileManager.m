@@ -35,4 +35,27 @@
     return NO;
 }
 
+- (NSString *)getFileContent:(NSString *)filename {
+    unsigned long encode = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingUTF8);
+    NSData *strdata = [NSData dataWithContentsOfFile:filename];
+    NSString *curContent = [[NSString alloc] initWithData:strdata encoding:encode];
+    
+    // 没有得到内容，采用其他编码
+    if (curContent == nil) {
+        encode = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+        curContent = [[NSString alloc] initWithData:strdata encoding:encode];
+    }
+    
+    if (curContent == nil) {
+        encode = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_2312_80);
+        curContent = [[NSString alloc] initWithData:strdata encoding:encode];
+    }
+    
+    if (curContent == nil) {
+        encode = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGBK_95);
+        curContent = [[NSString alloc] initWithData:strdata encoding:encode];
+    }
+    return curContent;
+}
+
 @end

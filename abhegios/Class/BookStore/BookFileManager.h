@@ -12,4 +12,5 @@
 - (NSString *)getBookRootDirectory;
 - (NSString *)getBookFullPath:(NSString *)filename;
 - (BOOL)isBookExist:(NSString *)filename;
+- (NSString *)getFileContent:(NSString *)filename;
 @end
