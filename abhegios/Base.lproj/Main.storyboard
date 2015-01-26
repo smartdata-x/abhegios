@@ -170,7 +170,7 @@
         <!--应用-->
         <scene sceneID="lEC-pf-Nni">
             <objects>
-                <tableViewController storyboardIdentifier="AppViewController" title="应用" id="o4P-FE-cmg" customClass="AppViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AppHomeViewController" title="应用" id="o4P-FE-cmg" customClass="AppHomeViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="OZn-fX-3Mo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

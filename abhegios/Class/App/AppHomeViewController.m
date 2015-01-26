@@ -6,19 +6,19 @@
 //  Copyright (c) 2015年 180. All rights reserved.
 //
 
-#import "AppViewController.h"
+#import "AppHomeViewController.h"
 #import "GroupInfo.h"
 #import "AppInfo.h"
 #import "AppTableViewCellStyle1.h"
 #import <OEZCommSDK/OEZCommSDK.h>
 #import "AppInfoViewStyle3.h"
-@interface AppViewController ()
+@interface AppHomeViewController ()
 {
     NSArray   *_appStoreHomeGroups;
 }
 @end
 
-@implementation AppViewController
+@implementation AppHomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
