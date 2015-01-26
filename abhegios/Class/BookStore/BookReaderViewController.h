@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BookChapterInfo : OEZBaseEntity
-
-@end
-
 @interface BookReaderViewController : UIViewController<UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *readerView;
 @property (weak, nonatomic) IBOutlet UILabel *chapterView;

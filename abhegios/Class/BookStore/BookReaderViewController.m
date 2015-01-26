@@ -7,15 +7,15 @@
 //
 
 #import "BookReaderViewController.h"
-
-@interface BookChapterInfo()
-@property NSUInteger id;
-@property NSString *name;
-@property NSString *summary;
-@property NSString *url;
-@end
+#import "GroupInfo.h"
+#import "BookChapterInfo.h"
+#import "BookDownloader.h"
+#import "BookFileManager.h"
 
 @interface BookReaderViewController ()
+{
+    NSArray *_bookChapterGroup;
+}
 @property NSMutableArray *chapterGroup;
 @property NSString *bookContent;
 @property NSInteger chapterCount;
@@ -30,6 +30,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self testData];
+    [self initView];
     
     // 左翻页
     UISwipeGestureRecognizer *nextGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(doNext:)];
@@ -47,9 +49,10 @@
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doTap:)];
     tapGesture.delegate = self;
     [self.view addGestureRecognizer:tapGesture];
-    
-    _chapterGroup = [[NSMutableArray alloc] init];
-    [self initView];
+}
+
+- (void)testData {
+    _bookChapterGroup = [GroupInfo initWithsConfigAndDataJsonFile:@"bookstorehome" jsonName:@"bookchapter_test" entityClass:[BookChapterInfo class]];
 }
 
 - (void)viewDidAppear:(BOOL)animated {

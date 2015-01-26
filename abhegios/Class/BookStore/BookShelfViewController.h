@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+typedef NS_ENUM(NSInteger, BookShelfType) {
+    BookShelfTypeList = 6,
+};
 @interface BookShelfViewController : UIViewController
 @end

@@ -1,0 +1,28 @@
+{
+    "list": [
+             {
+             "bookid": 6,
+             "id": 1,
+             "name": "上 洗牌",
+             "url": "http://game.shouwangz.com/6/chapter1.txt"
+             },
+             {
+             "bookid": 6,
+             "id": 2,
+             "name": "二",
+             "url": "http://game.shouwangz.com/6/chapter2.txt"
+             },
+             {
+             "bookid": 6,
+             "id": 3,
+             "name": "三",
+             "url": "http://game.shouwangz.com/6/chapter3.txt"
+             },
+             {
+             "bookid": 6,
+             "id": 4,
+             "name": "四",
+             "url": "http://game.shouwangz.com/6/chapter4.txt"
+             }
+             ]
+}

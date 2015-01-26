@@ -20,7 +20,7 @@
 
 @interface BookShelfViewController ()
 {
-    NSArray *_bookStoreHomeGroups;
+    NSArray *_bookShelfGroups;
     UIScrollView *bookShelfView;
 }
 @end
@@ -35,8 +35,8 @@
 }
 
 - (void)testData {
-    _bookStoreHomeGroups = [GroupInfo initWithsConfigAndDataJsonFile:@"bookstorehome" jsonName:@"bookstorehome_test" entityClass:[BookInfo class]];
-    NSUInteger count = [[[_bookStoreHomeGroups objectAtIndex:1] entitys] count];
+    _bookShelfGroups = [GroupInfo initWithsConfigAndDataJsonFile:@"bookstorehome" jsonName:@"bookshelf_test" entityClass:[BookInfo class]];
+    NSUInteger count = [[[_bookShelfGroups objectAtIndex:BookShelfTypeList] entitys] count];
     count = count > kMaxBookNumber ? kMaxBookNumber : count;
     float height = ceilf((float)count / kBookNumberPerRow) * kBookShelfCellHeight;
     height = height > CGRectGetHeight(bookShelfView.frame) ? height : CGRectGetHeight(bookShelfView.frame);
@@ -51,11 +51,12 @@
     for (int i=0; i<count; i++) {
         float x = i % 3;
         float y = i / 3;
-        BookInfo *bookinfo = [[[_bookStoreHomeGroups objectAtIndex:1] entitys] objectAtIndex:i];
+        BookInfo *bookinfo = [[[_bookShelfGroups objectAtIndex:BookShelfTypeList] entitys] objectAtIndex:i];
         BookInfoViewStyle1 *bookitem = [BookInfoViewStyle1 loadFromNib];
         [bookitem setFrame:CGRectMake(x*kBookItemWidth, y*kBookShelfCellHeight, kBookItemWidth, kBookShelfCellHeight)];
         [bookitem setDataWithFormat:bookinfo Format:BookInfoViewStyle1Format2];
         [bookitem.logoButton addTarget:self action:@selector(gotoBookReader:) forControlEvents:UIControlEventTouchUpInside];
+        [bookitem.logoButton setTag:i];
         [bookShelfView addSubview:bookitem];
     }
 }
@@ -70,6 +71,9 @@
 
 - (IBAction)gotoBookReader:(id)sender {
     [self.navigationController pushViewControllerWithIdentifier:@"BookReaderViewController" completion:^(UIViewController *viewController) {
+        GroupInfo *group = [_bookShelfGroups objectAtIndex:BookShelfTypeList];
+        UIButton *btnSender = (UIButton *)sender;
+        BookInfo *bookInfo = [[group entitys] objectAtIndex:btnSender.tag];
     } animated:YES];
 }
 

@@ -50,5 +50,13 @@
 		<key>title</key>
 		<string>最新推荐</string>
 	</dict>
+	<dict>
+		<key>style</key>
+		<integer>6</integer>
+		<key>key</key>
+		<string>list</string>
+		<key>title</key>
+		<string>书单</string>
+	</dict>
 </array>
 </plist>
