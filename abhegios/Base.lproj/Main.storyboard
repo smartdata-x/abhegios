@@ -868,6 +868,32 @@
             </objects>
             <point key="canvasLocation" x="2738" y="781"/>
         </scene>
+        <!--Game Home View Controller-->
+        <scene sceneID="OS9-kB-DYu">
+            <objects>
+                <tableViewController storyboardIdentifier="GameHomeViewController" id="O12-Zf-ZRR" customClass="GameHomeViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="bfT-MW-dA6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="d0x-hP-THG">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d0x-hP-THG" id="xKb-8a-Vft">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="O12-Zf-ZRR" id="wAK-kW-C24"/>
+                            <outlet property="delegate" destination="O12-Zf-ZRR" id="g4M-7H-uB9"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uJA-wF-Ts4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3370" y="780"/>
+        </scene>
     </scenes>
     <resources>
         <image name="app-icon-default" width="53" height="53"/>

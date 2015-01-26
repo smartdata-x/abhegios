@@ -79,21 +79,37 @@
         "order": 5
                   },
                   {
-                  "id": 9,
-                  "logo": "http://pic.desgin.miglab.com/abheg/store/app/products/9/logo.png",
-                  "name": "新浪微博",
+                  "id": 5,
+                  "logo": "http://pic.desgin.miglab.com/abheg/store/app/products/5/logo.jpg",
+                  "name": "QQ",
                   "type": 1,
-                  "summary": "新浪微博是全中国最主流，最具人气，当前最火爆的微博产品。用一句话随意记录生活，用手机随时随地发微博",
-                  "order": 4
+                  "summary": "腾讯QQ,8亿人在用的即时通讯软件,你不仅可以在各类通讯终端上通过QQ聊天交友",
+                  "order": 1
                   },
                   {
-                  "id": 10,
-                  "logo": "http://pic.desgin.miglab.com/abheg/store/app/products/10/logo.jpg",
-                  "name": "印象笔记",
+                  "id": 6,
+                  "logo": "http://pic.desgin.miglab.com/abheg/store/app/products/6/log.png",
+                  "name": "淘宝",
                   "type": 1,
-                  "summary": "享受高效会议,无需额外准备演示文稿,一键按下,以精美版式全屏演示笔记",
-                  "order": 5
-                  }
+                  "summary": "淘宝网是亚太地区较大的网络零售商圈，由阿里巴巴集团在2003年5月10日投资创立。",
+                  "order": 1
+                  },
+                  {
+                  "id": 7,
+                  "logo": "http://pic.desgin.miglab.com/abheg/store/app/products/7/logo.jpg",
+                  "name": "脉脉",
+                  "type": 1,
+                  "summary": "脉脉(maimai),工作版微信,是基于朋友的朋友(二度人脉)的全新社交App。结交同行、吐槽公司、讨论工作、招人跳槽",
+                  "order": 2
+                  },
+                  {
+                  "id": 8,
+                  "logo": "http://pic.desgin.miglab.com/abheg/store/app/products/8/logo.jpg",
+                  "name": "嘀嘀打车",
+                  "type": 1,
+                  "summary": "滴滴打车是一款免费打车软件，时下最热、最酷、最帅的手机“打车神器”，是覆盖最广、用户最多、最受用户喜爱的“打车”应用",
+                  "order": 3
+                  },
     ],
     "popularity": [
       {

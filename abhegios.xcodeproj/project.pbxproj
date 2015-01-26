@@ -117,6 +117,9 @@
 		EAA773881A7222C400EBD512 /* AppTableViewPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA773871A7222C400EBD512 /* AppTableViewPageCell.m */; };
 		EAA7738B1A72241B00EBD512 /* AppTableViewCellStyle4.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA7738A1A72241B00EBD512 /* AppTableViewCellStyle4.m */; };
 		EABA1EB61A76705E00A76BD2 /* GameHomeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EABA1EB51A76705E00A76BD2 /* GameHomeInfo.m */; };
+		EABA1EB81A76738A00A76BD2 /* gamehomeinfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = EABA1EB71A76738A00A76BD2 /* gamehomeinfo.plist */; };
+		EABA1EBA1A76745E00A76BD2 /* gamehomeinfo_test.json in Resources */ = {isa = PBXBuildFile; fileRef = EABA1EB91A76745E00A76BD2 /* gamehomeinfo_test.json */; };
+		EABA1EBD1A7675B100A76BD2 /* GameHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EABA1EBC1A7675B100A76BD2 /* GameHomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -309,6 +312,10 @@
 		EAA7738A1A72241B00EBD512 /* AppTableViewCellStyle4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTableViewCellStyle4.m; sourceTree = "<group>"; };
 		EABA1EB41A76705E00A76BD2 /* GameHomeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHomeInfo.h; sourceTree = "<group>"; };
 		EABA1EB51A76705E00A76BD2 /* GameHomeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameHomeInfo.m; sourceTree = "<group>"; };
+		EABA1EB71A76738A00A76BD2 /* gamehomeinfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = gamehomeinfo.plist; sourceTree = "<group>"; };
+		EABA1EB91A76745E00A76BD2 /* gamehomeinfo_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gamehomeinfo_test.json; sourceTree = "<group>"; };
+		EABA1EBB1A7675B100A76BD2 /* GameHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHomeViewController.h; sourceTree = "<group>"; };
+		EABA1EBC1A7675B100A76BD2 /* GameHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameHomeViewController.m; sourceTree = "<group>"; };
 		EADD5B571A6F7A4700CA6633 /* NSString+NSStringCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSStringCategory.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -491,6 +498,8 @@
 				EA40430C1A73CF8B00D904C5 /* AppDetailsTableViewCellStyle4.m */,
 				EA9AAD931A7625AE000C4C21 /* AppHScrollViewCell1.h */,
 				EA9AAD941A7625AE000C4C21 /* AppHScrollViewCell1.m */,
+				EABA1EBB1A7675B100A76BD2 /* GameHomeViewController.h */,
+				EABA1EBC1A7675B100A76BD2 /* GameHomeViewController.m */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -532,6 +541,8 @@
 				1AD64688EC1876C19A332D96 /* Info.plist */,
 				CB6A21CB1A6FFCC20087546F /* bookstorehome_test.json */,
 				CB6A21CD1A7007970087546F /* bookstorehome.plist */,
+				EABA1EB71A76738A00A76BD2 /* gamehomeinfo.plist */,
+				EABA1EB91A76745E00A76BD2 /* gamehomeinfo_test.json */,
 			);
 			name = "Supporting Files";
 			path = abhegios;
@@ -863,6 +874,7 @@
 				EA9AAD921A762008000C4C21 /* AppHScrollViewCell1.xib in Resources */,
 				EA3D07771A6CD9A600189765 /* LaunchScreen.xib in Resources */,
 				1AD6460C6803B48F071D6E89 /* Images.xcassets in Resources */,
+				EABA1EB81A76738A00A76BD2 /* gamehomeinfo.plist in Resources */,
 				EA75998F1A7120A50027FC8B /* appstorehome.plist in Resources */,
 				EA88BFBD1A74E37F004885A0 /* recommendhome_test.json in Resources */,
 				1AD6407932CF4CF9417DEF43 /* Info.plist in Resources */,
@@ -874,6 +886,7 @@
 				EA88BFBC1A74E37F004885A0 /* recommendhome.plist in Resources */,
 				EA8C83311A731FFF00901CFC /* PageViewImageCell.xib in Resources */,
 				CB6A21E31A729F1E0087546F /* BookInfoViewStyle1.xib in Resources */,
+				EABA1EBA1A76745E00A76BD2 /* gamehomeinfo_test.json in Resources */,
 				1AD64049F3F7AA6F294AAE32 /* error.png in Resources */,
 				EA8C83331A7320B400901CFC /* PageViewImageCell1.xib in Resources */,
 				EA7599931A7120CB0027FC8B /* uifounddata.plist in Resources */,
@@ -924,6 +937,7 @@
 				CB6A21D71A712FBD0087546F /* BookStoreTableViewCellStyle4.m in Sources */,
 				CB6A21BD1A6FF2AA0087546F /* BookStoreViewController.m in Sources */,
 				EA9486391A6DE09C003EE99B /* MainViewController.m in Sources */,
+				EABA1EBD1A7675B100A76BD2 /* GameHomeViewController.m in Sources */,
 				CB6A22071A73E43F0087546F /* BookDetailInfoTableViewCellStyle0.m in Sources */,
 				CB6A21CA1A6FFAEF0087546F /* BookInfo.m in Sources */,
 				EA13DDDC1A6F961E004AB7E6 /* MyNavigationViewController.m in Sources */,
