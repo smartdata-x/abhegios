@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OEZViewCell.h"
 
-
-@interface OEZPageViewCell : UIView<NSCoding>
+@interface OEZPageViewCell : OEZViewCell
 @end
 
 @interface OEZPageViewImageCell : OEZPageViewCell

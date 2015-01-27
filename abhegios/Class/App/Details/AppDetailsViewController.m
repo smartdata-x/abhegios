@@ -8,7 +8,6 @@
 
 #import "AppDetailsViewController.h"
 #import "AppDetailsInfo.h"
-#import "AppInfoViewStyle3.h"
 
 typedef NS_ENUM(NSInteger, AppDetailsTableViewCellStyle) {
     AppDetailsTableViewCellStyleNone = 0,
