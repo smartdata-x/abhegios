@@ -23,4 +23,5 @@ typedef NS_ENUM(NSInteger, BookReaderType) {
 - (void)doNext:(UIGestureRecognizer *)gesture;
 - (void)doPrev:(UIGestureRecognizer *)gesture;
 - (void)setData:(id)data;
+- (void)setDataWithUrl:(id)data URL:(NSString *)url;
 @end

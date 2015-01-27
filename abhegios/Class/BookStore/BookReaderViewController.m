@@ -15,6 +15,7 @@
 {
     BookInfo *_bookInfo;
     NSArray *_bookChapterGroup;
+    BOOL _continueReading;
 }
 @property NSMutableArray *chapterGroup;
 @property NSString *bookContent;
@@ -32,7 +33,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self testData];
     [self initView];
     
     // 左翻页
@@ -56,16 +56,26 @@
     _currentChapter = -1;
 }
 
--(void)setData:(id)data {
+- (void)setData:(id)data {
     _bookInfo = data;
+    [self testData];
+}
+
+- (void)setDataWithUrl:(id)data URL:(NSString *)url {
+    _bookInfo = data;
+    
+    //带url，自己构建一个freeread结构
+    BookChapterInfo *chapterinfo = [[BookChapterInfo alloc] init];
+    chapterinfo.url = url;
+    chapterinfo.chaptername = @"";
+    _bookChapterGroup = [[NSArray alloc] initWithObjects:chapterinfo, nil];
+    _chapterCount = 1;
+    _continueReading = NO;
 }
 
 - (void)testData {
     _bookChapterGroup = [GroupInfo initWithsConfigAndDataJsonFile:@"bookstorehome" jsonName:@"bookchapter_test" entityClass:[BookChapterInfo class]];
     _chapterCount = [[[_bookChapterGroup objectAtIndex:BookReaderTypeChapterList] entitys] count];
-    _bookFileMgr = [[BookFileManager alloc] init];
-    _bookDownloader = [[BookDownloader alloc] init];
-    _bookDownloader.delegate = self;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -89,6 +99,9 @@
 }
 
 - (void)initView {
+    _bookFileMgr = [[BookFileManager alloc] init];
+    _bookDownloader = [[BookDownloader alloc] init];
+    _bookDownloader.delegate = self;
     [_readerView setFont:[UIFont systemFontOfSize:14.0f]];
     [_readerView setTextColor:[UIColor blackColor]];
     [_readerView setEditable:NO];
@@ -148,7 +161,7 @@
 }
 
 - (BOOL)isNeedContinueLastPosition {
-    return NO;
+    return _continueReading;
 }
 
 - (void)downloadWholeBook {
