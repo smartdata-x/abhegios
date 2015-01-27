@@ -122,6 +122,7 @@
 		EA9C2FFF1A778608002EFF35 /* HttpApplyAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9C2FFE1A778608002EFF35 /* HttpApplyAPI.m */; };
 		EA9C30021A778640002EFF35 /* HttpAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9C30011A778640002EFF35 /* HttpAPI.m */; };
 		EAA454441A70DEAF0057A770 /* OEZCommSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA454431A70DEAF0057A770 /* OEZCommSDK.framework */; };
+		EAA5DFE31A77D42E00CF9163 /* HttpOtherAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA5DFE21A77D42E00CF9163 /* HttpOtherAPI.m */; };
 		EAA773881A7222C400EBD512 /* AppTableViewPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA773871A7222C400EBD512 /* AppTableViewPageCell.m */; };
 		EAA7738B1A72241B00EBD512 /* AppTableViewCellStyle4.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA7738A1A72241B00EBD512 /* AppTableViewCellStyle4.m */; };
 		EABA1EB61A76705E00A76BD2 /* GameHomeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EABA1EB51A76705E00A76BD2 /* GameHomeInfo.m */; };
@@ -344,6 +345,9 @@
 		EA9C30001A778640002EFF35 /* HttpAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpAPI.h; sourceTree = "<group>"; };
 		EA9C30011A778640002EFF35 /* HttpAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpAPI.m; sourceTree = "<group>"; };
 		EAA454431A70DEAF0057A770 /* OEZCommSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OEZCommSDK.framework; sourceTree = "<group>"; };
+		EAA5DFE01A77D3F300CF9163 /* OtherAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherAPI.h; sourceTree = "<group>"; };
+		EAA5DFE11A77D42E00CF9163 /* HttpOtherAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpOtherAPI.h; sourceTree = "<group>"; };
+		EAA5DFE21A77D42E00CF9163 /* HttpOtherAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpOtherAPI.m; sourceTree = "<group>"; };
 		EAA773861A7222C400EBD512 /* AppTableViewPageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTableViewPageCell.h; sourceTree = "<group>"; };
 		EAA773871A7222C400EBD512 /* AppTableViewPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTableViewPageCell.m; sourceTree = "<group>"; };
 		EAA773891A72241B00EBD512 /* AppTableViewCellStyle4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTableViewCellStyle4.h; sourceTree = "<group>"; };
@@ -891,6 +895,7 @@
 				EA9C2FF91A7784BB002EFF35 /* HttpAPI */,
 				EA9C2FF21A776C6C002EFF35 /* UserAPI.h */,
 				EA9C2FF61A778362002EFF35 /* ApplyAPI.h */,
+				EAA5DFE01A77D3F300CF9163 /* OtherAPI.h */,
 			);
 			path = AppAPI;
 			sourceTree = "<group>";
@@ -904,6 +909,8 @@
 				EA9C2FFE1A778608002EFF35 /* HttpApplyAPI.m */,
 				EA9C30001A778640002EFF35 /* HttpAPI.h */,
 				EA9C30011A778640002EFF35 /* HttpAPI.m */,
+				EAA5DFE11A77D42E00CF9163 /* HttpOtherAPI.h */,
+				EAA5DFE21A77D42E00CF9163 /* HttpOtherAPI.m */,
 			);
 			path = HttpAPI;
 			sourceTree = "<group>";
@@ -1134,6 +1141,7 @@
 				EABA1EC91A7679F200A76BD2 /* AppDetailsViewController.m in Sources */,
 				EA13DDDC1A6F961E004AB7E6 /* MyNavigationViewController.m in Sources */,
 				EA88BFAA1A748C2A004885A0 /* MusicInfo.m in Sources */,
+				EAA5DFE31A77D42E00CF9163 /* HttpOtherAPI.m in Sources */,
 				EA88BFB41A74CB76004885A0 /* RecommendViewController.m in Sources */,
 				EA13DDCE1A6F8A35004AB7E6 /* NSString+NSStringCategory.m in Sources */,
 				1AD64903B17F5D12DC09D1BB /* ThirdLoginInfo.m in Sources */,

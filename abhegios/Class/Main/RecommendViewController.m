@@ -8,14 +8,14 @@
 
 #import "RecommendViewController.h"
 #import "GroupInfo.h"
-
+#import "AppAPIHelper.h"
 typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
     RecommendTableViewCellStyleNone = 0,
     RecommendTableViewCellStyleOne,
     RecommendTableViewCellStyleTwo
 };
 
-@interface RecommendViewController ()
+@interface RecommendViewController ()<ReqeustDelegate>
 {
  NSArray   *_recommendHomeGroups;
 }
@@ -25,7 +25,22 @@ typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self testData];
+    [self request];
+}
+
+-(void) reqeust:(id)reqeust  didComplete:(id)data
+{
+    _recommendHomeGroups = data;
+    [self.tableView reloadData];
+}
+-(void) reqeust:(id)reqeust didError:(NSError *)err
+{
+    
+}
+
+-(void) request
+{
+    [[[AppAPIHelper shared] getOtherAPI] getRecommendHome:self];
 }
 
 -(void) testData
