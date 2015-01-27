@@ -9,5 +9,19 @@
 #import "HttpApplyAPI.h"
 
 @implementation HttpApplyAPI
+-(void) getAppDetails:(NSInteger)id delegate:(id<AppNetAndCacheAPIDelegate>)delegate
+{
+    
+}
+
+-(void) getAppStoreHome:(id<AppNetAndCacheAPIDelegate>)delegate
+{
+    
+}
+
+-(void) getGameStoreHome:(id<AppNetAndCacheAPIDelegate>)delegate
+{
+    
+}
 
 @end

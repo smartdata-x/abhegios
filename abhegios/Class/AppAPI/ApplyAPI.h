@@ -11,5 +11,5 @@
 @protocol ApplyAPI <NSObject>
 -(void) getAppStoreHome:(id<AppNetAndCacheAPIDelegate>) delegate;
 -(void) getGameStoreHome:(id<AppNetAndCacheAPIDelegate>) delegate;
--(void) getAppDetails:(NSInteger) id delegate:(id<AppNetAndCacheAPIDelegate>) delegate;
+-(void) getAppDetails:(NSInteger) id delegate:(id<AppNetAPIDelegate>) delegate;
 @end

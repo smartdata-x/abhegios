@@ -716,6 +716,7 @@
 		1AD64E767514ABADB117A29B /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				EA9C300A1A7788C8002EFF35 /* APIRequest */,
 				EABA1EB31A76702200A76BD2 /* Game */,
 				EA88BFAB1A749037004885A0 /* Movie */,
 				EA88BFA71A748C15004885A0 /* Music */,
@@ -917,6 +918,13 @@
 				EA9C30081A77870B002EFF35 /* CacheAPI.m */,
 			);
 			path = CacheAPI;
+			sourceTree = "<group>";
+		};
+		EA9C300A1A7788C8002EFF35 /* APIRequest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APIRequest;
 			sourceTree = "<group>";
 		};
 		EAA454421A70DEAF0057A770 /* OEZCommSDK */ = {

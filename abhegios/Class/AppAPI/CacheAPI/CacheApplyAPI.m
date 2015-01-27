@@ -9,5 +9,19 @@
 #import "CacheApplyAPI.h"
 
 @implementation CacheApplyAPI
+-(void) getAppDetails:(NSInteger)id delegate:(id<AppCacheAPIDelegate>)delegate
+{
+    
+}
+
+-(void) getAppStoreHome:(id<AppCacheAPIDelegate>)delegate
+{
+    
+}
+
+-(void) getGameStoreHome:(id<AppCacheAPIDelegate>)delegate
+{
+    
+}
 
 @end
