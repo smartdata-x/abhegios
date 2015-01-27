@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookInfoViewStyle2">
@@ -22,7 +21,8 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="app_banner" translatesAutoresizingMaskIntoConstraints="NO" id="OpO-ec-6dD">
                     <rect key="frame" x="10" y="10" width="84" height="112"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="84" id="tUc-Br-euS"/>
+                        <constraint firstAttribute="width" constant="84" id="7QT-OS-b1q"/>
+                        <constraint firstAttribute="height" constant="112" id="Qcv-Zq-Pj5"/>
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="enb-ov-0zd" customClass="FavRateViewStyle">
@@ -31,12 +31,18 @@
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2JT-rE-ik4">
                     <rect key="frame" x="104" y="51" width="200" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Qmb-g0-C81"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ni-fx-eL6">
                     <rect key="frame" x="104" y="80" width="200" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="Dc4-RL-Aoa"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
@@ -44,10 +50,11 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="7Ni-fx-eL6" firstAttribute="leading" secondItem="qbQ-3a-H1h" secondAttribute="leadingMargin" constant="96" id="D0T-vL-r8F"/>
-                <constraint firstAttribute="trailingMargin" secondItem="7Ni-fx-eL6" secondAttribute="trailing" constant="8" id="cf4-K5-KJ3"/>
-                <constraint firstAttribute="trailingMargin" secondItem="2JT-rE-ik4" secondAttribute="trailing" constant="8" id="fdq-x0-btc"/>
-                <constraint firstItem="2JT-rE-ik4" firstAttribute="leading" secondItem="qbQ-3a-H1h" secondAttribute="leadingMargin" constant="96" id="uJz-EE-X9z"/>
+                <constraint firstItem="OpO-ec-6dD" firstAttribute="leading" secondItem="qbQ-3a-H1h" secondAttribute="leading" constant="10" id="FtB-Ha-S6B"/>
+                <constraint firstItem="2JT-rE-ik4" firstAttribute="leading" secondItem="qbQ-3a-H1h" secondAttribute="leading" constant="104" id="PzK-Wf-aWY"/>
+                <constraint firstAttribute="trailing" secondItem="7Ni-fx-eL6" secondAttribute="trailing" constant="16" id="YHQ-74-Fkg"/>
+                <constraint firstAttribute="trailing" secondItem="2JT-rE-ik4" secondAttribute="trailing" constant="16" id="agL-SK-wM1"/>
+                <constraint firstItem="7Ni-fx-eL6" firstAttribute="leading" secondItem="qbQ-3a-H1h" secondAttribute="leading" constant="104" id="jtr-0A-Wcl"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>

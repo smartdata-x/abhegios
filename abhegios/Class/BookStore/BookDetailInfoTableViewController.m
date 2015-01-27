@@ -81,7 +81,7 @@
     switch (indexPath.section) {
         case BookDetailInfoSectionHeaderCell:   return 132; break;
         case BookDetailInfoSectionReadSave:     return 49; break;
-        case BookDetailInfoSectionIntroduction: return 100; break;
+        case BookDetailInfoSectionIntroduction: return 160; break;
         case BookDetailInfoSectionChapterInfo:  return 55; break;
         case BookDetailInfoSectionTagInfo:      return 45; break;
         case BookDetailInfoSectionReadDownload: return 47; break;
