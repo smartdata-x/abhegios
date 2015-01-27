@@ -23,27 +23,7 @@
 }
 
 
--(void) request:(NSString*) path parameter:(NSDictionary*) parameter completeBlock:(CompleteBlock) completeBlock errorBlock:(ErrorBlock) errorBlock
-{
-    NSMutableDictionary *parameters = [[NSMutableDictionary alloc] initWithDictionary:[_requestInfo toDictionary:NO]];
-    if( parameter != nil)
-        [parameters addEntriesFromDictionary:parameter];
-    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString: KAppAPIBaseURL]];
-    NSMutableURLRequest *request = [httpClient requestWithMethod:@"GET" path:path parameters:parameters];
-    [request setTimeoutInterval:10];
-    AFHTTPRequestOperation *operation = [httpClient HTTPRequestOperationWithRequest:request success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        if ( completeBlock )
-        {
-            completeBlock(responseObject);
-        }
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        if ( errorBlock ) {
-            errorBlock(error);
-        }
-    }];
-    [httpClient enqueueHTTPRequestOperation:operation];
-}
+
 
 
 -(id) jsonProcess:(id) data
@@ -66,25 +46,14 @@
 
 -(void) request:(NSString*) path parameter:(NSDictionary*) parameter delegate:(id<ReqeustDelegate>)delegate processBlock:(ProcessBlock) processBlock
 {
-    [self request:path parameter:parameter completeBlock:^(id data) {
-        if( [delegate respondsToSelector:@selector(reqeust:didComplete:)] )
-        {
-            data = [self jsonProcess:data];
-            if ( [data isKindOfClass:[NSError class]] ) {
-                if( [delegate respondsToSelector:@selector(reqeust:didError:)])
-                    [delegate reqeust:self didError:data];
-            }
-            else
-            {
-                if ( processBlock != nil)
-                    data = processBlock(data);
-                [delegate reqeust:self didComplete:data];
-            }
-            
-        }
-    } errorBlock:^(NSError *error) {
-        if( [delegate respondsToSelector:@selector(reqeust:didError:)])
-            [delegate reqeust:self didError:error];
+    NSMutableDictionary *parameters = [[NSMutableDictionary alloc] initWithDictionary:[_requestInfo toDictionary:NO]];
+    if( parameter != nil)
+        [parameters addEntriesFromDictionary:parameter];
+    [super request:[KAppAPIBaseURL stringByAppendingString:path] parameter:parameters delegate:delegate processBlock:^id(id data) {
+         data = [self jsonProcess:data];
+        if ( ! [data isKindOfClass:[NSError class]]  && processBlock != nil)
+            data = processBlock(data);
+        return data;
     }];
 }
 

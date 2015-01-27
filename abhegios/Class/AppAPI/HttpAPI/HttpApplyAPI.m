@@ -14,13 +14,13 @@
 @implementation HttpApplyAPI
 -(void) getAppDetails:(NSInteger)appID delegate:(id<ReqeustDelegate>)delegate
 {
-     static NSString *path = @"/cgi-bin/abheg/store/1/summary.fcgi";
+     static NSString *path = @"/store/1/summary.fcgi";
     [self request:path parameter:[NSDictionary dictionaryWithObject:@(appID) forKey:@""] delegate:delegate entityClass:[AppDetailsInfo class]];
 }
 
 -(void) getAppStoreHome:(id<ReqeustDelegate>)delegate
 {
-    static NSString *path = @"/cgi-bin/abheg/find/1/appstore.fcgi";
+    static NSString *path = @"/find/1/appstore.fcgi";
     [self request:path delegate:delegate processBlock:^id(id data) {
         return [GroupInfo initWithsConfigAndDataDictionarys:@"appstorehome" groupsData:data entityClass:[AppInfo class]];
     }];
@@ -28,7 +28,7 @@
 
 -(void) getGameStoreHome:(id<ReqeustDelegate>)delegate
 {
-    static NSString *path = @"/cgi-bin/abheg/find/1/gamestore.fcgi";
+    static NSString *path = @"/find/1/gamestore.fcgi";
     [self request:path delegate:delegate entityClass:[GameHomeInfo class]];
 }
 

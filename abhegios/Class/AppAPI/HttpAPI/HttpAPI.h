@@ -10,7 +10,7 @@
 #import "ReqeustDelegate.h"
 #import "RequestInfo.h"
 #import "HTTPReqeust.h"
-@interface HttpAPI : NSObject
+@interface HttpAPI : HTTPReqeust
 -(id) initWithRequest:(RequestInfo*) RequestInfo;
 
 -(void) request:(NSString*) path delegate:(id<ReqeustDelegate>) delegate entityClass:(Class) entityClass;

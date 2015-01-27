@@ -38,5 +38,5 @@
 #define kScreenScale [[UIScreen mainScreen] scale]
 
 
-#define KAppAPIBaseURL @"http://112.124.49.59"
+#define KAppAPIBaseURL @"http://112.124.49.59/cgi-bin/abheg"
 #endif
