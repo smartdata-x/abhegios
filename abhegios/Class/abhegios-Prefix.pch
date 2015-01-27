@@ -37,4 +37,6 @@
 #define kApplicationFrame [[UIScreen mainScreen] applicationFrame]
 #define kScreenScale [[UIScreen mainScreen] scale]
 
+
+#define KAppAPIBaseURL @"http://112.124.49.59"
 #endif

@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="78" height="90"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ky7-FJ-vkh">
+                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ky7-FJ-vkh">
                     <rect key="frame" x="9" y="65" width="60" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -32,6 +32,7 @@
             </subviews>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="8Cd-YN-IRh" secondAttribute="centerX" id="Gcd-rm-Dpa"/>
+                <constraint firstAttribute="centerX" secondItem="Ky7-FJ-vkh" secondAttribute="centerX" id="cRd-CA-8fa"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>

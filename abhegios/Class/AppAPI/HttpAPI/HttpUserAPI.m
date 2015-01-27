@@ -9,7 +9,7 @@
 #import "HttpUserAPI.h"
 
 @implementation HttpUserAPI
--(void) thirdLogin:(ThirdLoginInfo *)loginInfo delegate:(id<AppNetAPIDelegate>)delegate
+-(void) thirdLogin:(ThirdLoginInfo *)loginInfo delegate:(id<ReqeustDelegate>)delegate
 {
     
 }

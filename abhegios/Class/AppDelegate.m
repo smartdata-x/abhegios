@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "HandleOpenURLHelper.h"
 #import "MainViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -16,7 +17,9 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
     return YES;
 }
 

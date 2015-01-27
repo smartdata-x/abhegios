@@ -7,7 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "ReqeustDelegate.h"
+#import "RequestInfo.h"
+#import "HTTPReqeust.h"
 @interface HttpAPI : NSObject
+-(id) initWithRequest:(RequestInfo*) RequestInfo;
 
+-(void) request:(NSString*) path delegate:(id<ReqeustDelegate>) delegate entityClass:(Class) entityClass;
+
+-(void) request:(NSString*) path parameter:(NSDictionary*) parameter delegate:(id<ReqeustDelegate>) delegate entityClass:(Class) entityClass;
+
+-(void) request:(NSString*) path delegate:(id<ReqeustDelegate>)delegate processBlock:(ProcessBlock) processBlock;
+
+-(void) request:(NSString*) path parameter:(NSDictionary*) parameter delegate:(id<ReqeustDelegate>)delegate processBlock:(ProcessBlock) processBlock;
 @end
