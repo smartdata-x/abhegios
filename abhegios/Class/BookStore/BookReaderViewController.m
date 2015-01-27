@@ -15,6 +15,7 @@
 {
     BookInfo *_bookInfo;
     NSArray *_bookChapterGroup;
+    BOOL _continueReading;
 }
 @property NSMutableArray *chapterGroup;
 @property NSString *bookContent;
@@ -55,9 +56,21 @@
     _currentChapter = -1;
 }
 
--(void)setData:(id)data {
+- (void)setData:(id)data {
     _bookInfo = data;
     [self testData];
+}
+
+- (void)setDataWithUrl:(id)data URL:(NSString *)url {
+    _bookInfo = data;
+    
+    //带url，自己构建一个freeread结构
+    BookChapterInfo *chapterinfo = [[BookChapterInfo alloc] init];
+    chapterinfo.url = url;
+    chapterinfo.chaptername = @"";
+    _bookChapterGroup = [[NSArray alloc] initWithObjects:chapterinfo, nil];
+    _chapterCount = 1;
+    _continueReading = NO;
 }
 
 - (void)testData {
@@ -148,7 +161,7 @@
 }
 
 - (BOOL)isNeedContinueLastPosition {
-    return NO;
+    return _continueReading;
 }
 
 - (void)downloadWholeBook {
