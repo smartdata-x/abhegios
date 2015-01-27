@@ -7,18 +7,30 @@
 //
 
 #import "AppHScrollViewCell1.h"
-
+#import "AppInfoViewStyle3.h"
 @implementation AppHScrollViewCell1
-
-- (void)awakeFromNib
 {
-    [super awakeFromNib];
-    [[_logo layer] setCornerRadius:8.0f];
-    [[_logo layer] setMasksToBounds:YES];
+    AppInfoViewStyle3* _appInfoView;
 }
 
+-(id) initWithReuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithReuseIdentifier:reuseIdentifier];
+    if( self != nil)
+    {
+        _appInfoView = [AppInfoViewStyle3 loadFromNib];
+        [self addSubview:_appInfoView];
+    }
+    return self;
+}
 -(void) setData:(id)data
 {
-    [_name setText:[data name]];
+    [_appInfoView setData:data];
+}
+
+-(void) layoutSubviews
+{
+    [super layoutSubviews];
+    [_appInfoView setFrame:[self bounds]];
 }
 @end

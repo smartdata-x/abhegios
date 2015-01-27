@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import "HandleOpenURLHelper.h"
 #import "MainViewController.h"
-#import <OEZCommSDK/OEZCommSDK.h>
 @interface AppDelegate ()
 
 @end
@@ -18,8 +17,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    NSLog(@"%@",NSStringFromCGRect(kMainScreenFrame));
-    // Override point for customization after application launch.
     return YES;
 }
 

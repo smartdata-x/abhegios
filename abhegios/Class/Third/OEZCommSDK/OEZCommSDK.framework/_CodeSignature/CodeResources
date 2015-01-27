@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/OEZCommSDK.h</key>
 		<data>
-		787lSWbhE4coh3OtU9mzvItKL1k=
+		rqet6oV/IIncx8/Cee/nf4sRdlU=
 		</data>
 		<key>Headers/OEZHScrollTableViewCell.h</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Headers/OEZHScrollView.h</key>
 		<data>
-		39ultJ/OX75SZI8PCaA5i0GLjVc=
+		2aUu8xZk1HohUdY5Pkp2w3XvL4M=
 		</data>
 		<key>Headers/OEZNavigationViewController.h</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Headers/OEZPageView.h</key>
 		<data>
-		AHeGID3sgzbGYy0y1VNDYBSk/xU=
+		4Z/uILj+E0UglyoiA0E+XyR4ggc=
 		</data>
 		<key>Headers/OEZTableViewCell.h</key>
 		<data>
@@ -43,6 +43,10 @@
 		<key>Headers/OEZTableViewPageCell.h</key>
 		<data>
 		Fg7mqXcZ7UiULE2DtqQICmfD1Dc=
+		</data>
+		<key>Headers/OEZViewCell.h</key>
+		<data>
+		CMPjPBneX+spyUVSEap+JCAbJHw=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -61,7 +65,7 @@
 		</data>
 		<key>Headers/OEZCommSDK.h</key>
 		<data>
-		787lSWbhE4coh3OtU9mzvItKL1k=
+		rqet6oV/IIncx8/Cee/nf4sRdlU=
 		</data>
 		<key>Headers/OEZHScrollTableViewCell.h</key>
 		<data>
@@ -69,7 +73,7 @@
 		</data>
 		<key>Headers/OEZHScrollView.h</key>
 		<data>
-		39ultJ/OX75SZI8PCaA5i0GLjVc=
+		2aUu8xZk1HohUdY5Pkp2w3XvL4M=
 		</data>
 		<key>Headers/OEZNavigationViewController.h</key>
 		<data>
@@ -81,7 +85,7 @@
 		</data>
 		<key>Headers/OEZPageView.h</key>
 		<data>
-		AHeGID3sgzbGYy0y1VNDYBSk/xU=
+		4Z/uILj+E0UglyoiA0E+XyR4ggc=
 		</data>
 		<key>Headers/OEZTableViewCell.h</key>
 		<data>
@@ -94,6 +98,10 @@
 		<key>Headers/OEZTableViewPageCell.h</key>
 		<data>
 		Fg7mqXcZ7UiULE2DtqQICmfD1Dc=
+		</data>
+		<key>Headers/OEZViewCell.h</key>
+		<data>
+		CMPjPBneX+spyUVSEap+JCAbJHw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>

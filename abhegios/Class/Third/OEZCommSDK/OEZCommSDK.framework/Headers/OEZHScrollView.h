@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface OEZHScrollViewCell : UIView<NSCoding>
+#import "OEZViewCell.h"
+@interface OEZHScrollViewCell : OEZViewCell
 @end
 
 @class OEZHScrollView;

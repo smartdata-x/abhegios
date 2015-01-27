@@ -7,9 +7,7 @@
 //
 
 #import "AppTableViewCellStyle3.h"
-#import "AppInfo.h"
 #import "AppHScrollViewCell1.h"
-
 #define kViewitemWidth  78
 @implementation AppTableViewCellStyle3
 {
@@ -30,7 +28,12 @@
 
 -(OEZHScrollViewCell*) hScrollView:(OEZHScrollView *)hScrollView cellForColumnAtIndex:(NSInteger)columnIndex
 {
-    AppHScrollViewCell1 *cell = [hScrollView dequeueReusableCellWithIdentifier:@"AppHScrollViewCell1"];
+    static NSString *identifier = @"AppHScrollViewCell1";
+    AppHScrollViewCell1 *cell = [hScrollView dequeueReusableCellWithIdentifier:identifier];
+    if( cell == nil)
+    {
+        cell = [[AppHScrollViewCell1 alloc]  initWithReuseIdentifier:identifier];
+    }
     [cell setData:[self.data objectAtIndex:columnIndex]];
     return cell;
 }

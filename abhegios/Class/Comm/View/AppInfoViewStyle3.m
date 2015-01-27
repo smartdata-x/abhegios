@@ -20,4 +20,5 @@
 {
     [_name setText:[data name]];
 }
+
 @end

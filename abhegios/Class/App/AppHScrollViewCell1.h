@@ -9,7 +9,5 @@
 #import <OEZCommSDK/OEZCommSDK.h>
 
 @interface AppHScrollViewCell1 : OEZHScrollViewCell
-@property (weak, nonatomic) IBOutlet UILabel *name;
-@property (weak, nonatomic) IBOutlet UIView *logo;
 -(void) setData:(id) data;
 @end
