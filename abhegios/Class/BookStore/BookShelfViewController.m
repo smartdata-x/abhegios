@@ -10,6 +10,7 @@
 #import "BookInfo.h"
 #import "GroupInfo.h"
 #import "BookInfoViewStyle1.h"
+#import "BookReaderViewController.h"
 
 #define kMaxBookNumber 99
 #define kBookNumberPerRow 3
@@ -74,6 +75,8 @@
         GroupInfo *group = [_bookShelfGroups objectAtIndex:BookShelfTypeList];
         UIButton *btnSender = (UIButton *)sender;
         BookInfo *bookInfo = [[group entitys] objectAtIndex:btnSender.tag];
+        BookReaderViewController *readerView = (BookReaderViewController *)viewController;
+        [readerView setData:bookInfo];
     } animated:YES];
 }
 

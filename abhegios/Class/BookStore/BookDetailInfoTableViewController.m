@@ -11,6 +11,7 @@
 #import "BookDetailInfoTableViewCellStyle4.h"
 #import "GroupInfo.h"
 #import "BookDetailInfo.h"
+#import "BookReaderViewController.h"
 
 @interface BookDetailInfoTableViewController ()
 {
@@ -163,6 +164,8 @@
 
 - (IBAction)gotoBookReader:(id)sender {
     [self.navigationController pushViewControllerWithIdentifier:@"BookReaderViewController" completion:^(UIViewController *viewController) {
+        BookReaderViewController *readerview = (BookReaderViewController *)viewController;
+        [readerview setData:nil];
     } animated:YES];
 }
 

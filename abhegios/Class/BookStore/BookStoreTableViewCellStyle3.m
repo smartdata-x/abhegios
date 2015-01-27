@@ -26,10 +26,13 @@
 }
 
 - (void)addViewItem {
-    CGFloat x = [[self subviews] count] * kBookItemWidth;
+    CGFloat gap = (mainScreenWidth - kMaxBookItemView * 108) / 2;
+    gap = gap > 0.0f ? gap : 0.0f;
+    NSUInteger existCount = [[self subviews] count];
+    CGFloat x = existCount * kBookItemWidth;
     BookInfoViewStyle1 *viewItem = [BookInfoViewStyle1 loadFromNib];
     CGRect rect = [viewItem frame];
-    rect.origin.x = x;
+    rect.origin.x = x + gap * (existCount);
     [viewItem setFrame:rect];
     [viewItem setTag:[[self subviews] count]];
     [viewItem.logoButton setTag:[[self subviews] count]];

@@ -8,6 +8,9 @@
 
 #import <OEZCommSDK/OEZCommSDK.h>
 
+#define mainScreenFrame [[UIScreen mainScreen] bounds]
+#define mainScreenWidth mainScreenFrame.size.width
+#define mainScreenHeight mainScreenFrame.size.height
 
 @interface BaseInfo : OEZBaseEntity
 @property NSUInteger id;

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Glu-Zl-Ros">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Glu-Zl-Ros">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -391,16 +391,14 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VEJ-WC-EEz" id="Rpe-UG-BIK">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vHH-d8-yv4" customClass="BookInfoViewStyle2">
+                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vHH-d8-yv4" customClass="BookInfoViewStyle2">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="132"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="vHH-d8-yv4" firstAttribute="leading" secondItem="Rpe-UG-BIK" secondAttribute="leading" id="6lU-0p-4Or"/>
-                                        <constraint firstItem="vHH-d8-yv4" firstAttribute="top" secondItem="Rpe-UG-BIK" secondAttribute="top" id="CGK-0J-6Ig"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="vHH-d8-yv4" secondAttribute="bottom" constant="-9" id="Kxs-eW-yOU"/>
-                                        <constraint firstAttribute="trailing" secondItem="vHH-d8-yv4" secondAttribute="trailing" constant="280" id="YB6-P6-SX4"/>
+                                        <constraint firstItem="vHH-d8-yv4" firstAttribute="leading" secondItem="Rpe-UG-BIK" secondAttribute="leadingMargin" constant="8" id="AGN-JQ-K70"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="vHH-d8-yv4" secondAttribute="trailing" constant="8" id="TgU-PS-aI8"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
