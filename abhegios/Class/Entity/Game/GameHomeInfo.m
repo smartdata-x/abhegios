@@ -15,7 +15,7 @@
     self = [self init];
     if( self != nil)
     {
-        _find =[AppDetailsInfo initWithDictionary:[dict objectForKey:@"find"]];
+        _emblem =[AppDetailsInfo initWithDictionary:[dict objectForKey:@"emblem"]];
         _groups = [GroupInfo  initWithsConfigAndDataDictionarys:@"gamehomeinfo" groupsData:dict entityClass:[AppInfo class]];
     }
     return self;

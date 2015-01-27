@@ -7,21 +7,29 @@
 //
 
 #import "HttpApplyAPI.h"
-
+#import "GroupInfo.h"
+#import "AppInfo.h"
+#import "GameHomeInfo.h"
+#import "AppDetailsInfo.h"
 @implementation HttpApplyAPI
--(void) getAppDetails:(NSInteger)id delegate:(id<AppNetAndCacheAPIDelegate>)delegate
+-(void) getAppDetails:(NSInteger)appID delegate:(id<ReqeustDelegate>)delegate
 {
-    
+     static NSString *path = @"/store/1/summary.fcgi";
+    [self request:path parameter:[NSDictionary dictionaryWithObject:@(appID) forKey:@""] delegate:delegate entityClass:[AppDetailsInfo class]];
 }
 
--(void) getAppStoreHome:(id<AppNetAndCacheAPIDelegate>)delegate
+-(void) getAppStoreHome:(id<ReqeustDelegate>)delegate
 {
-    
+    static NSString *path = @"/find/1/appstore.fcgi";
+    [self request:path delegate:delegate processBlock:^id(id data) {
+        return [GroupInfo initWithsConfigAndDataDictionarys:@"appstorehome" groupsData:data entityClass:[AppInfo class]];
+    }];
 }
 
--(void) getGameStoreHome:(id<AppNetAndCacheAPIDelegate>)delegate
+-(void) getGameStoreHome:(id<ReqeustDelegate>)delegate
 {
-    
+    static NSString *path = @"/find/1/gamestore.fcgi";
+    [self request:path delegate:delegate entityClass:[GameHomeInfo class]];
 }
 
 @end

@@ -8,7 +8,8 @@
 
 #import "GameHomeViewController.h"
 #import "GameHomeInfo.h"
-@interface GameHomeViewController ()
+#import "AppAPIHelper.h"
+@interface GameHomeViewController ()<ReqeustDelegate>
 {
     GameHomeInfo *_gameHomeInfo;
 }
@@ -18,7 +19,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self test];
+    [self request];
+}
+
+-(void) reqeust:(id)reqeust didComplete:(id)data
+{
+    _gameHomeInfo = data;
+    [self.tableView reloadData];
+}
+-(void) reqeust:(id)reqeust didError:(NSError *)err
+{
+    
+}
+
+-(void) request
+{
+    [[[AppAPIHelper shared] getApplyAPI] getGameStoreHome:self];
 }
 
 -(void) test

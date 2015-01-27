@@ -11,7 +11,8 @@
 #import "AppInfo.h"
 #import "AppTableViewCellStyle1.h"
 #import <OEZCommSDK/OEZCommSDK.h>
-@interface AppHomeViewController ()
+#import "AppAPIHelper.h"
+@interface AppHomeViewController ()<ReqeustDelegate>
 {
     NSArray   *_appStoreHomeGroups;
 }
@@ -21,10 +22,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self testData];
+    [self request];
     
 }
 
+-(void) reqeust:(id)reqeust  didComplete:(id)data
+{
+    _appStoreHomeGroups = data;
+    [self.tableView reloadData];
+}
+-(void) reqeust:(id)reqeust didError:(NSError *)err
+{
+    
+}
+
+-(void) request
+{
+    [[[AppAPIHelper shared] getApplyAPI] getAppStoreHome:self];
+}
 -(void) testData
 {
     _appStoreHomeGroups = [GroupInfo initWithsConfigAndDataJsonFile:@"appstorehome" jsonName:@"appstorehome_test" entityClass:[AppInfo class]];

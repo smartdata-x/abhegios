@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AppAPIDelegate.h"
+#import "ReqeustDelegate.h"
 @protocol ApplyAPI <NSObject>
--(void) getAppStoreHome:(id<AppNetAndCacheAPIDelegate>) delegate;
--(void) getGameStoreHome:(id<AppNetAndCacheAPIDelegate>) delegate;
--(void) getAppDetails:(NSInteger) id delegate:(id<AppNetAPIDelegate>) delegate;
+-(void) getAppStoreHome:(id<ReqeustDelegate>) delegate;
+-(void) getGameStoreHome:(id<ReqeustDelegate>) delegate;
+-(void) getAppDetails:(NSInteger) appID delegate:(id<ReqeustDelegate>) delegate;
 @end

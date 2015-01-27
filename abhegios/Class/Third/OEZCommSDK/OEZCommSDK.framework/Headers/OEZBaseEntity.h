@@ -7,7 +7,7 @@
 //yaobanglin 本引擎只限内部使用
 @interface OEZBaseEntity : NSObject
 -(instancetype) initWithDictionary:(NSDictionary *) dict;
-
+-(NSDictionary*) toDictionary:(BOOL) isNSNull;
 +(instancetype) initWithDictionary:(NSDictionary *) dict;
 +(NSArray*) initWithsDictionarys:(NSArray*) dicts;
 +(NSArray*) initWithsContentsOfPlistFile:(NSString *)path;

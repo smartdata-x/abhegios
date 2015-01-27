@@ -84,6 +84,8 @@
 		EA7599901A7120A50027FC8B /* appstorehome_test.json in Resources */ = {isa = PBXBuildFile; fileRef = EA75998C1A7120A50027FC8B /* appstorehome_test.json */; };
 		EA7599911A7120A50027FC8B /* appdetailspage_test.json in Resources */ = {isa = PBXBuildFile; fileRef = EA75998D1A7120A50027FC8B /* appdetailspage_test.json */; };
 		EA7599931A7120CB0027FC8B /* uifounddata.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA7599921A7120CB0027FC8B /* uifounddata.plist */; };
+		EA7C91081A77A10200782B8D /* RequestInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7C91071A77A10200782B8D /* RequestInfo.m */; };
+		EA7C910E1A77B6AF00782B8D /* HTTPReqeust.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7C910D1A77B6AF00782B8D /* HTTPReqeust.m */; };
 		EA88BFA51A748A68004885A0 /* BaseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA88BFA41A748A68004885A0 /* BaseInfo.m */; };
 		EA88BFAA1A748C2A004885A0 /* MusicInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA88BFA91A748C2A004885A0 /* MusicInfo.m */; };
 		EA88BFAE1A74904B004885A0 /* MovieInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA88BFAD1A74904B004885A0 /* MovieInfo.m */; };
@@ -116,13 +118,11 @@
 		EA9486391A6DE09C003EE99B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9486381A6DE09C003EE99B /* MainViewController.m */; };
 		EA9C2FEB1A772561002EFF35 /* AppHScrollViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9C2FE91A772561002EFF35 /* AppHScrollViewCell1.m */; };
 		EA9C2FEF1A776C0A002EFF35 /* AppAPIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9C2FEE1A776C0A002EFF35 /* AppAPIHelper.m */; };
-		EA9C2FF51A776E78002EFF35 /* AppAPIDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9C2FF41A776E78002EFF35 /* AppAPIDelegate.m */; };
 		EA9C2FFC1A7785BD002EFF35 /* HttpUserAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9C2FFB1A7785BD002EFF35 /* HttpUserAPI.m */; };
 		EA9C2FFF1A778608002EFF35 /* HttpApplyAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9C2FFE1A778608002EFF35 /* HttpApplyAPI.m */; };
 		EA9C30021A778640002EFF35 /* HttpAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9C30011A778640002EFF35 /* HttpAPI.m */; };
-		EA9C30061A7786FA002EFF35 /* CacheApplyAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9C30051A7786FA002EFF35 /* CacheApplyAPI.m */; };
-		EA9C30091A77870B002EFF35 /* CacheAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9C30081A77870B002EFF35 /* CacheAPI.m */; };
 		EAA454441A70DEAF0057A770 /* OEZCommSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA454431A70DEAF0057A770 /* OEZCommSDK.framework */; };
+		EAA5DFE31A77D42E00CF9163 /* HttpOtherAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA5DFE21A77D42E00CF9163 /* HttpOtherAPI.m */; };
 		EAA773881A7222C400EBD512 /* AppTableViewPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA773871A7222C400EBD512 /* AppTableViewPageCell.m */; };
 		EAA7738B1A72241B00EBD512 /* AppTableViewCellStyle4.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA7738A1A72241B00EBD512 /* AppTableViewCellStyle4.m */; };
 		EABA1EB61A76705E00A76BD2 /* GameHomeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EABA1EB51A76705E00A76BD2 /* GameHomeInfo.m */; };
@@ -285,6 +285,11 @@
 		EA75998C1A7120A50027FC8B /* appstorehome_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = appstorehome_test.json; path = Resources/appstorehome_test.json; sourceTree = "<group>"; };
 		EA75998D1A7120A50027FC8B /* appdetailspage_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = appdetailspage_test.json; path = Resources/appdetailspage_test.json; sourceTree = "<group>"; };
 		EA7599921A7120CB0027FC8B /* uifounddata.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = uifounddata.plist; path = Resources/uifounddata.plist; sourceTree = "<group>"; };
+		EA7C91061A77A10200782B8D /* RequestInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestInfo.h; sourceTree = "<group>"; };
+		EA7C91071A77A10200782B8D /* RequestInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestInfo.m; sourceTree = "<group>"; };
+		EA7C910C1A77B6AF00782B8D /* HTTPReqeust.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPReqeust.h; sourceTree = "<group>"; };
+		EA7C910D1A77B6AF00782B8D /* HTTPReqeust.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPReqeust.m; sourceTree = "<group>"; };
+		EA7C910F1A77B72E00782B8D /* ReqeustDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReqeustDelegate.h; sourceTree = "<group>"; };
 		EA83390D1A68B04200F3A9E9 /* abheg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = abheg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA88BFA31A748A68004885A0 /* BaseInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseInfo.h; sourceTree = "<group>"; };
 		EA88BFA41A748A68004885A0 /* BaseInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseInfo.m; sourceTree = "<group>"; };
@@ -332,8 +337,6 @@
 		EA9C2FED1A776C0A002EFF35 /* AppAPIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppAPIHelper.h; sourceTree = "<group>"; };
 		EA9C2FEE1A776C0A002EFF35 /* AppAPIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppAPIHelper.m; sourceTree = "<group>"; };
 		EA9C2FF21A776C6C002EFF35 /* UserAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserAPI.h; sourceTree = "<group>"; };
-		EA9C2FF31A776E78002EFF35 /* AppAPIDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppAPIDelegate.h; sourceTree = "<group>"; };
-		EA9C2FF41A776E78002EFF35 /* AppAPIDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppAPIDelegate.m; sourceTree = "<group>"; };
 		EA9C2FF61A778362002EFF35 /* ApplyAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplyAPI.h; sourceTree = "<group>"; };
 		EA9C2FFA1A7785BD002EFF35 /* HttpUserAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpUserAPI.h; sourceTree = "<group>"; };
 		EA9C2FFB1A7785BD002EFF35 /* HttpUserAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpUserAPI.m; sourceTree = "<group>"; };
@@ -341,11 +344,10 @@
 		EA9C2FFE1A778608002EFF35 /* HttpApplyAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpApplyAPI.m; sourceTree = "<group>"; };
 		EA9C30001A778640002EFF35 /* HttpAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpAPI.h; sourceTree = "<group>"; };
 		EA9C30011A778640002EFF35 /* HttpAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpAPI.m; sourceTree = "<group>"; };
-		EA9C30041A7786FA002EFF35 /* CacheApplyAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheApplyAPI.h; sourceTree = "<group>"; };
-		EA9C30051A7786FA002EFF35 /* CacheApplyAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheApplyAPI.m; sourceTree = "<group>"; };
-		EA9C30071A77870B002EFF35 /* CacheAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheAPI.h; sourceTree = "<group>"; };
-		EA9C30081A77870B002EFF35 /* CacheAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheAPI.m; sourceTree = "<group>"; };
 		EAA454431A70DEAF0057A770 /* OEZCommSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OEZCommSDK.framework; sourceTree = "<group>"; };
+		EAA5DFE01A77D3F300CF9163 /* OtherAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherAPI.h; sourceTree = "<group>"; };
+		EAA5DFE11A77D42E00CF9163 /* HttpOtherAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpOtherAPI.h; sourceTree = "<group>"; };
+		EAA5DFE21A77D42E00CF9163 /* HttpOtherAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpOtherAPI.m; sourceTree = "<group>"; };
 		EAA773861A7222C400EBD512 /* AppTableViewPageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTableViewPageCell.h; sourceTree = "<group>"; };
 		EAA773871A7222C400EBD512 /* AppTableViewPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTableViewPageCell.m; sourceTree = "<group>"; };
 		EAA773891A72241B00EBD512 /* AppTableViewCellStyle4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTableViewCellStyle4.h; sourceTree = "<group>"; };
@@ -542,6 +544,9 @@
 				EABA1ECD1A76844000A76BD2 /* AFNetworking */,
 				EA89882A1A72698300877E63 /* View */,
 				EADD5B451A6F702600CA6633 /* Category */,
+				EA7C910C1A77B6AF00782B8D /* HTTPReqeust.h */,
+				EA7C910D1A77B6AF00782B8D /* HTTPReqeust.m */,
+				EA7C910F1A77B72E00782B8D /* ReqeustDelegate.h */,
 			);
 			path = Comm;
 			sourceTree = "<group>";
@@ -889,9 +894,8 @@
 				EA9C30031A7786CD002EFF35 /* CacheAPI */,
 				EA9C2FF91A7784BB002EFF35 /* HttpAPI */,
 				EA9C2FF21A776C6C002EFF35 /* UserAPI.h */,
-				EA9C2FF31A776E78002EFF35 /* AppAPIDelegate.h */,
-				EA9C2FF41A776E78002EFF35 /* AppAPIDelegate.m */,
 				EA9C2FF61A778362002EFF35 /* ApplyAPI.h */,
+				EAA5DFE01A77D3F300CF9163 /* OtherAPI.h */,
 			);
 			path = AppAPI;
 			sourceTree = "<group>";
@@ -905,6 +909,8 @@
 				EA9C2FFE1A778608002EFF35 /* HttpApplyAPI.m */,
 				EA9C30001A778640002EFF35 /* HttpAPI.h */,
 				EA9C30011A778640002EFF35 /* HttpAPI.m */,
+				EAA5DFE11A77D42E00CF9163 /* HttpOtherAPI.h */,
+				EAA5DFE21A77D42E00CF9163 /* HttpOtherAPI.m */,
 			);
 			path = HttpAPI;
 			sourceTree = "<group>";
@@ -912,10 +918,6 @@
 		EA9C30031A7786CD002EFF35 /* CacheAPI */ = {
 			isa = PBXGroup;
 			children = (
-				EA9C30041A7786FA002EFF35 /* CacheApplyAPI.h */,
-				EA9C30051A7786FA002EFF35 /* CacheApplyAPI.m */,
-				EA9C30071A77870B002EFF35 /* CacheAPI.h */,
-				EA9C30081A77870B002EFF35 /* CacheAPI.m */,
 			);
 			path = CacheAPI;
 			sourceTree = "<group>";
@@ -923,6 +925,8 @@
 		EA9C300A1A7788C8002EFF35 /* APIRequest */ = {
 			isa = PBXGroup;
 			children = (
+				EA7C91061A77A10200782B8D /* RequestInfo.h */,
+				EA7C91071A77A10200782B8D /* RequestInfo.m */,
 			);
 			path = APIRequest;
 			sourceTree = "<group>";
@@ -1101,6 +1105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EABA1EE81A76844000A76BD2 /* AFPropertyListRequestOperation.m in Sources */,
+				EA7C910E1A77B6AF00782B8D /* HTTPReqeust.m in Sources */,
 				EABA1EB61A76705E00A76BD2 /* GameHomeInfo.m in Sources */,
 				CB6A21DB1A7155750087546F /* BookShelfViewController.m in Sources */,
 				CB6A21DE1A7268EA0087546F /* BookReaderViewController.m in Sources */,
@@ -1129,7 +1134,6 @@
 				EA9C30021A778640002EFF35 /* HttpAPI.m in Sources */,
 				CB6A21D71A712FBD0087546F /* BookStoreTableViewCellStyle4.m in Sources */,
 				CB6A21BD1A6FF2AA0087546F /* BookStoreViewController.m in Sources */,
-				EA9C2FF51A776E78002EFF35 /* AppAPIDelegate.m in Sources */,
 				EA9486391A6DE09C003EE99B /* MainViewController.m in Sources */,
 				EABA1EBD1A7675B100A76BD2 /* GameHomeViewController.m in Sources */,
 				CB6A22071A73E43F0087546F /* BookDetailInfoTableViewCellStyle0.m in Sources */,
@@ -1137,13 +1141,12 @@
 				EABA1EC91A7679F200A76BD2 /* AppDetailsViewController.m in Sources */,
 				EA13DDDC1A6F961E004AB7E6 /* MyNavigationViewController.m in Sources */,
 				EA88BFAA1A748C2A004885A0 /* MusicInfo.m in Sources */,
-				EA9C30061A7786FA002EFF35 /* CacheApplyAPI.m in Sources */,
+				EAA5DFE31A77D42E00CF9163 /* HttpOtherAPI.m in Sources */,
 				EA88BFB41A74CB76004885A0 /* RecommendViewController.m in Sources */,
 				EA13DDCE1A6F8A35004AB7E6 /* NSString+NSStringCategory.m in Sources */,
 				1AD64903B17F5D12DC09D1BB /* ThirdLoginInfo.m in Sources */,
 				EA9C2FEF1A776C0A002EFF35 /* AppAPIHelper.m in Sources */,
 				CB6A22041A73DF160087546F /* BookDetailInfoTableViewCellStyle5.m in Sources */,
-				EA9C30091A77870B002EFF35 /* CacheAPI.m in Sources */,
 				EA3D07731A6CD88A00189765 /* LoginViewController.m in Sources */,
 				EABA1ECB1A7679F200A76BD2 /* AppDetailsTableViewCellStyle2.m in Sources */,
 				CB6A21EB1A73C57C0087546F /* BookDetailInfoTableViewController.m in Sources */,
@@ -1155,6 +1158,7 @@
 				EA8D74931A6E7CF9004C17C2 /* AppTableViewCellStyle1.m in Sources */,
 				EABA1EE61A76844000A76BD2 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				1AD64565F18F3ED26CC48D25 /* User.m in Sources */,
+				EA7C91081A77A10200782B8D /* RequestInfo.m in Sources */,
 				EABA1EEA1A76844000A76BD2 /* AFXMLRequestOperation.m in Sources */,
 				EABA1EE51A76844000A76BD2 /* AFJSONRequestOperation.m in Sources */,
 				CB6A22201A765F7F0087546F /* BookDownloader.m in Sources */,

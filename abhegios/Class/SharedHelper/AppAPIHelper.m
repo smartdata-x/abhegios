@@ -8,17 +8,31 @@
 
 #import "AppAPIHelper.h"
 #import "HttpApplyAPI.h"
+#import "HttpOtherAPI.h"
 #import "HttpUserAPI.h"
+#include "RequestInfo.h"
 @implementation AppAPIHelper
 HELPER_SHARED
-
+ -(RequestInfo*) getRequestInfo
+{
+    RequestInfo*  requestInfo = [[RequestInfo alloc] init];
+    [requestInfo setUid:0];
+    [requestInfo setToken:@""];
+    return requestInfo;
+}
 -(id<UserAPI>) getUserAPI
 {
-    return [[HttpUserAPI alloc] init];
+    return [[HttpUserAPI alloc] initWithRequest:[self getRequestInfo]];
 }
 
 -(id<ApplyAPI>) getApplyAPI
 {
-    return [[HttpApplyAPI alloc] init];
+    return [[HttpApplyAPI alloc] initWithRequest:[self getRequestInfo]];
+}
+
+-(id<OtherAPI>) getOtherAPI
+{
+    return [[HttpOtherAPI alloc] initWithRequest:[self getRequestInfo]];
+
 }
 @end

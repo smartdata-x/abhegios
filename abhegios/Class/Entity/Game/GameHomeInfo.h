@@ -9,6 +9,6 @@
 #import <OEZCommSDK/OEZCommSDK.h>
 #import "AppDetailsInfo.h"
 @interface GameHomeInfo : OEZBaseEntity
-@property(nonatomic, retain)      AppDetailsInfo      *find;
+@property(nonatomic, retain)      AppDetailsInfo      *emblem;
 @property(nonatomic, retain)      NSArray             *groups;
 @end
