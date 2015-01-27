@@ -22,12 +22,12 @@
     [self request];
 }
 
--(void) didComplete:(id)data
+-(void) reqeust:(id)reqeust didComplete:(id)data
 {
     _gameHomeInfo = data;
     [self.tableView reloadData];
 }
--(void) didError:(NSError *)err
+-(void) reqeust:(id)reqeust didError:(NSError *)err
 {
     
 }

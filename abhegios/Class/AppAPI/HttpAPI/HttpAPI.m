@@ -67,24 +67,24 @@
 -(void) request:(NSString*) path parameter:(NSDictionary*) parameter delegate:(id<ReqeustDelegate>)delegate processBlock:(ProcessBlock) processBlock
 {
     [self request:path parameter:parameter completeBlock:^(id data) {
-        if( [delegate respondsToSelector:@selector(didComplete:)] )
+        if( [delegate respondsToSelector:@selector(reqeust:didComplete:)] )
         {
             data = [self jsonProcess:data];
             if ( [data isKindOfClass:[NSError class]] ) {
-                if( [delegate respondsToSelector:@selector(didError:)])
-                    [delegate didError:data];
+                if( [delegate respondsToSelector:@selector(reqeust:didError:)])
+                    [delegate reqeust:self didError:data];
             }
             else
             {
                 if ( processBlock != nil)
                     data = processBlock(data);
-                [delegate didComplete:data];
+                [delegate reqeust:self didComplete:data];
             }
             
         }
     } errorBlock:^(NSError *error) {
-        if( [delegate respondsToSelector:@selector(didError:)])
-            [delegate didError:error];
+        if( [delegate respondsToSelector:@selector(reqeust:didError:)])
+            [delegate reqeust:self didError:error];
     }];
 }
 
@@ -108,6 +108,10 @@
 -(void) request:(NSString*) path  delegate:(id<ReqeustDelegate>)delegate processBlock:(ProcessBlock) processBlock
 {
     [self request:path parameter:nil delegate:delegate processBlock:processBlock];
+}
+-(void) dealloc
+{
+    NSLog(@"dealloc %@",self);
 }
 
 @end

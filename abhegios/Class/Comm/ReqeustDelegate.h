@@ -7,8 +7,8 @@
 //
 
 @protocol ReqeustDelegate <NSObject>
--(void) didComplete:(id) data ;
--(void) didError:(NSError*) err;
+-(void) reqeust:(id)reqeust didComplete:(id) data ;
+-(void) reqeust:(id)reqeust didError:(NSError*) err;
 @end
 
 @protocol ReqeustCacheDelegate <NSObject>

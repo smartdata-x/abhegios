@@ -44,14 +44,14 @@
             data = processBlock(data);
          if ( [data isKindOfClass:[NSError class]] )
          {
-             if( [delegate respondsToSelector:@selector(didError:)])
-                [delegate didError:data];
+             if( [delegate respondsToSelector:@selector(reqeust:didError:)])
+                 [delegate reqeust:self didError:data];
          }
-         else if( [delegate respondsToSelector:@selector(didComplete:)])
-             [delegate didComplete:data];
+         else if( [delegate respondsToSelector:@selector(reqeust:didComplete:)])
+             [delegate reqeust:self didComplete:data];
            } errorBlock:^(NSError *error) {
-        if( [delegate respondsToSelector:@selector(didError:)])
-            [delegate didError:error];
+        if( [delegate respondsToSelector:@selector(reqeust:didError:)])
+            [delegate reqeust:self didError:error];
     }];
 
 }

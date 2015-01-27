@@ -26,12 +26,12 @@
     
 }
 
--(void) didComplete:(id)data
+-(void) reqeust:(id)reqeust  didComplete:(id)data
 {
     _appStoreHomeGroups = data;
     [self.tableView reloadData];
 }
--(void) didError:(NSError *)err
+-(void) reqeust:(id)reqeust didError:(NSError *)err
 {
     
 }
