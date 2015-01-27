@@ -32,7 +32,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self testData];
     [self initView];
     
     // 左翻页
@@ -58,14 +57,12 @@
 
 -(void)setData:(id)data {
     _bookInfo = data;
+    [self testData];
 }
 
 - (void)testData {
     _bookChapterGroup = [GroupInfo initWithsConfigAndDataJsonFile:@"bookstorehome" jsonName:@"bookchapter_test" entityClass:[BookChapterInfo class]];
     _chapterCount = [[[_bookChapterGroup objectAtIndex:BookReaderTypeChapterList] entitys] count];
-    _bookFileMgr = [[BookFileManager alloc] init];
-    _bookDownloader = [[BookDownloader alloc] init];
-    _bookDownloader.delegate = self;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -89,6 +86,9 @@
 }
 
 - (void)initView {
+    _bookFileMgr = [[BookFileManager alloc] init];
+    _bookDownloader = [[BookDownloader alloc] init];
+    _bookDownloader.delegate = self;
     [_readerView setFont:[UIFont systemFontOfSize:14.0f]];
     [_readerView setTextColor:[UIColor blackColor]];
     [_readerView setEditable:NO];
