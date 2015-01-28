@@ -16,10 +16,8 @@
 
 @interface BookSearchResultTableViewController ()
 {
-    //NSArray *_bookSearchResultGroup;
     NSInteger resultShowType;
 }
-//@property (nonatomic, retain) GroupInfo *bookInfoGroup;
 @end
 
 @implementation BookSearchResultTableViewController

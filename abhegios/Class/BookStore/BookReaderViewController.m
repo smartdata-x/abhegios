@@ -17,6 +17,7 @@
     BookInfo *_bookInfo;
     NSArray *_bookChapterGroup;
     BOOL _continueReading;
+    CGFloat _fontSize;
 }
 @property NSMutableArray *chapterGroup;
 @property NSString *bookContent;
@@ -108,10 +109,11 @@
 }
 
 - (void)initView {
+    _fontSize = 16.0f;
     _bookFileMgr = [[BookFileManager alloc] init];
     _bookDownloader = [[BookDownloader alloc] init];
     _bookDownloader.delegate = self;
-    [_readerView setFont:[UIFont systemFontOfSize:14.0f]];
+    //[_readerView setFont:[UIFont systemFontOfSize:_fontSize]];
     [_readerView setTextColor:[UIColor blackColor]];
     [_readerView setEditable:NO];
     [_readerView setUserInteractionEnabled:NO];
@@ -224,13 +226,12 @@
 }
 
 - (void)configTextView {
-    float fontSize = 16.0f;
-    float lineHeight = fontSize * 2;
+    float lineHeight = _fontSize * 2.0f;
     float hPadding = 16.0f;
     float readerFrameHeight = CGRectGetHeight(_readerView.frame);
     float maxContentHeight = readerFrameHeight - hPadding;
-    int lines = maxContentHeight / (fontSize + lineHeight);
-    _pageHeight = lines * (fontSize + lineHeight);
+    int lines = maxContentHeight / lineHeight;
+    _pageHeight = lines * lineHeight;
     readerFrameHeight = _pageHeight + hPadding;
     
     NSMutableParagraphStyle *parastyle = [[NSMutableParagraphStyle alloc] init];
@@ -239,11 +240,11 @@
     parastyle.minimumLineHeight = lineHeight;
     parastyle.firstLineHeadIndent = 20;
     parastyle.alignment = NSTextAlignmentJustified;
-    NSDictionary *attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:fontSize], NSParagraphStyleAttributeName:parastyle, NSForegroundColorAttributeName:kUIColorWithRGB(0x111111)};
+    NSDictionary *attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:_fontSize], NSParagraphStyleAttributeName:parastyle, NSForegroundColorAttributeName:kUIColorWithRGB(0x111111)};
     NSAttributedString *attribText = [[NSAttributedString alloc] initWithString:_bookContent attributes:attributes];
     _readerView.attributedText = attribText;
     
-    CGRect newFrame = CGRectMake(0, 0, CGRectGetWidth(_readerView.frame), _pageHeight);
+    CGRect newFrame = CGRectMake(0, 0, CGRectGetWidth(_readerView.frame), MAXFLOAT);
     float contentHeight = [self heightForAttributedString:attribText Font:_readerView.font Frame:newFrame];
     newFrame = [_readerView frame];
     newFrame.size.height = readerFrameHeight;

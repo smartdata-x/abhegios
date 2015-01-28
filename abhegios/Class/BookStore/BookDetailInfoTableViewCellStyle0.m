@@ -24,13 +24,7 @@
 
 - (void)setData:(id)data {
     [super setData:data];
-    // 重构一个，切换summary和author
-    BookDetailInfo *detailInfo = (BookDetailInfo *)data;
-    BookInfo *bookInfo = [[BookInfo alloc] init];
-    bookInfo.name = detailInfo.name;
-    bookInfo.summary = detailInfo.author;
-    bookInfo.star = detailInfo.star;
-    [_bookInfoView setData:bookInfo];
+    [_bookInfoView setData:data];
 }
 
 @end

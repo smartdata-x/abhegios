@@ -33,7 +33,6 @@
     [super viewDidLoad];
     bookShelfView = [[UIScrollView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:bookShelfView];
-    //[self testData];
     [[[AppAPIHelper shared] getBookAPI] getBookShelfList:self];
 }
 

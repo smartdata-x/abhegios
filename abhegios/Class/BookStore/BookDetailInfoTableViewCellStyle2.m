@@ -23,7 +23,8 @@
 
 - (void)setData:(id)data {
     [super setData:data];
-    [_introduction setText:[(BookDetailInfo *)data summary]];
+    BookDetailPage *detailPage = (BookDetailPage *)data;
+    [_introduction setText:[[detailPage summary] summary]];
 }
 
 @end

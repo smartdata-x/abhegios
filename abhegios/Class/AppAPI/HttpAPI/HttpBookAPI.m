@@ -22,7 +22,7 @@
 }
 
 - (void)getBookDetails:(NSInteger)bookID delegate:(id<ReqeustDelegate>)delegate {
-    static NSString *path = @"/book/1/summary.fcgi";
+    static NSString *path = @"/book/1/booksummary.fcgi";
     [self request:path parameter:[NSDictionary dictionaryWithObject:@(bookID) forKey:@"bookid"] delegate:delegate entityClass:[BookDetailPage class]];
 }
 
@@ -41,6 +41,10 @@
 }
 
 - (void)getBookChapterList:(NSInteger)bookID BookToken:(NSString *)bookToken delegate:(id<ReqeustDelegate>)delegate {
+    //work around
+    if (bookToken == nil) {
+        bookToken = @"fdafsafkjdsa;fsda";
+    }
     static NSString *path = @"/book/1/chapterlist.fcgi";
     [self request:path parameter:[NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:@(bookID), bookToken, nil] forKeys:[NSArray arrayWithObjects:@"bookid", @"booktoken",  nil]] delegate:delegate processBlock:^id(id data) {
         return [GroupInfo initWithsConfigAndDataDictionarys:@"bookstorehome" groupsData:data entityClass:[BookChapterInfo class]];

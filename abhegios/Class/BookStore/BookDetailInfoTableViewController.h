@@ -19,6 +19,5 @@ typedef NS_ENUM(NSInteger, BookDetailInfoSection) {
     BookDetailInfoSectionMAX,
 };
 @interface BookDetailInfoTableViewController : RefreshTableViewController
-@property NSInteger bookID;
 - (void)setData:(id)data;
 @end

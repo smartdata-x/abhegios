@@ -16,6 +16,7 @@
 
 @interface BookDetailInfoTableViewController ()
 {
+    BookInfo *_bookInfo;
 }
 @end
 
@@ -26,12 +27,16 @@
 }
 
 - (void)didRequest {
-    [[[AppAPIHelper shared] getBookAPI] getBookDetails:_bookID delegate:self];
+    [[[AppAPIHelper shared] getBookAPI] getBookDetails:_bookInfo.id delegate:self];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)setData:(id)data {
+    _bookInfo = data;
 }
 
 #pragma mark - Table view data source
@@ -90,8 +95,8 @@
     switch (indexPath.section) {
         case BookDetailInfoSectionHeaderCell:
             viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDetailInfoTableViewCellStyle0"];
-            //if (_bookDetailInfo) [viewCell setData:_bookDetailInfo];
-            if (_tableViewData) [viewCell setData:_tableViewData];
+            _bookInfo.summary = _bookInfo.author;
+            if (_tableViewData) [viewCell setData:_bookInfo];
             break;
             
         case BookDetailInfoSectionReadSave:
@@ -100,27 +105,22 @@
                 BookDetailInfoTableViewCellStyle1 *cellStyle1 = (BookDetailInfoTableViewCellStyle1 *)viewCell;
                 [cellStyle1.saveShelf addTarget:self action:@selector(gotoBookShelf:) forControlEvents:UIControlEventTouchUpInside];
                 [cellStyle1.freeRead addTarget:self action:@selector(gotoBookReader:) forControlEvents:UIControlEventTouchUpInside];
-                //if (_bookDetailInfo) [viewCell setData:_bookDetailInfo];
                 if (_tableViewData) [viewCell setData:_tableViewData];
             }
             break;
             
         case BookDetailInfoSectionIntroduction:
             viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDetailInfoTableViewCellStyle2"];
-            //if (_bookDetailInfo) [viewCell setData:_bookDetailInfo];
             if (_tableViewData) [viewCell setData:_tableViewData];
             break;
             
         case BookDetailInfoSectionChapterInfo:
             viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDetailInfoTableViewCellStyle3"];
-            //[viewCell setData:_bookDetailInfo];
             [viewCell setData:_tableViewData];
             break;
             
         case BookDetailInfoSectionTagInfo:
             viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDetailInfoTableViewCellStyle4"];
-            //if (_bookDetailInfo) {
-            //   [(BookDetailInfoTableViewCellStyle4 *)viewCell setDataWithIndex:_bookDetailInfo Index:indexPath.row];
             if (_tableViewData) {
                [(BookDetailInfoTableViewCellStyle4 *)viewCell setDataWithIndex:_tableViewData Index:indexPath.row];
             }
@@ -128,7 +128,6 @@
             
         case BookDetailInfoSectionReadDownload:
             viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDetailInfoTableViewCellStyle5"];
-            //[viewCell setData:_bookDetailInfo];
             [viewCell setData:_tableViewData];
             break;
             
