@@ -11,7 +11,6 @@
 #import "AppAPIHelper.h"
 #import "GroupInfo.h"
 #import "MyIndexPath.h"
-#import "AppDetailsViewController.h"
 #define kMaxRowNum 4
 @interface GameHomeViewController ()
 {
@@ -139,10 +138,7 @@
         {
             GroupInfo *groupInfo = [[_tableViewData groups] objectAtIndex:[indexPath section]-1];
             NSInteger row =  indexPath.row + [(MyIndexPath*)indexPath section1] * kMaxRowNum;
-            NSInteger appID = [[[groupInfo entitys] objectAtIndex:row] id];
-            [self.navigationController pushViewControllerWithIdentifier:@"AppDetailsViewController" completion:^(UIViewController *viewController) {
-                [(AppDetailsViewController*)viewController setAppID:appID];
-            } animated:YES];
+            [self.navigationController pushAppDetailsViewController:[[groupInfo entitys] objectAtIndex:row] animated:YES ];
         }
     }
     NSLog(@"%@ %@",@(indexPath.section),@(indexPath.row));

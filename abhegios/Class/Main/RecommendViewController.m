@@ -11,7 +11,6 @@
 #import "AppAPIHelper.h"
 #include "BaseInfo.h"
 #include "AppInfo.h"
-#include "AppDetailsViewController.h"
 typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
     RecommendTableViewCellStyleNone = 0,
     RecommendTableViewCellStyleOne,
@@ -120,11 +119,8 @@ typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     BaseInfo* baseInfo = [[[_tableViewData objectAtIndex:[indexPath section]]entitys] objectAtIndex:[indexPath row]];
-    NSInteger appID = [baseInfo id];
     if( [baseInfo isKindOfClass:[AppInfo class]])
-    [self.navigationController pushViewControllerWithIdentifier:@"AppDetailsViewController" completion:^(UIViewController *viewController) {
-        [(AppDetailsViewController*)viewController setAppID:appID];
-    } animated:YES];
+        [self.navigationController pushAppDetailsViewController:(AppInfo*)baseInfo animated:YES ];
 }
 
 @end

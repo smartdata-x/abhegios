@@ -100,10 +100,7 @@ typedef NS_ENUM(NSInteger, AppDetailsTableViewCellStyle) {
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    NSInteger appID = [[[_tableViewData like] objectAtIndex:[indexPath row] ] id];
-    [self.navigationController pushViewControllerWithIdentifier:@"AppDetailsViewController" completion:^(UIViewController *viewController) {
-        [(AppDetailsViewController*)viewController setAppID:appID];
-    } animated:YES];
+    [self.navigationController pushAppDetailsViewController:[[_tableViewData like] objectAtIndex:[indexPath row] ] animated:YES ];
 }
 
 @end
