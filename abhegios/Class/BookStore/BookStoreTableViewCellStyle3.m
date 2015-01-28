@@ -10,6 +10,8 @@
 #import "BookInfo.h"
 #import "BookInfoViewStyle1.h"
 #import "GroupInfo.h"
+#import "UIImageView+AFNetworking.h"
+#import "BaseInfoAdapter.h"
 
 #define kMaxBookItemView 3
 #define kBookItemWidth 108

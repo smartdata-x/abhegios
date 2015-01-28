@@ -68,6 +68,7 @@
 		CB6A22271A7687AA0087546F /* bookshelf_test.json in Resources */ = {isa = PBXBuildFile; fileRef = CB6A22261A7687A90087546F /* bookshelf_test.json */; };
 		CB6A222A1A768CE80087546F /* BookChapterInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A22291A768CE80087546F /* BookChapterInfo.m */; };
 		CB6A222C1A768D3B0087546F /* bookchapter_test.json in Resources */ = {isa = PBXBuildFile; fileRef = CB6A222B1A768D3B0087546F /* bookchapter_test.json */; };
+		CBE0043F1A78FB20001A2F42 /* HttpBookAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE0043E1A78FB20001A2F42 /* HttpBookAPI.m */; };
 		EA103C671A7889F200FFF66E /* GameHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C651A7889F200FFF66E /* GameHomeViewController.m */; };
 		EA103C6A1A788A3B00FFF66E /* GameHomeTableViewCellStyle3.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C691A788A3B00FFF66E /* GameHomeTableViewCellStyle3.m */; };
 		EA103C6D1A788B7B00FFF66E /* GameHomeTableViewCellStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C6C1A788B7B00FFF66E /* GameHomeTableViewCellStyle2.m */; };
@@ -271,6 +272,9 @@
 		CB6A22281A768CE80087546F /* BookChapterInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookChapterInfo.h; sourceTree = "<group>"; };
 		CB6A22291A768CE80087546F /* BookChapterInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookChapterInfo.m; sourceTree = "<group>"; };
 		CB6A222B1A768D3B0087546F /* bookchapter_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bookchapter_test.json; sourceTree = "<group>"; };
+		CBE0043D1A78FB20001A2F42 /* HttpBookAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpBookAPI.h; sourceTree = "<group>"; };
+		CBE0043E1A78FB20001A2F42 /* HttpBookAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpBookAPI.m; sourceTree = "<group>"; };
+		CBE004401A78FB5F001A2F42 /* BookAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookAPI.h; sourceTree = "<group>"; };
 		EA103C651A7889F200FFF66E /* GameHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameHomeViewController.m; sourceTree = "<group>"; };
 		EA103C661A7889F200FFF66E /* GameHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHomeViewController.h; sourceTree = "<group>"; };
 		EA103C681A788A3B00FFF66E /* GameHomeTableViewCellStyle3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHomeTableViewCellStyle3.h; sourceTree = "<group>"; };
@@ -935,6 +939,7 @@
 				EA9C2FF21A776C6C002EFF35 /* UserAPI.h */,
 				EA9C2FF61A778362002EFF35 /* ApplyAPI.h */,
 				EAA5DFE01A77D3F300CF9163 /* OtherAPI.h */,
+				CBE004401A78FB5F001A2F42 /* BookAPI.h */,
 			);
 			path = AppAPI;
 			sourceTree = "<group>";
@@ -950,6 +955,8 @@
 				EA9C30011A778640002EFF35 /* HttpAPI.m */,
 				EAA5DFE11A77D42E00CF9163 /* HttpOtherAPI.h */,
 				EAA5DFE21A77D42E00CF9163 /* HttpOtherAPI.m */,
+				CBE0043D1A78FB20001A2F42 /* HttpBookAPI.h */,
+				CBE0043E1A78FB20001A2F42 /* HttpBookAPI.m */,
 			);
 			path = HttpAPI;
 			sourceTree = "<group>";
@@ -1147,6 +1154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EABA1EE81A76844000A76BD2 /* AFPropertyListRequestOperation.m in Sources */,
+				CBE0043F1A78FB20001A2F42 /* HttpBookAPI.m in Sources */,
 				EA7C910E1A77B6AF00782B8D /* HTTPReqeust.m in Sources */,
 				EABA1EB61A76705E00A76BD2 /* GameHomeInfo.m in Sources */,
 				CB6A21DB1A7155750087546F /* BookShelfViewController.m in Sources */,

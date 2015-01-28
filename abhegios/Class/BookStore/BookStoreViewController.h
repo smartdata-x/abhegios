@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RefreshTableViewController.h"
 #import "BookStoreTableViewCellStyle3.h"
 
 typedef NS_ENUM(NSInteger, BookStoreTableViewCellStyle) {
@@ -18,6 +19,6 @@ typedef NS_ENUM(NSInteger, BookStoreTableViewCellStyle) {
     BookStoreTableViewCellStyleFour,
 };
 
-@interface BookStoreViewController : UITableViewController<BookStoreTableViewCellStyle3Delegate>
+@interface BookStoreViewController : RefreshTableViewController<BookStoreTableViewCellStyle3Delegate>
 
 @end

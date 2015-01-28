@@ -10,6 +10,7 @@
 #import "HttpApplyAPI.h"
 #import "HttpOtherAPI.h"
 #import "HttpUserAPI.h"
+#import "HttpBookAPI.h"
 #include "RequestInfo.h"
 @implementation AppAPIHelper
 HELPER_SHARED
@@ -39,5 +40,10 @@ HELPER_SHARED
 {
     return [[HttpOtherAPI alloc] initWithRequest:[self getRequestInfo]];
 
+}
+
+-(id<BookAPI>) getBookAPI
+{
+    return [[HttpBookAPI alloc] initWithRequest:[self getRequestInfo]];
 }
 @end

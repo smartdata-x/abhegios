@@ -9,6 +9,8 @@
 #import "BookStoreTableViewCellStyle4.h"
 #import "BookInfo.h"
 #import "GroupInfo.h"
+#import "UIImageView+AFNetworking.h"
+#import "BaseInfoAdapter.h"
 
 @implementation BookStoreTableViewCellStyle4
 
@@ -32,6 +34,7 @@
         [_name setText:bookInfo.name];
         [_summary setText:bookInfo.author];
         [_favRate setData:bookInfo.star];
+        [(UIImageView *)self.logo setImageWithStrURL:[BaseInfoAdapter getPic:bookInfo]];
     }
 }
 
