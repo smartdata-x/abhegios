@@ -12,6 +12,7 @@
 #import "GroupInfo.h"
 #import "MyIndexPath.h"
 #define kMaxRowNum 4
+#define kEmblemSection 0
 @interface GameHomeViewController ()
 {
     
@@ -44,13 +45,13 @@
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    if( section == 0 )
+    if( section == kEmblemSection )
         return 0;
     return 22;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ([indexPath section] == 0) {
+    if ([indexPath section] == kEmblemSection) {
         if( [indexPath row] == 1 )
             return 152;
         return 80;
@@ -64,9 +65,15 @@
     return [[_tableViewData groups] count] + 1;
 }
 
+-(GroupInfo*) getGroupInfo:(NSInteger)section
+{
+    return [[_tableViewData groups] objectAtIndex:section-1];
+}
+
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if ( section == 0 )
+    if ( section == kEmblemSection )
     {
         if( [_tableViewData emblem] != nil )
         {
@@ -77,18 +84,29 @@
         }
         return 0;
     }
-    GroupInfo* groupInfo = [[_tableViewData groups] objectAtIndex:section-1];
+    GroupInfo* groupInfo = [self getGroupInfo:section];
     NSInteger count = [[groupInfo entitys] count];
     count = count/kMaxRowNum + (count % kMaxRowNum != 0 ? 1 : 0);
     return count;
 }
 
+-(NSArray*) getAppInfosToGroup:(NSIndexPath *)indexPath
+{
+    GroupInfo* groupInfo = [self getGroupInfo:[indexPath section]];
+    NSInteger start = [indexPath row] * kMaxRowNum;
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    for (NSInteger i = start; i < [[groupInfo entitys] count] && i < start + kMaxRowNum ; ++i)
+    {
+        [array addObject:[[groupInfo entitys] objectAtIndex:i]];
+    }
+    return array;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     OEZTableViewCell *cell = nil;
     
-    if ([indexPath section] == 0) {
+    if ([indexPath section] == kEmblemSection ) {
         if( [indexPath row] == 0 )
         {
             cell = [tableView dequeueReusableCellWithIdentifier:@"GameHomeTableViewCell1"];
@@ -103,14 +121,7 @@
     else
     {
         cell = [tableView dequeueReusableCellWithIdentifier:@"GameHomeTableViewCell3"];
-        GroupInfo* groupInfo = [[_tableViewData groups] objectAtIndex:[indexPath section]-1];
-        NSInteger start = [indexPath row] * kMaxRowNum;
-        NSMutableArray *array = [[NSMutableArray alloc] init];
-        for (NSInteger i = start; i < [[groupInfo entitys] count] && i < start + kMaxRowNum ; ++i)
-        {
-            [array addObject:[[groupInfo entitys] objectAtIndex:i]];
-        }
-        [cell setData:array];
+        [cell setData:[self getAppInfosToGroup:indexPath]];
     }
     return cell;
     
@@ -118,12 +129,12 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *view = nil;
-    if( section != 0 )
+    if( section != kEmblemSection )
     {
         view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, 22)];
         [view setBackgroundColor:kUIColorWithRGB(0xf3f3f3)];
         UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(10, 1, kMainScreenWidth-20, 21)];
-        [label setText:[[[_tableViewData groups] objectAtIndex:section-1] title]];
+        [label setText:[[self getGroupInfo:section] title]];
         [label setFont:[UIFont systemFontOfSize:14.0f]];
         [view addSubview:label];
     }
@@ -132,15 +143,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if( [indexPath section] != 0 )
+    if ([indexPath section] == kEmblemSection)
+    {
+         [self.navigationController pushAppDetailsViewController:[_tableViewData emblem] animated:YES ];
+    }
+    else
     {
         if( [indexPath isKindOfClass:[MyIndexPath class]])
         {
-            GroupInfo *groupInfo = [[_tableViewData groups] objectAtIndex:[indexPath section]-1];
+            GroupInfo* groupInfo = [self getGroupInfo:[indexPath section]];
             NSInteger row =  indexPath.row + [(MyIndexPath*)indexPath section1] * kMaxRowNum;
             [self.navigationController pushAppDetailsViewController:[[groupInfo entitys] objectAtIndex:row] animated:YES ];
         }
     }
-    NSLog(@"%@ %@",@(indexPath.section),@(indexPath.row));
 }
 @end
