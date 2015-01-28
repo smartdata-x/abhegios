@@ -40,15 +40,6 @@
 }
 
 
--(void) setData:(id)data
-{
-    if( data != self.data)
-    {
-        [super setData:data];
-        [self.hScrollView reloadData];
-    }
-}
-
 -(void) hScrollView:(OEZHScrollView *)hScrollView didSelectColumnAtIndex:(NSInteger)columnIndex
 {
     

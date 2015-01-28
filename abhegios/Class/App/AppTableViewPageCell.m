@@ -11,14 +11,7 @@
 
 
 
--(void) setData:(id)data
-{
-    if( self.data != data )
-    {
-        [super setData:data];
-        [self.pageView reloadData];
-    }
-}
+
 
 
 -(NSInteger) numberPageCountPageView:(OEZPageView *)pageView

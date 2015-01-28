@@ -17,7 +17,7 @@
     content = [content stringByAppendingFormat:@"分类：游戏\n"];
     content = [content stringByAppendingFormat:@"时间：%@\n",[data ontime]];
     content = [content stringByAppendingFormat:@"语言：%@\n",[data lang] == 2 ? @"英文" : @"中文"];
-    content = [content stringByAppendingFormat:@"开发商：%@\n",[data provide]];
+    content = [content stringByAppendingFormat:@"开发商：%@\n",[data provider]];
     content = [content stringByAppendingFormat:@"兼容性：需求 IOS5.0以上\n"];
     
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:content];

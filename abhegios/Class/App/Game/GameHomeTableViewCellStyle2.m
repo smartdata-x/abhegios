@@ -29,14 +29,5 @@
 }
 
 
--(void) setData:(id)data
-{
-    if( data != self.data)
-    {
-        [super setData:data];
-        [self.hScrollView reloadData];
-    }
-}
-
 
 @end
