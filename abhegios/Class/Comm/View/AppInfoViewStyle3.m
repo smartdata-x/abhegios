@@ -14,11 +14,13 @@
     [super awakeFromNib];
     [[_logo layer] setCornerRadius:8.0f];
     [[_logo layer] setMasksToBounds:YES];
+    
 }
 
 -(void) setData:(id)data
 {
     [_name setText:[data name]];
+    [_name setLineBreakMode:NSLineBreakByTruncatingTail];
 }
 
 @end
