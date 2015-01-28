@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class AppInfo;
+@interface UINavigationController (MyNavigationViewController)
+-(void) pushAppDetailsViewController:(AppInfo*) appInfo animated:(BOOL)animated;
+@end
 @interface MyNavigationViewController : OEZNavigationViewController
 
 @end

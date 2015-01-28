@@ -37,10 +37,6 @@ typedef NS_ENUM(NSInteger, AppDetailsTableViewCellStyle) {
     [[[AppAPIHelper shared] getApplyAPI] getAppDetails:_appID delegate:self];
 }
 
--(void) testData
-{
-     _tableViewData = [AppDetailsPage initWithJsonResource:@"appdetailspage_test" ofType:@"json"];
-}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -100,10 +96,7 @@ typedef NS_ENUM(NSInteger, AppDetailsTableViewCellStyle) {
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    NSInteger appID = [[[_tableViewData like] objectAtIndex:[indexPath row] ] id];
-    [self.navigationController pushViewControllerWithIdentifier:@"AppDetailsViewController" completion:^(UIViewController *viewController) {
-        [(AppDetailsViewController*)viewController setAppID:appID];
-    } animated:YES];
+    [self.navigationController pushAppDetailsViewController:[[_tableViewData like] objectAtIndex:[indexPath row] ] animated:YES ];
 }
 
 @end

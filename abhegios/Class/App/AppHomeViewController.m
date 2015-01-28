@@ -12,7 +12,6 @@
 #import "AppTableViewCellStyle1.h"
 #import <OEZCommSDK/OEZCommSDK.h>
 #import "AppAPIHelper.h"
-#import "AppDetailsViewController.h"
 @interface AppHomeViewController ()
 {
     
@@ -29,11 +28,6 @@
 -(void) didRequest
 {
     [[[AppAPIHelper shared] getApplyAPI] getAppStoreHome:self];
-}
-
--(void) testData
-{
-    _tableViewData = [GroupInfo initWithsConfigAndDataJsonFile:@"appstorehome" jsonName:@"appstorehome_test" entityClass:[AppInfo class]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,14 +55,14 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    GroupInfo *group = [_tableViewData objectAtIndex:section];
+    GroupInfo *group = [self getGroupInfo:section];;
     if( [group style] == AppTableViewCellStyleTwo )
         return 0;
     return 22;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-     GroupInfo *group = [_tableViewData objectAtIndex:indexPath.section];
+     GroupInfo *group =[self getGroupInfo:[indexPath section]];;
     if ( group.style == AppTableViewCellStyleThree) {
         return 90;
     }
@@ -77,15 +71,20 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    GroupInfo *group = [_tableViewData objectAtIndex:section];
+    GroupInfo *group = [self getGroupInfo:section];
     if ( [self isSingleLine:group] ) {
         return [[group entitys] count] > 0 ? 1 : 0;
     }
     return [[group entitys] count];
 }
 
+-(GroupInfo*) getGroupInfo:(NSInteger)section
+{
+    return [_tableViewData objectAtIndex:section];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    GroupInfo *group = [_tableViewData objectAtIndex:[indexPath section]];
+    GroupInfo *group = [self getGroupInfo:[indexPath section]];
     OEZTableViewCell* viewCell = nil;
     if ( [self isSingleLine:group])
     {
@@ -101,27 +100,21 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UIView *view = nil;
+    
     if( section != 0 )
     {
-        view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, 22)];
-        [view setBackgroundColor:kUIColorWithRGB(0xf3f3f3)];
-        UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(10, 1, kMainScreenWidth-20, 21)];
-        [label setText:[[_tableViewData objectAtIndex:section] title]];
-        [label setFont:[UIFont systemFontOfSize:14.0f]];
-        [view addSubview:label];
+        TableViewHeader* view = [TableViewHeader loadFromNib];
+        [[view title] setText:[[self getGroupInfo:section] title]];
+        return view;
     }
-    return view;
+    return Nil;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    GroupInfo *group = [_tableViewData objectAtIndex:[indexPath section]];
-    NSInteger appID = [[[group entitys] objectAtIndex:[indexPath row] ] id];
-    [self.navigationController pushViewControllerWithIdentifier:@"AppDetailsViewController" completion:^(UIViewController *viewController) {
-        [(AppDetailsViewController*)viewController setAppID:appID];
-    } animated:YES];
+    GroupInfo *group = [self getGroupInfo:[indexPath section]];
+    [self.navigationController pushAppDetailsViewController:[[group entitys] objectAtIndex:[indexPath row] ] animated:YES ];
 }
 
 @end
