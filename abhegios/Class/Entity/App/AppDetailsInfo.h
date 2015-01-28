@@ -14,7 +14,7 @@
 @property (nonatomic,retain)    NSArray     *pic;
 @property (nonatomic,retain)      NSString    *version;
 @property (nonatomic,retain)      NSString    *ontime;
-@property (nonatomic,retain)      NSString    *provide;
+@property (nonatomic,retain)      NSString    *provider;
 @end
 
 @interface AppDetailsPage : OEZBaseEntity
