@@ -30,11 +30,6 @@
     [[[AppAPIHelper shared] getApplyAPI] getAppStoreHome:self];
 }
 
--(void) testData
-{
-    _tableViewData = [GroupInfo initWithsConfigAndDataJsonFile:@"appstorehome" jsonName:@"appstorehome_test" entityClass:[AppInfo class]];
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

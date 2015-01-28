@@ -32,11 +32,6 @@
     [[[AppAPIHelper shared] getApplyAPI] getGameStoreHome:self];
 }
 
--(void) test
-{
-    _tableViewData = [GameHomeInfo initWithJsonResource:@"gamehomeinfo_test" ofType:@"json"];
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }

@@ -37,10 +37,6 @@ typedef NS_ENUM(NSInteger, AppDetailsTableViewCellStyle) {
     [[[AppAPIHelper shared] getApplyAPI] getAppDetails:_appID delegate:self];
 }
 
--(void) testData
-{
-     _tableViewData = [AppDetailsPage initWithJsonResource:@"appdetailspage_test" ofType:@"json"];
-}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

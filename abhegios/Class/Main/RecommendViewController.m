@@ -32,10 +32,6 @@ typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
     [[[AppAPIHelper shared] getOtherAPI] getRecommendHome:self];
 }
 
--(void) testData
-{
-    _tableViewData = [GroupInfo initWithsConfigAndDataJsonFile:@"recommendhome" jsonName:@"recommendhome_test"];
-}
 
 -(BOOL) isSingleLine:(GroupInfo*) group
 {

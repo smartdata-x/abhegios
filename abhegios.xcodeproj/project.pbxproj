@@ -88,8 +88,6 @@
 		EA6500AE1A6F34630043C4F2 /* LoginItemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6500AD1A6F34630043C4F2 /* LoginItemInfo.m */; };
 		EA75998E1A7120A50027FC8B /* uilogindata.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA75998A1A7120A50027FC8B /* uilogindata.plist */; };
 		EA75998F1A7120A50027FC8B /* appstorehome.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA75998B1A7120A50027FC8B /* appstorehome.plist */; };
-		EA7599901A7120A50027FC8B /* appstorehome_test.json in Resources */ = {isa = PBXBuildFile; fileRef = EA75998C1A7120A50027FC8B /* appstorehome_test.json */; };
-		EA7599911A7120A50027FC8B /* appdetailspage_test.json in Resources */ = {isa = PBXBuildFile; fileRef = EA75998D1A7120A50027FC8B /* appdetailspage_test.json */; };
 		EA7599931A7120CB0027FC8B /* uifounddata.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA7599921A7120CB0027FC8B /* uifounddata.plist */; };
 		EA7C91081A77A10200782B8D /* RequestInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7C91071A77A10200782B8D /* RequestInfo.m */; };
 		EA7C910E1A77B6AF00782B8D /* HTTPReqeust.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7C910D1A77B6AF00782B8D /* HTTPReqeust.m */; };
@@ -100,7 +98,6 @@
 		EA88BFB41A74CB76004885A0 /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA88BFB31A74CB76004885A0 /* RecommendViewController.m */; };
 		EA88BFB71A74D022004885A0 /* GroupInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA88BFB61A74D022004885A0 /* GroupInfo.m */; };
 		EA88BFBC1A74E37F004885A0 /* recommendhome.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA88BFBA1A74E37F004885A0 /* recommendhome.plist */; };
-		EA88BFBD1A74E37F004885A0 /* recommendhome_test.json in Resources */ = {isa = PBXBuildFile; fileRef = EA88BFBB1A74E37F004885A0 /* recommendhome_test.json */; };
 		EA89882E1A726A7000877E63 /* AppInfoViewStyle1.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA89882D1A726A7000877E63 /* AppInfoViewStyle1.xib */; };
 		EA8988311A726EAA00877E63 /* AppInfoViewStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8988301A726EAA00877E63 /* AppInfoViewStyle1.m */; };
 		EA8988381A72841B00877E63 /* AppInfoViewStyle3.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA8988371A72841B00877E63 /* AppInfoViewStyle3.xib */; };
@@ -137,7 +134,6 @@
 		EAA7738B1A72241B00EBD512 /* AppTableViewCellStyle4.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA7738A1A72241B00EBD512 /* AppTableViewCellStyle4.m */; };
 		EABA1EB61A76705E00A76BD2 /* GameHomeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EABA1EB51A76705E00A76BD2 /* GameHomeInfo.m */; };
 		EABA1EB81A76738A00A76BD2 /* gamehomeinfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = EABA1EB71A76738A00A76BD2 /* gamehomeinfo.plist */; };
-		EABA1EBA1A76745E00A76BD2 /* gamehomeinfo_test.json in Resources */ = {isa = PBXBuildFile; fileRef = EABA1EB91A76745E00A76BD2 /* gamehomeinfo_test.json */; };
 		EABA1EC91A7679F200A76BD2 /* AppDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EABA1EC11A7679F200A76BD2 /* AppDetailsViewController.m */; };
 		EABA1ECA1A7679F200A76BD2 /* AppDetailsTableViewCellStyle4.m in Sources */ = {isa = PBXBuildFile; fileRef = EABA1EC31A7679F200A76BD2 /* AppDetailsTableViewCellStyle4.m */; };
 		EABA1ECB1A7679F200A76BD2 /* AppDetailsTableViewCellStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = EABA1EC51A7679F200A76BD2 /* AppDetailsTableViewCellStyle2.m */; };
@@ -304,8 +300,6 @@
 		EA6500AD1A6F34630043C4F2 /* LoginItemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginItemInfo.m; sourceTree = "<group>"; };
 		EA75998A1A7120A50027FC8B /* uilogindata.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = uilogindata.plist; path = Resources/uilogindata.plist; sourceTree = "<group>"; };
 		EA75998B1A7120A50027FC8B /* appstorehome.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = appstorehome.plist; path = Resources/appstorehome.plist; sourceTree = "<group>"; };
-		EA75998C1A7120A50027FC8B /* appstorehome_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = appstorehome_test.json; path = Resources/appstorehome_test.json; sourceTree = "<group>"; };
-		EA75998D1A7120A50027FC8B /* appdetailspage_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = appdetailspage_test.json; path = Resources/appdetailspage_test.json; sourceTree = "<group>"; };
 		EA7599921A7120CB0027FC8B /* uifounddata.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = uifounddata.plist; path = Resources/uifounddata.plist; sourceTree = "<group>"; };
 		EA7C91061A77A10200782B8D /* RequestInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestInfo.h; sourceTree = "<group>"; };
 		EA7C91071A77A10200782B8D /* RequestInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestInfo.m; sourceTree = "<group>"; };
@@ -326,7 +320,6 @@
 		EA88BFB51A74D022004885A0 /* GroupInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupInfo.h; sourceTree = "<group>"; };
 		EA88BFB61A74D022004885A0 /* GroupInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupInfo.m; sourceTree = "<group>"; };
 		EA88BFBA1A74E37F004885A0 /* recommendhome.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = recommendhome.plist; path = Resources/recommendhome.plist; sourceTree = "<group>"; };
-		EA88BFBB1A74E37F004885A0 /* recommendhome_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = recommendhome_test.json; path = Resources/recommendhome_test.json; sourceTree = "<group>"; };
 		EA89882D1A726A7000877E63 /* AppInfoViewStyle1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppInfoViewStyle1.xib; sourceTree = SOURCE_ROOT; };
 		EA89882F1A726EAA00877E63 /* AppInfoViewStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfoViewStyle1.h; sourceTree = "<group>"; };
 		EA8988301A726EAA00877E63 /* AppInfoViewStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfoViewStyle1.m; sourceTree = "<group>"; };
@@ -382,7 +375,6 @@
 		EABA1EB41A76705E00A76BD2 /* GameHomeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHomeInfo.h; sourceTree = "<group>"; };
 		EABA1EB51A76705E00A76BD2 /* GameHomeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameHomeInfo.m; sourceTree = "<group>"; };
 		EABA1EB71A76738A00A76BD2 /* gamehomeinfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = gamehomeinfo.plist; sourceTree = "<group>"; };
-		EABA1EB91A76745E00A76BD2 /* gamehomeinfo_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gamehomeinfo_test.json; sourceTree = "<group>"; };
 		EABA1EC11A7679F200A76BD2 /* AppDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsViewController.m; sourceTree = "<group>"; };
 		EABA1EC21A7679F200A76BD2 /* AppDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailsViewController.h; sourceTree = "<group>"; };
 		EABA1EC31A7679F200A76BD2 /* AppDetailsTableViewCellStyle4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsTableViewCellStyle4.m; sourceTree = "<group>"; };
@@ -629,15 +621,11 @@
 			isa = PBXGroup;
 			children = (
 				EA88BFBA1A74E37F004885A0 /* recommendhome.plist */,
-				EA88BFBB1A74E37F004885A0 /* recommendhome_test.json */,
 				EA7599921A7120CB0027FC8B /* uifounddata.plist */,
 				EA75998A1A7120A50027FC8B /* uilogindata.plist */,
 				EA75998B1A7120A50027FC8B /* appstorehome.plist */,
-				EA75998C1A7120A50027FC8B /* appstorehome_test.json */,
-				EA75998D1A7120A50027FC8B /* appdetailspage_test.json */,
 				1AD64688EC1876C19A332D96 /* Info.plist */,
 				EABA1EB71A76738A00A76BD2 /* gamehomeinfo.plist */,
-				EABA1EB91A76745E00A76BD2 /* gamehomeinfo_test.json */,
 				CB6A21CD1A7007970087546F /* bookstorehome.plist */,
 				CB6A21CB1A6FFCC20087546F /* bookstorehome_test.json */,
 				CB6A221A1A765ABF0087546F /* bookdetail_test.json */,
@@ -1116,7 +1104,6 @@
 				1AD6460C6803B48F071D6E89 /* Images.xcassets in Resources */,
 				EABA1EB81A76738A00A76BD2 /* gamehomeinfo.plist in Resources */,
 				EA75998F1A7120A50027FC8B /* appstorehome.plist in Resources */,
-				EA88BFBD1A74E37F004885A0 /* recommendhome_test.json in Resources */,
 				CB6A22271A7687AA0087546F /* bookshelf_test.json in Resources */,
 				1AD6407932CF4CF9417DEF43 /* Info.plist in Resources */,
 				EA89882E1A726A7000877E63 /* AppInfoViewStyle1.xib in Resources */,
@@ -1124,19 +1111,16 @@
 				EA94767B1A79043200172D6E /* TableViewHeader.xib in Resources */,
 				CB6A21CC1A6FFCC20087546F /* bookstorehome_test.json in Resources */,
 				1AD64850016A35AAE41E0C11 /* TencentOpenAPI in Resources */,
-				EA7599911A7120A50027FC8B /* appdetailspage_test.json in Resources */,
 				EA88BFBC1A74E37F004885A0 /* recommendhome.plist in Resources */,
 				EA8C83311A731FFF00901CFC /* PageViewImageCell.xib in Resources */,
 				CB6A221B1A765ABF0087546F /* bookdetail_test.json in Resources */,
 				CB6A21E31A729F1E0087546F /* BookInfoViewStyle1.xib in Resources */,
-				EABA1EBA1A76745E00A76BD2 /* gamehomeinfo_test.json in Resources */,
 				1AD64049F3F7AA6F294AAE32 /* error.png in Resources */,
 				EA8C83331A7320B400901CFC /* PageViewImageCell1.xib in Resources */,
 				EA7599931A7120CB0027FC8B /* uifounddata.plist in Resources */,
 				EA103C721A788C5600FFF66E /* GameHScrollViewCell.xib in Resources */,
 				EA75998E1A7120A50027FC8B /* uilogindata.plist in Resources */,
 				1AD64077DE8389AC54925C71 /* Info.plist in Resources */,
-				EA7599901A7120A50027FC8B /* appstorehome_test.json in Resources */,
 				CB6A21FB1A73D77B0087546F /* BookInfoViewStyle3.xib in Resources */,
 				1AD6466F8E60BA95319C4EF1 /* local.html in Resources */,
 				1AD6444BCD81D3E62537781A /* qqicon.png in Resources */,
