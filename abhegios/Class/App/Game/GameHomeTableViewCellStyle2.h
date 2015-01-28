@@ -8,6 +8,6 @@
 
 #import <OEZCommSDK/OEZCommSDK.h>
 
-@interface GameHomeTableViewCell2 : OEZTableViewHScrollCell
+@interface GameHomeTableViewCellStyle2 : OEZTableViewHScrollCell
 
 @end

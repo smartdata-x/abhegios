@@ -69,8 +69,8 @@
 		CB6A222A1A768CE80087546F /* BookChapterInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A22291A768CE80087546F /* BookChapterInfo.m */; };
 		CB6A222C1A768D3B0087546F /* bookchapter_test.json in Resources */ = {isa = PBXBuildFile; fileRef = CB6A222B1A768D3B0087546F /* bookchapter_test.json */; };
 		EA103C671A7889F200FFF66E /* GameHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C651A7889F200FFF66E /* GameHomeViewController.m */; };
-		EA103C6A1A788A3B00FFF66E /* GameHomeTableViewCell3.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C691A788A3B00FFF66E /* GameHomeTableViewCell3.m */; };
-		EA103C6D1A788B7B00FFF66E /* GameHomeTableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C6C1A788B7B00FFF66E /* GameHomeTableViewCell2.m */; };
+		EA103C6A1A788A3B00FFF66E /* GameHomeTableViewCellStyle3.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C691A788A3B00FFF66E /* GameHomeTableViewCellStyle3.m */; };
+		EA103C6D1A788B7B00FFF66E /* GameHomeTableViewCellStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C6C1A788B7B00FFF66E /* GameHomeTableViewCellStyle2.m */; };
 		EA103C701A788C3600FFF66E /* GameHScrollViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C6F1A788C3600FFF66E /* GameHScrollViewCell.m */; };
 		EA103C721A788C5600FFF66E /* GameHScrollViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA103C711A788C5600FFF66E /* GameHScrollViewCell.xib */; };
 		EA13DDCE1A6F8A35004AB7E6 /* NSString+NSStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDCD1A6F8A35004AB7E6 /* NSString+NSStringCategory.m */; };
@@ -271,10 +271,10 @@
 		CB6A222B1A768D3B0087546F /* bookchapter_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bookchapter_test.json; sourceTree = "<group>"; };
 		EA103C651A7889F200FFF66E /* GameHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameHomeViewController.m; sourceTree = "<group>"; };
 		EA103C661A7889F200FFF66E /* GameHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHomeViewController.h; sourceTree = "<group>"; };
-		EA103C681A788A3B00FFF66E /* GameHomeTableViewCell3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHomeTableViewCell3.h; sourceTree = "<group>"; };
-		EA103C691A788A3B00FFF66E /* GameHomeTableViewCell3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameHomeTableViewCell3.m; sourceTree = "<group>"; };
-		EA103C6B1A788B7B00FFF66E /* GameHomeTableViewCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHomeTableViewCell2.h; sourceTree = "<group>"; };
-		EA103C6C1A788B7B00FFF66E /* GameHomeTableViewCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameHomeTableViewCell2.m; sourceTree = "<group>"; };
+		EA103C681A788A3B00FFF66E /* GameHomeTableViewCellStyle3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHomeTableViewCellStyle3.h; sourceTree = "<group>"; };
+		EA103C691A788A3B00FFF66E /* GameHomeTableViewCellStyle3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameHomeTableViewCellStyle3.m; sourceTree = "<group>"; };
+		EA103C6B1A788B7B00FFF66E /* GameHomeTableViewCellStyle2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHomeTableViewCellStyle2.h; sourceTree = "<group>"; };
+		EA103C6C1A788B7B00FFF66E /* GameHomeTableViewCellStyle2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameHomeTableViewCellStyle2.m; sourceTree = "<group>"; };
 		EA103C6E1A788C3600FFF66E /* GameHScrollViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHScrollViewCell.h; sourceTree = "<group>"; };
 		EA103C6F1A788C3600FFF66E /* GameHScrollViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameHScrollViewCell.m; sourceTree = "<group>"; };
 		EA103C711A788C5600FFF66E /* GameHScrollViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameHScrollViewCell.xib; sourceTree = SOURCE_ROOT; };
@@ -846,10 +846,10 @@
 			children = (
 				EA103C651A7889F200FFF66E /* GameHomeViewController.m */,
 				EA103C661A7889F200FFF66E /* GameHomeViewController.h */,
-				EA103C681A788A3B00FFF66E /* GameHomeTableViewCell3.h */,
-				EA103C691A788A3B00FFF66E /* GameHomeTableViewCell3.m */,
-				EA103C6B1A788B7B00FFF66E /* GameHomeTableViewCell2.h */,
-				EA103C6C1A788B7B00FFF66E /* GameHomeTableViewCell2.m */,
+				EA103C681A788A3B00FFF66E /* GameHomeTableViewCellStyle3.h */,
+				EA103C691A788A3B00FFF66E /* GameHomeTableViewCellStyle3.m */,
+				EA103C6B1A788B7B00FFF66E /* GameHomeTableViewCellStyle2.h */,
+				EA103C6C1A788B7B00FFF66E /* GameHomeTableViewCellStyle2.m */,
 				EA103C6E1A788C3600FFF66E /* GameHScrollViewCell.h */,
 				EA103C6F1A788C3600FFF66E /* GameHScrollViewCell.m */,
 			);
@@ -1150,7 +1150,7 @@
 				EA9C2FFF1A778608002EFF35 /* HttpApplyAPI.m in Sources */,
 				1AD641D66B96305DB64E42F7 /* main.m in Sources */,
 				1AD64A7E02E7FE36F6F1B45D /* HandleOpenURLHelper.m in Sources */,
-				EA103C6D1A788B7B00FFF66E /* GameHomeTableViewCell2.m in Sources */,
+				EA103C6D1A788B7B00FFF66E /* GameHomeTableViewCellStyle2.m in Sources */,
 				CB6A21F31A73CFE00087546F /* BookDetailInfoTableViewCellStyle1.m in Sources */,
 				EA88BFA51A748A68004885A0 /* BaseInfo.m in Sources */,
 				EA13DDD11A6F8D3A004AB7E6 /* AppDetailsInfo.m in Sources */,
@@ -1222,7 +1222,7 @@
 				EA88BFAE1A74904B004885A0 /* MovieInfo.m in Sources */,
 				EAA773881A7222C400EBD512 /* AppTableViewPageCell.m in Sources */,
 				EA88BFB71A74D022004885A0 /* GroupInfo.m in Sources */,
-				EA103C6A1A788A3B00FFF66E /* GameHomeTableViewCell3.m in Sources */,
+				EA103C6A1A788A3B00FFF66E /* GameHomeTableViewCellStyle3.m in Sources */,
 				1AD64F3A04AFCBB948106908 /* AppInfo.m in Sources */,
 				EABA1EEB1A76844000A76BD2 /* UIImageView+AFNetworking.m in Sources */,
 				1AD645A28AA3934B882BD885 /* FoundItemInfo.m in Sources */,

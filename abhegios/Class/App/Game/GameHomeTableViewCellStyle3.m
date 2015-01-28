@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年 180. All rights reserved.
 //
 
-#import "GameHomeTableViewCell3.h"
+#import "GameHomeTableViewCellStyle3.h"
 
-@implementation GameHomeTableViewCell3
+@implementation GameHomeTableViewCellStyle3
 
 -(void) awakeFromNib
 {

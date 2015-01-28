@@ -8,6 +8,6 @@
 
 #import "AppTableViewCellStyle3.h"
 
-@interface GameHomeTableViewCell3 : AppTableViewCellStyle3
+@interface GameHomeTableViewCellStyle3 : AppTableViewCellStyle3
 
 @end
