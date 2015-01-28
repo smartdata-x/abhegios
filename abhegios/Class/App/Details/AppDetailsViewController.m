@@ -28,8 +28,6 @@ typedef NS_ENUM(NSInteger, AppDetailsTableViewCellStyle) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-    
-    
 }
 
 -(void)  didRequest
@@ -37,6 +35,12 @@ typedef NS_ENUM(NSInteger, AppDetailsTableViewCellStyle) {
     [[[AppAPIHelper shared] getApplyAPI] getAppDetails:_appID delegate:self];
 }
 
+
+-(void) reqeust:(id)reqeust didComplete:(id)data
+{
+    [super reqeust:reqeust didComplete:data];
+    [self setTitle:[[data intro] name]];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
