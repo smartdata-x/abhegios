@@ -9,12 +9,15 @@
 #import "AppTableViewCellStyle2.h"
 #import "AppInfo.h"
 #import  <OEZCommSDK/OEZCommSDK.h>
+#import "UIImageView+AFNetworking.h"
+#import "BaseInfoAdapter.h"
 @implementation AppTableViewCellStyle2
 
 
 -(OEZPageViewCell*) pageView:(OEZPageView *)pageView cellForPageAtIndex:(NSInteger)pageIndex
 {
     OEZPageViewImageCell *cell = [pageView dequeueReusableCellWithIdentifier:@"PageViewImageCell"];
+    [[cell contentImage]setImageWithStrURL:[BaseInfoAdapter getPic:[self.data objectAtIndex:pageIndex]]];
     return cell;
 }
 

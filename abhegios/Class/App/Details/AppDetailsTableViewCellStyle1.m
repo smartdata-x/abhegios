@@ -8,6 +8,7 @@
 
 #import "AppDetailsTableViewCellStyle1.h"
 #import "AppDetailsInfo.h"
+#import "UIImageView+AFNetworking.h"
 @implementation AppDetailsTableViewCellStyle1
 
 -(void) awakeFromNib
@@ -30,7 +31,7 @@
 -(OEZPageViewCell*) pageView:(OEZPageView *)pageView cellForPageAtIndex:(NSInteger)pageIndex
 {
     OEZPageViewImageCell *cell = [pageView dequeueReusableCellWithIdentifier:@"PageViewImageCell"];
-    [[cell contentImage] setImage:[UIImage imageNamed:@"pic"]];
+    [[cell contentImage] setImageWithStrURL:[[(AppDetailsInfo*)self.data pic] objectAtIndex:pageIndex ]];
     return cell;
 }
 
@@ -39,7 +40,7 @@
     [super setData:data];
     AppDetailsInfo* info = data;
     [_pageView reloadData];
-    [_logo setImage:[UIImage imageNamed:@"app_logo1"]];
+    [_logo setImageWithStrURL:[(AppDetailsInfo*)self.data logo]];
     [_name setText:[self.data name]];
     [_sizeAndVer setText:[NSString stringWithFormat:@"大小:%0.2fM  版本%@",[info size],[info version]]];
     [_favRate setData:[self.data star]];

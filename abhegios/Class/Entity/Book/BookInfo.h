@@ -14,4 +14,5 @@
 @property (nonatomic, copy) NSString *author;
 @property float star;
 @property NSInteger follow;
+@property NSInteger read;
 @end

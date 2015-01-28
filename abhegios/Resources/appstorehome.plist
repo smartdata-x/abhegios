@@ -3,6 +3,8 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>entityClassName</key>
+		<string>ADInfo</string>
 		<key>style</key>
 		<integer>2</integer>
 		<key>key</key>
@@ -35,6 +37,8 @@
 		<string>热门应用</string>
 	</dict>
 	<dict>
+		<key>entityClassName</key>
+		<string>ADInfo</string>
 		<key>style</key>
 		<integer>4</integer>
 		<key>key</key>

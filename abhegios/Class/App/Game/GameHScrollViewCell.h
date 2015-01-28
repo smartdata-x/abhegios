@@ -9,5 +9,6 @@
 #import <OEZCommSDK/OEZCommSDK.h>
 
 @interface GameHScrollViewCell : OEZHScrollViewCell
-
+@property (weak, nonatomic) IBOutlet UIImageView *pic;
+-(void) setData:(id) data;
 @end

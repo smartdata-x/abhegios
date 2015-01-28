@@ -7,7 +7,8 @@
 //
 
 #import "AppInfoViewStyle3.h"
-
+#import "UIImageView+AFNetworking.h"
+#import "BaseInfoAdapter.h"
 @implementation AppInfoViewStyle3
 - (void)awakeFromNib
 {
@@ -20,7 +21,7 @@
 -(void) setData:(id)data
 {
     [_name setText:[data name]];
-    [_name setLineBreakMode:NSLineBreakByTruncatingTail];
+     [(UIImageView*)self.logo setImageWithStrURL:[BaseInfoAdapter getPic:data]];
 }
 
 @end

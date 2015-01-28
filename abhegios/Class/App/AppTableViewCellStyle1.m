@@ -16,6 +16,7 @@
 {
     [super setData:data];
     [_appInfoView setData:data];
+    
 }
 
 @end

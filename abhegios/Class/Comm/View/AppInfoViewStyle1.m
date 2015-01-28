@@ -8,6 +8,8 @@
 
 #import "AppInfoViewStyle1.h"
 #import "BaseInfo.h"
+#import "UIImageView+AFNetworking.h"
+#import "BaseInfoAdapter.h"
 @implementation AppInfoViewStyle1
 
 - (void)awakeFromNib
@@ -23,9 +25,12 @@
 
 -(void) setData:(id)data
 {
-    [super setData:data];
+    //[super setData:data];
+     [self.name setText:[data name]];
     [_summary setText:[data summary]];
-    //[_down setText:[NSString stringWithFormat:@"%@",[@([(AppInfo*)data down]) stringValue]]];
+    [_down setText:[BaseInfoAdapter getPopularity:data]];
+    [self.setupButton setTitle:[BaseInfoAdapter getButtonText:data] forState:UIControlStateNormal];
+     [(UIImageView*)self.logo setImageWithStrURL:[BaseInfoAdapter getPic:data]];
 }
 
 @end

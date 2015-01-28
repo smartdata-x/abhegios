@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppInfoViewStyle3">
             <connections>
-                <outlet property="logo" destination="8Cd-YN-IRh" id="64R-t7-gN4"/>
+                <outlet property="logo" destination="iKe-kI-AWW" id="xDy-1e-AKn"/>
                 <outlet property="name" destination="Ky7-FJ-vkh" id="VK9-sF-RTT"/>
             </connections>
         </placeholder>
@@ -22,18 +22,18 @@
                     <color key="textColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="highlightedColor" red="0.42745098040000001" green="0.42745098040000001" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Cd-YN-IRh">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iKe-kI-AWW">
                     <rect key="frame" x="12" y="10" width="53" height="53"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    <state key="normal" image="app-icon-default">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="53" id="CUK-h3-day"/>
+                        <constraint firstAttribute="height" constant="53" id="SMD-uT-LWW"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <constraints>
                 <constraint firstItem="Ky7-FJ-vkh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="9" id="1kh-xl-F2M"/>
                 <constraint firstAttribute="trailing" secondItem="Ky7-FJ-vkh" secondAttribute="trailing" constant="9" id="E2N-TK-12E"/>
-                <constraint firstAttribute="centerX" secondItem="8Cd-YN-IRh" secondAttribute="centerX" id="Gcd-rm-Dpa"/>
+                <constraint firstAttribute="centerX" secondItem="iKe-kI-AWW" secondAttribute="centerX" id="I8W-l4-ngu"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
@@ -42,7 +42,4 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
-    <resources>
-        <image name="app-icon-default" width="53" height="53"/>
-    </resources>
 </document>

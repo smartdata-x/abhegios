@@ -7,7 +7,7 @@
 //
 
 #import "GameHomeTableViewCellStyle2.h"
-
+#import "GameHScrollViewCell.h"
 @implementation GameHomeTableViewCellStyle2
 
 -(NSInteger) numberColumnCountHScrollView:(OEZHScrollView *)hScrollView
@@ -23,7 +23,8 @@
 -(OEZHScrollViewCell*) hScrollView:(OEZHScrollView *)hScrollView cellForColumnAtIndex:(NSInteger)columnIndex
 {
     static NSString *identifier = @"GameHScrollViewCell";
-    OEZHScrollViewCell *cell = [hScrollView dequeueReusableCellWithIdentifier:identifier];
+    GameHScrollViewCell *cell = [hScrollView dequeueReusableCellWithIdentifier:identifier];
+    [cell setData:[self.data objectAtIndex:columnIndex]];
     return cell;
 }
 
