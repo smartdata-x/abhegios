@@ -12,4 +12,5 @@
 - (void)getBookStoreHome:(id<ReqeustDelegate>) delegate;
 - (void)getBookDetails:(NSInteger)bookID delegate:(id<ReqeustDelegate>) delegate;
 - (void)getBookSearchType:(NSInteger)bookType delegate:(id<ReqeustDelegate>)delegate;
+- (void)getBookShelfList:(id<ReqeustDelegate>) delegate;
 @end

@@ -21,7 +21,7 @@ HELPER_SHARED
     dispatch_once(&predicate, ^{
         requestInfo = [[RequestInfo alloc] init];
     });
-    [requestInfo setUid:0];
+    [requestInfo setUid:10009];
     [requestInfo setToken:@""];
     return requestInfo;
 }

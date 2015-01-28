@@ -12,7 +12,8 @@
 
 @interface BookDirectoryTableViewController ()
 {
-    NSArray *searchType;
+    NSArray *boySearchType;
+    NSArray *girlSearchType;
 }
 @end
 
@@ -24,7 +25,8 @@
 }
 
 - (void)testData {
-    searchType = [[NSArray alloc] initWithObjects:@"历史军事", @"武侠仙侠", @"玄乎奇幻", @"悬疑推理", nil];
+    boySearchType = [[NSArray alloc] initWithObjects:@"历史军事", @"武侠仙侠", @"玄乎奇幻", nil];
+    girlSearchType = [[NSArray alloc] initWithObjects:@"现代言情", @"穿越幻想", @"甜美青春", nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,7 +45,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [searchType count];
+    if (section == 0) return [boySearchType count];
+    return [girlSearchType count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -59,22 +62,27 @@
     [label setTextColor:[UIColor lightGrayColor]];
     [view addSubview:label];
     if( section == 0 ) [label setText:@"男生频道"];
-    else if ( section == 1 ) [label setText:@"女生频道"];
+    else if ( section == 1 ) [label setText:@"浪漫女生"];
     
     return view;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     OEZTableViewCell *viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDirectoryTableViewCellStyle1"];
-    [viewCell setData:[searchType objectAtIndex:indexPath.row]];
+    if (indexPath.section == 0)
+        [viewCell setData:[boySearchType objectAtIndex:indexPath.row]];
+    else
+        [viewCell setData:[girlSearchType objectAtIndex:indexPath.row]];
     return viewCell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    int baseTypeID = 1001;
+    int stride = [boySearchType count];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self.navigationController pushViewControllerWithIdentifier:@"BookSearchResultTableViewController" completion:^(UIViewController *viewController) {
         BookSearchResultTableViewController *bookSearchResultView = (BookSearchResultTableViewController *)viewController;
-        [bookSearchResultView setData:nil];
+        bookSearchResultView.typeID = baseTypeID + indexPath.section * stride + indexPath.row;
     } animated:YES];
 }
 

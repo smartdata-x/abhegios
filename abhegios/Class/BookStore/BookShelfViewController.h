@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ReqeustDelegate.h"
 typedef NS_ENUM(NSInteger, BookShelfType) {
     BookShelfTypeList = 6,
 };
-@interface BookShelfViewController : UIViewController
+@interface BookShelfViewController : UIViewController<ReqeustDelegate>
 @end

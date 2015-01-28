@@ -16,9 +16,8 @@ typedef NS_ENUM(NSInteger, BookSearchResultSection) {
 typedef NS_ENUM(NSInteger, BookSearchResultType) {
     BookSearchResultTypeHot = 2,
     BookSearchResultTypeNew = 5,
-    BookSearchResultTypeApiHot = 1,
-    BookSearchResultTypeApiNew = 2,
 };
 @interface BookSearchResultTableViewController : RefreshTableViewController
+@property NSInteger typeID;
 - (void)setData:(id)data;
 @end

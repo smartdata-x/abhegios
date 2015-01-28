@@ -31,4 +31,11 @@
         return [GroupInfo initWithsConfigAndDataDictionarys:@"bookstorehome" groupsData:data entityClass:[BookInfo class]];
     }];
 }
+
+- (void)getBookShelfList:(id<ReqeustDelegate>)delegate {
+    static NSString *path = @"/book/1/booklist.fcgi";
+    [self request:path delegate:delegate processBlock:^id(id data) {
+        return [GroupInfo initWithsConfigAndDataDictionarys:@"bookstorehome" groupsData:data entityClass:[BookInfo class]];
+    }];
+}
 @end

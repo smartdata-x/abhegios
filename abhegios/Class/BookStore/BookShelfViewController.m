@@ -11,6 +11,7 @@
 #import "GroupInfo.h"
 #import "BookInfoViewStyle1.h"
 #import "BookReaderViewController.h"
+#import "AppAPIHelper.h"
 
 #define kMaxBookNumber 99
 #define kBookNumberPerRow 3
@@ -32,11 +33,12 @@
     [super viewDidLoad];
     bookShelfView = [[UIScrollView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:bookShelfView];
-    [self testData];
+    //[self testData];
+    [[[AppAPIHelper shared] getBookAPI] getBookShelfList:self];
 }
 
 - (void)testData {
-    _bookShelfGroups = [GroupInfo initWithsConfigAndDataJsonFile:@"bookstorehome" jsonName:@"bookshelf_test" entityClass:[BookInfo class]];
+    //_bookShelfGroups = [GroupInfo initWithsConfigAndDataJsonFile:@"bookstorehome" jsonName:@"bookshelf_test" entityClass:[BookInfo class]];
     NSUInteger count = [[[_bookShelfGroups objectAtIndex:BookShelfTypeList] entitys] count];
     count = count > kMaxBookNumber ? kMaxBookNumber : count;
     float height = ceilf((float)count / kBookNumberPerRow) * kBookShelfCellHeight;
@@ -78,6 +80,15 @@
         BookReaderViewController *readerView = (BookReaderViewController *)viewController;
         [readerView setData:bookInfo];
     } animated:YES];
+}
+
+- (void)reqeust:(id)reqeust didComplete:(id)data {
+    _bookShelfGroups = data;
+    [self performSelector:@selector(testData) withObject:nil afterDelay:0.25];
+}
+
+- (void)reqeust:(id)reqeust didError:(NSError *)err {
+    NSLog(@"%@",err);
 }
 
 - (void)didReceiveMemoryWarning {

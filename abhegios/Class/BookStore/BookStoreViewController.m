@@ -161,9 +161,11 @@
 }
 
 - (void)cellItemClickedAtIndex:(NSInteger)index {
-    [self.navigationController pushViewControllerWithIdentifier:@"BookSearchResultTableViewController" completion:^(UIViewController *viewController) {
-        BookSearchResultTableViewController *bookSearchResultView = (BookSearchResultTableViewController *)viewController;
-        [bookSearchResultView setData:[_tableViewData objectAtIndex:1]];
+    GroupInfo *group = [_tableViewData objectAtIndex:1];
+    BookInfo *bookInfo = [[group entitys] objectAtIndex:index];
+    [self.navigationController pushViewControllerWithIdentifier:@"BookDetailInfoTableViewController" completion:^(UIViewController *viewController) {
+        BookDetailInfoTableViewController *bookDetailInfoView = (BookDetailInfoTableViewController *)viewController;
+        bookDetailInfoView.bookID = bookInfo.id;
     } animated:YES];
 }
 
@@ -181,7 +183,6 @@
     [self.navigationController pushViewControllerWithIdentifier:@"BookDetailInfoTableViewController" completion:^(UIViewController *viewController) {
         BookDetailInfoTableViewController *bookDetailInfoView = (BookDetailInfoTableViewController *)viewController;
         bookDetailInfoView.bookID = bookInfo.id;
-        //[bookDetailInfoView setData:bookdetail];
     } animated:YES];
 }
 

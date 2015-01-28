@@ -34,7 +34,7 @@
 }
 
 - (void)didRequest {
-    [[[AppAPIHelper shared] getBookAPI] getBookSearchType:1001 delegate:self];
+    [[[AppAPIHelper shared] getBookAPI] getBookSearchType:_typeID delegate:self];
     resultShowType = BookSearchResultTypeNew;
 }
 
