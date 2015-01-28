@@ -17,9 +17,9 @@
 #import "BookSearchResultTableViewController.h"
 #import "BookDirectoryTableViewController.h"
 #import <OEZCommSDK/OEZCommSDK.h>
+#import "AppAPIHelper.h"
 @interface BookStoreViewController ()
 {
-    NSArray *_bookStoreHomeGroups;
 }
 @end
 
@@ -28,11 +28,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self addSearchBarItem];
-    [self testData];
+}
+
+- (void)didRequest {
+    [[[AppAPIHelper shared] getBookAPI] getBookStoreHome:self];
 }
 
 - (void)testData {
-    _bookStoreHomeGroups = [GroupInfo initWithsConfigAndDataJsonFile:@"bookstorehome" jsonName:@"bookstorehome_test" entityClass:[BookInfo class]];
+    //_bookStoreHomeGroups = [GroupInfo initWithsConfigAndDataJsonFile:@"bookstorehome" jsonName:@"bookstorehome_test" entityClass:[BookInfo class]];
 }
 
 - (void)addSearchBarItem {
@@ -46,7 +49,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (BOOL)isSingleLine:(GroupInfo *)group {
@@ -59,11 +61,13 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [_bookStoreHomeGroups count] - 2;
+    int count = [_tableViewData count] - 2; // 去掉最后两个无用的列表
+    count = count <= 0 ? 0 : count;
+    return count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    GroupInfo *group = [_bookStoreHomeGroups objectAtIndex:section];
+    GroupInfo *group = [_tableViewData objectAtIndex:section];
     if ([self isSingleLine:group]) {
         int maxrows = [[group entitys] count];
         if ([group style] == BookStoreTableViewCellStyleFour) {
@@ -75,7 +79,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    GroupInfo *group = [_bookStoreHomeGroups objectAtIndex:section];
+    GroupInfo *group = [_tableViewData objectAtIndex:section];
     if ([group style] == BookStoreTableViewCellStyleTwo) {
         return 0;
     }
@@ -83,7 +87,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    GroupInfo *group = [_bookStoreHomeGroups objectAtIndex:indexPath.section];
+    GroupInfo *group = [_tableViewData objectAtIndex:indexPath.section];
     switch (group.style) {
         case BookStoreTableViewCellStyleOne:    return 132; break;
         case BookStoreTableViewCellStyleTwo:    return 80;  break;
@@ -104,7 +108,7 @@
         view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.tableView.frame)-20, 21)];
         [view setBackgroundColor:kUIColorWithRGB(0xf3f3f3)];
         UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(10, 1, CGRectGetWidth(self.tableView.frame)-20, 21)];
-        [label setText:[[_bookStoreHomeGroups objectAtIndex:section] title]];
+        [label setText:[[_tableViewData objectAtIndex:section] title]];
         [label setFont:[UIFont systemFontOfSize:14.0f]];
         [view addSubview:label];
     }
@@ -112,7 +116,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    GroupInfo *group = [_bookStoreHomeGroups objectAtIndex:indexPath.section];
+    GroupInfo *group = [_tableViewData objectAtIndex:indexPath.section];
     OEZTableViewCell *viewCell = nil;
     NSString *bookCellStyle = [NSString stringWithFormat:@"BookStoreTableViewCellStyle%ld", (long)[group style]];
     if ([self isSingleLine:group]) {
@@ -159,19 +163,19 @@
 - (void)cellItemClickedAtIndex:(NSInteger)index {
     [self.navigationController pushViewControllerWithIdentifier:@"BookSearchResultTableViewController" completion:^(UIViewController *viewController) {
         BookSearchResultTableViewController *bookSearchResultView = (BookSearchResultTableViewController *)viewController;
-        [bookSearchResultView setData:[_bookStoreHomeGroups objectAtIndex:1]];
+        [bookSearchResultView setData:[_tableViewData objectAtIndex:1]];
     } animated:YES];
 }
 
 - (IBAction)gotoBookSearchView:(id)sender {
     [self.navigationController pushViewControllerWithIdentifier:@"BookDirectoryTableViewController" completion:^(UIViewController *viewController) {
         BookDirectoryTableViewController *bookDirectoryView = (BookDirectoryTableViewController *)viewController;
-        [bookDirectoryView setData:[_bookStoreHomeGroups objectAtIndex:3]];
+        [bookDirectoryView setData:[_tableViewData objectAtIndex:3]];
     } animated:YES];
 }
 
 - (IBAction)gotoBookDetailView:(id)sender {
-    GroupInfo *group = [_bookStoreHomeGroups objectAtIndex:2];
+    GroupInfo *group = [_tableViewData objectAtIndex:2];
     BookInfo *bookInfo = [[group entitys] objectAtIndex:0];
     BookDetailInfo *bookdetail = [[BookDetailInfo alloc] init];
     bookdetail.name = bookInfo.name;

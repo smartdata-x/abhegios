@@ -18,4 +18,5 @@
 
 @interface BookStoreTableViewCellStyle3 : OEZHScrollTableViewCell
 @property (nonatomic, assign) id <BookStoreTableViewCellStyle3Delegate> delegate;
+- (void)setDataWithFormat:(id)data Format:(int)format;
 @end

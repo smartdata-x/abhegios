@@ -10,7 +10,7 @@
 #import "FavRateViewStyle.h"
 
 @interface BookInfoViewStyle2 : OEZNibView
-@property (weak, nonatomic) IBOutlet UIImageView *logo;
+@property (weak, nonatomic) IBOutlet UIView *logo;
 @property (weak, nonatomic) IBOutlet FavRateViewStyle *favRate;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *summary;

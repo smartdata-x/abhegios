@@ -8,6 +8,8 @@
 
 #import "BookInfoViewStyle1.h"
 #import "BookInfo.h"
+#import "UIImageView+AFNetworking.h"
+#import "BaseInfoAdapter.h"
 
 @implementation BookInfoViewStyle1
 - (void)awakeFromNib {
@@ -18,6 +20,7 @@
     [_name setText:[data name]];
     NSString *follows = [NSString stringWithFormat:@"%d关注", [(BookInfo *)data follow]];
     [_summary setText:follows];
+    [_logoButton.imageView setImageWithStrURL:[BaseInfoAdapter getPic:data]];
 }
 
 - (void)showAll {

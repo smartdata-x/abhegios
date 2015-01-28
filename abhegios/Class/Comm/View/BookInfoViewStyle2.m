@@ -8,6 +8,8 @@
 
 #import "BookInfoViewStyle2.h"
 #import "BookInfo.h"
+#import "UIImageView+AFNetworking.h"
+#import "BaseInfoAdapter.h"
 
 @implementation BookInfoViewStyle2
 
@@ -19,6 +21,7 @@
     [_name setText:[data name]];
     [_summary setText:[(BookInfo *)data summary]];
     [_favRate setData:[(BookInfo *)data star]];
+    [(UIImageView *)self.logo setImageWithStrURL:[BaseInfoAdapter getPic:data]];
 }
 
 /*
