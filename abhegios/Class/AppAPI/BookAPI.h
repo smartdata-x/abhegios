@@ -10,4 +10,6 @@
 #import "ReqeustDelegate.h"
 @protocol BookAPI <NSObject>
 - (void)getBookStoreHome:(id<ReqeustDelegate>) delegate;
+- (void)getBookDetails:(NSInteger)bookID delegate:(id<ReqeustDelegate>) delegate;
+- (void)getBookSearchType:(NSInteger)bookType delegate:(id<ReqeustDelegate>)delegate;
 @end

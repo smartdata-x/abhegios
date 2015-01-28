@@ -12,11 +12,11 @@
 #import "GroupInfo.h"
 #import "BookDetailInfo.h"
 #import "BookReaderViewController.h"
+#import "AppAPIHelper.h"
 
 @interface BookDetailInfoTableViewController ()
 {
-    NSArray *_bookDetailGroups;
-    BookDetailInfo *_bookDetailInfo;
+    //BookDetailInfo *_bookDetailInfo;
 }
 @end
 
@@ -32,6 +32,10 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void)didRequest {
+    [[[AppAPIHelper shared] getBookAPI] getBookDetails:_bookID delegate:self];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -39,6 +43,7 @@
 
 - (void)setData:(id)data {
     BookInfo *bookInfo = (BookInfo *)data;
+#if 0
     // assign from super
     _bookDetailInfo = [[BookDetailInfo alloc] init];
     _bookDetailInfo.name = bookInfo.name;
@@ -53,6 +58,7 @@
     _bookDetailInfo.summary = @"《金刚经》是大乘佛教的重要经典。全称《能断金刚般若波罗蜜经》（vájra-cchedikā-prajñā-pāramitā-sūtra 梵文释义：以能断金刚的智慧到彼岸），又称《金刚般若波罗蜜经》，简称《金刚经》。后秦鸠摩罗什翻译《金刚经》的法本最早，文字流畅，简明扼要，流传最广，是人们常用的译本。";
     _bookDetailInfo.free = @"http://book.free.miyomate.com/type/22.txt";
     _bookDetailInfo.label = [[NSArray alloc] initWithObjects:@"武侠", @"男生频道", nil];
+#endif
 }
 
 #pragma mark - Table view data source
@@ -63,7 +69,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == BookDetailInfoSectionTagInfo) {
-        int labelCount = [[_bookDetailInfo label] count];
+        //int labelCount = [[_bookDetailInfo label] count];
+        int labelCount = [[_tableViewData label] count];
         int rows = (int)ceilf((float)labelCount / 3.0);
         return rows;
     }
@@ -111,7 +118,8 @@
     switch (indexPath.section) {
         case BookDetailInfoSectionHeaderCell:
             viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDetailInfoTableViewCellStyle0"];
-            if (_bookDetailInfo) [viewCell setData:_bookDetailInfo];
+            //if (_bookDetailInfo) [viewCell setData:_bookDetailInfo];
+            if (_tableViewData) [viewCell setData:_tableViewData];
             break;
             
         case BookDetailInfoSectionReadSave:
@@ -120,30 +128,36 @@
                 BookDetailInfoTableViewCellStyle1 *cellStyle1 = (BookDetailInfoTableViewCellStyle1 *)viewCell;
                 [cellStyle1.saveShelf addTarget:self action:@selector(gotoBookShelf:) forControlEvents:UIControlEventTouchUpInside];
                 [cellStyle1.freeRead addTarget:self action:@selector(gotoBookReader:) forControlEvents:UIControlEventTouchUpInside];
-                if (_bookDetailInfo) [viewCell setData:_bookDetailInfo];
+                //if (_bookDetailInfo) [viewCell setData:_bookDetailInfo];
+                if (_tableViewData) [viewCell setData:_tableViewData];
             }
             break;
             
         case BookDetailInfoSectionIntroduction:
             viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDetailInfoTableViewCellStyle2"];
-            if (_bookDetailInfo) [viewCell setData:_bookDetailInfo];
+            //if (_bookDetailInfo) [viewCell setData:_bookDetailInfo];
+            if (_tableViewData) [viewCell setData:_tableViewData];
             break;
             
         case BookDetailInfoSectionChapterInfo:
             viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDetailInfoTableViewCellStyle3"];
-            [viewCell setData:_bookDetailInfo];
+            //[viewCell setData:_bookDetailInfo];
+            [viewCell setData:_tableViewData];
             break;
             
         case BookDetailInfoSectionTagInfo:
             viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDetailInfoTableViewCellStyle4"];
-            if (_bookDetailInfo) {
-               [(BookDetailInfoTableViewCellStyle4 *)viewCell setDataWithIndex:_bookDetailInfo Index:indexPath.row];
+            //if (_bookDetailInfo) {
+            //   [(BookDetailInfoTableViewCellStyle4 *)viewCell setDataWithIndex:_bookDetailInfo Index:indexPath.row];
+            if (_tableViewData) {
+               [(BookDetailInfoTableViewCellStyle4 *)viewCell setDataWithIndex:_tableViewData Index:indexPath.row];
             }
             break;
             
         case BookDetailInfoSectionReadDownload:
             viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDetailInfoTableViewCellStyle5"];
-            [viewCell setData:_bookDetailInfo];
+            //[viewCell setData:_bookDetailInfo];
+            [viewCell setData:_tableViewData];
             break;
             
         default:

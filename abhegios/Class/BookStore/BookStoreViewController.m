@@ -155,7 +155,7 @@
     else if (section == 1) {
     }
     else if (section == 2 || section == 3 || section == 4) {
-        [self gotoBookDetailView:nil];
+        [self gotoBookDetailView:indexPath];
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
@@ -175,18 +175,13 @@
 }
 
 - (IBAction)gotoBookDetailView:(id)sender {
-    GroupInfo *group = [_tableViewData objectAtIndex:2];
-    BookInfo *bookInfo = [[group entitys] objectAtIndex:0];
-    BookDetailInfo *bookdetail = [[BookDetailInfo alloc] init];
-    bookdetail.name = bookInfo.name;
-    bookdetail.summary = bookInfo.summary;
-    bookdetail.pic = bookInfo.pic;
-    bookdetail.star = bookInfo.star;
-    bookdetail.summary = @"《金刚经》是大乘佛教的重要经典。全称《能断金刚版若波罗蜜经》：以能断金刚的智慧到彼岸。后秦鸠摩罗什翻译《金刚经》的法本最早，文字流畅，简明扼要，流传最广，是人们常用的译本";
-    bookdetail.label = [[NSArray alloc] initWithObjects:@"佛经", @"讲义", @"教理", @"阅读", nil];
+    NSIndexPath *indexPath = (NSIndexPath *)sender;
+    GroupInfo *group = [_tableViewData objectAtIndex:indexPath.section];
+    BookInfo *bookInfo = [[group entitys] objectAtIndex:indexPath.row];
     [self.navigationController pushViewControllerWithIdentifier:@"BookDetailInfoTableViewController" completion:^(UIViewController *viewController) {
         BookDetailInfoTableViewController *bookDetailInfoView = (BookDetailInfoTableViewController *)viewController;
-        [bookDetailInfoView setData:bookdetail];
+        bookDetailInfoView.bookID = bookInfo.id;
+        //[bookDetailInfoView setData:bookdetail];
     } animated:YES];
 }
 

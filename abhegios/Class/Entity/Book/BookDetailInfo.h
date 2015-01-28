@@ -10,7 +10,11 @@
 #import "BookInfo.h"
 
 @interface BookDetailInfo : BookInfo
-@property (nonatomic, retain) NSArray *label;
 @property (nonatomic, copy) NSString *free;
 @property (nonatomic, copy) NSString *chapter;
+@end
+
+@interface BookDetailPage : OEZBaseEntity
+@property (nonatomic, retain) BookDetailInfo *summary;
+@property (nonatomic, retain) NSArray *label;
 @end

@@ -11,3 +11,14 @@
 @implementation BookDetailInfo
 
 @end
+
+@implementation BookDetailPage
+- (instancetype) initWithDictionary:(NSDictionary *)dict {
+    self = [self init];
+    if (self != nil) {
+        _summary = [[BookDetailInfo alloc] initWithDictionary:[dict objectForKey:@"summary"]];
+        _label = [dict objectForKey:@"label"];
+    }
+    return self;
+}
+@end

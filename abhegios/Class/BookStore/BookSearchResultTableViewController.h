@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RefreshTableViewController.h"
 typedef NS_ENUM(NSInteger, BookSearchResultSection) {
     BookSearchResultSectionHeader = 0,
     BookSearchResultSectionBooks,
@@ -15,7 +16,9 @@ typedef NS_ENUM(NSInteger, BookSearchResultSection) {
 typedef NS_ENUM(NSInteger, BookSearchResultType) {
     BookSearchResultTypeHot = 2,
     BookSearchResultTypeNew = 5,
+    BookSearchResultTypeApiHot = 1,
+    BookSearchResultTypeApiNew = 2,
 };
-@interface BookSearchResultTableViewController : UITableViewController
+@interface BookSearchResultTableViewController : RefreshTableViewController
 - (void)setData:(id)data;
 @end

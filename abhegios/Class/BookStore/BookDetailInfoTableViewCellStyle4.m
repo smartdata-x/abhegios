@@ -44,18 +44,18 @@
     [self hideAll];
     [super setData:data];
     int offset = index * 3;
-    int count = [[(BookDetailInfo *)data label] count];
+    int count = [[(BookDetailPage *)data label] count];
     int leftCount = count - offset;
     leftCount = leftCount > 3 ? 3 : leftCount;
     switch (leftCount) {
         case 3:
-            [_lblTag2 setText:[[(BookDetailInfo *)data label] objectAtIndex:offset+2]];
+            [_lblTag2 setText:[[(BookDetailPage *)data label] objectAtIndex:offset+2]];
             [_lblTag2 setHidden:NO];
         case 2:
-            [_lblTag1 setText:[[(BookDetailInfo *)data label] objectAtIndex:offset+1]];
+            [_lblTag1 setText:[[(BookDetailPage *)data label] objectAtIndex:offset+1]];
             [_lblTag1 setHidden:NO];
         case 1:
-            [_lblTag0 setText:[[(BookDetailInfo *)data label] objectAtIndex:offset+0]];
+            [_lblTag0 setText:[[(BookDetailPage *)data label] objectAtIndex:offset+0]];
             [_lblTag0 setHidden:NO];
         default: break;
     }
