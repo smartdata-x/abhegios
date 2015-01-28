@@ -37,8 +37,7 @@
     [[[AppAPIHelper shared] getBookAPI] getBookShelfList:self];
 }
 
-- (void)testData {
-    //_bookShelfGroups = [GroupInfo initWithsConfigAndDataJsonFile:@"bookstorehome" jsonName:@"bookshelf_test" entityClass:[BookInfo class]];
+- (void)finishLoadData {
     NSUInteger count = [[[_bookShelfGroups objectAtIndex:BookShelfTypeList] entitys] count];
     count = count > kMaxBookNumber ? kMaxBookNumber : count;
     float height = ceilf((float)count / kBookNumberPerRow) * kBookShelfCellHeight;
@@ -84,7 +83,7 @@
 
 - (void)reqeust:(id)reqeust didComplete:(id)data {
     _bookShelfGroups = data;
-    [self performSelector:@selector(testData) withObject:nil afterDelay:0.25];
+    [self performSelector:@selector(finishLoadData) withObject:nil afterDelay:0.25];
 }
 
 - (void)reqeust:(id)reqeust didError:(NSError *)err {
@@ -95,15 +94,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

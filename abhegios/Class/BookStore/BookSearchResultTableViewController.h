@@ -19,5 +19,4 @@ typedef NS_ENUM(NSInteger, BookSearchResultType) {
 };
 @interface BookSearchResultTableViewController : RefreshTableViewController
 @property NSInteger typeID;
-- (void)setData:(id)data;
 @end

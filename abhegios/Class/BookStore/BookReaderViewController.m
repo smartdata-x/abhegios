@@ -10,6 +10,7 @@
 #import "GroupInfo.h"
 #import "BookChapterInfo.h"
 #import "BookFileManager.h"
+#import "AppAPIHelper.h"
 
 @interface BookReaderViewController ()
 {
@@ -58,7 +59,7 @@
 
 - (void)setData:(id)data {
     _bookInfo = data;
-    [self testData];
+    [[[AppAPIHelper shared] getBookAPI] getBookChapterList:_bookInfo.id BookToken:_bookInfo.booktoken delegate:self];
 }
 
 - (void)setDataWithUrl:(id)data URL:(NSString *)url {
@@ -73,9 +74,17 @@
     _continueReading = NO;
 }
 
-- (void)testData {
-    _bookChapterGroup = [GroupInfo initWithsConfigAndDataJsonFile:@"bookstorehome" jsonName:@"bookchapter_test" entityClass:[BookChapterInfo class]];
+- (void)finishLoadData {
     _chapterCount = [[[_bookChapterGroup objectAtIndex:BookReaderTypeChapterList] entitys] count];
+}
+
+- (void)reqeust:(id)reqeust didComplete:(id)data {
+    _bookChapterGroup = data;
+    [self performSelector:@selector(finishLoadData) withObject:nil afterDelay:0.25];
+}
+
+- (void)reqeust:(id)reqeust didError:(NSError *)err {
+    NSLog(@"%@",err);
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -151,9 +160,8 @@
     [view.layer addAnimation:tr forKey:@"pageCurlAnimation"];
 }
 
-- (BOOL)isCurrentChapterExist {
-    NSString *chapterName = [NSString stringWithFormat:@"%@_%d.txt", @"测试", _currentChapter];
-    return [_bookFileMgr isBookExist:chapterName];
+- (BOOL)isCurrentChapterExist:(NSString *)fullName {
+    return [_bookFileMgr isBookExist:fullName];
 }
 
 - (BOOL)isNeedDownload {
@@ -192,10 +200,10 @@
 - (BOOL)loadNewChapter {
     GroupInfo *group = [_bookChapterGroup objectAtIndex:BookReaderTypeChapterList];
     BookChapterInfo *chapterInfo = [[group entitys] objectAtIndex:_currentChapter];
-    NSString *chapterName = [NSString stringWithFormat:@"%@_%d.txt", @"测试", _currentChapter];
+    NSString *chapterName = [NSString stringWithFormat:@"%@_%d.txt", _bookInfo.name, _currentChapter];
     NSString *fullName = [_bookFileMgr getBookFullPath:chapterName];
     
-    if (![self isCurrentChapterExist]) {
+    if (![self isCurrentChapterExist:fullName]) {
         if ([self isNeedDownload]) {
             [_bookDownloader downloadBookFromURL:chapterInfo.url FileName:chapterName];
         }

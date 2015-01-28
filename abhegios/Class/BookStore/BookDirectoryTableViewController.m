@@ -21,10 +21,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self testData];
+    [self finishLoadData];
 }
 
-- (void)testData {
+- (void)finishLoadData {
     boySearchType = [[NSArray alloc] initWithObjects:@"历史军事", @"武侠仙侠", @"玄乎奇幻", nil];
     girlSearchType = [[NSArray alloc] initWithObjects:@"现代言情", @"穿越幻想", @"甜美青春", nil];
 }
@@ -32,10 +32,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)setData:(id)data {
-    
 }
 
 #pragma mark - Table view data source

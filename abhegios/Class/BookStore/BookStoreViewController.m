@@ -171,8 +171,6 @@
 
 - (IBAction)gotoBookSearchView:(id)sender {
     [self.navigationController pushViewControllerWithIdentifier:@"BookDirectoryTableViewController" completion:^(UIViewController *viewController) {
-        BookDirectoryTableViewController *bookDirectoryView = (BookDirectoryTableViewController *)viewController;
-        [bookDirectoryView setData:[_tableViewData objectAtIndex:3]];
     } animated:YES];
 }
 
