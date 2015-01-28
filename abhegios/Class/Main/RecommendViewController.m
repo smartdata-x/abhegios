@@ -15,37 +15,24 @@ typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
     RecommendTableViewCellStyleTwo
 };
 
-@interface RecommendViewController ()<ReqeustDelegate>
-{
- NSArray   *_recommendHomeGroups;
-}
+@interface RecommendViewController ()
 @end
 
 @implementation RecommendViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self request];
 }
 
--(void) reqeust:(id)reqeust  didComplete:(id)data
-{
-    _recommendHomeGroups = data;
-    [self.tableView reloadData];
-}
--(void) reqeust:(id)reqeust didError:(NSError *)err
-{
-    
-}
 
--(void) request
+-(void) didRequest
 {
     [[[AppAPIHelper shared] getOtherAPI] getRecommendHome:self];
 }
 
 -(void) testData
 {
-    _recommendHomeGroups = [GroupInfo initWithsConfigAndDataJsonFile:@"recommendhome" jsonName:@"recommendhome_test"];
+    _tableViewData = [GroupInfo initWithsConfigAndDataJsonFile:@"recommendhome" jsonName:@"recommendhome_test"];
 }
 
 -(BOOL) isSingleLine:(GroupInfo*) group
@@ -61,7 +48,7 @@ typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    GroupInfo *group = [_recommendHomeGroups objectAtIndex:section];
+    GroupInfo *group = [_tableViewData objectAtIndex:section];
     if( [group style] == RecommendTableViewCellStyleTwo )
         return 0;
     return 22;
@@ -75,11 +62,11 @@ typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [_recommendHomeGroups count];
+    return [_tableViewData count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    GroupInfo *group = [_recommendHomeGroups objectAtIndex:indexPath.section];
+    GroupInfo *group = [_tableViewData objectAtIndex:indexPath.section];
     if ( group.style == RecommendTableViewCellStyleTwo) {
         return 49;
     }
@@ -88,7 +75,7 @@ typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    GroupInfo *group = [_recommendHomeGroups objectAtIndex:section];
+    GroupInfo *group = [_tableViewData objectAtIndex:section];
     if ( [self isSingleLine:group] ) {
         return [[group entitys] count] > 0 ? 1 : 0;
     }
@@ -97,7 +84,7 @@ typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    GroupInfo *group = [_recommendHomeGroups objectAtIndex:[indexPath section]];
+    GroupInfo *group = [_tableViewData objectAtIndex:[indexPath section]];
     if ( [group style] <= RecommendTableViewCellStyleTwo) {
          OEZTableViewCell* viewCell =  [tableView dequeueReusableCellWithIdentifier:[NSString stringWithFormat:@"RecommendTableViewCellStyle%@",@([group style])]];
         if( [group style] == RecommendTableViewCellStyleTwo )
@@ -119,7 +106,7 @@ typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
         view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, 22)];
         [view setBackgroundColor:kUIColorWithRGB(0xf3f3f3)];
         UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(10, 1, kMainScreenWidth-20, 21)];
-        [label setText:[[_recommendHomeGroups objectAtIndex:section] title]];
+        [label setText:[[_tableViewData objectAtIndex:section] title]];
         [label setFont:[UIFont systemFontOfSize:14.0f]];
         [view addSubview:label];
     }

@@ -42,6 +42,7 @@
     [_logo setImage:[UIImage imageNamed:@"app_logo1"]];
     [_name setText:[self.data name]];
     [_sizeAndVer setText:[NSString stringWithFormat:@"大小:%0.2fM  版本%@",[info size],[info version]]];
+    [_favRate setData:[self.data star]];
     
 }
 @end

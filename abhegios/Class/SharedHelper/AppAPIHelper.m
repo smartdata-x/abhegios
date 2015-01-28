@@ -15,11 +15,16 @@
 HELPER_SHARED
  -(RequestInfo*) getRequestInfo
 {
-    RequestInfo*  requestInfo = [[RequestInfo alloc] init];
+    static RequestInfo *requestInfo = nil;
+    static dispatch_once_t predicate;
+    dispatch_once(&predicate, ^{
+        requestInfo = [[RequestInfo alloc] init];
+    });
     [requestInfo setUid:0];
     [requestInfo setToken:@""];
     return requestInfo;
 }
+
 -(id<UserAPI>) getUserAPI
 {
     return [[HttpUserAPI alloc] initWithRequest:[self getRequestInfo]];

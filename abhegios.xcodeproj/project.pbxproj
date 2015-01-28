@@ -123,6 +123,7 @@
 		EA9C30021A778640002EFF35 /* HttpAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9C30011A778640002EFF35 /* HttpAPI.m */; };
 		EAA454441A70DEAF0057A770 /* OEZCommSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA454431A70DEAF0057A770 /* OEZCommSDK.framework */; };
 		EAA5DFE31A77D42E00CF9163 /* HttpOtherAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA5DFE21A77D42E00CF9163 /* HttpOtherAPI.m */; };
+		EAA5DFE61A77DE7200CF9163 /* RefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA5DFE51A77DE7200CF9163 /* RefreshTableViewController.m */; };
 		EAA773881A7222C400EBD512 /* AppTableViewPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA773871A7222C400EBD512 /* AppTableViewPageCell.m */; };
 		EAA7738B1A72241B00EBD512 /* AppTableViewCellStyle4.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA7738A1A72241B00EBD512 /* AppTableViewCellStyle4.m */; };
 		EABA1EB61A76705E00A76BD2 /* GameHomeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EABA1EB51A76705E00A76BD2 /* GameHomeInfo.m */; };
@@ -348,6 +349,8 @@
 		EAA5DFE01A77D3F300CF9163 /* OtherAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherAPI.h; sourceTree = "<group>"; };
 		EAA5DFE11A77D42E00CF9163 /* HttpOtherAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpOtherAPI.h; sourceTree = "<group>"; };
 		EAA5DFE21A77D42E00CF9163 /* HttpOtherAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpOtherAPI.m; sourceTree = "<group>"; };
+		EAA5DFE41A77DE7200CF9163 /* RefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshTableViewController.h; sourceTree = "<group>"; };
+		EAA5DFE51A77DE7200CF9163 /* RefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshTableViewController.m; sourceTree = "<group>"; };
 		EAA773861A7222C400EBD512 /* AppTableViewPageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTableViewPageCell.h; sourceTree = "<group>"; };
 		EAA773871A7222C400EBD512 /* AppTableViewPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTableViewPageCell.m; sourceTree = "<group>"; };
 		EAA773891A72241B00EBD512 /* AppTableViewCellStyle4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTableViewCellStyle4.h; sourceTree = "<group>"; };
@@ -547,6 +550,8 @@
 				EA7C910C1A77B6AF00782B8D /* HTTPReqeust.h */,
 				EA7C910D1A77B6AF00782B8D /* HTTPReqeust.m */,
 				EA7C910F1A77B72E00782B8D /* ReqeustDelegate.h */,
+				EAA5DFE41A77DE7200CF9163 /* RefreshTableViewController.h */,
+				EAA5DFE51A77DE7200CF9163 /* RefreshTableViewController.m */,
 			);
 			path = Comm;
 			sourceTree = "<group>";
@@ -1166,6 +1171,7 @@
 				CB6A22131A74BE6B0087546F /* BookSearchResultTableViewCellStyle1.m in Sources */,
 				EABA1EE31A76844000A76BD2 /* AFHTTPRequestOperation.m in Sources */,
 				EA54A1171A6E0E6100322C42 /* FoundViewController.m in Sources */,
+				EAA5DFE61A77DE7200CF9163 /* RefreshTableViewController.m in Sources */,
 				CB6A21C01A6FF5600087546F /* BookStoreTableViewCellStyle1.m in Sources */,
 				CB6A22011A73DC440087546F /* BookDetailInfoTableViewCellStyle4.m in Sources */,
 				EA9C2FEB1A772561002EFF35 /* AppHScrollViewCell1.m in Sources */,

@@ -9,9 +9,9 @@
 #import "GameHomeViewController.h"
 #import "GameHomeInfo.h"
 #import "AppAPIHelper.h"
-@interface GameHomeViewController ()<ReqeustDelegate>
+@interface GameHomeViewController ()
 {
-    GameHomeInfo *_gameHomeInfo;
+    
 }
 @end
 
@@ -19,28 +19,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self request];
 }
 
--(void) reqeust:(id)reqeust didComplete:(id)data
-{
-    _gameHomeInfo = data;
-    [self.tableView reloadData];
-}
--(void) reqeust:(id)reqeust didError:(NSError *)err
-{
-    
-}
 
--(void) request
+
+-(void) didRequest
 {
     [[[AppAPIHelper shared] getApplyAPI] getGameStoreHome:self];
 }
 
 -(void) test
 {
-    _gameHomeInfo = [GameHomeInfo initWithJsonResource:@"gamehomeinfo_test" ofType:@"json"];
+    _tableViewData = [GameHomeInfo initWithJsonResource:@"gamehomeinfo_test" ofType:@"json"];
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }

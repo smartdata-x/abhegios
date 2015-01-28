@@ -12,9 +12,9 @@
 #import "AppTableViewCellStyle1.h"
 #import <OEZCommSDK/OEZCommSDK.h>
 #import "AppAPIHelper.h"
-@interface AppHomeViewController ()<ReqeustDelegate>
+@interface AppHomeViewController ()
 {
-    NSArray   *_appStoreHomeGroups;
+    
 }
 @end
 
@@ -22,27 +22,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self request];
-    
 }
 
--(void) reqeust:(id)reqeust  didComplete:(id)data
-{
-    _appStoreHomeGroups = data;
-    [self.tableView reloadData];
-}
--(void) reqeust:(id)reqeust didError:(NSError *)err
-{
-    
-}
 
--(void) request
+-(void) didRequest
 {
     [[[AppAPIHelper shared] getApplyAPI] getAppStoreHome:self];
 }
+
 -(void) testData
 {
-    _appStoreHomeGroups = [GroupInfo initWithsConfigAndDataJsonFile:@"appstorehome" jsonName:@"appstorehome_test" entityClass:[AppInfo class]];
+    _tableViewData = [GroupInfo initWithsConfigAndDataJsonFile:@"appstorehome" jsonName:@"appstorehome_test" entityClass:[AppInfo class]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -66,18 +56,18 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [_appStoreHomeGroups count];
+    return [_tableViewData count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    GroupInfo *group = [_appStoreHomeGroups objectAtIndex:section];
+    GroupInfo *group = [_tableViewData objectAtIndex:section];
     if( [group style] == AppTableViewCellStyleTwo )
         return 0;
     return 22;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-     GroupInfo *group = [_appStoreHomeGroups objectAtIndex:indexPath.section];
+     GroupInfo *group = [_tableViewData objectAtIndex:indexPath.section];
     if ( group.style == AppTableViewCellStyleThree) {
         return 90;
     }
@@ -86,7 +76,7 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    GroupInfo *group = [_appStoreHomeGroups objectAtIndex:section];
+    GroupInfo *group = [_tableViewData objectAtIndex:section];
     if ( [self isSingleLine:group] ) {
         return [[group entitys] count] > 0 ? 1 : 0;
     }
@@ -94,7 +84,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    GroupInfo *group = [_appStoreHomeGroups objectAtIndex:[indexPath section]];
+    GroupInfo *group = [_tableViewData objectAtIndex:[indexPath section]];
     OEZTableViewCell* viewCell = nil;
     if ( [self isSingleLine:group])
     {
@@ -116,7 +106,7 @@
         view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, 22)];
         [view setBackgroundColor:kUIColorWithRGB(0xf3f3f3)];
         UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(10, 1, kMainScreenWidth-20, 21)];
-        [label setText:[[_appStoreHomeGroups objectAtIndex:section] title]];
+        [label setText:[[_tableViewData objectAtIndex:section] title]];
         [label setFont:[UIFont systemFontOfSize:14.0f]];
         [view addSubview:label];
     }

@@ -22,13 +22,8 @@
     return self;
 }
 
-
-
-
-
 -(id) jsonProcess:(id) data
 {
-   
     NSError *error = nil;
     data = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
      if ( error == nil)
@@ -46,7 +41,7 @@
 
 -(void) request:(NSString*) path parameter:(NSDictionary*) parameter delegate:(id<ReqeustDelegate>)delegate processBlock:(ProcessBlock) processBlock
 {
-    NSMutableDictionary *parameters = [[NSMutableDictionary alloc] initWithDictionary:[_requestInfo toDictionary:NO]];
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithDictionary:[_requestInfo toDictionary:NO]];
     if( parameter != nil)
         [parameters addEntriesFromDictionary:parameter];
     [super request:[KAppAPIBaseURL stringByAppendingString:path] parameter:parameters delegate:delegate processBlock:^id(id data) {

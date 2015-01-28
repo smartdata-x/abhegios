@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "RefreshTableViewController.h"
 typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
     AppTableViewCellStyleNone = 0,
     AppTableViewCellStyleOne,
@@ -15,6 +15,6 @@ typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
     AppTableViewCellStyleThree ,
     AppTableViewCellStyleFour
 };
-@interface AppHomeViewController : UITableViewController
+@interface AppHomeViewController : RefreshTableViewController
 
 @end

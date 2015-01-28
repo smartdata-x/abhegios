@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface RecommendViewController : UITableViewController
-
+#import "RefreshTableViewController.h"
+@interface RecommendViewController : RefreshTableViewController
 @end

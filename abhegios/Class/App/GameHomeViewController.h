@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface GameHomeViewController : UITableViewController
+#import "RefreshTableViewController.h"
+@interface GameHomeViewController : RefreshTableViewController
 
 @end
