@@ -105,17 +105,13 @@ typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UIView *view = nil;
     if( section != 0 )
     {
-        view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kMainScreenWidth, 22)];
-        [view setBackgroundColor:kUIColorWithRGB(0xf3f3f3)];
-        UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(10, 1, kMainScreenWidth-20, 21)];
-        [label setText:[[self getGroupInfo:section] title]];
-        [label setFont:[UIFont systemFontOfSize:14.0f]];
-        [view addSubview:label];
+       TableViewHeader* view = [TableViewHeader loadFromNib];
+        [[view title] setText:[[self getGroupInfo:section] title]];
+        return view;
     }
-    return view;
+    return Nil;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
