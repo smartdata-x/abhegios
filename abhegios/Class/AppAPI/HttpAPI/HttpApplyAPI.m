@@ -15,7 +15,7 @@
 -(void) getAppDetails:(NSInteger)appID delegate:(id<ReqeustDelegate>)delegate
 {
      static NSString *path = @"/store/1/summary.fcgi";
-    [self request:path parameter:[NSDictionary dictionaryWithObject:@(appID) forKey:@""] delegate:delegate entityClass:[AppDetailsInfo class]];
+    [self request:path parameter:[NSDictionary dictionaryWithObject:@(appID) forKey:@"appid"] delegate:delegate entityClass:[AppDetailsPage class]];
 }
 
 -(void) getAppStoreHome:(id<ReqeustDelegate>)delegate

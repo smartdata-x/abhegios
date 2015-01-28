@@ -8,7 +8,7 @@
 
 #import "AppDetailsViewController.h"
 #import "AppDetailsInfo.h"
-
+#import "AppAPIHelper.h"
 typedef NS_ENUM(NSInteger, AppDetailsTableViewCellStyle) {
     AppDetailsTableViewCellStyleNone = 0,
     AppDetailsTableViewCellStyleOne,
@@ -19,7 +19,7 @@ typedef NS_ENUM(NSInteger, AppDetailsTableViewCellStyle) {
 
 @interface AppDetailsViewController ()
 {
-    AppDetailsPage *_appDetailsPage;
+    
 }
 @end
 
@@ -28,13 +28,18 @@ typedef NS_ENUM(NSInteger, AppDetailsTableViewCellStyle) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-    [self testData];
     
+    
+}
+
+-(void)  didRequest
+{
+    [[[AppAPIHelper shared] getApplyAPI] getAppDetails:_appID delegate:self];
 }
 
 -(void) testData
 {
-     _appDetailsPage = [AppDetailsPage initWithJsonResource:@"appdetailspage_test" ofType:@"json"];
+     _tableViewData = [AppDetailsPage initWithJsonResource:@"appdetailspage_test" ofType:@"json"];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -49,7 +54,7 @@ typedef NS_ENUM(NSInteger, AppDetailsTableViewCellStyle) {
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return AppDetailsTableViewCellStyleFour;
+    return _tableViewData != nil ? AppDetailsTableViewCellStyleFour : 0;
 }
 
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -62,7 +67,7 @@ typedef NS_ENUM(NSInteger, AppDetailsTableViewCellStyle) {
                 return 294;
             case AppDetailsTableViewCellStyleTwo:
             {
-                CGFloat height = [[[_appDetailsPage intro] summary] sizeWithFont:[UIFont systemFontOfSize:14] constrainedToSize:CGSizeMake(kMainScreenWidth-30, MAXFLOAT) lineBreakMode:NSLineBreakByCharWrapping].height;
+                CGFloat height = [[[_tableViewData intro] summary] sizeWithFont:[UIFont systemFontOfSize:14] constrainedToSize:CGSizeMake(kMainScreenWidth-30, MAXFLOAT) lineBreakMode:NSLineBreakByCharWrapping].height;
                 height += 80;
                 return height;
             }
@@ -81,10 +86,10 @@ typedef NS_ENUM(NSInteger, AppDetailsTableViewCellStyle) {
         OEZTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[NSString stringWithFormat: @"AppDetailsTableViewCellStyle%@",@([indexPath row]+1)]];
         if ( [indexPath row] + 1 == AppDetailsTableViewCellStyleThree )
         {
-            [cell setData:[_appDetailsPage like]];
+            [cell setData:[_tableViewData like]];
         }
         else
-            [cell setData:[_appDetailsPage intro]];
+            [cell setData:[_tableViewData intro]];
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
         return cell;
     }
@@ -92,5 +97,13 @@ typedef NS_ENUM(NSInteger, AppDetailsTableViewCellStyle) {
 }
 
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSInteger appID = [[[_tableViewData like] objectAtIndex:[indexPath row] ] id];
+    [self.navigationController pushViewControllerWithIdentifier:@"AppDetailsViewController" completion:^(UIViewController *viewController) {
+        [(AppDetailsViewController*)viewController setAppID:appID];
+    } animated:YES];
+}
 
 @end

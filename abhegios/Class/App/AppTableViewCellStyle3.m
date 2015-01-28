@@ -8,6 +8,7 @@
 
 #import "AppTableViewCellStyle3.h"
 #import "AppHScrollViewCell1.h"
+#import "MyIndexPath.h"
 #define kViewitemWidth  78
 @implementation AppTableViewCellStyle3
 {
@@ -48,4 +49,22 @@
     }
 }
 
+-(void) hScrollView:(OEZHScrollView *)hScrollView didSelectColumnAtIndex:(NSInteger)columnIndex
+{
+    
+    UITableView *superTableview = (UITableView *)self.superview;
+    if (![superTableview isKindOfClass:[UITableView class]])
+    {
+        superTableview = (UITableView *)superTableview.superview;
+    }
+    
+    if (superTableview)
+    {
+        
+        id<UITableViewDelegate> superviewDelegate = superTableview.delegate;
+        NSIndexPath * selfIndexPath = [superTableview indexPathForCell:self];
+         [superviewDelegate tableView:superTableview didSelectRowAtIndexPath:[MyIndexPath indexPathForRow:columnIndex insection1:selfIndexPath.row inSection:selfIndexPath.section]];
+    }
+
+}
 @end

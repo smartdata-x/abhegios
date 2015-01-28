@@ -12,6 +12,7 @@
 #import "AppTableViewCellStyle1.h"
 #import <OEZCommSDK/OEZCommSDK.h>
 #import "AppAPIHelper.h"
+#import "AppDetailsViewController.h"
 @interface AppHomeViewController ()
 {
     
@@ -116,7 +117,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self.navigationController pushViewControllerWithIdentifier:@"AppDetailsViewController" animated:TRUE];
+    GroupInfo *group = [_tableViewData objectAtIndex:[indexPath section]];
+    NSInteger appID = [[[group entitys] objectAtIndex:[indexPath row] ] id];
+    [self.navigationController pushViewControllerWithIdentifier:@"AppDetailsViewController" completion:^(UIViewController *viewController) {
+        [(AppDetailsViewController*)viewController setAppID:appID];
+    } animated:YES];
 }
 
 @end

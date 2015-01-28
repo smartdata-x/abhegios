@@ -74,6 +74,7 @@
 		EA103C701A788C3600FFF66E /* GameHScrollViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C6F1A788C3600FFF66E /* GameHScrollViewCell.m */; };
 		EA103C721A788C5600FFF66E /* GameHScrollViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA103C711A788C5600FFF66E /* GameHScrollViewCell.xib */; };
 		EA103C8F1A78B53600FFF66E /* BaseInfoAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C8E1A78B53600FFF66E /* BaseInfoAdapter.m */; };
+		EA103C981A78DFEF00FFF66E /* MyIndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C971A78DFEF00FFF66E /* MyIndexPath.m */; };
 		EA13DDCE1A6F8A35004AB7E6 /* NSString+NSStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDCD1A6F8A35004AB7E6 /* NSString+NSStringCategory.m */; };
 		EA13DDD11A6F8D3A004AB7E6 /* AppDetailsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDCF1A6F8D3A004AB7E6 /* AppDetailsInfo.m */; };
 		EA13DDDC1A6F961E004AB7E6 /* MyNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDDB1A6F961E004AB7E6 /* MyNavigationViewController.m */; };
@@ -281,6 +282,8 @@
 		EA103C711A788C5600FFF66E /* GameHScrollViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameHScrollViewCell.xib; sourceTree = SOURCE_ROOT; };
 		EA103C8D1A78B53600FFF66E /* BaseInfoAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseInfoAdapter.h; sourceTree = "<group>"; };
 		EA103C8E1A78B53600FFF66E /* BaseInfoAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseInfoAdapter.m; sourceTree = "<group>"; };
+		EA103C961A78DFEF00FFF66E /* MyIndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyIndexPath.h; sourceTree = "<group>"; };
+		EA103C971A78DFEF00FFF66E /* MyIndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyIndexPath.m; sourceTree = "<group>"; };
 		EA13DDCD1A6F8A35004AB7E6 /* NSString+NSStringCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringCategory.m"; sourceTree = "<group>"; };
 		EA13DDCF1A6F8D3A004AB7E6 /* AppDetailsInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsInfo.m; sourceTree = "<group>"; };
 		EA13DDD01A6F8D3A004AB7E6 /* AppDetailsInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailsInfo.h; sourceTree = "<group>"; };
@@ -1034,6 +1037,8 @@
 				EADD5B571A6F7A4700CA6633 /* NSString+NSStringCategory.h */,
 				EA13DDDA1A6F961E004AB7E6 /* MyNavigationViewController.h */,
 				EA13DDDB1A6F961E004AB7E6 /* MyNavigationViewController.m */,
+				EA103C961A78DFEF00FFF66E /* MyIndexPath.h */,
+				EA103C971A78DFEF00FFF66E /* MyIndexPath.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1214,6 +1219,7 @@
 				CB6A22101A74B4C10087546F /* BookDirectoryTableViewController.m in Sources */,
 				EABA1EE71A76844000A76BD2 /* AFNetworkReachabilityManager.m in Sources */,
 				EABA1ECA1A7679F200A76BD2 /* AppDetailsTableViewCellStyle4.m in Sources */,
+				EA103C981A78DFEF00FFF66E /* MyIndexPath.m in Sources */,
 				EA103C701A788C3600FFF66E /* GameHScrollViewCell.m in Sources */,
 				1AD6419EC3E465BEDDED654B /* WXLogin.m in Sources */,
 				EABA1EE41A76844000A76BD2 /* AFImageRequestOperation.m in Sources */,

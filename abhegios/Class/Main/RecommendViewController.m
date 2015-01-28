@@ -9,6 +9,9 @@
 #import "RecommendViewController.h"
 #import "GroupInfo.h"
 #import "AppAPIHelper.h"
+#include "BaseInfo.h"
+#include "AppInfo.h"
+#include "AppDetailsViewController.h"
 typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
     RecommendTableViewCellStyleNone = 0,
     RecommendTableViewCellStyleOne,
@@ -111,6 +114,17 @@ typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
         [view addSubview:label];
     }
     return view;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    BaseInfo* baseInfo = [[[_tableViewData objectAtIndex:[indexPath section]]entitys] objectAtIndex:[indexPath row]];
+    NSInteger appID = [baseInfo id];
+    if( [baseInfo isKindOfClass:[AppInfo class]])
+    [self.navigationController pushViewControllerWithIdentifier:@"AppDetailsViewController" completion:^(UIViewController *viewController) {
+        [(AppDetailsViewController*)viewController setAppID:appID];
+    } animated:YES];
 }
 
 @end

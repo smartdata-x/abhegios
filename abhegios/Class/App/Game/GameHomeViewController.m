@@ -10,6 +10,8 @@
 #import "GameHomeInfo.h"
 #import "AppAPIHelper.h"
 #import "GroupInfo.h"
+#import "MyIndexPath.h"
+#import "AppDetailsViewController.h"
 #define kMaxRowNum 4
 @interface GameHomeViewController ()
 {
@@ -127,5 +129,22 @@
         [view addSubview:label];
     }
     return view;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if( [indexPath section] != 0 )
+    {
+        if( [indexPath isKindOfClass:[MyIndexPath class]])
+        {
+            GroupInfo *groupInfo = [[_tableViewData groups] objectAtIndex:[indexPath section]-1];
+            NSInteger row =  indexPath.row + [(MyIndexPath*)indexPath section1] * kMaxRowNum;
+            NSInteger appID = [[[groupInfo entitys] objectAtIndex:row] id];
+            [self.navigationController pushViewControllerWithIdentifier:@"AppDetailsViewController" completion:^(UIViewController *viewController) {
+                [(AppDetailsViewController*)viewController setAppID:appID];
+            } animated:YES];
+        }
+    }
+    NSLog(@"%@ %@",@(indexPath.section),@(indexPath.row));
 }
 @end

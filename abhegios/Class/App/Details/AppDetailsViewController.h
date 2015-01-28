@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface AppDetailsViewController : UITableViewController
-
+#import "RefreshTableViewController.h"
+@interface AppDetailsViewController : RefreshTableViewController
+@property NSInteger  appID;
 @end
