@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface OEZTableViewIndexPath : NSIndexPath
-+ (OEZTableViewIndexPath *)indexPathForRowColumn:(NSUInteger)row inColumn:(NSUInteger)column inSection:(NSUInteger)section;
-+ (OEZTableViewIndexPath *)indexPathForRowAction:(NSUInteger)row inAction:(NSUInteger)action inSection:(NSUInteger)section;
-+ (OEZTableViewIndexPath *)indexPathForRowColumnAction:(NSUInteger)row inColumn:(NSUInteger)column inAction:(NSUInteger)action inSection:(NSUInteger)section;
-@property(nonatomic,readonly) NSUInteger section;
-@property(nonatomic,readonly) NSUInteger row;
-@property(nonatomic,readonly) NSUInteger column;
-@property(nonatomic,readonly) NSUInteger action;
++ (OEZTableViewIndexPath *)indexPathForRowColumn:(NSInteger)row inColumn:(NSInteger)column inSection:(NSInteger)section;
++ (OEZTableViewIndexPath *)indexPathForRowAction:(NSInteger)row inAction:(NSInteger)action inSection:(NSInteger)section;
++ (OEZTableViewIndexPath *)indexPathForRowColumnAction:(NSInteger)row inColumn:(NSInteger)column inAction:(NSInteger)action inSection:(NSInteger)section;
+@property(nonatomic,readonly) NSInteger section;
+@property(nonatomic,readonly) NSInteger row;
+@property(nonatomic,readonly) NSInteger column;
+@property(nonatomic,readonly) NSInteger action;
 @end

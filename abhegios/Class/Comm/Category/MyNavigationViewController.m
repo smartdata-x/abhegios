@@ -8,7 +8,7 @@
 
 #import "MyNavigationViewController.h"
 #import "AppDetailsViewController.h"
-#import "AppInfo.h"
+#import "BookDetailInfoTableViewController.h"
 @implementation MyNavigationViewController
 
 -(void) viewDidLoad
@@ -18,10 +18,18 @@
 }
 
 
--(void) pushAppDetailsViewController:(AppInfo*) appInfo animated:(BOOL)animated
+-(void) pushAppDetailsViewController:(id) appInfo animated:(BOOL)animated
 {
     [self pushViewControllerWithIdentifier:@"AppDetailsViewController" completion:^(UIViewController *viewController) {
-        [(AppDetailsViewController*)viewController setAppInfo:appInfo];
+        [(AppDetailsViewController*)viewController setAppInfo:(AppInfo*)appInfo];
+    } animated:YES];
+}
+
+-(void) pushBookDetailsViewController:(id) bookInfo animated:(BOOL)animated
+{
+
+    [self pushViewControllerWithIdentifier:@"BookDetailInfoTableViewController" completion:^(UIViewController *viewController) {
+        [(BookDetailInfoTableViewController*)viewController setData:bookInfo];
     } animated:YES];
 }
 @end

@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-@class AppInfo;
 @interface UINavigationController (MyNavigationViewController)
--(void) pushAppDetailsViewController:(AppInfo*) appInfo animated:(BOOL)animated;
+-(void) pushAppDetailsViewController:(id) appInfo animated:(BOOL)animated;
+-(void) pushBookDetailsViewController:(id) bookInfo animated:(BOOL)animated;
 @end
 @interface MyNavigationViewController : OEZNavigationViewController
 
