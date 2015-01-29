@@ -17,7 +17,7 @@
 
 - (void)setData:(id)data {
     [_logo setImage:[UIImage imageNamed:[(BookInfo *)data pic]]];
-    [_name setText:[data name]];
+    [_name setTitle:[data name] forState:UIControlStateNormal];
 }
 /*
 // Only override drawRect: if you perform custom drawing.

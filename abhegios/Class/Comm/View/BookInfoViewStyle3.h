@@ -10,6 +10,6 @@
 
 @interface BookInfoViewStyle3 : OEZNibView
 @property (weak, nonatomic) IBOutlet UIImageView *logo;
-@property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UIButton *name;
 - (void)setData:(id)data;
 @end

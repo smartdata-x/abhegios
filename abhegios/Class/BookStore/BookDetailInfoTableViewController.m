@@ -9,6 +9,7 @@
 #import "BookDetailInfoTableViewController.h"
 #import "BookDetailInfoTableViewCellStyle1.h"
 #import "BookDetailInfoTableViewCellStyle4.h"
+#import "BookDetailInfoTableViewCellStyle5.h"
 #import "GroupInfo.h"
 #import "BookDetailInfo.h"
 #import "BookReaderViewController.h"
@@ -64,10 +65,10 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.section) {
         case BookDetailInfoSectionHeaderCell:   return 132; break;
-        case BookDetailInfoSectionReadSave:     return 49; break;
+        //case BookDetailInfoSectionReadSave:     return 49; break;
         case BookDetailInfoSectionIntroduction: return 160; break;
         case BookDetailInfoSectionChapterInfo:  return 55; break;
-        case BookDetailInfoSectionTagInfo:      return 45; break;
+        case BookDetailInfoSectionTagInfo:      return 60; break;
         case BookDetailInfoSectionReadDownload: return 47; break;
         default:
             break;
@@ -99,6 +100,7 @@
             if (_tableViewData) [viewCell setData:_bookInfo];
             break;
             
+#if 0
         case BookDetailInfoSectionReadSave:
             {
                 viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDetailInfoTableViewCellStyle1"];
@@ -108,6 +110,7 @@
                 if (_tableViewData) [viewCell setData:_tableViewData];
             }
             break;
+#endif
             
         case BookDetailInfoSectionIntroduction:
             viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDetailInfoTableViewCellStyle2"];
@@ -127,8 +130,13 @@
             break;
             
         case BookDetailInfoSectionReadDownload:
-            viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDetailInfoTableViewCellStyle5"];
-            [viewCell setData:_tableViewData];
+            {
+                viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookDetailInfoTableViewCellStyle5"];
+                [viewCell setData:_tableViewData];
+                BookDetailInfoTableViewCellStyle5 *styleView = (BookDetailInfoTableViewCellStyle5 *)viewCell;
+                [styleView.freeRead.name addTarget:self action:@selector(gotoBookReader:) forControlEvents:UIControlEventTouchUpInside];
+                [styleView.download.name addTarget:self action:@selector(gotoBookShelf:) forControlEvents:UIControlEventTouchUpInside];
+            }
             break;
             
         default:

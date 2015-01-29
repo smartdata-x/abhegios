@@ -68,6 +68,8 @@
 		CB6A22271A7687AA0087546F /* bookshelf_test.json in Resources */ = {isa = PBXBuildFile; fileRef = CB6A22261A7687A90087546F /* bookshelf_test.json */; };
 		CB6A222A1A768CE80087546F /* BookChapterInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A22291A768CE80087546F /* BookChapterInfo.m */; };
 		CB6A222C1A768D3B0087546F /* bookchapter_test.json in Resources */ = {isa = PBXBuildFile; fileRef = CB6A222B1A768D3B0087546F /* bookchapter_test.json */; };
+		CBC05FB61A7A62DC00CC4008 /* BookInfoViewStyle4.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC05FB51A7A62DC00CC4008 /* BookInfoViewStyle4.m */; };
+		CBC05FB81A7A638200CC4008 /* BookInfoViewStyle4.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBC05FB71A7A638200CC4008 /* BookInfoViewStyle4.xib */; };
 		CBE0043F1A78FB20001A2F42 /* HttpBookAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE0043E1A78FB20001A2F42 /* HttpBookAPI.m */; };
 		EA103C671A7889F200FFF66E /* GameHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C651A7889F200FFF66E /* GameHomeViewController.m */; };
 		EA103C6A1A788A3B00FFF66E /* GameHomeTableViewCellStyle3.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C691A788A3B00FFF66E /* GameHomeTableViewCellStyle3.m */; };
@@ -269,6 +271,9 @@
 		CB6A22281A768CE80087546F /* BookChapterInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookChapterInfo.h; sourceTree = "<group>"; };
 		CB6A22291A768CE80087546F /* BookChapterInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookChapterInfo.m; sourceTree = "<group>"; };
 		CB6A222B1A768D3B0087546F /* bookchapter_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bookchapter_test.json; sourceTree = "<group>"; };
+		CBC05FB41A7A62DC00CC4008 /* BookInfoViewStyle4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookInfoViewStyle4.h; sourceTree = "<group>"; };
+		CBC05FB51A7A62DC00CC4008 /* BookInfoViewStyle4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookInfoViewStyle4.m; sourceTree = "<group>"; };
+		CBC05FB71A7A638200CC4008 /* BookInfoViewStyle4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookInfoViewStyle4.xib; sourceTree = SOURCE_ROOT; };
 		CBE0043D1A78FB20001A2F42 /* HttpBookAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpBookAPI.h; sourceTree = "<group>"; };
 		CBE0043E1A78FB20001A2F42 /* HttpBookAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpBookAPI.m; sourceTree = "<group>"; };
 		CBE004401A78FB5F001A2F42 /* BookAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookAPI.h; sourceTree = "<group>"; };
@@ -677,6 +682,7 @@
 				CB6A21E21A729F1E0087546F /* BookInfoViewStyle1.xib */,
 				CB6A21EF1A73C7430087546F /* BookInfoViewStyle2.xib */,
 				CB6A21FA1A73D77B0087546F /* BookInfoViewStyle3.xib */,
+				CBC05FB71A7A638200CC4008 /* BookInfoViewStyle4.xib */,
 				EA8C83301A731FFF00901CFC /* PageViewImageCell.xib */,
 				EA8C83321A7320B400901CFC /* PageViewImageCell1.xib */,
 				CB6A21E71A732F840087546F /* FavRateViewStyle.xib */,
@@ -844,6 +850,21 @@
 			name = BookShelf;
 			sourceTree = "<group>";
 		};
+		CBC05FB31A7A629100CC4008 /* BookInfoViews */ = {
+			isa = PBXGroup;
+			children = (
+				CB6A21DF1A729B050087546F /* BookInfoViewStyle1.h */,
+				CB6A21E01A729B050087546F /* BookInfoViewStyle1.m */,
+				CB6A21EC1A73C6840087546F /* BookInfoViewStyle2.h */,
+				CB6A21ED1A73C6840087546F /* BookInfoViewStyle2.m */,
+				CB6A21F71A73D6430087546F /* BookInfoViewStyle3.h */,
+				CB6A21F81A73D6430087546F /* BookInfoViewStyle3.m */,
+				CBC05FB41A7A62DC00CC4008 /* BookInfoViewStyle4.h */,
+				CBC05FB51A7A62DC00CC4008 /* BookInfoViewStyle4.m */,
+			);
+			name = BookInfoViews;
+			sourceTree = "<group>";
+		};
 		EA103C641A7889AC00FFF66E /* Game */ = {
 			isa = PBXGroup;
 			children = (
@@ -906,16 +927,11 @@
 		EA89882A1A72698300877E63 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CBC05FB31A7A629100CC4008 /* BookInfoViews */,
 				EA89882F1A726EAA00877E63 /* AppInfoViewStyle1.h */,
 				EA8988301A726EAA00877E63 /* AppInfoViewStyle1.m */,
 				EA89883B1A7285BB00877E63 /* AppInfoViewStyle3.h */,
 				EA89883C1A7285BB00877E63 /* AppInfoViewStyle3.m */,
-				CB6A21DF1A729B050087546F /* BookInfoViewStyle1.h */,
-				CB6A21E01A729B050087546F /* BookInfoViewStyle1.m */,
-				CB6A21EC1A73C6840087546F /* BookInfoViewStyle2.h */,
-				CB6A21ED1A73C6840087546F /* BookInfoViewStyle2.m */,
-				CB6A21F71A73D6430087546F /* BookInfoViewStyle3.h */,
-				CB6A21F81A73D6430087546F /* BookInfoViewStyle3.m */,
 				CB6A21E41A72B3B80087546F /* FavRateViewStyle.h */,
 				CB6A21E51A72B3B80087546F /* FavRateViewStyle.m */,
 				EA94767C1A7904E200172D6E /* TableViewHeader.h */,
@@ -1121,6 +1137,7 @@
 				EA8C83331A7320B400901CFC /* PageViewImageCell1.xib in Resources */,
 				EA7599931A7120CB0027FC8B /* uifounddata.plist in Resources */,
 				EA103C721A788C5600FFF66E /* GameHScrollViewCell.xib in Resources */,
+				CBC05FB81A7A638200CC4008 /* BookInfoViewStyle4.xib in Resources */,
 				EA75998E1A7120A50027FC8B /* uilogindata.plist in Resources */,
 				1AD64077DE8389AC54925C71 /* Info.plist in Resources */,
 				CB6A21FB1A73D77B0087546F /* BookInfoViewStyle3.xib in Resources */,
@@ -1179,6 +1196,7 @@
 				EA9486391A6DE09C003EE99B /* MainViewController.m in Sources */,
 				CB6A22071A73E43F0087546F /* BookDetailInfoTableViewCellStyle0.m in Sources */,
 				CB6A21CA1A6FFAEF0087546F /* BookInfo.m in Sources */,
+				CBC05FB61A7A62DC00CC4008 /* BookInfoViewStyle4.m in Sources */,
 				EABA1EC91A7679F200A76BD2 /* AppDetailsViewController.m in Sources */,
 				EA88BFAA1A748C2A004885A0 /* MusicInfo.m in Sources */,
 				EAA5DFE31A77D42E00CF9163 /* HttpOtherAPI.m in Sources */,
