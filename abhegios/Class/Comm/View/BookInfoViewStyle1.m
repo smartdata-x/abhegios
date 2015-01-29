@@ -18,24 +18,7 @@
 
 - (void)setData:(id)data {
     [_name setText:[data name]];
-    NSString *follows = [NSString stringWithFormat:@"%d关注", [(BookInfo *)data follow]];
-    [_summary setText:follows];
     [_logoButton.imageView setImageWithStrURL:[BaseInfoAdapter getPic:data]];
-}
-
-- (void)showAll {
-    [_name setHidden:NO];
-    [_summary setHidden:NO];
-}
-
-- (void)setDataWithFormat:(id)data Format:(NSInteger)format {
-    [self setData:data];
-    [self showAll];
-    switch (format) {
-        case BookInfoViewStyle1Format2: [_name setHidden:YES];
-        case BookInfoViewStyle1Format1: [_summary setHidden:YES];
-        default: break;
-    }
 }
 
 @end

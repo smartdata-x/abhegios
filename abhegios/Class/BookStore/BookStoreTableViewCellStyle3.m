@@ -9,6 +9,7 @@
 #import "BookStoreTableViewCellStyle3.h"
 #import "BookInfo.h"
 #import "BookInfoViewStyle1.h"
+#import "BookInfoViewStyle4.h"
 #import "GroupInfo.h"
 #import "UIImageView+AFNetworking.h"
 #import "BaseInfoAdapter.h"
@@ -17,14 +18,18 @@
 #define kBookItemWidth 108
 #define kBookCellHeight 153
 
+@interface BookStoreTableViewCellStyle3()
+{
+    NSInteger withoutSummary;
+}
+@end
+
 @implementation BookStoreTableViewCellStyle3
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self.scrollView setFrame:self.frame];
-    for (int i=0; i<kMaxBookItemView; i++) {
-        [self addViewItem];
-    }
+    withoutSummary = NO;
 }
 
 - (void)addViewItem {
@@ -43,6 +48,9 @@
 }
 
 - (void)setData:(id)data {
+    for (int i=0; i<kMaxBookItemView; i++) {
+        [self addViewItem];
+    }
     [super setData:data];
     GroupInfo *bookInfoGroup = data;
     NSUInteger count = [[bookInfoGroup entitys] count];
@@ -56,6 +64,11 @@
     for (; i < kMaxBookItemView; ++i) {
         [[[self subviews] objectAtIndex:i] setHidden:YES];
     }
+}
+
+- (void)setDataWithOutSummary:(id)data {
+    withoutSummary = YES;
+    [self setData:data];
 }
 
 - (IBAction)itemClickedAtIndex:(id)sender {
