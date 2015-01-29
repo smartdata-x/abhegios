@@ -12,6 +12,7 @@
 
 -(void) setData:(id) data
 {
-    //[_pic setImageWithStrURL:data];
+    [_pic setImageWithStrURL:data];
+    
 }
 @end
