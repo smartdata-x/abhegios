@@ -16,5 +16,5 @@
 @interface BookStoreTableViewCellStyle3 : OEZTableViewHScrollCell
 @property NSInteger cellStyle;
 @property (nonatomic, assign) id <BookStoreTableViewCellStyle3Delegate> delegate;
-- (void)setShowParameters:(NSInteger)style StartIndex:(NSInteger)startindex;
+- (void)setShowParameters:(NSInteger)style;
 @end

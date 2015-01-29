@@ -18,6 +18,9 @@
 #import "BookDirectoryTableViewController.h"
 #import <OEZCommSDK/OEZCommSDK.h>
 #import "AppAPIHelper.h"
+
+#define IS_SECTION(x) (indexPath.section == (x))
+
 @interface BookStoreViewController ()
 {
 }
@@ -57,7 +60,7 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    int count = [_tableViewData count] - 2; // 去掉最后两个无用的列表
+    NSInteger count = [_tableViewData count] - 2; // 去掉最后两个无用的列表
     count = count <= 0 ? 0 : count;
     return count;
 }
@@ -65,7 +68,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     GroupInfo *group = [_tableViewData objectAtIndex:section];
     if ([self isSingleLine:group]) {
-        int maxrows = [[group entitys] count];
+        NSInteger maxrows = [[group entitys] count];
         if ([group style] == BookStoreTableViewCellStyleFour) {
             return MIN(2, maxrows);
         }
@@ -118,25 +121,25 @@
     GroupInfo *group = [_tableViewData objectAtIndex:section];
     NSString *bookCellStyle = [NSString stringWithFormat:@"BookStoreTableViewCellStyle%ld", (long)[group style]];
     
-    if (section == 0) {
+    if (IS_SECTION(0)) {
         // 广告, style = 2
         viewCell = [tableView dequeueReusableCellWithIdentifier:bookCellStyle];
         [viewCell setData:group];
     }
-    else if (section == 1) {
+    else if (IS_SECTION(1)) {
         // 精品推荐, style = 3, 带黄色label(cellStyle = 4)
         viewCell = [tableView dequeueReusableCellWithIdentifier:bookCellStyle];
         BookStoreTableViewCellStyle3 *styleView = (BookStoreTableViewCellStyle3 *)viewCell;
         styleView.delegate = self;
-        [styleView setShowParameters:4 StartIndex:0];
+        [styleView setShowParameters:4];
         [viewCell setData:[group entitys]];
     }
-    else if (section == 2) {
+    else if (IS_SECTION(2)) {
         // 热门推荐
         viewCell = [tableView dequeueReusableCellWithIdentifier:bookCellStyle];
         [viewCell setData:[[group entitys] objectAtIndex:indexPath.row]];
     }
-    else if (section == 3 || section == 4) {
+    else if (IS_SECTION(3) || IS_SECTION(4)) {
         // 男生原创和女生原创
         if (row == 0) {
             // 大横屏
@@ -146,9 +149,11 @@
         else {
             viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookStoreTableViewCellStyle3"];
             BookStoreTableViewCellStyle3 *styleView = (BookStoreTableViewCellStyle3 *)viewCell;
-            [styleView setShowParameters:1 StartIndex:1];
+            [styleView setShowParameters:1];
             styleView.delegate = self;
-            [viewCell setData:[group entitys]];
+            // 只从第二个开始显示
+            NSArray *bookArray = [[NSArray alloc] initWithObjects:[[group entitys] objectAtIndex:1], [[group entitys] objectAtIndex:2], [[group entitys] objectAtIndex:3], nil];
+            [viewCell setData:bookArray];
         }
     }
     return viewCell;

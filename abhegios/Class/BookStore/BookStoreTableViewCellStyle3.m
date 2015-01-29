@@ -21,16 +21,12 @@
 #define kBookCellHeight 153
 
 @interface BookStoreTableViewCellStyle3()
-{
-    NSInteger startShowIndex;
-}
 @end
 
 @implementation BookStoreTableViewCellStyle3
 
-- (void)setShowParameters:(NSInteger)style StartIndex:(NSInteger)startindex {
+- (void)setShowParameters:(NSInteger)style {
     _cellStyle = style;
-    startShowIndex = startindex;
 }
 
 - (NSInteger) numberColumnCountHScrollView:(OEZHScrollView *)hScrollView {
@@ -48,7 +44,7 @@
         if (cell == nil) {
             cell = [[BookHScrollViewCell4 alloc] initWithReuseIdentifier:identifier];
         }
-        [cell setData:[self.data objectAtIndex:columnIndex + startShowIndex]];
+        [cell setData:[self.data objectAtIndex:columnIndex]];
         return cell;
     }
     else {
@@ -57,7 +53,7 @@
         if (cell == nil) {
             cell = [[BookHScrollViewCell1 alloc] initWithReuseIdentifier:identifier];
         }
-        [cell setData:[self.data objectAtIndex:columnIndex + startShowIndex]];
+        [cell setData:[self.data objectAtIndex:columnIndex]];
         return cell;
     }
     return nil;

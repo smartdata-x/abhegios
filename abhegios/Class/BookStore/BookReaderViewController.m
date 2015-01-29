@@ -17,6 +17,7 @@
     BookInfo *_bookInfo;
     NSArray *_bookChapterGroup;
     BOOL _continueReading;
+    BOOL _fullScreen;
     CGFloat _fontSize;
 }
 @property NSMutableArray *chapterGroup;
@@ -36,6 +37,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initView];
+    _fullScreen = YES;
     
     // 左翻页
     UISwipeGestureRecognizer *nextGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(doNext:)];
@@ -100,6 +102,25 @@
     else {
         [self nextChapter];
     }
+    
+    [self updateFullScreen];
+}
+
+- (void)updateFullScreen {
+    [[UIApplication sharedApplication] setStatusBarHidden:_fullScreen withAnimation:YES];
+    [self.navigationController.navigationBar setHidden:_fullScreen];
+    
+    float navHeight = 65;
+    CGRect frame = [self.view frame];
+    if (_fullScreen) {
+        frame.origin.y -= navHeight;
+        frame.size.height += navHeight;
+    }
+    else {
+        frame.origin.y += navHeight;
+        frame.size.height -= navHeight;
+    }
+    [self.view setFrame:frame];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
