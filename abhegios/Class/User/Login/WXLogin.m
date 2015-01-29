@@ -5,13 +5,15 @@
 
 #import "WXLogin.h"
 #import "WXApi.h"
-
+#import "HTTPReqeust.h"
+#define kWX_OPEN_URL  @"https://api.weixin.qq.com/sns"
+#define kWXAPP_SECRET @"cc36f47b33a193a11a4cc942464dca67"
 @interface WXLogin()<WXApiDelegate>
 
 @end
 @implementation WXLogin
 {
-
+    HTTPReqeust         *_reqeust;
 }
 
 
@@ -64,9 +66,32 @@
 
 }
 
+-(void) reqeust:(id)reqeust didComplete:(id)data
+{
+    if (reqeust == _reqeust) {
+        if ([data objectForKey:@"access_token"] != nil  ) {
+            [self getUserInfo:[data objectForKey:@"access_token"] openId:[data objectForKey:@"openid"]];
+        }
+        NSLog(@"%@",data);
+    }
+    else
+        [super reqeust:reqeust didComplete:data];
+}
+
 -(void) getAccess_token:(NSString*) code
 {
+    NSString *url =[NSString stringWithFormat:@"%@/oauth2/access_token?appid=%@&secret=%@&code=%@&grant_type=authorization_code"
+                    ,kWX_OPEN_URL,kWXAppID,kWXAPP_SECRET,code];
+    _reqeust = [[HTTPReqeust alloc] init];
+    [_reqeust requestJson:url delegate:self processBlock:nil];
+}
 
+-(void) getUserInfo:(NSString*) token openId:(NSString*) openId
+{
+    NSString *url = [NSString stringWithFormat:@"%@/userinfo?access_token=%@&openid=%@",kWX_OPEN_URL,token,openId];
+    _reqeust = [[HTTPReqeust alloc] init];
+     [_reqeust requestJson:url delegate:self processBlock:nil];
+    
 }
 
 -(BOOL) handleOpenURL:(NSURL *)url

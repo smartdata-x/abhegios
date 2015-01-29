@@ -9,7 +9,6 @@
 @interface UserInfo : OEZBaseEntity
 @property NSInteger uid;
 @property NSInteger source;
-@property (nonatomic, retain) NSString *pic;
 @property (nonatomic, retain) NSString *address;
 @property (nonatomic, retain) NSString *nickname;
 @property (nonatomic, retain) NSString *head;

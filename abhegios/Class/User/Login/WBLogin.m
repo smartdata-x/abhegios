@@ -100,6 +100,7 @@
 
 -(void) getUserInfo
 {
+    [self didStart];
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     [dict setObject:kWeiboAppID forKey:@"source"];
     [dict setObject:_authorizeResponse.accessToken forKey:@"access_token"];
