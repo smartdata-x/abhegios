@@ -112,40 +112,50 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    GroupInfo *group = [_tableViewData objectAtIndex:indexPath.section];
     OEZTableViewCell *viewCell = nil;
+    NSInteger section = indexPath.section;
+    NSInteger row = indexPath.row;
+    GroupInfo *group = [_tableViewData objectAtIndex:section];
     NSString *bookCellStyle = [NSString stringWithFormat:@"BookStoreTableViewCellStyle%ld", (long)[group style]];
-    if ([self isSingleLine:group]) {
-        if ([group style] == 4) {
-            if (indexPath.row == 0) {
-                viewCell = [tableView dequeueReusableCellWithIdentifier:bookCellStyle];
-                [viewCell setData:group];
-            }
-            else {
-                viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookStoreTableViewCellStyle3"];
-                [viewCell setData:group];
-                BookStoreTableViewCellStyle3 *style = (BookStoreTableViewCellStyle3 *)viewCell;
-                style.delegate = self;
-            }
-        }
-        else {
-            viewCell = [tableView dequeueReusableCellWithIdentifier:bookCellStyle];
-            [viewCell setData:group];
-        }
+    
+    if (section == 0) {
+        // 广告, style = 2
+        viewCell = [tableView dequeueReusableCellWithIdentifier:bookCellStyle];
+        [viewCell setData:group];
     }
-    else {
+    else if (section == 1) {
+        // 精品推荐, style = 3, 带黄色label(cellStyle = 4)
+        viewCell = [tableView dequeueReusableCellWithIdentifier:bookCellStyle];
+        BookStoreTableViewCellStyle3 *styleView = (BookStoreTableViewCellStyle3 *)viewCell;
+        styleView.delegate = self;
+        [styleView setShowParameters:4 StartIndex:0];
+        [viewCell setData:[group entitys]];
+    }
+    else if (section == 2) {
+        // 热门推荐
         viewCell = [tableView dequeueReusableCellWithIdentifier:bookCellStyle];
         [viewCell setData:[[group entitys] objectAtIndex:indexPath.row]];
     }
-    if ([group style] == 3) {
-        BookStoreTableViewCellStyle3 *style = (BookStoreTableViewCellStyle3 *)viewCell;
-        style.delegate = self;
+    else if (section == 3 || section == 4) {
+        // 男生原创和女生原创
+        if (row == 0) {
+            // 大横屏
+            viewCell = [tableView dequeueReusableCellWithIdentifier:bookCellStyle];
+            [viewCell setData:group];
+        }
+        else {
+            viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookStoreTableViewCellStyle3"];
+            BookStoreTableViewCellStyle3 *styleView = (BookStoreTableViewCellStyle3 *)viewCell;
+            [styleView setShowParameters:1 StartIndex:1];
+            styleView.delegate = self;
+            [viewCell setData:[group entitys]];
+        }
     }
     return viewCell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    int section = indexPath.section;
+    NSInteger section = indexPath.section;
     if (section == 0) {
     }
     else if (section == 1) {

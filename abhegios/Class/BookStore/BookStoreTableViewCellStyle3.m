@@ -13,6 +13,8 @@
 #import "GroupInfo.h"
 #import "UIImageView+AFNetworking.h"
 #import "BaseInfoAdapter.h"
+#import "BookHScrollViewCell1.h"
+#import "BookHScrollViewCell4.h"
 
 #define kMaxBookItemView 3
 #define kBookItemWidth 108
@@ -20,55 +22,53 @@
 
 @interface BookStoreTableViewCellStyle3()
 {
-    NSInteger withoutSummary;
+    NSInteger startShowIndex;
 }
 @end
 
 @implementation BookStoreTableViewCellStyle3
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    [self.scrollView setFrame:self.frame];
-    withoutSummary = NO;
+- (void)setShowParameters:(NSInteger)style StartIndex:(NSInteger)startindex {
+    _cellStyle = style;
+    startShowIndex = startindex;
 }
 
-- (void)addViewItem {
-    CGFloat gap = (mainScreenWidth - kMaxBookItemView * 108) / 2;
-    gap = gap > 0.0f ? gap : 0.0f;
-    NSUInteger existCount = [[self subviews] count];
-    CGFloat x = existCount * kBookItemWidth;
-    BookInfoViewStyle1 *viewItem = [BookInfoViewStyle1 loadFromNib];
-    CGRect rect = [viewItem frame];
-    rect.origin.x = x + gap * (existCount);
-    [viewItem setFrame:rect];
-    [viewItem setTag:[[self subviews] count]];
-    [viewItem.logoButton setTag:[[self subviews] count]];
-    [viewItem.logoButton addTarget:self action:@selector(itemClickedAtIndex:) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:viewItem];
+- (NSInteger) numberColumnCountHScrollView:(OEZHScrollView *)hScrollView {
+    return MAX(3, [self.data count]);
 }
 
-- (void)setData:(id)data {
-    for (int i=0; i<kMaxBookItemView; i++) {
-        [self addViewItem];
-    }
-    [super setData:data];
-    GroupInfo *bookInfoGroup = data;
-    NSUInteger count = [[bookInfoGroup entitys] count];
-    count = count > kMaxBookItemView ? kMaxBookItemView : count;
-    [self setContentWidth:kBookItemWidth * count];
-    NSUInteger i = 0;
-    for (; i < count; ++i)
-    {
-        [[[self subviews] objectAtIndex:i] setData:[[bookInfoGroup entitys] objectAtIndex:i]];
-    }
-    for (; i < kMaxBookItemView; ++i) {
-        [[[self subviews] objectAtIndex:i] setHidden:YES];
-    }
+- (CGFloat)hScrollView:(OEZHScrollView *)hScrollView widthForColumnAtIndex:(NSInteger)columnIndex {
+    return kMainScreenWidth/3;
 }
 
-- (void)setDataWithOutSummary:(id)data {
-    withoutSummary = YES;
-    [self setData:data];
+- (OEZHScrollViewCell *)hScrollView:(OEZHScrollView *)hScrollView cellForColumnAtIndex:(NSInteger)columnIndex {
+    if (_cellStyle == 4) {
+        static NSString *identifier = @"BookHScrollViewCell4";
+        BookHScrollViewCell4 *cell = [hScrollView dequeueReusableCellWithIdentifier:identifier];
+        if (cell == nil) {
+            cell = [[BookHScrollViewCell4 alloc] initWithReuseIdentifier:identifier];
+        }
+        [cell setData:[self.data objectAtIndex:columnIndex + startShowIndex]];
+        return cell;
+    }
+    else {
+        static NSString *identifier = @"BookHScrollViewCell1";
+        BookHScrollViewCell1 *cell = [hScrollView dequeueReusableCellWithIdentifier:identifier];
+        if (cell == nil) {
+            cell = [[BookHScrollViewCell1 alloc] initWithReuseIdentifier:identifier];
+        }
+        [cell setData:[self.data objectAtIndex:columnIndex + startShowIndex]];
+        return cell;
+    }
+    return nil;
+}
+
+- (void)hScrollView:(OEZHScrollView *)pageView didSelectColumnAtIndex:(NSInteger)columnIndex {
+    [self didSelectRowColumn:columnIndex];
+    if ([_delegate respondsToSelector:@selector(cellItemClickedAtIndex:)]) {
+        //UIButton *btn = (UIButton *)sender;
+        [_delegate cellItemClickedAtIndex:columnIndex];
+    }
 }
 
 - (IBAction)itemClickedAtIndex:(id)sender {

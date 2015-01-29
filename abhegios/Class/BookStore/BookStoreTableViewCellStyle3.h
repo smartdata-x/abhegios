@@ -13,10 +13,8 @@
 - (void)cellItemClickedAtIndex:(NSInteger)index;
 @end
 
-@interface BookItemView : UIView
-@end
-
-@interface BookStoreTableViewCellStyle3 : OEZHScrollTableViewCell
+@interface BookStoreTableViewCellStyle3 : OEZTableViewHScrollCell
+@property NSInteger cellStyle;
 @property (nonatomic, assign) id <BookStoreTableViewCellStyle3Delegate> delegate;
-- (void)setDataWithOutSummary:(id)data;
+- (void)setShowParameters:(NSInteger)style StartIndex:(NSInteger)startindex;
 @end
