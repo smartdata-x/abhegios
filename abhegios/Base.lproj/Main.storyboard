@@ -655,11 +655,8 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eou-S0-13F" id="K0d-jZ-uAE">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOc-GF-QgG">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOc-GF-QgG">
                                             <rect key="frame" x="10" y="5" width="300" height="150"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="150" id="pDo-pz-uTN"/>
-                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -667,6 +664,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="cOc-GF-QgG" firstAttribute="leading" secondItem="K0d-jZ-uAE" secondAttribute="leadingMargin" constant="10" id="R0f-DK-KBt"/>
+                                        <constraint firstAttribute="centerY" secondItem="cOc-GF-QgG" secondAttribute="centerY" id="prg-8L-9zy"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="cOc-GF-QgG" secondAttribute="trailing" constant="10" id="xgJ-Wy-dah"/>
                                     </constraints>
                                 </tableViewCellContentView>

@@ -8,6 +8,7 @@
 
 #import "BookDetailInfoTableViewController.h"
 #import "BookDetailInfoTableViewCellStyle1.h"
+#import "BookDetailInfoTableViewCellStyle2.h"
 #import "BookDetailInfoTableViewCellStyle4.h"
 #import "BookDetailInfoTableViewCellStyle5.h"
 #import "GroupInfo.h"
@@ -40,6 +41,16 @@
     _bookInfo = data;
 }
 
+- (float)heightForSummary {
+    
+    BookDetailPage *detailPage = (BookDetailPage *)_tableViewData;
+    NSString *introduction = [[detailPage summary] summary];
+    CGSize size = CGSizeMake(kMainScreenWidth - 20, MAXFLOAT);
+    NSDictionary *attribute = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:17.0f], NSFontAttributeName, nil];
+    CGSize labelSize = [introduction boundingRectWithSize:size options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size;
+    return labelSize.height + 20;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -48,7 +59,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == BookDetailInfoSectionTagInfo) {
-        int labelCount = [[_tableViewData label] count];
+        NSInteger labelCount = [[_tableViewData label] count];
         int rows = (int)ceilf((float)labelCount / 3.0);
         return rows;
     }
@@ -63,10 +74,16 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    float height = 0;
+    if (indexPath.section == BookDetailInfoSectionIntroduction) {
+        height = [self heightForSummary];
+    }
+    
     switch (indexPath.section) {
         case BookDetailInfoSectionHeaderCell:   return 132; break;
         //case BookDetailInfoSectionReadSave:     return 49; break;
-        case BookDetailInfoSectionIntroduction: return 160; break;
+        case BookDetailInfoSectionIntroduction: return [self heightForSummary]; break;
         case BookDetailInfoSectionChapterInfo:  return 55; break;
         case BookDetailInfoSectionTagInfo:      return 60; break;
         case BookDetailInfoSectionReadDownload: return 47; break;
