@@ -13,6 +13,9 @@
 -(void) thirdLogin:(ThirdLoginInfo *)loginInfo delegate:(id<ReqeustDelegate>)delegate
 {
     static NSString *path = @"/user/1/thirdlogin.fcgi";
-    [self request:path parameter:[loginInfo toDictionary:NO] delegate:delegate entityClass:[UserInfo class]];
+    NSLog(@"%@",loginInfo);
+    [self request:path parameter:[loginInfo toDictionary:NO] delegate:delegate processBlock:^id(id data) {
+        return [UserInfo initWithDictionary:[data objectForKey:@"userinfo"]];
+    }];
 }
 @end

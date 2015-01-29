@@ -65,6 +65,7 @@
     if (self) {
         _loginInfo = [[ThirdLoginInfo alloc] init];
         [_loginInfo setSource:source];
+        [_loginInfo setMachine:2];
         [[HandleOpenURLHelper shared] addHandleDelegate:self];
     }
     return self;

@@ -61,11 +61,11 @@
 }
 
 - (void)login {
-//    if (![TencentOAuth iphoneQQInstalled]) {
-//        [self didStrError:@"您手机还没有安装QQ！"];
-//    }
-//    else
-        [_tencentOAuth authorize:_permissions inSafari:YES];
+    if (![TencentOAuth iphoneQQInstalled]) {
+        [self didStrError:@"您手机还没有安装QQ！"];
+    }
+    else
+        [_tencentOAuth authorize:_permissions inSafari:NO];
 }
 
 -(void)tencentDidNotLogin:(BOOL)cancelled
@@ -84,13 +84,14 @@
 
 - (void)tencentDidLogin
 {
-    [self didStart];
+   
 
     if (  ! ( ![_tencentOAuth.accessToken isEmpty] ) )
         [self didStrError:LOGIN_ERROR];
     else
     {
         [_loginInfo setSession:_tencentOAuth.openId];
+         [self didStart];
         [self getQQUserInfo];
     }
 }
