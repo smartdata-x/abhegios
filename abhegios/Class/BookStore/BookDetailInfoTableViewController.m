@@ -169,6 +169,9 @@
 }
 
 - (IBAction)gotoBookShelf:(id)sender {
+    // 保存到服务端
+    [[[AppAPIHelper shared] getBookAPI] getBookWanted:_bookInfo.id delegate:self];
+    
     [self.navigationController pushViewControllerWithIdentifier:@"BookShelfViewController" completion:^(UIViewController *viewController) {
     } animated:YES];
 }
