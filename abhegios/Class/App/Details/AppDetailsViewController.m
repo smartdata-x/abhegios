@@ -98,10 +98,13 @@ typedef NS_ENUM(NSInteger, AppDetailsTableViewCellStyle) {
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSInteger row = [indexPath row];
-    if ([indexPath isKindOfClass:[OEZTableViewIndexPath class]]) {
-        row =  [(OEZTableViewIndexPath*)indexPath column];
+    if( row  == 2)
+    {
+        if ([indexPath isKindOfClass:[OEZTableViewIndexPath class]]) {
+            row =  [(OEZTableViewIndexPath*)indexPath column];
+        }
+        [self.navigationController pushAppDetailsViewController:[[_tableViewData like] objectAtIndex:row ] animated:YES ];
     }
-    [self.navigationController pushAppDetailsViewController:[[_tableViewData like] objectAtIndex:row ] animated:YES ];
 }
 
 @end
