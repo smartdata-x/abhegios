@@ -254,7 +254,7 @@
     float readerFrameHeight = CGRectGetHeight(_readerView.frame);
     float maxContentHeight = readerFrameHeight - hPadding;
     int lines = maxContentHeight / lineHeight;
-    _pageHeight = lines * lineHeight;
+    _pageHeight = lines * lineHeight + hPadding;
     readerFrameHeight = _pageHeight + hPadding;
     
     NSMutableParagraphStyle *parastyle = [[NSMutableParagraphStyle alloc] init];

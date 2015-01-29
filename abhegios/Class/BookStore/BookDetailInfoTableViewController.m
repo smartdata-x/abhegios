@@ -39,6 +39,7 @@
 
 - (void)setData:(id)data {
     _bookInfo = data;
+    [self.navigationItem setTitle:[_bookInfo name]];
 }
 
 - (float)heightForSummary {
