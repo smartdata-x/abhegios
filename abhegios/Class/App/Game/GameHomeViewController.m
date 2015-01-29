@@ -10,7 +10,6 @@
 #import "GameHomeInfo.h"
 #import "AppAPIHelper.h"
 #import "GroupInfo.h"
-#import "MyIndexPath.h"
 #define kMaxRowNum 4
 #define kEmblemSection 0
 @interface GameHomeViewController ()
@@ -141,10 +140,11 @@
     }
     else
     {
-        if( [indexPath isKindOfClass:[MyIndexPath class]])
+        if( [indexPath isKindOfClass:[OEZTableViewIndexPath class]])
         {
             GroupInfo* groupInfo = [self getGroupInfo:[indexPath section]];
-            NSInteger row =  indexPath.row + [(MyIndexPath*)indexPath section1] * kMaxRowNum;
+            OEZTableViewIndexPath *oezIndexPath = (OEZTableViewIndexPath*)indexPath ;
+            NSInteger row =  [oezIndexPath column] + [oezIndexPath row] * kMaxRowNum;
             [self.navigationController pushAppDetailsViewController:[[groupInfo entitys] objectAtIndex:row] animated:YES ];
         }
     }

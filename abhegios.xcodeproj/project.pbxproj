@@ -75,10 +75,7 @@
 		EA103C701A788C3600FFF66E /* GameHScrollViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C6F1A788C3600FFF66E /* GameHScrollViewCell.m */; };
 		EA103C721A788C5600FFF66E /* GameHScrollViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA103C711A788C5600FFF66E /* GameHScrollViewCell.xib */; };
 		EA103C8F1A78B53600FFF66E /* BaseInfoAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C8E1A78B53600FFF66E /* BaseInfoAdapter.m */; };
-		EA103C981A78DFEF00FFF66E /* MyIndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C971A78DFEF00FFF66E /* MyIndexPath.m */; };
-		EA13DDCE1A6F8A35004AB7E6 /* NSString+NSStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDCD1A6F8A35004AB7E6 /* NSString+NSStringCategory.m */; };
 		EA13DDD11A6F8D3A004AB7E6 /* AppDetailsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDCF1A6F8D3A004AB7E6 /* AppDetailsInfo.m */; };
-		EA13DDDC1A6F961E004AB7E6 /* MyNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDDB1A6F961E004AB7E6 /* MyNavigationViewController.m */; };
 		EA13DDDF1A6FA0D0004AB7E6 /* AppTableViewCellStyle3.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13DDDE1A6FA0D0004AB7E6 /* AppTableViewCellStyle3.m */; };
 		EA3D07721A6CD88A00189765 /* LoginTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3D076F1A6CD88A00189765 /* LoginTableViewCell.m */; };
 		EA3D07731A6CD88A00189765 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3D07711A6CD88A00189765 /* LoginViewController.m */; };
@@ -128,6 +125,8 @@
 		EA9C2FFC1A7785BD002EFF35 /* HttpUserAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9C2FFB1A7785BD002EFF35 /* HttpUserAPI.m */; };
 		EA9C2FFF1A778608002EFF35 /* HttpApplyAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9C2FFE1A778608002EFF35 /* HttpApplyAPI.m */; };
 		EA9C30021A778640002EFF35 /* HttpAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9C30011A778640002EFF35 /* HttpAPI.m */; };
+		EA9C5D4F1A79BBC800B7AACA /* MyNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9C5D4C1A79BBC800B7AACA /* MyNavigationViewController.m */; };
+		EA9C5D501A79BBC800B7AACA /* NSString+NSStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9C5D4E1A79BBC800B7AACA /* NSString+NSStringCategory.m */; };
 		EAA454441A70DEAF0057A770 /* OEZCommSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA454431A70DEAF0057A770 /* OEZCommSDK.framework */; };
 		EAA5DFE31A77D42E00CF9163 /* HttpOtherAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA5DFE21A77D42E00CF9163 /* HttpOtherAPI.m */; };
 		EAA5DFE61A77DE7200CF9163 /* RefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA5DFE51A77DE7200CF9163 /* RefreshTableViewController.m */; };
@@ -284,13 +283,8 @@
 		EA103C711A788C5600FFF66E /* GameHScrollViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameHScrollViewCell.xib; sourceTree = SOURCE_ROOT; };
 		EA103C8D1A78B53600FFF66E /* BaseInfoAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseInfoAdapter.h; sourceTree = "<group>"; };
 		EA103C8E1A78B53600FFF66E /* BaseInfoAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseInfoAdapter.m; sourceTree = "<group>"; };
-		EA103C961A78DFEF00FFF66E /* MyIndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyIndexPath.h; sourceTree = "<group>"; };
-		EA103C971A78DFEF00FFF66E /* MyIndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyIndexPath.m; sourceTree = "<group>"; };
-		EA13DDCD1A6F8A35004AB7E6 /* NSString+NSStringCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringCategory.m"; sourceTree = "<group>"; };
 		EA13DDCF1A6F8D3A004AB7E6 /* AppDetailsInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDetailsInfo.m; sourceTree = "<group>"; };
 		EA13DDD01A6F8D3A004AB7E6 /* AppDetailsInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDetailsInfo.h; sourceTree = "<group>"; };
-		EA13DDDA1A6F961E004AB7E6 /* MyNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNavigationViewController.h; sourceTree = "<group>"; };
-		EA13DDDB1A6F961E004AB7E6 /* MyNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNavigationViewController.m; sourceTree = "<group>"; };
 		EA13DDDD1A6FA0D0004AB7E6 /* AppTableViewCellStyle3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTableViewCellStyle3.h; sourceTree = "<group>"; };
 		EA13DDDE1A6FA0D0004AB7E6 /* AppTableViewCellStyle3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTableViewCellStyle3.m; sourceTree = "<group>"; };
 		EA3D076E1A6CD88A00189765 /* LoginTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginTableViewCell.h; sourceTree = "<group>"; };
@@ -366,6 +360,10 @@
 		EA9C2FFE1A778608002EFF35 /* HttpApplyAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpApplyAPI.m; sourceTree = "<group>"; };
 		EA9C30001A778640002EFF35 /* HttpAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpAPI.h; sourceTree = "<group>"; };
 		EA9C30011A778640002EFF35 /* HttpAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpAPI.m; sourceTree = "<group>"; };
+		EA9C5D4B1A79BBC800B7AACA /* MyNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNavigationViewController.h; sourceTree = "<group>"; };
+		EA9C5D4C1A79BBC800B7AACA /* MyNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNavigationViewController.m; sourceTree = "<group>"; };
+		EA9C5D4D1A79BBC800B7AACA /* NSString+NSStringCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSStringCategory.h"; sourceTree = "<group>"; };
+		EA9C5D4E1A79BBC800B7AACA /* NSString+NSStringCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringCategory.m"; sourceTree = "<group>"; };
 		EAA454431A70DEAF0057A770 /* OEZCommSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OEZCommSDK.framework; sourceTree = "<group>"; };
 		EAA5DFE01A77D3F300CF9163 /* OtherAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherAPI.h; sourceTree = "<group>"; };
 		EAA5DFE11A77D42E00CF9163 /* HttpOtherAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpOtherAPI.h; sourceTree = "<group>"; };
@@ -408,7 +406,6 @@
 		EABA1EE01A76844000A76BD2 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		EABA1EE11A76844000A76BD2 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		EABA1EE21A76844000A76BD2 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
-		EADD5B571A6F7A4700CA6633 /* NSString+NSStringCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSStringCategory.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -562,9 +559,9 @@
 		1AD647F0115B5FF608FC515B /* Comm */ = {
 			isa = PBXGroup;
 			children = (
+				EA9C5D4A1A79BBC800B7AACA /* Category */,
 				EABA1ECD1A76844000A76BD2 /* AFNetworking */,
 				EA89882A1A72698300877E63 /* View */,
-				EADD5B451A6F702600CA6633 /* Category */,
 				EA7C910C1A77B6AF00782B8D /* HTTPReqeust.h */,
 				EA7C910D1A77B6AF00782B8D /* HTTPReqeust.m */,
 				EA7C910F1A77B72E00782B8D /* ReqeustDelegate.h */,
@@ -973,6 +970,17 @@
 			path = APIRequest;
 			sourceTree = "<group>";
 		};
+		EA9C5D4A1A79BBC800B7AACA /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				EA9C5D4B1A79BBC800B7AACA /* MyNavigationViewController.h */,
+				EA9C5D4C1A79BBC800B7AACA /* MyNavigationViewController.m */,
+				EA9C5D4D1A79BBC800B7AACA /* NSString+NSStringCategory.h */,
+				EA9C5D4E1A79BBC800B7AACA /* NSString+NSStringCategory.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		EAA454421A70DEAF0057A770 /* OEZCommSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -1031,19 +1039,6 @@
 				EABA1EE21A76844000A76BD2 /* UIImageView+AFNetworking.h */,
 			);
 			path = AFNetworking;
-			sourceTree = "<group>";
-		};
-		EADD5B451A6F702600CA6633 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				EA13DDCD1A6F8A35004AB7E6 /* NSString+NSStringCategory.m */,
-				EADD5B571A6F7A4700CA6633 /* NSString+NSStringCategory.h */,
-				EA13DDDA1A6F961E004AB7E6 /* MyNavigationViewController.h */,
-				EA13DDDB1A6F961E004AB7E6 /* MyNavigationViewController.m */,
-				EA103C961A78DFEF00FFF66E /* MyIndexPath.h */,
-				EA103C971A78DFEF00FFF66E /* MyIndexPath.m */,
-			);
-			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1150,6 +1145,7 @@
 				CBE0043F1A78FB20001A2F42 /* HttpBookAPI.m in Sources */,
 				EA7C910E1A77B6AF00782B8D /* HTTPReqeust.m in Sources */,
 				EABA1EB61A76705E00A76BD2 /* GameHomeInfo.m in Sources */,
+				EA9C5D4F1A79BBC800B7AACA /* MyNavigationViewController.m in Sources */,
 				CB6A21DB1A7155750087546F /* BookShelfViewController.m in Sources */,
 				CB6A21DE1A7268EA0087546F /* BookReaderViewController.m in Sources */,
 				EABA1EE91A76844000A76BD2 /* AFURLConnectionOperation.m in Sources */,
@@ -1184,11 +1180,9 @@
 				CB6A22071A73E43F0087546F /* BookDetailInfoTableViewCellStyle0.m in Sources */,
 				CB6A21CA1A6FFAEF0087546F /* BookInfo.m in Sources */,
 				EABA1EC91A7679F200A76BD2 /* AppDetailsViewController.m in Sources */,
-				EA13DDDC1A6F961E004AB7E6 /* MyNavigationViewController.m in Sources */,
 				EA88BFAA1A748C2A004885A0 /* MusicInfo.m in Sources */,
 				EAA5DFE31A77D42E00CF9163 /* HttpOtherAPI.m in Sources */,
 				EA88BFB41A74CB76004885A0 /* RecommendViewController.m in Sources */,
-				EA13DDCE1A6F8A35004AB7E6 /* NSString+NSStringCategory.m in Sources */,
 				1AD64903B17F5D12DC09D1BB /* ThirdLoginInfo.m in Sources */,
 				EA9C2FEF1A776C0A002EFF35 /* AppAPIHelper.m in Sources */,
 				CB6A22041A73DF160087546F /* BookDetailInfoTableViewCellStyle5.m in Sources */,
@@ -1220,7 +1214,6 @@
 				CB6A22101A74B4C10087546F /* BookDirectoryTableViewController.m in Sources */,
 				EABA1EE71A76844000A76BD2 /* AFNetworkReachabilityManager.m in Sources */,
 				EABA1ECA1A7679F200A76BD2 /* AppDetailsTableViewCellStyle4.m in Sources */,
-				EA103C981A78DFEF00FFF66E /* MyIndexPath.m in Sources */,
 				EA103C701A788C3600FFF66E /* GameHScrollViewCell.m in Sources */,
 				1AD6419EC3E465BEDDED654B /* WXLogin.m in Sources */,
 				EABA1EE41A76844000A76BD2 /* AFImageRequestOperation.m in Sources */,
@@ -1229,6 +1222,7 @@
 				CB6A22191A74C5180087546F /* BookDirectoryTableViewCellStyle1.m in Sources */,
 				1AD64D9C70E0A1325B3F2A09 /* AppHomeViewController.m in Sources */,
 				CB6A21E11A729B050087546F /* BookInfoViewStyle1.m in Sources */,
+				EA9C5D501A79BBC800B7AACA /* NSString+NSStringCategory.m in Sources */,
 				CB6A22231A765F9C0087546F /* BookFileManager.m in Sources */,
 				CB6A21D11A711CD50087546F /* BookStoreTableViewCellStyle2.m in Sources */,
 				CB6A21EE1A73C6840087546F /* BookInfoViewStyle2.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "RefreshTableViewController.h"
+@class AppInfo;
 @interface AppDetailsViewController : RefreshTableViewController
-@property NSInteger  appID;
+@property AppInfo  *appInfo;
 @end

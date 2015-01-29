@@ -28,19 +28,16 @@ typedef NS_ENUM(NSInteger, AppDetailsTableViewCellStyle) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    [self setTitle:[_appInfo name]];
 }
 
 -(void)  didRequest
 {
-    [[[AppAPIHelper shared] getApplyAPI] getAppDetails:_appID delegate:self];
+    [[[AppAPIHelper shared] getApplyAPI] getAppDetails:[_appInfo id] delegate:self];
 }
 
 
--(void) reqeust:(id)reqeust didComplete:(id)data
-{
-    [super reqeust:reqeust didComplete:data];
-    [self setTitle:[[data intro] name]];
-}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -100,7 +97,11 @@ typedef NS_ENUM(NSInteger, AppDetailsTableViewCellStyle) {
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self.navigationController pushAppDetailsViewController:[[_tableViewData like] objectAtIndex:[indexPath row] ] animated:YES ];
+    NSInteger row = [indexPath row];
+    if ([indexPath isKindOfClass:[OEZTableViewIndexPath class]]) {
+        row =  [(OEZTableViewIndexPath*)indexPath column];
+    }
+    [self.navigationController pushAppDetailsViewController:[[_tableViewData like] objectAtIndex:row ] animated:YES ];
 }
 
 @end

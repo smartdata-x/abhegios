@@ -113,8 +113,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSInteger row = [indexPath row];
+    if ([indexPath isKindOfClass:[OEZTableViewIndexPath class]]) {
+        row =  [(OEZTableViewIndexPath*)indexPath column];
+    }
     GroupInfo *group = [self getGroupInfo:[indexPath section]];
-    [self.navigationController pushAppDetailsViewController:[[group entitys] objectAtIndex:[indexPath row] ] animated:YES ];
+    [self.navigationController pushAppDetailsViewController:[[group entitys] objectAtIndex:row] animated:YES];
 }
 
 @end

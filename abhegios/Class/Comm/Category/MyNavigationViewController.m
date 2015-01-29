@@ -21,7 +21,7 @@
 -(void) pushAppDetailsViewController:(AppInfo*) appInfo animated:(BOOL)animated
 {
     [self pushViewControllerWithIdentifier:@"AppDetailsViewController" completion:^(UIViewController *viewController) {
-        [(AppDetailsViewController*)viewController setAppID:[appInfo id]];
+        [(AppDetailsViewController*)viewController setAppInfo:appInfo];
     } animated:YES];
 }
 @end
