@@ -12,6 +12,7 @@
 @interface BookInfo : BaseInfoMoreONS
 @property (nonatomic, copy) NSString *pic;
 @property (nonatomic, copy) NSString *author;
+@property (nonatomic, copy) NSString *booktoken;
 @property float star;
 @property NSInteger follow;
 @property NSInteger read;

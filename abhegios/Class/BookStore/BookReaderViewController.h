@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ReqeustDelegate.h"
 #import "BookDownloader.h"
 
 typedef NS_ENUM(NSInteger, BookReaderType) {
     BookReaderTypeChapterList = 6,
 };
 
-@interface BookReaderViewController : UIViewController<UIGestureRecognizerDelegate, BookDownloaderDelegate>
+@interface BookReaderViewController : UIViewController<UIGestureRecognizerDelegate, BookDownloaderDelegate, ReqeustDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *readerView;
 @property (weak, nonatomic) IBOutlet UILabel *chapterView;
 @property (weak, nonatomic) IBOutlet UILabel *nameView;

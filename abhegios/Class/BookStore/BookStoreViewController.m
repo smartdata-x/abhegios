@@ -34,10 +34,6 @@
     [[[AppAPIHelper shared] getBookAPI] getBookStoreHome:self];
 }
 
-- (void)testData {
-    //_bookStoreHomeGroups = [GroupInfo initWithsConfigAndDataJsonFile:@"bookstorehome" jsonName:@"bookstorehome_test" entityClass:[BookInfo class]];
-}
-
 - (void)addSearchBarItem {
     // 右按钮
     UIButton *rightButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 20, 38, 44)];
@@ -165,14 +161,12 @@
     BookInfo *bookInfo = [[group entitys] objectAtIndex:index];
     [self.navigationController pushViewControllerWithIdentifier:@"BookDetailInfoTableViewController" completion:^(UIViewController *viewController) {
         BookDetailInfoTableViewController *bookDetailInfoView = (BookDetailInfoTableViewController *)viewController;
-        bookDetailInfoView.bookID = bookInfo.id;
+        [bookDetailInfoView setData:bookInfo];
     } animated:YES];
 }
 
 - (IBAction)gotoBookSearchView:(id)sender {
     [self.navigationController pushViewControllerWithIdentifier:@"BookDirectoryTableViewController" completion:^(UIViewController *viewController) {
-        BookDirectoryTableViewController *bookDirectoryView = (BookDirectoryTableViewController *)viewController;
-        [bookDirectoryView setData:[_tableViewData objectAtIndex:3]];
     } animated:YES];
 }
 
@@ -182,7 +176,7 @@
     BookInfo *bookInfo = [[group entitys] objectAtIndex:indexPath.row];
     [self.navigationController pushViewControllerWithIdentifier:@"BookDetailInfoTableViewController" completion:^(UIViewController *viewController) {
         BookDetailInfoTableViewController *bookDetailInfoView = (BookDetailInfoTableViewController *)viewController;
-        bookDetailInfoView.bookID = bookInfo.id;
+        [bookDetailInfoView setData:bookInfo];
     } animated:YES];
 }
 

@@ -10,12 +10,14 @@
 #import "GroupInfo.h"
 #import "BookChapterInfo.h"
 #import "BookFileManager.h"
+#import "AppAPIHelper.h"
 
 @interface BookReaderViewController ()
 {
     BookInfo *_bookInfo;
     NSArray *_bookChapterGroup;
     BOOL _continueReading;
+    CGFloat _fontSize;
 }
 @property NSMutableArray *chapterGroup;
 @property NSString *bookContent;
@@ -58,7 +60,7 @@
 
 - (void)setData:(id)data {
     _bookInfo = data;
-    [self testData];
+    [[[AppAPIHelper shared] getBookAPI] getBookChapterList:_bookInfo.id BookToken:_bookInfo.booktoken delegate:self];
 }
 
 - (void)setDataWithUrl:(id)data URL:(NSString *)url {
@@ -73,9 +75,17 @@
     _continueReading = NO;
 }
 
-- (void)testData {
-    _bookChapterGroup = [GroupInfo initWithsConfigAndDataJsonFile:@"bookstorehome" jsonName:@"bookchapter_test" entityClass:[BookChapterInfo class]];
+- (void)finishLoadData {
     _chapterCount = [[[_bookChapterGroup objectAtIndex:BookReaderTypeChapterList] entitys] count];
+}
+
+- (void)reqeust:(id)reqeust didComplete:(id)data {
+    _bookChapterGroup = data;
+    [self performSelector:@selector(finishLoadData) withObject:nil afterDelay:0.25];
+}
+
+- (void)reqeust:(id)reqeust didError:(NSError *)err {
+    NSLog(@"%@",err);
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -99,10 +109,11 @@
 }
 
 - (void)initView {
+    _fontSize = 16.0f;
     _bookFileMgr = [[BookFileManager alloc] init];
     _bookDownloader = [[BookDownloader alloc] init];
     _bookDownloader.delegate = self;
-    [_readerView setFont:[UIFont systemFontOfSize:14.0f]];
+    //[_readerView setFont:[UIFont systemFontOfSize:_fontSize]];
     [_readerView setTextColor:[UIColor blackColor]];
     [_readerView setEditable:NO];
     [_readerView setUserInteractionEnabled:NO];
@@ -151,9 +162,8 @@
     [view.layer addAnimation:tr forKey:@"pageCurlAnimation"];
 }
 
-- (BOOL)isCurrentChapterExist {
-    NSString *chapterName = [NSString stringWithFormat:@"%@_%d.txt", @"测试", _currentChapter];
-    return [_bookFileMgr isBookExist:chapterName];
+- (BOOL)isCurrentChapterExist:(NSString *)fullName {
+    return [_bookFileMgr isBookExist:fullName];
 }
 
 - (BOOL)isNeedDownload {
@@ -192,10 +202,10 @@
 - (BOOL)loadNewChapter {
     GroupInfo *group = [_bookChapterGroup objectAtIndex:BookReaderTypeChapterList];
     BookChapterInfo *chapterInfo = [[group entitys] objectAtIndex:_currentChapter];
-    NSString *chapterName = [NSString stringWithFormat:@"%@_%d.txt", @"测试", _currentChapter];
+    NSString *chapterName = [NSString stringWithFormat:@"%@_%d.txt", _bookInfo.name, _currentChapter];
     NSString *fullName = [_bookFileMgr getBookFullPath:chapterName];
     
-    if (![self isCurrentChapterExist]) {
+    if (![self isCurrentChapterExist:fullName]) {
         if ([self isNeedDownload]) {
             [_bookDownloader downloadBookFromURL:chapterInfo.url FileName:chapterName];
         }
@@ -216,13 +226,12 @@
 }
 
 - (void)configTextView {
-    float fontSize = 16.0f;
-    float lineHeight = fontSize * 2;
+    float lineHeight = _fontSize * 2.0f;
     float hPadding = 16.0f;
     float readerFrameHeight = CGRectGetHeight(_readerView.frame);
     float maxContentHeight = readerFrameHeight - hPadding;
-    int lines = maxContentHeight / (fontSize + lineHeight);
-    _pageHeight = lines * (fontSize + lineHeight);
+    int lines = maxContentHeight / lineHeight;
+    _pageHeight = lines * lineHeight;
     readerFrameHeight = _pageHeight + hPadding;
     
     NSMutableParagraphStyle *parastyle = [[NSMutableParagraphStyle alloc] init];
@@ -231,11 +240,11 @@
     parastyle.minimumLineHeight = lineHeight;
     parastyle.firstLineHeadIndent = 20;
     parastyle.alignment = NSTextAlignmentJustified;
-    NSDictionary *attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:fontSize], NSParagraphStyleAttributeName:parastyle, NSForegroundColorAttributeName:kUIColorWithRGB(0x111111)};
+    NSDictionary *attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:_fontSize], NSParagraphStyleAttributeName:parastyle, NSForegroundColorAttributeName:kUIColorWithRGB(0x111111)};
     NSAttributedString *attribText = [[NSAttributedString alloc] initWithString:_bookContent attributes:attributes];
     _readerView.attributedText = attribText;
     
-    CGRect newFrame = CGRectMake(0, 0, CGRectGetWidth(_readerView.frame), _pageHeight);
+    CGRect newFrame = CGRectMake(0, 0, CGRectGetWidth(_readerView.frame), MAXFLOAT);
     float contentHeight = [self heightForAttributedString:attribText Font:_readerView.font Frame:newFrame];
     newFrame = [_readerView frame];
     newFrame.size.height = readerFrameHeight;

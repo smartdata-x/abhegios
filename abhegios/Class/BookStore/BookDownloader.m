@@ -63,6 +63,7 @@
     self.writeHandle = nil;
     self.curLength = 0;
     self.sumLength = 0;
+    self.isDownloading = NO;
     
     if ([_delegate respondsToSelector:@selector(bookDownloadFinished:FileName:)]) {
         [_delegate bookDownloadFinished:YES FileName:self.fileName];

@@ -16,10 +16,8 @@
 
 @interface BookSearchResultTableViewController ()
 {
-    //NSArray *_bookSearchResultGroup;
     NSInteger resultShowType;
 }
-//@property (nonatomic, retain) GroupInfo *bookInfoGroup;
 @end
 
 @implementation BookSearchResultTableViewController
@@ -30,17 +28,11 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)didRequest {
     [[[AppAPIHelper shared] getBookAPI] getBookSearchType:_typeID delegate:self];
     resultShowType = BookSearchResultTypeNew;
-}
-
-- (void)setData:(id)data {
-    //_bookInfoGroup = data;
-    //_bookSearchResultGroup = [GroupInfo initWithsConfigAndDataJsonFile:@"bookstorehome" jsonName:@"booksearchresult_test" entityClass:[BookInfo class]];
 }
 
 - (IBAction)showNewResult:(id)sender {
@@ -63,7 +55,6 @@
     if (section == BookSearchResultSectionHeader) {
         return 1;
     }
-    //return MAX(0, [[[_bookSearchResultGroup objectAtIndex:resultShowType] entitys] count]);
     return MAX(0, [[[_tableViewData objectAtIndex:resultShowType] entitys] count]);
 }
 
@@ -85,7 +76,6 @@
     }
     else {
         viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookSearchResultTableViewCellStyle2"];
-        //[viewCell setData:[[[_bookSearchResultGroup objectAtIndex:resultShowType] entitys] objectAtIndex:indexPath.row]];
         [viewCell setData:[[[_tableViewData objectAtIndex:resultShowType] entitys] objectAtIndex:indexPath.row]];
     }
     return viewCell;
@@ -93,7 +83,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    //GroupInfo *group = [_bookSearchResultGroup objectAtIndex:resultShowType];
     GroupInfo *group = [_tableViewData objectAtIndex:resultShowType];
     BookInfo *bookInfo = [[group entitys] objectAtIndex:indexPath.row];
     [self.navigationController pushViewControllerWithIdentifier:@"BookDetailInfoTableViewController" completion:^(UIViewController *viewController) {
