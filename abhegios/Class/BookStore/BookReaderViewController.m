@@ -130,7 +130,7 @@
 }
 
 - (void)initView {
-    _fontSize = 16.0f;
+    _fontSize = 17.0f;
     _bookFileMgr = [[BookFileManager alloc] init];
     _bookDownloader = [[BookDownloader alloc] init];
     _bookDownloader.delegate = self;
@@ -200,6 +200,8 @@
 }
 
 - (void)doTap:(UIGestureRecognizer *)gesture {
+    _fullScreen = !_fullScreen;
+    [self updateFullScreen];
 }
 
 - (void)doNext:(UIGestureRecognizer *)gesture {
@@ -223,7 +225,7 @@
 - (BOOL)loadNewChapter {
     GroupInfo *group = [_bookChapterGroup objectAtIndex:BookReaderTypeChapterList];
     BookChapterInfo *chapterInfo = [[group entitys] objectAtIndex:_currentChapter];
-    NSString *chapterName = [NSString stringWithFormat:@"%@_%d.txt", _bookInfo.name, _currentChapter];
+    NSString *chapterName = [NSString stringWithFormat:@"%@_%ld.txt", _bookInfo.name, (long)_currentChapter];
     NSString *fullName = [_bookFileMgr getBookFullPath:chapterName];
     
     if (![self isCurrentChapterExist:fullName]) {

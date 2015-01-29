@@ -18,9 +18,9 @@
 
 - (void)setData:(id)data {
     [_name setText:[data name]];
-    [_logoButton.imageView setImageWithStrURL:[BaseInfoAdapter getPic:data]];
-    //UIImage *bgImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[data pic]]]];
-    //[_logoButton setBackgroundImage:bgImage forState:UIControlStateNormal];
+    //[_logoButton.imageView setImageWithStrURL:[BaseInfoAdapter getPic:data]];
+    UIImage *bgImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[data pic]]]];
+    [_logoButton setBackgroundImage:bgImage forState:UIControlStateNormal];
 }
 
 @end
