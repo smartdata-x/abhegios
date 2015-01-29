@@ -3,10 +3,10 @@
 // Copyright (c) 2015 180. All rights reserved.
 //
 
-#import "User.h"
+#import "UserInfo.h"
 
 
-@implementation User {
+@implementation UserInfo {
 
 }
 @end

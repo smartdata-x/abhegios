@@ -13,10 +13,10 @@
 @property double    latitude;
 @property double    longitude;
 
-@property(nonatomic, copy) NSString *nickname;
-@property(nonatomic, copy) NSString *session;
-@property(nonatomic, copy) NSString *sex;
-@property(nonatomic, copy) NSString *birthday;
-@property(nonatomic, copy) NSString *location;
-@property(nonatomic, copy) NSString *head;
+@property(nonatomic, retain) NSString *nickname;
+@property(nonatomic, retain) NSString *session;
+@property(nonatomic, retain) NSString *sex;
+@property(nonatomic, retain) NSString *birthday;
+@property(nonatomic, retain) NSString *location;
+@property(nonatomic, retain) NSString *head;
 @end

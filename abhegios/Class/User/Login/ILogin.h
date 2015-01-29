@@ -5,7 +5,7 @@
 
 #import "ThirdLoginInfo.h"
 #import "HandleOpenURLHelper.h"
-
+#import "ReqeustDelegate.h"
 #define LOGIN_ERROR @"登录失败！"
 #define NOT_NETWORK @"无网络连接，请设置网络!"
 typedef NS_ENUM(NSInteger, LoginType) {
@@ -18,11 +18,11 @@ typedef NS_ENUM(NSInteger, LoginType) {
 };
 
 @class ILogin;
-@class User;
+@class UserInfo;
 
 @protocol LoginDelegate<NSObject>
 -(void) didLoginStart;
--(void) didLoginOk:(User*) user;
+-(void) didLoginOk:(UserInfo*) user;
 -(void) didLoginError:(NSError*) err;
 
 @end
@@ -31,12 +31,12 @@ typedef NS_ENUM(NSInteger, LoginType) {
 @property (nonatomic, assign)   id<LoginDelegate> delegate;
 -(void) login;
 -(void) didStart;
--(void) didOk:(User*) user;
+-(void) didOk:(UserInfo*) user;
 -(void) didError:(NSError*) err;
 -(void) didStrError:(NSString*) err;
 @end
 
-@interface IThirdLogin : ILogin<HandleOpenURLDelegate>
+@interface IThirdLogin : ILogin<HandleOpenURLDelegate,ReqeustDelegate>
 {
 @protected
     ThirdLoginInfo*   _loginInfo;

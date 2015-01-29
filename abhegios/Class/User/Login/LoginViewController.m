@@ -7,7 +7,7 @@
 #import "LoginTableViewCell.h"
 #import "ILogin.h"
 #import "UserHelper.h"
-#import "User.h"
+#import "UserInfo.h"
 #import "LoginItemInfo.h"
 #import <OEZCommSDK/OEZCommSDK.h>
 #define kTopHeaderHeight 132
@@ -93,12 +93,12 @@
 
 }
 
-- (void)didLoginOk:(User *)user {
-
+- (void)didLoginOk:(UserInfo *)user {
+ NSLog(@"%@",user);
 }
 
 - (void)didLoginError:(NSError *)err {
-
+    NSLog(@"%@",err);
 }
 
 @end

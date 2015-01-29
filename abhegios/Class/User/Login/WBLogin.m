@@ -5,12 +5,14 @@
 
 #import "WBLogin.h"
 #import "WeiboSDK.h"
+#import "HTTPReqeust.h"
 #define kWeiboUserShowURI @"https://api.weibo.com/2/users/show.json"
 @interface WBLogin()<WeiboSDKDelegate>
 @end
 
 @implementation WBLogin {
     WBAuthorizeResponse *_authorizeResponse;
+    HTTPReqeust         *_reqeust;
 }
 - (void)login {
     WBAuthorizeRequest *request = [WBAuthorizeRequest request];
@@ -56,7 +58,7 @@
             case WeiboSDKResponseStatusCodeSuccess:{//成功
                 _authorizeResponse = (WBAuthorizeResponse*)response;
                  _loginInfo.session = _authorizeResponse.userID;
-
+                [self getUserInfo];
                 break;
             }
             case WeiboSDKResponseStatusCodeUserCancel://用户取消发送
@@ -80,6 +82,33 @@
     }
 }
 
+-(void) reqeust:(id)reqeust didComplete:(id)data
+{
+    if (reqeust == _reqeust) {
+        NSDictionary *dict = data;
+        if ([dict objectForKey:@"error_code"] == nil)
+        {
+            [self didWBUserInfo:dict];
+        }
+        else{
+            [self didStrError:[dict objectForKey:@"error_code"] ];
+        }
+    }
+    else
+        [super reqeust:reqeust didComplete:data];
+}
+
+-(void) getUserInfo
+{
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+    [dict setObject:kWeiboAppID forKey:@"source"];
+    [dict setObject:_authorizeResponse.accessToken forKey:@"access_token"];
+    [dict setObject:_authorizeResponse.userID forKey:@"uid"];
+    _reqeust = [[HTTPReqeust alloc]init];
+    [_reqeust requestJson:kWeiboUserShowURI parameter:dict delegate:self processBlock:nil];
+}
+
+
 -(void) didWBUserInfo:(NSDictionary*) wbUserInfo;
 {
     [_loginInfo setNickname:[wbUserInfo objectForKey:@"screen_name"]];
@@ -87,5 +116,6 @@
     [_loginInfo setHead:[wbUserInfo objectForKey:@"avatar_large"]];
     [_loginInfo setLocation:[NSString stringWithFormat:@"%@",[wbUserInfo objectForKey:@"location"]]];
     [_loginInfo setSex:[wbUserInfo objectForKey:@"gender"]];
+    [super login];
 }
 @end

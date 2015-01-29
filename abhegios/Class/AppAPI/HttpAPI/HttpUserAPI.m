@@ -7,10 +7,12 @@
 //
 
 #import "HttpUserAPI.h"
-
+#import "UserInfo.h"
+#import "ThirdLoginInfo.h"
 @implementation HttpUserAPI
 -(void) thirdLogin:(ThirdLoginInfo *)loginInfo delegate:(id<ReqeustDelegate>)delegate
 {
-    
+    static NSString *path = @"/user/1/thirdlogin.fcgi";
+    [self request:path parameter:[loginInfo toDictionary:NO] delegate:delegate entityClass:[UserInfo class]];
 }
 @end

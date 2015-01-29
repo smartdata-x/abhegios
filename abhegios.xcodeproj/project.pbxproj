@@ -16,7 +16,7 @@
 		1AD6424E41815985501DAFD3 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD64CC1D3FCEB41E30B3D46 /* libWeiboSDK.a */; };
 		1AD6444BCD81D3E62537781A /* qqicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AD64FDCA86FD9856133C0D9 /* qqicon.png */; };
 		1AD6455F3CEB60EEE78C0C77 /* UserHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD6408FC527AE4826BBFD19 /* UserHelper.m */; };
-		1AD64565F18F3ED26CC48D25 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64906666AE7E8636FF430 /* User.m */; };
+		1AD64565F18F3ED26CC48D25 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64906666AE7E8636FF430 /* UserInfo.m */; };
 		1AD645A28AA3934B882BD885 /* FoundItemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64BD02B289E09F1CFB1ED /* FoundItemInfo.m */; };
 		1AD6460C6803B48F071D6E89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AD6432947FE4430D644F23B /* Images.xcassets */; };
 		1AD64625B4F594E287714029 /* QQLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD646C9517398D2CE12BFE0 /* QQLogin.m */; };
@@ -178,9 +178,9 @@
 		1AD647DF9B122EFEA68E6170 /* HandleOpenURLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandleOpenURLHelper.h; sourceTree = "<group>"; };
 		1AD64811342BC7DCF625AF76 /* HelperProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelperProtocol.h; sourceTree = "<group>"; };
 		1AD6482492CCDF431E3E73F8 /* QQApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQApi.h; sourceTree = "<group>"; };
-		1AD6485A940C71B93C1841E6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		1AD6485A940C71B93C1841E6 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
 		1AD648C331E9E9DEE2764A4D /* UserHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserHelper.h; sourceTree = "<group>"; };
-		1AD64906666AE7E8636FF430 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		1AD64906666AE7E8636FF430 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		1AD6492B19568EF4CBFC4EA6 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1AD64937DADE448C8201DFCF /* AppHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppHomeViewController.m; sourceTree = "<group>"; };
 		1AD649A2F2D6D83B5DB8AB91 /* error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = error.png; sourceTree = "<group>"; };
@@ -602,8 +602,8 @@
 			children = (
 				1AD6467CD21BDFAB504D3527 /* ThirdLoginInfo.h */,
 				1AD64A4A58510940FB83B455 /* ThirdLoginInfo.m */,
-				1AD64906666AE7E8636FF430 /* User.m */,
-				1AD6485A940C71B93C1841E6 /* User.h */,
+				1AD64906666AE7E8636FF430 /* UserInfo.m */,
+				1AD6485A940C71B93C1841E6 /* UserInfo.h */,
 				EA6500AC1A6F34630043C4F2 /* LoginItemInfo.h */,
 				EA6500AD1A6F34630043C4F2 /* LoginItemInfo.m */,
 			);
@@ -1202,7 +1202,7 @@
 				EA8988311A726EAA00877E63 /* AppInfoViewStyle1.m in Sources */,
 				EA8D74931A6E7CF9004C17C2 /* AppTableViewCellStyle1.m in Sources */,
 				EABA1EE61A76844000A76BD2 /* AFNetworkActivityIndicatorManager.m in Sources */,
-				1AD64565F18F3ED26CC48D25 /* User.m in Sources */,
+				1AD64565F18F3ED26CC48D25 /* UserInfo.m in Sources */,
 				EA7C91081A77A10200782B8D /* RequestInfo.m in Sources */,
 				EABA1EEA1A76844000A76BD2 /* AFXMLRequestOperation.m in Sources */,
 				EABA1EE51A76844000A76BD2 /* AFJSONRequestOperation.m in Sources */,

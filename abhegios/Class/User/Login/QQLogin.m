@@ -61,11 +61,11 @@
 }
 
 - (void)login {
-    if (![TencentOAuth iphoneQQInstalled]) {
-        [self didStrError:@"您手机还没有安装QQ！"];
-    }
-    else
-        [_tencentOAuth authorize:_permissions inSafari:NO];
+//    if (![TencentOAuth iphoneQQInstalled]) {
+//        [self didStrError:@"您手机还没有安装QQ！"];
+//    }
+//    else
+        [_tencentOAuth authorize:_permissions inSafari:YES];
 }
 
 -(void)tencentDidNotLogin:(BOOL)cancelled
@@ -105,6 +105,7 @@
         [_loginInfo setBirthday: [qqUserInfo objectForKey:@"year"]];
         [_loginInfo setHead: [qqUserInfo objectForKey:@"figureurl_qq_2"]];
         [_loginInfo setLocation:[NSString stringWithFormat:@"%@ %@",[qqUserInfo objectForKey:@"province"],[qqUserInfo objectForKey:@"city"]]];
+        [super login];
     }
     else
     {

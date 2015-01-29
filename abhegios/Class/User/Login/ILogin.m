@@ -4,9 +4,9 @@
 //
 
 #import "ILogin.h"
-#import "User.h"
+#import "UserInfo.h"
 #import "ThirdLoginInfo.h"
-
+#import "AppAPIHelper.h"
 
 @implementation ILogin {
 
@@ -25,7 +25,7 @@
         [self.delegate didLoginStart];
 }
 
-- (void)didOk:(User *)user {
+- (void)didOk:(UserInfo *)user {
 
     if ([self.delegate respondsToSelector:@selector(didLoginOk:)])
         [self.delegate didLoginOk:user];
@@ -46,8 +46,19 @@
 @end
 
 
+
 @implementation IThirdLogin
 
+
+-(void) reqeust:(id)reqeust didComplete:(id)data
+{
+    [self didOk:data];
+}
+
+-(void) reqeust:(id)reqeust didError:(NSError *)err
+{
+    [self didError:err];
+}
 
 - (id)init:(LoginType)source {
     self = [super init];
@@ -60,10 +71,10 @@
 }
 
 - (void)login {
-
+    [[[AppAPIHelper shared] getUserAPI] thirdLogin:_loginInfo delegate:self];
 }
 
-- (void)didOk:(User *)user {
+- (void)didOk:(UserInfo *)user {
     [super didOk:user];
     [[HandleOpenURLHelper shared] removeHandleDelegate:self];
 }
