@@ -73,7 +73,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     int baseTypeID = 1001;
-    int stride = [boySearchType count];
+    int stride = 1000;
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self.navigationController pushViewControllerWithIdentifier:@"BookSearchResultTableViewController" completion:^(UIViewController *viewController) {
         BookSearchResultTableViewController *bookSearchResultView = (BookSearchResultTableViewController *)viewController;

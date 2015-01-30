@@ -50,4 +50,13 @@
         return [GroupInfo initWithsConfigAndDataDictionarys:@"bookstorehome" groupsData:data entityClass:[BookChapterInfo class]];
     }];
 }
+
+- (void)getBookWanted:(NSInteger)bookID delegate:(id<ReqeustDelegate>)delegate {
+    static NSString *path = @"/book/1/wanted.fcgi";
+    [self request:path parameter:[NSDictionary dictionaryWithObject:@(bookID) forKey:@"bookid"] delegate:nil processBlock:^id(id data) {
+        
+        NSString *token = [data objectForKey:@"book_token"];
+        return token;
+    }];
+}
 @end

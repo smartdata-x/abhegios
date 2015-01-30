@@ -17,6 +17,7 @@
     BookInfo *_bookInfo;
     NSArray *_bookChapterGroup;
     BOOL _continueReading;
+    BOOL _fullScreen;
     CGFloat _fontSize;
 }
 @property NSMutableArray *chapterGroup;
@@ -36,6 +37,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initView];
+    _fullScreen = YES;
     
     // 左翻页
     UISwipeGestureRecognizer *nextGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(doNext:)];
@@ -100,6 +102,25 @@
     else {
         [self nextChapter];
     }
+    
+    [self updateFullScreen];
+}
+
+- (void)updateFullScreen {
+    [[UIApplication sharedApplication] setStatusBarHidden:_fullScreen withAnimation:YES];
+    [self.navigationController.navigationBar setHidden:_fullScreen];
+    
+    float navHeight = 65;
+    CGRect frame = [self.view frame];
+    if (_fullScreen) {
+        frame.origin.y -= navHeight;
+        frame.size.height += navHeight;
+    }
+    else {
+        frame.origin.y += navHeight;
+        frame.size.height -= navHeight;
+    }
+    [self.view setFrame:frame];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -109,7 +130,7 @@
 }
 
 - (void)initView {
-    _fontSize = 16.0f;
+    _fontSize = 17.0f;
     _bookFileMgr = [[BookFileManager alloc] init];
     _bookDownloader = [[BookDownloader alloc] init];
     _bookDownloader.delegate = self;
@@ -179,6 +200,8 @@
 }
 
 - (void)doTap:(UIGestureRecognizer *)gesture {
+    _fullScreen = !_fullScreen;
+    [self updateFullScreen];
 }
 
 - (void)doNext:(UIGestureRecognizer *)gesture {
@@ -202,7 +225,7 @@
 - (BOOL)loadNewChapter {
     GroupInfo *group = [_bookChapterGroup objectAtIndex:BookReaderTypeChapterList];
     BookChapterInfo *chapterInfo = [[group entitys] objectAtIndex:_currentChapter];
-    NSString *chapterName = [NSString stringWithFormat:@"%@_%d.txt", _bookInfo.name, _currentChapter];
+    NSString *chapterName = [NSString stringWithFormat:@"%@_%ld.txt", _bookInfo.name, (long)_currentChapter];
     NSString *fullName = [_bookFileMgr getBookFullPath:chapterName];
     
     if (![self isCurrentChapterExist:fullName]) {
@@ -231,7 +254,7 @@
     float readerFrameHeight = CGRectGetHeight(_readerView.frame);
     float maxContentHeight = readerFrameHeight - hPadding;
     int lines = maxContentHeight / lineHeight;
-    _pageHeight = lines * lineHeight;
+    _pageHeight = lines * lineHeight + hPadding;
     readerFrameHeight = _pageHeight + hPadding;
     
     NSMutableParagraphStyle *parastyle = [[NSMutableParagraphStyle alloc] init];
