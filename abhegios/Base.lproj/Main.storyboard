@@ -898,14 +898,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q0b-GB-KGa" customClass="BookInfoViewStyle3">
-                                            <rect key="frame" x="108" y="12" width="105" height="30"/>
+                                            <rect key="frame" x="108" y="12" width="140" height="30"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstItem="Q0b-GB-KGa" firstAttribute="leading" secondItem="U7l-jg-I3L" secondAttribute="leadingMargin" constant="108" id="yN8-hz-1a0"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Q0b-GB-KGa" secondAttribute="trailing" constant="108" id="yU4-Zo-q9r"/>
+                                        <constraint firstAttribute="centerX" secondItem="Q0b-GB-KGa" secondAttribute="centerX" id="TtF-KR-c22"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.92549019610000005" green="0.90196078430000004" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>

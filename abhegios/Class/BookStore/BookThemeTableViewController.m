@@ -82,11 +82,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    BookInfo *bookInfo = [[_tableViewData topices] objectAtIndex:indexPath.row];
-    [self.navigationController pushViewControllerWithIdentifier:@"BookDetailInfoTableViewController" completion:^(UIViewController *viewController) {
-        BookDetailInfoTableViewController *bookDetailInfoView = (BookDetailInfoTableViewController *)viewController;
-        [bookDetailInfoView setData:bookInfo];
-    } animated:YES];
+    if (IS_SECTION(1)) {
+        BookInfo *bookInfo = [[_tableViewData topices] objectAtIndex:indexPath.row];
+        [self.navigationController pushViewControllerWithIdentifier:@"BookDetailInfoTableViewController" completion:^(UIViewController *viewController) {
+            BookDetailInfoTableViewController *bookDetailInfoView = (BookDetailInfoTableViewController *)viewController;
+            [bookDetailInfoView setData:bookInfo];
+        } animated:YES];
+    }
 }
 
 @end

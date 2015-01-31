@@ -18,6 +18,7 @@
 - (void)setData:(id)data {
     [_logo setImage:[UIImage imageNamed:[(BookInfo *)data pic]]];
     [_name setTitle:[data name] forState:UIControlStateNormal];
+    _name.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
 }
 /*
 // Only override drawRect: if you perform custom drawing.

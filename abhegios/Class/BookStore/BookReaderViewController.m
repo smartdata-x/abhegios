@@ -18,6 +18,7 @@
     NSArray *_bookChapterGroup;
     BOOL _continueReading;
     BOOL _fullScreen;
+    BOOL viewDidAppear;
     CGFloat _fontSize;
 }
 @property NSMutableArray *chapterGroup;
@@ -79,6 +80,9 @@
 
 - (void)finishLoadData {
     _chapterCount = [[[_bookChapterGroup objectAtIndex:BookReaderTypeChapterList] entitys] count];
+    if (viewDidAppear) {
+        //[self viewDidAppear:YES];
+    }
 }
 
 - (void)reqeust:(id)reqeust didComplete:(id)data {
@@ -104,6 +108,7 @@
     }
     
     [self updateFullScreen];
+    viewDidAppear = YES;
 }
 
 - (void)updateFullScreen {
