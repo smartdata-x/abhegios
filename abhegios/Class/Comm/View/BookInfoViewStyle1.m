@@ -18,9 +18,16 @@
 
 - (void)setData:(id)data {
     [_name setText:[data name]];
-    //[_logoButton.imageView setImageWithStrURL:[BaseInfoAdapter getPic:data]];
-    UIImage *bgImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[data pic]]]];
-    [_logoButton setBackgroundImage:bgImage forState:UIControlStateNormal];
+    [_logo setImageWithStrURL:[BaseInfoAdapter getPic:data]];
+    
+    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didClicked:)];
+    [self addGestureRecognizer:gesture];
+}
+
+- (void)didClicked:(UIGestureRecognizer *)gesture {
+    if ([_delegate respondsToSelector:@selector(didBookInfoViewStyle1Clicked:)]) {
+        [_delegate didBookInfoViewStyle1Clicked:self];
+    }
 }
 
 @end

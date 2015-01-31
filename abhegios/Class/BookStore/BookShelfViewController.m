@@ -9,7 +9,6 @@
 #import "BookShelfViewController.h"
 #import "BookInfo.h"
 #import "GroupInfo.h"
-#import "BookInfoViewStyle1.h"
 #import "BookReaderViewController.h"
 #import "AppAPIHelper.h"
 
@@ -57,8 +56,8 @@
         [bookitem setFrame:CGRectMake(x*kBookItemWidth, y*kBookShelfCellHeight, kBookItemWidth, kBookShelfCellHeight)];
         bookinfo.name = @""; // 此处不需要显示书名
         [bookitem setData:bookinfo];
-        [bookitem.logoButton addTarget:self action:@selector(gotoBookReader:) forControlEvents:UIControlEventTouchUpInside];
-        [bookitem.logoButton setTag:i];
+        [bookitem setTag:i];
+        bookitem.delegate = self;
         [bookShelfView addSubview:bookitem];
     }
 }
@@ -76,6 +75,16 @@
         GroupInfo *group = [_bookShelfGroups objectAtIndex:BookShelfTypeList];
         UIButton *btnSender = (UIButton *)sender;
         BookInfo *bookInfo = [[group entitys] objectAtIndex:btnSender.tag];
+        BookReaderViewController *readerView = (BookReaderViewController *)viewController;
+        [readerView setData:bookInfo];
+    } animated:YES];
+}
+
+- (void)didBookInfoViewStyle1Clicked:(id)bookInfoView {
+    [self.navigationController pushViewControllerWithIdentifier:@"BookReaderViewController" completion:^(UIViewController *viewController) {
+        BookInfoViewStyle1 *infoView = (BookInfoViewStyle1 *)bookInfoView;
+        GroupInfo *group = [_bookShelfGroups objectAtIndex:BookShelfTypeList];
+        BookInfo *bookInfo = [[group entitys] objectAtIndex:infoView.tag];
         BookReaderViewController *readerView = (BookReaderViewController *)viewController;
         [readerView setData:bookInfo];
     } animated:YES];

@@ -29,46 +29,16 @@
     int fullStar = (int)rate;
     fullStar = MAX(kMinFavRate, fullStar);
     fullStar = MIN(kMaxFavRate, fullStar);
-    int hideStar = kMaxFavRate - fullStar;
     
-    switch (hideStar) {
-        case 5:[_rate0 setHidden:YES];
-        case 4:[_rate1 setHidden:YES];
-        case 3:[_rate2 setHidden:YES];
-        case 2:[_rate3 setHidden:YES];
-        case 1:[_rate4 setHidden:YES];
-        default: break;
-    }
-    
-    if (hasHalf) {
-        switch (fullStar) {
-            case 4:
-                [_rate4 setHidden:NO];
-                [_rate4 setImage:halfStar];
-                break;
-                
-            case 3:
-                [_rate3 setHidden:NO];
-                [_rate3 setImage:halfStar];
-                break;
-                
-            case 2:
-                [_rate2 setHidden:NO];
-                [_rate2 setImage:halfStar];
-                break;
-                
-            case 1:
-                [_rate1 setHidden:NO];
-                [_rate1 setImage:halfStar];
-                break;
-                
-            case 0:
-                [_rate0 setHidden:NO];
-                [_rate0 setImage:halfStar];
-                break;
-                
-            default:
-                break;
+    UIImageView *rates[] = {_rate0, _rate1, _rate2, _rate3, _rate4};
+    for (int i=0; i<kMaxFavRate; i++) {
+        if (i>=fullStar) {
+            [rates[i] setHidden:YES];
+            if (hasHalf) {
+                [rates[i] setHidden:NO];
+                [rates[i] setImage:halfStar];
+                hasHalf = NO;
+            }
         }
     }
 }

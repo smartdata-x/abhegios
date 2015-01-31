@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <OEZCommSDK/OEZCommSDK.h>
+
+@protocol BookInfoViewStyle1Delegate <NSObject>
+- (void)didBookInfoViewStyle1Clicked:(id)bookInfoView;
+@end
 @interface BookInfoViewStyle1 : OEZNibView
-@property (weak, nonatomic) IBOutlet UIView *logo;
+@property (weak, nonatomic) IBOutlet UIImageView *logo;
 @property (weak, nonatomic) IBOutlet UILabel *name;
-@property (weak, nonatomic) IBOutlet UIButton *logoButton;
+@property (nonatomic, retain) id<BookInfoViewStyle1Delegate> delegate;
 - (void)setData:(id)data;
+- (void)didClicked:(UIGestureRecognizer *)gesture;
 @end

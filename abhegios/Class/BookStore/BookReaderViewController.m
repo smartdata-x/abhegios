@@ -134,7 +134,6 @@
     _bookFileMgr = [[BookFileManager alloc] init];
     _bookDownloader = [[BookDownloader alloc] init];
     _bookDownloader.delegate = self;
-    //[_readerView setFont:[UIFont systemFontOfSize:_fontSize]];
     [_readerView setTextColor:[UIColor blackColor]];
     [_readerView setEditable:NO];
     [_readerView setUserInteractionEnabled:NO];
