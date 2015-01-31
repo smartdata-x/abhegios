@@ -16,10 +16,9 @@
 #import "BookDetailInfoTableViewController.h"
 #import "BookSearchResultTableViewController.h"
 #import "BookDirectoryTableViewController.h"
+#import "BookThemeTableViewController.h"
 #import <OEZCommSDK/OEZCommSDK.h>
 #import "AppAPIHelper.h"
-
-#define IS_SECTION(x) (indexPath.section == (x))
 
 @interface BookStoreViewController ()
 {
@@ -174,9 +173,9 @@
 - (void)cellItemClickedAtIndex:(NSInteger)index {
     GroupInfo *group = [_tableViewData objectAtIndex:1];
     BookInfo *bookInfo = [[group entitys] objectAtIndex:index];
-    [self.navigationController pushViewControllerWithIdentifier:@"BookDetailInfoTableViewController" completion:^(UIViewController *viewController) {
-        BookDetailInfoTableViewController *bookDetailInfoView = (BookDetailInfoTableViewController *)viewController;
-        [bookDetailInfoView setData:bookInfo];
+    [self.navigationController pushViewControllerWithIdentifier:@"BookThemeTableViewController" completion:^(UIViewController *viewController) {
+        BookThemeTableViewController *infoView = (BookThemeTableViewController *)viewController;
+        [infoView setData:bookInfo];
     } animated:YES];
 }
 

@@ -883,6 +883,67 @@
             </objects>
             <point key="canvasLocation" x="7287" y="59"/>
         </scene>
+        <!--书籍专题-->
+        <scene sceneID="QVS-8j-VRx">
+            <objects>
+                <tableViewController storyboardIdentifier="BookThemeTableViewController" title="专题" id="hSh-d9-j0t" userLabel="书籍专题" customClass="BookThemeTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="j1F-Nk-23T">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookThemeTableViewCellStyle1" rowHeight="55" id="qa2-gd-to0" customClass="BookThemeTableViewCellStyle1">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qa2-gd-to0" id="U7l-jg-I3L">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q0b-GB-KGa" customClass="BookInfoViewStyle3">
+                                            <rect key="frame" x="108" y="12" width="105" height="30"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="Q0b-GB-KGa" firstAttribute="leading" secondItem="U7l-jg-I3L" secondAttribute="leadingMargin" constant="108" id="yN8-hz-1a0"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Q0b-GB-KGa" secondAttribute="trailing" constant="108" id="yU4-Zo-q9r"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.90196078430000004" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="infoView" destination="Q0b-GB-KGa" id="NKL-Bp-kX3"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookThemeTableViewCellStyle2" rowHeight="132" id="Hef-y6-Bpz" customClass="BookThemeTableViewCellStyle2">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hef-y6-Bpz" id="EXT-fz-sXO">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lpg-qt-CDT" customClass="BookInfoViewStyle2">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="132"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="lpg-qt-CDT" firstAttribute="leading" secondItem="EXT-fz-sXO" secondAttribute="leadingMargin" id="3zi-TU-BK6"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="lpg-qt-CDT" secondAttribute="trailing" id="cwZ-9N-xkD"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="infoView" destination="lpg-qt-CDT" id="UZ6-Hw-5rW"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hSh-d9-j0t" id="b5H-NJ-wdo"/>
+                            <outlet property="delegate" destination="hSh-d9-j0t" id="sQ7-9l-kiz"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t55-tm-W41" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7942" y="59"/>
+        </scene>
         <!--登录-->
         <scene sceneID="SrF-nv-kzf">
             <objects>

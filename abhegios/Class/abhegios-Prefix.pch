@@ -23,6 +23,9 @@
                                                     blue:((float)(rgbValue & 0xFF))/255.0 alpha:alphaValue]
 #define kUIColorWithRGB(rgbValue) kUIColorWithRGBAlpha(rgbValue,1.0f)
 
+#pragma mark - Misc
+#define IS_SECTION(x) (indexPath.section == (x))
+
 #pragma mark - 第三方SDK key appid
 #define kQQAppID @"1104090941"
 #define kWXAppID @"wx20f71fed62b78fb3"

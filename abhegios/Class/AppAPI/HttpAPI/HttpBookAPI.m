@@ -11,6 +11,7 @@
 #import "BookInfo.h"
 #import "BookDetailInfo.h"
 #import "BookChapterInfo.h"
+#import "BookTopicInfo.h"
 
 @implementation HttpBookAPI
 
@@ -54,9 +55,13 @@
 - (void)getBookWanted:(NSInteger)bookID delegate:(id<ReqeustDelegate>)delegate {
     static NSString *path = @"/book/1/wanted.fcgi";
     [self request:path parameter:[NSDictionary dictionaryWithObject:@(bookID) forKey:@"bookid"] delegate:nil processBlock:^id(id data) {
-        
         NSString *token = [data objectForKey:@"book_token"];
         return token;
     }];
+}
+
+- (void)getBookTopics:(NSInteger)typeID delegate:(id<ReqeustDelegate>)delegate {
+    static NSString *path = @"/book/1/topics.fcgi";
+    [self request:path parameter:[NSDictionary dictionaryWithObject:@(typeID) forKey:@"tid"] delegate:delegate entityClass:[BookTopicInfo class]];
 }
 @end

@@ -33,7 +33,6 @@
 		CB6A21BD1A6FF2AA0087546F /* BookStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21BC1A6FF2AA0087546F /* BookStoreViewController.m */; };
 		CB6A21C01A6FF5600087546F /* BookStoreTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21BF1A6FF5600087546F /* BookStoreTableViewCellStyle1.m */; };
 		CB6A21CA1A6FFAEF0087546F /* BookInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21C91A6FFAEF0087546F /* BookInfo.m */; };
-		CB6A21CC1A6FFCC20087546F /* bookstorehome_test.json in Resources */ = {isa = PBXBuildFile; fileRef = CB6A21CB1A6FFCC20087546F /* bookstorehome_test.json */; };
 		CB6A21CE1A7007970087546F /* bookstorehome.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB6A21CD1A7007970087546F /* bookstorehome.plist */; };
 		CB6A21D11A711CD50087546F /* BookStoreTableViewCellStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21D01A711CD50087546F /* BookStoreTableViewCellStyle2.m */; };
 		CB6A21D41A711CEC0087546F /* BookStoreTableViewCellStyle3.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21D31A711CEC0087546F /* BookStoreTableViewCellStyle3.m */; };
@@ -61,17 +60,17 @@
 		CB6A22131A74BE6B0087546F /* BookSearchResultTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A22121A74BE6B0087546F /* BookSearchResultTableViewCellStyle1.m */; };
 		CB6A22161A74C09E0087546F /* BookSearchResultTableViewCellStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A22151A74C09E0087546F /* BookSearchResultTableViewCellStyle2.m */; };
 		CB6A22191A74C5180087546F /* BookDirectoryTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A22181A74C5180087546F /* BookDirectoryTableViewCellStyle1.m */; };
-		CB6A221B1A765ABF0087546F /* bookdetail_test.json in Resources */ = {isa = PBXBuildFile; fileRef = CB6A221A1A765ABF0087546F /* bookdetail_test.json */; };
 		CB6A22201A765F7F0087546F /* BookDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A221F1A765F7F0087546F /* BookDownloader.m */; };
 		CB6A22231A765F9C0087546F /* BookFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A22221A765F9C0087546F /* BookFileManager.m */; };
-		CB6A22251A7673E60087546F /* booksearchresult_test.json in Resources */ = {isa = PBXBuildFile; fileRef = CB6A22241A7673E60087546F /* booksearchresult_test.json */; };
-		CB6A22271A7687AA0087546F /* bookshelf_test.json in Resources */ = {isa = PBXBuildFile; fileRef = CB6A22261A7687A90087546F /* bookshelf_test.json */; };
 		CB6A222A1A768CE80087546F /* BookChapterInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A22291A768CE80087546F /* BookChapterInfo.m */; };
-		CB6A222C1A768D3B0087546F /* bookchapter_test.json in Resources */ = {isa = PBXBuildFile; fileRef = CB6A222B1A768D3B0087546F /* bookchapter_test.json */; };
 		CBC05FB61A7A62DC00CC4008 /* BookInfoViewStyle4.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC05FB51A7A62DC00CC4008 /* BookInfoViewStyle4.m */; };
 		CBC05FB81A7A638200CC4008 /* BookInfoViewStyle4.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBC05FB71A7A638200CC4008 /* BookInfoViewStyle4.xib */; };
 		CBC05FBB1A7A6B3800CC4008 /* BookHScrollViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC05FBA1A7A6B3800CC4008 /* BookHScrollViewCell1.m */; };
 		CBC05FBE1A7A6FCD00CC4008 /* BookHScrollViewCell4.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC05FBD1A7A6FCD00CC4008 /* BookHScrollViewCell4.m */; };
+		CBC05FC11A7C70A000CC4008 /* BookThemeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC05FC01A7C70A000CC4008 /* BookThemeTableViewController.m */; };
+		CBC05FC41A7C70F000CC4008 /* BookThemeTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC05FC31A7C70F000CC4008 /* BookThemeTableViewCellStyle1.m */; };
+		CBC05FC71A7C710300CC4008 /* BookThemeTableViewCellStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC05FC61A7C710300CC4008 /* BookThemeTableViewCellStyle2.m */; };
+		CBC05FCA1A7C76C100CC4008 /* BookTopicInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC05FC91A7C76C100CC4008 /* BookTopicInfo.m */; };
 		CBE0043F1A78FB20001A2F42 /* HttpBookAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE0043E1A78FB20001A2F42 /* HttpBookAPI.m */; };
 		EA103C671A7889F200FFF66E /* GameHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C651A7889F200FFF66E /* GameHomeViewController.m */; };
 		EA103C6A1A788A3B00FFF66E /* GameHomeTableViewCellStyle3.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C691A788A3B00FFF66E /* GameHomeTableViewCellStyle3.m */; };
@@ -213,7 +212,6 @@
 		CB6A21BF1A6FF5600087546F /* BookStoreTableViewCellStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookStoreTableViewCellStyle1.m; sourceTree = "<group>"; };
 		CB6A21C81A6FFAEF0087546F /* BookInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookInfo.h; sourceTree = "<group>"; };
 		CB6A21C91A6FFAEF0087546F /* BookInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookInfo.m; sourceTree = "<group>"; };
-		CB6A21CB1A6FFCC20087546F /* bookstorehome_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bookstorehome_test.json; sourceTree = "<group>"; };
 		CB6A21CD1A7007970087546F /* bookstorehome.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bookstorehome.plist; sourceTree = "<group>"; };
 		CB6A21CF1A711CD50087546F /* BookStoreTableViewCellStyle2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookStoreTableViewCellStyle2.h; sourceTree = "<group>"; };
 		CB6A21D01A711CD50087546F /* BookStoreTableViewCellStyle2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookStoreTableViewCellStyle2.m; sourceTree = "<group>"; };
@@ -263,16 +261,12 @@
 		CB6A22151A74C09E0087546F /* BookSearchResultTableViewCellStyle2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookSearchResultTableViewCellStyle2.m; sourceTree = "<group>"; };
 		CB6A22171A74C5180087546F /* BookDirectoryTableViewCellStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookDirectoryTableViewCellStyle1.h; sourceTree = "<group>"; };
 		CB6A22181A74C5180087546F /* BookDirectoryTableViewCellStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookDirectoryTableViewCellStyle1.m; sourceTree = "<group>"; };
-		CB6A221A1A765ABF0087546F /* bookdetail_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bookdetail_test.json; sourceTree = "<group>"; };
 		CB6A221E1A765F7F0087546F /* BookDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookDownloader.h; sourceTree = "<group>"; };
 		CB6A221F1A765F7F0087546F /* BookDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookDownloader.m; sourceTree = "<group>"; };
 		CB6A22211A765F9C0087546F /* BookFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookFileManager.h; sourceTree = "<group>"; };
 		CB6A22221A765F9C0087546F /* BookFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookFileManager.m; sourceTree = "<group>"; };
-		CB6A22241A7673E60087546F /* booksearchresult_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = booksearchresult_test.json; sourceTree = "<group>"; };
-		CB6A22261A7687A90087546F /* bookshelf_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bookshelf_test.json; sourceTree = "<group>"; };
 		CB6A22281A768CE80087546F /* BookChapterInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookChapterInfo.h; sourceTree = "<group>"; };
 		CB6A22291A768CE80087546F /* BookChapterInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookChapterInfo.m; sourceTree = "<group>"; };
-		CB6A222B1A768D3B0087546F /* bookchapter_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bookchapter_test.json; sourceTree = "<group>"; };
 		CBC05FB41A7A62DC00CC4008 /* BookInfoViewStyle4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookInfoViewStyle4.h; sourceTree = "<group>"; };
 		CBC05FB51A7A62DC00CC4008 /* BookInfoViewStyle4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookInfoViewStyle4.m; sourceTree = "<group>"; };
 		CBC05FB71A7A638200CC4008 /* BookInfoViewStyle4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookInfoViewStyle4.xib; sourceTree = SOURCE_ROOT; };
@@ -280,6 +274,14 @@
 		CBC05FBA1A7A6B3800CC4008 /* BookHScrollViewCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookHScrollViewCell1.m; sourceTree = "<group>"; };
 		CBC05FBC1A7A6FCD00CC4008 /* BookHScrollViewCell4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookHScrollViewCell4.h; sourceTree = "<group>"; };
 		CBC05FBD1A7A6FCD00CC4008 /* BookHScrollViewCell4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookHScrollViewCell4.m; sourceTree = "<group>"; };
+		CBC05FBF1A7C70A000CC4008 /* BookThemeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookThemeTableViewController.h; sourceTree = "<group>"; };
+		CBC05FC01A7C70A000CC4008 /* BookThemeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookThemeTableViewController.m; sourceTree = "<group>"; };
+		CBC05FC21A7C70F000CC4008 /* BookThemeTableViewCellStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookThemeTableViewCellStyle1.h; sourceTree = "<group>"; };
+		CBC05FC31A7C70F000CC4008 /* BookThemeTableViewCellStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookThemeTableViewCellStyle1.m; sourceTree = "<group>"; };
+		CBC05FC51A7C710300CC4008 /* BookThemeTableViewCellStyle2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookThemeTableViewCellStyle2.h; sourceTree = "<group>"; };
+		CBC05FC61A7C710300CC4008 /* BookThemeTableViewCellStyle2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookThemeTableViewCellStyle2.m; sourceTree = "<group>"; };
+		CBC05FC81A7C76C100CC4008 /* BookTopicInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookTopicInfo.h; sourceTree = "<group>"; };
+		CBC05FC91A7C76C100CC4008 /* BookTopicInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookTopicInfo.m; sourceTree = "<group>"; };
 		CBE0043D1A78FB20001A2F42 /* HttpBookAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpBookAPI.h; sourceTree = "<group>"; };
 		CBE0043E1A78FB20001A2F42 /* HttpBookAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpBookAPI.m; sourceTree = "<group>"; };
 		CBE004401A78FB5F001A2F42 /* BookAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookAPI.h; sourceTree = "<group>"; };
@@ -639,11 +641,6 @@
 				1AD64688EC1876C19A332D96 /* Info.plist */,
 				EABA1EB71A76738A00A76BD2 /* gamehomeinfo.plist */,
 				CB6A21CD1A7007970087546F /* bookstorehome.plist */,
-				CB6A21CB1A6FFCC20087546F /* bookstorehome_test.json */,
-				CB6A221A1A765ABF0087546F /* bookdetail_test.json */,
-				CB6A22241A7673E60087546F /* booksearchresult_test.json */,
-				CB6A22261A7687A90087546F /* bookshelf_test.json */,
-				CB6A222B1A768D3B0087546F /* bookchapter_test.json */,
 			);
 			name = "Supporting Files";
 			path = abhegios;
@@ -786,6 +783,12 @@
 				CB6A21D31A711CEC0087546F /* BookStoreTableViewCellStyle3.m */,
 				CB6A21D51A712FBC0087546F /* BookStoreTableViewCellStyle4.h */,
 				CB6A21D61A712FBD0087546F /* BookStoreTableViewCellStyle4.m */,
+				CBC05FBF1A7C70A000CC4008 /* BookThemeTableViewController.h */,
+				CBC05FC01A7C70A000CC4008 /* BookThemeTableViewController.m */,
+				CBC05FC21A7C70F000CC4008 /* BookThemeTableViewCellStyle1.h */,
+				CBC05FC31A7C70F000CC4008 /* BookThemeTableViewCellStyle1.m */,
+				CBC05FC51A7C710300CC4008 /* BookThemeTableViewCellStyle2.h */,
+				CBC05FC61A7C710300CC4008 /* BookThemeTableViewCellStyle2.m */,
 				CBC05FB91A7A6B3800CC4008 /* BookHScrollViewCell1.h */,
 				CBC05FBA1A7A6B3800CC4008 /* BookHScrollViewCell1.m */,
 				CBC05FBC1A7A6FCD00CC4008 /* BookHScrollViewCell4.h */,
@@ -803,6 +806,8 @@
 				CB6A22091A749CE50087546F /* BookDetailInfo.m */,
 				CB6A22281A768CE80087546F /* BookChapterInfo.h */,
 				CB6A22291A768CE80087546F /* BookChapterInfo.m */,
+				CBC05FC81A7C76C100CC4008 /* BookTopicInfo.h */,
+				CBC05FC91A7C76C100CC4008 /* BookTopicInfo.m */,
 			);
 			path = Book;
 			sourceTree = "<group>";
@@ -1126,22 +1131,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB6A21F01A73C7430087546F /* BookInfoViewStyle2.xib in Resources */,
-				CB6A22251A7673E60087546F /* booksearchresult_test.json in Resources */,
 				EA3D07761A6CD9A600189765 /* Main.storyboard in Resources */,
 				EA3D07771A6CD9A600189765 /* LaunchScreen.xib in Resources */,
 				1AD6460C6803B48F071D6E89 /* Images.xcassets in Resources */,
 				EABA1EB81A76738A00A76BD2 /* gamehomeinfo.plist in Resources */,
 				EA75998F1A7120A50027FC8B /* appstorehome.plist in Resources */,
-				CB6A22271A7687AA0087546F /* bookshelf_test.json in Resources */,
 				1AD6407932CF4CF9417DEF43 /* Info.plist in Resources */,
 				EA89882E1A726A7000877E63 /* AppInfoViewStyle1.xib in Resources */,
 				EA8988381A72841B00877E63 /* AppInfoViewStyle3.xib in Resources */,
 				EA94767B1A79043200172D6E /* TableViewHeader.xib in Resources */,
-				CB6A21CC1A6FFCC20087546F /* bookstorehome_test.json in Resources */,
 				1AD64850016A35AAE41E0C11 /* TencentOpenAPI in Resources */,
 				EA88BFBC1A74E37F004885A0 /* recommendhome.plist in Resources */,
 				EA8C83311A731FFF00901CFC /* PageViewImageCell.xib in Resources */,
-				CB6A221B1A765ABF0087546F /* bookdetail_test.json in Resources */,
 				CB6A21E31A729F1E0087546F /* BookInfoViewStyle1.xib in Resources */,
 				1AD64049F3F7AA6F294AAE32 /* error.png in Resources */,
 				EA8C83331A7320B400901CFC /* PageViewImageCell1.xib in Resources */,
@@ -1155,7 +1156,6 @@
 				1AD6444BCD81D3E62537781A /* qqicon.png in Resources */,
 				1AD6470ECF340D8FC98FD7FD /* success.png in Resources */,
 				CB6A21E81A732F840087546F /* FavRateViewStyle.xib in Resources */,
-				CB6A222C1A768D3B0087546F /* bookchapter_test.json in Resources */,
 				CB6A21CE1A7007970087546F /* bookstorehome.plist in Resources */,
 				EA3D07791A6CDA2000189765 /* WeiboSDK.bundle in Resources */,
 			);
@@ -1170,6 +1170,7 @@
 			files = (
 				EABA1EE81A76844000A76BD2 /* AFPropertyListRequestOperation.m in Sources */,
 				CBE0043F1A78FB20001A2F42 /* HttpBookAPI.m in Sources */,
+				CBC05FC41A7C70F000CC4008 /* BookThemeTableViewCellStyle1.m in Sources */,
 				CBC05FBE1A7A6FCD00CC4008 /* BookHScrollViewCell4.m in Sources */,
 				EA7C910E1A77B6AF00782B8D /* HTTPReqeust.m in Sources */,
 				EABA1EB61A76705E00A76BD2 /* GameHomeInfo.m in Sources */,
@@ -1209,6 +1210,7 @@
 				CB6A21CA1A6FFAEF0087546F /* BookInfo.m in Sources */,
 				CBC05FB61A7A62DC00CC4008 /* BookInfoViewStyle4.m in Sources */,
 				EABA1EC91A7679F200A76BD2 /* AppDetailsViewController.m in Sources */,
+				CBC05FC71A7C710300CC4008 /* BookThemeTableViewCellStyle2.m in Sources */,
 				EA88BFAA1A748C2A004885A0 /* MusicInfo.m in Sources */,
 				EAA5DFE31A77D42E00CF9163 /* HttpOtherAPI.m in Sources */,
 				EA88BFB41A74CB76004885A0 /* RecommendViewController.m in Sources */,
@@ -1223,6 +1225,7 @@
 				CB6A22161A74C09E0087546F /* BookSearchResultTableViewCellStyle2.m in Sources */,
 				EA8D74991A6E9DC2004C17C2 /* AppTableViewCellStyle2.m in Sources */,
 				EA8988311A726EAA00877E63 /* AppInfoViewStyle1.m in Sources */,
+				CBC05FC11A7C70A000CC4008 /* BookThemeTableViewController.m in Sources */,
 				EA8D74931A6E7CF9004C17C2 /* AppTableViewCellStyle1.m in Sources */,
 				EABA1EE61A76844000A76BD2 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				1AD64565F18F3ED26CC48D25 /* UserInfo.m in Sources */,
@@ -1261,6 +1264,7 @@
 				EA88BFB71A74D022004885A0 /* GroupInfo.m in Sources */,
 				EA103C6A1A788A3B00FFF66E /* GameHomeTableViewCellStyle3.m in Sources */,
 				1AD64F3A04AFCBB948106908 /* AppInfo.m in Sources */,
+				CBC05FCA1A7C76C100CC4008 /* BookTopicInfo.m in Sources */,
 				EABA1EEB1A76844000A76BD2 /* UIImageView+AFNetworking.m in Sources */,
 				1AD645A28AA3934B882BD885 /* FoundItemInfo.m in Sources */,
 				EA94767E1A7904E200172D6E /* TableViewHeader.m in Sources */,
