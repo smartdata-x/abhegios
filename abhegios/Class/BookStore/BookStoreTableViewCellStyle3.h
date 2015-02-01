@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <OEZCommSDK/OEZCommSDK.h>
+#import "BookInfoViewStyle1.h"
 
 @protocol BookStoreTableViewCellStyle3Delegate <NSObject>
 - (void)cellItemClickedAtIndex:(NSInteger)index;

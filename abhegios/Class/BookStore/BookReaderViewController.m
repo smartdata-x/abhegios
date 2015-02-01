@@ -220,8 +220,8 @@
 }
 
 - (float)heightForAttributedString:(NSAttributedString *)srcstr Font:(UIFont *)font Frame:(CGRect)frame {
-    CGSize size = CGSizeMake(frame.size.width, MAXFLOAT);
-    CGRect labelSize = [srcstr boundingRectWithSize:size options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin context:nil];
+    CGSize size = CGSizeMake(CGRectGetWidth(frame), CGRectGetHeight(frame));
+    CGRect labelSize = [srcstr boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading context:nil];
     
     return labelSize.size.height;
 }
@@ -252,30 +252,38 @@
     }
 }
 
+- (int)getLineNumberAccordingToDevices {
+    int lineNumber = 12;
+    float screenHeight = kMainScreenHeight;
+    NSLog(@"screen height:%f", screenHeight);
+    if (screenHeight >= 480) lineNumber = 12;
+    if (screenHeight >= 568) lineNumber = 13;
+    if (screenHeight >= 667) lineNumber = 14;
+    return lineNumber;
+}
+
 - (void)configTextView {
-    float lineHeight = _fontSize * 2.0f;
-    float hPadding = 16.0f;
+    int lineNumber = [self getLineNumberAccordingToDevices];
     float readerFrameHeight = CGRectGetHeight(_readerView.frame);
-    float maxContentHeight = readerFrameHeight - hPadding;
-    int lines = maxContentHeight / lineHeight;
-    _pageHeight = lines * lineHeight + hPadding;
-    readerFrameHeight = _pageHeight + hPadding;
+    float oneRowHeight = readerFrameHeight / lineNumber;
+    float lineSpace = oneRowHeight - _fontSize;
     
-    NSMutableParagraphStyle *parastyle = [[NSMutableParagraphStyle alloc] init];
-    parastyle.lineHeightMultiple = 20;
-    parastyle.maximumLineHeight = lineHeight;
-    parastyle.minimumLineHeight = lineHeight;
-    parastyle.firstLineHeadIndent = 20;
-    parastyle.alignment = NSTextAlignmentJustified;
-    NSDictionary *attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:_fontSize], NSParagraphStyleAttributeName:parastyle, NSForegroundColorAttributeName:kUIColorWithRGB(0x111111)};
+    NSMutableParagraphStyle *paraStyle = [[NSMutableParagraphStyle alloc] init];
+    paraStyle.alignment = NSTextAlignmentJustified;
+    paraStyle.paragraphSpacing = 0.0f;
+    paraStyle.lineSpacing = lineSpace;
+    NSDictionary *attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:_fontSize], NSParagraphStyleAttributeName:paraStyle, NSForegroundColorAttributeName:kUIColorWithRGB(0x111111)};
     NSAttributedString *attribText = [[NSAttributedString alloc] initWithString:_bookContent attributes:attributes];
     _readerView.attributedText = attribText;
     
-    CGRect newFrame = CGRectMake(0, 0, CGRectGetWidth(_readerView.frame), MAXFLOAT);
-    float contentHeight = [self heightForAttributedString:attribText Font:_readerView.font Frame:newFrame];
-    newFrame = [_readerView frame];
-    newFrame.size.height = readerFrameHeight;
-    [_readerView setFrame:newFrame];
+    CGRect constrainsFrame = CGRectMake(0, 0, CGRectGetWidth(_readerView.frame), readerFrameHeight);
+    NSAttributedString *heightTestText = [[NSAttributedString alloc] initWithString:@"刘" attributes:attributes];
+    oneRowHeight = [self heightForAttributedString:heightTestText Font:_readerView.font Frame:constrainsFrame];
+    _pageHeight = oneRowHeight * (lineNumber - 1);
+    
+    constrainsFrame = CGRectMake(0, 0, CGRectGetWidth(_readerView.frame), MAXFLOAT);
+    float contentHeight = [self heightForAttributedString:attribText Font:_readerView.font Frame:constrainsFrame];
+    contentHeight = ceilf(contentHeight);
     _pageCount = ceilf(contentHeight / _pageHeight);
     
     // 配置其他标签显示
@@ -284,9 +292,10 @@
 }
 
 - (void)setContentOffsetAnimated:(BOOL)animate {
+    float pageHeightOffset = _currentPage * _pageHeight;
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.1f];
-    [_readerView setContentOffset:CGPointMake(0, _currentPage * _pageHeight)];
+    [_readerView setContentOffset:CGPointMake(0, pageHeightOffset)];
     [UIView commitAnimations];
 }
 

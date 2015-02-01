@@ -8,7 +8,6 @@
 
 #import "BookStoreTableViewCellStyle3.h"
 #import "BookInfo.h"
-#import "BookInfoViewStyle1.h"
 #import "BookInfoViewStyle4.h"
 #import "GroupInfo.h"
 #import "UIImageView+AFNetworking.h"
@@ -58,6 +57,7 @@
     }
     return nil;
 }
+
 
 - (void)hScrollView:(OEZHScrollView *)pageView didSelectColumnAtIndex:(NSInteger)columnIndex {
     [self didSelectRowColumn:columnIndex];
