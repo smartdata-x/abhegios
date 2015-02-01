@@ -16,6 +16,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *logo;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (nonatomic, retain) id<BookInfoViewStyle1Delegate> delegate;
+@property (nonatomic, retain) UIGestureRecognizer *tapGesture;
 - (void)setData:(id)data;
-- (void)didClicked:(UIGestureRecognizer *)gesture;
 @end

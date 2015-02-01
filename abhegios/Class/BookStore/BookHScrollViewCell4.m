@@ -25,6 +25,7 @@
 
 - (void)setData:(id)data {
     [_bookInfoView setData:data];
+    [_bookInfoView removeGestureRecognizer:_bookInfoView.mainInfoView.tapGesture];
 }
 
 - (void)layoutSubviews {

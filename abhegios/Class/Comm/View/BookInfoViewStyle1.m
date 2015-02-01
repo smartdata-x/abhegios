@@ -19,9 +19,9 @@
 - (void)setData:(id)data {
     [_name setText:[data name]];
     [_logo setImageWithStrURL:[BaseInfoAdapter getPic:data]];
-    
     UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didClicked:)];
-    [self addGestureRecognizer:gesture];
+    _tapGesture = gesture;
+    [self addGestureRecognizer:_tapGesture];
 }
 
 - (void)didClicked:(UIGestureRecognizer *)gesture {

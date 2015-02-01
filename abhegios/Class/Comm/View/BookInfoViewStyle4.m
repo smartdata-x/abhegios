@@ -16,6 +16,7 @@
 
 - (void)setData:(id)data {
     [_mainInfoView setData:data];
+    [_mainInfoView removeGestureRecognizer:_mainInfoView.tapGesture];
     NSString *follows = [NSString stringWithFormat:@"%ld关注", (long)[(BookInfo *)data follow]];
     [_summary setText:follows];
 }
