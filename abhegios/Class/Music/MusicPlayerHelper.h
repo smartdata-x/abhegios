@@ -15,4 +15,7 @@
 - (void)doNext;
 - (void)doStop;
 - (void)doPlay;
+
+- (void)setData:(NSArray *)musiclist;
+- (MusicRoomInfo *)getCurrentMusicInfo;
 @end

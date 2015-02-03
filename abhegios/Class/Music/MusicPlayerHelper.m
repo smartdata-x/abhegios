@@ -32,4 +32,12 @@
 - (void)doStop {
     [_musicPlayer doStop];
 }
+
+- (MusicRoomInfo *)getCurrentMusicInfo {
+    return [_musicList getCurrentMusicInfo];
+}
+
+- (void)setData:(NSArray *)musiclist {
+    [_musicList setMusicList:musiclist];
+}
 @end

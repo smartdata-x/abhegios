@@ -7,9 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MusicRoomInfo.h"
 
 @interface MusicList : NSObject
+@property (nonatomic, retain) NSArray *musicListArray;
+- (void)setMusicList:(NSArray *)musiclist;
 - (BOOL)isListEmpty;
-- (void)getNextMusicInfo;
-- (void)getPrevMusicInfo;
+- (MusicRoomInfo *)getNextMusicInfo;
+- (MusicRoomInfo *)getPrevMusicInfo;
+- (MusicRoomInfo *)getCurrentMusicInfo;
 @end

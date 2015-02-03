@@ -9,4 +9,42 @@
 #import "MusicList.h"
 
 @implementation MusicList
+{
+    NSInteger musicCount;
+    NSInteger currentMusicIndex;
+}
+
+- (void)setMusicList:(NSArray *)musiclist {
+    _musicListArray = musiclist;
+    currentMusicIndex = 0;
+    musicCount = [_musicListArray count];
+}
+
+- (MusicRoomInfo *)getCurrentMusicInfo {
+    if (currentMusicIndex < musicCount - 1 && currentMusicIndex >= 0) {
+        return [_musicListArray objectAtIndex:currentMusicIndex];
+    }
+    return nil;
+}
+
+- (MusicRoomInfo *)getNextMusicInfo {
+    if (currentMusicIndex >= musicCount - 1) {
+        return nil;
+    }
+    currentMusicIndex++;
+    return [self getCurrentMusicInfo];
+}
+
+- (MusicRoomInfo *)getPrevMusicInfo {
+    if (currentMusicIndex < 0) {
+        return nil;
+    }
+    currentMusicIndex--;
+    return [self getCurrentMusicInfo];
+}
+
+- (BOOL)isListEmpty {
+    return musicCount < 0;
+}
+
 @end
