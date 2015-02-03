@@ -946,7 +946,7 @@
         <!--Music Room View Controller-->
         <scene sceneID="bzw-3F-Vhp">
             <objects>
-                <viewController id="IYr-bQ-UIs" customClass="MusicRoomViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MusicRoomViewController" id="IYr-bQ-UIs" customClass="MusicRoomViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NtG-LV-TbJ"/>
                         <viewControllerLayoutGuide type="bottom" id="7J2-OG-jby"/>
@@ -961,7 +961,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uY5-pG-g53" customClass="MusicInfoViewStyle1">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uY5-pG-g53" customClass="MusicInfoViewStyle1">
                                 <rect key="frame" x="80" y="111" width="160" height="160"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -982,6 +982,9 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="uY5-pG-g53" secondAttribute="centerX" id="fdc-wD-mhG"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="love" destination="XIe-Fi-ZB9" id="VgV-Tl-ctO"/>

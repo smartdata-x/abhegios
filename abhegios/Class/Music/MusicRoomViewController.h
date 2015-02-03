@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "MusicInfoViewStyle1.h"
+#import "ReqeustDelegate.h"
+#import "MusicInfo.h"
 
-@interface MusicRoomViewController : UIViewController
+@interface MusicRoomViewController : UIViewController<ReqeustDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *summary;
 @property (weak, nonatomic) IBOutlet MusicInfoViewStyle1 *viewStyle1;

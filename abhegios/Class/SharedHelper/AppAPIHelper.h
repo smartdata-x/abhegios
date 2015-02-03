@@ -12,9 +12,11 @@
 #import "ApplyAPI.h"
 #import "OtherAPI.h"
 #import "BookAPI.h"
+#import "MusicAPI.h"
 @interface AppAPIHelper : NSObject<HelperProtocol>
 -(id<UserAPI>) getUserAPI;
 -(id<ApplyAPI>) getApplyAPI;
 -(id<OtherAPI>) getOtherAPI;
 -(id<BookAPI>) getBookAPI;
+-(id<MusicAPI>) getMusicAPI;
 @end

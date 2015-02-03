@@ -79,6 +79,9 @@
 		CBD81E451A7FA12C006E6604 /* MusicInfoViewStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD81E441A7FA12C006E6604 /* MusicInfoViewStyle1.m */; };
 		CBD81E471A7FAF4C006E6604 /* MusicInfoViewStyle1.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD81E461A7FAF4C006E6604 /* MusicInfoViewStyle1.xib */; };
 		CBD81E4A1A80EB7B006E6604 /* MusicRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD81E491A80EB7B006E6604 /* MusicRoomViewController.m */; };
+		CBD81E4E1A80FD6E006E6604 /* MusicRoomInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD81E4D1A80FD6E006E6604 /* MusicRoomInfo.m */; };
+		CBD81E501A80FEC9006E6604 /* musicroom.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBD81E4F1A80FEC9006E6604 /* musicroom.plist */; };
+		CBD81E541A8100A2006E6604 /* HttpMusicAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD81E531A8100A2006E6604 /* HttpMusicAPI.m */; };
 		CBE0043F1A78FB20001A2F42 /* HttpBookAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE0043E1A78FB20001A2F42 /* HttpBookAPI.m */; };
 		EA103C671A7889F200FFF66E /* GameHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C651A7889F200FFF66E /* GameHomeViewController.m */; };
 		EA103C6A1A788A3B00FFF66E /* GameHomeTableViewCellStyle3.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C691A788A3B00FFF66E /* GameHomeTableViewCellStyle3.m */; };
@@ -305,6 +308,12 @@
 		CBD81E461A7FAF4C006E6604 /* MusicInfoViewStyle1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicInfoViewStyle1.xib; sourceTree = SOURCE_ROOT; };
 		CBD81E481A80EB7B006E6604 /* MusicRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicRoomViewController.h; sourceTree = "<group>"; };
 		CBD81E491A80EB7B006E6604 /* MusicRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicRoomViewController.m; sourceTree = "<group>"; };
+		CBD81E4C1A80FD6E006E6604 /* MusicRoomInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicRoomInfo.h; sourceTree = "<group>"; };
+		CBD81E4D1A80FD6E006E6604 /* MusicRoomInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicRoomInfo.m; sourceTree = "<group>"; };
+		CBD81E4F1A80FEC9006E6604 /* musicroom.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = musicroom.plist; sourceTree = "<group>"; };
+		CBD81E511A810013006E6604 /* MusicAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicAPI.h; sourceTree = "<group>"; };
+		CBD81E521A8100A2006E6604 /* HttpMusicAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpMusicAPI.h; sourceTree = "<group>"; };
+		CBD81E531A8100A2006E6604 /* HttpMusicAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpMusicAPI.m; sourceTree = "<group>"; };
 		CBE0043D1A78FB20001A2F42 /* HttpBookAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpBookAPI.h; sourceTree = "<group>"; };
 		CBE0043E1A78FB20001A2F42 /* HttpBookAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpBookAPI.m; sourceTree = "<group>"; };
 		CBE004401A78FB5F001A2F42 /* BookAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookAPI.h; sourceTree = "<group>"; };
@@ -665,6 +674,7 @@
 				1AD64688EC1876C19A332D96 /* Info.plist */,
 				EABA1EB71A76738A00A76BD2 /* gamehomeinfo.plist */,
 				CB6A21CD1A7007970087546F /* bookstorehome.plist */,
+				CBD81E4F1A80FEC9006E6604 /* musicroom.plist */,
 			);
 			name = "Supporting Files";
 			path = abhegios;
@@ -772,6 +782,7 @@
 		1AD64E767514ABADB117A29B /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				CBD81E4B1A80FD4E006E6604 /* Music */,
 				EA9C300A1A7788C8002EFF35 /* APIRequest */,
 				EABA1EB31A76702200A76BD2 /* Game */,
 				EA88BFAB1A749037004885A0 /* Movie */,
@@ -932,6 +943,15 @@
 			name = MusicPlayerCore;
 			sourceTree = "<group>";
 		};
+		CBD81E4B1A80FD4E006E6604 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				CBD81E4C1A80FD6E006E6604 /* MusicRoomInfo.h */,
+				CBD81E4D1A80FD6E006E6604 /* MusicRoomInfo.m */,
+			);
+			name = Music;
+			sourceTree = "<group>";
+		};
 		EA103C641A7889AC00FFF66E /* Game */ = {
 			isa = PBXGroup;
 			children = (
@@ -1018,6 +1038,7 @@
 				EA9C2FF61A778362002EFF35 /* ApplyAPI.h */,
 				EAA5DFE01A77D3F300CF9163 /* OtherAPI.h */,
 				CBE004401A78FB5F001A2F42 /* BookAPI.h */,
+				CBD81E511A810013006E6604 /* MusicAPI.h */,
 			);
 			path = AppAPI;
 			sourceTree = "<group>";
@@ -1035,6 +1056,8 @@
 				EAA5DFE21A77D42E00CF9163 /* HttpOtherAPI.m */,
 				CBE0043D1A78FB20001A2F42 /* HttpBookAPI.h */,
 				CBE0043E1A78FB20001A2F42 /* HttpBookAPI.m */,
+				CBD81E521A8100A2006E6604 /* HttpMusicAPI.h */,
+				CBD81E531A8100A2006E6604 /* HttpMusicAPI.m */,
 			);
 			path = HttpAPI;
 			sourceTree = "<group>";
@@ -1203,6 +1226,7 @@
 				EA7599931A7120CB0027FC8B /* uifounddata.plist in Resources */,
 				EA103C721A788C5600FFF66E /* GameHScrollViewCell.xib in Resources */,
 				CBD81E471A7FAF4C006E6604 /* MusicInfoViewStyle1.xib in Resources */,
+				CBD81E501A80FEC9006E6604 /* musicroom.plist in Resources */,
 				CBC05FB81A7A638200CC4008 /* BookInfoViewStyle4.xib in Resources */,
 				EA75998E1A7120A50027FC8B /* uilogindata.plist in Resources */,
 				1AD64077DE8389AC54925C71 /* Info.plist in Resources */,
@@ -1301,11 +1325,13 @@
 				CB6A21C01A6FF5600087546F /* BookStoreTableViewCellStyle1.m in Sources */,
 				CB6A22011A73DC440087546F /* BookDetailInfoTableViewCellStyle4.m in Sources */,
 				EA9C2FEB1A772561002EFF35 /* AppHScrollViewCell1.m in Sources */,
+				CBD81E541A8100A2006E6604 /* HttpMusicAPI.m in Sources */,
 				CB6A222A1A768CE80087546F /* BookChapterInfo.m in Sources */,
 				CBD81E3C1A7F9A96006E6604 /* MusicList.m in Sources */,
 				1AD64625B4F594E287714029 /* QQLogin.m in Sources */,
 				CB6A22101A74B4C10087546F /* BookDirectoryTableViewController.m in Sources */,
 				EABA1EE71A76844000A76BD2 /* AFNetworkReachabilityManager.m in Sources */,
+				CBD81E4E1A80FD6E006E6604 /* MusicRoomInfo.m in Sources */,
 				EABA1ECA1A7679F200A76BD2 /* AppDetailsTableViewCellStyle4.m in Sources */,
 				EA103C701A788C3600FFF66E /* GameHScrollViewCell.m in Sources */,
 				1AD6419EC3E465BEDDED654B /* WXLogin.m in Sources */,

@@ -28,7 +28,7 @@
 	</dict>
 	<dict>
 		<key>identifier</key>
-		<string></string>
+		<string>MusicRoomViewController</string>
 		<key>title</key>
 		<string>音乐</string>
 		<key>icon</key>
