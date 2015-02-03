@@ -56,9 +56,9 @@
         BookInfo *bookinfo = [[[_bookShelfGroups objectAtIndex:BookShelfTypeList] entitys] objectAtIndex:i];
         BookInfoViewStyle1 *bookitem = [BookInfoViewStyle1 loadFromNib];
         [bookitem setFrame:CGRectMake(x*(kBookItemWidth + gap), y*kBookShelfCellHeight, kBookItemWidth, kBookShelfCellHeight)];
-        bookinfo.name = @""; // 此处不需要显示书名
         [bookitem setData:bookinfo];
         [bookitem setTag:i];
+        [bookitem.name setHidden:YES];
         bookitem.delegate = self;
         [bookShelfView addSubview:bookitem];
     }

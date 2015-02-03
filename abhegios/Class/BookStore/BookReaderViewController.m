@@ -255,7 +255,6 @@
 - (int)getLineNumberAccordingToDevices {
     int lineNumber = 12;
     float screenHeight = kMainScreenHeight;
-    NSLog(@"screen height:%f", screenHeight);
     if (screenHeight >= 480) lineNumber = 12;
     if (screenHeight >= 568) lineNumber = 13;
     if (screenHeight >= 667) lineNumber = 14;
