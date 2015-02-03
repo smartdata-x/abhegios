@@ -48,12 +48,14 @@
 }
 
 - (void)addViewItem:(NSUInteger)count {
+    float gap = (CGRectGetWidth(bookShelfView.frame) - kBookItemWidth * 3) / 2;
+    gap = gap > 0.0 ? gap : 0.0;
     for (int i=0; i<count; i++) {
         float x = i % 3;
         float y = i / 3;
         BookInfo *bookinfo = [[[_bookShelfGroups objectAtIndex:BookShelfTypeList] entitys] objectAtIndex:i];
         BookInfoViewStyle1 *bookitem = [BookInfoViewStyle1 loadFromNib];
-        [bookitem setFrame:CGRectMake(x*kBookItemWidth, y*kBookShelfCellHeight, kBookItemWidth, kBookShelfCellHeight)];
+        [bookitem setFrame:CGRectMake(x*(kBookItemWidth + gap), y*kBookShelfCellHeight, kBookItemWidth, kBookShelfCellHeight)];
         bookinfo.name = @""; // 此处不需要显示书名
         [bookitem setData:bookinfo];
         [bookitem setTag:i];

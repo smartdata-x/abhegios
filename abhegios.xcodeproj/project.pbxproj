@@ -78,6 +78,7 @@
 		CBD81E421A7F9F24006E6604 /* MusicFMTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD81E411A7F9F24006E6604 /* MusicFMTableViewCellStyle1.m */; };
 		CBD81E451A7FA12C006E6604 /* MusicInfoViewStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD81E441A7FA12C006E6604 /* MusicInfoViewStyle1.m */; };
 		CBD81E471A7FAF4C006E6604 /* MusicInfoViewStyle1.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD81E461A7FAF4C006E6604 /* MusicInfoViewStyle1.xib */; };
+		CBD81E4A1A80EB7B006E6604 /* MusicRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD81E491A80EB7B006E6604 /* MusicRoomViewController.m */; };
 		CBE0043F1A78FB20001A2F42 /* HttpBookAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE0043E1A78FB20001A2F42 /* HttpBookAPI.m */; };
 		EA103C671A7889F200FFF66E /* GameHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C651A7889F200FFF66E /* GameHomeViewController.m */; };
 		EA103C6A1A788A3B00FFF66E /* GameHomeTableViewCellStyle3.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C691A788A3B00FFF66E /* GameHomeTableViewCellStyle3.m */; };
@@ -302,6 +303,8 @@
 		CBD81E431A7FA12C006E6604 /* MusicInfoViewStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicInfoViewStyle1.h; sourceTree = "<group>"; };
 		CBD81E441A7FA12C006E6604 /* MusicInfoViewStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicInfoViewStyle1.m; sourceTree = "<group>"; };
 		CBD81E461A7FAF4C006E6604 /* MusicInfoViewStyle1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicInfoViewStyle1.xib; sourceTree = SOURCE_ROOT; };
+		CBD81E481A80EB7B006E6604 /* MusicRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicRoomViewController.h; sourceTree = "<group>"; };
+		CBD81E491A80EB7B006E6604 /* MusicRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicRoomViewController.m; sourceTree = "<group>"; };
 		CBE0043D1A78FB20001A2F42 /* HttpBookAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpBookAPI.h; sourceTree = "<group>"; };
 		CBE0043E1A78FB20001A2F42 /* HttpBookAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpBookAPI.m; sourceTree = "<group>"; };
 		CBE004401A78FB5F001A2F42 /* BookAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookAPI.h; sourceTree = "<group>"; };
@@ -910,6 +913,8 @@
 				CBD81E341A7F98DD006E6604 /* MusicFMTableViewController.m */,
 				CBD81E401A7F9F24006E6604 /* MusicFMTableViewCellStyle1.h */,
 				CBD81E411A7F9F24006E6604 /* MusicFMTableViewCellStyle1.m */,
+				CBD81E481A80EB7B006E6604 /* MusicRoomViewController.h */,
+				CBD81E491A80EB7B006E6604 /* MusicRoomViewController.m */,
 			);
 			path = Music;
 			sourceTree = "<group>";
@@ -1269,6 +1274,7 @@
 				1AD64903B17F5D12DC09D1BB /* ThirdLoginInfo.m in Sources */,
 				EA9C2FEF1A776C0A002EFF35 /* AppAPIHelper.m in Sources */,
 				CB6A22041A73DF160087546F /* BookDetailInfoTableViewCellStyle5.m in Sources */,
+				CBD81E4A1A80EB7B006E6604 /* MusicRoomViewController.m in Sources */,
 				EA3D07731A6CD88A00189765 /* LoginViewController.m in Sources */,
 				EABA1ECB1A7679F200A76BD2 /* AppDetailsTableViewCellStyle2.m in Sources */,
 				CB6A21EB1A73C57C0087546F /* BookDetailInfoTableViewController.m in Sources */,

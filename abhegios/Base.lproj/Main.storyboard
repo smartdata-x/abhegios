@@ -943,6 +943,59 @@
             </objects>
             <point key="canvasLocation" x="7942" y="59"/>
         </scene>
+        <!--Music Room View Controller-->
+        <scene sceneID="bzw-3F-Vhp">
+            <objects>
+                <viewController id="IYr-bQ-UIs" customClass="MusicRoomViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NtG-LV-TbJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="7J2-OG-jby"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k5L-rX-Fee">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="钻石糖 - 萧亚轩" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjG-Do-ZfI">
+                                <rect key="frame" x="10" y="40" width="300" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uY5-pG-g53" customClass="MusicInfoViewStyle1">
+                                <rect key="frame" x="80" y="111" width="160" height="160"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="华语流行" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nj-ac-wtq">
+                                <rect key="frame" x="10" y="310" width="300" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="love_icon" translatesAutoresizingMaskIntoConstraints="NO" id="XIe-Fi-ZB9">
+                                <rect key="frame" x="146" y="396" width="28" height="28"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="next_icon" translatesAutoresizingMaskIntoConstraints="NO" id="hKH-ws-G1s">
+                                <rect key="frame" x="232" y="396" width="28" height="28"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="trash_icon" translatesAutoresizingMaskIntoConstraints="NO" id="tMU-o8-pFS">
+                                <rect key="frame" x="60" y="396" width="28" height="28"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="love" destination="XIe-Fi-ZB9" id="VgV-Tl-ctO"/>
+                        <outlet property="name" destination="KjG-Do-ZfI" id="TL3-P2-Fgh"/>
+                        <outlet property="next" destination="hKH-ws-G1s" id="afu-j1-FkP"/>
+                        <outlet property="summary" destination="5nj-ac-wtq" id="eoX-R2-M6b"/>
+                        <outlet property="trash" destination="tMU-o8-pFS" id="4Fz-Fz-e7q"/>
+                        <outlet property="viewStyle1" destination="uY5-pG-g53" id="z6R-lA-53R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ij8-bt-cBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7287" y="781"/>
+        </scene>
         <!--我的FM-->
         <scene sceneID="IjL-go-iIS">
             <objects>
@@ -1074,8 +1127,11 @@
         <image name="app-icon-default" width="53" height="53"/>
         <image name="big_shade" width="277" height="112"/>
         <image name="found_ico" width="23" height="22"/>
+        <image name="love_icon" width="26" height="25"/>
         <image name="my_ico" width="23" height="22"/>
+        <image name="next_icon" width="26" height="25"/>
         <image name="recommend_ico" width="23" height="22"/>
+        <image name="trash_icon" width="26" height="25"/>
         <image name="wifi_ico" width="23" height="22"/>
     </resources>
 </document>

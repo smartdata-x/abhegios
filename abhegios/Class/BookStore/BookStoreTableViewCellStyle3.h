@@ -14,7 +14,7 @@
 - (void)cellItemClickedAtIndex:(NSInteger)index;
 @end
 
-@interface BookStoreTableViewCellStyle3 : OEZTableViewHScrollCell<OEZHScrollViewDelegate>
+@interface BookStoreTableViewCellStyle3 : OEZTableViewHScrollCell<OEZHScrollViewDelegate, BookInfoViewStyle1Delegate>
 @property NSInteger cellStyle;
 @property (nonatomic, assign) id <BookStoreTableViewCellStyle3Delegate> delegate;
 - (void)setShowParameters:(NSInteger)style;

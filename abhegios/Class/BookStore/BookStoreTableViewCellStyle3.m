@@ -52,6 +52,7 @@
         if (cell == nil) {
             cell = [[BookHScrollViewCell1 alloc] initWithReuseIdentifier:identifier];
         }
+        cell.tag = [[self subviews] count];
         [cell setData:[self.data objectAtIndex:columnIndex]];
         return cell;
     }
@@ -62,7 +63,6 @@
 - (void)hScrollView:(OEZHScrollView *)pageView didSelectColumnAtIndex:(NSInteger)columnIndex {
     [self didSelectRowColumn:columnIndex];
     if ([_delegate respondsToSelector:@selector(cellItemClickedAtIndex:)]) {
-        //UIButton *btn = (UIButton *)sender;
         [_delegate cellItemClickedAtIndex:columnIndex];
     }
 }
@@ -72,6 +72,10 @@
         UIButton *btn = (UIButton *)sender;
         [_delegate cellItemClickedAtIndex:btn.tag];
     }
+}
+
+- (void)didBookInfoViewStyle1Clicked:(id)bookInfoView {
+    
 }
 
 @end
