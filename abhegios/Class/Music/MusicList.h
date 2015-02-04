@@ -10,7 +10,7 @@
 #import "MusicRoomInfo.h"
 
 @interface MusicList : NSObject
-@property (nonatomic, retain) NSArray *musicListArray;
+@property (nonatomic, retain) NSMutableArray *musicListArray;
 - (void)setMusicList:(NSArray *)musiclist;
 - (BOOL)isListEmpty;
 - (MusicRoomInfo *)getNextMusicInfo;

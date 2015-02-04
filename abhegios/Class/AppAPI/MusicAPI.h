@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 #import "ReqeustDelegate.h"
 @protocol MusicAPI <NSObject>
-- (void)getMusicDimension;
+- (void)getMusicDimension:(id<ReqeustDelegate>) delegate Dimension:(NSString *)dimension Sid:(NSInteger)sid;
 @end

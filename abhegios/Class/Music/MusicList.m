@@ -15,8 +15,10 @@
 }
 
 - (void)setMusicList:(NSArray *)musiclist {
-    _musicListArray = musiclist;
-    currentMusicIndex = 0;
+    if (_musicListArray == nil) {
+        _musicListArray = [[NSMutableArray alloc] init];
+    }
+    [_musicListArray addObjectsFromArray:musiclist];
     musicCount = [_musicListArray count];
 }
 

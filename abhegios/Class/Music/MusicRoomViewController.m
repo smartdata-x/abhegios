@@ -7,10 +7,12 @@
 //
 
 #import "MusicRoomViewController.h"
+#import "GroupInfo.h"
 #import "AppAPIHelper.h"
 #import "MusicPlayerHelper.h"
+
 @interface MusicRoomViewController ()
-@property (nonatomic, retain) MusicPlayerHelper *playerHelper;
+//@property (nonatomic, retain) MusicPlayerHelper *playerHelper;
 @end
 
 @implementation MusicRoomViewController
@@ -19,16 +21,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[[AppAPIHelper shared] getMusicAPI] getMusicDimension];
-    _playerHelper = [[MusicPlayerHelper alloc] init];
 }
 
-- (void)finishLoadData {
-    [self updateScreen];
+- (void)viewDidAppear:(BOOL)animated {
+    [PlayerInstance refreshMusicList];
 }
 
 - (void)updateScreen {
-    MusicRoomInfo *currentInfo = [_playerHelper getCurrentMusicInfo];
+    MusicRoomInfo *currentInfo = [PlayerInstance getCurrentMusicInfo];
     NSString *nameArtist = [NSString stringWithFormat:@"%@ - %@", currentInfo.name, currentInfo.artist];
     [_name setText:nameArtist];
 }
@@ -37,13 +37,18 @@
     
 }
 
-- (void)reqeust:(id)reqeust didComplete:(id)data {
-    [_playerHelper setData:data];
-    [self performSelector:@selector(finishLoadData) withObject:nil afterDelay:0.25];
+- (IBAction)doNext:(id)sender {
+    [PlayerInstance doNext];
+    [self updateScreen];
 }
 
-- (void)reqeust:(id)reqeust didError:(NSError *)err {
-    NSLog(@"%@", err);
+- (IBAction)doTrash:(id)sender {
+    [self.navigationController pushViewControllerWithIdentifier:@"MusicFMTableViewController" completion:^(UIViewController *viewController) {
+    } animated:YES];
+}
+
+- (IBAction)doLove:(id)sender {
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,11 +7,34 @@
 //
 
 #import "MusicPlayerHelper.h"
-
+#import "GroupInfo.h"
+#import "MusicRoomInfo.h"
+#import "AppAPIHelper.h"
 @implementation MusicPlayerHelper
 {
-    MusicList *_musicList;
-    MusicPlayer *_musicPlayer;
+}
+
++(instancetype)shared{
+    static id sharedHelper = nil;
+    static dispatch_once_t predicate;
+    dispatch_once(&predicate, ^{
+        sharedHelper = [[self alloc] init];
+        MusicPlayerHelper *instance = (MusicPlayerHelper *)sharedHelper;
+        instance.musicList = [[MusicList alloc] init];
+        instance.musicPlayer = [[MusicPlayer alloc] init];
+        instance.dimension = @"chl";
+        instance.sid = 1;
+    });
+    return sharedHelper;
+}
+
+- (void)refreshMusicList {
+    [[[AppAPIHelper shared] getMusicAPI] getMusicDimension:self Dimension:_dimension Sid:_sid];
+}
+
+- (void)setMusicParams:(NSString *)dimension Sid:(NSInteger)sid {
+    _dimension = dimension;
+    _sid = sid;
 }
 
 - (BOOL)isPlaying {
@@ -20,8 +43,13 @@
 
 - (void)doNext {
     if (![_musicList isListEmpty]) {
-        [_musicList getNextMusicInfo];
-        [_musicPlayer doPlay];
+        MusicRoomInfo *nextMusicInfo = [_musicList getNextMusicInfo];
+        if (nextMusicInfo == nil) {
+            [self refreshMusicList];
+        }
+        else {
+            [_musicPlayer doPlay];
+        }
     }
 }
 
@@ -40,4 +68,18 @@
 - (void)setData:(NSArray *)musiclist {
     [_musicList setMusicList:musiclist];
 }
+
+- (void)finishLoadData {
+    
+}
+
+- (void)reqeust:(id)reqeust didComplete:(id)data {
+    [self setData:[[data objectAtIndex:0] entitys]];
+    [self performSelector:@selector(finishLoadData) withObject:nil afterDelay:0.25];
+}
+
+- (void)reqeust:(id)reqeust didError:(NSError *)err {
+    NSLog(@"%@", err);
+}
+
 @end
