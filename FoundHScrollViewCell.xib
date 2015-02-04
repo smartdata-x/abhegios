@@ -11,27 +11,24 @@
             <rect key="frame" x="0.0" y="0.0" width="160" height="90"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="s_banner" translatesAutoresizingMaskIntoConstraints="NO" id="3wq-5q-rVZ">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3wq-5q-rVZ">
                     <rect key="frame" x="5" y="5" width="150" height="80"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="80" id="DiL-9v-x4e"/>
-                        <constraint firstAttribute="width" constant="150" id="M3b-zF-s1j"/>
-                    </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="centerX" secondItem="3wq-5q-rVZ" secondAttribute="centerX" id="xcy-TV-LL1"/>
+                <constraint firstItem="3wq-5q-rVZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="HXs-8a-PcR"/>
+                <constraint firstAttribute="trailing" secondItem="3wq-5q-rVZ" secondAttribute="trailing" constant="5" id="LGR-Gx-85d"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageView" destination="3wq-5q-rVZ" id="GYP-i3-VV9"/>
+            </connections>
         </view>
     </objects>
-    <resources>
-        <image name="s_banner" width="320" height="80"/>
-    </resources>
 </document>

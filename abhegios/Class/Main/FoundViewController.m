@@ -11,6 +11,7 @@
 #import "NSString+NSStringCategory.h"
 #import <OEZCommSDK/OEZCommSDK.h>
 #import "SearchView.h"
+#import "FundTableViewHeader.h"
 @interface FoundViewController ()
 {
     NSArray * _foundItemInfos;
@@ -24,7 +25,7 @@
     [super viewDidLoad];
     _foundItemInfos =[FoundItemInfo initWithsPlistResource:@"uifounddata" ofType:@"plist"];
     _searchView = [SearchView loadFromNib];
-    [self.tableView setTableHeaderView:_searchView];
+    [self.tableView setTableHeaderView:[FundTableViewHeader loadFromNib]];
 
 }
 
@@ -39,17 +40,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if( section == 0)
-        return [_foundItemInfos count] +1;
+        return [_foundItemInfos count];
     return 0;
-}
-
--(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.section == 0 && indexPath.row == 0)
-    {
-        return 90;
-    }
-    return 44;
 }
 
 
@@ -58,16 +50,9 @@
     UITableViewCell *viewCell = [tableView dequeueReusableCellWithIdentifier:@"FoundTableViewCell"];
     if (indexPath.section == 0)
     {
-        if ( indexPath.row == 0 ) {
-            viewCell = [tableView dequeueReusableCellWithIdentifier:@"FoundTableViewCell1"];
-            [(OEZTableViewCell*)viewCell setData:nil];
-        }
-        else
-        {
-            FoundItemInfo *foundItemInfo = [_foundItemInfos objectAtIndex:indexPath.row-1];
-            [[viewCell textLabel] setText:[foundItemInfo title]];
-            [[viewCell imageView] setImage:[UIImage imageNamed:[foundItemInfo icon]]];
-        }
+        FoundItemInfo *foundItemInfo = [_foundItemInfos objectAtIndex:indexPath.row];
+        [[viewCell textLabel] setText:[foundItemInfo title]];
+        [[viewCell imageView] setImage:[UIImage imageNamed:[foundItemInfo icon]]];
 
     }
     return viewCell;
@@ -75,9 +60,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if ([indexPath section] == 0 && [indexPath row] > 0 )
+    if ([indexPath section] == 0)
     {
-        NSString *identifier = [[_foundItemInfos objectAtIndex:[indexPath row]-1] identifier];
+        NSString *identifier = [[_foundItemInfos objectAtIndex:[indexPath row]] identifier];
         if (  [identifier isNotEmpty] ) {
             [self.tabBarController.navigationController pushViewControllerWithIdentifier:identifier completion:^(UIViewController *viewController) {
                 NSLog(@"%@",viewController);

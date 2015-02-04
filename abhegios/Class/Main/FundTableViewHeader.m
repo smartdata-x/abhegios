@@ -1,14 +1,26 @@
 //
-//  FoundTableViewCell1.m
+//  FundTableViewHeader.m
 //  abhegios
 //
 //  Created by 180 on 15/2/4.
 //  Copyright (c) 2015年 180. All rights reserved.
 //
 
-#import "FoundTableViewCell1.h"
+#import "FundTableViewHeader.h"
 
-@implementation FoundTableViewCell1
+@implementation FundTableViewHeader
+
+-(void) awakeFromNib
+{
+    [super awakeFromNib];
+    [_hScrollView setDelegate:self];
+    [_hScrollView setScrollEnabled:NO];
+    [_hScrollView reloadData];
+    CALayer *layer = [[CALayer alloc] init];
+    [layer setFrame:CGRectMake(0, CGRectGetHeight([_searchView frame]), kMainScreenWidth, 0.5)];
+    [layer setBackgroundColor:[[UIColor colorWithWhite:0.5 alpha:0.5] CGColor]];
+    [_searchView.layer addSublayer:layer];
+}
 
 
 
@@ -27,10 +39,5 @@
     static NSString *identifier = @"FoundHScrollViewCell";
     OEZHScrollViewCell *cell = [hScrollView dequeueReusableCellWithIdentifier:identifier];
     return cell;
-}
-
--(void) setData:(id)data
-{
-    [self.hScrollView reloadData];
 }
 @end
