@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#define ROTATION_ANGLE   0.01
+#define DEGREES_2_RADIANS(x) (0.0174532925 * (x))
 
 @interface MusicInfoViewStyle1 : OEZNibView
 @property (weak, nonatomic) IBOutlet UIImageView *logo;
+@property (weak, nonatomic) IBOutlet UIImageView *progress;
+- (void)setData:(id)data;
 @end

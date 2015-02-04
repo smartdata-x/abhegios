@@ -21,6 +21,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    CGRect frame = [_viewStyle1 frame];
+    [_viewStyle1 setFrame:CGRectMake(frame.origin.x, frame.origin.y, 120, 120)];
+    [_viewStyle1 setData:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
