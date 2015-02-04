@@ -143,9 +143,10 @@
 		EA9C5D501A79BBC800B7AACA /* NSString+NSStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9C5D4E1A79BBC800B7AACA /* NSString+NSStringCategory.m */; };
 		EA9F28CF1A823A33002B09C1 /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9F28CE1A823A33002B09C1 /* SearchView.xib */; };
 		EA9F28D21A823BA7002B09C1 /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9F28D11A823BA7002B09C1 /* SearchView.m */; };
-		EA9F28D51A8253EA002B09C1 /* FoundTableViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9F28D41A8253EA002B09C1 /* FoundTableViewCell1.m */; };
 		EA9F28D71A8254F8002B09C1 /* FoundHScrollViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9F28D61A8254F8002B09C1 /* FoundHScrollViewCell.xib */; };
 		EA9F28DA1A825589002B09C1 /* FoundHScrollViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9F28D91A825589002B09C1 /* FoundHScrollViewCell.m */; };
+		EA9F28DC1A825A4A002B09C1 /* FundTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9F28DB1A825A4A002B09C1 /* FundTableViewHeader.xib */; };
+		EA9F28DF1A825A82002B09C1 /* FundTableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9F28DE1A825A82002B09C1 /* FundTableViewHeader.m */; };
 		EAA454441A70DEAF0057A770 /* OEZCommSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA454431A70DEAF0057A770 /* OEZCommSDK.framework */; };
 		EAA5DFE31A77D42E00CF9163 /* HttpOtherAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA5DFE21A77D42E00CF9163 /* HttpOtherAPI.m */; };
 		EAA5DFE61A77DE7200CF9163 /* RefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA5DFE51A77DE7200CF9163 /* RefreshTableViewController.m */; };
@@ -417,11 +418,12 @@
 		EA9F28CE1A823A33002B09C1 /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = SOURCE_ROOT; };
 		EA9F28D01A823BA7002B09C1 /* SearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
 		EA9F28D11A823BA7002B09C1 /* SearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
-		EA9F28D31A8253EA002B09C1 /* FoundTableViewCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundTableViewCell1.h; sourceTree = "<group>"; };
-		EA9F28D41A8253EA002B09C1 /* FoundTableViewCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundTableViewCell1.m; sourceTree = "<group>"; };
 		EA9F28D61A8254F8002B09C1 /* FoundHScrollViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoundHScrollViewCell.xib; sourceTree = SOURCE_ROOT; };
 		EA9F28D81A825589002B09C1 /* FoundHScrollViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundHScrollViewCell.h; sourceTree = "<group>"; };
 		EA9F28D91A825589002B09C1 /* FoundHScrollViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundHScrollViewCell.m; sourceTree = "<group>"; };
+		EA9F28DB1A825A4A002B09C1 /* FundTableViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FundTableViewHeader.xib; sourceTree = SOURCE_ROOT; };
+		EA9F28DD1A825A82002B09C1 /* FundTableViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FundTableViewHeader.h; sourceTree = "<group>"; };
+		EA9F28DE1A825A82002B09C1 /* FundTableViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FundTableViewHeader.m; sourceTree = "<group>"; };
 		EAA454431A70DEAF0057A770 /* OEZCommSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OEZCommSDK.framework; sourceTree = "<group>"; };
 		EAA5DFE01A77D3F300CF9163 /* OtherAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherAPI.h; sourceTree = "<group>"; };
 		EAA5DFE11A77D42E00CF9163 /* HttpOtherAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpOtherAPI.h; sourceTree = "<group>"; };
@@ -541,10 +543,10 @@
 				EA54A1161A6E0E6100322C42 /* FoundViewController.m */,
 				EA88BFB21A74CB76004885A0 /* RecommendViewController.h */,
 				EA88BFB31A74CB76004885A0 /* RecommendViewController.m */,
-				EA9F28D31A8253EA002B09C1 /* FoundTableViewCell1.h */,
-				EA9F28D41A8253EA002B09C1 /* FoundTableViewCell1.m */,
 				EA9F28D81A825589002B09C1 /* FoundHScrollViewCell.h */,
 				EA9F28D91A825589002B09C1 /* FoundHScrollViewCell.m */,
+				EA9F28DD1A825A82002B09C1 /* FundTableViewHeader.h */,
+				EA9F28DE1A825A82002B09C1 /* FundTableViewHeader.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -745,6 +747,7 @@
 				CBD81E461A7FAF4C006E6604 /* MusicInfoViewStyle1.xib */,
 				EA9F28CE1A823A33002B09C1 /* SearchView.xib */,
 				EA9F28D61A8254F8002B09C1 /* FoundHScrollViewCell.xib */,
+				EA9F28DB1A825A4A002B09C1 /* FundTableViewHeader.xib */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -1239,6 +1242,7 @@
 				EA89882E1A726A7000877E63 /* AppInfoViewStyle1.xib in Resources */,
 				EA8988381A72841B00877E63 /* AppInfoViewStyle3.xib in Resources */,
 				EA94767B1A79043200172D6E /* TableViewHeader.xib in Resources */,
+				EA9F28DC1A825A4A002B09C1 /* FundTableViewHeader.xib in Resources */,
 				1AD64850016A35AAE41E0C11 /* TencentOpenAPI in Resources */,
 				EA88BFBC1A74E37F004885A0 /* recommendhome.plist in Resources */,
 				EA8C83311A731FFF00901CFC /* PageViewImageCell.xib in Resources */,
@@ -1272,6 +1276,7 @@
 			files = (
 				EABA1EE81A76844000A76BD2 /* AFPropertyListRequestOperation.m in Sources */,
 				CBE0043F1A78FB20001A2F42 /* HttpBookAPI.m in Sources */,
+				EA9F28DF1A825A82002B09C1 /* FundTableViewHeader.m in Sources */,
 				CBC05FC41A7C70F000CC4008 /* BookThemeTableViewCellStyle1.m in Sources */,
 				CBC05FBE1A7A6FCD00CC4008 /* BookHScrollViewCell4.m in Sources */,
 				EA7C910E1A77B6AF00782B8D /* HTTPReqeust.m in Sources */,
@@ -1360,7 +1365,6 @@
 				EA103C701A788C3600FFF66E /* GameHScrollViewCell.m in Sources */,
 				1AD6419EC3E465BEDDED654B /* WXLogin.m in Sources */,
 				EA9F28D21A823BA7002B09C1 /* SearchView.m in Sources */,
-				EA9F28D51A8253EA002B09C1 /* FoundTableViewCell1.m in Sources */,
 				EABA1EE41A76844000A76BD2 /* AFImageRequestOperation.m in Sources */,
 				1AD64DA54158CF05FAE8F2A6 /* WBLogin.m in Sources */,
 				CB6A21E61A72B3B80087546F /* FavRateViewStyle.m in Sources */,

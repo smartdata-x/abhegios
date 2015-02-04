@@ -120,13 +120,6 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="FoundTableViewCell1" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoundTableViewCell1" rowHeight="90" id="p80-zv-Ea8" customClass="FoundTableViewCell1">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p80-zv-Ea8" id="AVz-vu-cam">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="OqO-Fl-P5t" id="RJ8-4X-hkD"/>

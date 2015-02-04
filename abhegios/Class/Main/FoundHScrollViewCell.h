@@ -10,4 +10,5 @@
 
 @interface FoundHScrollViewCell : OEZHScrollViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @end
