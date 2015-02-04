@@ -15,4 +15,5 @@
 @property (nonatomic, copy) NSString *hq_url;
 @property (nonatomic, copy) NSString *type;
 @property (nonatomic, copy) NSString *url;
+@property CGFloat duration;
 @end

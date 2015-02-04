@@ -11,7 +11,11 @@
 @implementation MusicFMTableViewCellStyle1
 
 - (void)awakeFromNib {
-    // Initialization code
+    [super awakeFromNib];
+}
+
+- (void)setData:(id)data {
+    [_name setText:data];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

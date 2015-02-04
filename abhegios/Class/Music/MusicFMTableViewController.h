@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RefreshTableViewController.h"
-@interface MusicFMTableViewController : RefreshTableViewController
+#import <OEZCommSDK/OEZCommSDK.h>
+@interface MusicFMTableViewController : UITableViewController
 
 @end

@@ -9,5 +9,19 @@
 #import "MusicPlayer.h"
 
 @implementation MusicPlayer
+- (BOOL)isPlaying {
+    return YES;
+}
 
+- (void)doNext {
+    
+}
+
+- (void)doPlay {
+    
+}
+
+- (void)doStop {
+    
+}
 @end
