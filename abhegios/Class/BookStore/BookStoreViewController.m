@@ -88,7 +88,7 @@
     GroupInfo *group = [_tableViewData objectAtIndex:indexPath.section];
     switch (group.style) {
         case BookStoreTableViewCellStyleOne:    return 132; break;
-        case BookStoreTableViewCellStyleTwo:    return 80;  break;
+        case BookStoreTableViewCellStyleTwo:    return 100;  break;
         case BookStoreTableViewCellStyleThree:  return 153; break;
         case BookStoreTableViewCellStyleFour:
             if (indexPath.row == 0) return 112;
