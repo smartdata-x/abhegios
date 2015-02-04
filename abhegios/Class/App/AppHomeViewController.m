@@ -66,6 +66,9 @@
     if ( group.style == AppTableViewCellStyleThree) {
         return 90;
     }
+    else if ( group.style == AppTableViewCellStyleTwo) {
+        return 100;
+    }
     return 80;
 }
 
