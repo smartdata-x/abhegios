@@ -9,9 +9,10 @@
 #import "RecommendViewController.h"
 #import "GroupInfo.h"
 #import "AppAPIHelper.h"
-#include "BaseInfo.h"
-#include "AppInfo.h"
+#import "BaseInfo.h"
+#import "AppInfo.h"
 #import "BookInfo.h"
+#import "SearchView.h"
 #import "BookDetailInfoTableViewController.h"
 typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
     RecommendTableViewCellStyleNone = 0,
@@ -20,12 +21,18 @@ typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
 };
 
 @interface RecommendViewController ()
+{
+    SearchView* _searchView;
+}
 @end
 
 @implementation RecommendViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _searchView = [SearchView loadFromNib];
+    [self.tableView setTableHeaderView:_searchView];
 }
 
 
@@ -123,6 +130,12 @@ typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
        
         [self.navigationController pushBookDetailsViewController:baseInfo animated:YES];
     }
+}
+
+-(void) viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [_searchView resignFirstResponder];
 }
 
 @end

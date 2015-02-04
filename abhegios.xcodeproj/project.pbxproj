@@ -141,6 +141,8 @@
 		EA9C30021A778640002EFF35 /* HttpAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9C30011A778640002EFF35 /* HttpAPI.m */; };
 		EA9C5D4F1A79BBC800B7AACA /* MyNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9C5D4C1A79BBC800B7AACA /* MyNavigationViewController.m */; };
 		EA9C5D501A79BBC800B7AACA /* NSString+NSStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9C5D4E1A79BBC800B7AACA /* NSString+NSStringCategory.m */; };
+		EA9F28CF1A823A33002B09C1 /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9F28CE1A823A33002B09C1 /* SearchView.xib */; };
+		EA9F28D21A823BA7002B09C1 /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9F28D11A823BA7002B09C1 /* SearchView.m */; };
 		EAA454441A70DEAF0057A770 /* OEZCommSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA454431A70DEAF0057A770 /* OEZCommSDK.framework */; };
 		EAA5DFE31A77D42E00CF9163 /* HttpOtherAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA5DFE21A77D42E00CF9163 /* HttpOtherAPI.m */; };
 		EAA5DFE61A77DE7200CF9163 /* RefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA5DFE51A77DE7200CF9163 /* RefreshTableViewController.m */; };
@@ -409,6 +411,9 @@
 		EA9C5D4C1A79BBC800B7AACA /* MyNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNavigationViewController.m; sourceTree = "<group>"; };
 		EA9C5D4D1A79BBC800B7AACA /* NSString+NSStringCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSStringCategory.h"; sourceTree = "<group>"; };
 		EA9C5D4E1A79BBC800B7AACA /* NSString+NSStringCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringCategory.m"; sourceTree = "<group>"; };
+		EA9F28CE1A823A33002B09C1 /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = SOURCE_ROOT; };
+		EA9F28D01A823BA7002B09C1 /* SearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
+		EA9F28D11A823BA7002B09C1 /* SearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
 		EAA454431A70DEAF0057A770 /* OEZCommSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OEZCommSDK.framework; sourceTree = "<group>"; };
 		EAA5DFE01A77D3F300CF9163 /* OtherAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherAPI.h; sourceTree = "<group>"; };
 		EAA5DFE11A77D42E00CF9163 /* HttpOtherAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpOtherAPI.h; sourceTree = "<group>"; };
@@ -726,6 +731,7 @@
 				EA103C711A788C5600FFF66E /* GameHScrollViewCell.xib */,
 				EA94767A1A79043200172D6E /* TableViewHeader.xib */,
 				CBD81E461A7FAF4C006E6604 /* MusicInfoViewStyle1.xib */,
+				EA9F28CE1A823A33002B09C1 /* SearchView.xib */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -1025,6 +1031,8 @@
 				EA94767D1A7904E200172D6E /* TableViewHeader.m */,
 				CBD81E431A7FA12C006E6604 /* MusicInfoViewStyle1.h */,
 				CBD81E441A7FA12C006E6604 /* MusicInfoViewStyle1.m */,
+				EA9F28D01A823BA7002B09C1 /* SearchView.h */,
+				EA9F28D11A823BA7002B09C1 /* SearchView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1209,6 +1217,7 @@
 			files = (
 				CB6A21F01A73C7430087546F /* BookInfoViewStyle2.xib in Resources */,
 				EA3D07761A6CD9A600189765 /* Main.storyboard in Resources */,
+				EA9F28CF1A823A33002B09C1 /* SearchView.xib in Resources */,
 				EA3D07771A6CD9A600189765 /* LaunchScreen.xib in Resources */,
 				1AD6460C6803B48F071D6E89 /* Images.xcassets in Resources */,
 				EABA1EB81A76738A00A76BD2 /* gamehomeinfo.plist in Resources */,
@@ -1335,6 +1344,7 @@
 				EABA1ECA1A7679F200A76BD2 /* AppDetailsTableViewCellStyle4.m in Sources */,
 				EA103C701A788C3600FFF66E /* GameHScrollViewCell.m in Sources */,
 				1AD6419EC3E465BEDDED654B /* WXLogin.m in Sources */,
+				EA9F28D21A823BA7002B09C1 /* SearchView.m in Sources */,
 				EABA1EE41A76844000A76BD2 /* AFImageRequestOperation.m in Sources */,
 				1AD64DA54158CF05FAE8F2A6 /* WBLogin.m in Sources */,
 				CB6A21E61A72B3B80087546F /* FavRateViewStyle.m in Sources */,

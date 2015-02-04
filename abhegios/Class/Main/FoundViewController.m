@@ -10,9 +10,11 @@
 #import "FoundItemInfo.h"
 #import "NSString+NSStringCategory.h"
 #import <OEZCommSDK/OEZCommSDK.h>
+#import "SearchView.h"
 @interface FoundViewController ()
 {
     NSArray * _foundItemInfos;
+    SearchView* _searchView;
 }
 @end
 
@@ -21,6 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _foundItemInfos =[FoundItemInfo initWithsPlistResource:@"uifounddata" ofType:@"plist"];
+    _searchView = [SearchView loadFromNib];
+    [self.tableView setTableHeaderView:_searchView];
 
 }
 
@@ -64,6 +68,12 @@
             } animated:YES];
         }
     }
+}
+
+-(void) viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [_searchView resignFirstResponder];
 }
 
 @end
