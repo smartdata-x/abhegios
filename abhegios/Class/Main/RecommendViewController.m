@@ -21,19 +21,12 @@ typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
 };
 
 @interface RecommendViewController ()
-{
-    SearchView* _searchView;
-}
+
 @end
 
 @implementation RecommendViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    _searchView = [SearchView loadFromNib];
-    [self.tableView setTableHeaderView:_searchView];
-}
+
 
 
 -(void) didRequest
@@ -132,10 +125,5 @@ typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
     }
 }
 
--(void) viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    [_searchView resignFirstResponder];
-}
 
 @end
