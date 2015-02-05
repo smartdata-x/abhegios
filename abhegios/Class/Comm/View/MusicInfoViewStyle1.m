@@ -7,30 +7,43 @@
 //
 
 #import "MusicInfoViewStyle1.h"
-
+#import "MusicRoomInfo.h"
+#import "UIImageView+AFNetworking.h"
+#import "BaseInfoAdapter.h"
 @implementation MusicInfoViewStyle1
 {
     NSTimer *timer;
 }
 
-- (void)setData:(id)data {
-    [self initView];
-    if (timer == nil) {
-        timer = [NSTimer scheduledTimerWithTimeInterval:1.0f / 10.0f target:self selector:@selector(updateDiskFrame) userInfo:nil repeats:YES];
-        [timer fire];
-    }
-}
-
-- (void)initView {
+- (void)awakeFromNib {
+    [super awakeFromNib];
     [[_logo layer] setCornerRadius:CGRectGetWidth(_logo.frame) * 0.5f];
     [[_logo layer] setMasksToBounds:YES];
+}
+
+- (void)setData:(id)data {
+    if (timer == nil) {
+        // 这个timer只负责封面自己旋转，进度条的显示由外部控制
+        timer = [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(updateDiskFrame) userInfo:nil repeats:YES];
+        [timer fire];
+    }
+    [_logo setImageWithStrURL:[BaseInfoAdapter getPic:data]];
 }
 
 - (void)updateDiskFrame {
     static CGFloat rate = 0.01;
     _logo.transform = CGAffineTransformRotate(_logo.transform, ROTATION_ANGLE);
-    [self updateProcessLine:rate];
     rate += ROTATION_ANGLE/10.0;
+}
+
+- (void)updateProcessLine:(CGFloat)rate {
+    rate = rate < 0.0 ? 0.0 : rate;
+    rate = rate > 1.0 ? 0.0 : rate;
+    CGFloat width = CGRectGetWidth([_progress frame]);
+    UIImage *processLine = [UIImage imageNamed:@"progress_line.png"];
+    UIImage *processMask = [self getCircleProcessImageWithNoneAlpha:CGSizeMake(width, width) progress:rate];
+    UIImage *currentProcessImage = [self maskImage:processLine withImage:processMask];
+    [_progress setImage:currentProcessImage];
 }
 
 //制作图片遮罩(注意：需要有一张原图是带alpha通道的图片，和一个不带alpha通道的遮罩图)
@@ -99,16 +112,6 @@
     free(spriteData);
     
     return processImage;
-}
-
-- (void)updateProcessLine:(CGFloat)rate {
-    rate = rate < 0.0 ? 0.0 : rate;
-    rate = rate > 1.0 ? 0.0 : rate;
-    CGFloat width = CGRectGetWidth([_progress frame]);
-    UIImage *processLine = [UIImage imageNamed:@"progress_line.png"];
-    UIImage *processMask = [self getCircleProcessImageWithNoneAlpha:CGSizeMake(width, width) progress:rate];
-    UIImage *currentProcessImage = [self maskImage:processLine withImage:processMask];
-    [_progress setImage:currentProcessImage];
 }
 
 @end

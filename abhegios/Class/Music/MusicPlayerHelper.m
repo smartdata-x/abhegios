@@ -10,6 +10,7 @@
 #import "GroupInfo.h"
 #import "MusicRoomInfo.h"
 #import "AppAPIHelper.h"
+#import "MusicInfoViewStyle1.h"
 @implementation MusicPlayerHelper
 {
 }
@@ -21,7 +22,7 @@
         sharedHelper = [[self alloc] init];
         MusicPlayerHelper *instance = (MusicPlayerHelper *)sharedHelper;
         instance.musicList = [[MusicList alloc] init];
-        instance.musicPlayer = [[MusicPlayer alloc] init];
+        instance.musicPlayer = [[HighLevelMusicPlayer alloc] init];
         instance.dimension = @"chl";
         instance.sid = 1;
     });
@@ -37,6 +38,15 @@
     _sid = sid;
 }
 
+- (void)updateViewProgress:(id)view {
+    MusicInfoViewStyle1 *viewStyle1 = (MusicInfoViewStyle1 *)view;
+    [viewStyle1 updateProcessLine:[_musicPlayer getPlayProgress]];
+}
+
+- (void)playWithStrUrl:(NSString *)strurl {
+    [_musicPlayer playWithStrUrl:strurl];
+}
+
 - (BOOL)isPlaying {
     return [_musicPlayer isPlaying];
 }
@@ -48,13 +58,18 @@
             [self refreshMusicList];
         }
         else {
-            [_musicPlayer doPlay];
+            [_musicPlayer playWithStrUrl:nextMusicInfo.url];
         }
     }
 }
 
-- (void)doPlay {
-    [_musicPlayer doPlay];
+- (void)doPlayOrPause {
+    if ([self isPlaying]) {
+        [_musicPlayer doPause];
+    }
+    else {
+        [_musicPlayer doPlay];
+    }
 }
 
 - (void)doStop {
