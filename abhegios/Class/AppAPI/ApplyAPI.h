@@ -12,4 +12,6 @@
 -(void) getAppStoreHome:(id<ReqeustDelegate>) delegate;
 -(void) getGameStoreHome:(id<ReqeustDelegate>) delegate;
 -(void) getAppDetails:(NSInteger) appID delegate:(id<ReqeustDelegate>) delegate;
+-(void) getWanted:(NSInteger) appID delegate:(id<ReqeustDelegate>) delegate;
+-(void) getSpecialTopics:(NSInteger) tID delegate:(id<ReqeustDelegate>) delegate;
 @end

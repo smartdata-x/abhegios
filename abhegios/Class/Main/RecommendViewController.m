@@ -112,18 +112,42 @@ typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
     return Nil;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtOEZIndexPath:(OEZTableViewIndexPath *)indexPath
 {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    BaseInfo* baseInfo = [[[self getGroupInfo:[indexPath section]]entitys] objectAtIndex:[indexPath row]];
+    NSInteger row =  [indexPath row] + [indexPath column];
+    BaseInfo* baseInfo = [[[self getGroupInfo:[indexPath section]]entitys] objectAtIndex:row];
+    if( [indexPath action] != NSNotFound )
+    {
+        if( [baseInfo isKindOfClass:[AppInfo class]])
+            [[[AppAPIHelper shared] getApplyAPI] getWanted:[baseInfo id] delegate:nil];
+    }
+}
+
+-(void) pushDetails:(BaseInfo*) baseInfo
+{
     if( [baseInfo isKindOfClass:[AppInfo class]])
         [self.navigationController pushAppDetailsViewController:baseInfo animated:YES ];
     else if (  [baseInfo isKindOfClass:[BookInfo class]] )
     {
-       
+        
         [self.navigationController pushBookDetailsViewController:baseInfo animated:YES];
     }
+
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if ([indexPath isKindOfClass:[OEZTableViewIndexPath class]]) {
+        [self tableView:tableView didSelectRowAtOEZIndexPath:(OEZTableViewIndexPath*)indexPath];
+    }
+    else
+    {
+        BaseInfo* baseInfo = [[[self getGroupInfo:[indexPath section]]entitys] objectAtIndex:[indexPath row]];
+        [self pushDetails:baseInfo];
+    }
+   }
 
 
 @end

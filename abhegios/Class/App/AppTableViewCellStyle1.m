@@ -16,7 +16,12 @@
 {
     [super setData:data];
     [_appInfoView setData:data];
-    
+    [[_appInfoView setupButton] addTarget:self action:@selector(doAction:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+-(IBAction) doAction:(id)sender
+{
+    [self didSelectRowAction:AppTableViewCellStyle1_Action];
 }
 
 @end

@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <OEZCommSDK/OEZCommSDK.h>
 #import "AppInfoViewStyle1.h"
+
+#define AppTableViewCellStyle1_Action 1
 @interface AppTableViewCellStyle1 : OEZTableViewCell
 @property (weak, nonatomic) IBOutlet AppInfoViewStyle1 *appInfoView;
 

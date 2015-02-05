@@ -32,4 +32,24 @@
     [self request:path delegate:delegate entityClass:[GameHomeInfo class]];
 }
 
+-(void) getSpecialTopics:(NSInteger) tID delegate:(id<ReqeustDelegate>) delegate
+{
+    static NSString *path = @"/store/1/topics.fcgi";
+    [self request:path parameter:[NSDictionary dictionaryWithObject:@(tID) forKey:@"tid"] delegate:delegate processBlock:^id(id data) {
+        return [AppInfo initWithsDictionarys:[data objectForKey:@"topics"]];
+    }];
+}
+
+-(void) getWanted:(NSInteger) appID delegate:(id<ReqeustDelegate>) delegate
+{
+    static NSString *path = @"/store/1/wanted.fcgi";
+    [self request:path parameter:[NSDictionary dictionaryWithObjectsAndKeys:@(appID),@"appid",@"1",@"machine", nil] delegate:delegate processBlock:^id(id data) {
+        NSString *url =  [[data objectForKey:@"basic"] objectForKey:@"url"];
+         NSLog(@"%@",url);
+         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+        return url;
+    }];
+
+}
+
 @end
