@@ -7,7 +7,6 @@
 //
 
 #import "MusicFMTableViewController.h"
-#import "MusicPlayerHelper.h"
 
 @interface MusicFMTableViewController ()
 @property (nonatomic, retain) NSArray *sectionInfo;
@@ -17,15 +16,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    CGRect frame = [_player frame];
-    [_player setFrame:CGRectMake(frame.origin.x, frame.origin.y, 40, 40)];
-    [_player setData:nil];
+    [_player.trash addTarget:self action:@selector(doTrash:) forControlEvents:UIControlEventTouchUpInside];
+    [_player.love addTarget:self action:@selector(doLove:) forControlEvents:UIControlEventTouchUpInside];
+    [_player.next addTarget:self action:@selector(doNext:) forControlEvents:UIControlEventTouchUpInside];
+    PlayerInstance.delegate = self;
     _sectionInfo = [NSArray arrayWithObjects:@"个人兆赫", @"频道兆赫", @"心情兆赫", nil];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [_player updateScreen];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)doNext:(id)sender {
+    [PlayerInstance doNext];
+}
+
+- (IBAction)doTrash:(id)sender {
+    
+}
+
+- (IBAction)doLove:(id)sender {
+    
+}
+
+- (void)MusicPlayerHelperStateChange:(NSInteger)state {
+    if (state == MusicPlayerHelperStateNext) {
+    }
 }
 
 #pragma mark - Table view data source
@@ -40,14 +61,12 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *view = nil;
-    if (section != 0) {
-        view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.tableView.frame)-20, 21)];
-        [view setBackgroundColor:kUIColorWithRGB(0xf3f3f3)];
-        UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(15, 14, CGRectGetWidth(self.tableView.frame)-20, 21)];
-        [label setText:[_sectionInfo objectAtIndex:section]];
-        [label setFont:[UIFont systemFontOfSize:14.0f]];
-        [view addSubview:label];
-    }
+    view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.tableView.frame)-20, 21)];
+    [view setBackgroundColor:kUIColorWithRGB(0xf3f3f3)];
+    UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(15, 14, CGRectGetWidth(self.tableView.frame)-20, 21)];
+    [label setText:[_sectionInfo objectAtIndex:section]];
+    [label setFont:[UIFont systemFontOfSize:14.0f]];
+    [view addSubview:label];
     return view;
 }
 

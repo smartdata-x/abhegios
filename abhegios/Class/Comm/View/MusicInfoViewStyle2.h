@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "MusicInfoViewStyle1.h"
-@interface MusicInfoViewStyle2 : OEZNibView
+#import "MusicPlayerHelper.h"
+@interface MusicInfoViewStyle2 : OEZNibView<MusicPlayerHelperDelegate>
 @property (weak, nonatomic) IBOutlet MusicInfoViewStyle1 *viewStyle1;
 @property (weak, nonatomic) IBOutlet UIButton *love;
 @property (weak, nonatomic) IBOutlet UIButton *trash;
 @property (weak, nonatomic) IBOutlet UIButton *next;
 - (void)setData:(id)data;
+- (void)updateScreen;
 @end

@@ -26,10 +26,10 @@
         _frameTimer = [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(updateScreenPerFrame) userInfo:nil repeats:YES];
         [_frameTimer fire];
     }
+    [PlayerInstance refreshMusicList];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    [PlayerInstance refreshMusicList];
 }
 
 - (void)updateScreen {
