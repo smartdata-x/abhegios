@@ -21,6 +21,7 @@
     [_downButton.layer setCornerRadius:8.0];
     [_downButton.layer setBorderWidth:1.0];
     [_downButton.layer setBorderColor:[ [[_downButton titleLabel] textColor]CGColor]];//边框颜色
+     [_downButton addTarget:self action:@selector(doAction:) forControlEvents:UIControlEventTouchUpInside];
     
 }
 -(NSInteger) numberPageCountPageView:(OEZPageView *)pageView
@@ -45,5 +46,10 @@
     [_sizeAndVer setText:[NSString stringWithFormat:@"大小:%0.2fM  版本%@",[info size],[info version]]];
     [_favRate setData:[self.data star]];
     
+}
+
+-(IBAction) doAction:(id)sender
+{
+    [self didSelectRowAction:1];
 }
 @end

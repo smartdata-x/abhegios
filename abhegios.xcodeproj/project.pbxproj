@@ -178,6 +178,7 @@
 		EABA1EEA1A76844000A76BD2 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EABA1EDF1A76844000A76BD2 /* AFXMLRequestOperation.m */; };
 		EABA1EEB1A76844000A76BD2 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EABA1EE01A76844000A76BD2 /* UIImageView+AFNetworking.m */; };
 		EABA1EEC1A76844000A76BD2 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EABA1EE11A76844000A76BD2 /* AFHTTPClient.m */; };
+		EAE3C1381A8396AA0093B677 /* SpecialTopicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE3C1371A8396AA0093B677 /* SpecialTopicsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -492,6 +493,8 @@
 		EABA1EE01A76844000A76BD2 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		EABA1EE11A76844000A76BD2 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		EABA1EE21A76844000A76BD2 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		EAE3C1361A8396AA0093B677 /* SpecialTopicsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialTopicsViewController.h; sourceTree = "<group>"; };
+		EAE3C1371A8396AA0093B677 /* SpecialTopicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialTopicsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -684,6 +687,8 @@
 				EAA773871A7222C400EBD512 /* AppTableViewPageCell.m */,
 				EAA773891A72241B00EBD512 /* AppTableViewCellStyle4.h */,
 				EAA7738A1A72241B00EBD512 /* AppTableViewCellStyle4.m */,
+				EAE3C1361A8396AA0093B677 /* SpecialTopicsViewController.h */,
+				EAE3C1371A8396AA0093B677 /* SpecialTopicsViewController.m */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -1429,6 +1434,7 @@
 				1AD64DA54158CF05FAE8F2A6 /* WBLogin.m in Sources */,
 				CB6A21E61A72B3B80087546F /* FavRateViewStyle.m in Sources */,
 				CB6A22191A74C5180087546F /* BookDirectoryTableViewCellStyle1.m in Sources */,
+				EAE3C1381A8396AA0093B677 /* SpecialTopicsViewController.m in Sources */,
 				1AD64D9C70E0A1325B3F2A09 /* AppHomeViewController.m in Sources */,
 				CB6A21E11A729B050087546F /* BookInfoViewStyle1.m in Sources */,
 				EA9C5D501A79BBC800B7AACA /* NSString+NSStringCategory.m in Sources */,
@@ -1551,6 +1557,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/abhegios/Class/Third/Tencent",
@@ -1574,6 +1581,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/abhegios/Class/Third/Tencent",

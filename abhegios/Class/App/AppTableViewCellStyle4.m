@@ -19,4 +19,9 @@
     [[cell contentImage]setImageWithStrURL:[BaseInfoAdapter getPic:[self.data objectAtIndex:pageIndex]]];
     return cell;
 }
+
+-(void) pageView:(OEZPageView *)pageView didSelectPageAtIndex:(NSInteger)pageIndex
+{
+    [self didSelectRowColumn:pageIndex];
+}
 @end

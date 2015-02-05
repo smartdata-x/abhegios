@@ -12,6 +12,7 @@
 #import "AppTableViewCellStyle1.h"
 #import <OEZCommSDK/OEZCommSDK.h>
 #import "AppAPIHelper.h"
+#import "SpecialTopicsViewController.h"
 @interface AppHomeViewController ()
 {
     
@@ -113,15 +114,47 @@
     return Nil;
 }
 
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtOEZIndexPath:(OEZTableViewIndexPath *)indexPath
+{
+    GroupInfo *group = [self getGroupInfo:[indexPath section]];
+    NSInteger row =  [indexPath row] + [indexPath column];
+    if( [indexPath action] != NSNotFound )
+    {
+        [[[AppAPIHelper shared] getApplyAPI] getWanted:[[[group entitys] objectAtIndex:row] id] delegate:nil];
+    }
+    else
+    {
+        [self.navigationController pushAppDetailsViewController:[[group entitys] objectAtIndex:row] animated:YES];
+    }
+}
+
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    NSInteger row = [indexPath row];
     if ([indexPath isKindOfClass:[OEZTableViewIndexPath class]]) {
-        row =  [(OEZTableViewIndexPath*)indexPath column];
+        [self tableView:tableView didSelectRowAtOEZIndexPath:(OEZTableViewIndexPath*)indexPath];
     }
-    GroupInfo *group = [self getGroupInfo:[indexPath section]];
-    [self.navigationController pushAppDetailsViewController:[[group entitys] objectAtIndex:row] animated:YES];
+    else
+    {
+        GroupInfo *group = [self getGroupInfo:[indexPath section]];
+        NSInteger row = [indexPath row];
+        if( [[group key] hasPrefix:@"specialtopics"])
+        {
+            [self.navigationController pushViewControllerWithIdentifier:@"SpecialTopicsViewController" completion:^(UIViewController *viewController) {
+                [(SpecialTopicsViewController*)viewController setAdInfo:[[group entitys] objectAtIndex:row]];
+            } animated:TRUE];
+        }
+        else if( [[group key] hasPrefix:@"advert"] )
+        {
+            
+        }
+        else
+            [self.navigationController pushAppDetailsViewController:[[group entitys] objectAtIndex:row] animated:YES];
+    }
+   
 }
 
 @end

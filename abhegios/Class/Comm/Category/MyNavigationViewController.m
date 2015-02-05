@@ -14,7 +14,12 @@
 -(void) viewDidLoad
 {
     [super viewDidLoad];
-    //[self.navigationBar setBarTintColor:kUIColorWithRGB(0x339ee2)];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [self.navigationBar setBarTintColor:kUIColorWithRGB(0x339ee2)];
+    NSDictionary* titleTextAttributes = @{UITextAttributeTextColor:[UIColor whiteColor],
+                                          UITextAttributeTextShadowColor: [UIColor whiteColor]};
+    [[UINavigationBar appearance] setTitleTextAttributes: titleTextAttributes];
+
 }
 
 

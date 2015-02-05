@@ -105,6 +105,10 @@ typedef NS_ENUM(NSInteger, AppDetailsTableViewCellStyle) {
         }
         [self.navigationController pushAppDetailsViewController:[[_tableViewData like] objectAtIndex:row ] animated:YES ];
     }
+    else if( row == 0 )
+    {
+        [[[AppAPIHelper shared] getApplyAPI] getWanted:[[_tableViewData intro] id] delegate:nil];
+    }
 }
 
 @end

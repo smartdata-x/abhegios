@@ -147,6 +147,7 @@
     return Nil;
 }
 
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([indexPath section] == kEmblemSection)
@@ -156,7 +157,15 @@
             
         }
         else
-         [self.navigationController pushAppDetailsViewController:[_tableViewData emblem] animated:YES ];
+        {
+             if ([indexPath isKindOfClass:[OEZTableViewIndexPath class]])
+            {
+                [[[AppAPIHelper shared] getApplyAPI] getWanted:[[_tableViewData emblem] id] delegate:nil];
+
+            }
+            else
+                [self.navigationController pushAppDetailsViewController:[_tableViewData emblem] animated:YES ];
+        }
     }
     else
     {
