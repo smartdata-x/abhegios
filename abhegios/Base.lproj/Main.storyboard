@@ -1132,6 +1132,24 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="GameHomeTableViewCell4" textLabel="cda-7h-ZDI" imageView="Ii8-pM-tKd" style="IBUITableViewCellStyleDefault" id="9z0-Pp-2Gh" customClass="OEZTableViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9z0-Pp-2Gh" id="hpc-M7-7qF">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="摇一摇" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cda-7h-ZDI">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="shake_phone" id="Ii8-pM-tKd">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="O12-Zf-ZRR" id="wAK-kW-C24"/>
@@ -1152,6 +1170,7 @@
         <image name="my_ico" width="23" height="22"/>
         <image name="next_icon" width="26" height="25"/>
         <image name="recommend_ico" width="23" height="22"/>
+        <image name="shake_phone" width="19" height="20"/>
         <image name="trash_icon" width="26" height="25"/>
         <image name="wifi_ico" width="23" height="22"/>
     </resources>

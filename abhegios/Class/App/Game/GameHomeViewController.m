@@ -44,11 +44,28 @@
     return 22;
 }
 
+-(NSInteger) numberOfEmblemSection
+{
+    if( [_tableViewData emblem] != nil )
+    {
+        if ( [[[_tableViewData emblem] pic] count] > 0) {
+            return 3;
+        }
+        return 2;
+    }
+    return 0;
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if ([indexPath section] == kEmblemSection) {
-        if( [indexPath row] == 1 )
+        if (  [indexPath row] == [self numberOfEmblemSection] - 1 )
+        {
+            return 44;
+        }
+        else if( [indexPath row] == 1 )
             return 152;
-        return 80;
+        else
+            return 80;
     }
     return 90;
 }
@@ -69,14 +86,7 @@
 {
     if ( section == kEmblemSection )
     {
-        if( [_tableViewData emblem] != nil )
-        {
-            if ( [[[_tableViewData emblem] pic] count] > 0) {
-                return 2;
-            }
-            return 1;
-        }
-        return 0;
+        return [self numberOfEmblemSection];
     }
     GroupInfo* groupInfo = [self getGroupInfo:section];
     NSInteger count = [[groupInfo entitys] count];
@@ -101,15 +111,20 @@
     OEZTableViewCell *cell = nil;
     
     if ([indexPath section] == kEmblemSection ) {
-        if( [indexPath row] == 0 )
+        
+         if (  [indexPath row] == [self numberOfEmblemSection] - 1 )
+         {
+             cell = [tableView dequeueReusableCellWithIdentifier:@"GameHomeTableViewCell4"];
+         }
+         else if( [indexPath row] == 1 )
+         {
+             cell = [tableView dequeueReusableCellWithIdentifier:@"GameHomeTableViewCell2"];
+             [cell setData:[[_tableViewData emblem] pic]];
+         }
+        else
         {
             cell = [tableView dequeueReusableCellWithIdentifier:@"GameHomeTableViewCell1"];
             [cell setData:[_tableViewData emblem]];
-        }
-        else
-        {
-            cell = [tableView dequeueReusableCellWithIdentifier:@"GameHomeTableViewCell2"];
-            [cell setData:[[_tableViewData emblem] pic]];
         }
     }
     else
@@ -136,6 +151,11 @@
 {
     if ([indexPath section] == kEmblemSection)
     {
+        if (  [indexPath row] == [self numberOfEmblemSection] - 1 )
+        {
+            
+        }
+        else
          [self.navigationController pushAppDetailsViewController:[_tableViewData emblem] animated:YES ];
     }
     else

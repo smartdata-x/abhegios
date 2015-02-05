@@ -27,7 +27,7 @@
 {
     //[super setData:data];
      [self.name setText:[data name]];
-    [_summary setText:[data summary]];
+    [_summary setText:[(BaseInfoMoreONS*)data summary]];
     [_down setText:[BaseInfoAdapter getPopularity:data]];
     [self.setupButton setTitle:[BaseInfoAdapter getButtonText:data] forState:UIControlStateNormal];
      [(UIImageView*)self.logo setImageWithStrURL:[BaseInfoAdapter getPic:data]];
