@@ -86,7 +86,8 @@
 }
 
 - (void)finishLoadData {
-    
+    // 载入完成，主动开始下一首歌的播放
+    [self didPlayingCurrentMusicFinished];
 }
 
 - (void)didPlayingCurrentMusicFinished {

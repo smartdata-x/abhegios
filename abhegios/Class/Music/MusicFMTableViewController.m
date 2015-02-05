@@ -7,6 +7,7 @@
 //
 
 #import "MusicFMTableViewController.h"
+#import "MusicPlayerHelper.h"
 
 @interface MusicFMTableViewController ()
 @property (nonatomic, retain) NSArray *sectionInfo;
@@ -71,7 +72,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSString *dimension = @"";
-    int *sid = 1;
+    NSInteger sid = 1;
+    [PlayerInstance setMusicParams:dimension Sid:sid];
 }
 
 @end
