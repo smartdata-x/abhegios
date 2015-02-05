@@ -955,24 +955,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="钻石糖 - 萧亚轩" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjG-Do-ZfI">
-                                <rect key="frame" x="10" y="40" width="300" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="钻石糖 - 萧亚轩" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjG-Do-ZfI">
+                                <rect key="frame" x="10" y="35" width="300" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uY5-pG-g53" customClass="MusicInfoViewStyle1">
-                                <rect key="frame" x="80" y="111" width="160" height="160"/>
+                                <rect key="frame" x="80" y="90" width="160" height="160"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="华语流行" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nj-ac-wtq">
-                                <rect key="frame" x="10" y="310" width="300" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="华语流行" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nj-ac-wtq">
+                                <rect key="frame" x="10" y="285" width="300" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEn-oa-b8Q">
-                                <rect key="frame" x="60" y="396" width="26" height="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEn-oa-b8Q">
+                                <rect key="frame" x="60" y="345" width="26" height="25"/>
                                 <state key="normal" image="trash_icon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -980,8 +980,8 @@
                                     <action selector="doTrash:" destination="IYr-bQ-UIs" eventType="touchUpInside" id="fdZ-iM-MHo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3Y-pw-TbE">
-                                <rect key="frame" x="146" y="396" width="26" height="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3Y-pw-TbE">
+                                <rect key="frame" x="146" y="345" width="26" height="25"/>
                                 <state key="normal" image="love_on">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -989,8 +989,8 @@
                                     <action selector="doLove:" destination="IYr-bQ-UIs" eventType="touchUpInside" id="DLP-8E-QcK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAq-Jh-948">
-                                <rect key="frame" x="232" y="396" width="26" height="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAq-Jh-948">
+                                <rect key="frame" x="232" y="345" width="26" height="25"/>
                                 <state key="normal" image="next_icon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1001,7 +1001,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="KjG-Do-ZfI" secondAttribute="centerX" id="5en-N1-LVH"/>
+                            <constraint firstAttribute="centerX" secondItem="f3Y-pw-TbE" secondAttribute="centerX" id="GfP-bd-PmJ"/>
+                            <constraint firstAttribute="centerX" secondItem="5nj-ac-wtq" secondAttribute="centerX" id="J2i-u4-A8Q"/>
+                            <constraint firstItem="BEn-oa-b8Q" firstAttribute="leading" secondItem="k5L-rX-Fee" secondAttribute="leadingMargin" constant="60" id="NUh-7Y-Eku"/>
+                            <constraint firstItem="FAq-Jh-948" firstAttribute="top" secondItem="5nj-ac-wtq" secondAttribute="bottom" constant="39" id="T4A-to-PMw"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="f3Y-pw-TbE" secondAttribute="bottom" constant="46" id="XcI-DC-g0Q"/>
+                            <constraint firstItem="KjG-Do-ZfI" firstAttribute="top" secondItem="k5L-rX-Fee" secondAttribute="topMargin" constant="35" id="Z26-Jy-g7o"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="BEn-oa-b8Q" secondAttribute="bottom" constant="46" id="bgq-0L-7kT"/>
                             <constraint firstAttribute="centerX" secondItem="uY5-pG-g53" secondAttribute="centerX" id="fdc-wD-mhG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FAq-Jh-948" secondAttribute="trailing" constant="60" id="tPC-TB-kpf"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="FAq-Jh-948" secondAttribute="bottom" constant="46" id="uwg-l1-vvK"/>
                         </constraints>
                     </view>
                     <connections>

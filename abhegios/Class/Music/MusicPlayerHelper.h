@@ -12,9 +12,22 @@
 #import "MusicList.h"
 #import "HighLevelMusicPlayer.h"
 
+typedef NS_ENUM(NSInteger, MusicPlayerHelperState) {
+    MusicPlayerHelperStatePlay = 0,
+    MusicPlayerHelperStatePause,
+    MusicPlayerHelperStateStop,
+    MusicPlayerHelperStateNext,
+    MusicPlayerHelperStateError,
+};
+
+@protocol MusicPlayerHelperDelegate <NSObject>
+- (void)MusicPlayerHelperStateChange:(NSInteger)state;
+@end
+
 #define PlayerInstance [MusicPlayerHelper shared]
 
-@interface MusicPlayerHelper : NSObject<HelperProtocol, ReqeustDelegate>
+@interface MusicPlayerHelper : NSObject<HelperProtocol, ReqeustDelegate, HighLevelMusicPlayerDelegate>
+@property (nonatomic, retain) id<MusicPlayerHelperDelegate> delegate;
 @property (nonatomic, retain) MusicList *musicList;
 @property (nonatomic, retain) HighLevelMusicPlayer *musicPlayer;
 @property (nonatomic, retain) NSString *dimension;

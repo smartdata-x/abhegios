@@ -23,6 +23,7 @@
         MusicPlayerHelper *instance = (MusicPlayerHelper *)sharedHelper;
         instance.musicList = [[MusicList alloc] init];
         instance.musicPlayer = [[HighLevelMusicPlayer alloc] init];
+        instance.musicPlayer.delegate = instance;
         instance.dimension = @"chl";
         instance.sid = 1;
     });
@@ -52,7 +53,7 @@
 }
 
 - (void)doNext {
-    if (![_musicList isListEmpty]) {
+    if (![_musicList isListHaveNext]) {
         MusicRoomInfo *nextMusicInfo = [_musicList getNextMusicInfo];
         if (nextMusicInfo == nil) {
             [self refreshMusicList];
@@ -86,6 +87,13 @@
 
 - (void)finishLoadData {
     
+}
+
+- (void)didPlayingCurrentMusicFinished {
+    [self doNext];
+    if ([_delegate respondsToSelector:@selector(MusicPlayerHelperStateChange:)]) {
+        [_delegate MusicPlayerHelperStateChange:MusicPlayerHelperStateNext];
+    }
 }
 
 - (void)reqeust:(id)reqeust didComplete:(id)data {

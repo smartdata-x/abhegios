@@ -12,7 +12,7 @@
 @interface MusicList : NSObject
 @property (nonatomic, retain) NSMutableArray *musicListArray;
 - (void)setMusicList:(NSArray *)musiclist;
-- (BOOL)isListEmpty;
+- (BOOL)isListHaveNext;
 - (MusicRoomInfo *)getNextMusicInfo;
 - (MusicRoomInfo *)getPrevMusicInfo;
 - (MusicRoomInfo *)getCurrentMusicInfo;

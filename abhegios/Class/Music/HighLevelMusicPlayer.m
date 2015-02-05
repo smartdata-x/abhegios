@@ -69,7 +69,9 @@
 }
 
 - (void)audioPlayer:(AudioPlayer *)audioPlayer didFinishPlayingQueueItemId:(NSObject *)queueItemId withReason:(AudioPlayerStopReason)stopReason andProgress:(double)progress andDuration:(double)duration {
-    
+    if ([_delegate respondsToSelector:@selector(didPlayingCurrentMusicFinished)]) {
+        [_delegate didPlayingCurrentMusicFinished];
+    }
 }
 
 - (void)audioPlayer:(AudioPlayer *)audioPlayer didFinishBufferingSourceWithQueueItemId:(NSObject *)queueItemId {
