@@ -16,6 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    CGRect frame = [_player frame];
+    [_player setFrame:CGRectMake(frame.origin.x, frame.origin.y, 40, 40)];
+    [_player setData:nil];
     _sectionInfo = [NSArray arrayWithObjects:@"个人兆赫", @"频道兆赫", @"心情兆赫", nil];
 }
 
