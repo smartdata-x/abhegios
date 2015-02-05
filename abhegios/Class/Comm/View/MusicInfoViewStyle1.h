@@ -13,5 +13,6 @@
 @interface MusicInfoViewStyle1 : OEZNibView
 @property (weak, nonatomic) IBOutlet UIImageView *logo;
 @property (weak, nonatomic) IBOutlet UIImageView *progress;
+- (void)updateProcessLine:(CGFloat)rate;
 - (void)setData:(id)data;
 @end

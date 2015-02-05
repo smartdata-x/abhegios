@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <OEZCommSDK/OEZCommSDK.h>
 #import "BaseInfo.h"
-@interface MusicRoomInfo : BaseInfoMoreONS
+@interface MusicRoomInfo : BaseInfoMoreONSP
 @property (nonatomic, copy) NSString *ablum;
 @property (nonatomic, copy) NSString *artist;
 @property (nonatomic, copy) NSString *hq_url;

@@ -10,23 +10,25 @@
 #import "HelperProtocol.h"
 #import "ReqeustDelegate.h"
 #import "MusicList.h"
-#import "MusicPlayer.h"
+#import "HighLevelMusicPlayer.h"
 
 #define PlayerInstance [MusicPlayerHelper shared]
 
 @interface MusicPlayerHelper : NSObject<HelperProtocol, ReqeustDelegate>
 @property (nonatomic, retain) MusicList *musicList;
-@property (nonatomic, retain) MusicPlayer *musicPlayer;
+@property (nonatomic, retain) HighLevelMusicPlayer *musicPlayer;
 @property (nonatomic, retain) NSString *dimension;
 @property (nonatomic, assign) NSInteger sid;
 
+- (void)playWithStrUrl:(NSString *)strurl;
 - (BOOL)isPlaying;
 - (void)doNext;
 - (void)doStop;
-- (void)doPlay;
+- (void)doPlayOrPause;
 
 - (void)setMusicParams:(NSString *)dimension Sid:(NSInteger)sid;
 - (void)refreshMusicList;
+- (void)updateViewProgress:(id)view;
 - (void)setData:(NSArray *)musiclist;
 - (MusicRoomInfo *)getCurrentMusicInfo;
 @end

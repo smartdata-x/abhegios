@@ -72,7 +72,7 @@
 		CBC05FC71A7C710300CC4008 /* BookThemeTableViewCellStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC05FC61A7C710300CC4008 /* BookThemeTableViewCellStyle2.m */; };
 		CBC05FCA1A7C76C100CC4008 /* BookTopicInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC05FC91A7C76C100CC4008 /* BookTopicInfo.m */; };
 		CBD81E351A7F98DD006E6604 /* MusicFMTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD81E341A7F98DD006E6604 /* MusicFMTableViewController.m */; };
-		CBD81E391A7F9A4D006E6604 /* MusicPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD81E381A7F9A4D006E6604 /* MusicPlayer.m */; };
+		CBD81E391A7F9A4D006E6604 /* HighLevelMusicPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD81E381A7F9A4D006E6604 /* HighLevelMusicPlayer.m */; };
 		CBD81E3C1A7F9A96006E6604 /* MusicList.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD81E3B1A7F9A96006E6604 /* MusicList.m */; };
 		CBD81E3F1A7F9B12006E6604 /* MusicPlayerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD81E3E1A7F9B12006E6604 /* MusicPlayerHelper.m */; };
 		CBD81E421A7F9F24006E6604 /* MusicFMTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD81E411A7F9F24006E6604 /* MusicFMTableViewCellStyle1.m */; };
@@ -84,6 +84,14 @@
 		CBD81E541A8100A2006E6604 /* HttpMusicAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD81E531A8100A2006E6604 /* HttpMusicAPI.m */; };
 		CBD81E571A826C16006E6604 /* MusicInfoViewStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD81E561A826C16006E6604 /* MusicInfoViewStyle2.m */; };
 		CBD81E591A826C5D006E6604 /* MusicInfoViewStyle2.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD81E581A826C5D006E6604 /* MusicInfoViewStyle2.xib */; };
+		CBD81E611A839936006E6604 /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD81E601A839936006E6604 /* AudioPlayer.m */; };
+		CBD81E641A839991006E6604 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD81E631A839991006E6604 /* DataSource.m */; };
+		CBD81E6A1A839A8D006E6604 /* HttpDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD81E691A839A8D006E6604 /* HttpDataSource.m */; };
+		CBD81E6D1A839AEF006E6604 /* LocalFileDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD81E6C1A839AEF006E6604 /* LocalFileDataSource.m */; };
+		CBD81E6F1A839C2E006E6604 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD81E6E1A839C2E006E6604 /* AudioToolbox.framework */; };
+		CBD81E711A839C50006E6604 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD81E701A839C50006E6604 /* MediaPlayer.framework */; };
+		CBD81E731A839C65006E6604 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD81E721A839C65006E6604 /* AVFoundation.framework */; };
+		CBD81E7B1A839ED6006E6604 /* CoreFoundationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD81E7A1A839ED6006E6604 /* CoreFoundationDataSource.m */; };
 		CBE0043F1A78FB20001A2F42 /* HttpBookAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE0043E1A78FB20001A2F42 /* HttpBookAPI.m */; };
 		EA103C671A7889F200FFF66E /* GameHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C651A7889F200FFF66E /* GameHomeViewController.m */; };
 		EA103C6A1A788A3B00FFF66E /* GameHomeTableViewCellStyle3.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C691A788A3B00FFF66E /* GameHomeTableViewCellStyle3.m */; };
@@ -303,8 +311,8 @@
 		CBC05FC91A7C76C100CC4008 /* BookTopicInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookTopicInfo.m; sourceTree = "<group>"; };
 		CBD81E331A7F98DD006E6604 /* MusicFMTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicFMTableViewController.h; sourceTree = "<group>"; };
 		CBD81E341A7F98DD006E6604 /* MusicFMTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicFMTableViewController.m; sourceTree = "<group>"; };
-		CBD81E371A7F9A4D006E6604 /* MusicPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicPlayer.h; sourceTree = "<group>"; };
-		CBD81E381A7F9A4D006E6604 /* MusicPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicPlayer.m; sourceTree = "<group>"; };
+		CBD81E371A7F9A4D006E6604 /* HighLevelMusicPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighLevelMusicPlayer.h; sourceTree = "<group>"; };
+		CBD81E381A7F9A4D006E6604 /* HighLevelMusicPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighLevelMusicPlayer.m; sourceTree = "<group>"; };
 		CBD81E3A1A7F9A96006E6604 /* MusicList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicList.h; sourceTree = "<group>"; };
 		CBD81E3B1A7F9A96006E6604 /* MusicList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicList.m; sourceTree = "<group>"; };
 		CBD81E3D1A7F9B12006E6604 /* MusicPlayerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicPlayerHelper.h; sourceTree = "<group>"; };
@@ -325,6 +333,19 @@
 		CBD81E551A826C16006E6604 /* MusicInfoViewStyle2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicInfoViewStyle2.h; sourceTree = "<group>"; };
 		CBD81E561A826C16006E6604 /* MusicInfoViewStyle2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicInfoViewStyle2.m; sourceTree = "<group>"; };
 		CBD81E581A826C5D006E6604 /* MusicInfoViewStyle2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicInfoViewStyle2.xib; sourceTree = SOURCE_ROOT; };
+		CBD81E5F1A839936006E6604 /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
+		CBD81E601A839936006E6604 /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
+		CBD81E621A839991006E6604 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
+		CBD81E631A839991006E6604 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
+		CBD81E681A839A8D006E6604 /* HttpDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpDataSource.h; sourceTree = "<group>"; };
+		CBD81E691A839A8D006E6604 /* HttpDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpDataSource.m; sourceTree = "<group>"; };
+		CBD81E6B1A839AEF006E6604 /* LocalFileDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalFileDataSource.h; sourceTree = "<group>"; };
+		CBD81E6C1A839AEF006E6604 /* LocalFileDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalFileDataSource.m; sourceTree = "<group>"; };
+		CBD81E6E1A839C2E006E6604 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		CBD81E701A839C50006E6604 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		CBD81E721A839C65006E6604 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		CBD81E791A839ED6006E6604 /* CoreFoundationDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreFoundationDataSource.h; sourceTree = "<group>"; };
+		CBD81E7A1A839ED6006E6604 /* CoreFoundationDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreFoundationDataSource.m; sourceTree = "<group>"; };
 		CBE0043D1A78FB20001A2F42 /* HttpBookAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpBookAPI.h; sourceTree = "<group>"; };
 		CBE0043E1A78FB20001A2F42 /* HttpBookAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpBookAPI.m; sourceTree = "<group>"; };
 		CBE004401A78FB5F001A2F42 /* BookAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookAPI.h; sourceTree = "<group>"; };
@@ -478,6 +499,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBD81E731A839C65006E6604 /* AVFoundation.framework in Frameworks */,
+				CBD81E711A839C50006E6604 /* MediaPlayer.framework in Frameworks */,
+				CBD81E6F1A839C2E006E6604 /* AudioToolbox.framework in Frameworks */,
 				EA8E8F6F1A68F5E000FEA027 /* libstdc++.dylib in Frameworks */,
 				EA8E8F6D1A68F56000FEA027 /* libz.1.1.3.dylib in Frameworks */,
 				EA8E8F6B1A68F54400FEA027 /* libsqlite3.dylib in Frameworks */,
@@ -719,6 +743,9 @@
 				EA8E8F6E1A68F5E000FEA027 /* libstdc++.dylib */,
 				EA8E8F6C1A68F56000FEA027 /* libz.1.1.3.dylib */,
 				EA8E8F6A1A68F54400FEA027 /* libsqlite3.dylib */,
+				CBD81E721A839C65006E6604 /* AVFoundation.framework */,
+				CBD81E701A839C50006E6604 /* MediaPlayer.framework */,
+				CBD81E6E1A839C2E006E6604 /* AudioToolbox.framework */,
 				EA8E8F671A68F45D00FEA027 /* CoreImage.framework */,
 				EA8E8F641A68F34600FEA027 /* SystemConfiguration.framework */,
 				EA8E8F611A68F31300FEA027 /* QuartzCore.framework */,
@@ -961,8 +988,9 @@
 		CBD81E361A7F992E006E6604 /* MusicPlayerCore */ = {
 			isa = PBXGroup;
 			children = (
-				CBD81E371A7F9A4D006E6604 /* MusicPlayer.h */,
-				CBD81E381A7F9A4D006E6604 /* MusicPlayer.m */,
+				CBD81E5E1A839921006E6604 /* AudioStreamer */,
+				CBD81E371A7F9A4D006E6604 /* HighLevelMusicPlayer.h */,
+				CBD81E381A7F9A4D006E6604 /* HighLevelMusicPlayer.m */,
 				CBD81E3A1A7F9A96006E6604 /* MusicList.h */,
 				CBD81E3B1A7F9A96006E6604 /* MusicList.m */,
 				CBD81E3D1A7F9B12006E6604 /* MusicPlayerHelper.h */,
@@ -978,6 +1006,23 @@
 				CBD81E4D1A80FD6E006E6604 /* MusicRoomInfo.m */,
 			);
 			name = Music;
+			sourceTree = "<group>";
+		};
+		CBD81E5E1A839921006E6604 /* AudioStreamer */ = {
+			isa = PBXGroup;
+			children = (
+				CBD81E791A839ED6006E6604 /* CoreFoundationDataSource.h */,
+				CBD81E7A1A839ED6006E6604 /* CoreFoundationDataSource.m */,
+				CBD81E6B1A839AEF006E6604 /* LocalFileDataSource.h */,
+				CBD81E6C1A839AEF006E6604 /* LocalFileDataSource.m */,
+				CBD81E681A839A8D006E6604 /* HttpDataSource.h */,
+				CBD81E691A839A8D006E6604 /* HttpDataSource.m */,
+				CBD81E621A839991006E6604 /* DataSource.h */,
+				CBD81E631A839991006E6604 /* DataSource.m */,
+				CBD81E5F1A839936006E6604 /* AudioPlayer.h */,
+				CBD81E601A839936006E6604 /* AudioPlayer.m */,
+			);
+			path = AudioStreamer;
 			sourceTree = "<group>";
 		};
 		EA103C641A7889AC00FFF66E /* Game */ = {
@@ -1320,6 +1365,7 @@
 				EA89883D1A7285BB00877E63 /* AppInfoViewStyle3.m in Sources */,
 				CB6A220D1A74B48E0087546F /* BookSearchResultTableViewController.m in Sources */,
 				EA88BFB11A7497B0004885A0 /* ADInfo.m in Sources */,
+				CBD81E611A839936006E6604 /* AudioPlayer.m in Sources */,
 				EA9C30021A778640002EFF35 /* HttpAPI.m in Sources */,
 				CB6A21D71A712FBD0087546F /* BookStoreTableViewCellStyle4.m in Sources */,
 				CB6A21BD1A6FF2AA0087546F /* BookStoreViewController.m in Sources */,
@@ -1334,12 +1380,14 @@
 				EAA5DFE31A77D42E00CF9163 /* HttpOtherAPI.m in Sources */,
 				EA88BFB41A74CB76004885A0 /* RecommendViewController.m in Sources */,
 				1AD64903B17F5D12DC09D1BB /* ThirdLoginInfo.m in Sources */,
+				CBD81E6A1A839A8D006E6604 /* HttpDataSource.m in Sources */,
 				EA9C2FEF1A776C0A002EFF35 /* AppAPIHelper.m in Sources */,
 				CB6A22041A73DF160087546F /* BookDetailInfoTableViewCellStyle5.m in Sources */,
 				CBD81E4A1A80EB7B006E6604 /* MusicRoomViewController.m in Sources */,
 				EA3D07731A6CD88A00189765 /* LoginViewController.m in Sources */,
 				EABA1ECB1A7679F200A76BD2 /* AppDetailsTableViewCellStyle2.m in Sources */,
 				CB6A21EB1A73C57C0087546F /* BookDetailInfoTableViewController.m in Sources */,
+				CBD81E7B1A839ED6006E6604 /* CoreFoundationDataSource.m in Sources */,
 				CBD81E451A7FA12C006E6604 /* MusicInfoViewStyle1.m in Sources */,
 				EA13DDDF1A6FA0D0004AB7E6 /* AppTableViewCellStyle3.m in Sources */,
 				EAA7738B1A72241B00EBD512 /* AppTableViewCellStyle4.m in Sources */,
@@ -1353,6 +1401,7 @@
 				EABA1EE61A76844000A76BD2 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				1AD64565F18F3ED26CC48D25 /* UserInfo.m in Sources */,
 				EA7C91081A77A10200782B8D /* RequestInfo.m in Sources */,
+				CBD81E641A839991006E6604 /* DataSource.m in Sources */,
 				EABA1EEA1A76844000A76BD2 /* AFXMLRequestOperation.m in Sources */,
 				EABA1EE51A76844000A76BD2 /* AFJSONRequestOperation.m in Sources */,
 				CB6A22201A765F7F0087546F /* BookDownloader.m in Sources */,
@@ -1369,6 +1418,7 @@
 				CBD81E3C1A7F9A96006E6604 /* MusicList.m in Sources */,
 				1AD64625B4F594E287714029 /* QQLogin.m in Sources */,
 				CB6A22101A74B4C10087546F /* BookDirectoryTableViewController.m in Sources */,
+				CBD81E6D1A839AEF006E6604 /* LocalFileDataSource.m in Sources */,
 				EABA1EE71A76844000A76BD2 /* AFNetworkReachabilityManager.m in Sources */,
 				CBD81E4E1A80FD6E006E6604 /* MusicRoomInfo.m in Sources */,
 				EABA1ECA1A7679F200A76BD2 /* AppDetailsTableViewCellStyle4.m in Sources */,
@@ -1386,7 +1436,7 @@
 				CB6A21D11A711CD50087546F /* BookStoreTableViewCellStyle2.m in Sources */,
 				CB6A21EE1A73C6840087546F /* BookInfoViewStyle2.m in Sources */,
 				EA88BFAE1A74904B004885A0 /* MovieInfo.m in Sources */,
-				CBD81E391A7F9A4D006E6604 /* MusicPlayer.m in Sources */,
+				CBD81E391A7F9A4D006E6604 /* HighLevelMusicPlayer.m in Sources */,
 				CBC05FBB1A7A6B3800CC4008 /* BookHScrollViewCell1.m in Sources */,
 				EAA773881A7222C400EBD512 /* AppTableViewPageCell.m in Sources */,
 				EA88BFB71A74D022004885A0 /* GroupInfo.m in Sources */,

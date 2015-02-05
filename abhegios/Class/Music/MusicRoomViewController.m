@@ -17,13 +17,15 @@
 
 @implementation MusicRoomViewController
 {
+    NSTimer *_frameTimer;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    CGRect frame = [_viewStyle1 frame];
-    [_viewStyle1 setFrame:CGRectMake(frame.origin.x, frame.origin.y, 120, 120)];
-    [_viewStyle1 setData:nil];
+    if (_frameTimer == nil) {
+        _frameTimer = [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(updateScreenPerFrame) userInfo:nil repeats:YES];
+        [_frameTimer fire];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -32,12 +34,18 @@
 
 - (void)updateScreen {
     MusicRoomInfo *currentInfo = [PlayerInstance getCurrentMusicInfo];
+    
+    // 播放
+    [PlayerInstance playWithStrUrl:currentInfo.url];
+    
+    // 页面显示更新
     NSString *nameArtist = [NSString stringWithFormat:@"%@ - %@", currentInfo.name, currentInfo.artist];
     [_name setText:nameArtist];
+    [_viewStyle1 setData:currentInfo];
 }
 
 - (void)updateScreenPerFrame {
-    
+    [PlayerInstance updateViewProgress:_viewStyle1];
 }
 
 - (IBAction)doNext:(id)sender {
