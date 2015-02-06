@@ -30,6 +30,8 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    // 再次进入时刷新一次
+    [self updateScreen];
 }
 
 - (void)updateScreen {
@@ -45,7 +47,6 @@
 
 - (IBAction)doNext:(id)sender {
     [PlayerInstance doNext];
-    [self updateScreen];
 }
 
 - (IBAction)doTrash:(id)sender {
@@ -59,6 +60,9 @@
 
 - (void)MusicPlayerHelperStateChange:(NSInteger)state {
     if (state == MusicPlayerHelperStateNext) {
+        [self updateScreen];
+    }
+    if (state == MusicPlayerHelperStatePlay) {
         [self updateScreen];
     }
 }

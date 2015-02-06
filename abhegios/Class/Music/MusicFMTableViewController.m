@@ -47,6 +47,9 @@
 - (void)MusicPlayerHelperStateChange:(NSInteger)state {
     if (state == MusicPlayerHelperStateNext) {
     }
+    if (state == MusicPlayerHelperStatePlay) {
+        [_player updateScreen];
+    }
 }
 
 #pragma mark - Table view data source
