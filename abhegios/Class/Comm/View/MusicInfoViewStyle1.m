@@ -17,8 +17,19 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    [[_logo layer] setCornerRadius:CGRectGetWidth(_logo.frame) * 0.5f];
+    [self setRadius];
+}
+
+- (void)setFrame:(CGRect)frame {
+    [super setFrame:frame];
+    [self setRadius];
+}
+
+- (void)setRadius {
+    [[_logo layer] setCornerRadius:(CGRectGetWidth(self.frame) - 12.0f) * 0.5f];
     [[_logo layer] setMasksToBounds:YES];
+    // TODO:特殊处理进度条，如果是小logo，采用小号progressline
+    
 }
 
 - (void)setData:(id)data {
