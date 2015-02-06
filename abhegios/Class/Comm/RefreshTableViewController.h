@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "ReqeustDelegate.h"
-@interface RefreshTableViewController : UITableViewController<ReqeustDelegate>
+#import <OEZCommSDK/OEZTableViewDelegate.h>
+@interface RefreshTableViewController : UITableViewController<ReqeustDelegate,OEZTableViewDelegate>
 {
     @protected
     id      _tableViewData;

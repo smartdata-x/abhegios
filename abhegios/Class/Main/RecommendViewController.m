@@ -113,16 +113,17 @@ typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
 }
 
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtOEZIndexPath:(OEZTableViewIndexPath *)indexPath
+
+-(void) tableView:(UITableView *)tableView rowAtIndexPath:(NSIndexPath *)indexPath didAction:(NSInteger)action
 {
-    NSInteger row =  [indexPath row] + [indexPath column];
+    
+    NSInteger row =  [indexPath row];
     BaseInfo* baseInfo = [[[self getGroupInfo:[indexPath section]]entitys] objectAtIndex:row];
-    if( [indexPath action] != NSNotFound )
-    {
-        if( [baseInfo isKindOfClass:[AppInfo class]])
-            [[[AppAPIHelper shared] getApplyAPI] getWanted:[baseInfo id] delegate:nil];
-    }
+    if( [baseInfo isKindOfClass:[AppInfo class]])
+        [[[AppAPIHelper shared] getApplyAPI] getWanted:[baseInfo id] delegate:nil];
 }
+
+
 
 -(void) pushDetails:(BaseInfo*) baseInfo
 {
@@ -139,10 +140,6 @@ typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if ([indexPath isKindOfClass:[OEZTableViewIndexPath class]]) {
-        [self tableView:tableView didSelectRowAtOEZIndexPath:(OEZTableViewIndexPath*)indexPath];
-    }
-    else
     {
         BaseInfo* baseInfo = [[[self getGroupInfo:[indexPath section]]entitys] objectAtIndex:[indexPath row]];
         [self pushDetails:baseInfo];

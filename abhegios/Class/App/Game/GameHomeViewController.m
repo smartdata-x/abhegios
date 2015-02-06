@@ -148,6 +148,30 @@
 }
 
 
+-(void) tableView:(UITableView *)tableView rowAtIndexPath:(NSIndexPath *)indexPath didSelectColumnAtIndex:(NSInteger)column
+{
+   if ([indexPath section] == kEmblemSection)
+   {
+       
+   }
+    else
+    {
+         GroupInfo* groupInfo = [self getGroupInfo:[indexPath section]];
+         NSInteger row = column + [indexPath row] * kMaxRowNum;
+         [self.navigationController pushAppDetailsViewController:[[groupInfo entitys] objectAtIndex:row] animated:YES ];
+    }
+}
+
+
+-(void) tableView:(UITableView *)tableView rowAtIndexPath:(NSIndexPath *)indexPath didAction:(NSInteger)action
+{
+     if ([indexPath section] == kEmblemSection)
+     {
+          [[[AppAPIHelper shared] getApplyAPI] getWanted:[[_tableViewData emblem] id] delegate:nil];
+     }
+}
+
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([indexPath section] == kEmblemSection)
@@ -158,23 +182,7 @@
         }
         else
         {
-             if ([indexPath isKindOfClass:[OEZTableViewIndexPath class]])
-            {
-                [[[AppAPIHelper shared] getApplyAPI] getWanted:[[_tableViewData emblem] id] delegate:nil];
-
-            }
-            else
-                [self.navigationController pushAppDetailsViewController:[_tableViewData emblem] animated:YES ];
-        }
-    }
-    else
-    {
-        if( [indexPath isKindOfClass:[OEZTableViewIndexPath class]])
-        {
-            GroupInfo* groupInfo = [self getGroupInfo:[indexPath section]];
-            OEZTableViewIndexPath *oezIndexPath = (OEZTableViewIndexPath*)indexPath ;
-            NSInteger row =  [oezIndexPath column] + [oezIndexPath row] * kMaxRowNum;
-            [self.navigationController pushAppDetailsViewController:[[groupInfo entitys] objectAtIndex:row] animated:YES ];
+            [self.navigationController pushAppDetailsViewController:[_tableViewData emblem] animated:YES ];
         }
     }
 }

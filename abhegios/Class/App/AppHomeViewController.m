@@ -115,45 +115,38 @@
 }
 
 
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtOEZIndexPath:(OEZTableViewIndexPath *)indexPath
+-(void) tableView:(UITableView *)tableView rowAtIndexPath:(NSIndexPath *)indexPath didSelectColumnAtIndex:(NSInteger)column
 {
     GroupInfo *group = [self getGroupInfo:[indexPath section]];
-    NSInteger row =  [indexPath row] + [indexPath column];
-    if( [indexPath action] != NSNotFound )
+    NSInteger row =  [indexPath row] + column;
+    if( [[group key] hasPrefix:@"specialtopics"])
     {
-        [[[AppAPIHelper shared] getApplyAPI] getWanted:[[[group entitys] objectAtIndex:row] id] delegate:nil];
+        [self.navigationController pushViewControllerWithIdentifier:@"SpecialTopicsViewController" completion:^(UIViewController *viewController) {
+            [(SpecialTopicsViewController*)viewController setAdInfo:[[group entitys] objectAtIndex:row]];
+        } animated:TRUE];
+
+    }
+    else if( [[group key] hasPrefix:@"advert"] )
+    {
+        
     }
     else
-    {
         [self.navigationController pushAppDetailsViewController:[[group entitys] objectAtIndex:row] animated:YES];
-    }
+}
+
+-(void) tableView:(UITableView *)tableView rowAtIndexPath:(NSIndexPath *)indexPath didAction:(NSInteger)action
+{
+     GroupInfo *group = [self getGroupInfo:[indexPath section]];
+    [[[AppAPIHelper shared] getApplyAPI] getWanted:[[[group entitys] objectAtIndex:[indexPath row]] id] delegate:nil];
 }
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if ([indexPath isKindOfClass:[OEZTableViewIndexPath class]]) {
-        [self tableView:tableView didSelectRowAtOEZIndexPath:(OEZTableViewIndexPath*)indexPath];
-    }
-    else
-    {
-        GroupInfo *group = [self getGroupInfo:[indexPath section]];
-        NSInteger row = [indexPath row];
-        if( [[group key] hasPrefix:@"specialtopics"])
-        {
-            [self.navigationController pushViewControllerWithIdentifier:@"SpecialTopicsViewController" completion:^(UIViewController *viewController) {
-                [(SpecialTopicsViewController*)viewController setAdInfo:[[group entitys] objectAtIndex:row]];
-            } animated:TRUE];
-        }
-        else if( [[group key] hasPrefix:@"advert"] )
-        {
-            
-        }
-        else
-            [self.navigationController pushAppDetailsViewController:[[group entitys] objectAtIndex:row] animated:YES];
-    }
+    GroupInfo *group = [self getGroupInfo:[indexPath section]];
+    NSInteger row = [indexPath row];
+    [self.navigationController pushAppDetailsViewController:[[group entitys] objectAtIndex:row] animated:YES];
    
 }
 

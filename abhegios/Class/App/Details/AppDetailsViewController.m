@@ -94,21 +94,27 @@ typedef NS_ENUM(NSInteger, AppDetailsTableViewCellStyle) {
 }
 
 
+-(void) tableView:(UITableView *)tableView rowAtIndexPath:(NSIndexPath *)indexPath didAction:(NSInteger)action
+{
+    
+   [[[AppAPIHelper shared] getApplyAPI] getWanted:[[_tableViewData intro] id] delegate:nil];
+}
+
+
+-(void) tableView:(UITableView *)tableView rowAtIndexPath:(NSIndexPath *)indexPath didSelectColumnAtIndex:(NSInteger)column
+{
+    [self.navigationController pushAppDetailsViewController:[[_tableViewData like] objectAtIndex:column ] animated:YES ];
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSInteger row = [indexPath row];
     if( row  == 2)
     {
-        if ([indexPath isKindOfClass:[OEZTableViewIndexPath class]]) {
-            row =  [(OEZTableViewIndexPath*)indexPath column];
-        }
         [self.navigationController pushAppDetailsViewController:[[_tableViewData like] objectAtIndex:row ] animated:YES ];
     }
-    else if( row == 0 )
-    {
-        [[[AppAPIHelper shared] getApplyAPI] getWanted:[[_tableViewData intro] id] delegate:nil];
-    }
+    
 }
 
 @end

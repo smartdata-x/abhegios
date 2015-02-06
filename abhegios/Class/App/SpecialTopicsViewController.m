@@ -47,23 +47,20 @@
     [cell setData:[_tableViewData objectAtIndex:[indexPath row]]];
     return cell;
 }
-- (void)tableView:(UITableView *)tableView didSelectRowAtOEZIndexPath:(OEZTableViewIndexPath *)indexPath
+
+
+
+-(void) tableView:(UITableView *)tableView rowAtIndexPath:(NSIndexPath *)indexPath didAction:(NSInteger)action
 {
-    NSInteger row =  [indexPath row] + [indexPath column];
-    if( [indexPath action] != NSNotFound )
-    {
-        [[[AppAPIHelper shared] getApplyAPI] getWanted:[[_tableViewData objectAtIndex:row] id] delegate:nil];
-    }
+  
+    [[[AppAPIHelper shared] getApplyAPI] getWanted:[[_tableViewData objectAtIndex:[indexPath row]] id] delegate:nil];
 }
+
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if ([indexPath isKindOfClass:[OEZTableViewIndexPath class]]) {
-        [self tableView:tableView didSelectRowAtOEZIndexPath:(OEZTableViewIndexPath*)indexPath];
-    }
-    else
     {
         [self.navigationController pushAppDetailsViewController:[_tableViewData objectAtIndex:[indexPath row]]animated:YES];
     }
