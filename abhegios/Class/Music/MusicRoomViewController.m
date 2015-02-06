@@ -9,7 +9,6 @@
 #import "MusicRoomViewController.h"
 #import "GroupInfo.h"
 #import "AppAPIHelper.h"
-#import "MusicPlayerHelper.h"
 
 @interface MusicRoomViewController ()
 //@property (nonatomic, retain) MusicPlayerHelper *playerHelper;
@@ -22,23 +21,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    PlayerInstance.delegate = self;
     if (_frameTimer == nil) {
         _frameTimer = [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(updateScreenPerFrame) userInfo:nil repeats:YES];
         [_frameTimer fire];
     }
+    [PlayerInstance refreshMusicList];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    [PlayerInstance refreshMusicList];
 }
 
 - (void)updateScreen {
     MusicRoomInfo *currentInfo = [PlayerInstance getCurrentMusicInfo];
-    
-    // 播放
-    [PlayerInstance playWithStrUrl:currentInfo.url];
-    
-    // 页面显示更新
     NSString *nameArtist = [NSString stringWithFormat:@"%@ - %@", currentInfo.name, currentInfo.artist];
     [_name setText:nameArtist];
     [_viewStyle1 setData:currentInfo];
@@ -60,6 +55,12 @@
 
 - (IBAction)doLove:(id)sender {
     
+}
+
+- (void)MusicPlayerHelperStateChange:(NSInteger)state {
+    if (state == MusicPlayerHelperStateNext) {
+        [self updateScreen];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

@@ -45,8 +45,8 @@
     return [self getCurrentMusicInfo];
 }
 
-- (BOOL)isListEmpty {
-    return musicCount < 0;
+- (BOOL)isListHaveNext {
+    return (musicCount < 0) || (currentMusicIndex >= musicCount - 1);
 }
 
 @end

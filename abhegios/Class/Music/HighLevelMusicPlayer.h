@@ -9,11 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "AudioPlayer.h"
 
+@protocol HighLevelMusicPlayerDelegate <NSObject>
+- (void)didPlayingCurrentMusicFinished;
+@end
+
 @interface HighLevelMusicPlayer : NSObject<AudioPlayerDelegate>
 {
     AudioPlayer *_audioPlayer;
 }
-
+@property (nonatomic, retain) id<HighLevelMusicPlayerDelegate> delegate;
 - (void)playWithStrUrl:(NSString *)strurl;
 - (BOOL)isPlaying;
 - (void)doPlay;

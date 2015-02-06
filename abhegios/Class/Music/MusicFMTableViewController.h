@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <OEZCommSDK/OEZCommSDK.h>
 #import "MusicInfoViewStyle2.h"
-@interface MusicFMTableViewController : UITableViewController
+@interface MusicFMTableViewController : UITableViewController<MusicPlayerHelperDelegate>
 @property (nonatomic, retain) IBOutlet MusicInfoViewStyle2 *player;
 @end
