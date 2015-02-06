@@ -25,28 +25,48 @@
 
 +(NSString*) getButtonText:(id) info
 {
-    if( [info isKindOfClass:[AppInfo class]])
-        return @"下载";
-    else if( [info isKindOfClass:[BookInfo class]])
-        return @"阅读";
-    else if( [info isKindOfClass:[MusicInfo class]])
-        return @"试听";
-    else if( [info isKindOfClass:[MusicInfo class]])
-        return @"观看";
-    return @"下载";
+    switch ([BaseInfoAdapter getEntityType:info])
+    {
+        case EntityType_App:
+            return @"下载";
+        case EntityType_Book:
+            return @"阅读";
+        case EntityType_Music:
+            return @"试听";
+        case EntityType_Movie:
+            return @"观看";
+        default:
+             return @"下载";
+    }
 }
 
 +(NSString*) getPopularity:(id) info
 {
+    switch ([BaseInfoAdapter getEntityType:info]) {
+        case EntityType_App:
+             return [NSString stringWithFormat:@"下载次数 %@",@([info down])];
+        case EntityType_Book:
+            return [NSString stringWithFormat:@"阅读次数 %@",@([info read])];
+        case EntityType_Music:
+            return [NSString stringWithFormat:@"试听次数 %@",@([info down])];
+        case EntityType_Movie:
+            return [NSString stringWithFormat:@"观看次数 %@",@([info listen])];
+        default:
+            return @"";
+    }
+}
+
++(EntityType) getEntityType:(id) info
+{
     if( [info isKindOfClass:[AppInfo class]])
-        return [NSString stringWithFormat:@"下载次数 %@",@([info down])];
+        return EntityType_App;
     else if( [info isKindOfClass:[BookInfo class]])
-        return [NSString stringWithFormat:@"阅读次数 %@",@([info read])];
+        return EntityType_Book;
     else if( [info isKindOfClass:[MusicInfo class]])
-        return [NSString stringWithFormat:@"试听次数 %@",@([info down])];
+        return EntityType_Music;
     else if( [info isKindOfClass:[MusicInfo class]])
-        return [NSString stringWithFormat:@"观看次数 %@",@([info listen])];
-    return @"";
+        return EntityType_Movie;
+    return EntityType_None;
 }
 
 @end

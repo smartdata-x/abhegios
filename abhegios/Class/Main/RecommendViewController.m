@@ -14,6 +14,8 @@
 #import "BookInfo.h"
 #import "SearchView.h"
 #import "BookDetailInfoTableViewController.h"
+#import "BaseInfoAdapter.h"
+#import "TableViewHeader.h"
 typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
     RecommendTableViewCellStyleNone = 0,
     RecommendTableViewCellStyleOne,
@@ -119,30 +121,44 @@ typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
     
     NSInteger row =  [indexPath row];
     BaseInfo* baseInfo = [[[self getGroupInfo:[indexPath section]]entitys] objectAtIndex:row];
-    if( [baseInfo isKindOfClass:[AppInfo class]])
-        [[[AppAPIHelper shared] getApplyAPI] getWanted:[baseInfo id] delegate:nil];
-}
-
-
-
--(void) pushDetails:(BaseInfo*) baseInfo
-{
-    if( [baseInfo isKindOfClass:[AppInfo class]])
-        [self.navigationController pushAppDetailsViewController:baseInfo animated:YES ];
-    else if (  [baseInfo isKindOfClass:[BookInfo class]] )
+    
+    switch ([BaseInfoAdapter getEntityType:baseInfo])
     {
-        
-        [self.navigationController pushBookDetailsViewController:baseInfo animated:YES];
+        case EntityType_App:
+           [[[AppAPIHelper shared] getApplyAPI] getWanted:[baseInfo id] delegate:nil];
+            break;
+        case EntityType_Book:
+            break;
+        case EntityType_Music:
+            break;
+        case EntityType_Movie:
+            break;
+        default:
+            break;
     }
-
 }
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     {
         BaseInfo* baseInfo = [[[self getGroupInfo:[indexPath section]]entitys] objectAtIndex:[indexPath row]];
-        [self pushDetails:baseInfo];
+        switch ([BaseInfoAdapter getEntityType:baseInfo])
+        {
+            case EntityType_App:
+                [self.navigationController pushAppDetailsViewController:baseInfo animated:YES ];
+                break;
+            case EntityType_Book:
+                [self.navigationController pushBookDetailsViewController:baseInfo animated:YES];
+                break;
+            case EntityType_Music:
+                break;
+            case EntityType_Movie:
+                break;
+            default:
+                break;
+        }
     }
    }
 
