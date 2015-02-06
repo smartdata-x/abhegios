@@ -1192,7 +1192,20 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p0a-NG-zz2" id="IHH-A2-ePo">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XCX-Uu-Dse" customClass="AppInfoViewStyle1">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="XCX-Uu-Dse" secondAttribute="trailing" id="2GO-05-NMz"/>
+                                        <constraint firstItem="XCX-Uu-Dse" firstAttribute="leading" secondItem="IHH-A2-ePo" secondAttribute="leadingMargin" id="zfH-Ne-gtY"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="appInfoView" destination="XCX-Uu-Dse" id="41D-cH-xtE"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

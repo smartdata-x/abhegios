@@ -42,6 +42,9 @@
 }
 
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 80;
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     OEZTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AppTableViewCellStyle1"];
     [cell setData:[_tableViewData objectAtIndex:[indexPath row]]];
