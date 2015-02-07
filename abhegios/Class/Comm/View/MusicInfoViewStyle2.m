@@ -15,7 +15,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    [_viewStyle1 awakeFromNib];
+    [_viewStyle1 setFrame:CGRectMake(20, 0, 50, 50)];
     [self updateScreen];
     if (timer == nil) {
         timer = [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(updatePerFrame) userInfo:nil repeats:YES];

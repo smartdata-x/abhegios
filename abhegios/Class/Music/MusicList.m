@@ -46,7 +46,9 @@
 }
 
 - (BOOL)isListHaveNext {
-    return (musicCount < 0) || (currentMusicIndex >= musicCount - 1);
+    BOOL listEmpty = musicCount <= 0;
+    BOOL listExhausted = currentMusicIndex >= musicCount - 1;
+    return !(listEmpty || listExhausted);
 }
 
 @end

@@ -13,11 +13,13 @@
 #import "HighLevelMusicPlayer.h"
 
 typedef NS_ENUM(NSInteger, MusicPlayerHelperState) {
+    MusicPlayerHelperStateInit = -1,
     MusicPlayerHelperStatePlay = 0,
     MusicPlayerHelperStatePause,
     MusicPlayerHelperStateStop,
     MusicPlayerHelperStateNext,
     MusicPlayerHelperStateError,
+    MusicPlayerHelperStateMax,
 };
 
 @protocol MusicPlayerHelperDelegate <NSObject>
@@ -32,6 +34,7 @@ typedef NS_ENUM(NSInteger, MusicPlayerHelperState) {
 @property (nonatomic, retain) HighLevelMusicPlayer *musicPlayer;
 @property (nonatomic, retain) NSString *dimension;
 @property (nonatomic, assign) NSInteger sid;
+@property (nonatomic, assign) MusicPlayerHelperState helperState;
 
 - (void)playWithStrUrl:(NSString *)strurl;
 - (BOOL)isPlaying;

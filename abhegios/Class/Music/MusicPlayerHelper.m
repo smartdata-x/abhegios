@@ -13,6 +13,7 @@
 #import "MusicInfoViewStyle1.h"
 @implementation MusicPlayerHelper
 {
+    BOOL isClickedNext;
 }
 
 +(instancetype)shared{
@@ -24,6 +25,7 @@
         instance.musicList = [[MusicList alloc] init];
         instance.musicPlayer = [[HighLevelMusicPlayer alloc] init];
         instance.musicPlayer.delegate = instance;
+        instance.helperState = -1;
         instance.dimension = @"chl";
         instance.sid = 1;
     });
@@ -31,7 +33,10 @@
 }
 
 - (void)refreshMusicList {
-    [[[AppAPIHelper shared] getMusicAPI] getMusicDimension:self Dimension:_dimension Sid:_sid];
+    // 如果列表不为空，则不需要刷新列表
+    if (![_musicList isListHaveNext]) {
+        [[[AppAPIHelper shared] getMusicAPI] getMusicDimension:self Dimension:_dimension Sid:_sid];
+    }
 }
 
 - (void)setMusicParams:(NSString *)dimension Sid:(NSInteger)sid {
@@ -46,6 +51,7 @@
 
 - (void)playWithStrUrl:(NSString *)strurl {
     [_musicPlayer playWithStrUrl:strurl];
+    [self MusicHelperStateChange:MusicPlayerHelperStatePlay];
 }
 
 - (BOOL)isPlaying {
@@ -53,14 +59,13 @@
 }
 
 - (void)doNext {
-    if (![_musicList isListHaveNext]) {
-        MusicRoomInfo *nextMusicInfo = [_musicList getNextMusicInfo];
-        if (nextMusicInfo == nil) {
-            [self refreshMusicList];
-        }
-        else {
-            [_musicPlayer playWithStrUrl:nextMusicInfo.url];
-        }
+    isClickedNext = YES;
+    MusicRoomInfo *nextMusicInfo = [_musicList getNextMusicInfo];
+    if ([_musicList isListHaveNext] && nextMusicInfo) {
+        [self playWithStrUrl:nextMusicInfo.url];
+    }
+    else {
+        [self refreshMusicList];
     }
 }
 
@@ -91,9 +96,18 @@
 }
 
 - (void)didPlayingCurrentMusicFinished {
-    [self doNext];
+    if (!isClickedNext) {
+        // 如果不是点击了next，说明是自然播放结束，则播放下一首
+        isClickedNext = NO;
+        [self doNext];
+        [self MusicHelperStateChange:MusicPlayerHelperStateNext];
+    }
+}
+
+- (void)MusicHelperStateChange:(MusicPlayerHelperState )changedState {
+    _helperState = changedState;
     if ([_delegate respondsToSelector:@selector(MusicPlayerHelperStateChange:)]) {
-        [_delegate MusicPlayerHelperStateChange:MusicPlayerHelperStateNext];
+        [_delegate MusicPlayerHelperStateChange:_helperState];
     }
 }
 
