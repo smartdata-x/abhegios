@@ -86,6 +86,8 @@
 		CBD81E731A839C65006E6604 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD81E721A839C65006E6604 /* AVFoundation.framework */; };
 		CBD81E7B1A839ED6006E6604 /* CoreFoundationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD81E7A1A839ED6006E6604 /* CoreFoundationDataSource.m */; };
 		CBE0043F1A78FB20001A2F42 /* HttpBookAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE0043E1A78FB20001A2F42 /* HttpBookAPI.m */; };
+		CBE062A51A85D6E500BF27C8 /* MusicInfoViewStyle3.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE062A41A85D6E500BF27C8 /* MusicInfoViewStyle3.m */; };
+		CBE062A71A85D8F300BF27C8 /* MusicInfoViewStyle3.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBE062A61A85D8F300BF27C8 /* MusicInfoViewStyle3.xib */; };
 		EA103C671A7889F200FFF66E /* GameHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C651A7889F200FFF66E /* GameHomeViewController.m */; };
 		EA103C6A1A788A3B00FFF66E /* GameHomeTableViewCellStyle3.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C691A788A3B00FFF66E /* GameHomeTableViewCellStyle3.m */; };
 		EA103C6D1A788B7B00FFF66E /* GameHomeTableViewCellStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C6C1A788B7B00FFF66E /* GameHomeTableViewCellStyle2.m */; };
@@ -345,6 +347,9 @@
 		CBE0043D1A78FB20001A2F42 /* HttpBookAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpBookAPI.h; sourceTree = "<group>"; };
 		CBE0043E1A78FB20001A2F42 /* HttpBookAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpBookAPI.m; sourceTree = "<group>"; };
 		CBE004401A78FB5F001A2F42 /* BookAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookAPI.h; sourceTree = "<group>"; };
+		CBE062A31A85D6E500BF27C8 /* MusicInfoViewStyle3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicInfoViewStyle3.h; sourceTree = "<group>"; };
+		CBE062A41A85D6E500BF27C8 /* MusicInfoViewStyle3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicInfoViewStyle3.m; sourceTree = "<group>"; };
+		CBE062A61A85D8F300BF27C8 /* MusicInfoViewStyle3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicInfoViewStyle3.xib; sourceTree = SOURCE_ROOT; };
 		EA103C651A7889F200FFF66E /* GameHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameHomeViewController.m; sourceTree = "<group>"; };
 		EA103C661A7889F200FFF66E /* GameHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHomeViewController.h; sourceTree = "<group>"; };
 		EA103C681A788A3B00FFF66E /* GameHomeTableViewCellStyle3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHomeTableViewCellStyle3.h; sourceTree = "<group>"; };
@@ -781,6 +786,7 @@
 				EA7EC6411A858F7C00688033 /* SearchView.xib */,
 				EA7EC6431A858F7C00688033 /* PageViewImageCell1.xib */,
 				EA7EC6451A858F7C00688033 /* PageViewImageCell.xib */,
+				CBE062A61A85D8F300BF27C8 /* MusicInfoViewStyle3.xib */,
 				EA7EC6471A858F7C00688033 /* MusicInfoViewStyle2.xib */,
 				EA7EC6491A858F7C00688033 /* MusicInfoViewStyle1.xib */,
 				EA7EC64D1A858F7C00688033 /* GameHScrollViewCell.xib */,
@@ -1123,6 +1129,8 @@
 				CBD81E441A7FA12C006E6604 /* MusicInfoViewStyle1.m */,
 				CBD81E551A826C16006E6604 /* MusicInfoViewStyle2.h */,
 				CBD81E561A826C16006E6604 /* MusicInfoViewStyle2.m */,
+				CBE062A31A85D6E500BF27C8 /* MusicInfoViewStyle3.h */,
+				CBE062A41A85D6E500BF27C8 /* MusicInfoViewStyle3.m */,
 				EA9F28D01A823BA7002B09C1 /* SearchView.h */,
 				EA9F28D11A823BA7002B09C1 /* SearchView.m */,
 			);
@@ -1308,6 +1316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA3D07761A6CD9A600189765 /* Main.storyboard in Resources */,
+				CBE062A71A85D8F300BF27C8 /* MusicInfoViewStyle3.xib in Resources */,
 				EA3D07771A6CD9A600189765 /* LaunchScreen.xib in Resources */,
 				EA7EC6661A858F7C00688033 /* MusicInfoViewStyle1.xib in Resources */,
 				1AD6460C6803B48F071D6E89 /* Images.xcassets in Resources */,
@@ -1383,6 +1392,7 @@
 				CBD81E421A7F9F24006E6604 /* MusicFMTableViewCellStyle1.m in Sources */,
 				CB6A220A1A749CE50087546F /* BookDetailInfo.m in Sources */,
 				CB6A21F61A73D4BD0087546F /* BookDetailInfoTableViewCellStyle2.m in Sources */,
+				CBE062A51A85D6E500BF27C8 /* MusicInfoViewStyle3.m in Sources */,
 				CB6A21F91A73D6430087546F /* BookInfoViewStyle3.m in Sources */,
 				CBD81E571A826C16006E6604 /* MusicInfoViewStyle2.m in Sources */,
 				EA89883D1A7285BB00877E63 /* AppInfoViewStyle3.m in Sources */,

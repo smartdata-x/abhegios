@@ -9,6 +9,7 @@
 #import "MusicRoomViewController.h"
 #import "GroupInfo.h"
 #import "AppAPIHelper.h"
+#import "MusicInfoViewStyle3.h"
 
 @interface MusicRoomViewController ()
 //@property (nonatomic, retain) MusicPlayerHelper *playerHelper;
@@ -21,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self initNavBar];
     PlayerInstance.delegate = self;
     if (_frameTimer == nil) {
         _frameTimer = [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(updateScreenPerFrame) userInfo:nil repeats:YES];
@@ -32,6 +34,13 @@
 - (void)viewDidAppear:(BOOL)animated {
     // 再次进入时刷新一次
     [self updateScreen];
+}
+
+- (void)initNavBar {
+    MusicInfoViewStyle3 *viewStyle3 = [MusicInfoViewStyle3 loadFromNib];
+    [viewStyle3 setData:@"发现音乐" Right:@"我的FM" LeftMajor:YES];
+    [viewStyle3.rightButton addTarget:self action:@selector(gotoMusicFMView) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.titleView = viewStyle3;
 }
 
 - (void)updateScreen {
@@ -50,12 +59,15 @@
 }
 
 - (IBAction)doTrash:(id)sender {
-    [self.navigationController pushViewControllerWithIdentifier:@"MusicFMTableViewController" completion:^(UIViewController *viewController) {
-    } animated:YES];
 }
 
 - (IBAction)doLove:(id)sender {
     
+}
+
+- (void)gotoMusicFMView {
+    [self.navigationController pushViewControllerWithIdentifier:@"MusicFMTableViewController" completion:^(UIViewController *viewController) {
+    } animated:YES];
 }
 
 - (void)MusicPlayerHelperStateChange:(NSInteger)state {

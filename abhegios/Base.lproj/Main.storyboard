@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="y5s-RF-eIy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="y5s-RF-eIy">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -951,10 +951,10 @@
             </objects>
             <point key="canvasLocation" x="7942" y="59"/>
         </scene>
-        <!--Music Room View Controller-->
+        <!-- -->
         <scene sceneID="bzw-3F-Vhp">
             <objects>
-                <viewController storyboardIdentifier="MusicRoomViewController" id="IYr-bQ-UIs" customClass="MusicRoomViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MusicRoomViewController" title=" " id="IYr-bQ-UIs" customClass="MusicRoomViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NtG-LV-TbJ"/>
                         <viewControllerLayoutGuide type="bottom" id="7J2-OG-jby"/>

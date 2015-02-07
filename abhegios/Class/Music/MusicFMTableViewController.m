@@ -7,6 +7,7 @@
 //
 
 #import "MusicFMTableViewController.h"
+#import "MusicInfoViewStyle3.h"
 
 @interface MusicFMTableViewController ()
 @property (nonatomic, retain) NSArray *sectionInfo;
@@ -16,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self initNavBar];
     [_player.trash addTarget:self action:@selector(doTrash:) forControlEvents:UIControlEventTouchUpInside];
     [_player.love addTarget:self action:@selector(doLove:) forControlEvents:UIControlEventTouchUpInside];
     [_player.next addTarget:self action:@selector(doNext:) forControlEvents:UIControlEventTouchUpInside];
@@ -25,6 +27,17 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [_player updateScreen];
+}
+
+- (void)initNavBar {
+    MusicInfoViewStyle3 *viewStyle3 = [MusicInfoViewStyle3 loadFromNib];
+    [viewStyle3 setData:@"发现音乐" Right:@"我的FM" LeftMajor:NO];
+    [viewStyle3.leftButton addTarget:self action:@selector(backToMusicRoom) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.titleView = viewStyle3;
+}
+
+- (void)backToMusicRoom {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
