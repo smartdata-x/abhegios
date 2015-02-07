@@ -6,19 +6,20 @@
 //  Copyright (c) 2015年 180. All rights reserved.
 //
 
-#import "MusicFMTableViewController.h"
+#import "MusicFMViewController.h"
 #import "MusicInfoViewStyle3.h"
 
-@interface MusicFMTableViewController ()
+@interface MusicFMViewController ()
 @property (nonatomic, retain) NSArray *sectionInfo;
 @end
 
-@implementation MusicFMTableViewController
+@implementation MusicFMViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initNavBar];
     [self initMusicPlayer];
+    [self initTableView];
     PlayerInstance.delegate = self;
     _sectionInfo = [NSArray arrayWithObjects:@"个人兆赫", @"频道兆赫", @"心情兆赫", nil];
 }
@@ -42,6 +43,12 @@
     [_player.love addTarget:self action:@selector(doLove:) forControlEvents:UIControlEventTouchUpInside];
     [_player.next addTarget:self action:@selector(doNext:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_player];
+}
+
+- (void)initTableView {
+    //_tableView = [[UITableView alloc] init];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
 }
 
 - (void)backToMusicRoom {

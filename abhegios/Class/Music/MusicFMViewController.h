@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <OEZCommSDK/OEZCommSDK.h>
 #import "MusicInfoViewStyle2.h"
-@interface MusicFMTableViewController : UITableViewController<MusicPlayerHelperDelegate>
+@interface MusicFMViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, MusicPlayerHelperDelegate>
 @property (nonatomic, retain) IBOutlet MusicInfoViewStyle2 *player;
+@property (nonatomic, retain) IBOutlet UITableView *tableView;
 @end

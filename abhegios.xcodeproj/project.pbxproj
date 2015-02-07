@@ -66,7 +66,7 @@
 		CBC05FC41A7C70F000CC4008 /* BookThemeTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC05FC31A7C70F000CC4008 /* BookThemeTableViewCellStyle1.m */; };
 		CBC05FC71A7C710300CC4008 /* BookThemeTableViewCellStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC05FC61A7C710300CC4008 /* BookThemeTableViewCellStyle2.m */; };
 		CBC05FCA1A7C76C100CC4008 /* BookTopicInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC05FC91A7C76C100CC4008 /* BookTopicInfo.m */; };
-		CBD81E351A7F98DD006E6604 /* MusicFMTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD81E341A7F98DD006E6604 /* MusicFMTableViewController.m */; };
+		CBD81E351A7F98DD006E6604 /* MusicFMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD81E341A7F98DD006E6604 /* MusicFMViewController.m */; };
 		CBD81E391A7F9A4D006E6604 /* HighLevelMusicPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD81E381A7F9A4D006E6604 /* HighLevelMusicPlayer.m */; };
 		CBD81E3C1A7F9A96006E6604 /* MusicList.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD81E3B1A7F9A96006E6604 /* MusicList.m */; };
 		CBD81E3F1A7F9B12006E6604 /* MusicPlayerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD81E3E1A7F9B12006E6604 /* MusicPlayerHelper.m */; };
@@ -309,8 +309,8 @@
 		CBC05FC61A7C710300CC4008 /* BookThemeTableViewCellStyle2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookThemeTableViewCellStyle2.m; sourceTree = "<group>"; };
 		CBC05FC81A7C76C100CC4008 /* BookTopicInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookTopicInfo.h; sourceTree = "<group>"; };
 		CBC05FC91A7C76C100CC4008 /* BookTopicInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookTopicInfo.m; sourceTree = "<group>"; };
-		CBD81E331A7F98DD006E6604 /* MusicFMTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicFMTableViewController.h; sourceTree = "<group>"; };
-		CBD81E341A7F98DD006E6604 /* MusicFMTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicFMTableViewController.m; sourceTree = "<group>"; };
+		CBD81E331A7F98DD006E6604 /* MusicFMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicFMViewController.h; sourceTree = "<group>"; };
+		CBD81E341A7F98DD006E6604 /* MusicFMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicFMViewController.m; sourceTree = "<group>"; };
 		CBD81E371A7F9A4D006E6604 /* HighLevelMusicPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighLevelMusicPlayer.h; sourceTree = "<group>"; };
 		CBD81E381A7F9A4D006E6604 /* HighLevelMusicPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighLevelMusicPlayer.m; sourceTree = "<group>"; };
 		CBD81E3A1A7F9A96006E6604 /* MusicList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicList.h; sourceTree = "<group>"; };
@@ -995,8 +995,8 @@
 			isa = PBXGroup;
 			children = (
 				CBD81E361A7F992E006E6604 /* MusicPlayerCore */,
-				CBD81E331A7F98DD006E6604 /* MusicFMTableViewController.h */,
-				CBD81E341A7F98DD006E6604 /* MusicFMTableViewController.m */,
+				CBD81E331A7F98DD006E6604 /* MusicFMViewController.h */,
+				CBD81E341A7F98DD006E6604 /* MusicFMViewController.m */,
 				CBD81E401A7F9F24006E6604 /* MusicFMTableViewCellStyle1.h */,
 				CBD81E411A7F9F24006E6604 /* MusicFMTableViewCellStyle1.m */,
 				CBD81E481A80EB7B006E6604 /* MusicRoomViewController.h */,
@@ -1428,7 +1428,7 @@
 				EA8D74991A6E9DC2004C17C2 /* AppTableViewCellStyle2.m in Sources */,
 				EA8988311A726EAA00877E63 /* AppInfoViewStyle1.m in Sources */,
 				CBC05FC11A7C70A000CC4008 /* BookThemeTableViewController.m in Sources */,
-				CBD81E351A7F98DD006E6604 /* MusicFMTableViewController.m in Sources */,
+				CBD81E351A7F98DD006E6604 /* MusicFMViewController.m in Sources */,
 				EA9F28DA1A825589002B09C1 /* FoundHScrollViewCell.m in Sources */,
 				EA8D74931A6E7CF9004C17C2 /* AppTableViewCellStyle1.m in Sources */,
 				EA7EC6751A858FFA00688033 /* MBProgressHUD.m in Sources */,

@@ -66,7 +66,7 @@
 }
 
 - (void)gotoMusicFMView {
-    [self.navigationController pushViewControllerWithIdentifier:@"MusicFMTableViewController" completion:^(UIViewController *viewController) {
+    [self.navigationController pushViewControllerWithIdentifier:@"MusicFMViewController" completion:^(UIViewController *viewController) {
     } animated:YES];
 }
 
