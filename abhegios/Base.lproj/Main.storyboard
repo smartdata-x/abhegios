@@ -1043,11 +1043,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="2YU-z1-TOI" customClass="MusicInfoViewStyle2">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MusicFMTableViewCellStyle1" rowHeight="49" id="fpU-9y-eND" customClass="MusicFMTableViewCellStyle1">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -1076,9 +1071,6 @@
                             <outlet property="delegate" destination="Q4i-E5-gMq" id="iEp-uR-EPe"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <outlet property="player" destination="2YU-z1-TOI" id="WzO-UR-m5z"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2gC-TV-wEn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

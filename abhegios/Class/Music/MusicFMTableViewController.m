@@ -18,9 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initNavBar];
-    [_player.trash addTarget:self action:@selector(doTrash:) forControlEvents:UIControlEventTouchUpInside];
-    [_player.love addTarget:self action:@selector(doLove:) forControlEvents:UIControlEventTouchUpInside];
-    [_player.next addTarget:self action:@selector(doNext:) forControlEvents:UIControlEventTouchUpInside];
+    [self initMusicPlayer];
     PlayerInstance.delegate = self;
     _sectionInfo = [NSArray arrayWithObjects:@"个人兆赫", @"频道兆赫", @"心情兆赫", nil];
 }
@@ -34,6 +32,16 @@
     [viewStyle3 setData:@"发现音乐" Right:@"我的FM" LeftMajor:NO];
     [viewStyle3.leftButton addTarget:self action:@selector(backToMusicRoom) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.titleView = viewStyle3;
+}
+
+- (void)initMusicPlayer {
+    _player = [MusicInfoViewStyle2 loadFromNib];
+    CGRect frame = CGRectMake(0, kMainScreenHeight-50-64, CGRectGetWidth(_player.frame), 50);
+    [_player setFrame:frame];
+    [_player.trash addTarget:self action:@selector(doTrash:) forControlEvents:UIControlEventTouchUpInside];
+    [_player.love addTarget:self action:@selector(doLove:) forControlEvents:UIControlEventTouchUpInside];
+    [_player.next addTarget:self action:@selector(doNext:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_player];
 }
 
 - (void)backToMusicRoom {
