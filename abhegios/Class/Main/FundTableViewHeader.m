@@ -7,7 +7,7 @@
 //
 
 #import "FundTableViewHeader.h"
-
+#import "FoundHScrollViewCell.h"
 @implementation FundTableViewHeader
 
 -(void) awakeFromNib
@@ -37,7 +37,11 @@
 -(OEZHScrollViewCell*) hScrollView:(OEZHScrollView *)hScrollView cellForColumnAtIndex:(NSInteger)columnIndex
 {
     static NSString *identifier = @"FoundHScrollViewCell";
-    OEZHScrollViewCell *cell = [hScrollView dequeueReusableCellWithIdentifier:identifier];
+    FoundHScrollViewCell *cell = [hScrollView dequeueReusableCellWithIdentifier:identifier];
+    if( columnIndex == 0)
+        [[cell imageView] setImage:[UIImage imageNamed:@"you_fav_app"] ];
+    else
+         [[cell imageView] setImage:[UIImage imageNamed:@"you_fav_book"] ];
     return cell;
 }
 @end

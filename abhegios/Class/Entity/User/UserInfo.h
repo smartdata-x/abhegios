@@ -11,5 +11,6 @@
 @property NSInteger source;
 @property (nonatomic, retain) NSString *address;
 @property (nonatomic, retain) NSString *nickname;
+@property (nonatomic, retain) NSString *token;
 @property (nonatomic, retain) NSString *head;
 @end

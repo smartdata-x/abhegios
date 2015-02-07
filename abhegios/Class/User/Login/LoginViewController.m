@@ -10,21 +10,34 @@
 #import "UserInfo.h"
 #import "LoginItemInfo.h"
 #import <OEZCommSDK/OEZCommSDK.h>
+#import "MBProgressHUD.h"
 #define kTopHeaderHeight 132
 @interface LoginViewController()<UITableViewDataSource,UITableViewDelegate,LoginDelegate>
 @end
 @implementation LoginViewController {
     NSArray * _loginItemInfos;
+    MBProgressHUD *_progress;
 }
 
 - (void)loadView {
     [super loadView];
+    if( [[UserHelper shared] currentUser] != nil )
+    {
+        [self didMainViewController];
+    }
+    else{
     [self.tableView setBackgroundColor:kUIColorWithRGB(0xfbfbfb)];
     _loginItemInfos =[LoginItemInfo initWithsPlistResource:@"uilogindata" ofType:@"plist"];
+    }
+    _progress = [[MBProgressHUD alloc] initWithView:self.view];
 
    
 }
 
+-(void) didMainViewController
+{
+     [[[UIApplication sharedApplication].delegate window] setRootViewController:[[self storyboard] instantiateViewControllerWithIdentifier:@"MainViewController"]];
+}
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     if( section == 0)
         return kTopHeaderHeight;
@@ -88,17 +101,32 @@
     }
     return viewCell;
 }
+
+
+-(void) showProgress:(MBProgressHUDMode) mode msg:(NSString*) msg
+{
+    [_progress removeFromSuperview];
+    [self.view addSubview:_progress];
+    [_progress setMode:mode];
+    [_progress setLabelText:msg];
+    [_progress show:TRUE];
+}
+
 #pragma mark - LoginDelegate
 - (void)didLoginStart {
-
+    [self showProgress:MBProgressHUDModeIndeterminate msg:@"登陆中..."];
 }
 
 - (void)didLoginOk:(UserInfo *)user {
- NSLog(@"%@",user);
+    [[UserHelper shared] setCurrentUser:user];
+    [self didMainViewController];
 }
 
 - (void)didLoginError:(NSError *)err {
     NSLog(@"%@",err);
+    [self showProgress:MBProgressHUDModeText msg:[err localizedDescription]];
+    [_progress hide:TRUE afterDelay:2.0f];
+
 }
 
 @end

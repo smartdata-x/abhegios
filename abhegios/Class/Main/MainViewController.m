@@ -7,7 +7,6 @@
 //
 
 #import "MainViewController.h"
-#import "LoginViewController.h"
 #import <OEZCommSDK/OEZCommSDK.h>
 @interface MainViewController ()
 
@@ -33,8 +32,6 @@
 - (void)setSelectedViewController:(UIViewController *)selectedViewController {
     [self setTitle:[selectedViewController title]];
     [super setSelectedViewController:selectedViewController];
-    if( selectedViewController == [[self childViewControllers] objectAtIndex:3])
-        [self.navigationController pushViewControllerWithIdentifier:@"LoginViewController" animated:TRUE];
 }
 
 

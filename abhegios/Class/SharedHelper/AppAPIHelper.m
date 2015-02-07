@@ -12,7 +12,9 @@
 #import "HttpUserAPI.h"
 #import "HttpBookAPI.h"
 #import "HttpMusicAPI.h"
-#include "RequestInfo.h"
+#import "RequestInfo.h"
+#include "UserHelper.h"
+#import "UserInfo.h"
 @implementation AppAPIHelper
 HELPER_SHARED
  -(RequestInfo*) getRequestInfo
@@ -22,8 +24,8 @@ HELPER_SHARED
     dispatch_once(&predicate, ^{
         requestInfo = [[RequestInfo alloc] init];
     });
-    [requestInfo setUid:10009];
-    [requestInfo setToken:@""];
+    [requestInfo setUid:[[[UserHelper shared] currentUser] uid]];
+    [requestInfo setToken:[[[UserHelper shared] currentUser] token]];
     return requestInfo;
 }
 

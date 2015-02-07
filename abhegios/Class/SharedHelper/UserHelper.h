@@ -9,5 +9,7 @@
 
 
 @interface UserHelper : NSObject<HelperProtocol>
+@property (nonatomic, retain) UserInfo *currentUser;
 -(void) login:(LoginType) source delegate:(id<LoginDelegate>) delegate;
+- (void) logout;
 @end
