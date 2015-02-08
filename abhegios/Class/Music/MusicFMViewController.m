@@ -94,9 +94,6 @@
     if (state == MusicPlayerHelperStateNext) {
         [_player updateScreen];
     }
-    if (state == MusicPlayerHelperStatePlay) {
-        [_player updateScreen];
-    }
 }
 
 #pragma mark - Table view data source

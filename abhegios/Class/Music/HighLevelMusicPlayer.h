@@ -8,14 +8,33 @@
 
 #import <Foundation/Foundation.h>
 #import "AudioPlayer.h"
+#import <AVFoundation/AVFoundation.h>
+
+#define USE_AVPLAYER 1
+
+typedef NS_ENUM(NSInteger, HighLevelPlayerStatus) {
+    HighLevelPlayerStatusNone = 0,
+    HighLevelPlayerStatusFinished,
+};
 
 @protocol HighLevelMusicPlayerDelegate <NSObject>
 - (void)didPlayingCurrentMusicFinished;
 @end
 
-@interface HighLevelMusicPlayer : NSObject<AudioPlayerDelegate>
+@interface HighLevelMusicPlayer : NSObject
+#if USE_AVPLAYER
+#else
+<
+AudioPlayerDelegate
+>
+#endif
 {
+#if USE_AVPLAYER
+    AVPlayer *_audioPlayer;
+    AVPlayerItem *_audioPlayerItem;
+#else
     AudioPlayer *_audioPlayer;
+#endif
 }
 @property (nonatomic, retain) id<HighLevelMusicPlayerDelegate> delegate;
 - (void)playWithStrUrl:(NSString *)strurl;

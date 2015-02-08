@@ -80,9 +80,6 @@
     if (state == MusicPlayerHelperStateNext) {
         [self updateScreen];
     }
-    if (state == MusicPlayerHelperStatePlay) {
-        [self updateScreen];
-    }
 }
 
 - (void)MusicInfoViewStyle1Clicked {

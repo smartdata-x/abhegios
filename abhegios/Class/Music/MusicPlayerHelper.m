@@ -13,7 +13,6 @@
 #import "MusicInfoViewStyle1.h"
 @implementation MusicPlayerHelper
 {
-    BOOL isClickedNext;
 }
 
 +(instancetype)shared{
@@ -51,7 +50,6 @@
 
 - (void)playWithStrUrl:(NSString *)strurl {
     [_musicPlayer playWithStrUrl:strurl];
-    [self MusicHelperStateChange:MusicPlayerHelperStatePlay];
 }
 
 - (BOOL)isPlaying {
@@ -59,10 +57,10 @@
 }
 
 - (void)doNext {
-    isClickedNext = YES;
     MusicRoomInfo *nextMusicInfo = [_musicList getNextMusicInfo];
     if ([_musicList isListHaveNext] && nextMusicInfo) {
         [self playWithStrUrl:nextMusicInfo.url];
+        [self MusicHelperStateChange:MusicPlayerHelperStateNext];
     }
     else {
         [self refreshMusicList];
@@ -96,12 +94,8 @@
 }
 
 - (void)didPlayingCurrentMusicFinished {
-    if (!isClickedNext) {
-        // 如果不是点击了next，说明是自然播放结束，则播放下一首
-        isClickedNext = NO;
-        [self doNext];
-        [self MusicHelperStateChange:MusicPlayerHelperStateNext];
-    }
+    [self doNext];
+    [self MusicHelperStateChange:MusicPlayerHelperStateNext];
 }
 
 - (void)MusicHelperStateChange:(MusicPlayerHelperState )changedState {
