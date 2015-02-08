@@ -18,6 +18,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self setRadius];
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selfClicked:)];
+    [self addGestureRecognizer:tapGesture];
 }
 
 - (void)setFrame:(CGRect)frame {
@@ -30,6 +32,21 @@
     [[_logo layer] setMasksToBounds:YES];
     // TODO:特殊处理进度条，如果是小logo，采用小号progressline
     
+}
+
+- (void)selfClicked:(UIGestureRecognizer *)gesture {
+    if ([_delegate respondsToSelector:@selector(MusicInfoViewStyle1Clicked)]) {
+        [_delegate MusicInfoViewStyle1Clicked];
+    }
+}
+
+- (void)pauseTimer:(BOOL)pause {
+    if (pause) {
+        [timer setFireDate:[NSDate distantFuture]];
+    }
+    else {
+        [timer setFireDate:[NSDate date]];
+    }
 }
 
 - (void)setData:(id)data {

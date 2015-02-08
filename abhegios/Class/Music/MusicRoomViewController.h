@@ -10,7 +10,7 @@
 #import "MusicInfoViewStyle1.h"
 #import "MusicPlayerHelper.h"
 
-@interface MusicRoomViewController : UIViewController<MusicPlayerHelperDelegate>
+@interface MusicRoomViewController : UIViewController<MusicPlayerHelperDelegate, MusicInfoViewStyle1Delegate>
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *summary;
 @property (weak, nonatomic) IBOutlet MusicInfoViewStyle1 *viewStyle1;

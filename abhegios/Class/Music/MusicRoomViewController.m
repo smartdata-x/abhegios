@@ -24,6 +24,7 @@
     [super viewDidLoad];
     [self initNavBar];
     PlayerInstance.delegate = self;
+    _viewStyle1.delegate = self;
     if (_frameTimer == nil) {
         _frameTimer = [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(updateScreenPerFrame) userInfo:nil repeats:YES];
         [_frameTimer fire];
@@ -82,6 +83,11 @@
     if (state == MusicPlayerHelperStatePlay) {
         [self updateScreen];
     }
+}
+
+- (void)MusicInfoViewStyle1Clicked {
+    [PlayerInstance doPlayOrPause];
+    [_viewStyle1 pauseTimer:![PlayerInstance isPlaying]];
 }
 
 - (void)didReceiveMemoryWarning {
