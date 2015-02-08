@@ -25,7 +25,6 @@
     [self initNavBar];
     [self initMusicPlayer];
     [self initTableView];
-    PlayerInstance.delegate = self;
     _sectionInfo = [NSArray arrayWithObjects:@"个人兆赫", @"频道兆赫", @"心情兆赫", nil];
     if (timer == nil) {
         timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(updateAnimateView) userInfo:self repeats:YES];
@@ -34,6 +33,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    PlayerInstance.delegate = self;
     [_player updateScreen];
 }
 
@@ -92,6 +92,7 @@
 
 - (void)MusicPlayerHelperStateChange:(NSInteger)state {
     if (state == MusicPlayerHelperStateNext) {
+        [_player updateScreen];
     }
     if (state == MusicPlayerHelperStatePlay) {
         [_player updateScreen];

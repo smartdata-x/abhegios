@@ -23,8 +23,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initNavBar];
-    PlayerInstance.delegate = self;
-    _viewStyle1.delegate = self;
     if (_frameTimer == nil) {
         _frameTimer = [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(updateScreenPerFrame) userInfo:nil repeats:YES];
         [_frameTimer fire];
@@ -38,6 +36,8 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    PlayerInstance.delegate = self;
+    _viewStyle1.delegate = self;
     // 再次进入时刷新一次
     [self updateScreen];
 }
