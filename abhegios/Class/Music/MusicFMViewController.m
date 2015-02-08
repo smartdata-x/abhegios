@@ -8,12 +8,17 @@
 
 #import "MusicFMViewController.h"
 #import "MusicInfoViewStyle3.h"
+#import "MusicFMTableViewCellStyle1.h"
 
 @interface MusicFMViewController ()
 @property (nonatomic, retain) NSArray *sectionInfo;
 @end
 
 @implementation MusicFMViewController
+{
+    UIImageView *animateView;
+    NSTimer *timer;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,6 +27,10 @@
     [self initTableView];
     PlayerInstance.delegate = self;
     _sectionInfo = [NSArray arrayWithObjects:@"个人兆赫", @"频道兆赫", @"心情兆赫", nil];
+    if (timer == nil) {
+        timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(updateAnimateView) userInfo:self repeats:YES];
+        [timer fire];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -46,9 +55,18 @@
 }
 
 - (void)initTableView {
-    //_tableView = [[UITableView alloc] init];
     _tableView.delegate = self;
     _tableView.dataSource = self;
+}
+
+- (void)updateAnimateView {
+    if (animateView) {
+        static int frame = 0;
+        NSString *imgName = [NSString stringWithFormat:@"audio_icon%d.png", frame+1];
+        [animateView setImage:[UIImage imageNamed:imgName]];
+        frame++;
+        frame = frame % 3;
+    }
 }
 
 - (void)backToMusicRoom {
@@ -111,6 +129,12 @@
     if (IS_SECTION(0)) {
         NSString *name = indexPath.row == 0 ? @"我的红心" : @"推荐偏好";
         [viewCell setData:name];
+        if (indexPath.row == 0) {
+            // 单独获取imageview
+            MusicFMTableViewCellStyle1 *cellStyle1 = (MusicFMTableViewCellStyle1 *)viewCell;
+            animateView = cellStyle1.logo;
+            [animateView setHidden:NO];
+        }
     }
     else {
         NSString *name = indexPath.row == 0 ? @"华语流行" : @"粤语经典";
