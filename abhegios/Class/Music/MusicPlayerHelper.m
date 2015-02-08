@@ -38,9 +38,13 @@
     }
 }
 
-- (void)setMusicParams:(NSString *)dimension Sid:(NSInteger)sid {
+- (void)setMusicParams:(NSString *)dimension Sid:(NSInteger)sid ForceReload:(BOOL)reload {
     _dimension = dimension;
     _sid = sid;
+    if (reload) {
+        [_musicList cleanList];
+        [self refreshMusicList];
+    }
 }
 
 - (void)updateViewProgress:(id)view {

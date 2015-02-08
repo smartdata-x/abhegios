@@ -13,6 +13,7 @@
 @property (nonatomic, retain) NSMutableArray *musicListArray;
 - (void)setMusicList:(NSArray *)musiclist;
 - (BOOL)isListHaveNext;
+- (void)cleanList;
 - (MusicRoomInfo *)getNextMusicInfo;
 - (MusicRoomInfo *)getPrevMusicInfo;
 - (MusicRoomInfo *)getCurrentMusicInfo;

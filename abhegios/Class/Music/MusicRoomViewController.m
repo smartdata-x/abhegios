@@ -40,6 +40,11 @@
     _viewStyle1.delegate = self;
     // 再次进入时刷新一次
     [self updateScreen];
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [[UIApplication sharedApplication] endReceivingRemoteControlEvents];
 }
 
 - (void)initNavBar {

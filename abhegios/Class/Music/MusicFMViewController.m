@@ -143,9 +143,21 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    NSString *dimension = @"";
-    NSInteger sid = 1;
-    [PlayerInstance setMusicParams:dimension Sid:sid];
+    
+    if (indexPath.section > 0) {
+        NSString *dimension = @"";
+        NSInteger sid = 0;
+        switch (indexPath.section) {
+            case 1: dimension = @"chl"; break;
+            case 2: dimension = @"mm"; break;
+        }
+        switch (indexPath.row) {
+            case 0: sid = 1; break;
+            case 1: sid = 2; break;
+        }
+        [PlayerInstance setMusicParams:dimension Sid:sid ForceReload:YES];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 @end

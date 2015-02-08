@@ -42,7 +42,7 @@ typedef NS_ENUM(NSInteger, MusicPlayerHelperState) {
 - (void)doStop;
 - (void)doPlayOrPause;
 
-- (void)setMusicParams:(NSString *)dimension Sid:(NSInteger)sid;
+- (void)setMusicParams:(NSString *)dimension Sid:(NSInteger)sid ForceReload:(BOOL)reload;
 - (void)refreshMusicList;
 - (void)updateViewProgress:(id)view;
 - (void)setData:(NSArray *)musiclist;

@@ -22,6 +22,14 @@
     musicCount = [_musicListArray count];
 }
 
+- (void)cleanList {
+    if (_musicListArray) {
+        [_musicListArray removeAllObjects];
+        musicCount = 0;
+        currentMusicIndex = 0;
+    }
+}
+
 - (MusicRoomInfo *)getCurrentMusicInfo {
     if (currentMusicIndex < musicCount - 1 && currentMusicIndex >= 0) {
         return [_musicListArray objectAtIndex:currentMusicIndex];
