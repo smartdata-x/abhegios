@@ -29,6 +29,11 @@
         [_frameTimer fire];
     }
     [PlayerInstance refreshMusicList];
+    // 更新圆盘的Y位置
+    CGFloat originY = (CGRectGetHeight(_name.frame) + CGRectGetHeight(_summary.frame)) / 2.0 - 80.0f;
+    CGRect frame = [_viewStyle1 frame];
+    frame.origin.y = originY;
+    [_viewStyle1 setFrame:frame];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
