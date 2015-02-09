@@ -1024,18 +1024,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="钻石糖 - 萧亚轩" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjG-Do-ZfI">
-                                <rect key="frame" x="10" y="55" width="300" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="钻石糖 - 萧亚轩" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjG-Do-ZfI">
+                                <rect key="frame" x="10" y="40" width="300" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uY5-pG-g53" customClass="MusicInfoViewStyle1">
-                                <rect key="frame" x="80" y="128" width="160" height="160"/>
+                                <rect key="frame" x="80" y="100" width="160" height="160"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="华语流行" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nj-ac-wtq">
-                                <rect key="frame" x="10" y="312" width="300" height="21"/>
+                                <rect key="frame" x="10" y="295" width="300" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -1070,18 +1070,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="BEn-oa-b8Q" firstAttribute="leading" secondItem="k5L-rX-Fee" secondAttribute="leadingMargin" constant="60" id="8ya-pl-uzh"/>
-                            <constraint firstItem="KjG-Do-ZfI" firstAttribute="top" secondItem="k5L-rX-Fee" secondAttribute="topMargin" constant="55" id="ASH-p4-aCB"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="5nj-ac-wtq" secondAttribute="bottom" constant="83" id="C0b-9q-YsB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="FAq-Jh-948" secondAttribute="trailing" constant="60" id="DWR-fd-AeN"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="f3Y-pw-TbE" secondAttribute="bottom" constant="40" id="GID-9q-chS"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="FAq-Jh-948" secondAttribute="bottom" constant="40" id="Qof-0g-YEI"/>
-                            <constraint firstAttribute="centerX" secondItem="f3Y-pw-TbE" secondAttribute="centerX" id="fBW-mi-MmB"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="BEn-oa-b8Q" secondAttribute="bottom" constant="40" id="gp5-Wg-HXB"/>
-                            <constraint firstAttribute="centerY" secondItem="uY5-pG-g53" secondAttribute="centerY" id="jjh-OU-0sA"/>
-                            <constraint firstAttribute="centerX" secondItem="KjG-Do-ZfI" secondAttribute="centerX" id="pYr-Rd-3rp"/>
-                            <constraint firstAttribute="centerX" secondItem="5nj-ac-wtq" secondAttribute="centerX" id="wlG-5h-JJY"/>
-                            <constraint firstAttribute="centerX" secondItem="uY5-pG-g53" secondAttribute="centerX" id="ywY-2K-uHL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FAq-Jh-948" secondAttribute="trailing" constant="60" id="4zh-RO-ZtD"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="BEn-oa-b8Q" secondAttribute="bottom" constant="40" id="B3f-AF-bn2"/>
+                            <constraint firstItem="uY5-pG-g53" firstAttribute="top" secondItem="k5L-rX-Fee" secondAttribute="top" constant="100" id="C6q-us-vb9"/>
+                            <constraint firstAttribute="centerX" secondItem="uY5-pG-g53" secondAttribute="centerX" id="CXG-11-CvS"/>
+                            <constraint firstAttribute="centerX" secondItem="5nj-ac-wtq" secondAttribute="centerX" id="GW5-ak-C1f"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="f3Y-pw-TbE" secondAttribute="bottom" constant="40" id="Isz-IJ-7d3"/>
+                            <constraint firstItem="BEn-oa-b8Q" firstAttribute="leading" secondItem="k5L-rX-Fee" secondAttribute="leadingMargin" constant="60" id="Kwv-iW-EGS"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="FAq-Jh-948" secondAttribute="bottom" constant="40" id="T5U-AN-JSo"/>
+                            <constraint firstAttribute="centerX" secondItem="KjG-Do-ZfI" secondAttribute="centerX" id="XYs-Cv-s7I"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="5nj-ac-wtq" secondAttribute="bottom" constant="100" id="awE-ry-0RN"/>
+                            <constraint firstAttribute="trailing" secondItem="uY5-pG-g53" secondAttribute="trailing" constant="80" id="eDc-WN-9iT"/>
+                            <constraint firstAttribute="centerX" secondItem="f3Y-pw-TbE" secondAttribute="centerX" id="inL-Ek-zaC"/>
+                            <constraint firstItem="uY5-pG-g53" firstAttribute="leading" secondItem="k5L-rX-Fee" secondAttribute="leading" constant="80" id="k4b-XS-94s"/>
                         </constraints>
                     </view>
                     <connections>
