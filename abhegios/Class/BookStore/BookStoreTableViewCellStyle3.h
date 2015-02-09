@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <OEZCommSDK/OEZCommSDK.h>
-#import "BookInfoViewStyle1.h"
+#import "BookHScrollViewCell1.h"
+#import "BookHScrollViewCell4.h"
 
 @protocol BookStoreTableViewCellStyle3Delegate <NSObject>
 - (void)cellItemClickedAtIndex:(NSInteger)index;
+- (void)cellItemClickedByView:(id)clickedView;
 @end
 
-@interface BookStoreTableViewCellStyle3 : OEZTableViewHScrollCell<OEZHScrollViewDelegate, BookInfoViewStyle1Delegate>
+@interface BookStoreTableViewCellStyle3 : OEZTableViewHScrollCell<OEZHScrollViewDelegate, BookHScrollViewCell1Delegate>
 @property NSInteger cellStyle;
 @property (nonatomic, assign) id <BookStoreTableViewCellStyle3Delegate> delegate;
 - (void)setShowParameters:(NSInteger)style;

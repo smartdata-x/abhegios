@@ -179,6 +179,38 @@
     } animated:YES];
 }
 
+- (void)cellItemClickedByView:(id)clickedView {
+    NSString *clickedName = ((BookInfoViewStyle1 *)clickedView).name.text;
+    BookInfo *bookinfo = nil;
+    
+    // 根据书名匹配section3和section4点击的书
+    GroupInfo *group = [_tableViewData objectAtIndex:3];
+    for (int i=0; i<[[group entitys] count]; i++) {
+        BookInfo *tmpBookInfo = [[group entitys] objectAtIndex:i];
+        if ([clickedName isEqualToString:tmpBookInfo.name]) {
+            bookinfo = tmpBookInfo;
+            break;
+        }
+    }
+    if (bookinfo == nil) {
+        group = [_tableViewData objectAtIndex:4];
+        for (int i=0; i<[[group entitys] count]; i++) {
+            BookInfo *tmpBookInfo = [[group entitys] objectAtIndex:i];
+            if ([clickedName isEqualToString:tmpBookInfo.name]) {
+                bookinfo = tmpBookInfo;
+                break;
+            }
+        }
+    }
+    if (bookinfo) {
+        //跳转到书籍详情
+        [self.navigationController pushViewControllerWithIdentifier:@"BookDetailInfoTableViewController" completion:^(UIViewController *viewController) {
+            BookDetailInfoTableViewController *bookDetailInfoView = (BookDetailInfoTableViewController *)viewController;
+            [bookDetailInfoView setData:bookinfo];
+        } animated:YES];
+    }
+}
+
 - (IBAction)gotoBookSearchView:(id)sender {
     [self.navigationController pushViewControllerWithIdentifier:@"BookDirectoryTableViewController" completion:^(UIViewController *viewController) {
     } animated:YES];

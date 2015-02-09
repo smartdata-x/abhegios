@@ -7,7 +7,6 @@
 //
 
 #import "BookHScrollViewCell1.h"
-#import "BookInfoViewStyle1.h"
 @implementation BookHScrollViewCell1
 {
     BookInfoViewStyle1 *_bookInfoView;
@@ -17,6 +16,7 @@
     self = [super initWithReuseIdentifier:reuseIdentifier];
     if (self) {
         _bookInfoView = [BookInfoViewStyle1 loadFromNib];
+        _bookInfoView.delegate = self;
         [self addSubview:_bookInfoView];
     }
     return self;
@@ -29,6 +29,12 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     [_bookInfoView setFrame:[self bounds]];
+}
+
+- (void)didBookInfoViewStyle1Clicked:(id)bookInfoView {
+    if ([_delegate respondsToSelector:@selector(didBookHScrollViewCell1Clicked:)]) {
+        [_delegate didBookHScrollViewCell1Clicked:bookInfoView];
+    }
 }
 
 @end

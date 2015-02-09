@@ -8,12 +8,11 @@
 
 #import "BookStoreTableViewCellStyle3.h"
 #import "BookInfo.h"
+#import "BookInfoViewStyle1.h"
 #import "BookInfoViewStyle4.h"
 #import "GroupInfo.h"
 #import "UIImageView+AFNetworking.h"
 #import "BaseInfoAdapter.h"
-#import "BookHScrollViewCell1.h"
-#import "BookHScrollViewCell4.h"
 
 #define kMaxBookItemView 3
 #define kBookItemWidth 108
@@ -52,8 +51,8 @@
         if (cell == nil) {
             cell = [[BookHScrollViewCell1 alloc] initWithReuseIdentifier:identifier];
         }
-        cell.tag = [[self subviews] count];
         [cell setData:[self.data objectAtIndex:columnIndex]];
+        cell.delegate = self;
         return cell;
     }
     return nil;
@@ -67,15 +66,18 @@
     }
 }
 
+- (void)didBookHScrollViewCell1Clicked:(id)clickedView {
+    
+    if ([_delegate respondsToSelector:@selector(cellItemClickedByView:)]) {
+        [_delegate cellItemClickedByView:clickedView];
+    }
+}
+
 - (IBAction)itemClickedAtIndex:(id)sender {
     if ([_delegate respondsToSelector:@selector(cellItemClickedAtIndex:)]) {
         UIButton *btn = (UIButton *)sender;
         [_delegate cellItemClickedAtIndex:btn.tag];
     }
-}
-
-- (void)didBookInfoViewStyle1Clicked:(id)bookInfoView {
-    
 }
 
 @end

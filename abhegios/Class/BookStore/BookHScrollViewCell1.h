@@ -8,7 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <OEZCommSDK/OEZCommSDK.h>
+#import "BookInfoViewStyle1.h"
 
-@interface BookHScrollViewCell1 : OEZHScrollViewCell
+@protocol BookHScrollViewCell1Delegate <NSObject>
+- (void)didBookHScrollViewCell1Clicked:(id)clickedView;
+@end
+
+@interface BookHScrollViewCell1 : OEZHScrollViewCell<BookInfoViewStyle1Delegate>
+@property (nonatomic, retain) id<BookHScrollViewCell1Delegate> delegate;
 - (void)setData:(id)data;
 @end
