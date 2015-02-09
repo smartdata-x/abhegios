@@ -1080,9 +1080,7 @@
                             <constraint firstAttribute="bottomMargin" secondItem="FAq-Jh-948" secondAttribute="bottom" constant="40" id="T5U-AN-JSo"/>
                             <constraint firstAttribute="centerX" secondItem="KjG-Do-ZfI" secondAttribute="centerX" id="XYs-Cv-s7I"/>
                             <constraint firstAttribute="bottomMargin" secondItem="5nj-ac-wtq" secondAttribute="bottom" constant="100" id="awE-ry-0RN"/>
-                            <constraint firstAttribute="trailing" secondItem="uY5-pG-g53" secondAttribute="trailing" constant="80" id="eDc-WN-9iT"/>
                             <constraint firstAttribute="centerX" secondItem="f3Y-pw-TbE" secondAttribute="centerX" id="inL-Ek-zaC"/>
-                            <constraint firstItem="uY5-pG-g53" firstAttribute="leading" secondItem="k5L-rX-Fee" secondAttribute="leading" constant="80" id="k4b-XS-94s"/>
                         </constraints>
                     </view>
                     <connections>
