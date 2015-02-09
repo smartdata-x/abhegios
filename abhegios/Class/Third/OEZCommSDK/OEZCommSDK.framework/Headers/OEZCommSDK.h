@@ -10,7 +10,6 @@
 #import <OEZCommSDK/OEZBaseEntity.h>
 #import <OEZCommSDK/OEZNavigationViewController.h>
 #import <OEZCommSDK/OEZTableViewCell.h>
-#import <OEZCommSDK/OEZHScrollTableViewCell.h>
 #import <OEZCommSDK/OEZPageView.h>
 #import <OEZCommSDK/OEZNibView.h>
 #import <OEZCommSDK/OEZTableViewDelegate.h>
