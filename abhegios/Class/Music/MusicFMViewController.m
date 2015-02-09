@@ -9,6 +9,8 @@
 #import "MusicFMViewController.h"
 #import "MusicInfoViewStyle3.h"
 #import "MusicFMTableViewCellStyle1.h"
+#import "GroupInfo.h"
+#import "MusicFMInfo.h"
 
 @interface MusicFMViewController ()
 @property (nonatomic, retain) NSArray *sectionInfo;
@@ -25,7 +27,8 @@
     [self initNavBar];
     [self initMusicPlayer];
     [self initTableView];
-    _sectionInfo = [NSArray arrayWithObjects:@"个人兆赫", @"频道兆赫", @"心情兆赫", nil];
+    //_sectionInfo = [NSArray arrayWithObjects:@"个人兆赫", @"频道兆赫", @"心情兆赫", nil];
+    _sectionInfo = [GroupInfo initWithsConfigAndDataJsonFile:@"musicfm" jsonName:@"musicfm" entityClass:[MusicFMInfo class]];
     if (timer == nil) {
         timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(updateAnimateView) userInfo:self repeats:YES];
         [timer fire];
@@ -99,7 +102,7 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [_sectionInfo count];
+    return [_sectionInfo count] + 1;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -111,14 +114,25 @@
     view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.tableView.frame)-20, 21)];
     [view setBackgroundColor:kUIColorWithRGB(0xf3f3f3)];
     UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(15, 14, CGRectGetWidth(self.tableView.frame)-20, 21)];
-    [label setText:[_sectionInfo objectAtIndex:section]];
+    if (section == 0) {
+        [label setText:@"个人兆赫"];
+    }
+    else {
+        [label setText:[[_sectionInfo objectAtIndex:section-1] title]];
+    }
     [label setFont:[UIFont systemFontOfSize:14.0f]];
     [view addSubview:label];
     return view;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    if (section == 0) {
+        return 2;
+    }
+    else {
+        return [[[_sectionInfo objectAtIndex:section-1] entitys] count];
+    }
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -135,7 +149,9 @@
         }
     }
     else {
-        NSString *name = indexPath.row == 0 ? @"华语流行" : @"粤语经典";
+        GroupInfo *group = [_sectionInfo objectAtIndex:indexPath.section-1];
+        NSString *name = [[group entitys] objectAtIndex:indexPath.row];
+        //NSString *name = indexPath.row == 0 ? @"华语流行" : @"粤语经典";
         [viewCell setData:name];
     }
     return viewCell;
@@ -143,10 +159,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
     if (indexPath.section > 0) {
-        NSString *dimension = @"";
-        NSInteger sid = 0;
+        NSString *dimension = [[_sectionInfo objectAtIndex:indexPath.section-1] key];
+        NSInteger sid = [[[[_sectionInfo objectAtIndex:indexPath.section-1] entitys] objectAtIndex:indexPath.row] sid];
+#if 0
         switch (indexPath.section) {
             case 1: dimension = @"chl"; break;
             case 2: dimension = @"mm"; break;
@@ -155,6 +171,7 @@
             case 0: sid = 1; break;
             case 1: sid = 2; break;
         }
+#endif
         [PlayerInstance setMusicParams:dimension Sid:sid ForceReload:YES];
         [self.navigationController popViewControllerAnimated:YES];
     }
