@@ -9,11 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <OEZCommSDK/OEZCommSDK.h>
 #import "BaseInfo.h"
-@interface MusicRoomInfo : BaseInfoMoreONSP
+@interface MusicRoomInfo : OEZBaseEntity
+@property NSUInteger id;
+@property(nonatomic, retain) NSString *name;
 @property (nonatomic, copy) NSString *ablum;
 @property (nonatomic, copy) NSString *artist;
 @property (nonatomic, copy) NSString *hq_url;
 @property (nonatomic, copy) NSString *type;
 @property (nonatomic, copy) NSString *url;
+@property (nonatomic, retain) NSString *pic;
 @property CGFloat duration;
 @end
