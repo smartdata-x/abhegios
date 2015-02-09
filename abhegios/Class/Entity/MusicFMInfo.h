@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "BaseInfo.h"
 
-@interface MusicFMInfo : BaseInfoMoreONS
+@interface MusicFMInfo : OEZBaseEntity
 @property (nonatomic, retain) NSString *strSid;
 @property NSInteger sid;
 @end
