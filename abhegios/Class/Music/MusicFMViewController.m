@@ -27,7 +27,6 @@
     [self initNavBar];
     [self initMusicPlayer];
     [self initTableView];
-    //_sectionInfo = [NSArray arrayWithObjects:@"个人兆赫", @"频道兆赫", @"心情兆赫", nil];
     _sectionInfo = [GroupInfo initWithsConfigAndDataJsonFile:@"musicfm" jsonName:@"musicfm" entityClass:[MusicFMInfo class]];
     if (timer == nil) {
         timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(updateAnimateView) userInfo:self repeats:YES];
@@ -145,14 +144,19 @@
             // 单独获取imageview
             MusicFMTableViewCellStyle1 *cellStyle1 = (MusicFMTableViewCellStyle1 *)viewCell;
             animateView = cellStyle1.logo;
-            [animateView setHidden:NO];
         }
     }
     else {
         GroupInfo *group = [_sectionInfo objectAtIndex:indexPath.section-1];
-        NSString *name = [[group entitys] objectAtIndex:indexPath.row];
-        //NSString *name = indexPath.row == 0 ? @"华语流行" : @"粤语经典";
+        NSString *name = [[[group entitys] objectAtIndex:indexPath.row] strSid];
         [viewCell setData:name];
+    }
+    MusicFMTableViewCellStyle1 *cellStyle1 = (MusicFMTableViewCellStyle1 *)viewCell;
+    if ([cellStyle1.name.text isEqualToString:@"我的红心"]) {
+        [cellStyle1.logo setHidden:NO];
+    }
+    else {
+        [cellStyle1.logo setHidden:YES];
     }
     return viewCell;
 }
@@ -162,16 +166,6 @@
     if (indexPath.section > 0) {
         NSString *dimension = [[_sectionInfo objectAtIndex:indexPath.section-1] key];
         NSInteger sid = [[[[_sectionInfo objectAtIndex:indexPath.section-1] entitys] objectAtIndex:indexPath.row] sid];
-#if 0
-        switch (indexPath.section) {
-            case 1: dimension = @"chl"; break;
-            case 2: dimension = @"mm"; break;
-        }
-        switch (indexPath.row) {
-            case 0: sid = 1; break;
-            case 1: sid = 2; break;
-        }
-#endif
         [PlayerInstance setMusicParams:dimension Sid:sid ForceReload:YES];
         [self.navigationController popViewControllerAnimated:YES];
     }
