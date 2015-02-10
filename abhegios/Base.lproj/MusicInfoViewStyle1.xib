@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MusicInfoViewStyle1">
             <connections>
-                <outlet property="logo" destination="icU-Hd-FJ1" id="hY5-5w-dsc"/>
-                <outlet property="progress" destination="Nst-HF-bbW" id="ugL-cu-a0N"/>
+                <outlet property="logo" destination="icU-Hd-FJ1" id="DTV-WI-XJn"/>
+                <outlet property="progress" destination="Nst-HF-bbW" id="6LB-X4-r2g"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -23,16 +23,15 @@
                     <rect key="frame" x="6" y="6" width="148" height="148"/>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="icU-Hd-FJ1" firstAttribute="leading" secondItem="H2s-tu-nHc" secondAttribute="leading" constant="6" id="AlD-9t-aK3"/>
-                <constraint firstAttribute="trailing" secondItem="icU-Hd-FJ1" secondAttribute="trailing" constant="6" id="G0R-aY-KHR"/>
-                <constraint firstItem="Nst-HF-bbW" firstAttribute="top" secondItem="H2s-tu-nHc" secondAttribute="top" id="JkP-hJ-APw"/>
-                <constraint firstItem="Nst-HF-bbW" firstAttribute="leading" secondItem="H2s-tu-nHc" secondAttribute="leading" id="SAU-Aj-BNK"/>
-                <constraint firstAttribute="trailing" secondItem="Nst-HF-bbW" secondAttribute="trailing" id="Vxr-jS-YoK"/>
-                <constraint firstItem="icU-Hd-FJ1" firstAttribute="top" secondItem="H2s-tu-nHc" secondAttribute="top" constant="6" id="fhx-2T-MV1"/>
-                <constraint firstAttribute="bottom" secondItem="icU-Hd-FJ1" secondAttribute="bottom" constant="6" id="qhP-rz-yik"/>
-                <constraint firstAttribute="bottom" secondItem="Nst-HF-bbW" secondAttribute="bottom" id="s4P-vG-Mf0"/>
+                <constraint firstAttribute="trailing" secondItem="icU-Hd-FJ1" secondAttribute="trailing" constant="6" id="AWz-fQ-Za5"/>
+                <constraint firstAttribute="trailing" secondItem="Nst-HF-bbW" secondAttribute="trailing" id="EO0-ZJ-6WA"/>
+                <constraint firstItem="icU-Hd-FJ1" firstAttribute="leading" secondItem="H2s-tu-nHc" secondAttribute="leading" constant="6" id="PnD-2F-TUI"/>
+                <constraint firstAttribute="bottom" secondItem="icU-Hd-FJ1" secondAttribute="bottom" constant="6" id="S2B-Hq-jYv"/>
+                <constraint firstItem="Nst-HF-bbW" firstAttribute="top" secondItem="H2s-tu-nHc" secondAttribute="top" id="XZ5-1m-kCK"/>
+                <constraint firstItem="icU-Hd-FJ1" firstAttribute="top" secondItem="H2s-tu-nHc" secondAttribute="top" constant="6" id="hLf-eD-w77"/>
+                <constraint firstItem="Nst-HF-bbW" firstAttribute="leading" secondItem="H2s-tu-nHc" secondAttribute="leading" id="iRz-0x-K6g"/>
+                <constraint firstAttribute="bottom" secondItem="Nst-HF-bbW" secondAttribute="bottom" id="yOA-gT-tZK"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>

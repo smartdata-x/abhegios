@@ -30,7 +30,6 @@
         [_frameTimer fire];
     }
     [PlayerInstance refreshMusicList];
-    [_viewStyle1 setFrame:CGRectMake(_viewStyle1.frame.origin.x, _viewStyle1.frame.origin.y, 220, 220)];
     [_viewStyle1 updateRadius];
     _fmInfo = [GroupInfo initWithsConfigAndDataJsonFile:@"musicfm" jsonName:@"musicfm" entityClass:[MusicFMInfo class]];
 }
