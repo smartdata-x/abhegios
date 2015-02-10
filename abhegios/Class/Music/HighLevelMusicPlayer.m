@@ -46,6 +46,9 @@
 #if USE_AVPLAYER
     if (_audioPlayer) {
         CMTime duration = _audioPlayer.currentItem.asset.duration;
+        if (duration.timescale <= 0.001f) {
+            return 0.001f;
+        }
         return duration.value / duration.timescale;
     }
 #else
@@ -60,6 +63,9 @@
 #if USE_AVPLAYER
     if (_audioPlayer) {
         CGFloat duration = [self getDuration];
+        if (_audioPlayer.currentTime.timescale <= 0.001f) {
+            return 0.001f;
+        }
         CGFloat currentTime = _audioPlayer.currentTime.value / _audioPlayer.currentTime.timescale;
         CGFloat progress = currentTime / duration;
         progress = progress <= 0.01 ? 0.01 : progress;

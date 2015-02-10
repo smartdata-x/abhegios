@@ -140,19 +140,38 @@
     if (IS_SECTION(0)) {
         NSString *name = indexPath.row == 0 ? @"我的红心" : @"推荐偏好";
         [viewCell setData:name];
-        if (indexPath.row == 0) {
-            // 单独获取imageview
-            MusicFMTableViewCellStyle1 *cellStyle1 = (MusicFMTableViewCellStyle1 *)viewCell;
-            animateView = cellStyle1.logo;
-        }
     }
     else {
         GroupInfo *group = [_sectionInfo objectAtIndex:indexPath.section-1];
         NSString *name = [[[group entitys] objectAtIndex:indexPath.row] strSid];
         [viewCell setData:name];
     }
+    
     MusicFMTableViewCellStyle1 *cellStyle1 = (MusicFMTableViewCellStyle1 *)viewCell;
-    [cellStyle1.logo setHidden:(indexPath.row == 0 && indexPath.section == 0)];
+    NSString *musicDimension = [PlayerInstance dimension];
+    NSInteger musicSid = [PlayerInstance sid];
+    NSInteger currentDimension = 0;
+    NSInteger currentSid = 0;
+    for (int i=0; i<[_sectionInfo count]; i++) {
+        if ([[[_sectionInfo objectAtIndex:i] title] isEqualToString:musicDimension]) {
+            currentDimension = i+1;
+            break;
+        }
+    }
+    if (currentDimension > 0) {
+        for (int i=0; i<[[[_sectionInfo objectAtIndex:currentDimension-1] entitys] count]; i++) {
+            if (musicSid == [[[[_sectionInfo objectAtIndex:currentDimension-1] entitys] objectAtIndex:i] sid]) {
+                currentSid = i;
+            }
+        }
+    }
+    if (currentDimension == indexPath.section && currentSid == indexPath.row) {
+        animateView = cellStyle1.logo;
+        [cellStyle1.logo setHidden:NO];
+    }
+    else {
+        [cellStyle1.logo setHidden:YES];
+    }
     return viewCell;
 }
 
