@@ -23,7 +23,8 @@
 }
 
 - (void)updateRadius {
-    [[_logo layer] setCornerRadius:(CGRectGetWidth(self.frame) - 12.0f) * 0.5f];
+    CGFloat frameWidth = CGRectGetWidth(self.frame);
+    [[_logo layer] setCornerRadius:(frameWidth - 12.0f) * 0.5f];
     [[_logo layer] setMasksToBounds:YES];
     // TODO:特殊处理进度条，如果是小logo，采用小号progressline
 }

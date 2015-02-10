@@ -30,7 +30,6 @@
         [_frameTimer fire];
     }
     [PlayerInstance refreshMusicList];
-    [_viewStyle1 updateRadius];
     _fmInfo = [GroupInfo initWithsConfigAndDataJsonFile:@"musicfm" jsonName:@"musicfm" entityClass:[MusicFMInfo class]];
 }
 
@@ -39,6 +38,7 @@
     _viewStyle1.delegate = self;
     // 再次进入时刷新一次
     [self updateScreen];
+    [_viewStyle1 updateRadius];
     [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
 }
 
