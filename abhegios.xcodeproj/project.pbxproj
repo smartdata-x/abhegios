@@ -33,6 +33,7 @@
 		CB2FFCE91A88E5C3003A3AEE /* MusicFMInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2FFCE81A88E5C3003A3AEE /* MusicFMInfo.m */; };
 		CB2FFCED1A88E8F2003A3AEE /* musicfm.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB2FFCEC1A88E8F2003A3AEE /* musicfm.plist */; };
 		CB2FFCEF1A88E9B7003A3AEE /* musicfm.json in Resources */ = {isa = PBXBuildFile; fileRef = CB2FFCEE1A88E9B7003A3AEE /* musicfm.json */; };
+		CB2FFCF21A8A4D8A003A3AEE /* MusicInfoViewStyle4.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2FFCF11A8A4D8A003A3AEE /* MusicInfoViewStyle4.m */; };
 		CB6A21BD1A6FF2AA0087546F /* BookStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21BC1A6FF2AA0087546F /* BookStoreViewController.m */; };
 		CB6A21C01A6FF5600087546F /* BookStoreTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21BF1A6FF5600087546F /* BookStoreTableViewCellStyle1.m */; };
 		CB6A21CA1A6FFAEF0087546F /* BookInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6A21C91A6FFAEF0087546F /* BookInfo.m */; };
@@ -245,6 +246,8 @@
 		CB2FFCE81A88E5C3003A3AEE /* MusicFMInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicFMInfo.m; sourceTree = "<group>"; };
 		CB2FFCEC1A88E8F2003A3AEE /* musicfm.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = musicfm.plist; sourceTree = "<group>"; };
 		CB2FFCEE1A88E9B7003A3AEE /* musicfm.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = musicfm.json; sourceTree = "<group>"; };
+		CB2FFCF01A8A4D8A003A3AEE /* MusicInfoViewStyle4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicInfoViewStyle4.h; sourceTree = "<group>"; };
+		CB2FFCF11A8A4D8A003A3AEE /* MusicInfoViewStyle4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicInfoViewStyle4.m; sourceTree = "<group>"; };
 		CB6A21BB1A6FF2AA0087546F /* BookStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookStoreViewController.h; sourceTree = "<group>"; };
 		CB6A21BC1A6FF2AA0087546F /* BookStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookStoreViewController.m; sourceTree = "<group>"; };
 		CB6A21BE1A6FF5600087546F /* BookStoreTableViewCellStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookStoreTableViewCellStyle1.h; sourceTree = "<group>"; };
@@ -1142,6 +1145,8 @@
 				CBD81E561A826C16006E6604 /* MusicInfoViewStyle2.m */,
 				CBE062A31A85D6E500BF27C8 /* MusicInfoViewStyle3.h */,
 				CBE062A41A85D6E500BF27C8 /* MusicInfoViewStyle3.m */,
+				CB2FFCF01A8A4D8A003A3AEE /* MusicInfoViewStyle4.h */,
+				CB2FFCF11A8A4D8A003A3AEE /* MusicInfoViewStyle4.m */,
 				EA9F28D01A823BA7002B09C1 /* SearchView.h */,
 				EA9F28D11A823BA7002B09C1 /* SearchView.m */,
 			);
@@ -1399,6 +1404,7 @@
 				EA13DDD11A6F8D3A004AB7E6 /* AppDetailsInfo.m in Sources */,
 				EA103C8F1A78B53600FFF66E /* BaseInfoAdapter.m in Sources */,
 				1AD6455F3CEB60EEE78C0C77 /* UserHelper.m in Sources */,
+				CB2FFCF21A8A4D8A003A3AEE /* MusicInfoViewStyle4.m in Sources */,
 				1AD649CD0AF8969FFF4B9641 /* ILogin.m in Sources */,
 				CB6A21D41A711CEC0087546F /* BookStoreTableViewCellStyle3.m in Sources */,
 				EABA1EEC1A76844000A76BD2 /* AFHTTPClient.m in Sources */,
