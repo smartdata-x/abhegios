@@ -148,24 +148,10 @@
     }
     
     MusicFMTableViewCellStyle1 *cellStyle1 = (MusicFMTableViewCellStyle1 *)viewCell;
-    NSString *musicDimension = [PlayerInstance dimension];
-    NSInteger musicSid = [PlayerInstance sid];
-    NSInteger currentDimension = 0;
-    NSInteger currentSid = 0;
-    for (int i=0; i<[_sectionInfo count]; i++) {
-        if ([[[_sectionInfo objectAtIndex:i] title] isEqualToString:musicDimension]) {
-            currentDimension = i+1;
-            break;
-        }
-    }
-    if (currentDimension > 0) {
-        for (int i=0; i<[[[_sectionInfo objectAtIndex:currentDimension-1] entitys] count]; i++) {
-            if (musicSid == [[[[_sectionInfo objectAtIndex:currentDimension-1] entitys] objectAtIndex:i] sid]) {
-                currentSid = i;
-            }
-        }
-    }
-    if (currentDimension == indexPath.section && currentSid == indexPath.row) {
+    NSArray *loc = [MusicFMInfo getLocationFromGroupinfo:_sectionInfo Dimension:[PlayerInstance dimension] Sid:[PlayerInstance sid]];
+    NSInteger musicDimension = [[loc objectAtIndex:0] integerValue];
+    NSInteger musicSid = [[loc objectAtIndex:1] integerValue];
+    if (musicDimension+1 == indexPath.section && musicSid == indexPath.row) {
         animateView = cellStyle1.logo;
         [cellStyle1.logo setHidden:NO];
     }
