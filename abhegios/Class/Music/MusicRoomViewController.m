@@ -10,6 +10,7 @@
 #import "GroupInfo.h"
 #import "AppAPIHelper.h"
 #import "MusicInfoViewStyle3.h"
+#import "MusicFMInfo.h"
 
 @interface MusicRoomViewController ()
 //@property (nonatomic, retain) MusicPlayerHelper *playerHelper;
@@ -18,6 +19,7 @@
 @implementation MusicRoomViewController
 {
     NSTimer *_frameTimer;
+    NSArray *_fmInfo;
 }
 
 - (void)viewDidLoad {
@@ -28,8 +30,9 @@
         [_frameTimer fire];
     }
     [PlayerInstance refreshMusicList];
-    [_viewStyle1 setFrame:CGRectMake(_viewStyle1.frame.origin.x, _viewStyle1.frame.origin.y, CGRectGetWidth(_viewStyle1.frame), CGRectGetWidth(_viewStyle1.frame))];
+    [_viewStyle1 setFrame:CGRectMake(_viewStyle1.frame.origin.x, _viewStyle1.frame.origin.y, 220, 220)];
     [_viewStyle1 updateRadius];
+    _fmInfo = [GroupInfo initWithsConfigAndDataJsonFile:@"musicfm" jsonName:@"musicfm" entityClass:[MusicFMInfo class]];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -56,6 +59,12 @@
     NSString *nameArtist = [NSString stringWithFormat:@"%@ - %@", currentInfo.name, currentInfo.artist];
     [_name setText:nameArtist];
     [_viewStyle1 setData:currentInfo];
+
+    NSArray *loc = [MusicFMInfo getLocationFromGroupinfo:_fmInfo Dimension:[PlayerInstance dimension] Sid:[PlayerInstance sid]];
+    NSInteger musicDimension = [[loc objectAtIndex:0] integerValue];
+    NSInteger musicSid = [[loc objectAtIndex:1] integerValue];
+    NSString *summary = [[[[_fmInfo objectAtIndex:musicDimension] entitys] objectAtIndex:musicSid] strSid];
+    [_summary setText:summary];
 }
 
 - (void)updateScreenPerFrame {

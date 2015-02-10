@@ -12,4 +12,5 @@
 @interface MusicFMInfo : OEZBaseEntity
 @property (nonatomic, retain) NSString *strSid;
 @property NSInteger sid;
++ (NSArray *)getLocationFromGroupinfo:(NSArray *)groupinfo Dimension:(NSString *)dimension Sid:(NSInteger)sid;
 @end
