@@ -28,7 +28,7 @@
         [_frameTimer fire];
     }
     [PlayerInstance refreshMusicList];
-    [_viewStyle1 setFrame:CGRectMake(_viewStyle1.frame.origin.x, _viewStyle1.frame.origin.y, CGRectGetWidth(_viewStyle1.frame), CGRectGetWidth(_viewStyle1.frame))];
+//    [_viewStyle1 setFrame:CGRectMake(_viewStyle1.frame.origin.x, _viewStyle1.frame.origin.y, CGRectGetWidth(_viewStyle1.frame), CGRectGetWidth(_viewStyle1.frame))];
     [_viewStyle1 updateRadius];
 }
 

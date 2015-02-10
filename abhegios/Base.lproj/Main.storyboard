@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="y5s-RF-eIy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="y5s-RF-eIy">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -1030,10 +1031,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uY5-pG-g53" customClass="MusicInfoViewStyle1">
-                                <rect key="frame" x="80" y="100" width="160" height="160"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="华语流行" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nj-ac-wtq">
                                 <rect key="frame" x="10" y="295" width="300" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1067,20 +1064,28 @@
                                     <action selector="doNext:" destination="IYr-bQ-UIs" eventType="touchUpInside" id="D4K-ul-5hm"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uY5-pG-g53" customClass="MusicInfoViewStyle1">
+                                <rect key="frame" x="80" y="100" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uY5-pG-g53" secondAttribute="height" multiplier="1:1" id="mhw-Og-kiU"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="uY5-pG-g53" firstAttribute="leading" secondItem="k5L-rX-Fee" secondAttribute="leading" constant="80" id="4D7-E2-v0q"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FAq-Jh-948" secondAttribute="trailing" constant="60" id="4zh-RO-ZtD"/>
                             <constraint firstAttribute="bottomMargin" secondItem="BEn-oa-b8Q" secondAttribute="bottom" constant="40" id="B3f-AF-bn2"/>
-                            <constraint firstItem="uY5-pG-g53" firstAttribute="top" secondItem="k5L-rX-Fee" secondAttribute="top" constant="100" id="C6q-us-vb9"/>
-                            <constraint firstAttribute="centerX" secondItem="uY5-pG-g53" secondAttribute="centerX" id="CXG-11-CvS"/>
                             <constraint firstAttribute="centerX" secondItem="5nj-ac-wtq" secondAttribute="centerX" id="GW5-ak-C1f"/>
                             <constraint firstAttribute="bottomMargin" secondItem="f3Y-pw-TbE" secondAttribute="bottom" constant="40" id="Isz-IJ-7d3"/>
                             <constraint firstItem="BEn-oa-b8Q" firstAttribute="leading" secondItem="k5L-rX-Fee" secondAttribute="leadingMargin" constant="60" id="Kwv-iW-EGS"/>
                             <constraint firstAttribute="bottomMargin" secondItem="FAq-Jh-948" secondAttribute="bottom" constant="40" id="T5U-AN-JSo"/>
+                            <constraint firstAttribute="centerY" secondItem="uY5-pG-g53" secondAttribute="centerY" constant="70" id="Uan-S3-ePF"/>
                             <constraint firstAttribute="centerX" secondItem="KjG-Do-ZfI" secondAttribute="centerX" id="XYs-Cv-s7I"/>
                             <constraint firstAttribute="bottomMargin" secondItem="5nj-ac-wtq" secondAttribute="bottom" constant="100" id="awE-ry-0RN"/>
                             <constraint firstAttribute="centerX" secondItem="f3Y-pw-TbE" secondAttribute="centerX" id="inL-Ek-zaC"/>
+                            <constraint firstItem="5nj-ac-wtq" firstAttribute="top" secondItem="uY5-pG-g53" secondAttribute="bottom" constant="35" id="jk1-q5-LSD"/>
+                            <constraint firstAttribute="trailing" secondItem="uY5-pG-g53" secondAttribute="trailing" constant="80" id="yS8-BW-QjQ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1089,7 +1094,7 @@
                         <outlet property="next" destination="FAq-Jh-948" id="z4c-cg-ank"/>
                         <outlet property="summary" destination="5nj-ac-wtq" id="eoX-R2-M6b"/>
                         <outlet property="trash" destination="BEn-oa-b8Q" id="SZ8-eV-Wnr"/>
-                        <outlet property="viewStyle1" destination="uY5-pG-g53" id="z6R-lA-53R"/>
+                        <outlet property="viewStyle1" destination="uY5-pG-g53" id="1FM-an-G5i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ij8-bt-cBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
