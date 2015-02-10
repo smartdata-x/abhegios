@@ -59,6 +59,9 @@
 - (void)initTableView {
     _tableView.delegate = self;
     _tableView.dataSource = self;
+    // 底部清除掉
+    UIView *v = [[UIView alloc] initWithFrame:CGRectZero];
+    [_tableView setTableFooterView:v];
 }
 
 - (void)updateAnimateView {
