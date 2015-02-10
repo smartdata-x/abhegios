@@ -17,21 +17,15 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    [self setRadius];
+    [self updateRadius];
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selfClicked:)];
     [self addGestureRecognizer:tapGesture];
 }
 
-- (void)setFrame:(CGRect)frame {
-    [super setFrame:frame];
-    [self setRadius];
-}
-
-- (void)setRadius {
+- (void)updateRadius {
     [[_logo layer] setCornerRadius:(CGRectGetWidth(self.frame) - 12.0f) * 0.5f];
     [[_logo layer] setMasksToBounds:YES];
     // TODO:特殊处理进度条，如果是小logo，采用小号progressline
-    
 }
 
 - (void)selfClicked:(UIGestureRecognizer *)gesture {

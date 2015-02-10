@@ -152,12 +152,7 @@
         [viewCell setData:name];
     }
     MusicFMTableViewCellStyle1 *cellStyle1 = (MusicFMTableViewCellStyle1 *)viewCell;
-    if ([cellStyle1.name.text isEqualToString:@"我的红心"]) {
-        [cellStyle1.logo setHidden:NO];
-    }
-    else {
-        [cellStyle1.logo setHidden:YES];
-    }
+    [cellStyle1.logo setHidden:(indexPath.row == 0 && indexPath.section == 0)];
     return viewCell;
 }
 

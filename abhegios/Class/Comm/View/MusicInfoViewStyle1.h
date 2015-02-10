@@ -21,4 +21,5 @@
 - (void)updateProcessLine:(CGFloat)rate;
 - (void)setData:(id)data;
 - (void)pauseTimer:(BOOL)pause;
+- (void)updateRadius;
 @end
