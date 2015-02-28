@@ -952,6 +952,24 @@
             </objects>
             <point key="canvasLocation" x="7942" y="59"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="ppa-i6-Uy6">
+            <objects>
+                <viewController id="HuM-bq-CAk" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tAl-aS-foF"/>
+                        <viewControllerLayoutGuide type="bottom" id="x3T-tQ-yuj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j4b-0z-ucG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lhx-eb-JBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5990" y="781"/>
+        </scene>
         <!--我的FM-->
         <scene sceneID="7mH-Vx-gvJ">
             <objects>
@@ -1013,10 +1031,10 @@
             </objects>
             <point key="canvasLocation" x="6641" y="780"/>
         </scene>
-        <!-- -->
+        <!--音乐-->
         <scene sceneID="bzw-3F-Vhp">
             <objects>
-                <viewController storyboardIdentifier="MusicRoomViewController" title=" " id="IYr-bQ-UIs" customClass="MusicRoomViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MusicRoomViewController" title=" " id="IYr-bQ-UIs" userLabel="音乐" customClass="MusicRoomViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NtG-LV-TbJ"/>
                         <viewControllerLayoutGuide type="bottom" id="7J2-OG-jby"/>

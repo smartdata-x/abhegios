@@ -641,6 +641,7 @@
 		1AD6431F4343F9E4FB9CA2CF /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				CB1CEFB51AA1F05B009B0E5B /* Movie */,
 				EA9C2FF11A776C50002EFF35 /* AppAPI */,
 				1AD6492B19568EF4CBFC4EA6 /* AppDelegate.m */,
 				1AD64E4E9A3FC7858429AD99 /* AppDelegate.h */,
@@ -888,6 +889,13 @@
 				EA103C8E1A78B53600FFF66E /* BaseInfoAdapter.m */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		CB1CEFB51AA1F05B009B0E5B /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Movie;
 			sourceTree = "<group>";
 		};
 		CB6A21BA1A6FF2930087546F /* BookStore */ = {
