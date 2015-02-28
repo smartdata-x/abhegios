@@ -952,10 +952,10 @@
             </objects>
             <point key="canvasLocation" x="7942" y="59"/>
         </scene>
-        <!--View Controller-->
+        <!--电影播放-->
         <scene sceneID="ppa-i6-Uy6">
             <objects>
-                <viewController id="HuM-bq-CAk" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MoviePlayViewController" id="HuM-bq-CAk" userLabel="电影播放" customClass="MoviePlayViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tAl-aS-foF"/>
                         <viewControllerLayoutGuide type="bottom" id="x3T-tQ-yuj"/>
@@ -963,8 +963,17 @@
                     <view key="view" contentMode="scaleToFill" id="j4b-0z-ucG">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0AK-Ke-8Hs" customClass="HighLevelMoviePlayerView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="moviePlayerView" destination="0AK-Ke-8Hs" id="Qvx-rK-DNr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lhx-eb-JBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

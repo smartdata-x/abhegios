@@ -11,6 +11,7 @@
 #import "MusicFMTableViewCellStyle1.h"
 #import "GroupInfo.h"
 #import "MusicFMInfo.h"
+#import "MoviePlayViewController.h"
 
 @interface MusicFMViewController ()
 @property (nonatomic, retain) NSArray *sectionInfo;
@@ -166,6 +167,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    {
+        [self.navigationController pushViewControllerWithIdentifier:@"MoviePlayViewController" animated:YES];
+        return;
+    }
     if (indexPath.section > 0) {
         NSString *dimension = [[_sectionInfo objectAtIndex:indexPath.section-1] key];
         NSInteger sid = [[[[_sectionInfo objectAtIndex:indexPath.section-1] entitys] objectAtIndex:indexPath.row] sid];

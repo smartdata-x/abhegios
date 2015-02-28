@@ -30,6 +30,8 @@
 		1AD64D9C70E0A1325B3F2A09 /* AppHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64937DADE448C8201DFCF /* AppHomeViewController.m */; };
 		1AD64DA54158CF05FAE8F2A6 /* WBLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64ADF6021C604900147BF /* WBLogin.m */; };
 		1AD64F3A04AFCBB948106908 /* AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD64A85039C51E682F19BA9 /* AppInfo.m */; };
+		CB1CEFB81AA1F0CB009B0E5B /* MoviePlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1CEFB71AA1F0CB009B0E5B /* MoviePlayViewController.m */; };
+		CB1CEFBB1AA1F398009B0E5B /* HighLevelMoviePlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1CEFBA1AA1F398009B0E5B /* HighLevelMoviePlayerView.m */; };
 		CB2FFCE91A88E5C3003A3AEE /* MusicFMInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2FFCE81A88E5C3003A3AEE /* MusicFMInfo.m */; };
 		CB2FFCED1A88E8F2003A3AEE /* musicfm.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB2FFCEC1A88E8F2003A3AEE /* musicfm.plist */; };
 		CB2FFCEF1A88E9B7003A3AEE /* musicfm.json in Resources */ = {isa = PBXBuildFile; fileRef = CB2FFCEE1A88E9B7003A3AEE /* musicfm.json */; };
@@ -242,6 +244,10 @@
 		1AD64E8024E42C94BF567A4E /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
 		1AD64EC338CEFF6147A40C44 /* success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = success.png; sourceTree = "<group>"; };
 		1AD64FDCA86FD9856133C0D9 /* qqicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qqicon.png; sourceTree = "<group>"; };
+		CB1CEFB61AA1F0CB009B0E5B /* MoviePlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayViewController.h; sourceTree = "<group>"; };
+		CB1CEFB71AA1F0CB009B0E5B /* MoviePlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviePlayViewController.m; sourceTree = "<group>"; };
+		CB1CEFB91AA1F398009B0E5B /* HighLevelMoviePlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighLevelMoviePlayerView.h; sourceTree = "<group>"; };
+		CB1CEFBA1AA1F398009B0E5B /* HighLevelMoviePlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighLevelMoviePlayerView.m; sourceTree = "<group>"; };
 		CB2FFCE71A88E5C3003A3AEE /* MusicFMInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicFMInfo.h; sourceTree = "<group>"; };
 		CB2FFCE81A88E5C3003A3AEE /* MusicFMInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicFMInfo.m; sourceTree = "<group>"; };
 		CB2FFCEC1A88E8F2003A3AEE /* musicfm.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = musicfm.plist; sourceTree = "<group>"; };
@@ -894,6 +900,10 @@
 		CB1CEFB51AA1F05B009B0E5B /* Movie */ = {
 			isa = PBXGroup;
 			children = (
+				CB1CEFB61AA1F0CB009B0E5B /* MoviePlayViewController.h */,
+				CB1CEFB71AA1F0CB009B0E5B /* MoviePlayViewController.m */,
+				CB1CEFB91AA1F398009B0E5B /* HighLevelMoviePlayerView.h */,
+				CB1CEFBA1AA1F398009B0E5B /* HighLevelMoviePlayerView.m */,
 			);
 			path = Movie;
 			sourceTree = "<group>";
@@ -1412,6 +1422,7 @@
 				EA13DDD11A6F8D3A004AB7E6 /* AppDetailsInfo.m in Sources */,
 				EA103C8F1A78B53600FFF66E /* BaseInfoAdapter.m in Sources */,
 				1AD6455F3CEB60EEE78C0C77 /* UserHelper.m in Sources */,
+				CB1CEFB81AA1F0CB009B0E5B /* MoviePlayViewController.m in Sources */,
 				CB2FFCF21A8A4D8A003A3AEE /* MusicInfoViewStyle4.m in Sources */,
 				1AD649CD0AF8969FFF4B9641 /* ILogin.m in Sources */,
 				CB6A21D41A711CEC0087546F /* BookStoreTableViewCellStyle3.m in Sources */,
@@ -1497,6 +1508,7 @@
 				CB6A21E11A729B050087546F /* BookInfoViewStyle1.m in Sources */,
 				EA9C5D501A79BBC800B7AACA /* NSString+NSStringCategory.m in Sources */,
 				CB6A22231A765F9C0087546F /* BookFileManager.m in Sources */,
+				CB1CEFBB1AA1F398009B0E5B /* HighLevelMoviePlayerView.m in Sources */,
 				CB6A21D11A711CD50087546F /* BookStoreTableViewCellStyle2.m in Sources */,
 				CB6A21EE1A73C6840087546F /* BookInfoViewStyle2.m in Sources */,
 				EA88BFAE1A74904B004885A0 /* MovieInfo.m in Sources */,
