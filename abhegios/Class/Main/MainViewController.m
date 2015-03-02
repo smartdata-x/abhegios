@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationController.navigationBar setTranslucent:FALSE];
+    [[self tabBar] setTranslucent:NO];
     // Do any additional setup after loading the view.
 }
 
