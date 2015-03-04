@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @protocol OEZTableViewDelegate <NSObject>
-
+@optional
 - (void)tableView:(UITableView *)tableView rowAtIndexPath:(NSIndexPath *)indexPath didSelectColumnAtIndex:(NSInteger) column;
 - (void)tableView:(UITableView *)tableView rowAtIndexPath:(NSIndexPath *)indexPath didAction:(NSInteger) action;
 @end
