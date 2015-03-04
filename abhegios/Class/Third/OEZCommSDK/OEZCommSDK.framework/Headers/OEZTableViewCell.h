@@ -13,5 +13,4 @@
 
 -(void) didSelectRowColumn:(NSUInteger) column;
 -(void) didSelectRowAction:(NSUInteger) action;
--(void) didSelectRowColumnAction:(NSUInteger) column inAction:(NSUInteger) action;
 @end
