@@ -128,7 +128,11 @@
     }
     else if( [[group key] hasPrefix:@"advert"] )
     {
-        
+        ADInfo* adInfo = [[group entitys] objectAtIndex:row];
+        AppInfo* appInfo = [[AppInfo alloc] init];
+        [appInfo setName:@""];
+        [appInfo setId:[adInfo id]];
+        [self.navigationController pushAppDetailsViewController:appInfo animated:YES];
     }
     else
         [self.navigationController pushAppDetailsViewController:[[group entitys] objectAtIndex:row] animated:YES];

@@ -25,10 +25,11 @@
 }
 
 
+
+
 -(void) pageView:(OEZPageView *)pageView didSelectPageAtIndex:(NSInteger)pageIndex
 {
-    NSLog(@"didSelectPageAtIndex %@",@(pageIndex));
+    [self didSelectRowColumn:pageIndex];
 }
-
 
 @end

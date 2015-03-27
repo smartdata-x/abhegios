@@ -20,8 +20,5 @@
     return cell;
 }
 
--(void) pageView:(OEZPageView *)pageView didSelectPageAtIndex:(NSInteger)pageIndex
-{
-    [self didSelectRowColumn:pageIndex];
-}
+
 @end

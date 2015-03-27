@@ -64,7 +64,11 @@ typedef NS_ENUM(NSInteger, AppDetailsTableViewCellStyle) {
                 return 294;
             case AppDetailsTableViewCellStyleTwo:
             {
-                CGFloat height = [[[_tableViewData intro] summary] sizeWithFont:[UIFont systemFontOfSize:14] constrainedToSize:CGSizeMake(kMainScreenWidth-30, MAXFLOAT) lineBreakMode:NSLineBreakByCharWrapping].height;
+                [self setTitle:[[_tableViewData intro] name]];
+                NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:14]};
+                CGSize size = [[[_tableViewData intro] summary] boundingRectWithSize:CGSizeMake(kMainScreenWidth-30, MAXFLOAT) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
+                
+                CGFloat height = size.height;//[[[_tableViewData intro] summary] sizeWithFont:[UIFont systemFontOfSize:14] constrainedToSize:CGSizeMake(kMainScreenWidth-30, MAXFLOAT) lineBreakMode:NSLineBreakByCharWrapping].height;
                 height += 80;
                 return height;
             }

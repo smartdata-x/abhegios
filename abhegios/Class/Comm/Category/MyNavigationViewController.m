@@ -16,8 +16,8 @@
     [super viewDidLoad];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     [self.navigationBar setBarTintColor:kUIColorWithRGB(0x339ee2)];
-    NSDictionary* titleTextAttributes = @{UITextAttributeTextColor:[UIColor whiteColor],
-                                          UITextAttributeTextShadowColor: [UIColor whiteColor]};
+    NSDictionary* titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]/*,
+                                                                                              NSShadowAttributeName: [UIColor whiteColor]*/};
     [[UINavigationBar appearance] setTitleTextAttributes: titleTextAttributes];
 
 }

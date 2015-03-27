@@ -27,6 +27,7 @@
 @end
 @interface OEZPageView : UIView<UIScrollViewDelegate>
 @property (readonly) UIScrollView*  scrollView;
+@property (readonly) UIPageControl* pageControl;
 @property(nonatomic,assign) id<OEZPageViewDelegate>     delegate;
 - (id)dequeueReusableCellWithIdentifier:(NSString *)identifier;
 - (void)reloadData;

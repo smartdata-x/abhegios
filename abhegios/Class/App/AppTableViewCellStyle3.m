@@ -18,6 +18,7 @@
 
 -(NSInteger) numberColumnCountHScrollView:(OEZHScrollView *)hScrollView
 {
+    [self.hScrollView setPagingEnabled:YES];
     return [self.data count];
 }
 
