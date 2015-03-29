@@ -90,6 +90,12 @@
 		CBE0043F1A78FB20001A2F42 /* HttpBookAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE0043E1A78FB20001A2F42 /* HttpBookAPI.m */; };
 		CBE062A51A85D6E500BF27C8 /* MusicInfoViewStyle3.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE062A41A85D6E500BF27C8 /* MusicInfoViewStyle3.m */; };
 		CBE50BB91AC83004000265DC /* MovieCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE50BB81AC83004000265DC /* MovieCenterViewController.m */; };
+		CBE50BBC1AC8323E000265DC /* MovieInfoViewStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE50BBB1AC8323E000265DC /* MovieInfoViewStyle1.m */; };
+		CBE50BBF1AC83250000265DC /* MovieInfoViewStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE50BBE1AC83250000265DC /* MovieInfoViewStyle2.m */; };
+		CBE50BC11AC83298000265DC /* MovieInfoViewStyle1.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBE50BC01AC83298000265DC /* MovieInfoViewStyle1.xib */; };
+		CBE50BC31AC832A6000265DC /* MovieInfoViewStyle2.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBE50BC21AC832A6000265DC /* MovieInfoViewStyle2.xib */; };
+		CBE50BC51AC839AE000265DC /* moviecenter.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBE50BC41AC839AE000265DC /* moviecenter.plist */; };
+		CBE50BC91AC83FAA000265DC /* HttpMovieAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE50BC81AC83FAA000265DC /* HttpMovieAPI.m */; };
 		EA103C671A7889F200FFF66E /* GameHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C651A7889F200FFF66E /* GameHomeViewController.m */; };
 		EA103C6A1A788A3B00FFF66E /* GameHomeTableViewCellStyle3.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C691A788A3B00FFF66E /* GameHomeTableViewCellStyle3.m */; };
 		EA103C6D1A788B7B00FFF66E /* GameHomeTableViewCellStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = EA103C6C1A788B7B00FFF66E /* GameHomeTableViewCellStyle2.m */; };
@@ -364,6 +370,16 @@
 		CBE062A41A85D6E500BF27C8 /* MusicInfoViewStyle3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicInfoViewStyle3.m; sourceTree = "<group>"; };
 		CBE50BB71AC83004000265DC /* MovieCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCenterViewController.h; sourceTree = "<group>"; };
 		CBE50BB81AC83004000265DC /* MovieCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCenterViewController.m; sourceTree = "<group>"; };
+		CBE50BBA1AC8323E000265DC /* MovieInfoViewStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieInfoViewStyle1.h; sourceTree = "<group>"; };
+		CBE50BBB1AC8323E000265DC /* MovieInfoViewStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieInfoViewStyle1.m; sourceTree = "<group>"; };
+		CBE50BBD1AC83250000265DC /* MovieInfoViewStyle2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieInfoViewStyle2.h; sourceTree = "<group>"; };
+		CBE50BBE1AC83250000265DC /* MovieInfoViewStyle2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieInfoViewStyle2.m; sourceTree = "<group>"; };
+		CBE50BC01AC83298000265DC /* MovieInfoViewStyle1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieInfoViewStyle1.xib; sourceTree = SOURCE_ROOT; };
+		CBE50BC21AC832A6000265DC /* MovieInfoViewStyle2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieInfoViewStyle2.xib; sourceTree = SOURCE_ROOT; };
+		CBE50BC41AC839AE000265DC /* moviecenter.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = moviecenter.plist; path = Resources/moviecenter.plist; sourceTree = "<group>"; };
+		CBE50BC61AC83F60000265DC /* MovieAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieAPI.h; sourceTree = "<group>"; };
+		CBE50BC71AC83FAA000265DC /* HttpMovieAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpMovieAPI.h; sourceTree = "<group>"; };
+		CBE50BC81AC83FAA000265DC /* HttpMovieAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpMovieAPI.m; sourceTree = "<group>"; };
 		EA103C651A7889F200FFF66E /* GameHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameHomeViewController.m; sourceTree = "<group>"; };
 		EA103C661A7889F200FFF66E /* GameHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHomeViewController.h; sourceTree = "<group>"; };
 		EA103C681A788A3B00FFF66E /* GameHomeTableViewCellStyle3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameHomeTableViewCellStyle3.h; sourceTree = "<group>"; };
@@ -764,6 +780,7 @@
 				EA75998A1A7120A50027FC8B /* uilogindata.plist */,
 				EA75998B1A7120A50027FC8B /* appstorehome.plist */,
 				1AD64688EC1876C19A332D96 /* Info.plist */,
+				CBE50BC41AC839AE000265DC /* moviecenter.plist */,
 			);
 			name = "Supporting Files";
 			path = abhegios;
@@ -821,6 +838,8 @@
 				EA7EC65B1A858F7C00688033 /* BookInfoViewStyle1.xib */,
 				EA7EC65D1A858F7C00688033 /* AppInfoViewStyle3.xib */,
 				EA7EC65F1A858F7C00688033 /* AppInfoViewStyle1.xib */,
+				CBE50BC01AC83298000265DC /* MovieInfoViewStyle1.xib */,
+				CBE50BC21AC832A6000265DC /* MovieInfoViewStyle2.xib */,
 				1AD64B4D5E1BC035B41C15E2 /* Main.storyboard */,
 				1AD644FB93BF0B06901FCD5E /* LaunchScreen.xib */,
 			);
@@ -1172,6 +1191,10 @@
 				CB2FFCF11A8A4D8A003A3AEE /* MusicInfoViewStyle4.m */,
 				EA9F28D01A823BA7002B09C1 /* SearchView.h */,
 				EA9F28D11A823BA7002B09C1 /* SearchView.m */,
+				CBE50BBA1AC8323E000265DC /* MovieInfoViewStyle1.h */,
+				CBE50BBB1AC8323E000265DC /* MovieInfoViewStyle1.m */,
+				CBE50BBD1AC83250000265DC /* MovieInfoViewStyle2.h */,
+				CBE50BBE1AC83250000265DC /* MovieInfoViewStyle2.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1186,6 +1209,7 @@
 				EAA5DFE01A77D3F300CF9163 /* OtherAPI.h */,
 				CBE004401A78FB5F001A2F42 /* BookAPI.h */,
 				CBD81E511A810013006E6604 /* MusicAPI.h */,
+				CBE50BC61AC83F60000265DC /* MovieAPI.h */,
 			);
 			path = AppAPI;
 			sourceTree = "<group>";
@@ -1205,6 +1229,8 @@
 				CBE0043E1A78FB20001A2F42 /* HttpBookAPI.m */,
 				CBD81E521A8100A2006E6604 /* HttpMusicAPI.h */,
 				CBD81E531A8100A2006E6604 /* HttpMusicAPI.m */,
+				CBE50BC71AC83FAA000265DC /* HttpMovieAPI.h */,
+				CBE50BC81AC83FAA000265DC /* HttpMovieAPI.m */,
 			);
 			path = HttpAPI;
 			sourceTree = "<group>";
@@ -1362,6 +1388,7 @@
 				1AD6460C6803B48F071D6E89 /* Images.xcassets in Resources */,
 				EA2225E41AA3EB2800D04A6B /* musicfm.plist in Resources */,
 				EA7EC6691A858F7C00688033 /* FundTableViewHeader.xib in Resources */,
+				CBE50BC31AC832A6000265DC /* MovieInfoViewStyle2.xib in Resources */,
 				EA75998F1A7120A50027FC8B /* appstorehome.plist in Resources */,
 				EA7EC66A1A858F7C00688033 /* FoundHScrollViewCell.xib in Resources */,
 				EA7EC6641A858F7C00688033 /* PageViewImageCell.xib in Resources */,
@@ -1378,9 +1405,11 @@
 				EA2225E51AA3EB2800D04A6B /* musicroom.plist in Resources */,
 				EA7EC6681A858F7C00688033 /* GameHScrollViewCell.xib in Resources */,
 				EA75998E1A7120A50027FC8B /* uilogindata.plist in Resources */,
+				CBE50BC11AC83298000265DC /* MovieInfoViewStyle1.xib in Resources */,
 				EA7EC66D1A858F7C00688033 /* BookInfoViewStyle3.xib in Resources */,
 				1AD64077DE8389AC54925C71 /* Info.plist in Resources */,
 				EA2225E31AA3EB2800D04A6B /* musicfm.json in Resources */,
+				CBE50BC51AC839AE000265DC /* moviecenter.plist in Resources */,
 				EA7EC6651A858F7C00688033 /* MusicInfoViewStyle2.xib in Resources */,
 				1AD6466F8E60BA95319C4EF1 /* local.html in Resources */,
 				EA7EC6701A858F7C00688033 /* AppInfoViewStyle3.xib in Resources */,
@@ -1409,6 +1438,7 @@
 				CBE50BB91AC83004000265DC /* MovieCenterViewController.m in Sources */,
 				CBC05FBE1A7A6FCD00CC4008 /* BookHScrollViewCell4.m in Sources */,
 				EA7C910E1A77B6AF00782B8D /* HTTPReqeust.m in Sources */,
+				CBE50BC91AC83FAA000265DC /* HttpMovieAPI.m in Sources */,
 				EABA1EB61A76705E00A76BD2 /* GameHomeInfo.m in Sources */,
 				EA9C5D4F1A79BBC800B7AACA /* MyNavigationViewController.m in Sources */,
 				CB6A21DB1A7155750087546F /* BookShelfViewController.m in Sources */,
@@ -1427,6 +1457,7 @@
 				EA88BFA51A748A68004885A0 /* BaseInfo.m in Sources */,
 				EA13DDD11A6F8D3A004AB7E6 /* AppDetailsInfo.m in Sources */,
 				EA103C8F1A78B53600FFF66E /* BaseInfoAdapter.m in Sources */,
+				CBE50BBC1AC8323E000265DC /* MovieInfoViewStyle1.m in Sources */,
 				1AD6455F3CEB60EEE78C0C77 /* UserHelper.m in Sources */,
 				CB1CEFB81AA1F0CB009B0E5B /* MoviePlayViewController.m in Sources */,
 				CB2FFCF21A8A4D8A003A3AEE /* MusicInfoViewStyle4.m in Sources */,
@@ -1505,6 +1536,7 @@
 				1AD6419EC3E465BEDDED654B /* WXLogin.m in Sources */,
 				EA9F28D21A823BA7002B09C1 /* SearchView.m in Sources */,
 				EABA1EE41A76844000A76BD2 /* AFImageRequestOperation.m in Sources */,
+				CBE50BBF1AC83250000265DC /* MovieInfoViewStyle2.m in Sources */,
 				1AD64DA54158CF05FAE8F2A6 /* WBLogin.m in Sources */,
 				CB6A21E61A72B3B80087546F /* FavRateViewStyle.m in Sources */,
 				CB6A22191A74C5180087546F /* BookDirectoryTableViewCellStyle1.m in Sources */,
