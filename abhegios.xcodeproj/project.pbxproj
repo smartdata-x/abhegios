@@ -774,13 +774,13 @@
 				EA2225DF1AA3EB2800D04A6B /* musicfm.plist */,
 				EA2225E01AA3EB2800D04A6B /* musicroom.plist */,
 				EA2225E11AA3EB2800D04A6B /* bookstorehome.plist */,
+				CBE50BC41AC839AE000265DC /* moviecenter.plist */,
 				EA2225E21AA3EB2800D04A6B /* gamehomeinfo.plist */,
 				EA88BFBA1A74E37F004885A0 /* recommendhome.plist */,
 				EA7599921A7120CB0027FC8B /* uifounddata.plist */,
 				EA75998A1A7120A50027FC8B /* uilogindata.plist */,
 				EA75998B1A7120A50027FC8B /* appstorehome.plist */,
 				1AD64688EC1876C19A332D96 /* Info.plist */,
-				CBE50BC41AC839AE000265DC /* moviecenter.plist */,
 			);
 			name = "Supporting Files";
 			path = abhegios;

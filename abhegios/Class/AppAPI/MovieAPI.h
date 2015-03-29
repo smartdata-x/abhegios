@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 #import "ReqeustDelegate.h"
 @protocol MovieAPI <NSObject>
-
+- (void)getMovieStore:(id<ReqeustDelegate>) delegate;
 @end

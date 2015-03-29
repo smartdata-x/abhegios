@@ -12,6 +12,7 @@
 #import "HttpUserAPI.h"
 #import "HttpBookAPI.h"
 #import "HttpMusicAPI.h"
+#import "HttpMovieAPI.h"
 #import "RequestInfo.h"
 #include "UserHelper.h"
 #import "UserInfo.h"
@@ -53,5 +54,10 @@ HELPER_SHARED
 -(id<MusicAPI>) getMusicAPI
 {
     return [[HttpMusicAPI alloc] initWithRequest:[self getRequestInfo]];
+}
+
+-(id<MovieAPI>) getMovieAPI
+{
+    return [[HttpMovieAPI alloc] initWithRequest:[self getRequestInfo]];
 }
 @end

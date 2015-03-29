@@ -7,7 +7,14 @@
 //
 
 #import "HttpMovieAPI.h"
+#import "GroupInfo.h"
+#import "MovieInfo.h"
 
 @implementation HttpMovieAPI
-
+- (void)getMovieStore:(id<ReqeustDelegate>)delegate {
+    static NSString *path = @"/find/1/moviestore.fcgi";
+    [self request:path delegate:delegate processBlock:^id(id data) {
+        return [GroupInfo initWithsConfigAndDataDictionarys:@"moviecenter" groupsData:data entityClass:[MovieInfo class]];
+    }];
+}
 @end

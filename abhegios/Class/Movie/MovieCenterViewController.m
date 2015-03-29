@@ -9,6 +9,7 @@
 #import "MovieCenterViewController.h"
 #import "MovieInfo.h"
 #import "GroupInfo.h"
+#import "AppAPIHelper.h"
 
 @interface MovieCenterViewController ()
 
@@ -22,7 +23,7 @@
 }
 
 - (void)didRequest {
-    
+    [[[AppAPIHelper shared] getMovieAPI] getMovieStore:self];
 }
 
 #pragma mark - Table view data source

@@ -9,5 +9,5 @@
 #import "BaseInfo.h"
 
 @interface MovieInfo : BaseInfoMoreONSP
-@property NSUInteger watch;
+@property NSUInteger play;
 @end

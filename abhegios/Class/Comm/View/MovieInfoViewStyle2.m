@@ -21,7 +21,7 @@
     [_viewStyle1.name setText:[data summary]];
     [_viewStyle1.logo setImageWithStrURL:[BaseInfoAdapter getPic:data]];
     [_secName setText:[data name]];
-    [_watchNumber setText:[NSString stringWithFormat:@"播放次数:%lu次", (unsigned long)[data watch]]];
+    [_watchNumber setText:[NSString stringWithFormat:@"播放次数:%lu次", (unsigned long)[data play]]];
 }
 
 /*
