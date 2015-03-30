@@ -13,6 +13,15 @@
 		CBD81E711A839C50006E6604 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD81E701A839C50006E6604 /* MediaPlayer.framework */; };
 		CBD81E731A839C65006E6604 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD81E721A839C65006E6604 /* AVFoundation.framework */; };
 		CBE50BC51AC839AE000265DC /* moviecenter.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBE50BC41AC839AE000265DC /* moviecenter.plist */; };
+		CBE50BCE1AC99385000265DC /* MovieCenterTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE50BCD1AC99385000265DC /* MovieCenterTableViewCellStyle1.m */; };
+		CBE50BD11AC9948D000265DC /* MovieHScrollViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE50BD01AC9948D000265DC /* MovieHScrollViewCell1.m */; };
+		CBE50BD41AC99816000265DC /* MovieCenterTableViewCellStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE50BD31AC99816000265DC /* MovieCenterTableViewCellStyle2.m */; };
+		CBE50BD71AC99DDB000265DC /* MovieCenterTableViewCellStyle3.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE50BD61AC99DDB000265DC /* MovieCenterTableViewCellStyle3.m */; };
+		CBE50BDB1AC9A9DF000265DC /* MovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE50BDA1AC9A9DF000265DC /* MovieDetailViewController.m */; };
+		CBE50BDF1AC9AADF000265DC /* MovieDetailTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE50BDE1AC9AADF000265DC /* MovieDetailTableViewCellStyle1.m */; };
+		CBE50BE21AC9AAF1000265DC /* MovieDetailTableViewCellStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE50BE11AC9AAF1000265DC /* MovieDetailTableViewCellStyle2.m */; };
+		CBE50BE51AC9AB08000265DC /* MovieDetailTableViewCellStyle3.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE50BE41AC9AB08000265DC /* MovieDetailTableViewCellStyle3.m */; };
+		CBE50BE81AC9AB20000265DC /* MovieDetailTableViewCellStyle4.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE50BE71AC9AB20000265DC /* MovieDetailTableViewCellStyle4.m */; };
 		EA2225E31AA3EB2800D04A6B /* musicfm.json in Resources */ = {isa = PBXBuildFile; fileRef = EA2225DE1AA3EB2800D04A6B /* musicfm.json */; };
 		EA2225E41AA3EB2800D04A6B /* musicfm.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA2225DF1AA3EB2800D04A6B /* musicfm.plist */; };
 		EA2225E51AA3EB2800D04A6B /* musicroom.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA2225E01AA3EB2800D04A6B /* musicroom.plist */; };
@@ -200,6 +209,24 @@
 		CBD81E701A839C50006E6604 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		CBD81E721A839C65006E6604 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		CBE50BC41AC839AE000265DC /* moviecenter.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = moviecenter.plist; path = Resources/moviecenter.plist; sourceTree = "<group>"; };
+		CBE50BCC1AC99385000265DC /* MovieCenterTableViewCellStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCenterTableViewCellStyle1.h; sourceTree = "<group>"; };
+		CBE50BCD1AC99385000265DC /* MovieCenterTableViewCellStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCenterTableViewCellStyle1.m; sourceTree = "<group>"; };
+		CBE50BCF1AC9948D000265DC /* MovieHScrollViewCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieHScrollViewCell1.h; sourceTree = "<group>"; };
+		CBE50BD01AC9948D000265DC /* MovieHScrollViewCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieHScrollViewCell1.m; sourceTree = "<group>"; };
+		CBE50BD21AC99816000265DC /* MovieCenterTableViewCellStyle2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCenterTableViewCellStyle2.h; sourceTree = "<group>"; };
+		CBE50BD31AC99816000265DC /* MovieCenterTableViewCellStyle2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCenterTableViewCellStyle2.m; sourceTree = "<group>"; };
+		CBE50BD51AC99DDB000265DC /* MovieCenterTableViewCellStyle3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCenterTableViewCellStyle3.h; sourceTree = "<group>"; };
+		CBE50BD61AC99DDB000265DC /* MovieCenterTableViewCellStyle3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCenterTableViewCellStyle3.m; sourceTree = "<group>"; };
+		CBE50BD91AC9A9DF000265DC /* MovieDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailViewController.h; sourceTree = "<group>"; };
+		CBE50BDA1AC9A9DF000265DC /* MovieDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailViewController.m; sourceTree = "<group>"; };
+		CBE50BDD1AC9AADF000265DC /* MovieDetailTableViewCellStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailTableViewCellStyle1.h; sourceTree = "<group>"; };
+		CBE50BDE1AC9AADF000265DC /* MovieDetailTableViewCellStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailTableViewCellStyle1.m; sourceTree = "<group>"; };
+		CBE50BE01AC9AAF1000265DC /* MovieDetailTableViewCellStyle2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailTableViewCellStyle2.h; sourceTree = "<group>"; };
+		CBE50BE11AC9AAF1000265DC /* MovieDetailTableViewCellStyle2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailTableViewCellStyle2.m; sourceTree = "<group>"; };
+		CBE50BE31AC9AB08000265DC /* MovieDetailTableViewCellStyle3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailTableViewCellStyle3.h; sourceTree = "<group>"; };
+		CBE50BE41AC9AB08000265DC /* MovieDetailTableViewCellStyle3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailTableViewCellStyle3.m; sourceTree = "<group>"; };
+		CBE50BE61AC9AB20000265DC /* MovieDetailTableViewCellStyle4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailTableViewCellStyle4.h; sourceTree = "<group>"; };
+		CBE50BE71AC9AB20000265DC /* MovieDetailTableViewCellStyle4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailTableViewCellStyle4.m; sourceTree = "<group>"; };
 		EA2225DE1AA3EB2800D04A6B /* musicfm.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = musicfm.json; path = Resources/musicfm.json; sourceTree = "<group>"; };
 		EA2225DF1AA3EB2800D04A6B /* musicfm.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = musicfm.plist; path = Resources/musicfm.plist; sourceTree = "<group>"; };
 		EA2225E01AA3EB2800D04A6B /* musicroom.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = musicroom.plist; path = Resources/musicroom.plist; sourceTree = "<group>"; };
@@ -604,6 +631,54 @@
 			name = Framework;
 			sourceTree = "<group>";
 		};
+		CBE50BCA1AC9932F000265DC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EAA201261AC8DEB500E088CE /* MovieCenterViewController.h */,
+				EAA201271AC8DEB500E088CE /* MovieCenterViewController.m */,
+				CBE50BCB1AC9933C000265DC /* CustomView */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		CBE50BCB1AC9933C000265DC /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				CBE50BCC1AC99385000265DC /* MovieCenterTableViewCellStyle1.h */,
+				CBE50BCD1AC99385000265DC /* MovieCenterTableViewCellStyle1.m */,
+				CBE50BD21AC99816000265DC /* MovieCenterTableViewCellStyle2.h */,
+				CBE50BD31AC99816000265DC /* MovieCenterTableViewCellStyle2.m */,
+				CBE50BD51AC99DDB000265DC /* MovieCenterTableViewCellStyle3.h */,
+				CBE50BD61AC99DDB000265DC /* MovieCenterTableViewCellStyle3.m */,
+			);
+			name = CustomView;
+			sourceTree = "<group>";
+		};
+		CBE50BD81AC9A923000265DC /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				CBE50BD91AC9A9DF000265DC /* MovieDetailViewController.h */,
+				CBE50BDA1AC9A9DF000265DC /* MovieDetailViewController.m */,
+				CBE50BDC1AC9A9E5000265DC /* CustomView */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		CBE50BDC1AC9A9E5000265DC /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				CBE50BDD1AC9AADF000265DC /* MovieDetailTableViewCellStyle1.h */,
+				CBE50BDE1AC9AADF000265DC /* MovieDetailTableViewCellStyle1.m */,
+				CBE50BE01AC9AAF1000265DC /* MovieDetailTableViewCellStyle2.h */,
+				CBE50BE11AC9AAF1000265DC /* MovieDetailTableViewCellStyle2.m */,
+				CBE50BE31AC9AB08000265DC /* MovieDetailTableViewCellStyle3.h */,
+				CBE50BE41AC9AB08000265DC /* MovieDetailTableViewCellStyle3.m */,
+				CBE50BE61AC9AB20000265DC /* MovieDetailTableViewCellStyle4.h */,
+				CBE50BE71AC9AB20000265DC /* MovieDetailTableViewCellStyle4.m */,
+			);
+			name = CustomView;
+			sourceTree = "<group>";
+		};
 		EA8339041A68B04200F3A9E9 = {
 			isa = PBXGroup;
 			children = (
@@ -976,12 +1051,12 @@
 		EAA201211AC8DEB500E088CE /* Movie */ = {
 			isa = PBXGroup;
 			children = (
+				CBE50BD81AC9A923000265DC /* Detail */,
+				CBE50BCA1AC9932F000265DC /* Home */,
 				EAA201221AC8DEB500E088CE /* HighLevelMoviePlayerView.h */,
 				EAA201231AC8DEB500E088CE /* HighLevelMoviePlayerView.m */,
 				EAA201241AC8DEB500E088CE /* MoviePlayViewController.h */,
 				EAA201251AC8DEB500E088CE /* MoviePlayViewController.m */,
-				EAA201261AC8DEB500E088CE /* MovieCenterViewController.h */,
-				EAA201271AC8DEB500E088CE /* MovieCenterViewController.m */,
 				EAA201281AC8DEB500E088CE /* CustomView */,
 			);
 			path = Movie;
@@ -994,6 +1069,8 @@
 				EAA2012A1AC8DEB500E088CE /* MovieInfoViewStyle1.m */,
 				EAA2012B1AC8DEB500E088CE /* MovieInfoViewStyle2.h */,
 				EAA2012C1AC8DEB500E088CE /* MovieInfoViewStyle2.m */,
+				CBE50BCF1AC9948D000265DC /* MovieHScrollViewCell1.h */,
+				CBE50BD01AC9948D000265DC /* MovieHScrollViewCell1.m */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -1536,6 +1613,7 @@
 				EAA202321AC8DEB600E088CE /* AppTableViewCellStyle2.m in Sources */,
 				EAA202331AC8DEB600E088CE /* AppTableViewCellStyle3.m in Sources */,
 				EAA2023A1AC8DEB600E088CE /* LoginViewController.m in Sources */,
+				CBE50BE81AC9AB20000265DC /* MovieDetailTableViewCellStyle4.m in Sources */,
 				EAA201F41AC8DEB500E088CE /* BookFileManager.m in Sources */,
 				EAA201F21AC8DEB500E088CE /* BookReaderViewController.m in Sources */,
 				EAA202671AC8DEB600E088CE /* AFPropertyListRequestOperation.m in Sources */,
@@ -1561,6 +1639,7 @@
 				EAA202551AC8DEB600E088CE /* UserInfo.m in Sources */,
 				EAA2020D1AC8DEB600E088CE /* BookTopicInfo.m in Sources */,
 				EAA201E61AC8DEB500E088CE /* FundTableViewHeader.m in Sources */,
+				CBE50BD71AC99DDB000265DC /* MovieCenterTableViewCellStyle3.m in Sources */,
 				EAA2020A1AC8DEB600E088CE /* BookDetailInfoTableViewCellStyle5.m in Sources */,
 				EAA2025B1AC8DEB600E088CE /* MusicInfo.m in Sources */,
 				EAA2023D1AC8DEB600E088CE /* WBLogin.m in Sources */,
@@ -1584,15 +1663,21 @@
 				EAA201EA1AC8DEB500E088CE /* FoundItemInfo.m in Sources */,
 				EAA202021AC8DEB500E088CE /* BookStoreTableViewCellStyle3.m in Sources */,
 				EAA2022A1AC8DEB600E088CE /* AppDetailsInfo.m in Sources */,
+				CBE50BD11AC9948D000265DC /* MovieHScrollViewCell1.m in Sources */,
 				EAA2026B1AC8DEB600E088CE /* AFHTTPClient.m in Sources */,
 				EAA202681AC8DEB600E088CE /* AFURLConnectionOperation.m in Sources */,
 				EAA201FC1AC8DEB500E088CE /* BookSearchResultTableViewCellStyle1.m in Sources */,
+				CBE50BE51AC9AB08000265DC /* MovieDetailTableViewCellStyle3.m in Sources */,
 				EAA202391AC8DEB600E088CE /* ThirdLoginInfo.m in Sources */,
+				CBE50BDB1AC9A9DF000265DC /* MovieDetailViewController.m in Sources */,
 				EAA201FA1AC8DEB500E088CE /* BookInfoViewStyle3.m in Sources */,
+				CBE50BCE1AC99385000265DC /* MovieCenterTableViewCellStyle1.m in Sources */,
 				EAA201FE1AC8DEB500E088CE /* BookSearchResultTableViewController.m in Sources */,
 				EAA2024E1AC8DEB600E088CE /* HttpMovieAPI.m in Sources */,
+				CBE50BE21AC9AAF1000265DC /* MovieDetailTableViewCellStyle2.m in Sources */,
 				EAA2020F1AC8DEB600E088CE /* MusicPlayerHelper.m in Sources */,
 				EAA201E91AC8DEB500E088CE /* MainViewController.m in Sources */,
+				CBE50BDF1AC9AADF000265DC /* MovieDetailTableViewCellStyle1.m in Sources */,
 				EAA202621AC8DEB600E088CE /* AFHTTPRequestOperation.m in Sources */,
 				EAA202451AC8DEB600E088CE /* AppAPIHelper.m in Sources */,
 				EAA202441AC8DEB600E088CE /* TableViewHeader.m in Sources */,
@@ -1628,6 +1713,7 @@
 				EAA202691AC8DEB600E088CE /* AFXMLRequestOperation.m in Sources */,
 				EAA202071AC8DEB600E088CE /* BookDetailInfoTableViewCellStyle2.m in Sources */,
 				EAA2022F1AC8DEB600E088CE /* AppHomeViewController.m in Sources */,
+				CBE50BD41AC99816000265DC /* MovieCenterTableViewCellStyle2.m in Sources */,
 				EAA202471AC8DEB600E088CE /* UserHelper.m in Sources */,
 				EAA202381AC8DEB600E088CE /* LoginItemInfo.m in Sources */,
 				EAA201F31AC8DEB500E088CE /* BookDownloader.m in Sources */,

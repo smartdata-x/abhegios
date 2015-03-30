@@ -18,6 +18,7 @@
 }
 
 - (void)setData:(id)data {
+    [_viewStyle1 setFrame:self.frame];
     [_viewStyle1.name setText:[data summary]];
     [_viewStyle1.logo setImageWithStrURL:[BaseInfoAdapter getPic:data]];
     [_secName setText:[data name]];

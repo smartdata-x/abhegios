@@ -35,31 +35,32 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (section == 1) {
+        return 2;
+    }
     return 1;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    if (section == 0) {
+    if (section == 0 || section == 1) {
         return 0;
     }
     return 22;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    switch (indexPath.section) {
-        case 0: return 400; break;
-        case 1:
-        case 2:
-        case 3:
-        case 4: return 150; break;
-        default: break;
+    if (IS_SECTION(0)) {
+        return 80;
     }
-    return 0;
+    else if (IS_SECTION(1) && IS_ROW(0)) {
+        return 180;
+    }
+    return 160;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *view = nil;
-    if (section != 0) {
+    if (section != 0 && section != 1) {
         view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.tableView.frame)-20, 21)];
         [view setBackgroundColor:kUIColorWithRGB(0xf3f3f3)];
         UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(10, 1, CGRectGetWidth(self.tableView.frame)-20, 21)];
@@ -75,8 +76,20 @@
     GroupInfo *group = [_tableViewData objectAtIndex:indexPath.section];
     
     if (IS_SECTION(0)) {
-        viewCell = [tableView dequeueReusableCellWithIdentifier:@"MovieCenterTableViewCellStyle0"];
+        viewCell = [tableView dequeueReusableCellWithIdentifier:@"MovieCenterTableViewCellStyle3"];
         [viewCell setData:group];
+    }
+    else if (IS_SECTION(1)) {
+        if (IS_ROW(0)) {
+            viewCell = [tableView dequeueReusableCellWithIdentifier:@"MovieCenterTableViewCellStyle2"];
+            [viewCell setData:group];
+        }
+        else {
+            viewCell = [tableView dequeueReusableCellWithIdentifier:@"MovieCenterTableViewCellStyle1"];
+            // 只从第二个开始显示
+            NSArray *movieArray = [[NSArray alloc] initWithObjects:[[group entitys] objectAtIndex:1], [[group entitys] objectAtIndex:2], nil];
+            [viewCell setData:movieArray];
+        }
     }
     else {
         viewCell = [tableView dequeueReusableCellWithIdentifier:@"MovieCenterTableViewCellStyle1"];

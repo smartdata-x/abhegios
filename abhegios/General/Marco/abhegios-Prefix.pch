@@ -25,6 +25,7 @@
 
 #pragma mark - Misc
 #define IS_SECTION(x) (indexPath.section == (x))
+#define IS_ROW(x) (indexPath.row == (x))
 
 #pragma mark - 第三方SDK key appid
 #define kQQAppID @"1104090941"
