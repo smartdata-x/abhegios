@@ -10,4 +10,5 @@
 
 @interface MovieInfo : BaseInfoMoreONSP
 @property NSUInteger play;
+@property float star;
 @end

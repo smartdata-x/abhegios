@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RefreshTableViewController.h"
 
-@interface MovieDetailViewController : UITableViewController
+@interface MovieDetailViewController : RefreshTableViewController
 
 @end

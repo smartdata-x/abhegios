@@ -10,4 +10,5 @@
 #import "ReqeustDelegate.h"
 @protocol MovieAPI <NSObject>
 - (void)getMovieStore:(id<ReqeustDelegate>) delegate;
+- (void)getMovieDetails:(NSInteger)movieID delegate:(id<ReqeustDelegate>)delegate;
 @end

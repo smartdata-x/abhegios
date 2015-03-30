@@ -22,6 +22,7 @@
 		CBE50BE21AC9AAF1000265DC /* MovieDetailTableViewCellStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE50BE11AC9AAF1000265DC /* MovieDetailTableViewCellStyle2.m */; };
 		CBE50BE51AC9AB08000265DC /* MovieDetailTableViewCellStyle3.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE50BE41AC9AB08000265DC /* MovieDetailTableViewCellStyle3.m */; };
 		CBE50BE81AC9AB20000265DC /* MovieDetailTableViewCellStyle4.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE50BE71AC9AB20000265DC /* MovieDetailTableViewCellStyle4.m */; };
+		CBE50BEC1AC9AF4F000265DC /* MovieDetailInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE50BEB1AC9AF4F000265DC /* MovieDetailInfo.m */; };
 		EA2225E31AA3EB2800D04A6B /* musicfm.json in Resources */ = {isa = PBXBuildFile; fileRef = EA2225DE1AA3EB2800D04A6B /* musicfm.json */; };
 		EA2225E41AA3EB2800D04A6B /* musicfm.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA2225DF1AA3EB2800D04A6B /* musicfm.plist */; };
 		EA2225E51AA3EB2800D04A6B /* musicroom.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA2225E01AA3EB2800D04A6B /* musicroom.plist */; };
@@ -227,6 +228,8 @@
 		CBE50BE41AC9AB08000265DC /* MovieDetailTableViewCellStyle3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailTableViewCellStyle3.m; sourceTree = "<group>"; };
 		CBE50BE61AC9AB20000265DC /* MovieDetailTableViewCellStyle4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailTableViewCellStyle4.h; sourceTree = "<group>"; };
 		CBE50BE71AC9AB20000265DC /* MovieDetailTableViewCellStyle4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailTableViewCellStyle4.m; sourceTree = "<group>"; };
+		CBE50BEA1AC9AF4F000265DC /* MovieDetailInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailInfo.h; sourceTree = "<group>"; };
+		CBE50BEB1AC9AF4F000265DC /* MovieDetailInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailInfo.m; sourceTree = "<group>"; };
 		EA2225DE1AA3EB2800D04A6B /* musicfm.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = musicfm.json; path = Resources/musicfm.json; sourceTree = "<group>"; };
 		EA2225DF1AA3EB2800D04A6B /* musicfm.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = musicfm.plist; path = Resources/musicfm.plist; sourceTree = "<group>"; };
 		EA2225E01AA3EB2800D04A6B /* musicroom.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = musicroom.plist; path = Resources/musicroom.plist; sourceTree = "<group>"; };
@@ -679,6 +682,15 @@
 			name = CustomView;
 			sourceTree = "<group>";
 		};
+		CBE50BE91AC9AF37000265DC /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				CBE50BEA1AC9AF4F000265DC /* MovieDetailInfo.h */,
+				CBE50BEB1AC9AF4F000265DC /* MovieDetailInfo.m */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
 		EA8339041A68B04200F3A9E9 = {
 			isa = PBXGroup;
 			children = (
@@ -1051,6 +1063,7 @@
 		EAA201211AC8DEB500E088CE /* Movie */ = {
 			isa = PBXGroup;
 			children = (
+				CBE50BE91AC9AF37000265DC /* Entity */,
 				CBE50BD81AC9A923000265DC /* Detail */,
 				CBE50BCA1AC9932F000265DC /* Home */,
 				EAA201221AC8DEB500E088CE /* HighLevelMoviePlayerView.h */,
@@ -1639,6 +1652,7 @@
 				EAA202551AC8DEB600E088CE /* UserInfo.m in Sources */,
 				EAA2020D1AC8DEB600E088CE /* BookTopicInfo.m in Sources */,
 				EAA201E61AC8DEB500E088CE /* FundTableViewHeader.m in Sources */,
+				CBE50BEC1AC9AF4F000265DC /* MovieDetailInfo.m in Sources */,
 				CBE50BD71AC99DDB000265DC /* MovieCenterTableViewCellStyle3.m in Sources */,
 				EAA2020A1AC8DEB600E088CE /* BookDetailInfoTableViewCellStyle5.m in Sources */,
 				EAA2025B1AC8DEB600E088CE /* MusicInfo.m in Sources */,
