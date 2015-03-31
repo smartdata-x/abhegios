@@ -1,18 +1,16 @@
 //
-//  MovieDetailTableViewCellStyle3.m
+//  MovieSearchResultTableViewCellStyle2.m
 //  abhegios
 //
-//  Created by Archer_LJ on 15/3/31.
+//  Created by Archer_LJ on 15/4/1.
 //  Copyright (c) 2015年 180. All rights reserved.
 //
 
-#import "MovieDetailTableViewCellStyle3.h"
-#import "MovieInfo.h"
+#import "MovieSearchResultTableViewCellStyle2.h"
 #import "GroupInfo.h"
-#import "UIImageView+AFNetworking.h"
-#import "BaseInfoAdapter.h"
+#import "MovieInfo.h"
 
-@implementation MovieDetailTableViewCellStyle3
+@implementation MovieSearchResultTableViewCellStyle2
 
 - (void)awakeFromNib {
     // Initialization code
@@ -26,6 +24,9 @@
 
 - (void)setData:(id)data {
     [super setData:data];
+    GroupInfo *infoGroup = data;
+    [_infoView0 setData:[[infoGroup entitys] objectAtIndex:0]];
+    [_infoView1 setData:[[infoGroup entitys] objectAtIndex:1]];
 }
 
 @end

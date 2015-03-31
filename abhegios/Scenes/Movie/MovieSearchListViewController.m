@@ -7,6 +7,7 @@
 //
 
 #import "MovieSearchListViewController.h"
+#import "MovieSearchResultViewController.h"
 
 @interface MovieSearchListViewController ()
 
@@ -21,6 +22,13 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)gotoSearchResultView:(NSInteger)typeID {
+    [self.navigationController pushViewControllerWithIdentifier:@"MovieSearchResultViewController" completion:^(UIViewController *viewController) {
+        MovieSearchResultViewController *resultView = (MovieSearchResultViewController *)viewController;
+        [resultView setData:typeID];
+    } animated:YES];
 }
 
 #pragma mark - Table view data source
@@ -43,6 +51,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSInteger searchID = 1001 + indexPath.row;
+    [self gotoSearchResultView:searchID];
 }
 
 @end

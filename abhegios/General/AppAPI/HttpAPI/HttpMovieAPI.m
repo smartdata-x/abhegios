@@ -25,7 +25,7 @@
 }
 
 - (void)getMovieSearchResult:(NSInteger)typeID delegate:(id<ReqeustDelegate>)delegate {
-    static NSString *path = @"/movie/searchtype.fcgi";
+    static NSString *path = @"/movie/1/searchtype.fcgi";
     [self request:path parameter:[NSDictionary dictionaryWithObject:@(typeID) forKey:@"tid"] delegate:delegate processBlock:^id(id data) {
         return [GroupInfo initWithsConfigAndDataDictionarys:@"moviecenter" groupsData:data entityClass:[MovieInfo class]];
     }];

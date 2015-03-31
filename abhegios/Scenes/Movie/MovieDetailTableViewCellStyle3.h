@@ -10,5 +10,4 @@
 #import "AppTableViewCellStyle2.h"
 
 @interface MovieDetailTableViewCellStyle3 : AppTableViewCellStyle2
-
 @end

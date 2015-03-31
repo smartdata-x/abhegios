@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RefreshTableViewController.h"
 
-@interface MovieSearchResultViewController : UITableViewController
-
+@interface MovieSearchResultViewController : RefreshTableViewController
+- (void)setData:(NSInteger)data;
 @end

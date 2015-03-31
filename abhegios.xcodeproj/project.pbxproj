@@ -26,6 +26,8 @@
 		CBE50C111ACAFB3C000265DC /* MovieSearchListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE50C101ACAFB3C000265DC /* MovieSearchListViewController.m */; };
 		CBE50C141ACAFB74000265DC /* MovieSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE50C131ACAFB74000265DC /* MovieSearchResultViewController.m */; };
 		CBE50C181ACAFFEE000265DC /* MovieSearchListTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE50C171ACAFFEE000265DC /* MovieSearchListTableViewCellStyle1.m */; };
+		CBE50C1B1ACB0961000265DC /* MovieSearchResultTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE50C1A1ACB0961000265DC /* MovieSearchResultTableViewCellStyle1.m */; };
+		CBE50C1E1ACB0977000265DC /* MovieSearchResultTableViewCellStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE50C1D1ACB0977000265DC /* MovieSearchResultTableViewCellStyle2.m */; };
 		EA2225E31AA3EB2800D04A6B /* musicfm.json in Resources */ = {isa = PBXBuildFile; fileRef = EA2225DE1AA3EB2800D04A6B /* musicfm.json */; };
 		EA2225E41AA3EB2800D04A6B /* musicfm.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA2225DF1AA3EB2800D04A6B /* musicfm.plist */; };
 		EA2225E51AA3EB2800D04A6B /* musicroom.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA2225E01AA3EB2800D04A6B /* musicroom.plist */; };
@@ -239,6 +241,10 @@
 		CBE50C131ACAFB74000265DC /* MovieSearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieSearchResultViewController.m; sourceTree = "<group>"; };
 		CBE50C161ACAFFEE000265DC /* MovieSearchListTableViewCellStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieSearchListTableViewCellStyle1.h; sourceTree = "<group>"; };
 		CBE50C171ACAFFEE000265DC /* MovieSearchListTableViewCellStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieSearchListTableViewCellStyle1.m; sourceTree = "<group>"; };
+		CBE50C191ACB0961000265DC /* MovieSearchResultTableViewCellStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieSearchResultTableViewCellStyle1.h; sourceTree = "<group>"; };
+		CBE50C1A1ACB0961000265DC /* MovieSearchResultTableViewCellStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieSearchResultTableViewCellStyle1.m; sourceTree = "<group>"; };
+		CBE50C1C1ACB0977000265DC /* MovieSearchResultTableViewCellStyle2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieSearchResultTableViewCellStyle2.h; sourceTree = "<group>"; };
+		CBE50C1D1ACB0977000265DC /* MovieSearchResultTableViewCellStyle2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieSearchResultTableViewCellStyle2.m; sourceTree = "<group>"; };
 		EA2225DE1AA3EB2800D04A6B /* musicfm.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = musicfm.json; path = Resources/musicfm.json; sourceTree = "<group>"; };
 		EA2225DF1AA3EB2800D04A6B /* musicfm.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = musicfm.plist; path = Resources/musicfm.plist; sourceTree = "<group>"; };
 		EA2225E01AA3EB2800D04A6B /* musicroom.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = musicroom.plist; path = Resources/musicroom.plist; sourceTree = "<group>"; };
@@ -717,6 +723,10 @@
 			children = (
 				CBE50C161ACAFFEE000265DC /* MovieSearchListTableViewCellStyle1.h */,
 				CBE50C171ACAFFEE000265DC /* MovieSearchListTableViewCellStyle1.m */,
+				CBE50C191ACB0961000265DC /* MovieSearchResultTableViewCellStyle1.h */,
+				CBE50C1A1ACB0961000265DC /* MovieSearchResultTableViewCellStyle1.m */,
+				CBE50C1C1ACB0977000265DC /* MovieSearchResultTableViewCellStyle2.h */,
+				CBE50C1D1ACB0977000265DC /* MovieSearchResultTableViewCellStyle2.m */,
 			);
 			name = CustomView;
 			sourceTree = "<group>";
@@ -1635,6 +1645,7 @@
 				EAA2021E1AC8DEB600E088CE /* MusicList.m in Sources */,
 				EAA202431AC8DEB600E088CE /* SearchView.m in Sources */,
 				EAA202131AC8DEB600E088CE /* DataSource.m in Sources */,
+				CBE50C1B1ACB0961000265DC /* MovieSearchResultTableViewCellStyle1.m in Sources */,
 				EAA2025A1AC8DEB600E088CE /* MovieInfo.m in Sources */,
 				EAA2023C1AC8DEB600E088CE /* QQLogin.m in Sources */,
 				EAA201F51AC8DEB500E088CE /* BookShelfViewController.m in Sources */,
@@ -1717,6 +1728,7 @@
 				EAA202391AC8DEB600E088CE /* ThirdLoginInfo.m in Sources */,
 				CBE50BDB1AC9A9DF000265DC /* MovieDetailViewController.m in Sources */,
 				EAA201FA1AC8DEB500E088CE /* BookInfoViewStyle3.m in Sources */,
+				CBE50C1E1ACB0977000265DC /* MovieSearchResultTableViewCellStyle2.m in Sources */,
 				CBE50BCE1AC99385000265DC /* MovieCenterTableViewCellStyle1.m in Sources */,
 				EAA201FE1AC8DEB500E088CE /* BookSearchResultTableViewController.m in Sources */,
 				EAA2024E1AC8DEB600E088CE /* HttpMovieAPI.m in Sources */,
