@@ -30,7 +30,6 @@
         NSURL *movieUrl = [NSURL URLWithString:detail.url];
         MPMoviePlayerController *player = [[MPMoviePlayerController alloc] initWithContentURL:movieUrl];
         [player setControlStyle:MPMovieControlStyleNone];
-        player.scalingMode = MPMovieScalingModeAspectFill;
         [player.view setFrame:CGRectMake(0, 0, 320, 180)];
         [player.view setBackgroundColor:[UIColor clearColor]];
         [self addSubview:player.view];
