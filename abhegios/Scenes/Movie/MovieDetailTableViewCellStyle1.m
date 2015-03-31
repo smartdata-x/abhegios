@@ -10,7 +10,11 @@
 #import "GroupInfo.h"
 #import "MovieDetailInfo.h"
 #import <MediaPlayer/MediaPlayer.h>
-
+@interface MovieDetailTableViewCellStyle1()
+{
+    MPMoviePlayerController *player;
+}
+@end
 @implementation MovieDetailTableViewCellStyle1
 
 - (void)awakeFromNib {
@@ -28,7 +32,7 @@
     MovieDetail *detail = data;
     if (detail) {
         NSURL *movieUrl = [NSURL URLWithString:detail.url];
-        MPMoviePlayerController *player = [[MPMoviePlayerController alloc] initWithContentURL:movieUrl];
+        player = [[MPMoviePlayerController alloc] initWithContentURL:movieUrl];
         [player setControlStyle:MPMovieControlStyleNone];
         [player.view setFrame:CGRectMake(0, 0, 320, 180)];
         [player.view setBackgroundColor:[UIColor clearColor]];
