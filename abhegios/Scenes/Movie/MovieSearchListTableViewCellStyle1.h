@@ -10,4 +10,5 @@
 
 @interface MovieSearchListTableViewCellStyle1 : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *name;
+- (void)setData:(id)data;
 @end

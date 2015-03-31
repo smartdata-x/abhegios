@@ -20,4 +20,8 @@
     // Configure the view for the selected state
 }
 
+- (void)setData:(id)data {
+    [_name setText:data];
+}
+
 @end

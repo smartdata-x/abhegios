@@ -11,6 +11,7 @@
 #import "GroupInfo.h"
 #import "AppAPIHelper.h"
 #import "MovieDetailViewController.h"
+#import "MovieSearchListViewController.h"
 
 @interface MovieCenterViewController ()
 
@@ -32,12 +33,13 @@
     UIButton *rightButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 20, 38, 44)];
     [rightButton setBackgroundImage:[UIImage imageNamed:@"book_shade.png"] forState:UIControlStateNormal];
     [rightButton setTitle:@"搜索" forState:UIControlStateNormal];
-    [rightButton addTarget:self action:@selector(gotoMovieSearchList:) forControlEvents:UIControlEventTouchUpInside];
+    [rightButton addTarget:self action:@selector(gotoMovieSearchList) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
 }
 
 - (void)gotoMovieSearchList {
-    
+    [self.navigationController pushViewControllerWithIdentifier:@"MovieSearchListViewController" completion:^(UIViewController *viewController) {
+    } animated:YES];
 }
 
 - (void)gotoMovieDetail:(MovieInfo *)movieInfo {
@@ -54,7 +56,7 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    NSInteger count = [_tableViewData count];
+    NSInteger count = [_tableViewData count] - 2; // 去掉最新和最热
     count = count <= 0 ? 0 : count;
     return count;
 }
