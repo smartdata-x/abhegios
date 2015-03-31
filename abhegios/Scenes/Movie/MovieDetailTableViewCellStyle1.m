@@ -8,6 +8,7 @@
 
 #import "MovieDetailTableViewCellStyle1.h"
 #import "GroupInfo.h"
+#import "MovieDetailInfo.h"
 
 @implementation MovieDetailTableViewCellStyle1
 
@@ -23,6 +24,13 @@
 
 - (void)setData:(id)data {
     [super setData:data];
+    MovieDetail *detail = data;
+    if (detail) {
+        UIWebView *webView = [[UIWebView alloc] initWithFrame:self.frame];
+        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[detail url]]];
+        [webView loadRequest:request];
+        [self addSubview:webView];
+    }
 }
 
 @end

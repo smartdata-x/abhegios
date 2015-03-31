@@ -1037,11 +1037,17 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t75-5g-37x" id="l8S-b9-fBd">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="seK-jA-cZg" customClass="MovieInfoViewStyle1">
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="seK-jA-cZg" customClass="MovieInfoViewStyle1">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="seK-jA-cZg" firstAttribute="top" secondItem="l8S-b9-fBd" secondAttribute="topMargin" id="0rR-Ua-xuA"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="seK-jA-cZg" secondAttribute="bottom" id="2s6-JO-LJB"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="seK-jA-cZg" secondAttribute="trailing" id="aPK-ZQ-57c"/>
+                                        <constraint firstItem="seK-jA-cZg" firstAttribute="leading" secondItem="l8S-b9-fBd" secondAttribute="leadingMargin" id="paI-Qe-0SA"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="movieInfoView" destination="seK-jA-cZg" id="awM-FS-cVO"/>

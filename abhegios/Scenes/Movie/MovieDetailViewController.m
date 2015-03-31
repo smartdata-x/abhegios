@@ -11,6 +11,7 @@
 #import "GroupInfo.h"
 #import "AppAPIHelper.h"
 #import "FavRateViewStyle.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface MovieDetailViewController ()
 @property MovieInfo* movieInfo;
@@ -28,6 +29,12 @@
 
 - (void)setData:(id)data {
     _movieInfo = data;
+}
+
+- (void)gotoFullScreenPlayer:(NSString *)strurl {
+    NSURL *movieUrl = [NSURL URLWithString:@"http://pl.youku.com/playlist/m3u8?ctype=12&ep=eiaWHUGMVMkB5SDcjT8bMiXiJiNZXJZ1gkSA%2fLYbScV%2bPerQkT7TwA%3d%3d&ev=1&keyframe=1&oip=3078655741&sid=842781271033512e90bdf&token=8027&type=flv&vid=XODk5MTIyNjE2"];
+    MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL:movieUrl];
+    [self presentMoviePlayerViewControllerAnimated:player];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -150,5 +157,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (IS_SECTION(0)) {
+        MovieDetailInfo *movieDetailInfo = _tableViewData;
+        MovieDetail *detail = movieDetailInfo.summary;
+        [self gotoFullScreenPlayer:detail.url];
+    }
 }
 @end
