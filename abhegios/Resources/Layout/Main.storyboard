@@ -597,6 +597,43 @@
             </objects>
             <point key="canvasLocation" x="5340" y="59"/>
         </scene>
+        <!--影视搜索列表-->
+        <scene sceneID="HRy-4R-JHe">
+            <objects>
+                <tableViewController storyboardIdentifier="MovieSearchListViewController" id="xyQ-k3-hcs" userLabel="影视搜索列表" customClass="MovieSearchListViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="vCh-Pa-Ki1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieSearchListTableViewCellStyle1" rowHeight="49" id="XxU-kH-rVU" customClass="MovieSearchListTableViewCellStyle1">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XxU-kH-rVU" id="KaE-Ks-e7y">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXP-aK-tMx">
+                                            <rect key="frame" x="0.0" y="14" width="300" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="name" destination="rXP-aK-tMx" id="Has-xH-thQ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xyQ-k3-hcs" id="ltE-F0-HHG"/>
+                            <outlet property="delegate" destination="xyQ-k3-hcs" id="jzE-kr-IDq"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y7v-Wr-gbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4663" y="780"/>
+        </scene>
         <!--影视详情-->
         <scene sceneID="3W2-O0-duG">
             <objects>
@@ -1019,7 +1056,7 @@
         <!--影视-->
         <scene sceneID="ouM-4g-KvE">
             <objects>
-                <tableViewController storyboardIdentifier="MovieCenterViewController" id="1iO-mU-VMV" userLabel="影视" customClass="MovieCenterViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MovieCenterViewController" title="影视" id="1iO-mU-VMV" userLabel="影视" customClass="MovieCenterViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fNB-Gq-fxX">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

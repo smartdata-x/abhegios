@@ -23,6 +23,9 @@
 		CBE50BE51AC9AB08000265DC /* MovieDetailTableViewCellStyle3.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE50BE41AC9AB08000265DC /* MovieDetailTableViewCellStyle3.m */; };
 		CBE50BE81AC9AB20000265DC /* MovieDetailTableViewCellStyle4.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE50BE71AC9AB20000265DC /* MovieDetailTableViewCellStyle4.m */; };
 		CBE50BEC1AC9AF4F000265DC /* MovieDetailInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE50BEB1AC9AF4F000265DC /* MovieDetailInfo.m */; };
+		CBE50C111ACAFB3C000265DC /* MovieSearchListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE50C101ACAFB3C000265DC /* MovieSearchListViewController.m */; };
+		CBE50C141ACAFB74000265DC /* MovieSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE50C131ACAFB74000265DC /* MovieSearchResultViewController.m */; };
+		CBE50C181ACAFFEE000265DC /* MovieSearchListTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE50C171ACAFFEE000265DC /* MovieSearchListTableViewCellStyle1.m */; };
 		EA2225E31AA3EB2800D04A6B /* musicfm.json in Resources */ = {isa = PBXBuildFile; fileRef = EA2225DE1AA3EB2800D04A6B /* musicfm.json */; };
 		EA2225E41AA3EB2800D04A6B /* musicfm.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA2225DF1AA3EB2800D04A6B /* musicfm.plist */; };
 		EA2225E51AA3EB2800D04A6B /* musicroom.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA2225E01AA3EB2800D04A6B /* musicroom.plist */; };
@@ -230,6 +233,12 @@
 		CBE50BE71AC9AB20000265DC /* MovieDetailTableViewCellStyle4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailTableViewCellStyle4.m; sourceTree = "<group>"; };
 		CBE50BEA1AC9AF4F000265DC /* MovieDetailInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailInfo.h; sourceTree = "<group>"; };
 		CBE50BEB1AC9AF4F000265DC /* MovieDetailInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailInfo.m; sourceTree = "<group>"; };
+		CBE50C0F1ACAFB3C000265DC /* MovieSearchListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieSearchListViewController.h; sourceTree = "<group>"; };
+		CBE50C101ACAFB3C000265DC /* MovieSearchListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieSearchListViewController.m; sourceTree = "<group>"; };
+		CBE50C121ACAFB74000265DC /* MovieSearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieSearchResultViewController.h; sourceTree = "<group>"; };
+		CBE50C131ACAFB74000265DC /* MovieSearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieSearchResultViewController.m; sourceTree = "<group>"; };
+		CBE50C161ACAFFEE000265DC /* MovieSearchListTableViewCellStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieSearchListTableViewCellStyle1.h; sourceTree = "<group>"; };
+		CBE50C171ACAFFEE000265DC /* MovieSearchListTableViewCellStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieSearchListTableViewCellStyle1.m; sourceTree = "<group>"; };
 		EA2225DE1AA3EB2800D04A6B /* musicfm.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = musicfm.json; path = Resources/musicfm.json; sourceTree = "<group>"; };
 		EA2225DF1AA3EB2800D04A6B /* musicfm.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = musicfm.plist; path = Resources/musicfm.plist; sourceTree = "<group>"; };
 		EA2225E01AA3EB2800D04A6B /* musicroom.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = musicroom.plist; path = Resources/musicroom.plist; sourceTree = "<group>"; };
@@ -691,6 +700,27 @@
 			name = Entity;
 			sourceTree = "<group>";
 		};
+		CBE50C0E1ACAFB1A000265DC /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				CBE50C0F1ACAFB3C000265DC /* MovieSearchListViewController.h */,
+				CBE50C101ACAFB3C000265DC /* MovieSearchListViewController.m */,
+				CBE50C121ACAFB74000265DC /* MovieSearchResultViewController.h */,
+				CBE50C131ACAFB74000265DC /* MovieSearchResultViewController.m */,
+				CBE50C151ACAFF92000265DC /* CustomView */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		CBE50C151ACAFF92000265DC /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				CBE50C161ACAFFEE000265DC /* MovieSearchListTableViewCellStyle1.h */,
+				CBE50C171ACAFFEE000265DC /* MovieSearchListTableViewCellStyle1.m */,
+			);
+			name = CustomView;
+			sourceTree = "<group>";
+		};
 		EA8339041A68B04200F3A9E9 = {
 			isa = PBXGroup;
 			children = (
@@ -1063,6 +1093,7 @@
 		EAA201211AC8DEB500E088CE /* Movie */ = {
 			isa = PBXGroup;
 			children = (
+				CBE50C0E1ACAFB1A000265DC /* Search */,
 				CBE50BE91AC9AF37000265DC /* Entity */,
 				CBE50BD81AC9A923000265DC /* Detail */,
 				CBE50BCA1AC9932F000265DC /* Home */,
@@ -1607,6 +1638,7 @@
 				EAA2025A1AC8DEB600E088CE /* MovieInfo.m in Sources */,
 				EAA2023C1AC8DEB600E088CE /* QQLogin.m in Sources */,
 				EAA201F51AC8DEB500E088CE /* BookShelfViewController.m in Sources */,
+				CBE50C141ACAFB74000265DC /* MovieSearchResultViewController.m in Sources */,
 				EAA202261AC8DEB600E088CE /* GameHomeTableViewCellStyle2.m in Sources */,
 				EAA202371AC8DEB600E088CE /* LoginTableViewCell.m in Sources */,
 				EAA202191AC8DEB600E088CE /* MusicInfoViewStyle3.m in Sources */,
@@ -1689,6 +1721,7 @@
 				EAA201FE1AC8DEB500E088CE /* BookSearchResultTableViewController.m in Sources */,
 				EAA2024E1AC8DEB600E088CE /* HttpMovieAPI.m in Sources */,
 				CBE50BE21AC9AAF1000265DC /* MovieDetailTableViewCellStyle2.m in Sources */,
+				CBE50C181ACAFFEE000265DC /* MovieSearchListTableViewCellStyle1.m in Sources */,
 				EAA2020F1AC8DEB600E088CE /* MusicPlayerHelper.m in Sources */,
 				EAA201E91AC8DEB500E088CE /* MainViewController.m in Sources */,
 				CBE50BDF1AC9AADF000265DC /* MovieDetailTableViewCellStyle1.m in Sources */,
@@ -1696,6 +1729,7 @@
 				EAA202451AC8DEB600E088CE /* AppAPIHelper.m in Sources */,
 				EAA202441AC8DEB600E088CE /* TableViewHeader.m in Sources */,
 				EAA202531AC8DEB600E088CE /* BookInfo.m in Sources */,
+				CBE50C111ACAFB3C000265DC /* MovieSearchListViewController.m in Sources */,
 				EAA202181AC8DEB600E088CE /* MusicInfoViewStyle2.m in Sources */,
 				EAA201F11AC8DEB500E088CE /* BookThemeTableViewCellStyle2.m in Sources */,
 				EAA2020B1AC8DEB600E088CE /* BookChapterInfo.m in Sources */,

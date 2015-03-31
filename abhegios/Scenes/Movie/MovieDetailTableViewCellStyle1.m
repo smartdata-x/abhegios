@@ -9,6 +9,7 @@
 #import "MovieDetailTableViewCellStyle1.h"
 #import "GroupInfo.h"
 #import "MovieDetailInfo.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @implementation MovieDetailTableViewCellStyle1
 
@@ -26,10 +27,14 @@
     [super setData:data];
     MovieDetail *detail = data;
     if (detail) {
-        UIWebView *webView = [[UIWebView alloc] initWithFrame:self.frame];
-        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[detail url]]];
-        [webView loadRequest:request];
-        [self addSubview:webView];
+        NSURL *movieUrl = [NSURL URLWithString:detail.url];
+        MPMoviePlayerController *player = [[MPMoviePlayerController alloc] initWithContentURL:movieUrl];
+        [player setControlStyle:MPMovieControlStyleNone];
+        player.scalingMode = MPMovieScalingModeAspectFill;
+        [player.view setFrame:CGRectMake(0, 0, 320, 180)];
+        [player.view setBackgroundColor:[UIColor clearColor]];
+        [self addSubview:player.view];
+        [player play];
     }
 }
 
