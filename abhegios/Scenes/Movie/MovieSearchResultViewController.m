@@ -71,7 +71,7 @@
     
     GroupInfo *movieGroup = [_tableViewData objectAtIndex:(_isHotShown ? 4 : 5)];
     NSInteger count = [[movieGroup entitys] count];
-    NSInteger itemInRow = kMainScreenWidth / 160;
+    NSInteger itemInRow = ceilf(kMainScreenWidth / 160.0);
     return count / itemInRow;
 }
 
@@ -95,9 +95,12 @@
         }
         else if (IS_SECTION(1)) {
             // 只从第二个开始显示
-            NSInteger itemInRow = kMainScreenWidth / 160;
+            NSInteger itemInRow = ceilf(kMainScreenWidth / 160.0);
             NSInteger startIndex = indexPath.row * itemInRow;
-            NSArray *movieArray = [[NSArray alloc] initWithObjects:[[group entitys] objectAtIndex:startIndex], [[group entitys] objectAtIndex:startIndex+1], nil];
+            NSMutableArray *movieArray = [[NSMutableArray alloc] initWithObjects:[[group entitys] objectAtIndex:startIndex], [[group entitys] objectAtIndex:startIndex+1], nil];
+            if (itemInRow > 2) {
+                [movieArray addObject:[[group entitys] objectAtIndex:startIndex+2]];
+            }
             [viewCell setData:movieArray];
             MovieSearchResultTableViewCellStyle2 *resultview = (MovieSearchResultTableViewCellStyle2 *)viewCell;
             resultview.delegate = self;

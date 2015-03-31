@@ -11,12 +11,12 @@
 #import "MovieInfo.h"
 #import "MovieHScrollViewCell1.h"
 
-#define ITEM_WIDTH 160;
+#define ITEM_WIDTH 160.0
 
 @implementation MovieSearchResultTableViewCellStyle2
 
 - (NSInteger)numberColumnCountHScrollView:(OEZHScrollView *)hScrollView {
-    NSInteger count = kMainScreenWidth / ITEM_WIDTH;
+    NSInteger count = ceilf(kMainScreenWidth / ITEM_WIDTH);
     return count;
 }
 
