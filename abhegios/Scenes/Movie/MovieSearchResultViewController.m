@@ -16,6 +16,8 @@
 @interface MovieSearchResultViewController ()
 @property NSInteger typeID;
 @property BOOL isHotShown;
+@property UIButton *btnHot;
+@property UIButton *btnNew;
 @end
 
 @implementation MovieSearchResultViewController
@@ -39,11 +41,15 @@
 
 - (void)setHot {
     _isHotShown = YES;
+    [_btnHot setBackgroundColor:kUIColorWithRGB(0x549bd0)];
+    [_btnNew setBackgroundColor:kUIColorWithRGB(0xe7e0e1)];
     [self.tableView reloadData];
 }
 
 - (void)setNew {
     _isHotShown = NO;
+    [_btnNew setBackgroundColor:kUIColorWithRGB(0x549bd0)];
+    [_btnHot setBackgroundColor:kUIColorWithRGB(0xe7e0e1)];
     [self.tableView reloadData];
 }
 
@@ -92,6 +98,8 @@
             MovieSearchResultTableViewCellStyle1 *resultview = (MovieSearchResultTableViewCellStyle1 *)viewCell;
             [resultview.btnHot addTarget:self action:@selector(setHot) forControlEvents:UIControlEventTouchUpInside];
             [resultview.btnNew addTarget:self action:@selector(setNew) forControlEvents:UIControlEventTouchUpInside];
+            _btnHot = resultview.btnHot;
+            _btnNew = resultview.btnNew;
         }
         else if (IS_SECTION(1)) {
             // 只从第二个开始显示
