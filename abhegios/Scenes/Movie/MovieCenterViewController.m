@@ -10,6 +10,7 @@
 #import "MovieInfo.h"
 #import "GroupInfo.h"
 #import "AppAPIHelper.h"
+#import "MovieDetailViewController.h"
 
 @interface MovieCenterViewController ()
 
@@ -24,6 +25,17 @@
 
 - (void)didRequest {
     [[[AppAPIHelper shared] getMovieAPI] getMovieStore:self];
+}
+
+- (void)gotoMovieDetail:(MovieInfo *)movieInfo {
+    [self.navigationController pushViewControllerWithIdentifier:@"MovieDetailViewController" completion:^(UIViewController *viewController) {
+        MovieDetailViewController *detailView = (MovieDetailViewController *)viewController;
+        [detailView setData:movieInfo];
+    } animated:YES];
+}
+
+- (void)cellItemClickedAtIndex:(id)movieInfo {
+    [self gotoMovieDetail:movieInfo];
 }
 
 #pragma mark - Table view data source
@@ -89,14 +101,28 @@
             // 只从第二个开始显示
             NSArray *movieArray = [[NSArray alloc] initWithObjects:[[group entitys] objectAtIndex:1], [[group entitys] objectAtIndex:2], nil];
             [viewCell setData:movieArray];
+            MovieCenterTableViewCellStyle1 *styleView = (MovieCenterTableViewCellStyle1 *)viewCell;
+            styleView.delegate = self;
         }
     }
     else {
         viewCell = [tableView dequeueReusableCellWithIdentifier:@"MovieCenterTableViewCellStyle1"];
         [viewCell setData:[group entitys]];
+        MovieCenterTableViewCellStyle1 *styleView = (MovieCenterTableViewCellStyle1 *)viewCell;
+        styleView.delegate = self;
     }
     
     return viewCell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    GroupInfo *group = [_tableViewData objectAtIndex:indexPath.section];
+    if (IS_SECTION(1) && IS_ROW(0)) {
+        MovieInfo *movieInfo = [[group entitys] objectAtIndex:0];
+        [self gotoMovieDetail:movieInfo];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

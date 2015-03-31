@@ -35,6 +35,10 @@
 
 - (void)hScrollView:(OEZHScrollView *)pageView didSelectColumnAtIndex:(NSInteger)columnIndex {
     [self didSelectRowColumn:columnIndex];
+    if ([_delegate respondsToSelector:@selector(cellItemClickedAtIndex:)]) {
+        MovieInfo *movieInfo = [self.data objectAtIndex:columnIndex];
+        [_delegate cellItemClickedAtIndex:movieInfo];
+    }
 }
 
 /*

@@ -7,6 +7,7 @@
 //
 
 #import "MovieDetailInfo.h"
+#import "ADInfo.h"
 
 @implementation MovieDetail
 
@@ -17,6 +18,8 @@
     self = [self init];
     if (self != nil) {
         _summary = [[MovieDetail alloc] initWithDictionary:[dict objectForKey:@"summary"]];
+        _about = [MovieInfo initWithsDictionarys:[dict objectForKey:@"about"]];
+        _advert = [MovieInfo initWithsDictionarys:[dict objectForKey:@"advert"]];
     }
     return self;
 }

@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "RefreshTableViewController.h"
+#import "MovieCenterTableViewCellStyle1.h"
 
-@interface MovieCenterViewController : RefreshTableViewController
+@interface MovieCenterViewController : RefreshTableViewController<MovieCenterTableViewCellStyle1Delegate>
 
 @end

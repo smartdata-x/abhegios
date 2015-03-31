@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppTableViewCellStyle2.h"
 
-@interface MovieDetailTableViewCellStyle3 : UITableViewCell
+@interface MovieDetailTableViewCellStyle3 : AppTableViewCellStyle2
 
 @end

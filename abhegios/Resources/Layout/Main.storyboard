@@ -606,9 +606,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="CYX-wD-eqg">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieDetailTableViewCellStyle1" rowHeight="180" id="CYX-wD-eqg" customClass="MovieDetailTableViewCellStyle1">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CYX-wD-eqg" id="50p-0s-Zwr">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieDetailTableViewCellStyle2" rowHeight="200" id="AjB-1F-FTn" customClass="MovieDetailTableViewCellStyle2">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AjB-1F-FTn" id="Aiw-nn-gjR">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcP-dF-iuX">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="xcP-dF-iuX" secondAttribute="trailing" id="1Uo-Wo-ouD"/>
+                                        <constraint firstItem="xcP-dF-iuX" firstAttribute="top" secondItem="Aiw-nn-gjR" secondAttribute="topMargin" id="CYA-SR-wEy"/>
+                                        <constraint firstItem="xcP-dF-iuX" firstAttribute="leading" secondItem="Aiw-nn-gjR" secondAttribute="leadingMargin" id="OfC-0j-CR8"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="xcP-dF-iuX" secondAttribute="bottom" id="iSh-XG-nnz"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="content" destination="xcP-dF-iuX" id="ifg-5R-bNZ"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieDetailTableViewCellStyle3" rowHeight="80" id="Oo7-M7-QFj" customClass="MovieDetailTableViewCellStyle3">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Oo7-M7-QFj" id="nbD-s6-vEi">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieDetailTableViewCellStyle4" rowHeight="160" id="kRC-68-jHg" customClass="MovieDetailTableViewCellStyle4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kRC-68-jHg" id="wol-5O-3A2">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>

@@ -7,6 +7,7 @@
 //
 
 #import "MovieDetailTableViewCellStyle2.h"
+#import "MovieDetailInfo.h"
 
 @implementation MovieDetailTableViewCellStyle2
 
@@ -18,6 +19,11 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)setData:(id)data {
+    [_content setText:[(MovieDetail *)data content]];
+    [_content setNumberOfLines:0];
 }
 
 @end

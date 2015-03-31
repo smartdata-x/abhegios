@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MovieDetailTableViewCellStyle1 : UITableViewCell
+@interface MovieDetailTableViewCellStyle1 : OEZTableViewCell
 
 @end

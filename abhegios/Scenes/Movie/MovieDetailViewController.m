@@ -7,12 +7,13 @@
 //
 
 #import "MovieDetailViewController.h"
-#import "MovieInfo.h"
+#import "MovieDetailInfo.h"
 #import "GroupInfo.h"
 #import "AppAPIHelper.h"
+#import "FavRateViewStyle.h"
 
 @interface MovieDetailViewController ()
-
+@property MovieInfo* movieInfo;
 @end
 
 @implementation MovieDetailViewController
@@ -22,12 +23,41 @@
 }
 
 - (void)didRequest {
-    [[[AppAPIHelper shared] getMovieAPI] getMovieDetails:2 delegate:self];
+    [[[AppAPIHelper shared] getMovieAPI] getMovieDetails:_movieInfo.id delegate:self];
+}
+
+- (void)setData:(id)data {
+    _movieInfo = data;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (float)heightForSummary {
+    MovieDetailInfo *detailInfo = _tableViewData;
+    MovieDetail *detail = detailInfo.summary;
+    float height = 10;
+    if (detail) {
+        NSString *content = [detail content];
+        CGSize size = CGSizeMake(kMainScreenWidth - 20, MAXFLOAT);
+        NSDictionary *attribute = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:17.0f], NSFontAttributeName, nil];
+        CGSize labelSize = [content boundingRectWithSize:size options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size;
+        height = labelSize.height + 20;
+    }
+    return height;
+}
+
+- (void)gotoMovieDetail:(MovieInfo *)movieInfo {
+    [self.navigationController pushViewControllerWithIdentifier:@"MovieDetailViewController" completion:^(UIViewController *viewController) {
+        MovieDetailViewController *detailView = (MovieDetailViewController *)viewController;
+        [detailView setData:movieInfo];
+    } animated:YES];
+}
+
+- (void)cellItemClickedAtIndex:(id)movieInfo {
+    [self gotoMovieDetail:movieInfo];
 }
 
 #pragma mark - Table view data source
@@ -50,7 +80,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.section) {
         case 0: return 180; break;
-        case 1: return 200; break;
+        case 1: return [self heightForSummary]; break;
         case 2: return 80; break;
         case 3: return 160; break;
         default: return 0; break;
@@ -59,23 +89,66 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *view = nil;
-    if (section != 0 && section != 1) {
-        view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.tableView.frame)-20, 21)];
-        [view setBackgroundColor:kUIColorWithRGB(0xf3f3f3)];
-        UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(10, 1, CGRectGetWidth(self.tableView.frame)-20, 21)];
-        [label setText:[[_tableViewData objectAtIndex:section] title]];
+    NSString *title = nil;
+    MovieDetailInfo *detailInfo = _tableViewData;
+    MovieDetail *detail = detailInfo.summary;
+    
+    switch (section) {
+        case 1: title = @"内容介绍"; break;
+        case 2: title = @"相关广告"; break;
+        case 3: title = @"相关视频"; break;
+        default: break;
+    }
+    if (title) {
+        view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.tableView.frame), 21)];
+        [view setBackgroundColor:[UIColor clearColor]];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 1, CGRectGetWidth(self.tableView.frame)-20, 21)];
+        [label setText:title];
         [label setFont:[UIFont systemFontOfSize:14.0f]];
         [view addSubview:label];
+        
+        if (section == 1) {
+            // 添加点赞
+            FavRateViewStyle *rateview = [FavRateViewStyle loadFromNib];
+            [rateview setFrame:CGRectMake(CGRectGetWidth(view.frame) - 80 - 40, 5, 80, 12)];
+            [rateview setData:detail.star];
+            [view addSubview:rateview];
+            
+            UIImageView *imageview = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetWidth(view.frame) - 40, 2, 18, 18)];
+            [imageview setImage:[UIImage imageNamed:@"follow_ico.png"]];
+            [view addSubview:imageview];
+        }
     }
     return view;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     OEZTableViewCell *viewCell = nil;
-    GroupInfo *group = [_tableViewData objectAtIndex:indexPath.section];
-    NSString *cellIdentifier = [NSString stringWithFormat:@"MovieDetailTableViewCellStyle%d.h", indexPath.section];
+    id data = nil;
+    MovieDetailInfo *movieDetailInfo = _tableViewData;
+    NSString *cellIdentifier = [NSString stringWithFormat:@"MovieDetailTableViewCellStyle%d", indexPath.section+1];
     viewCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    [viewCell setData:[group entitys]];
-    return viewCell;
+    
+    switch (indexPath.section) {
+        case 0:
+        case 1: data = movieDetailInfo.summary; break;
+        case 2: data = movieDetailInfo.advert; break;
+        case 3: data = movieDetailInfo.about; break;
+        default: break;
+    }
+    
+    if (data) {
+        [viewCell setData:data];
+        if (IS_SECTION(3)) {
+            MovieDetailTableViewCellStyle4 *styleView = (MovieDetailTableViewCellStyle4 *)viewCell;
+            styleView.delegate = self;
+        }
+        return viewCell;
+    }
+    return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"AppDetailsTableViewCellStyleNone"];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 @end

@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol MovieCenterTableViewCellStyle1Delegate <NSObject>
+- (void)cellItemClickedAtIndex:(id)movieInfo;
+@end
 
 @interface MovieCenterTableViewCellStyle1 : OEZTableViewHScrollCell<OEZHScrollViewDelegate>
-
+@property (nonatomic, assign) id <MovieCenterTableViewCellStyle1Delegate> delegate;
 @end

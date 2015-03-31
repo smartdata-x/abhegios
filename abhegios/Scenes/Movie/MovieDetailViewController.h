@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "RefreshTableViewController.h"
+#import "MovieDetailTableViewCellStyle4.h"
 
-@interface MovieDetailViewController : RefreshTableViewController
-
+@interface MovieDetailViewController : RefreshTableViewController<MovieDetailTableViewCellStyle4Delegate>
+- (void)setData:(id)data;
 @end

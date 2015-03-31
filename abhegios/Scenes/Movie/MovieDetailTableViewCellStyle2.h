@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MovieDetailTableViewCellStyle2 : UITableViewCell
-
+@interface MovieDetailTableViewCellStyle2 : OEZTableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *content;
 @end

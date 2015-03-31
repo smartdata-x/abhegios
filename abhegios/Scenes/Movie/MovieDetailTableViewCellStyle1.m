@@ -7,6 +7,7 @@
 //
 
 #import "MovieDetailTableViewCellStyle1.h"
+#import "GroupInfo.h"
 
 @implementation MovieDetailTableViewCellStyle1
 
@@ -18,6 +19,10 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)setData:(id)data {
+    [super setData:data];
 }
 
 @end

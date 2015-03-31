@@ -16,4 +16,6 @@
 
 @interface MovieDetailInfo : OEZBaseEntity
 @property (nonatomic, retain) MovieDetail *summary;
+@property (nonatomic, retain) NSArray *about;
+@property (nonatomic, retain) NSArray *advert;
 @end
