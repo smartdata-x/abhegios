@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "MovieInfoViewStyle2.h"
 
-@interface MovieSearchResultTableViewCellStyle2 : OEZTableViewCell
-@property (weak, nonatomic) IBOutlet MovieInfoViewStyle2 *infoView0;
-@property (weak, nonatomic) IBOutlet MovieInfoViewStyle2 *infoView1;
+@protocol MovieSearchResultTableViewCellStyle2Delegate <NSObject>
+- (void)cellItemClickedAtIndex:(id)movieInfo;
+@end
+
+@interface MovieSearchResultTableViewCellStyle2 : OEZTableViewHScrollCell<OEZHScrollViewDelegate>
+@property (nonatomic, assign) id <MovieSearchResultTableViewCellStyle2Delegate> delegate;
 @end

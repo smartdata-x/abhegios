@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "RefreshTableViewController.h"
+#import "MovieSearchResultTableViewCellStyle2.h"
 
-@interface MovieSearchResultViewController : RefreshTableViewController
+@interface MovieSearchResultViewController : RefreshTableViewController<MovieSearchResultTableViewCellStyle2Delegate>
 - (void)setData:(NSInteger)data;
 @end

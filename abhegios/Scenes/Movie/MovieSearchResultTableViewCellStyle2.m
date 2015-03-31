@@ -9,24 +9,37 @@
 #import "MovieSearchResultTableViewCellStyle2.h"
 #import "GroupInfo.h"
 #import "MovieInfo.h"
+#import "MovieHScrollViewCell1.h"
+
+#define ITEM_WIDTH 160;
 
 @implementation MovieSearchResultTableViewCellStyle2
 
-- (void)awakeFromNib {
-    // Initialization code
+- (NSInteger)numberColumnCountHScrollView:(OEZHScrollView *)hScrollView {
+    NSInteger count = kMainScreenWidth / ITEM_WIDTH;
+    return count;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (CGFloat)hScrollView:(OEZHScrollView *)hScrollView widthForColumnAtIndex:(NSInteger)columnIndex {
+    return ITEM_WIDTH;
 }
 
-- (void)setData:(id)data {
-    [super setData:data];
-    GroupInfo *infoGroup = data;
-    [_infoView0 setData:[[infoGroup entitys] objectAtIndex:0]];
-    [_infoView1 setData:[[infoGroup entitys] objectAtIndex:1]];
+- (OEZHScrollViewCell *)hScrollView:(OEZHScrollView *)hScrollView cellForColumnAtIndex:(NSInteger)columnIndex {
+    static NSString *identifier = @"MovieHScrollViewCell1";
+    MovieHScrollViewCell1 *cell = [hScrollView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+        cell = [[MovieHScrollViewCell1 alloc] initWithReuseIdentifier:identifier];
+    }
+    [cell setData:[self.data objectAtIndex:columnIndex]];
+    return cell;
+}
+
+- (void)hScrollView:(OEZHScrollView *)pageView didSelectColumnAtIndex:(NSInteger)columnIndex {
+    [self didSelectRowColumn:columnIndex];
+    if ([_delegate respondsToSelector:@selector(cellItemClickedAtIndex:)]) {
+        MovieInfo *movieInfo = [self.data objectAtIndex:columnIndex];
+        [_delegate cellItemClickedAtIndex:movieInfo];
+    }
 }
 
 @end

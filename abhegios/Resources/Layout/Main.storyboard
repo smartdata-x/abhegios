@@ -1429,25 +1429,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z9a-7Z-U58" id="5oV-eG-p50">
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vF2-dg-k8e" customClass="MovieInfoViewStyle2">
-                                            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k4Q-K2-pfM" customClass="MovieInfoViewStyle2">
-                                            <rect key="frame" x="160" y="0.0" width="160" height="160"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="k4Q-K2-pfM" secondAttribute="trailing" id="3N6-xw-ePQ"/>
-                                        <constraint firstItem="vF2-dg-k8e" firstAttribute="leading" secondItem="5oV-eG-p50" secondAttribute="leadingMargin" id="iPA-rL-0Rb"/>
-                                    </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="infoView0" destination="vF2-dg-k8e" id="ufg-Pc-ADv"/>
-                                    <outlet property="infoView1" destination="k4Q-K2-pfM" id="cZj-tz-fUy"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
