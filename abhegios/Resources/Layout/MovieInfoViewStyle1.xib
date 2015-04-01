@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Default1" translatesAutoresizingMaskIntoConstraints="NO" id="NPb-0Z-0po">
-                    <rect key="frame" x="1" y="1" width="318" height="178"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2h-0c-40w">
                     <rect key="frame" x="8" y="151" width="304" height="21"/>
@@ -28,12 +28,12 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="NPb-0Z-0po" secondAttribute="bottom" id="379-LU-0fa"/>
                 <constraint firstItem="O2h-0c-40w" firstAttribute="leading" secondItem="80a-gZ-q25" secondAttribute="leading" constant="8" id="54K-rB-64W"/>
-                <constraint firstItem="NPb-0Z-0po" firstAttribute="leading" secondItem="80a-gZ-q25" secondAttribute="leading" constant="1" id="5Qj-Jn-3Wg"/>
-                <constraint firstAttribute="trailing" secondItem="NPb-0Z-0po" secondAttribute="trailing" constant="1" id="7g2-Cx-2Nu"/>
-                <constraint firstAttribute="bottom" secondItem="NPb-0Z-0po" secondAttribute="bottom" constant="1" id="DwN-dT-LL8"/>
-                <constraint firstItem="NPb-0Z-0po" firstAttribute="top" secondItem="80a-gZ-q25" secondAttribute="top" constant="1" id="WN0-Me-USl"/>
+                <constraint firstItem="NPb-0Z-0po" firstAttribute="leading" secondItem="80a-gZ-q25" secondAttribute="leading" id="Cs3-f7-RA5"/>
+                <constraint firstItem="NPb-0Z-0po" firstAttribute="top" secondItem="80a-gZ-q25" secondAttribute="top" id="IfK-eF-k01"/>
                 <constraint firstAttribute="trailing" secondItem="O2h-0c-40w" secondAttribute="trailing" constant="8" id="arZ-Te-gQx"/>
+                <constraint firstAttribute="trailing" secondItem="NPb-0Z-0po" secondAttribute="trailing" id="mfY-RD-4VF"/>
                 <constraint firstAttribute="bottom" secondItem="O2h-0c-40w" secondAttribute="bottom" constant="8" id="zjh-Tw-6YH"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>

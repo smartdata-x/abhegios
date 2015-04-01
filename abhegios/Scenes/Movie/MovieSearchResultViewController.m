@@ -42,18 +42,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)setHot {
+- (void)setHot:(BOOL)noReload {
     _isHotShown = YES;
     [_btnHot setBackgroundColor:kUIColorWithRGB(0x549bd0)];
     [_btnNew setBackgroundColor:kUIColorWithRGB(0xe7e0e1)];
-    [self.tableView reloadData];
+    if (!noReload) [self.tableView reloadData];
 }
 
-- (void)setNew {
+- (void)setNew:(BOOL)noReload {
     _isHotShown = NO;
     [_btnNew setBackgroundColor:kUIColorWithRGB(0x549bd0)];
     [_btnHot setBackgroundColor:kUIColorWithRGB(0xe7e0e1)];
-    [self.tableView reloadData];
+    if (!noReload) [self.tableView reloadData];
 }
 
 - (void)gotoMovieDetail:(MovieInfo *)movieInfo {
@@ -98,10 +98,11 @@
         viewCell = [tableView dequeueReusableCellWithIdentifier:identifier];
         if (IS_SECTION(0)) {
             MovieSearchResultTableViewCellStyle1 *resultview = (MovieSearchResultTableViewCellStyle1 *)viewCell;
-            [resultview.btnHot addTarget:self action:@selector(setHot) forControlEvents:UIControlEventTouchUpInside];
-            [resultview.btnNew addTarget:self action:@selector(setNew) forControlEvents:UIControlEventTouchUpInside];
+            [resultview.btnHot addTarget:self action:@selector(setHot:) forControlEvents:UIControlEventTouchUpInside];
+            [resultview.btnNew addTarget:self action:@selector(setNew:) forControlEvents:UIControlEventTouchUpInside];
             _btnHot = resultview.btnHot;
             _btnNew = resultview.btnNew;
+            _isHotShown ? [self setHot:YES] : [self setNew:YES];
         }
         else if (IS_SECTION(1)) {
             // 只从第二个开始显示
