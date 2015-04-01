@@ -600,7 +600,7 @@
         <!--影视搜索列表-->
         <scene sceneID="HRy-4R-JHe">
             <objects>
-                <tableViewController storyboardIdentifier="MovieSearchListViewController" id="xyQ-k3-hcs" userLabel="影视搜索列表" customClass="MovieSearchListViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MovieSearchListViewController" title="影视列表" id="xyQ-k3-hcs" userLabel="影视搜索列表" customClass="MovieSearchListViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="vCh-Pa-Ki1">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -30,6 +30,7 @@
 
 - (void)setData:(id)data {
     _movieInfo = data;
+    [self.navigationItem setTitle:_movieInfo.name];
 }
 
 - (void)gotoFullScreenPlayer:(NSString *)strurl {

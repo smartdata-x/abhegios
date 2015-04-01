@@ -33,6 +33,8 @@
 
 - (void)setData:(NSInteger)data {
     _typeID = data;
+    NSArray *names = [[NSArray alloc] initWithObjects:@"推荐视频", @"原创视频", @"搞笑视频", @"游戏视频", @"科技视频", nil];
+    [self.navigationItem setTitle:[names objectAtIndex:_typeID - 1001]];
 }
 
 - (void)didReceiveMemoryWarning {
