@@ -20,7 +20,7 @@
 }
 
 - (CGFloat)hScrollView:(OEZHScrollView *)hScrollView widthForColumnAtIndex:(NSInteger)columnIndex {
-    return 160.0f;
+    return kMainScreenWidth / 2.0f;
 }
 
 - (OEZHScrollViewCell *)hScrollView:(OEZHScrollView *)hScrollView cellForColumnAtIndex:(NSInteger)columnIndex {

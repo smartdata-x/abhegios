@@ -62,10 +62,17 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section == 1) {
-        return 2;
+    GroupInfo *group = [_tableViewData objectAtIndex:section];
+    NSInteger groupCount = [[group entitys] count];
+    NSInteger rows = 0;
+    switch (section) {
+        case 0: rows = 1; break;
+        case 1: rows = 1 + ceilf((groupCount - 1) / 2.0f); break;
+        case 2:
+        case 3: rows = ceilf(groupCount / 2.0f); break;
+        default: break;
     }
-    return 1;
+    return rows;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -114,7 +121,8 @@
         else {
             viewCell = [tableView dequeueReusableCellWithIdentifier:@"MovieCenterTableViewCellStyle1"];
             // 只从第二个开始显示
-            NSArray *movieArray = [[NSArray alloc] initWithObjects:[[group entitys] objectAtIndex:1], [[group entitys] objectAtIndex:2], nil];
+            NSInteger startIndex = 1 + (indexPath.row - 1) * 2;
+            NSArray *movieArray = [[NSArray alloc] initWithObjects:[[group entitys] objectAtIndex:startIndex], [[group entitys] objectAtIndex:startIndex+1], nil];
             [viewCell setData:movieArray];
             MovieCenterTableViewCellStyle1 *styleView = (MovieCenterTableViewCellStyle1 *)viewCell;
             styleView.delegate = self;
@@ -122,7 +130,9 @@
     }
     else {
         viewCell = [tableView dequeueReusableCellWithIdentifier:@"MovieCenterTableViewCellStyle1"];
-        [viewCell setData:[group entitys]];
+        NSInteger startIndex = indexPath.row * 2;
+        NSArray *movieArray = [[NSArray alloc] initWithObjects:[[group entitys] objectAtIndex:startIndex], [[group entitys] objectAtIndex:startIndex+1], nil];
+        [viewCell setData:movieArray];
         MovieCenterTableViewCellStyle1 *styleView = (MovieCenterTableViewCellStyle1 *)viewCell;
         styleView.delegate = self;
     }
