@@ -16,6 +16,7 @@
 @implementation MovieCenterTableViewCellStyle1
 
 - (NSInteger)numberColumnCountHScrollView:(OEZHScrollView *)hScrollView {
+    [self.hScrollView setScrollEnabled:NO];
     return [self.data count];
 }
 

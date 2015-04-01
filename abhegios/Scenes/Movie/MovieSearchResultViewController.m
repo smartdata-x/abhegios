@@ -24,6 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 - (void)didRequest {
@@ -77,8 +78,7 @@
     
     GroupInfo *movieGroup = [_tableViewData objectAtIndex:(_isHotShown ? 4 : 5)];
     NSInteger count = [[movieGroup entitys] count];
-    NSInteger itemInRow = ceilf(kMainScreenWidth / 160.0);
-    return count / itemInRow;
+    return count / 2;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -103,12 +103,8 @@
         }
         else if (IS_SECTION(1)) {
             // 只从第二个开始显示
-            NSInteger itemInRow = ceilf(kMainScreenWidth / 160.0);
-            NSInteger startIndex = indexPath.row * itemInRow;
+            NSInteger startIndex = indexPath.row * 2;
             NSMutableArray *movieArray = [[NSMutableArray alloc] initWithObjects:[[group entitys] objectAtIndex:startIndex], [[group entitys] objectAtIndex:startIndex+1], nil];
-            if (itemInRow > 2) {
-                [movieArray addObject:[[group entitys] objectAtIndex:startIndex+2]];
-            }
             [viewCell setData:movieArray];
             MovieSearchResultTableViewCellStyle2 *resultview = (MovieSearchResultTableViewCellStyle2 *)viewCell;
             resultview.delegate = self;

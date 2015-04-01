@@ -16,11 +16,12 @@
 @implementation MovieDetailTableViewCellStyle4
 
 - (NSInteger)numberColumnCountHScrollView:(OEZHScrollView *)hScrollView {
+    [self.hScrollView setScrollEnabled:NO];
     return [self.data count];
 }
 
 - (CGFloat)hScrollView:(OEZHScrollView *)hScrollView widthForColumnAtIndex:(NSInteger)columnIndex {
-    return 160.0f;
+    return kMainScreenWidth / 2.0f;
 }
 
 - (OEZHScrollViewCell *)hScrollView:(OEZHScrollView *)hScrollView cellForColumnAtIndex:(NSInteger)columnIndex {

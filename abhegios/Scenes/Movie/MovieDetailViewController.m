@@ -21,6 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 - (void)didRequest {
@@ -74,7 +75,12 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    NSInteger rows = 1;
+    if (section == 3) {
+        MovieDetailInfo *detailInfo = _tableViewData;
+        rows = [detailInfo.about count] / 2;
+    }
+    return rows;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -145,10 +151,15 @@
     }
     
     if (data) {
-        [viewCell setData:data];
         if (IS_SECTION(3)) {
+            NSInteger startIndex = indexPath.row * 2;
+            NSArray *movieArray = [[NSArray alloc] initWithObjects:[data objectAtIndex:startIndex], [data objectAtIndex:startIndex+1], nil];
+            [viewCell setData:movieArray];
             MovieDetailTableViewCellStyle4 *styleView = (MovieDetailTableViewCellStyle4 *)viewCell;
             styleView.delegate = self;
+        }
+        else {
+            [viewCell setData:data];
         }
         return viewCell;
     }
