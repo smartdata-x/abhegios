@@ -124,7 +124,7 @@
 
 - (void)didLoginError:(NSError *)err {
     
-#if 1
+#if 0
     UserInfo *user = [[UserInfo alloc] init];
     user.source = 3;
     user.nickname = @"卖女孩的火柴";
