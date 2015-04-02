@@ -34,7 +34,7 @@
 }
 
 - (void)gotoFullScreenPlayer:(NSString *)strurl {
-    NSURL *movieUrl = [NSURL URLWithString:@"http://pl.youku.com/playlist/m3u8?ctype=12&ep=eiaWHUGMVMkB5SDcjT8bMiXiJiNZXJZ1gkSA%2fLYbScV%2bPerQkT7TwA%3d%3d&ev=1&keyframe=1&oip=3078655741&sid=842781271033512e90bdf&token=8027&type=flv&vid=XODk5MTIyNjE2"];
+    NSURL *movieUrl = [NSURL URLWithString:strurl];
     MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL:movieUrl];
     [self presentMoviePlayerViewControllerAnimated:player];
 }
