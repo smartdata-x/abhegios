@@ -97,13 +97,10 @@
 -(NSArray*) getAppInfosToGroup:(NSIndexPath *)indexPath
 {
     GroupInfo* groupInfo = [self getGroupInfo:[indexPath section]];
-    NSInteger start = [indexPath row] * kMaxRowNum;
-    NSMutableArray *array = [[NSMutableArray alloc] init];
-    for (NSInteger i = start; i < [[groupInfo entitys] count] && i < start + kMaxRowNum ; ++i)
-    {
-        [array addObject:[[groupInfo entitys] objectAtIndex:i]];
-    }
-    return array;
+    NSInteger start =  [indexPath row] * kMaxRowNum;
+    NSInteger len = MIN(kMaxRowNum, [[groupInfo entitys] count] - start );
+    NSRange range = NSMakeRange(start, len);
+    return [[groupInfo entitys] subarrayWithRange:range ];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
