@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "HandleOpenURLHelper.h"
 #import "MainViewController.h"
+#import "umengTrackHelper.h"
 #import <Crashlytics/Crashlytics.h>
 @interface AppDelegate ()
 
@@ -22,6 +23,7 @@
 {
     //Crashlytics
     [Crashlytics startWithAPIKey:@"13b0dd85b007ad78249b02fc26fa3972dff8da79"];
+    [[umengTrackHelper shared] startTrack];
     return YES;
 }
 

@@ -33,6 +33,7 @@
 #define kWeiboAppID @"2783192662"
 #define kWeiboSecret @"26f20d0827dc2b6abb37487ab00181a4"
 #define kWeiboRedirectURI @"http://42.121.14.108/abheg/sinaweibo/callback.php"
+#define kUmeng  @"54b72c25fd98c533ef0003a5"
 
 
 #pragma mark - Screen相关

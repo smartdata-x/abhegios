@@ -10,6 +10,8 @@
 		153C5A4F1ACD9A3A0058B829 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153C5A4E1ACD9A3A0058B829 /* Crashlytics.framework */; };
 		1AD6407932CF4CF9417DEF43 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AD64688EC1876C19A332D96 /* Info.plist */; };
 		1AD6460C6803B48F071D6E89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AD6432947FE4430D644F23B /* Images.xcassets */; };
+		CB72868D1AD419CC00A8F0A6 /* umengTrackHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CB72868C1AD419CC00A8F0A6 /* umengTrackHelper.m */; };
+		CB7286951AD41E4E00A8F0A6 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB7286911AD41E2B00A8F0A6 /* libMobClickLibrary.a */; };
 		CBD81E6F1A839C2E006E6604 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD81E6E1A839C2E006E6604 /* AudioToolbox.framework */; };
 		CBD81E711A839C50006E6604 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD81E701A839C50006E6604 /* MediaPlayer.framework */; };
 		CBD81E731A839C65006E6604 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD81E721A839C65006E6604 /* AVFoundation.framework */; };
@@ -213,6 +215,11 @@
 		153C5A4E1ACD9A3A0058B829 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		1AD6432947FE4430D644F23B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1AD64688EC1876C19A332D96 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
+		CB72868B1AD419CC00A8F0A6 /* umengTrackHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = umengTrackHelper.h; sourceTree = "<group>"; };
+		CB72868C1AD419CC00A8F0A6 /* umengTrackHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = umengTrackHelper.m; sourceTree = "<group>"; };
+		CB7286911AD41E2B00A8F0A6 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
+		CB7286921AD41E2B00A8F0A6 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
+		CB7286931AD41E2B00A8F0A6 /* MobClickSocialAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickSocialAnalytics.h; sourceTree = "<group>"; };
 		CBD81E6E1A839C2E006E6604 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		CBD81E701A839C50006E6604 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		CBD81E721A839C65006E6604 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -575,6 +582,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB7286951AD41E4E00A8F0A6 /* libMobClickLibrary.a in Frameworks */,
 				EAA2026E1AC8DF5100E088CE /* TencentOpenAPI.framework in Frameworks */,
 				CBD81E731A839C65006E6604 /* AVFoundation.framework in Frameworks */,
 				CBD81E711A839C50006E6604 /* MediaPlayer.framework in Frameworks */,
@@ -650,6 +658,18 @@
 				EA8E8F4D1A68F07500FEA027 /* UIKit.framework */,
 			);
 			name = Framework;
+			sourceTree = "<group>";
+		};
+		CB72868A1AD4190500A8F0A6 /* umengTrack */ = {
+			isa = PBXGroup;
+			children = (
+				CB7286911AD41E2B00A8F0A6 /* libMobClickLibrary.a */,
+				CB7286921AD41E2B00A8F0A6 /* MobClick.h */,
+				CB7286931AD41E2B00A8F0A6 /* MobClickSocialAnalytics.h */,
+				CB72868B1AD419CC00A8F0A6 /* umengTrackHelper.h */,
+				CB72868C1AD419CC00A8F0A6 /* umengTrackHelper.m */,
+			);
+			path = umengTrack;
 			sourceTree = "<group>";
 		};
 		CBE50BCA1AC9932F000265DC /* Home */ = {
@@ -1440,6 +1460,7 @@
 		EAA201BE1AC8DEB500E088CE /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				CB72868A1AD4190500A8F0A6 /* umengTrack */,
 				153C5A4E1ACD9A3A0058B829 /* Crashlytics.framework */,
 				EAA201BF1AC8DEB500E088CE /* libWeiboSDK */,
 				EAA201C31AC8DEB500E088CE /* Tencent */,
@@ -1659,6 +1680,7 @@
 				EAA202651AC8DEB600E088CE /* AFNetworkActivityIndicatorManager.m in Sources */,
 				EAA202641AC8DEB600E088CE /* AFJSONRequestOperation.m in Sources */,
 				EAA2022C1AC8DEB600E088CE /* AppDetailsTableViewCellStyle2.m in Sources */,
+				CB72868D1AD419CC00A8F0A6 /* umengTrackHelper.m in Sources */,
 				EAA2022B1AC8DEB600E088CE /* AppDetailsTableViewCellStyle1.m in Sources */,
 				EAA202231AC8DEB600E088CE /* MovieInfoViewStyle2.m in Sources */,
 				EAA202091AC8DEB600E088CE /* BookDetailInfoTableViewCellStyle4.m in Sources */,
@@ -1910,6 +1932,7 @@
 					"\"${PROJECT_DIR}/abhegios/Class/Third/libWeiboSDK\"/**",
 					"$(PROJECT_DIR)/abhegios/Third/libWeiboSDK",
 					"$(PROJECT_DIR)/abhegios/Third/WX",
+					"$(PROJECT_DIR)/abhegios/Third/umengTrack",
 				);
 				OTHER_LDFLAGS = "-fobjc-arc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1945,6 +1968,7 @@
 					"\"${PROJECT_DIR}/abhegios/Class/Third/libWeiboSDK\"/**",
 					"$(PROJECT_DIR)/abhegios/Third/libWeiboSDK",
 					"$(PROJECT_DIR)/abhegios/Third/WX",
+					"$(PROJECT_DIR)/abhegios/Third/umengTrack",
 				);
 				OTHER_LDFLAGS = "-fobjc-arc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
