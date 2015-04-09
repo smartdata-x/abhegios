@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -15,20 +15,19 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="42"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aGr-nF-JPA">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aGr-nF-JPA">
                     <rect key="frame" x="5" y="6" width="310" height="30"/>
                     <color key="backgroundColor" red="0.94957626699873499" green="0.94957626699873499" blue="0.94957626699873499" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="VSI-gj-2qB"/>
-                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="aGr-nF-JPA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="g72-5m-rHN"/>
-                <constraint firstAttribute="trailing" secondItem="aGr-nF-JPA" secondAttribute="trailing" constant="5" id="uEq-a7-mdn"/>
+                <constraint firstItem="aGr-nF-JPA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="6" id="M5N-Ze-X4A"/>
+                <constraint firstAttribute="bottom" secondItem="aGr-nF-JPA" secondAttribute="bottom" constant="6" id="UTC-ke-wsQ"/>
+                <constraint firstItem="aGr-nF-JPA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="ZTd-vq-jrf"/>
+                <constraint firstAttribute="trailing" secondItem="aGr-nF-JPA" secondAttribute="trailing" constant="5" id="sLe-Zc-42b"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
