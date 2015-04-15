@@ -18,8 +18,8 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUc-fs-PAL">
-                    <rect key="frame" x="5" y="10" width="150" height="150"/>
-                    <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="5" y="10" width="150" height="145"/>
+                    <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -50,7 +50,7 @@
                 <constraint firstAttribute="trailing" secondItem="sdw-86-hJG" secondAttribute="trailing" constant="18" id="TNZ-ZO-E6s"/>
                 <constraint firstItem="sdw-86-hJG" firstAttribute="leading" secondItem="jNs-Pk-Aeu" secondAttribute="leading" constant="8" id="ZwJ-mM-EMo"/>
                 <constraint firstItem="rUc-fs-PAL" firstAttribute="leading" secondItem="jNs-Pk-Aeu" secondAttribute="leading" constant="5" id="exS-GK-HJ5"/>
-                <constraint firstAttribute="bottom" secondItem="rUc-fs-PAL" secondAttribute="bottom" id="fUU-3i-xhR"/>
+                <constraint firstAttribute="bottom" secondItem="rUc-fs-PAL" secondAttribute="bottom" constant="5" id="fUU-3i-xhR"/>
                 <constraint firstAttribute="trailing" secondItem="rUc-fs-PAL" secondAttribute="trailing" constant="5" id="gnC-OY-Kwt"/>
                 <constraint firstItem="rUc-fs-PAL" firstAttribute="top" secondItem="jNs-Pk-Aeu" secondAttribute="top" constant="10" id="nWb-WN-pan"/>
                 <constraint firstItem="mul-PN-LOo" firstAttribute="top" secondItem="jNs-Pk-Aeu" secondAttribute="top" constant="10" id="oZO-ea-dN3"/>

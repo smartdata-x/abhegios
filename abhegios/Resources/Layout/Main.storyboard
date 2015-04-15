@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="y5s-RF-eIy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="y5s-RF-eIy">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -1068,22 +1068,22 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCenterTableViewCellStyle2" rowHeight="181" id="t75-5g-37x" customClass="MovieCenterTableViewCellStyle2">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCenterTableViewCellStyle2" rowHeight="185" id="t75-5g-37x" customClass="MovieCenterTableViewCellStyle2">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t75-5g-37x" id="l8S-b9-fBd">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="seK-jA-cZg" customClass="MovieInfoViewStyle1">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="180"/>
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="seK-jA-cZg" customClass="MovieInfoViewStyle1">
+                                            <rect key="frame" x="0.0" y="5" width="600" height="180"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="seK-jA-cZg" firstAttribute="top" secondItem="l8S-b9-fBd" secondAttribute="top" id="08s-cU-x5I"/>
-                                        <constraint firstItem="seK-jA-cZg" firstAttribute="leading" secondItem="l8S-b9-fBd" secondAttribute="leading" id="2BR-WB-KA4"/>
-                                        <constraint firstAttribute="trailing" secondItem="seK-jA-cZg" secondAttribute="trailing" id="BDh-2J-qOv"/>
-                                        <constraint firstAttribute="bottom" secondItem="seK-jA-cZg" secondAttribute="bottom" id="JUj-8N-gDp"/>
+                                        <constraint firstItem="seK-jA-cZg" firstAttribute="top" secondItem="l8S-b9-fBd" secondAttribute="topMargin" constant="-3" id="4xM-eN-7Jc"/>
+                                        <constraint firstItem="seK-jA-cZg" firstAttribute="leading" secondItem="l8S-b9-fBd" secondAttribute="leadingMargin" constant="-3" id="gp5-n3-FBX"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="seK-jA-cZg" secondAttribute="trailing" constant="-3" id="hVy-lg-vEz"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="seK-jA-cZg" secondAttribute="bottom" constant="-8" id="odM-3n-oo9"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
