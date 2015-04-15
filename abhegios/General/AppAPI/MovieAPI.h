@@ -12,4 +12,5 @@
 - (void)getMovieStore:(id<ReqeustDelegate>) delegate;
 - (void)getMovieDetails:(NSInteger)movieID delegate:(id<ReqeustDelegate>)delegate;
 - (void)getMovieSearchResult:(NSInteger)typeID delegate:(id<ReqeustDelegate>)delegate;
+- (void)doLike:(NSInteger)movieID delegate:(id<ReqeustDelegate>)delegate;
 @end

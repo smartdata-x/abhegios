@@ -12,6 +12,7 @@
 @interface MovieDetail : MovieInfo
 @property (nonatomic, copy) NSString *content;
 @property (nonatomic, copy) NSString *url;
+@property NSInteger like;
 @end
 
 @interface MovieDetailInfo : OEZBaseEntity

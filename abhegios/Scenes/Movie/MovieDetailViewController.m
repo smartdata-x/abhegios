@@ -69,6 +69,17 @@
     [self gotoMovieDetail:movieInfo];
 }
 
+- (IBAction)doLike:(id)sender {
+    UIButton *btn = (UIButton *)sender;
+    if (btn.tag == 0) {
+        [[[AppAPIHelper shared] getMovieAPI] doLike:_movieInfo.id delegate:nil];
+        
+        NSString *replaceName = btn.tag == 0 ? @"follow_ico_on.png" : @"follow_ico.png";
+        btn.tag = !btn.tag;
+        [btn setBackgroundImage:[UIImage imageNamed:replaceName] forState:UIControlStateNormal];
+    }
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -128,9 +139,12 @@
             [rateview setData:detail.star];
             [view addSubview:rateview];
             
-            UIImageView *imageview = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetWidth(view.frame) - 40, 2, 18, 18)];
-            [imageview setImage:[UIImage imageNamed:@"follow_ico.png"]];
-            [view addSubview:imageview];
+            UIButton *btnFav = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetWidth(view.frame) - 40, 2, 18, 18)];
+            [btnFav addTarget:self action:@selector(doLike:) forControlEvents:UIControlEventTouchUpInside];
+            btnFav.tag = detail.like;
+            NSString *imagename = btnFav.tag == 0 ? @"follow_ico.png" : @"follow_ico_on.png";
+            [btnFav setBackgroundImage:[UIImage imageNamed:imagename] forState:UIControlStateNormal];
+            [view addSubview:btnFav];
         }
     }
     return view;

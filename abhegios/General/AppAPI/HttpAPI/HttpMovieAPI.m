@@ -30,4 +30,12 @@
         return [GroupInfo initWithsConfigAndDataDictionarys:@"moviecenter" groupsData:data entityClass:[MovieInfo class]];
     }];
 }
+
+- (void)doLike:(NSInteger)movieID delegate:(id<ReqeustDelegate>)delegate {
+    static NSString *path = @"/movie/1/like.fcgi";
+    [self request:path parameter:[NSDictionary dictionaryWithObject:@(movieID) forKey:@"id"] delegate:delegate processBlock:^id(id data) {
+        // do nothing
+        return nil;
+    }];
+}
 @end
