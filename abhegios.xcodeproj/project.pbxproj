@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1AD6460C6803B48F071D6E89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AD6432947FE4430D644F23B /* Images.xcassets */; };
+		CB1B41AB1ADEC3AD000D61B9 /* DirectMPMoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1B41AA1ADEC3AD000D61B9 /* DirectMPMoviePlayerViewController.m */; };
 		CBD81E6F1A839C2E006E6604 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD81E6E1A839C2E006E6604 /* AudioToolbox.framework */; };
 		CBD81E711A839C50006E6604 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD81E701A839C50006E6604 /* MediaPlayer.framework */; };
 		CBD81E731A839C65006E6604 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD81E721A839C65006E6604 /* AVFoundation.framework */; };
@@ -212,6 +213,8 @@
 
 /* Begin PBXFileReference section */
 		1AD6432947FE4430D644F23B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CB1B41A91ADEC3AD000D61B9 /* DirectMPMoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectMPMoviePlayerViewController.h; sourceTree = "<group>"; };
+		CB1B41AA1ADEC3AD000D61B9 /* DirectMPMoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectMPMoviePlayerViewController.m; sourceTree = "<group>"; };
 		CBD81E6E1A839C2E006E6604 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		CBD81E701A839C50006E6604 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		CBD81E721A839C65006E6604 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -685,6 +688,8 @@
 			children = (
 				CBE50BD91AC9A9DF000265DC /* MovieDetailViewController.h */,
 				CBE50BDA1AC9A9DF000265DC /* MovieDetailViewController.m */,
+				CB1B41A91ADEC3AD000D61B9 /* DirectMPMoviePlayerViewController.h */,
+				CB1B41AA1ADEC3AD000D61B9 /* DirectMPMoviePlayerViewController.m */,
 				CBE50BDC1AC9A9E5000265DC /* CustomView */,
 			);
 			name = Detail;
@@ -1742,6 +1747,7 @@
 				EAA201E61AC8DEB500E088CE /* FundTableViewHeader.m in Sources */,
 				CBE50BEC1AC9AF4F000265DC /* MovieDetailInfo.m in Sources */,
 				CBE50BD71AC99DDB000265DC /* MovieCenterTableViewCellStyle3.m in Sources */,
+				CB1B41AB1ADEC3AD000D61B9 /* DirectMPMoviePlayerViewController.m in Sources */,
 				EAA2020A1AC8DEB600E088CE /* BookDetailInfoTableViewCellStyle5.m in Sources */,
 				EAA2025B1AC8DEB600E088CE /* MusicInfo.m in Sources */,
 				EAA2023D1AC8DEB600E088CE /* WBLogin.m in Sources */,
@@ -1842,8 +1848,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Zhejiang palm Easy Tour Network Technology Co., Ltd.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Zhejiang palm Easy Tour Network Technology Co., Ltd.";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1884,8 +1890,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Zhejiang palm Easy Tour Network Technology Co., Ltd.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Zhejiang palm Easy Tour Network Technology Co., Ltd.";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

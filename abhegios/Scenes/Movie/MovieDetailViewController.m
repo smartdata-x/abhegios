@@ -12,6 +12,7 @@
 #import "AppAPIHelper.h"
 #import "FavRateViewStyle.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import "DirectMPMoviePlayerViewController.h"
 
 @interface MovieDetailViewController ()
 @property MovieInfo* movieInfo;
@@ -35,7 +36,9 @@
 
 - (void)gotoFullScreenPlayer:(NSString *)strurl {
     NSURL *movieUrl = [NSURL URLWithString:strurl];
-    MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL:movieUrl];
+    DirectMPMoviePlayerViewController *player = [[DirectMPMoviePlayerViewController alloc] initWithContentURL:movieUrl];
+    CGAffineTransform landscape = CGAffineTransformMakeRotation(M_PI / 2);
+    player.view.transform = landscape;
     [self presentMoviePlayerViewControllerAnimated:player];
 }
 
