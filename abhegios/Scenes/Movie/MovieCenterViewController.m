@@ -31,9 +31,9 @@
 
 - (void)addSearchBarItem {
     // 右按钮
-    UIButton *rightButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 20, 38, 44)];
-    [rightButton setBackgroundImage:[UIImage imageNamed:@"book_shade.png"] forState:UIControlStateNormal];
-    [rightButton setTitle:@"搜索" forState:UIControlStateNormal];
+    UIButton *rightButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 20, 19, 22)];
+    [rightButton setBackgroundImage:[UIImage imageNamed:@"search_ico.png"] forState:UIControlStateNormal];
+    //[rightButton setTitle:@"搜索" forState:UIControlStateNormal];
     [rightButton addTarget:self action:@selector(gotoMovieSearchList) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
 }
