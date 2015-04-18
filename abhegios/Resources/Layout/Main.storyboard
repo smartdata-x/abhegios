@@ -899,16 +899,16 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j1A-ZM-2Pc" id="nxV-eh-Qqz">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SuX-A3-OGs">
-                                            <rect key="frame" x="10" y="15" width="138" height="39"/>
+                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SuX-A3-OGs">
+                                            <rect key="frame" x="20" y="15" width="140" height="39"/>
                                             <color key="backgroundColor" red="0.92549019610000005" green="0.90196078430000004" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <state key="normal" title="最新小说">
                                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKG-By-s6Z">
-                                            <rect key="frame" x="170" y="15" width="138" height="39"/>
+                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKG-By-s6Z">
+                                            <rect key="frame" x="160" y="15" width="140" height="39"/>
                                             <color key="backgroundColor" red="0.92549019610000005" green="0.90196078430000004" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <state key="normal" title="最热小说">
                                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -916,6 +916,12 @@
                                             </state>
                                         </button>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="zKG-By-s6Z" secondAttribute="trailing" constant="12" id="JKw-17-l0O"/>
+                                        <constraint firstItem="zKG-By-s6Z" firstAttribute="leading" secondItem="SuX-A3-OGs" secondAttribute="trailing" id="M0e-xD-4vS"/>
+                                        <constraint firstItem="SuX-A3-OGs" firstAttribute="leading" secondItem="nxV-eh-Qqz" secondAttribute="leadingMargin" constant="12" id="hiL-L6-o2i"/>
+                                        <constraint firstItem="zKG-By-s6Z" firstAttribute="leading" secondItem="SuX-A3-OGs" secondAttribute="trailing" id="oeh-LB-Guz"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="btnHot" destination="zKG-By-s6Z" id="1LI-oQ-SGy"/>

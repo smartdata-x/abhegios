@@ -17,6 +17,8 @@
 @interface BookSearchResultTableViewController ()
 {
     NSInteger resultShowType;
+    UIButton *btnNew;
+    UIButton *btnHot;
 }
 @end
 
@@ -35,13 +37,29 @@
     resultShowType = BookSearchResultTypeNew;
 }
 
-- (IBAction)showNewResult:(id)sender {
+- (void)setNew {
     resultShowType = BookSearchResultTypeNew;
+    [btnNew setBackgroundColor:kUIColorWithRGB(0x549bd0)];
+    [btnHot setBackgroundColor:kUIColorWithRGB(0xe7e0e1)];
+    [btnNew setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [btnHot setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+}
+
+- (IBAction)showNewResult:(id)sender {
+    [self setNew];
     [self.tableView reloadData];
 }
 
-- (IBAction)showHotResult:(id)sender {
+- (void)setHot {
     resultShowType = BookSearchResultTypeHot;
+    [btnHot setBackgroundColor:kUIColorWithRGB(0x549bd0)];
+    [btnNew setBackgroundColor:kUIColorWithRGB(0xe7e0e1)];
+    [btnHot setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [btnNew setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+}
+
+- (IBAction)showHotResult:(id)sender {
+    [self setHot];
     [self.tableView reloadData];
 }
 
@@ -73,6 +91,11 @@
         BookSearchResultTableViewCellStyle1 *viewStyle = (BookSearchResultTableViewCellStyle1 *)viewCell;
         [viewStyle.btnNew addTarget:self action:@selector(showNewResult:) forControlEvents:UIControlEventTouchUpInside];
         [viewStyle.btnHot addTarget:self action:@selector(showHotResult:) forControlEvents:UIControlEventTouchUpInside];
+        btnHot = viewStyle.btnHot;
+        btnNew = viewStyle.btnNew;
+        
+        if (resultShowType == BookSearchResultTypeNew) [self setNew];
+        else if (resultShowType == BookSearchResultTypeHot) [self setHot];
     }
     else {
         viewCell = [tableView dequeueReusableCellWithIdentifier:@"BookSearchResultTableViewCellStyle2"];
