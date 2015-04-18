@@ -1090,7 +1090,7 @@
                                     <outlet property="movieInfoView" destination="seK-jA-cZg" id="awM-FS-cVO"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCenterTableViewCellStyle3" rowHeight="80" id="T3H-Bq-g8q" customClass="MovieCenterTableViewCellStyle3">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCenterTableViewCellStyle3" rowHeight="185" id="T3H-Bq-g8q" customClass="MovieCenterTableViewCellStyle3">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T3H-Bq-g8q" id="pdT-mO-ioE">

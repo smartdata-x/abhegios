@@ -85,9 +85,6 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (IS_SECTION(0)) {
-        return 80;
-    }
-    else if (IS_SECTION(1) && IS_ROW(0)) {
         return 185;
     }
     return 160;
@@ -115,6 +112,7 @@
         viewCell = [tableView dequeueReusableCellWithIdentifier:@"MovieCenterTableViewCellStyle3"];
         [viewCell setData:group];
     }
+#if 0
     else if (IS_SECTION(1)) {
         if (IS_ROW(0)) {
             viewCell = [tableView dequeueReusableCellWithIdentifier:@"MovieCenterTableViewCellStyle2"];
@@ -130,6 +128,7 @@
             styleView.delegate = self;
         }
     }
+#endif
     else {
         viewCell = [tableView dequeueReusableCellWithIdentifier:@"MovieCenterTableViewCellStyle1"];
         NSInteger startIndex = indexPath.row * 2;
