@@ -12,10 +12,6 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    [[_btnHot layer] setCornerRadius:2.0f];
-    [[_btnHot layer] setMasksToBounds:YES];
-    [[_btnNew layer] setCornerRadius:2.0f];
-    [[_btnNew layer] setMasksToBounds:YES];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

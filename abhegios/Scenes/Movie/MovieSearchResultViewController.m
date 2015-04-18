@@ -46,6 +46,8 @@
     _isHotShown = YES;
     [_btnHot setBackgroundColor:kUIColorWithRGB(0x549bd0)];
     [_btnNew setBackgroundColor:kUIColorWithRGB(0xe7e0e1)];
+    [_btnHot setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_btnNew setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     if (!noReload) [self.tableView reloadData];
 }
 
@@ -53,6 +55,8 @@
     _isHotShown = NO;
     [_btnNew setBackgroundColor:kUIColorWithRGB(0x549bd0)];
     [_btnHot setBackgroundColor:kUIColorWithRGB(0xe7e0e1)];
+    [_btnNew setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_btnHot setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     if (!noReload) [self.tableView reloadData];
 }
 
@@ -85,7 +89,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (IS_SECTION(0)) {
-        return 49;
+        return 70;
     }
     return 160;
 }
@@ -115,6 +119,10 @@
         return viewCell;
     }
     return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"AppDetailsTableViewCellStyleNone"];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end
