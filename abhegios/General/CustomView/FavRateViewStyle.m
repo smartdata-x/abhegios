@@ -22,10 +22,27 @@
     [_rate4 setHidden:NO];
 }
 
+- (void)setColorStyle:(FavRateColorStyle)style {
+    _colorStyle = style;
+    UIImageView *rates[] = {_rate0, _rate1, _rate2, _rate3, _rate4};
+    NSString *defaultImgName = @"star";
+    
+    if (_colorStyle == FavRateColorStyleWhite) {
+        defaultImgName = @"book_star_white.png";
+    }
+    
+    for (int i=0; i<kMaxFavRate; i++) {
+        [rates[i] setImage:[UIImage imageNamed:defaultImgName]];
+    }
+}
+
 - (void)setData:(float)rate {
     [self showAll];
     BOOL hasHalf = rate - (int)rate > 0.4;
     UIImage *halfStar = [UIImage imageNamed:@"halfstar.jpg"];
+    if (_colorStyle == FavRateColorStyleWhite) {
+        halfStar = [UIImage imageNamed:@"book_half_star_white.png"];
+    }
     int fullStar = (int)rate;
     fullStar = MAX(kMinFavRate, fullStar);
     fullStar = MIN(kMaxFavRate, fullStar);

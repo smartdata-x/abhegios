@@ -17,6 +17,7 @@
 #import "BookSearchResultTableViewController.h"
 #import "BookDirectoryTableViewController.h"
 #import "BookThemeTableViewController.h"
+#import "BookStoreTableViewCellStyle4.h"
 #import <OEZCommSDK/OEZCommSDK.h>
 #import "AppAPIHelper.h"
 
@@ -143,6 +144,8 @@
         if (row == 0) {
             // 大横屏
             viewCell = [tableView dequeueReusableCellWithIdentifier:bookCellStyle];
+            BookStoreTableViewCellStyle4 *viewStyle = (BookStoreTableViewCellStyle4 *)viewCell;
+            [viewStyle.favRate setColorStyle:FavRateColorStyleWhite];
             [viewCell setData:group];
         }
         else {
