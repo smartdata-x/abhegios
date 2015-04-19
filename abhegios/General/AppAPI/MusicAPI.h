@@ -10,4 +10,7 @@
 #import "ReqeustDelegate.h"
 @protocol MusicAPI <NSObject>
 - (void)getMusicDimension:(id<ReqeustDelegate>) delegate Dimension:(NSString *)dimension Sid:(NSInteger)sid;
+- (void)collectSong:(NSInteger)sid delegate:(id<ReqeustDelegate>)delegate;
+- (void)deleteCltSong:(NSInteger)sid delegate:(id<ReqeustDelegate>)delegate;
+- (void)hateSong:(NSInteger)sid delegate:(id<ReqeustDelegate>)delegate;
 @end

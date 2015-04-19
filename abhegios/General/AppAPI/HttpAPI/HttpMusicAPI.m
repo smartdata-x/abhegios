@@ -17,4 +17,25 @@
         return [GroupInfo initWithsConfigAndDataDictionarys:@"musicroom" groupsData:data entityClass:[MusicRoomInfo class]];
     }];
 }
+
+- (void)collectSong:(NSInteger)sid delegate:(id<ReqeustDelegate>)delegate {
+    NSString *path = @"/music/1/collectsong.fcgi";
+    [self request:path parameter:[NSDictionary dictionaryWithObject:@(sid) forKey:@"songid"] delegate:delegate processBlock:^id(id data) {
+        return nil;
+    }];
+}
+
+- (void)deleteCltSong:(NSInteger)sid delegate:(id<ReqeustDelegate>)delegate {
+    static NSString *path = @"/music/1/cdelcltsong.fcgi";
+    [self request:path parameter:[NSDictionary dictionaryWithObject:@(sid) forKey:@"songid"] delegate:delegate processBlock:^id(id data) {
+        return nil;
+    }];
+}
+
+- (void)hateSong:(NSInteger)sid delegate:(id<ReqeustDelegate>)delegate {
+    static NSString *path = @"/music/1/hatesong.fcgi";
+    [self request:path parameter:[NSDictionary dictionaryWithObject:@(sid) forKey:@"songid"] delegate:delegate processBlock:^id(id data) {
+        return nil;
+    }];
+}
 @end

@@ -86,14 +86,15 @@
 
 - (IBAction)doNext:(id)sender {
     [PlayerInstance doNext];
+    [_player doNext];
 }
 
 - (IBAction)doTrash:(id)sender {
-    
+    [_player doTrash];
 }
 
 - (IBAction)doLove:(id)sender {
-    
+    [_player doLove];
 }
 
 - (void)MusicPlayerHelperStateChange:(NSInteger)state {

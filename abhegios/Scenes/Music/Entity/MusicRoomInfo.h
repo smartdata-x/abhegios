@@ -19,4 +19,5 @@
 @property (nonatomic, copy) NSString *url;
 @property (nonatomic, retain) NSString *pic;
 @property CGFloat duration;
+@property NSInteger like;
 @end

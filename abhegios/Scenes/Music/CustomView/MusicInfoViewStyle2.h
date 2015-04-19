@@ -16,4 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *next;
 - (void)setData:(id)data;
 - (void)updateScreen;
+- (void)doNext;
+- (void)doTrash;
+- (void)doLove;
 @end

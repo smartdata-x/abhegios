@@ -20,6 +20,7 @@
 {
     NSTimer *_frameTimer;
     NSArray *_fmInfo;
+    BOOL useTemp;
 }
 
 - (void)viewDidLoad {
@@ -64,6 +65,10 @@
     NSInteger musicSid = [[loc objectAtIndex:1] integerValue];
     NSString *summary = [[[[_fmInfo objectAtIndex:musicDimension] entitys] objectAtIndex:musicSid] strSid];
     [_summary setText:summary];
+    
+    // like
+    NSString *isLike = currentInfo.like ? @"love_on.png" : @"love_icon.png";
+    [_love setBackgroundImage:[UIImage imageNamed:isLike] forState:UIControlStateNormal];
 }
 
 - (void)updateScreenPerFrame {
@@ -72,13 +77,34 @@
 
 - (IBAction)doNext:(id)sender {
     [PlayerInstance doNext];
+    useTemp = NO;
 }
 
 - (IBAction)doTrash:(id)sender {
+    MusicRoomInfo *currentInfo = [PlayerInstance getCurrentMusicInfo];
+    [[[AppAPIHelper shared] getMusicAPI] hateSong:currentInfo.id delegate:nil];
 }
 
 - (IBAction)doLove:(id)sender {
+    MusicRoomInfo *currentInfo = [PlayerInstance getCurrentMusicInfo];
+    static NSInteger tempLike = 0;
+    NSString *likeImg = @"";
     
+    if (!useTemp) {
+        tempLike = currentInfo.like;
+    }
+    
+    if (tempLike) {
+        [[[AppAPIHelper shared] getMusicAPI] deleteCltSong:currentInfo.id delegate:nil];
+        likeImg = @"love_icon.png";
+    }
+    else {
+        [[[AppAPIHelper shared] getMusicAPI] collectSong:currentInfo.id delegate:nil];
+        likeImg = @"love_on.png";
+    }
+    useTemp = YES;
+    tempLike = !tempLike;
+    [_love setBackgroundImage:[UIImage imageNamed:likeImg] forState:UIControlStateNormal];
 }
 
 - (void)gotoMusicFMView {
