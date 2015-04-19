@@ -20,7 +20,6 @@
 {
     NSTimer *_frameTimer;
     NSArray *_fmInfo;
-    BOOL useTemp;
 }
 
 - (void)viewDidLoad {
@@ -77,7 +76,6 @@
 
 - (IBAction)doNext:(id)sender {
     [PlayerInstance doNext];
-    useTemp = NO;
 }
 
 - (IBAction)doTrash:(id)sender {
@@ -87,24 +85,16 @@
 
 - (IBAction)doLove:(id)sender {
     MusicRoomInfo *currentInfo = [PlayerInstance getCurrentMusicInfo];
-    static NSInteger tempLike = 0;
-    NSString *likeImg = @"";
-    
-    if (!useTemp) {
-        tempLike = currentInfo.like;
-    }
-    
-    if (tempLike) {
+    NSString *likeImg = @"love_icon.png";
+    if (currentInfo.like) {
         [[[AppAPIHelper shared] getMusicAPI] deleteCltSong:currentInfo.id delegate:nil];
-        likeImg = @"love_icon.png";
     }
     else {
         [[[AppAPIHelper shared] getMusicAPI] collectSong:currentInfo.id delegate:nil];
         likeImg = @"love_on.png";
     }
-    useTemp = YES;
-    tempLike = !tempLike;
     [_love setBackgroundImage:[UIImage imageNamed:likeImg] forState:UIControlStateNormal];
+    currentInfo.like = !currentInfo.like;
 }
 
 - (void)gotoMusicFMView {
