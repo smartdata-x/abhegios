@@ -155,6 +155,7 @@ typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
             case EntityType_Music:
                 break;
             case EntityType_Movie:
+                [self.navigationController pushMoiveDetailsViewController:baseInfo animated:YES];
                 break;
             default:
                 break;

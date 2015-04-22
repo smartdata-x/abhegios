@@ -9,6 +9,7 @@
 #import "MyNavigationViewController.h"
 #import "AppDetailsViewController.h"
 #import "BookDetailInfoTableViewController.h"
+#import "MovieDetailViewController.h"
 @implementation MyNavigationViewController
 
 -(void) viewDidLoad
@@ -35,6 +36,13 @@
 
     [self pushViewControllerWithIdentifier:@"BookDetailInfoTableViewController" completion:^(UIViewController *viewController) {
         [(BookDetailInfoTableViewController*)viewController setData:bookInfo];
+    } animated:YES];
+}
+
+-(void) pushMoiveDetailsViewController:(id) movieInfo animated:(BOOL)animated
+{
+    [self pushViewControllerWithIdentifier:@"MovieDetailViewController" completion:^(UIViewController *viewController){
+        [(MovieDetailViewController*)viewController setData:movieInfo];
     } animated:YES];
 }
 @end

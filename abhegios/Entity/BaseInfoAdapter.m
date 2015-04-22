@@ -11,6 +11,7 @@
 #import "AppInfo.h"
 #import "BookInfo.h"
 #import "MusicInfo.h"
+#import "MovieInfo.h"
 @implementation BaseInfoAdapter
 +(NSString*) getPic:(id) info
 {
@@ -48,9 +49,9 @@
         case EntityType_Book:
             return [NSString stringWithFormat:@"阅读次数 %@",@([info read])];
         case EntityType_Music:
-            return [NSString stringWithFormat:@"试听次数 %@",@([info down])];
+            return [NSString stringWithFormat:@"试听次数 %@",@([info listen])];
         case EntityType_Movie:
-            return [NSString stringWithFormat:@"观看次数 %@",@([info listen])];
+            return [NSString stringWithFormat:@"观看次数 %@",@([info play])];
         default:
             return @"";
     }
@@ -64,7 +65,7 @@
         return EntityType_Book;
     else if( [info isKindOfClass:[MusicInfo class]])
         return EntityType_Music;
-    else if( [info isKindOfClass:[MusicInfo class]])
+    else if( [info isKindOfClass:[MovieInfo class]])
         return EntityType_Movie;
     return EntityType_None;
 }

@@ -64,7 +64,7 @@ typedef NS_ENUM(NSInteger, AppDetailsTableViewCellStyle) {
                 return 294;
             case AppDetailsTableViewCellStyleTwo:
             {
-                [self setTitle:[[_tableViewData intro] name]];
+                //[self setTitle:[[_tableViewData intro] name]];
                 NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:14]};
                 CGSize size = [[[_tableViewData intro] summary] boundingRectWithSize:CGSizeMake(kMainScreenWidth-30, MAXFLOAT) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:attribute context:nil].size;
                 

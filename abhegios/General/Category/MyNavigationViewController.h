@@ -10,6 +10,7 @@
 @interface UINavigationController (MyNavigationViewController)
 -(void) pushAppDetailsViewController:(id) appInfo animated:(BOOL)animated;
 -(void) pushBookDetailsViewController:(id) bookInfo animated:(BOOL)animated;
+-(void) pushMoiveDetailsViewController:(id) movieInfo animated:(BOOL)animated;
 @end
 @interface MyNavigationViewController : OEZNavigationViewController
 
