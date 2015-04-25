@@ -12,6 +12,7 @@
 #import "MovieInfo.h"
 #import "MovieSearchResultTableViewCellStyle1.h"
 #import "MovieDetailViewController.h"
+#define kMaxRowNum 2
 
 @interface MovieSearchResultViewController ()
 @property NSInteger typeID;
@@ -96,7 +97,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     OEZTableViewCell *viewCell = nil;
-    NSString *identifier = [NSString stringWithFormat:@"MovieSearchResultTableViewCellStyle%d", indexPath.section+1];
+    NSString *identifier = [NSString stringWithFormat:@"MovieSearchResultTableViewCellStyle%@", @(indexPath.section+1)];
     GroupInfo *group = [_tableViewData objectAtIndex:(_isHotShown ? 4 : 5)];
     if (group && [[group entitys] count] > 0) {
         viewCell = [tableView dequeueReusableCellWithIdentifier:identifier];
@@ -110,9 +111,12 @@
         }
         else if (IS_SECTION(1)) {
             // 只从第二个开始显示
-            NSInteger startIndex = indexPath.row * 2;
-            NSMutableArray *movieArray = [[NSMutableArray alloc] initWithObjects:[[group entitys] objectAtIndex:startIndex], [[group entitys] objectAtIndex:startIndex+1], nil];
-            [viewCell setData:movieArray];
+            viewCell = [tableView dequeueReusableCellWithIdentifier:@"MovieCenterTableViewCellStyle1"];
+            NSInteger startIndex = indexPath.row * kMaxRowNum;
+            NSInteger len = MIN(kMaxRowNum, [[group entitys] count] - startIndex );
+            NSRange range = NSMakeRange(startIndex, len);
+            
+            [viewCell setData:[[group entitys] subarrayWithRange:range]];
             MovieSearchResultTableViewCellStyle2 *resultview = (MovieSearchResultTableViewCellStyle2 *)viewCell;
             resultview.delegate = self;
         }
