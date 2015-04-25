@@ -157,7 +157,7 @@
     OEZTableViewCell *viewCell = nil;
     id data = nil;
     MovieDetailInfo *movieDetailInfo = _tableViewData;
-    NSString *cellIdentifier = [NSString stringWithFormat:@"MovieDetailTableViewCellStyle%d", indexPath.section+1];
+    NSString *cellIdentifier = [NSString stringWithFormat:@"MovieDetailTableViewCellStyle%@", @(indexPath.section+1)];
     viewCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     switch (indexPath.section) {

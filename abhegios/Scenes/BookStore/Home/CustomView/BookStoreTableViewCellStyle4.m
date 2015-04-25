@@ -27,7 +27,7 @@
 - (void)setData:(id)data {
     [super setData:data];
     GroupInfo *bookInfoGroup = data;
-    int count = [[bookInfoGroup entitys] count];
+    NSInteger count = [[bookInfoGroup entitys] count];
     count = count >= 1 ? 1 : count;
     for (int i=0; i<count; i++) {
         BookInfo *bookInfo = [[bookInfoGroup entitys] objectAtIndex:i];

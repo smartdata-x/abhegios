@@ -43,9 +43,9 @@
 - (void)setDataWithIndex:(id)data Index:(NSInteger)index {
     [self hideAll];
     [super setData:data];
-    int offset = index * 3;
-    int count = [[(BookDetailPage *)data label] count];
-    int leftCount = count - offset;
+    NSInteger offset = index * 3;
+    NSInteger count = [[(BookDetailPage *)data label] count];
+    NSInteger leftCount = count - offset;
     leftCount = leftCount > 3 ? 3 : leftCount;
     switch (leftCount) {
         case 3:

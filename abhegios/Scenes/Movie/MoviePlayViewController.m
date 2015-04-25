@@ -51,5 +51,13 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)moviePlayDidEnd:(id)sender
+{
+    
+}
+- (IBAction)doPlayOrPause:(id)sender
+{
+    
+}
 
 @end
