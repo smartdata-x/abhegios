@@ -12,7 +12,7 @@
 #import "AppAPIHelper.h"
 #import "MovieDetailViewController.h"
 #import "MovieSearchListViewController.h"
-
+#define kMaxRowNum 2
 @interface MovieCenterViewController ()
 
 @end
@@ -131,9 +131,11 @@
 #endif
     else {
         viewCell = [tableView dequeueReusableCellWithIdentifier:@"MovieCenterTableViewCellStyle1"];
-        NSInteger startIndex = indexPath.row * 2;
-        NSArray *movieArray = [[NSArray alloc] initWithObjects:[[group entitys] objectAtIndex:startIndex], [[group entitys] objectAtIndex:startIndex+1], nil];
-        [viewCell setData:movieArray];
+        NSInteger startIndex = indexPath.row * kMaxRowNum;
+        NSInteger len = MIN(kMaxRowNum, [[group entitys] count] - startIndex );
+        NSRange range = NSMakeRange(startIndex, len);
+
+        [viewCell setData:[[group entitys] subarrayWithRange:range]];
         MovieCenterTableViewCellStyle1 *styleView = (MovieCenterTableViewCellStyle1 *)viewCell;
         styleView.delegate = self;
     }

@@ -4,7 +4,7 @@
 <array>
 	<dict>
 		<key>identifier</key>
-		<string>AppHomeViewController</string>
+		<string>AppSegue</string>
 		<key>title</key>
 		<string>应用</string>
 		<key>icon</key>
@@ -12,7 +12,7 @@
 	</dict>
 	<dict>
 		<key>identifier</key>
-		<string>GameHomeViewController</string>
+		<string>GameSegue</string>
 		<key>title</key>
 		<string>游戏</string>
 		<key>icon</key>
@@ -20,7 +20,7 @@
 	</dict>
 	<dict>
 		<key>identifier</key>
-		<string>BookStoreViewController</string>
+		<string>BookSegue</string>
 		<key>title</key>
 		<string>书籍</string>
 		<key>icon</key>
@@ -28,7 +28,7 @@
 	</dict>
 	<dict>
 		<key>identifier</key>
-		<string>MusicRoomViewController</string>
+		<string>MusicSegue</string>
 		<key>title</key>
 		<string>音乐</string>
 		<key>icon</key>
@@ -36,7 +36,7 @@
 	</dict>
 	<dict>
 		<key>identifier</key>
-		<string>MovieCenterViewController</string>
+		<string>MovieSegue</string>
 		<key>title</key>
 		<string>电影</string>
 		<key>icon</key>
