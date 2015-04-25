@@ -85,7 +85,8 @@
     
     GroupInfo *movieGroup = [_tableViewData objectAtIndex:(_isHotShown ? 4 : 5)];
     NSInteger count = [[movieGroup entitys] count];
-    return count / 2;
+    count = count / kMaxRowNum == 0 ? count / kMaxRowNum : count / kMaxRowNum + 1;
+    return count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
