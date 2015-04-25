@@ -169,6 +169,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="PXP-Au-OUg">
+                            <rect key="frame" x="0.0" y="64" width="600" height="133"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="Eme-oo-Ehh">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="pcl-tA-ctI"/>
+                                    </constraints>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gE-NP-5i8">
+                                    <rect key="frame" x="10" y="44" width="160" height="80"/>
+                                    <state key="normal" backgroundImage="you_fav_app">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <segue destination="DlJ-JM-CzY" kind="push" id="Ftw-yN-K0U"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGw-5E-wn4">
+                                    <rect key="frame" x="430" y="44" width="160" height="80"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="160" id="QQL-LI-Ajk"/>
+                                    </constraints>
+                                    <state key="normal" backgroundImage="you_fav_book">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <segue destination="6VX-9h-VmT" kind="push" id="bCw-nR-1uu"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="ZGw-5E-wn4" secondAttribute="bottom" constant="9" id="95o-yd-rTi"/>
+                                <constraint firstItem="ZGw-5E-wn4" firstAttribute="top" secondItem="Eme-oo-Ehh" secondAttribute="bottom" id="Wva-aF-CvS"/>
+                                <constraint firstItem="Eme-oo-Ehh" firstAttribute="top" secondItem="PXP-Au-OUg" secondAttribute="top" id="YYK-Ai-lNM"/>
+                                <constraint firstAttribute="trailing" secondItem="ZGw-5E-wn4" secondAttribute="trailing" constant="10" id="YbZ-M8-icw"/>
+                                <constraint firstItem="Eme-oo-Ehh" firstAttribute="leading" secondItem="PXP-Au-OUg" secondAttribute="leading" id="l8r-OE-wwa"/>
+                                <constraint firstAttribute="trailing" secondItem="Eme-oo-Ehh" secondAttribute="trailing" id="z4j-Oi-Iio"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FoundTableViewCell" textLabel="hRv-Am-A9f" style="IBUITableViewCellStyleDefault" id="8MB-JF-PE4">
                                 <rect key="frame" x="0.0" y="56" width="600" height="44"/>
@@ -200,8 +243,6 @@
                         <segue destination="Pp0-0U-Kdk" kind="push" identifier="BookSegue" id="O6g-Bg-NzH"/>
                         <segue destination="1iO-mU-VMV" kind="push" identifier="MovieSegue" id="Fcc-Me-IXG"/>
                         <segue destination="IYr-bQ-UIs" kind="push" identifier="MusicSegue" id="pmA-5D-T3e"/>
-                        <segue destination="6VX-9h-VmT" kind="push" id="ZmL-d2-g59"/>
-                        <segue destination="DlJ-JM-CzY" kind="push" id="mA6-ES-MxZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="61T-rQ-xC4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -283,7 +324,7 @@
                             <outlet property="delegate" destination="o4P-FE-cmg" id="bpX-E5-wyq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="QXx-JZ-L78"/>
+                    <navigationItem key="navigationItem" title="应用" id="QXx-JZ-L78"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSB-eo-iO2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -551,7 +592,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="b3O-S3-Jai"/>
+                    <navigationItem key="navigationItem" title="书城" id="b3O-S3-Jai"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
@@ -560,7 +601,7 @@
             </objects>
             <point key="canvasLocation" x="2438" y="-1034"/>
         </scene>
-        <!--Table View Controller-->
+        <!--推荐书籍-->
         <scene sceneID="KBY-lw-LOp">
             <objects>
                 <tableViewController id="6VX-9h-VmT" sceneMemberID="viewController">
@@ -581,13 +622,13 @@
                             <outlet property="delegate" destination="6VX-9h-VmT" id="Kvq-ty-SM1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="il7-fm-W8v"/>
+                    <navigationItem key="navigationItem" title="推荐书籍" id="il7-fm-W8v"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDe-64-Ms4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2430" y="2396"/>
         </scene>
-        <!--Table View Controller-->
+        <!--推荐应用-->
         <scene sceneID="QkF-Sp-HeX">
             <objects>
                 <tableViewController id="DlJ-JM-CzY" sceneMemberID="viewController">
@@ -608,7 +649,7 @@
                             <outlet property="delegate" destination="DlJ-JM-CzY" id="IYT-EL-rqn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="SiX-ja-pUh"/>
+                    <navigationItem key="navigationItem" title="推荐应用" id="SiX-ja-pUh"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51X-cy-07b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1211,7 +1252,7 @@
                             <outlet property="delegate" destination="1iO-mU-VMV" id="gFL-uu-rc1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="QmA-bV-UBQ"/>
+                    <navigationItem key="navigationItem" title="影视" id="QmA-bV-UBQ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GKw-Kc-J3y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1357,7 +1398,7 @@
                             <constraint firstAttribute="trailing" secondItem="uY5-pG-g53" secondAttribute="trailing" constant="80" id="yS8-BW-QjQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Gl9-kG-3gz"/>
+                    <navigationItem key="navigationItem" title="音乐" id="Gl9-kG-3gz"/>
                     <connections>
                         <outlet property="love" destination="f3Y-pw-TbE" id="b91-Nc-2OS"/>
                         <outlet property="name" destination="KjG-Do-ZfI" id="TL3-P2-Fgh"/>
@@ -1488,7 +1529,7 @@
                             <outlet property="delegate" destination="O12-Zf-ZRR" id="g4M-7H-uB9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="dt4-of-bFK"/>
+                    <navigationItem key="navigationItem" title="游戏" id="dt4-of-bFK"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJA-wF-Ts4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1603,5 +1644,7 @@
         <image name="trash_icon" width="26" height="25"/>
         <image name="wifi_bigico_n" width="28" height="25"/>
         <image name="wifi_ico" width="23" height="22"/>
+        <image name="you_fav_app" width="145" height="72"/>
+        <image name="you_fav_book" width="145" height="72"/>
     </resources>
 </document>

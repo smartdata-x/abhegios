@@ -24,8 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _foundItemInfos =[FoundItemInfo initWithsPlistResource:@"uifounddata" ofType:@"plist"];
-    _searchView = [SearchView loadFromNib];
-    [self.tableView setTableHeaderView:[FundTableViewHeader loadFromNib]];
+    //_searchView = [SearchView loadFromNib];
+    //[self.tableView setTableHeaderView:[FundTableViewHeader loadFromNib]];
 
 }
 
@@ -64,9 +64,6 @@
     {
         NSString *identifier = [[_foundItemInfos objectAtIndex:[indexPath row]] identifier];
         if (  [identifier isNotEmpty] ) {
-//            [self.tabBarController.navigationController pushViewControllerWithIdentifier:identifier completion:^(UIViewController *viewController) {
-//                NSLog(@"%@",viewController);
-//            } animated:YES];
              [self performSegueWithIdentifier:identifier sender:self];
             
         }
