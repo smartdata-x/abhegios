@@ -13,7 +13,6 @@
 #import "MovieSearchResultTableViewCellStyle1.h"
 #import "MovieDetailViewController.h"
 #define kMaxRowNum 2
-
 @interface MovieSearchResultViewController ()
 @property NSInteger typeID;
 @property BOOL isHotShown;
@@ -85,8 +84,7 @@
     
     GroupInfo *movieGroup = [_tableViewData objectAtIndex:(_isHotShown ? 4 : 5)];
     NSInteger count = [[movieGroup entitys] count];
-    count = count / kMaxRowNum == 0 ? count / kMaxRowNum : count / kMaxRowNum + 1;
-    return count;
+    return count / 2;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -111,13 +109,11 @@
             _isHotShown ? [self setHot:YES] : [self setNew:YES];
         }
         else if (IS_SECTION(1)) {
-            // 只从第二个开始显示
-            viewCell = [tableView dequeueReusableCellWithIdentifier:@"MovieCenterTableViewCellStyle1"];
             NSInteger startIndex = indexPath.row * kMaxRowNum;
             NSInteger len = MIN(kMaxRowNum, [[group entitys] count] - startIndex );
             NSRange range = NSMakeRange(startIndex, len);
-            
             [viewCell setData:[[group entitys] subarrayWithRange:range]];
+            
             MovieSearchResultTableViewCellStyle2 *resultview = (MovieSearchResultTableViewCellStyle2 *)viewCell;
             resultview.delegate = self;
         }

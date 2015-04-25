@@ -27,7 +27,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="700" y="78"/>
+            <point key="canvasLocation" x="700" y="106"/>
         </scene>
         <!--推荐-->
         <scene sceneID="bcb-7L-5oE">
@@ -103,7 +103,44 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qI5-jr-1o7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="700" y="906"/>
+            <point key="canvasLocation" x="708" y="780"/>
+        </scene>
+        <!--摇一摇-->
+        <scene sceneID="flk-uh-BSs">
+            <objects>
+                <viewController id="vT2-JV-Eeb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lWg-Vy-p4Y"/>
+                        <viewControllerLayoutGuide type="bottom" id="uJ6-ic-XT3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dlM-9i-yRc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2EU-oz-saV">
+                                <rect key="frame" x="0.0" y="551" width="600" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="1Sf-Qb-JDP"/>
+                                </constraints>
+                                <items>
+                                    <tabBarItem title="WIFI" image="wifi_bigico_n" id="pGz-uY-JKa"/>
+                                    <tabBarItem title="APP" image="app_bigico" id="SZ6-Xy-v1z"/>
+                                    <tabBarItem title="周边" image="around_bigico" id="ZyD-MV-H9O"/>
+                                </items>
+                            </tabBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="2EU-oz-saV" secondAttribute="bottom" id="XTv-Sq-lBF"/>
+                            <constraint firstAttribute="trailing" secondItem="2EU-oz-saV" secondAttribute="trailing" id="nMO-39-tYp"/>
+                            <constraint firstItem="2EU-oz-saV" firstAttribute="leading" secondItem="dlM-9i-yRc" secondAttribute="leading" id="taY-1e-kCj"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="摇一摇" id="PHn-2Y-QPq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HaR-GB-V17" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="1472"/>
         </scene>
         <!--WIFI-->
         <scene sceneID="mUm-PU-tox">
@@ -1555,6 +1592,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="app_bigico" width="28" height="25"/>
+        <image name="around_bigico" width="28" height="25"/>
         <image name="big_shade" width="277" height="112"/>
         <image name="found_ico" width="23" height="22"/>
         <image name="my_ico" width="23" height="22"/>
@@ -1562,6 +1601,7 @@
         <image name="recommend_ico" width="23" height="22"/>
         <image name="shake_phone" width="19" height="20"/>
         <image name="trash_icon" width="26" height="25"/>
+        <image name="wifi_bigico_n" width="28" height="25"/>
         <image name="wifi_ico" width="23" height="22"/>
     </resources>
 </document>
