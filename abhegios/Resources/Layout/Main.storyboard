@@ -73,6 +73,11 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="推荐" image="recommend_ico" id="A7W-8h-qzq"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="ije-J6-OfD" kind="push" identifier="AppSegue" id="Ecm-YX-f27"/>
+                        <segue destination="QBn-zm-4Z3" kind="push" identifier="BookSegue" id="3eW-jy-qIL"/>
+                        <segue destination="Wni-vu-5PL" kind="push" identifier="MovieSegue" id="TB7-vE-J2d"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gdM-Wf-wML" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -324,11 +329,50 @@
                             <outlet property="delegate" destination="o4P-FE-cmg" id="bpX-E5-wyq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="应用" id="QXx-JZ-L78"/>
+                    <toolbarItems>
+                        <barButtonItem systemItem="search" id="Aow-gq-1TU">
+                            <connections>
+                                <segue destination="yUR-NK-eq8" kind="push" id="O2w-Xd-mhx"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="应用" id="lyl-LM-WZj">
+                        <connections>
+                            <outlet property="rightBarButtonItem" destination="Aow-gq-1TU" id="tC3-Gs-FLu"/>
+                        </connections>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSB-eo-iO2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2438" y="-354"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="WHH-dQ-Pdh">
+            <objects>
+                <tableViewController id="yUR-NK-eq8" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="DyX-bj-ani">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="IFZ-E5-aAR">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IFZ-E5-aAR" id="Jx5-g6-2XQ">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yUR-NK-eq8" id="ltH-AZ-HjV"/>
+                            <outlet property="delegate" destination="yUR-NK-eq8" id="Oxo-2J-DE1"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="gpr-vf-A8C"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pVZ-ew-9Xd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3323" y="337"/>
         </scene>
         <!--应用详情-->
         <scene sceneID="iQv-fo-dZX">
@@ -490,10 +534,11 @@
                             <outlet property="delegate" destination="ije-J6-OfD" id="7EG-iG-YTd"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="Da4-Mx-20M"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pym-RQ-vBz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3363" y="66"/>
+            <point key="canvasLocation" x="3323" y="1026"/>
         </scene>
         <!--书城-->
         <scene sceneID="fB3-UP-ywa">
@@ -846,6 +891,7 @@
                             <outlet property="delegate" destination="Wni-vu-5PL" id="ol8-SG-omV"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="JCE-Qy-Bao"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2GT-da-Vku" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1023,6 +1069,7 @@
                             <outlet property="delegate" destination="QBn-zm-4Z3" id="chL-YE-LIl"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="jep-Gl-eQb"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="71s-Zy-nRs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1529,7 +1576,19 @@
                             <outlet property="delegate" destination="O12-Zf-ZRR" id="g4M-7H-uB9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="游戏" id="dt4-of-bFK"/>
+                    <toolbarItems>
+                        <barButtonItem systemItem="search" id="X4Z-YT-x2M">
+                            <connections>
+                                <segue destination="yUR-NK-eq8" kind="push" id="Lpp-7P-0IO"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="游戏" id="dt4-of-bFK">
+                        <connections>
+                            <outlet property="rightBarButtonItem" destination="X4Z-YT-x2M" id="lYe-9J-VgU"/>
+                        </connections>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJA-wF-Ts4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1629,7 +1688,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="erG-fJ-IdY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3363" y="763"/>
+            <point key="canvasLocation" x="3323" y="1711"/>
         </scene>
     </scenes>
     <resources>
@@ -1647,4 +1706,7 @@
         <image name="you_fav_app" width="145" height="72"/>
         <image name="you_fav_book" width="145" height="72"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="O2w-Xd-mhx"/>
+    </inferredMetricsTieBreakers>
 </document>

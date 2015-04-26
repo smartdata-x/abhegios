@@ -10,5 +10,5 @@
 #import "RefreshTableViewController.h"
 @class AppInfo;
 @interface AppDetailsViewController : RefreshTableViewController
-@property AppInfo  *appInfo;
+@property AppInfo  *data;
 @end

@@ -147,21 +147,33 @@ typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
         switch ([BaseInfoAdapter getEntityType:baseInfo])
         {
             case EntityType_App:
-                [self.navigationController pushAppDetailsViewController:baseInfo animated:YES ];
+                [self performSegueWithIdentifier:@"AppSegue" sender:self];
                 break;
             case EntityType_Book:
-                [self.navigationController pushBookDetailsViewController:baseInfo animated:YES];
+                [self performSegueWithIdentifier:@"BookSegue" sender:self];
                 break;
             case EntityType_Music:
                 break;
             case EntityType_Movie:
-                [self.navigationController pushMoiveDetailsViewController:baseInfo animated:YES];
+                [self performSegueWithIdentifier:@"MovieSegue" sender:self];
                 break;
             default:
                 break;
         }
     }
-   }
+}
+
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    id viewController = segue.destinationViewController;
+    if ( [viewController respondsToSelector:@selector(setData:)])
+    {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+         BaseInfo* baseInfo = [[[self getGroupInfo:[indexPath section]]entitys] objectAtIndex:[indexPath row]];
+        [viewController setData:baseInfo];
+    }
+}
 
 
 @end

@@ -28,12 +28,12 @@ typedef NS_ENUM(NSInteger, AppDetailsTableViewCellStyle) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-    [self setTitle:[_appInfo name]];
+    [self setTitle:[_data name]];
 }
 
 -(void)  didRequest
 {
-    [[[AppAPIHelper shared] getApplyAPI] getAppDetails:[_appInfo id] delegate:self];
+    [[[AppAPIHelper shared] getApplyAPI] getAppDetails:[_data id] delegate:self];
 }
 
 
