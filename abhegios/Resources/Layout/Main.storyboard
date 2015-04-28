@@ -649,17 +649,32 @@
         <!--推荐书籍-->
         <scene sceneID="KBY-lw-LOp">
             <objects>
-                <tableViewController id="6VX-9h-VmT" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="BookRecommendViewController" id="6VX-9h-VmT" customClass="BookRecommendViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ye1-QL-H3B">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dd0-Mz-k11">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookTableViewCellStyle1" rowHeight="81" id="4rx-em-mbB" customClass="AppTableViewCellStyle1">
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dd0-Mz-k11" id="EVk-El-RXi">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4rx-em-mbB" id="Qtu-jn-bHG">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jcd-ll-vWH" customClass="InfoViewStyle">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Jcd-ll-vWH" secondAttribute="trailing" id="2cy-R8-y9a"/>
+                                        <constraint firstItem="Jcd-ll-vWH" firstAttribute="leading" secondItem="Qtu-jn-bHG" secondAttribute="leading" id="8S5-ct-vfv"/>
+                                        <constraint firstAttribute="bottom" secondItem="Jcd-ll-vWH" secondAttribute="bottom" id="QmJ-nW-xTE"/>
+                                        <constraint firstItem="Jcd-ll-vWH" firstAttribute="top" secondItem="Qtu-jn-bHG" secondAttribute="top" id="xct-lI-X8b"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="appInfoView" destination="Jcd-ll-vWH" id="f8H-P1-IZ2"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -676,17 +691,32 @@
         <!--推荐应用-->
         <scene sceneID="QkF-Sp-HeX">
             <objects>
-                <tableViewController id="DlJ-JM-CzY" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AppRecommendViewController" id="DlJ-JM-CzY" customClass="AppRecommendViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ExM-qS-6Hj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hM3-ml-wgS">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AppTableViewCellStyle1" rowHeight="81" id="Drg-mS-tPg" customClass="AppTableViewCellStyle1">
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hM3-ml-wgS" id="X11-H7-LfZ">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Drg-mS-tPg" id="lLn-cF-Snb">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ruV-iG-ZFt" customClass="InfoViewStyle">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="ruV-iG-ZFt" secondAttribute="trailing" id="7Xw-3n-XJw"/>
+                                        <constraint firstAttribute="bottom" secondItem="ruV-iG-ZFt" secondAttribute="bottom" id="AOZ-tc-l5F"/>
+                                        <constraint firstItem="ruV-iG-ZFt" firstAttribute="top" secondItem="lLn-cF-Snb" secondAttribute="top" id="dsT-1K-Uyj"/>
+                                        <constraint firstItem="ruV-iG-ZFt" firstAttribute="leading" secondItem="lLn-cF-Snb" secondAttribute="leading" id="htY-X2-pkj"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="appInfoView" destination="ruV-iG-ZFt" id="9yk-PT-Pih"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1669,11 +1699,17 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p0a-NG-zz2" id="IHH-A2-ePo">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XCX-Uu-Dse" customClass="InfoViewStyle">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCX-Uu-Dse" customClass="InfoViewStyle">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="XCX-Uu-Dse" firstAttribute="leading" secondItem="IHH-A2-ePo" secondAttribute="leading" id="9Tx-e0-GjE"/>
+                                        <constraint firstItem="XCX-Uu-Dse" firstAttribute="top" secondItem="IHH-A2-ePo" secondAttribute="top" id="SoT-B1-6w4"/>
+                                        <constraint firstAttribute="bottom" secondItem="XCX-Uu-Dse" secondAttribute="bottom" id="WGI-6s-h1c"/>
+                                        <constraint firstAttribute="trailing" secondItem="XCX-Uu-Dse" secondAttribute="trailing" id="r8g-lq-cU0"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="appInfoView" destination="XCX-Uu-Dse" id="41D-cH-xtE"/>

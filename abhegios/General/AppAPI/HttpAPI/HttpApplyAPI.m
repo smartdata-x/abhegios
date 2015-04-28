@@ -52,4 +52,20 @@
 
 }
 
+-(void) getAppPersonal:(id<ReqeustDelegate>) delegate
+{
+    static NSString *path = @"/find/1/personal.fcgi";
+    [self request:path parameter:[NSDictionary dictionaryWithObject:@(1) forKey:@"category"] delegate:delegate processBlock:^id(id data) {
+        return [AppInfo initWithsDictionarys:[data objectForKey:@"app"]];
+    }];
+}
+
+-(void) getGamePersonal:(id<ReqeustDelegate>) delegate
+{
+    static NSString *path = @"/find/1/personal.fcgi";
+    [self request:path parameter:[NSDictionary dictionaryWithObject:@(2) forKey:@"category"] delegate:delegate processBlock:^id(id data) {
+        return [AppInfo initWithsDictionarys:[data objectForKey:@"app"]];
+    }];
+}
+
 @end

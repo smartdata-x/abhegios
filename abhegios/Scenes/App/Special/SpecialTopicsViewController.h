@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RefreshTableViewController.h"
+#import "BaseAppListViewController.h"
 #import "ADInfo.h"
-@interface SpecialTopicsViewController : RefreshTableViewController
+@interface SpecialTopicsViewController : BaseAppListViewController
 @property ADInfo  *adInfo;
 @end

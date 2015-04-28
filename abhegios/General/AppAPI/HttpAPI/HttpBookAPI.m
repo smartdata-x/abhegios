@@ -64,4 +64,12 @@
     static NSString *path = @"/book/1/topics.fcgi";
     [self request:path parameter:[NSDictionary dictionaryWithObject:@(typeID) forKey:@"tid"] delegate:delegate entityClass:[BookTopicInfo class]];
 }
+
+-(void) getPersonal:(id<ReqeustDelegate>) delegate
+{
+    static NSString *path = @"/find/1/personal.fcgi";
+    [self request:path parameter:[NSDictionary dictionaryWithObject:@(3) forKey:@"category"] delegate:delegate processBlock:^id(id data) {
+        return [BookInfo initWithsDictionarys:[data objectForKey:@"book"]];
+    }];
+}
 @end

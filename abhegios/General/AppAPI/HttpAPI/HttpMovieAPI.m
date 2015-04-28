@@ -38,4 +38,12 @@
         return nil;
     }];
 }
+
+-(void) getPersonal:(id<ReqeustDelegate>) delegate
+{
+    static NSString *path = @"/find/1/personal.fcgi";
+    [self request:path parameter:[NSDictionary dictionaryWithObject:@(5) forKey:@"category"] delegate:delegate processBlock:^id(id data) {
+        return [MovieInfo initWithsDictionarys:[data objectForKey:@"movie"]];
+    }];
+}
 @end

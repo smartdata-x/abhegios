@@ -14,4 +14,6 @@
 -(void) getAppDetails:(NSInteger) appID delegate:(id<ReqeustDelegate>) delegate;
 -(void) getWanted:(NSInteger) appID delegate:(id<ReqeustDelegate>) delegate;
 -(void) getSpecialTopics:(NSInteger) tID delegate:(id<ReqeustDelegate>) delegate;
+-(void) getAppPersonal:(id<ReqeustDelegate>) delegate;
+-(void) getGamePersonal:(id<ReqeustDelegate>) delegate;
 @end

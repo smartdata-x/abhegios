@@ -48,6 +48,8 @@ NSString *const RefreshError = @"加载失败!";
     [self.refreshControl addTarget:self action:@selector(didRefresh) forControlEvents:UIControlEventValueChanged];
     [self.refreshControl beginRefreshing];
     [self performSelector:@selector(didRefresh) withObject:nil afterDelay:kAfterDelay];
+    if( [self.tableView tableFooterView] == nil)
+        [self.tableView setTableFooterView:[[UIView alloc] init]];
     
 }
 

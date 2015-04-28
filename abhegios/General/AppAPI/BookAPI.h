@@ -16,4 +16,5 @@
 - (void)getBookChapterList:(NSInteger)bookID BookToken:(NSString *)bookToken delegate:(id<ReqeustDelegate>)delegate;
 - (void)getBookWanted:(NSInteger)bookID delegate:(id<ReqeustDelegate>)delegate;
 - (void)getBookTopics:(NSInteger)typeID delegate:(id<ReqeustDelegate>)delegate;
+-(void) getPersonal:(id<ReqeustDelegate>) delegate;
 @end

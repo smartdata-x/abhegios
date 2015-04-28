@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1AD6460C6803B48F071D6E89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AD6432947FE4430D644F23B /* Images.xcassets */; };
+		CAACB88A1AEF7E68007A7673 /* BaseAppListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAACB8891AEF7E68007A7673 /* BaseAppListViewController.m */; };
+		CAACB88E1AEF7F64007A7673 /* AppRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAACB88D1AEF7F64007A7673 /* AppRecommendViewController.m */; };
+		CAACB8921AEF81F8007A7673 /* BookRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAACB8911AEF81F8007A7673 /* BookRecommendViewController.m */; };
 		CB1B41AB1ADEC3AD000D61B9 /* DirectMPMoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1B41AA1ADEC3AD000D61B9 /* DirectMPMoviePlayerViewController.m */; };
 		CBD81E6F1A839C2E006E6604 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD81E6E1A839C2E006E6604 /* AudioToolbox.framework */; };
 		CBD81E711A839C50006E6604 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD81E701A839C50006E6604 /* MediaPlayer.framework */; };
@@ -213,6 +216,12 @@
 
 /* Begin PBXFileReference section */
 		1AD6432947FE4430D644F23B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CAACB8881AEF7E68007A7673 /* BaseAppListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAppListViewController.h; sourceTree = "<group>"; };
+		CAACB8891AEF7E68007A7673 /* BaseAppListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAppListViewController.m; sourceTree = "<group>"; };
+		CAACB88C1AEF7F64007A7673 /* AppRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppRecommendViewController.h; sourceTree = "<group>"; };
+		CAACB88D1AEF7F64007A7673 /* AppRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppRecommendViewController.m; sourceTree = "<group>"; };
+		CAACB8901AEF81F8007A7673 /* BookRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookRecommendViewController.h; sourceTree = "<group>"; };
+		CAACB8911AEF81F8007A7673 /* BookRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookRecommendViewController.m; sourceTree = "<group>"; };
 		CB1B41A91ADEC3AD000D61B9 /* DirectMPMoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectMPMoviePlayerViewController.h; sourceTree = "<group>"; };
 		CB1B41AA1ADEC3AD000D61B9 /* DirectMPMoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectMPMoviePlayerViewController.m; sourceTree = "<group>"; };
 		CBD81E6E1A839C2E006E6604 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -660,6 +669,24 @@
 			name = Framework;
 			sourceTree = "<group>";
 		};
+		CAACB88B1AEF7EDB007A7673 /* Recommend */ = {
+			isa = PBXGroup;
+			children = (
+				CAACB88C1AEF7F64007A7673 /* AppRecommendViewController.h */,
+				CAACB88D1AEF7F64007A7673 /* AppRecommendViewController.m */,
+			);
+			path = Recommend;
+			sourceTree = "<group>";
+		};
+		CAACB88F1AEF81C9007A7673 /* Recommend */ = {
+			isa = PBXGroup;
+			children = (
+				CAACB8901AEF81F8007A7673 /* BookRecommendViewController.h */,
+				CAACB8911AEF81F8007A7673 /* BookRecommendViewController.m */,
+			);
+			path = Recommend;
+			sourceTree = "<group>";
+		};
 		CBE50BCA1AC9932F000265DC /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -850,6 +877,7 @@
 		EAA200A81AC8DEB500E088CE /* BookStore */ = {
 			isa = PBXGroup;
 			children = (
+				CAACB88F1AEF81C9007A7673 /* Recommend */,
 				EAA200A91AC8DEB500E088CE /* Directory */,
 				EAA200AF1AC8DEB500E088CE /* Theme */,
 				EAA200B71AC8DEB500E088CE /* Reader */,
@@ -1145,11 +1173,14 @@
 		EAA2012D1AC8DEB500E088CE /* App */ = {
 			isa = PBXGroup;
 			children = (
+				CAACB88B1AEF7EDB007A7673 /* Recommend */,
 				EAA2012E1AC8DEB500E088CE /* GameHome */,
 				EAA2013B1AC8DEB500E088CE /* Details */,
 				EAA201481AC8DEB500E088CE /* Special */,
 				EAA2014B1AC8DEB500E088CE /* AppHome */,
 				EAA2014E1AC8DEB500E088CE /* CustomView */,
+				CAACB8881AEF7E68007A7673 /* BaseAppListViewController.h */,
+				CAACB8891AEF7E68007A7673 /* BaseAppListViewController.m */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -1723,6 +1754,7 @@
 				EAA2024C1AC8DEB600E088CE /* HttpUserAPI.m in Sources */,
 				EAA202361AC8DEB600E088CE /* AppInfoViewStyle3.m in Sources */,
 				EAA202011AC8DEB500E088CE /* BookStoreTableViewCellStyle2.m in Sources */,
+				CAACB88A1AEF7E68007A7673 /* BaseAppListViewController.m in Sources */,
 				EAA201EC1AC8DEB500E088CE /* FoundHScrollViewCell.m in Sources */,
 				EAA201EB1AC8DEB500E088CE /* MyViewController.m in Sources */,
 				EAA202111AC8DEB600E088CE /* AudioPlayer.m in Sources */,
@@ -1765,11 +1797,13 @@
 				EAA201FF1AC8DEB500E088CE /* BookStoreViewController.m in Sources */,
 				EAA783641AD6507900B82895 /* AFPropertyListRequestOperation.m in Sources */,
 				EAA201E81AC8DEB500E088CE /* FoundViewController.m in Sources */,
+				CAACB8921AEF81F8007A7673 /* BookRecommendViewController.m in Sources */,
 				EAA202571AC8DEB600E088CE /* BaseInfoAdapter.m in Sources */,
 				EAA2023F1AC8DEB600E088CE /* MyNavigationViewController.m in Sources */,
 				EAA783631AD6507900B82895 /* AFNetworkReachabilityManager.m in Sources */,
 				EAA202461AC8DEB600E088CE /* HandleOpenURLHelper.m in Sources */,
 				EAA201EA1AC8DEB500E088CE /* FoundItemInfo.m in Sources */,
+				CAACB88E1AEF7F64007A7673 /* AppRecommendViewController.m in Sources */,
 				EAA202021AC8DEB500E088CE /* BookStoreTableViewCellStyle3.m in Sources */,
 				EAA2022A1AC8DEB600E088CE /* AppDetailsInfo.m in Sources */,
 				CBE50BD11AC9948D000265DC /* MovieHScrollViewCell1.m in Sources */,
