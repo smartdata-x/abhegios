@@ -11,4 +11,6 @@
 
 @interface umengTrackHelper : NSObject<HelperProtocol>
 - (void)startTrack;
+
+@property (nonatomic,retain) NSString* path;
 @end
