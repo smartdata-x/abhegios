@@ -18,6 +18,9 @@
     [super viewDidLoad];
     [self setTitle:@"摇一摇"];
     [_tabBar setSelectedItem:[_tabBar.items objectAtIndex:0]];
+    
+    
+    
     // Do any additional setup after loading the view.
 }
 
@@ -72,8 +75,26 @@
     //摇动结束
     
     if (event.subtype == UIEventSubtypeMotionShake) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"shake_male" ofType:@"mp3"];
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:path], &_soundID);
+        AudioServicesPlaySystemSound(_soundID);
+        CGRect oldTopRect = [_top frame];
+        CGRect oldBottomRect = [_bottom frame];
+        CGRect newTopRect = [_top frame];
+        newTopRect.origin.y -= 59.5;
+        CGRect newBottomRect = [_bottom frame];
+        newBottomRect.origin.y += 59.5;
+        [UIView animateWithDuration:0.5 animations:^{
+            [_top setFrame:newTopRect];
+            [_bottom setFrame:newBottomRect];
+
+        }completion:^(BOOL finished) {
+            [UIView animateWithDuration:0.5 animations:^{
+                [_top setFrame:oldTopRect];
+                [_bottom setFrame:oldBottomRect];
+            }];
+        }];
         
-        //something happens
         
     }
     

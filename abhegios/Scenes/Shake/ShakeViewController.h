@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <AudioToolbox/AudioToolbox.h>
 @interface ShakeViewController : UIViewController
+{
+    SystemSoundID _soundID;
+}
 @property (weak, nonatomic) IBOutlet UITabBar *tabBar;
+@property (weak, nonatomic) IBOutlet UIView *bottom;
+@property (weak, nonatomic) IBOutlet UIView *top;
 
 @end
