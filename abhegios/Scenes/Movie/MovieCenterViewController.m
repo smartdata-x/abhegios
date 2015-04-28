@@ -12,6 +12,7 @@
 #import "AppAPIHelper.h"
 #import "MovieDetailViewController.h"
 #import "MovieSearchListViewController.h"
+#import "ADInfo.h"
 #define kMaxRowNum 2
 @interface MovieCenterViewController ()
 
@@ -141,6 +142,18 @@
     }
     
     return viewCell;
+}
+
+- (void)tableView:(UITableView *)tableView rowAtIndexPath:(NSIndexPath *)indexPath didSelectColumnAtIndex:(NSInteger)column {
+    GroupInfo *group = [_tableViewData objectAtIndex:indexPath.section];
+    NSInteger row = [indexPath row] + column;
+    if ([[group key] hasPrefix:@"advert"]) {
+        ADInfo *adInfo = [[group entitys] objectAtIndex:row];
+        MovieInfo *movieInfo = [[MovieInfo alloc] init];
+        [movieInfo setName:@""];
+        [movieInfo setId:[adInfo id]];
+        [self gotoMovieDetail:movieInfo];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
