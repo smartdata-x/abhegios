@@ -22,7 +22,7 @@
 @end
 
 @interface OEZHScrollView : UIScrollView
-@property(nonatomic,assign) id<OEZHScrollViewDelegate>  delegate;
+//@property(nonatomic,assign) id<OEZHScrollViewDelegate>  delegate;
 - (id)dequeueReusableCellWithIdentifier:(NSString *)identifier;
 - (void) reloadData;
 @end
