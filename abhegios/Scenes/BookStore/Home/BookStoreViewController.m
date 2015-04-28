@@ -20,6 +20,7 @@
 #import "BookStoreTableViewCellStyle4.h"
 #import <OEZCommSDK/OEZCommSDK.h>
 #import "AppAPIHelper.h"
+#import "ADInfo.h"
 
 @interface BookStoreViewController ()
 {
@@ -159,6 +160,21 @@
         }
     }
     return viewCell;
+}
+
+- (void)tableView:(UITableView *)tableView rowAtIndexPath:(NSIndexPath *)indexPath didSelectColumnAtIndex:(NSInteger)column {
+    GroupInfo *group = [_tableViewData objectAtIndex:indexPath.section];
+    NSInteger row = [indexPath row] + column;
+    if ([[group key] hasPrefix:@"advert"]) {
+        ADInfo *adInfo = [[group entitys] objectAtIndex:row];
+        BookInfo *bookInfo = [[BookInfo alloc] init];
+        [bookInfo setName:@""];
+        [bookInfo setId:[adInfo id]];
+        [self.navigationController pushViewControllerWithIdentifier:@"BookDetailInfoTableViewController" completion:^(UIViewController *viewController) {
+            BookDetailInfoTableViewController *bookDetailInfoView = (BookDetailInfoTableViewController *)viewController;
+            [bookDetailInfoView setData:bookInfo];
+        } animated:YES];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
