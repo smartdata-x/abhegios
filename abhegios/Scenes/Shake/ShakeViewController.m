@@ -17,8 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTitle:@"摇一摇"];
-    [_tabBar setSelectedItem:[_tabBar.items objectAtIndex:0]];
-    
+    [_tabBar setSelectedItem:[_tabBar.items objectAtIndex:1]];
+    [_topImageConstraint setConstant:-2.5];
+    [_bottomImageConstraint setConstant:0.5];
+    [_bottomImageTopConstraint setConstant:-1.5];
     
     
     // Do any additional setup after loading the view.

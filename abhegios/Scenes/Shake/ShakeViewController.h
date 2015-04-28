@@ -15,5 +15,8 @@
 @property (weak, nonatomic) IBOutlet UITabBar *tabBar;
 @property (weak, nonatomic) IBOutlet UIView *bottom;
 @property (weak, nonatomic) IBOutlet UIView *top;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topImageConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomImageConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomImageTopConstraint;
 
 @end

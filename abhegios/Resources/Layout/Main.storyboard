@@ -148,34 +148,34 @@
                                         <rect key="frame" x="0.0" y="276" width="600" height="275"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand_phone_bottom" translatesAutoresizingMaskIntoConstraints="NO" id="Ful-tO-FhB">
-                                                <rect key="frame" x="187" y="-3" width="225" height="112"/>
+                                                <rect key="frame" x="244" y="-2" width="112" height="56"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="225" id="ghz-ec-fva"/>
-                                                    <constraint firstAttribute="height" constant="112" id="kGT-3P-mP6"/>
+                                                    <constraint firstAttribute="width" constant="112" id="Knd-og-TEM"/>
+                                                    <constraint firstAttribute="height" constant="56" id="lqI-Hx-Qpe"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="Ful-tO-FhB" firstAttribute="top" secondItem="8ly-it-PLg" secondAttribute="top" constant="-3" id="bDh-Dn-Gfi"/>
-                                            <constraint firstAttribute="centerX" secondItem="Ful-tO-FhB" secondAttribute="centerX" constant="1" id="qHn-HZ-0zz"/>
+                                            <constraint firstAttribute="centerX" secondItem="Ful-tO-FhB" secondAttribute="centerX" id="IZJ-5X-h0E"/>
+                                            <constraint firstItem="Ful-tO-FhB" firstAttribute="top" secondItem="8ly-it-PLg" secondAttribute="top" constant="-2" id="cNH-WM-6bn"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" restorationIdentifier="Top" translatesAutoresizingMaskIntoConstraints="NO" id="vkb-O9-EIH" userLabel="Top">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="276"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand_phone_top" translatesAutoresizingMaskIntoConstraints="NO" id="c1v-J0-jPQ">
-                                                <rect key="frame" x="188" y="155" width="225" height="126"/>
+                                                <rect key="frame" x="244" y="222" width="112" height="56"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="225" id="CVo-Rj-uWk"/>
-                                                    <constraint firstAttribute="height" constant="126" id="wKx-lS-AIh"/>
+                                                    <constraint firstAttribute="width" constant="112" id="Yvs-ki-tMs"/>
+                                                    <constraint firstAttribute="height" constant="56" id="iNJ-M2-oSV"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="c1v-J0-jPQ" secondAttribute="bottom" constant="-5" id="27R-dC-Zbo"/>
-                                            <constraint firstAttribute="centerX" secondItem="c1v-J0-jPQ" secondAttribute="centerX" id="ix6-op-0Pd"/>
+                                            <constraint firstAttribute="bottom" secondItem="c1v-J0-jPQ" secondAttribute="bottom" constant="-2" id="ad7-na-ouV"/>
+                                            <constraint firstAttribute="centerX" secondItem="c1v-J0-jPQ" secondAttribute="centerX" id="zKn-zK-kos"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -221,8 +221,11 @@
                     <tabBarItem key="tabBarItem" title="摇一摇" image="shake_phone" id="PHn-2Y-QPq"/>
                     <connections>
                         <outlet property="bottom" destination="8ly-it-PLg" id="y0W-py-K0N"/>
+                        <outlet property="bottomImageConstraint" destination="IZJ-5X-h0E" id="Tx3-BX-SWD"/>
+                        <outlet property="bottomImageTopConstraint" destination="cNH-WM-6bn" id="9Gd-uf-3kM"/>
                         <outlet property="tabBar" destination="2EU-oz-saV" id="k4v-cb-4GM"/>
                         <outlet property="top" destination="vkb-O9-EIH" id="Db9-9n-a2P"/>
+                        <outlet property="topImageConstraint" destination="ad7-na-ouV" id="Ank-Dh-C6J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HaR-GB-V17" userLabel="First Responder" sceneMemberID="firstResponder"/>
