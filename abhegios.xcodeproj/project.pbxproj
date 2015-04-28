@@ -8,9 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1AD6460C6803B48F071D6E89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AD6432947FE4430D644F23B /* Images.xcassets */; };
+		CA9676CF1AEFC1E7006D7C41 /* shake_male.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CA9676CC1AEFC1E7006D7C41 /* shake_male.mp3 */; };
+		CA9676D01AEFC1E7006D7C41 /* shake_match.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CA9676CD1AEFC1E7006D7C41 /* shake_match.mp3 */; };
+		CA9676D11AEFC1E7006D7C41 /* shake_nomatch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CA9676CE1AEFC1E7006D7C41 /* shake_nomatch.mp3 */; };
 		CAACB88A1AEF7E68007A7673 /* BaseAppListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAACB8891AEF7E68007A7673 /* BaseAppListViewController.m */; };
 		CAACB88E1AEF7F64007A7673 /* AppRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAACB88D1AEF7F64007A7673 /* AppRecommendViewController.m */; };
 		CAACB8921AEF81F8007A7673 /* BookRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAACB8911AEF81F8007A7673 /* BookRecommendViewController.m */; };
+		CAACB8961AEF85F1007A7673 /* ShakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAACB8951AEF85F1007A7673 /* ShakeViewController.m */; };
 		CB1B41AB1ADEC3AD000D61B9 /* DirectMPMoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1B41AA1ADEC3AD000D61B9 /* DirectMPMoviePlayerViewController.m */; };
 		CBD81E6F1A839C2E006E6604 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD81E6E1A839C2E006E6604 /* AudioToolbox.framework */; };
 		CBD81E711A839C50006E6604 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD81E701A839C50006E6604 /* MediaPlayer.framework */; };
@@ -216,12 +220,17 @@
 
 /* Begin PBXFileReference section */
 		1AD6432947FE4430D644F23B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CA9676CC1AEFC1E7006D7C41 /* shake_male.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shake_male.mp3; sourceTree = "<group>"; };
+		CA9676CD1AEFC1E7006D7C41 /* shake_match.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shake_match.mp3; sourceTree = "<group>"; };
+		CA9676CE1AEFC1E7006D7C41 /* shake_nomatch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shake_nomatch.mp3; sourceTree = "<group>"; };
 		CAACB8881AEF7E68007A7673 /* BaseAppListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAppListViewController.h; sourceTree = "<group>"; };
 		CAACB8891AEF7E68007A7673 /* BaseAppListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAppListViewController.m; sourceTree = "<group>"; };
 		CAACB88C1AEF7F64007A7673 /* AppRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppRecommendViewController.h; sourceTree = "<group>"; };
 		CAACB88D1AEF7F64007A7673 /* AppRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppRecommendViewController.m; sourceTree = "<group>"; };
 		CAACB8901AEF81F8007A7673 /* BookRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookRecommendViewController.h; sourceTree = "<group>"; };
 		CAACB8911AEF81F8007A7673 /* BookRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookRecommendViewController.m; sourceTree = "<group>"; };
+		CAACB8941AEF85F1007A7673 /* ShakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShakeViewController.h; sourceTree = "<group>"; };
+		CAACB8951AEF85F1007A7673 /* ShakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShakeViewController.m; sourceTree = "<group>"; };
 		CB1B41A91ADEC3AD000D61B9 /* DirectMPMoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectMPMoviePlayerViewController.h; sourceTree = "<group>"; };
 		CB1B41AA1ADEC3AD000D61B9 /* DirectMPMoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectMPMoviePlayerViewController.m; sourceTree = "<group>"; };
 		CBD81E6E1A839C2E006E6604 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -622,6 +631,9 @@
 		1AD641C296B4622C6E427B9F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CA9676CC1AEFC1E7006D7C41 /* shake_male.mp3 */,
+				CA9676CD1AEFC1E7006D7C41 /* shake_match.mp3 */,
+				CA9676CE1AEFC1E7006D7C41 /* shake_nomatch.mp3 */,
 				EAA2006C1AC8DE9F00E088CE /* Layout */,
 				1AD6432947FE4430D644F23B /* Images.xcassets */,
 				1AD64A45ECE7FF2A410D90BB /* Supporting Files */,
@@ -685,6 +697,15 @@
 				CAACB8911AEF81F8007A7673 /* BookRecommendViewController.m */,
 			);
 			path = Recommend;
+			sourceTree = "<group>";
+		};
+		CAACB8931AEF85D4007A7673 /* Shake */ = {
+			isa = PBXGroup;
+			children = (
+				CAACB8941AEF85F1007A7673 /* ShakeViewController.h */,
+				CAACB8951AEF85F1007A7673 /* ShakeViewController.m */,
+			);
+			path = Shake;
 			sourceTree = "<group>";
 		};
 		CBE50BCA1AC9932F000265DC /* Home */ = {
@@ -835,6 +856,7 @@
 		EAA200971AC8DEB500E088CE /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CAACB8931AEF85D4007A7673 /* Shake */,
 				EAA200981AC8DEB500E088CE /* Main */,
 				EAA200A81AC8DEB500E088CE /* BookStore */,
 				EAA200FB1AC8DEB500E088CE /* Music */,
@@ -1666,7 +1688,9 @@
 				EA88BFBC1A74E37F004885A0 /* recommendhome.plist in Resources */,
 				EAA200841AC8DE9F00E088CE /* InfoViewStyle.xib in Resources */,
 				EAA200891AC8DE9F00E088CE /* FavRateViewStyle.xib in Resources */,
+				CA9676D01AEFC1E7006D7C41 /* shake_match.mp3 in Resources */,
 				EAA2008B1AC8DE9F00E088CE /* FundTableViewHeader.xib in Resources */,
+				CA9676CF1AEFC1E7006D7C41 /* shake_male.mp3 in Resources */,
 				EAA200951AC8DE9F00E088CE /* SearchView.xib in Resources */,
 				EAA200931AC8DE9F00E088CE /* PageViewImageCell.xib in Resources */,
 				EAA200821AC8DE9F00E088CE /* Main.storyboard in Resources */,
@@ -1679,6 +1703,7 @@
 				EAA2008F1AC8DE9F00E088CE /* MovieInfoViewStyle2.xib in Resources */,
 				EA2225E51AA3EB2800D04A6B /* musicroom.plist in Resources */,
 				EAA200921AC8DE9F00E088CE /* MusicInfoViewStyle3.xib in Resources */,
+				CA9676D11AEFC1E7006D7C41 /* shake_nomatch.mp3 in Resources */,
 				EA75998E1A7120A50027FC8B /* uilogindata.plist in Resources */,
 				EAA200881AC8DE9F00E088CE /* BookInfoViewStyle4.xib in Resources */,
 				EA2225E31AA3EB2800D04A6B /* musicfm.json in Resources */,
@@ -1822,6 +1847,7 @@
 				EAA201E91AC8DEB500E088CE /* MainViewController.m in Sources */,
 				CBE50BDF1AC9AADF000265DC /* MovieDetailTableViewCellStyle1.m in Sources */,
 				EAA202451AC8DEB600E088CE /* AppAPIHelper.m in Sources */,
+				CAACB8961AEF85F1007A7673 /* ShakeViewController.m in Sources */,
 				EAA202441AC8DEB600E088CE /* TableViewHeader.m in Sources */,
 				EAA202531AC8DEB600E088CE /* BookInfo.m in Sources */,
 				CBE50C111ACAFB3C000265DC /* MovieSearchListViewController.m in Sources */,
