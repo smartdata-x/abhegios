@@ -18,17 +18,9 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topImageConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomImageConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomImageTopConstraint;
-
-@end
-@protocol  ShakeTaskDelegate;
-@interface BaseShakeTask : NSObject
-@property(nonatomic,assign) id<ShakeTaskDelegate>     delegate;
-@end
-
-@interface AppShakeTask : BaseShakeTask
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic) IBOutlet UILabel *tipsLabel;
+@property (weak, nonatomic) IBOutlet UIView *shakeInfo;
 
 @end
 
-@interface BeaconShakeTask : BaseShakeTask
-
-@end

@@ -153,11 +153,42 @@
                                                     <constraint firstAttribute="height" constant="56" id="lqI-Hx-Qpe"/>
                                                 </constraints>
                                             </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FfY-dP-lIv" userLabel="tips">
+                                                <rect key="frame" x="210" y="146" width="180" height="89"/>
+                                                <subviews>
+                                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ILB-C5-ell">
+                                                        <rect key="frame" x="7" y="35" width="20" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="20" id="UjS-in-Ow9"/>
+                                                            <constraint firstAttribute="height" constant="20" id="bEc-6F-9U9"/>
+                                                        </constraints>
+                                                    </activityIndicatorView>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZ8-4G-IIe">
+                                                        <rect key="frame" x="36" y="0.0" width="136" height="89"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="centerY" secondItem="ILB-C5-ell" secondAttribute="centerY" id="1Ct-72-PxL"/>
+                                                    <constraint firstItem="ILB-C5-ell" firstAttribute="leading" secondItem="FfY-dP-lIv" secondAttribute="leading" constant="7" id="7pJ-Tb-JoJ"/>
+                                                    <constraint firstItem="WZ8-4G-IIe" firstAttribute="top" secondItem="FfY-dP-lIv" secondAttribute="top" id="9j0-xm-5d0"/>
+                                                    <constraint firstAttribute="bottom" secondItem="WZ8-4G-IIe" secondAttribute="bottom" id="EDE-6R-MB2"/>
+                                                    <constraint firstAttribute="trailing" secondItem="WZ8-4G-IIe" secondAttribute="trailing" constant="8" id="EOb-zn-Vs6"/>
+                                                    <constraint firstAttribute="height" constant="89" id="IWF-YH-GuL"/>
+                                                    <constraint firstItem="WZ8-4G-IIe" firstAttribute="leading" secondItem="ILB-C5-ell" secondAttribute="trailing" constant="9" id="NT3-bY-lYD"/>
+                                                    <constraint firstAttribute="width" constant="180" id="Pev-RN-kdK"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="centerX" secondItem="Ful-tO-FhB" secondAttribute="centerX" id="IZJ-5X-h0E"/>
+                                            <constraint firstAttribute="bottom" secondItem="FfY-dP-lIv" secondAttribute="bottom" constant="40" id="UD1-JV-8ey"/>
                                             <constraint firstItem="Ful-tO-FhB" firstAttribute="top" secondItem="8ly-it-PLg" secondAttribute="top" constant="-2" id="cNH-WM-6bn"/>
+                                            <constraint firstAttribute="centerX" secondItem="FfY-dP-lIv" secondAttribute="centerX" id="evh-FF-4tO"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" restorationIdentifier="Top" translatesAutoresizingMaskIntoConstraints="NO" id="vkb-O9-EIH" userLabel="Top">
@@ -177,6 +208,24 @@
                                             <constraint firstAttribute="centerX" secondItem="c1v-J0-jPQ" secondAttribute="centerX" id="zKn-zK-kos"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZCt-ys-izT" userLabel="shakeInfo">
+                                        <rect key="frame" x="-1" y="431" width="602" height="80"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="go_ico" translatesAutoresizingMaskIntoConstraints="NO" id="iPY-x7-tf8">
+                                                <rect key="frame" x="584" y="34" width="8" height="12"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="12" id="Evd-NO-pPB"/>
+                                                    <constraint firstAttribute="width" constant="8" id="nTs-RG-kGb"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="iPY-x7-tf8" secondAttribute="trailing" constant="10" id="Duj-Af-d6e"/>
+                                            <constraint firstAttribute="centerY" secondItem="iPY-x7-tf8" secondAttribute="centerY" id="UBG-JW-qwM"/>
+                                            <constraint firstAttribute="height" constant="80" id="akg-Ln-ePh"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -187,8 +236,11 @@
                                     <constraint firstAttribute="trailing" secondItem="8ly-it-PLg" secondAttribute="trailing" id="97t-DV-iql"/>
                                     <constraint firstItem="vkb-O9-EIH" firstAttribute="leading" secondItem="dx3-uI-du5" secondAttribute="leading" id="B3u-NC-IN4"/>
                                     <constraint firstAttribute="trailing" secondItem="vkb-O9-EIH" secondAttribute="trailing" id="CjB-gw-JRS"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZCt-ys-izT" secondAttribute="bottom" constant="40" id="FqQ-5S-ZdZ"/>
                                     <constraint firstItem="jXU-3S-e0R" firstAttribute="leading" secondItem="dx3-uI-du5" secondAttribute="leading" id="Uer-2p-J1n"/>
                                     <constraint firstItem="vkb-O9-EIH" firstAttribute="top" secondItem="dx3-uI-du5" secondAttribute="top" id="ZBo-Ar-YeL"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZCt-ys-izT" secondAttribute="trailing" constant="-1" id="jzt-ji-0da"/>
+                                    <constraint firstItem="ZCt-ys-izT" firstAttribute="leading" secondItem="dx3-uI-du5" secondAttribute="leading" constant="-1" id="omQ-5p-Leh"/>
                                     <constraint firstItem="8ly-it-PLg" firstAttribute="height" secondItem="vkb-O9-EIH" secondAttribute="height" id="plS-vp-I7d"/>
                                     <constraint firstItem="8ly-it-PLg" firstAttribute="top" secondItem="vkb-O9-EIH" secondAttribute="bottom" id="tqH-VY-YUN"/>
                                     <constraint firstAttribute="centerY" secondItem="jXU-3S-e0R" secondAttribute="centerY" id="xiv-pH-qqs"/>
@@ -217,13 +269,17 @@
                             <constraint firstAttribute="bottom" secondItem="dx3-uI-du5" secondAttribute="bottom" constant="49" id="jgF-ud-QbK"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="摇一摇" image="shake_phone" id="PHn-2Y-QPq"/>
-                    <navigationItem key="navigationItem" id="dwU-aE-Sa9"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="摇一摇" id="dwU-aE-Sa9"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="ILB-C5-ell" id="4xk-kQ-e7N"/>
                         <outlet property="bottom" destination="8ly-it-PLg" id="y0W-py-K0N"/>
                         <outlet property="bottomImageConstraint" destination="IZJ-5X-h0E" id="Tx3-BX-SWD"/>
                         <outlet property="bottomImageTopConstraint" destination="cNH-WM-6bn" id="9Gd-uf-3kM"/>
+                        <outlet property="shakeInfo" destination="ZCt-ys-izT" id="1cT-02-nAA"/>
                         <outlet property="tabBar" destination="2EU-oz-saV" id="k4v-cb-4GM"/>
+                        <outlet property="tipsLabel" destination="WZ8-4G-IIe" id="cmP-A5-ZbX"/>
                         <outlet property="top" destination="vkb-O9-EIH" id="Db9-9n-a2P"/>
                         <outlet property="topImageConstraint" destination="ad7-na-ouV" id="Ank-Dh-C6J"/>
                     </connections>
@@ -1818,6 +1874,7 @@
         <image name="around_bigico" width="28" height="25"/>
         <image name="big_shade" width="277" height="112"/>
         <image name="found_ico" width="23" height="22"/>
+        <image name="go_ico" width="8" height="12"/>
         <image name="hand_phone_bottom" width="225" height="112"/>
         <image name="hand_phone_top" width="225" height="126"/>
         <image name="my_ico" width="23" height="22"/>

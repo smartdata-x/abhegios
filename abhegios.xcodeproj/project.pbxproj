@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1AD6460C6803B48F071D6E89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AD6432947FE4430D644F23B /* Images.xcassets */; };
+		CA398F171AF079DC00FD6D2E /* ShakeTask.m in Sources */ = {isa = PBXBuildFile; fileRef = CA398F161AF079DC00FD6D2E /* ShakeTask.m */; };
+		CA398F191AF09F3500FD6D2E /* BeaconShakeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA398F181AF09F3500FD6D2E /* BeaconShakeView.xib */; };
+		CA398F1D1AF0A18D00FD6D2E /* BeaconShakeView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA398F1C1AF0A18D00FD6D2E /* BeaconShakeView.m */; };
+		CA398F201AF0A2B500FD6D2E /* BeaconShakeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CA398F1F1AF0A2B500FD6D2E /* BeaconShakeInfo.m */; };
 		CA9676CF1AEFC1E7006D7C41 /* shake_male.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CA9676CC1AEFC1E7006D7C41 /* shake_male.mp3 */; };
 		CA9676D01AEFC1E7006D7C41 /* shake_match.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CA9676CD1AEFC1E7006D7C41 /* shake_match.mp3 */; };
 		CA9676D11AEFC1E7006D7C41 /* shake_nomatch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CA9676CE1AEFC1E7006D7C41 /* shake_nomatch.mp3 */; };
@@ -220,6 +224,13 @@
 
 /* Begin PBXFileReference section */
 		1AD6432947FE4430D644F23B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CA398F151AF079DC00FD6D2E /* ShakeTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShakeTask.h; sourceTree = "<group>"; };
+		CA398F161AF079DC00FD6D2E /* ShakeTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShakeTask.m; sourceTree = "<group>"; };
+		CA398F181AF09F3500FD6D2E /* BeaconShakeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeaconShakeView.xib; sourceTree = "<group>"; };
+		CA398F1B1AF0A18D00FD6D2E /* BeaconShakeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconShakeView.h; sourceTree = "<group>"; };
+		CA398F1C1AF0A18D00FD6D2E /* BeaconShakeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconShakeView.m; sourceTree = "<group>"; };
+		CA398F1E1AF0A2B500FD6D2E /* BeaconShakeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconShakeInfo.h; sourceTree = "<group>"; };
+		CA398F1F1AF0A2B500FD6D2E /* BeaconShakeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconShakeInfo.m; sourceTree = "<group>"; };
 		CA9676CC1AEFC1E7006D7C41 /* shake_male.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shake_male.mp3; sourceTree = "<group>"; };
 		CA9676CD1AEFC1E7006D7C41 /* shake_match.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shake_match.mp3; sourceTree = "<group>"; };
 		CA9676CE1AEFC1E7006D7C41 /* shake_nomatch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shake_nomatch.mp3; sourceTree = "<group>"; };
@@ -681,6 +692,15 @@
 			name = Framework;
 			sourceTree = "<group>";
 		};
+		CA398F1A1AF0A15B00FD6D2E /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				CA398F1B1AF0A18D00FD6D2E /* BeaconShakeView.h */,
+				CA398F1C1AF0A18D00FD6D2E /* BeaconShakeView.m */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		CAACB88B1AEF7EDB007A7673 /* Recommend */ = {
 			isa = PBXGroup;
 			children = (
@@ -702,8 +722,11 @@
 		CAACB8931AEF85D4007A7673 /* Shake */ = {
 			isa = PBXGroup;
 			children = (
+				CA398F1A1AF0A15B00FD6D2E /* CustomView */,
 				CAACB8941AEF85F1007A7673 /* ShakeViewController.h */,
 				CAACB8951AEF85F1007A7673 /* ShakeViewController.m */,
+				CA398F151AF079DC00FD6D2E /* ShakeTask.h */,
+				CA398F161AF079DC00FD6D2E /* ShakeTask.m */,
 			);
 			path = Shake;
 			sourceTree = "<group>";
@@ -849,6 +872,7 @@
 				EAA2007F1AC8DE9F00E088CE /* PageViewImageCell1.xib */,
 				EAA200801AC8DE9F00E088CE /* SearchView.xib */,
 				EAA200811AC8DE9F00E088CE /* TableViewHeader.xib */,
+				CA398F181AF09F3500FD6D2E /* BeaconShakeView.xib */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -1496,6 +1520,8 @@
 				EAA201BB1AC8DEB500E088CE /* MusicInfo.h */,
 				EAA201BC1AC8DEB500E088CE /* MovieInfo.m */,
 				EAA201BD1AC8DEB500E088CE /* MusicInfo.m */,
+				CA398F1E1AF0A2B500FD6D2E /* BeaconShakeInfo.h */,
+				CA398F1F1AF0A2B500FD6D2E /* BeaconShakeInfo.m */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1686,6 +1712,7 @@
 				EAA200901AC8DE9F00E088CE /* MusicInfoViewStyle1.xib in Resources */,
 				EA2225E61AA3EB2800D04A6B /* bookstorehome.plist in Resources */,
 				EA88BFBC1A74E37F004885A0 /* recommendhome.plist in Resources */,
+				CA398F191AF09F3500FD6D2E /* BeaconShakeView.xib in Resources */,
 				EAA200841AC8DE9F00E088CE /* InfoViewStyle.xib in Resources */,
 				EAA200891AC8DE9F00E088CE /* FavRateViewStyle.xib in Resources */,
 				CA9676D01AEFC1E7006D7C41 /* shake_match.mp3 in Resources */,
@@ -1779,6 +1806,7 @@
 				EAA2024C1AC8DEB600E088CE /* HttpUserAPI.m in Sources */,
 				EAA202361AC8DEB600E088CE /* AppInfoViewStyle3.m in Sources */,
 				EAA202011AC8DEB500E088CE /* BookStoreTableViewCellStyle2.m in Sources */,
+				CA398F171AF079DC00FD6D2E /* ShakeTask.m in Sources */,
 				CAACB88A1AEF7E68007A7673 /* BaseAppListViewController.m in Sources */,
 				EAA201EC1AC8DEB500E088CE /* FoundHScrollViewCell.m in Sources */,
 				EAA201EB1AC8DEB500E088CE /* MyViewController.m in Sources */,
@@ -1824,6 +1852,7 @@
 				EAA201E81AC8DEB500E088CE /* FoundViewController.m in Sources */,
 				CAACB8921AEF81F8007A7673 /* BookRecommendViewController.m in Sources */,
 				EAA202571AC8DEB600E088CE /* BaseInfoAdapter.m in Sources */,
+				CA398F1D1AF0A18D00FD6D2E /* BeaconShakeView.m in Sources */,
 				EAA2023F1AC8DEB600E088CE /* MyNavigationViewController.m in Sources */,
 				EAA783631AD6507900B82895 /* AFNetworkReachabilityManager.m in Sources */,
 				EAA202461AC8DEB600E088CE /* HandleOpenURLHelper.m in Sources */,
@@ -1846,6 +1875,7 @@
 				EAA2020F1AC8DEB600E088CE /* MusicPlayerHelper.m in Sources */,
 				EAA201E91AC8DEB500E088CE /* MainViewController.m in Sources */,
 				CBE50BDF1AC9AADF000265DC /* MovieDetailTableViewCellStyle1.m in Sources */,
+				CA398F201AF0A2B500FD6D2E /* BeaconShakeInfo.m in Sources */,
 				EAA202451AC8DEB600E088CE /* AppAPIHelper.m in Sources */,
 				CAACB8961AEF85F1007A7673 /* ShakeViewController.m in Sources */,
 				EAA202441AC8DEB600E088CE /* TableViewHeader.m in Sources */,

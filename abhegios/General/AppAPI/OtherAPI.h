@@ -9,4 +9,5 @@
 #import "ReqeustDelegate.h"
 @protocol OtherAPI <NSObject>
 -(void) getRecommendHome:(id<ReqeustDelegate>) delegate;
+-(void) shakeBeacon:(NSString*) uuid mac:(NSString*) mac delegate:(id<ReqeustDelegate>) delegate;
 @end
