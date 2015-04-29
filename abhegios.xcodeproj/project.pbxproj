@@ -135,7 +135,6 @@
 		EAA202171AC8DEB600E088CE /* MusicInfoViewStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA201111AC8DEB500E088CE /* MusicInfoViewStyle1.m */; };
 		EAA202181AC8DEB600E088CE /* MusicInfoViewStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA201131AC8DEB500E088CE /* MusicInfoViewStyle2.m */; };
 		EAA202191AC8DEB600E088CE /* MusicInfoViewStyle3.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA201151AC8DEB500E088CE /* MusicInfoViewStyle3.m */; };
-		EAA2021A1AC8DEB600E088CE /* MusicInfoViewStyle4.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA201171AC8DEB500E088CE /* MusicInfoViewStyle4.m */; };
 		EAA2021B1AC8DEB600E088CE /* MusicFMTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA201191AC8DEB500E088CE /* MusicFMTableViewCellStyle1.m */; };
 		EAA2021C1AC8DEB600E088CE /* MusicRoomInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA2011C1AC8DEB500E088CE /* MusicRoomInfo.m */; };
 		EAA2021D1AC8DEB600E088CE /* MusicFMInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA2011E1AC8DEB500E088CE /* MusicFMInfo.m */; };
@@ -431,8 +430,6 @@
 		EAA201131AC8DEB500E088CE /* MusicInfoViewStyle2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicInfoViewStyle2.m; sourceTree = "<group>"; };
 		EAA201141AC8DEB500E088CE /* MusicInfoViewStyle3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicInfoViewStyle3.h; sourceTree = "<group>"; };
 		EAA201151AC8DEB500E088CE /* MusicInfoViewStyle3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicInfoViewStyle3.m; sourceTree = "<group>"; };
-		EAA201161AC8DEB500E088CE /* MusicInfoViewStyle4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicInfoViewStyle4.h; sourceTree = "<group>"; };
-		EAA201171AC8DEB500E088CE /* MusicInfoViewStyle4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicInfoViewStyle4.m; sourceTree = "<group>"; };
 		EAA201181AC8DEB500E088CE /* MusicFMTableViewCellStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicFMTableViewCellStyle1.h; sourceTree = "<group>"; };
 		EAA201191AC8DEB500E088CE /* MusicFMTableViewCellStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicFMTableViewCellStyle1.m; sourceTree = "<group>"; };
 		EAA2011B1AC8DEB500E088CE /* MusicRoomInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicRoomInfo.h; sourceTree = "<group>"; };
@@ -1174,8 +1171,6 @@
 				EAA201131AC8DEB500E088CE /* MusicInfoViewStyle2.m */,
 				EAA201141AC8DEB500E088CE /* MusicInfoViewStyle3.h */,
 				EAA201151AC8DEB500E088CE /* MusicInfoViewStyle3.m */,
-				EAA201161AC8DEB500E088CE /* MusicInfoViewStyle4.h */,
-				EAA201171AC8DEB500E088CE /* MusicInfoViewStyle4.m */,
 				EAA201181AC8DEB500E088CE /* MusicFMTableViewCellStyle1.h */,
 				EAA201191AC8DEB500E088CE /* MusicFMTableViewCellStyle1.m */,
 			);
@@ -1847,7 +1842,6 @@
 				EAA2020A1AC8DEB600E088CE /* BookDetailInfoTableViewCellStyle5.m in Sources */,
 				EAA2025B1AC8DEB600E088CE /* MusicInfo.m in Sources */,
 				EAA2023D1AC8DEB600E088CE /* WBLogin.m in Sources */,
-				EAA2021A1AC8DEB600E088CE /* MusicInfoViewStyle4.m in Sources */,
 				EAA202561AC8DEB600E088CE /* ADInfo.m in Sources */,
 				EAA202401AC8DEB600E088CE /* NSString+NSStringCategory.m in Sources */,
 				EAA201E71AC8DEB500E088CE /* RecommendViewController.m in Sources */,
