@@ -16,6 +16,7 @@
 		CA9676CF1AEFC1E7006D7C41 /* shake_male.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CA9676CC1AEFC1E7006D7C41 /* shake_male.mp3 */; };
 		CA9676D01AEFC1E7006D7C41 /* shake_match.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CA9676CD1AEFC1E7006D7C41 /* shake_match.mp3 */; };
 		CA9676D11AEFC1E7006D7C41 /* shake_nomatch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CA9676CE1AEFC1E7006D7C41 /* shake_nomatch.mp3 */; };
+		CAA734351AF0CFA3000D1992 /* AppsShakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA734341AF0CFA3000D1992 /* AppsShakeViewController.m */; };
 		CAACB88A1AEF7E68007A7673 /* BaseAppListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAACB8891AEF7E68007A7673 /* BaseAppListViewController.m */; };
 		CAACB88E1AEF7F64007A7673 /* AppRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAACB88D1AEF7F64007A7673 /* AppRecommendViewController.m */; };
 		CAACB8921AEF81F8007A7673 /* BookRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAACB8911AEF81F8007A7673 /* BookRecommendViewController.m */; };
@@ -237,6 +238,8 @@
 		CA9676CC1AEFC1E7006D7C41 /* shake_male.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shake_male.mp3; sourceTree = "<group>"; };
 		CA9676CD1AEFC1E7006D7C41 /* shake_match.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shake_match.mp3; sourceTree = "<group>"; };
 		CA9676CE1AEFC1E7006D7C41 /* shake_nomatch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shake_nomatch.mp3; sourceTree = "<group>"; };
+		CAA734331AF0CFA3000D1992 /* AppsShakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppsShakeViewController.h; sourceTree = "<group>"; };
+		CAA734341AF0CFA3000D1992 /* AppsShakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppsShakeViewController.m; sourceTree = "<group>"; };
 		CAACB8881AEF7E68007A7673 /* BaseAppListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAppListViewController.h; sourceTree = "<group>"; };
 		CAACB8891AEF7E68007A7673 /* BaseAppListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAppListViewController.m; sourceTree = "<group>"; };
 		CAACB88C1AEF7F64007A7673 /* AppRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppRecommendViewController.h; sourceTree = "<group>"; };
@@ -730,6 +733,8 @@
 				CAACB8951AEF85F1007A7673 /* ShakeViewController.m */,
 				CA398F151AF079DC00FD6D2E /* ShakeTask.h */,
 				CA398F161AF079DC00FD6D2E /* ShakeTask.m */,
+				CAA734331AF0CFA3000D1992 /* AppsShakeViewController.h */,
+				CAA734341AF0CFA3000D1992 /* AppsShakeViewController.m */,
 			);
 			path = Shake;
 			sourceTree = "<group>";
@@ -1893,6 +1898,7 @@
 				EAA2020B1AC8DEB600E088CE /* BookChapterInfo.m in Sources */,
 				EAA202001AC8DEB500E088CE /* BookStoreTableViewCellStyle1.m in Sources */,
 				EAA202241AC8DEB600E088CE /* GameHomeViewController.m in Sources */,
+				CAA734351AF0CFA3000D1992 /* AppsShakeViewController.m in Sources */,
 				EAA202481AC8DEB600E088CE /* HttpBookAPI.m in Sources */,
 				EAA2022D1AC8DEB600E088CE /* AppDetailsTableViewCellStyle4.m in Sources */,
 				EAA2021B1AC8DEB600E088CE /* MusicFMTableViewCellStyle1.m in Sources */,

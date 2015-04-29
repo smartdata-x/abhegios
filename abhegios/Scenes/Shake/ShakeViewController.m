@@ -46,7 +46,7 @@
 
 -(IBAction) didShakeInfo:(id)sender
 {
-    [_task didSelect:self];
+    [_task didNext];
 }
 
 
@@ -78,11 +78,16 @@
 }
 
 
+-(UIViewController*) callViewController:(ShakeTask*) shakeTask
+{
+    return self;
+}
+
 -(void) shakeTask:(ShakeTask *)shakeTask didComplete:(id)data view:(UIView *)view
 {
     [_infoView removeFromSuperview];
     _infoView = view;
-    [_infoView setFrame:CGRectMake(1, 0.5, CGRectGetWidth([_shakeInfo frame])-20, CGRectGetHeight([_shakeInfo frame])-1)];
+    [_infoView setFrame:CGRectMake(1, 0.5, CGRectGetWidth([_shakeInfo frame])-40, CGRectGetHeight([_shakeInfo frame])-1)];
     [_shakeInfo addSubview:_infoView];
     [_shakeInfo setHidden:NO];
     [self AudioServicesPlaySystemSound:kShakeMatch];

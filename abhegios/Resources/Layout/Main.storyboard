@@ -270,7 +270,9 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="摇一摇" id="dwU-aE-Sa9"/>
+                    <navigationItem key="navigationItem" title="摇一摇" id="dwU-aE-Sa9">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="BQm-d4-NdK"/>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="activityIndicator" destination="ILB-C5-ell" id="4xk-kQ-e7N"/>
@@ -905,7 +907,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51X-cy-07b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2430" y="3068"/>
+            <point key="canvasLocation" x="2430" y="3081"/>
         </scene>
         <!--书架-->
         <scene sceneID="chd-w2-5Xy">
@@ -1902,6 +1904,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="erG-fJ-IdY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3323" y="1711"/>
+        </scene>
+        <!--应用-->
+        <scene sceneID="Cgw-2p-8aG">
+            <objects>
+                <tableViewController storyboardIdentifier="AppsShakeViewController" title="应用" id="4QN-du-C8q" customClass="AppsShakeViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="leV-a0-Bur">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AppTableViewCellStyle1" rowHeight="81" id="Jzk-Ff-c5G" customClass="AppTableViewCellStyle1">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jzk-Ff-c5G" id="3oK-f4-RVA">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgn-4C-1A9" customClass="InfoViewStyle">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="hgn-4C-1A9" firstAttribute="leading" secondItem="3oK-f4-RVA" secondAttribute="leading" id="5R2-jq-2iF"/>
+                                        <constraint firstAttribute="bottom" secondItem="hgn-4C-1A9" secondAttribute="bottom" id="6M5-JT-hCu"/>
+                                        <constraint firstAttribute="trailing" secondItem="hgn-4C-1A9" secondAttribute="trailing" id="GPc-sN-keO"/>
+                                        <constraint firstItem="hgn-4C-1A9" firstAttribute="top" secondItem="3oK-f4-RVA" secondAttribute="top" id="uaK-id-owr"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="appInfoView" destination="hgn-4C-1A9" id="Mnl-bM-p9G"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4QN-du-C8q" id="IF7-IV-cRO"/>
+                            <outlet property="delegate" destination="4QN-du-C8q" id="DbT-zA-c9d"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="应用" id="XW6-RM-Y1y"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dr5-Ut-Biu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2430" y="3744"/>
         </scene>
     </scenes>
     <resources>

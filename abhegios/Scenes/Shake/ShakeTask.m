@@ -11,6 +11,7 @@
 #import "InfoViewStyle.h"
 #import "BeaconShakeView.h"
 #import "BrowserViewController.h"
+#import "AppsShakeViewController.h"
 @interface AppShakeTask : ShakeTask
 
 @end
@@ -50,7 +51,7 @@
     
 }
 
--(void) didSelect:(UIViewController*) viewController
+-(void) didNext
 {
     
 }
@@ -74,7 +75,18 @@
 
 @implementation AppShakeTask
 {
-    id _data;
+    id                      _data;
+    UITapGestureRecognizer  *_tapGestureRec;
+}
+-(id) init
+{
+    self = [super init];
+    _tapGestureRec = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didAppInfo:)];
+    return self;
+}
+-(IBAction) didAppInfo:(id)sender
+{
+    [[[self.delegate callViewController:self] navigationController] pushAppDetailsViewController:[_data objectAtIndex:0] animated:YES];
 }
 -(void) startReqeust
 {
@@ -83,16 +95,22 @@
 
 -(void) reqeust:(id)reqeust didComplete:(id)data
 {
-    _data = [data objectAtIndex:0];
+    _data = data;
     InfoViewStyle *view = [InfoViewStyle loadFromNib];
+    [view setUserInteractionEnabled:YES];
+    [view addGestureRecognizer:_tapGestureRec];
     [[view setupButton] setHidden:YES];
-    [view setData:_data];
-    [self didComplete:_data view:view];
+    [view setData:[data objectAtIndex:0]];
+    [self didComplete:[data objectAtIndex:0] view:view];
 }
 
--(void) didSelect:(UIViewController*) viewController
+-(void) didNext
+
 {
-    [viewController.navigationController pushAppDetailsViewController:_data animated:YES];
+    
+    [[[self.delegate callViewController:self] navigationController ] pushViewControllerWithIdentifier:@"AppsShakeViewController" completion:^(UIViewController *viewController) {
+        [(AppsShakeViewController*)viewController setData:_data];
+    } animated:YES];
 }
 
 -(NSString*) description
@@ -106,9 +124,9 @@
     id _data;
 }
 
--(void) didSelect:(UIViewController*) viewController
+-(void) didNext
 {
-    [viewController.navigationController pushViewControllerWithIdentifier:@"BrowserViewController" completion:^(UIViewController *viewController) {
+     [[[self.delegate callViewController:self] navigationController ]  pushViewControllerWithIdentifier:@"BrowserViewController" completion:^(UIViewController *viewController) {
         [viewController setTitle:[_data name]];
         [(BrowserViewController*)viewController setUrl:(NSString*)[_data url]];
     } animated:YES];
