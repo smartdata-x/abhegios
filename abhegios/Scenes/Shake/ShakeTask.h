@@ -20,6 +20,7 @@ typedef NS_ENUM(NSInteger, ShakeTaskType) {
 @interface ShakeTask : NSObject<ReqeustDelegate>
 @property(nonatomic,assign) id<ShakeTaskDelegate>     delegate;
 -(void) startReqeust;
+-(void) didSelect:(UIViewController*) viewController;
 +(ShakeTask*) shakeTaskFactory:(ShakeTaskType) type;
 @end
 

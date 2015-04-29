@@ -10,6 +10,7 @@
 #import "AppAPIHelper.h"
 #import "InfoViewStyle.h"
 #import "BeaconShakeView.h"
+#import "BrowserViewController.h"
 @interface AppShakeTask : ShakeTask
 
 @end
@@ -49,6 +50,11 @@
     
 }
 
+-(void) didSelect:(UIViewController*) viewController
+{
+    
+}
+
 +(ShakeTask*) shakeTaskFactory:(ShakeTaskType) type
 {
     switch (type) {
@@ -67,7 +73,9 @@
 @end
 
 @implementation AppShakeTask
-
+{
+    id _data;
+}
 -(void) startReqeust
 {
     [[[AppAPIHelper shared] getApplyAPI] shake:self];
@@ -75,12 +83,17 @@
 
 -(void) reqeust:(id)reqeust didComplete:(id)data
 {
+    _data = [data objectAtIndex:0];
     InfoViewStyle *view = [InfoViewStyle loadFromNib];
     [[view setupButton] setHidden:YES];
-    [view setData:[data objectAtIndex:0]];
-    [self didComplete:[data objectAtIndex:0] view:view];
+    [view setData:_data];
+    [self didComplete:_data view:view];
 }
 
+-(void) didSelect:(UIViewController*) viewController
+{
+    [viewController.navigationController pushAppDetailsViewController:_data animated:YES];
+}
 
 -(NSString*) description
 {
@@ -89,9 +102,21 @@
 @end
 
 @implementation BeaconShakeTask
+{
+    id _data;
+}
+
+-(void) didSelect:(UIViewController*) viewController
+{
+    [viewController.navigationController pushViewControllerWithIdentifier:@"BrowserViewController" completion:^(UIViewController *viewController) {
+        [viewController setTitle:[_data name]];
+        [(BrowserViewController*)viewController setUrl:(NSString*)[_data url]];
+    } animated:YES];
+}
 
 -(void) reqeust:(id)reqeust didComplete:(id)data
 {
+    _data = data;
     BeaconShakeView *view = [BeaconShakeView loadFromNib];
     [view setData:data];
     [self didComplete:data view:view];

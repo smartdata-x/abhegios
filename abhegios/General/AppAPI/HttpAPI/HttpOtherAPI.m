@@ -25,7 +25,7 @@
     [self request:path parameter:parameter delegate:delegate processBlock:^id(id data) {
         data = [data objectForKey:@"info"];
         if ( data != nil)
-            return [BeaconShakeInfo initWithDictionary:[data objectForKey:@"info"]];
+            return [BeaconShakeInfo initWithDictionary:data];
         else{
             NSDictionary *userInfo = [NSDictionary dictionaryWithObject:@"没有找到信息！" forKey:NSLocalizedDescriptionKey];
             return [NSError errorWithDomain:@"com.http.api" code:-1  userInfo:userInfo];

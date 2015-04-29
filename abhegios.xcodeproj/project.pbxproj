@@ -12,6 +12,7 @@
 		CA398F191AF09F3500FD6D2E /* BeaconShakeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA398F181AF09F3500FD6D2E /* BeaconShakeView.xib */; };
 		CA398F1D1AF0A18D00FD6D2E /* BeaconShakeView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA398F1C1AF0A18D00FD6D2E /* BeaconShakeView.m */; };
 		CA398F201AF0A2B500FD6D2E /* BeaconShakeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CA398F1F1AF0A2B500FD6D2E /* BeaconShakeInfo.m */; };
+		CA398F231AF0C7C000FD6D2E /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA398F221AF0C7C000FD6D2E /* BrowserViewController.m */; };
 		CA9676CF1AEFC1E7006D7C41 /* shake_male.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CA9676CC1AEFC1E7006D7C41 /* shake_male.mp3 */; };
 		CA9676D01AEFC1E7006D7C41 /* shake_match.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CA9676CD1AEFC1E7006D7C41 /* shake_match.mp3 */; };
 		CA9676D11AEFC1E7006D7C41 /* shake_nomatch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CA9676CE1AEFC1E7006D7C41 /* shake_nomatch.mp3 */; };
@@ -231,6 +232,8 @@
 		CA398F1C1AF0A18D00FD6D2E /* BeaconShakeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconShakeView.m; sourceTree = "<group>"; };
 		CA398F1E1AF0A2B500FD6D2E /* BeaconShakeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconShakeInfo.h; sourceTree = "<group>"; };
 		CA398F1F1AF0A2B500FD6D2E /* BeaconShakeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconShakeInfo.m; sourceTree = "<group>"; };
+		CA398F211AF0C7C000FD6D2E /* BrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserViewController.h; sourceTree = "<group>"; };
+		CA398F221AF0C7C000FD6D2E /* BrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserViewController.m; sourceTree = "<group>"; };
 		CA9676CC1AEFC1E7006D7C41 /* shake_male.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shake_male.mp3; sourceTree = "<group>"; };
 		CA9676CD1AEFC1E7006D7C41 /* shake_match.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shake_match.mp3; sourceTree = "<group>"; };
 		CA9676CE1AEFC1E7006D7C41 /* shake_nomatch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shake_nomatch.mp3; sourceTree = "<group>"; };
@@ -1417,6 +1420,8 @@
 				EAA2017D1AC8DEB500E088CE /* SearchView.m */,
 				EAA2017E1AC8DEB500E088CE /* TableViewHeader.h */,
 				EAA2017F1AC8DEB500E088CE /* TableViewHeader.m */,
+				CA398F211AF0C7C000FD6D2E /* BrowserViewController.h */,
+				CA398F221AF0C7C000FD6D2E /* BrowserViewController.m */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -1833,6 +1838,7 @@
 				CBE50BEC1AC9AF4F000265DC /* MovieDetailInfo.m in Sources */,
 				CBE50BD71AC99DDB000265DC /* MovieCenterTableViewCellStyle3.m in Sources */,
 				CB1B41AB1ADEC3AD000D61B9 /* DirectMPMoviePlayerViewController.m in Sources */,
+				CA398F231AF0C7C000FD6D2E /* BrowserViewController.m in Sources */,
 				EAA2020A1AC8DEB600E088CE /* BookDetailInfoTableViewCellStyle5.m in Sources */,
 				EAA2025B1AC8DEB600E088CE /* MusicInfo.m in Sources */,
 				EAA2023D1AC8DEB600E088CE /* WBLogin.m in Sources */,

@@ -19,7 +19,7 @@
     NSArray *_soundIDs;
     UIView  *_infoView;
     UITapGestureRecognizer  *_tapGestureRec;
-    id           _shakeData;
+    ShakeTask *_task;
 }
 @end
 
@@ -46,23 +46,26 @@
 
 -(IBAction) didShakeInfo:(id)sender
 {
-    [self.navigationController pushAppDetailsViewController:_shakeData animated:YES];
+    [_task didSelect:self];
 }
 
 
 -(void) viewDidAppear:(BOOL)animated
 {
+    [self initSounds];
+}
+
+-(void) initSounds
+{
     NSMutableArray *array = [[NSMutableArray alloc] init];
     SystemSoundID soundID;
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"shake_male" ofType:@"mp3"];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:path], &soundID);
-    [array addObject:@(soundID)];
-    path = [[NSBundle mainBundle] pathForResource:@"shake_match" ofType:@"mp3"];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:path], &soundID);
-    [array addObject:@(soundID)];
-    path = [[NSBundle mainBundle] pathForResource:@"shake_nomatch" ofType:@"mp3"];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:path], &soundID);
-    [array addObject:@(soundID)];
+    NSString *path = nil;
+    NSArray *mp3s = @[@"shake_male",@"shake_match",@"shake_nomatch"];
+    for (NSString *name in mp3s) {
+        path = [[NSBundle mainBundle] pathForResource:name ofType:@"mp3"];
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:path], &soundID);
+        [array addObject:@(soundID)];
+    }
     _soundIDs = array;
 }
 
@@ -77,7 +80,6 @@
 
 -(void) shakeTask:(ShakeTask *)shakeTask didComplete:(id)data view:(UIView *)view
 {
-    _shakeData = data;
     [_infoView removeFromSuperview];
     _infoView = view;
     [_infoView setFrame:CGRectMake(1, 0.5, CGRectGetWidth([_shakeInfo frame])-20, CGRectGetHeight([_shakeInfo frame])-1)];
@@ -143,12 +145,12 @@
 -(void) didReqeust
 {
 
-    ShakeTask *task = [self getShakeTask];
-    if( task != nil)
+    _task = [self getShakeTask];
+    if( _task != nil)
     {
-        [self showLoad:[NSString stringWithFormat:@"正在搜索%@信息",[task description]]];
-        [task setDelegate:self];
-        [self performSelector:@selector(startTask:) withObject:task afterDelay:0.5];
+        [self showLoad:[NSString stringWithFormat:@"正在搜索%@信息",[_task description]]];
+        [_task setDelegate:self];
+        [self performSelector:@selector(startTask:) withObject:_task afterDelay:0.5];
     }
 
 }
@@ -196,6 +198,11 @@
         [self didShake];
     }
     
+}
+
+-(void) motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    [_shakeInfo setHidden:YES];
 }
 
 -(void) tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
