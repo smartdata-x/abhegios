@@ -7,11 +7,10 @@
 //
 
 #import "MainViewController.h"
-#import "ShakeViewController.h"
 #import <OEZCommSDK/OEZCommSDK.h>
 @interface MainViewController ()<UITabBarControllerDelegate>
 {
-    NSInteger  _lastSelectIndex;
+    
 }
 @end
 
@@ -22,7 +21,6 @@
     [self.navigationController.navigationBar setTranslucent:FALSE];
     [[self tabBar] setTranslucent:NO];
     [self setDelegate:self];
-    _lastSelectIndex = 0;
     // Do any additional setup after loading the view.
 }
 
@@ -40,17 +38,5 @@
     [self setTitle:[selectedViewController title]];
     [super setSelectedViewController:selectedViewController];
 }
-
-
-- (BOOL) tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
-{
-    if ([viewController isKindOfClass:[ShakeViewController class]]) {
-        [self.navigationController pushViewControllerWithIdentifier:@"ShakeViewController" animated:YES];
-        return NO;
-    } else {
-        return YES;
-    }
-}
-
 
 @end

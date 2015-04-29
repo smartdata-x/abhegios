@@ -42,5 +42,13 @@
 		<key>icon</key>
 		<string>flim_icon</string>
 	</dict>
+    <dict>
+        <key>identifier</key>
+        <string>ShakeSegue</string>
+        <key>title</key>
+        <string>摇一摇</string>
+        <key>icon</key>
+        <string>shake_phone</string>
+    </dict>
 </array>
 </plist>

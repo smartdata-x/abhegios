@@ -21,7 +21,6 @@
                     <connections>
                         <segue destination="DD1-h7-jRc" kind="relationship" relationship="viewControllers" id="1On-4D-1Zs"/>
                         <segue destination="OqO-Fl-P5t" kind="relationship" relationship="viewControllers" id="A4R-g7-hUY"/>
-                        <segue destination="vT2-JV-Eeb" kind="relationship" relationship="viewControllers" id="lr4-qu-ceQ"/>
                         <segue destination="gUz-n7-OsD" kind="relationship" relationship="viewControllers" id="yZM-eH-D8d"/>
                         <segue destination="kFP-6u-BoU" kind="relationship" relationship="viewControllers" id="4wY-kF-wev"/>
                     </connections>
@@ -219,6 +218,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="摇一摇" image="shake_phone" id="PHn-2Y-QPq"/>
+                    <navigationItem key="navigationItem" id="dwU-aE-Sa9"/>
                     <connections>
                         <outlet property="bottom" destination="8ly-it-PLg" id="y0W-py-K0N"/>
                         <outlet property="bottomImageConstraint" destination="IZJ-5X-h0E" id="Tx3-BX-SWD"/>
@@ -230,7 +230,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HaR-GB-V17" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="700" y="1472"/>
+            <point key="canvasLocation" x="1260" y="1720"/>
         </scene>
         <!--WIFI-->
         <scene sceneID="mUm-PU-tox">
@@ -333,6 +333,7 @@
                         <segue destination="Pp0-0U-Kdk" kind="push" identifier="BookSegue" id="O6g-Bg-NzH"/>
                         <segue destination="1iO-mU-VMV" kind="push" identifier="MovieSegue" id="Fcc-Me-IXG"/>
                         <segue destination="IYr-bQ-UIs" kind="push" identifier="MusicSegue" id="pmA-5D-T3e"/>
+                        <segue destination="vT2-JV-Eeb" kind="push" identifier="ShakeSegue" id="eJD-gy-r3W"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="61T-rQ-xC4" userLabel="First Responder" sceneMemberID="firstResponder"/>

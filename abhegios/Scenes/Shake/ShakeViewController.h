@@ -20,3 +20,15 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomImageTopConstraint;
 
 @end
+@protocol  ShakeTaskDelegate;
+@interface BaseShakeTask : NSObject
+@property(nonatomic,assign) id<ShakeTaskDelegate>     delegate;
+@end
+
+@interface AppShakeTask : BaseShakeTask
+
+@end
+
+@interface BeaconShakeTask : BaseShakeTask
+
+@end
