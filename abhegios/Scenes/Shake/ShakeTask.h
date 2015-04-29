@@ -21,6 +21,8 @@ typedef NS_ENUM(NSInteger, ShakeTaskType) {
 @property(nonatomic,assign) id<ShakeTaskDelegate>     delegate;
 -(void) startReqeust;
 -(void) didNext;
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;
+
 +(ShakeTask*) shakeTaskFactory:(ShakeTaskType) type;
 @end
 

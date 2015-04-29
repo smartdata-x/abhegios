@@ -26,7 +26,9 @@
 
 
 @implementation ShakeTask
-
+{
+   @protected id                      _data;
+}
 -(void) reqeust:(id)reqeust didComplete:(id)data
 {
 
@@ -34,6 +36,7 @@
 
 -(void)  didComplete:(id) data view:(UIView*) view
 {
+     _data = data;
     if ( [_delegate conformsToProtocol:@protocol(ShakeTaskDelegate)]) {
         [_delegate shakeTask:self didComplete:data view:view];
     }
@@ -56,6 +59,20 @@
     
 }
 
+-(void) performSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    [[self.delegate callViewController:self] performSegueWithIdentifier:identifier sender:self];
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    id viewController = segue.destinationViewController;
+    if ( [viewController respondsToSelector:@selector(setData:)])
+    {
+        [viewController setData:_data];
+    }
+}
+
 +(ShakeTask*) shakeTaskFactory:(ShakeTaskType) type
 {
     switch (type) {
@@ -75,7 +92,6 @@
 
 @implementation AppShakeTask
 {
-    id                      _data;
     UITapGestureRecognizer  *_tapGestureRec;
 }
 -(id) init
@@ -86,31 +102,35 @@
 }
 -(IBAction) didAppInfo:(id)sender
 {
-    [[[self.delegate callViewController:self] navigationController] pushAppDetailsViewController:[_data objectAtIndex:0] animated:YES];
+    [self performSegueWithIdentifier:@"AppDetailsSegue" sender:self];
 }
 -(void) startReqeust
 {
     [[[AppAPIHelper shared] getApplyAPI] shake:self];
 }
 
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    id viewController = segue.destinationViewController;
+    if( [[segue identifier] isEqualToString:@"AppDetailsSegue"])
+        [viewController setData:[_data objectAtIndex:0]];
+    else
+        [super prepareForSegue:segue sender:sender];
+}
+
 -(void) reqeust:(id)reqeust didComplete:(id)data
 {
-    _data = data;
     InfoViewStyle *view = [InfoViewStyle loadFromNib];
     [view setUserInteractionEnabled:YES];
     [view addGestureRecognizer:_tapGestureRec];
     [[view setupButton] setHidden:YES];
     [view setData:[data objectAtIndex:0]];
-    [self didComplete:[data objectAtIndex:0] view:view];
+    [self didComplete:data view:view];
 }
 
 -(void) didNext
-
 {
-    
-    [[[self.delegate callViewController:self] navigationController ] pushViewControllerWithIdentifier:@"AppsShakeViewController" completion:^(UIViewController *viewController) {
-        [(AppsShakeViewController*)viewController setData:_data];
-    } animated:YES];
+    [self performSegueWithIdentifier:@"AppsShakeSegue" sender:self];
 }
 
 -(NSString*) description
@@ -121,20 +141,16 @@
 
 @implementation BeaconShakeTask
 {
-    id _data;
+    
 }
 
 -(void) didNext
 {
-     [[[self.delegate callViewController:self] navigationController ]  pushViewControllerWithIdentifier:@"BrowserViewController" completion:^(UIViewController *viewController) {
-        [viewController setTitle:[_data name]];
-        [(BrowserViewController*)viewController setUrl:(NSString*)[_data url]];
-    } animated:YES];
+    [self performSegueWithIdentifier:@"BrowserSegue" sender:self];
 }
 
 -(void) reqeust:(id)reqeust didComplete:(id)data
 {
-    _data = data;
     BeaconShakeView *view = [BeaconShakeView loadFromNib];
     [view setData:data];
     [self didComplete:data view:view];

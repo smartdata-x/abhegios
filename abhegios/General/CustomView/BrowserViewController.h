@@ -11,4 +11,5 @@
 @interface BrowserViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (nonatomic,copy) NSString *url;
+-(void) setData:(id) data;
 @end

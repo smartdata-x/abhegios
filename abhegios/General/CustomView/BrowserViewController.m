@@ -46,5 +46,9 @@
     [_activityIndicator stopAnimating];
 }
 
+-(void) setData:(id) data
+{
+    [self setUrl:(NSString*)[data url]];
+}
 
 @end

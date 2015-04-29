@@ -40,6 +40,7 @@
     //默认禁用点击手势，当显示左侧菜单时启用
     [_shakeInfo setUserInteractionEnabled:YES];
     [_shakeInfo addGestureRecognizer:_tapGestureRec];
+    [self initSounds];
     [self stopLoad];
 }
 
@@ -47,12 +48,6 @@
 -(IBAction) didShakeInfo:(id)sender
 {
     [_task didNext];
-}
-
-
--(void) viewDidAppear:(BOOL)animated
-{
-    [self initSounds];
 }
 
 -(void) initSounds
@@ -217,6 +212,11 @@
         [self stopLoad];
         [_shakeInfo setHidden:YES];
     }
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    [_task prepareForSegue:segue sender:sender];
 }
 
 @end

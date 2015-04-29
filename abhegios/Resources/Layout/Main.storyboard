@@ -284,6 +284,9 @@
                         <outlet property="tipsLabel" destination="WZ8-4G-IIe" id="cmP-A5-ZbX"/>
                         <outlet property="top" destination="vkb-O9-EIH" id="Db9-9n-a2P"/>
                         <outlet property="topImageConstraint" destination="ad7-na-ouV" id="Ank-Dh-C6J"/>
+                        <segue destination="ije-J6-OfD" kind="push" identifier="AppDetailsSegue" id="apC-PL-69G"/>
+                        <segue destination="udg-rx-nnm" kind="push" identifier="BrowserSegue" id="6wB-6B-8zb"/>
+                        <segue destination="4QN-du-C8q" kind="push" identifier="AppsShakeSegue" id="fYu-Gi-R6t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HaR-GB-V17" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -303,7 +306,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3O-Ds-Ffg">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
@@ -315,6 +318,7 @@
                             <constraint firstItem="Jdf-SQ-lOX" firstAttribute="top" secondItem="Z3O-Ds-Ffg" secondAttribute="bottom" id="yrX-Ap-pfx"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="iEC-kQ-X3l"/>
                     <connections>
                         <outlet property="webView" destination="Z3O-Ds-Ffg" id="KVe-Fy-0ik"/>
                     </connections>
@@ -1905,10 +1909,10 @@
             </objects>
             <point key="canvasLocation" x="3323" y="1711"/>
         </scene>
-        <!--应用-->
+        <!--摇一摇应用-->
         <scene sceneID="Cgw-2p-8aG">
             <objects>
-                <tableViewController storyboardIdentifier="AppsShakeViewController" title="应用" id="4QN-du-C8q" customClass="AppsShakeViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AppsShakeViewController" title="应用" id="4QN-du-C8q" userLabel="摇一摇应用" customClass="AppsShakeViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="leV-a0-Bur">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1968,6 +1972,7 @@
         <image name="you_fav_book" width="145" height="72"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="apC-PL-69G"/>
         <segue reference="O2w-Xd-mhx"/>
     </inferredMetricsTieBreakers>
 </document>
