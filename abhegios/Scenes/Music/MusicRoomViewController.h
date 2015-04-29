@@ -17,4 +17,5 @@
 @property (weak, nonatomic) IBOutlet UIButton *trash;
 @property (weak, nonatomic) IBOutlet UIButton *love;
 @property (weak, nonatomic) IBOutlet UIButton *next;
+-(void) setData:(id) data;
 @end

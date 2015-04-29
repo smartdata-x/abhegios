@@ -153,6 +153,7 @@ typedef NS_ENUM(NSInteger, AppTableViewCellStyle) {
                 [self performSegueWithIdentifier:@"BookSegue" sender:self];
                 break;
             case EntityType_Music:
+                [self performSegueWithIdentifier:@"MusicSegue" sender:self];
                 break;
             case EntityType_Movie:
                 [self performSegueWithIdentifier:@"MovieSegue" sender:self];

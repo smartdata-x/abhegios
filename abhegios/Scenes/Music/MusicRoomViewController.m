@@ -118,4 +118,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void) setData:(id) data
+{
+    
+}
+
 @end
