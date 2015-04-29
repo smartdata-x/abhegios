@@ -9,6 +9,8 @@
 #import "ShakeViewController.h"
 #import "AppAPIHelper.h"
 #import "ReqeustDelegate.h"
+#define kMoveHeight 59.5
+#define KMoveDuration 0.5
 @interface ShakeViewController ()<UITabBarDelegate,ReqeustDelegate>
 
 @end
@@ -19,26 +21,14 @@
     [super viewDidLoad];
     [self setTitle:@"摇一摇"];
     [_tabBar setSelectedItem:[_tabBar.items objectAtIndex:1]];
-    NSLog(@"kScreenScale %@",@(kScreenScale));
-    if( kScreenScale == 3 )
-    {
-        [_bottomImageTopConstraint setConstant:-1.5];
-    }
-    else
-    {
-        [_bottomImageTopConstraint setConstant:-1.0];
-    }
+    [_bottomImageTopConstraint setConstant:-1.5];
     [_topImageConstraint setConstant:-2.5];
     [_bottomImageConstraint setConstant:0.5];
-    
-    [[[AppAPIHelper shared] getApplyAPI] shake:self];
-    
-    // Do any additional setup after loading the view.
 }
 
 -(void) reqeust:(id)reqeust didComplete:(id)data
 {
-    
+   
 }
 
 -(void) reqeust:(id)reqeust didError:(NSError *)err
@@ -70,56 +60,54 @@
     return [[_tabBar items] indexOfObject:[_tabBar selectedItem]];
 }
 
-- (void) motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
-
+-(void) didReqeust
 {
-    
-    //检测到摇动
-    
+    NSInteger selIdx = [self selectIndex];
+    switch (selIdx) {
+        case 0:
+            break;
+        case 1:
+            [[[AppAPIHelper shared] getApplyAPI] shake:self];
+            break;
+        case 2:
+            break;
+        default:
+            return;
+    }
 }
-
-
-
-- (void) motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event
-
+-(void) didShake
 {
-    
-    //摇动取消
-    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"shake_male" ofType:@"mp3"];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:path], &_soundID);
+    AudioServicesPlaySystemSound(_soundID);
+    CGRect oldTopRect = [_top frame];
+    CGRect oldBottomRect = [_bottom frame];
+    CGRect newTopRect = [_top frame];
+    newTopRect.origin.y -= kMoveHeight;
+    CGRect newBottomRect = [_bottom frame];
+    newBottomRect.origin.y += kMoveHeight;
+    [UIView animateWithDuration:KMoveDuration animations:^{
+        [_top setFrame:newTopRect];
+        [_bottom setFrame:newBottomRect];
+        
+    }completion:^(BOOL finished) {
+        [UIView animateWithDuration:KMoveDuration animations:^{
+            [_top setFrame:oldTopRect];
+            [_bottom setFrame:oldBottomRect];
+            [self didReqeust];
+        } completion:^(BOOL finished) {
+            
+        }];
+    }];
 }
-
-
 
 - (void) motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
 
 {
-    
     //摇动结束
-    
-    if (event.subtype == UIEventSubtypeMotionShake) {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"shake_male" ofType:@"mp3"];
-        AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:path], &_soundID);
-        AudioServicesPlaySystemSound(_soundID);
-        CGRect oldTopRect = [_top frame];
-        CGRect oldBottomRect = [_bottom frame];
-        CGRect newTopRect = [_top frame];
-        newTopRect.origin.y -= 59.5;
-        CGRect newBottomRect = [_bottom frame];
-        newBottomRect.origin.y += 59.5;
-        [UIView animateWithDuration:0.5 animations:^{
-            [_top setFrame:newTopRect];
-            [_bottom setFrame:newBottomRect];
-
-        }completion:^(BOOL finished) {
-            [UIView animateWithDuration:0.5 animations:^{
-                [_top setFrame:oldTopRect];
-                [_bottom setFrame:oldBottomRect];
-            } completion:^(BOOL finished) {
-                
-            }];
-        }];
-        
-        
+    if (event.subtype == UIEventSubtypeMotionShake)
+    {
+        [self didShake];
     }
     
 }
