@@ -68,4 +68,12 @@
     }];
 }
 
+-(void) shake:(id<ReqeustDelegate>) delegate
+{
+    static NSString *path = @"/store/1/shark.fcgi";
+    [self request:path parameter:nil delegate:delegate processBlock:^id(id data) {
+        return [AppInfo initWithsDictionarys:[data objectForKey:@"list"]];
+    }];
+}
+
 @end

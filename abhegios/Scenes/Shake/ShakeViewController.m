@@ -7,8 +7,9 @@
 //
 
 #import "ShakeViewController.h"
-
-@interface ShakeViewController ()<UITabBarDelegate>
+#import "AppAPIHelper.h"
+#import "ReqeustDelegate.h"
+@interface ShakeViewController ()<UITabBarDelegate,ReqeustDelegate>
 
 @end
 
@@ -18,12 +19,31 @@
     [super viewDidLoad];
     [self setTitle:@"摇一摇"];
     [_tabBar setSelectedItem:[_tabBar.items objectAtIndex:1]];
+    NSLog(@"kScreenScale %@",@(kScreenScale));
+    if( kScreenScale == 3 )
+    {
+        [_bottomImageTopConstraint setConstant:-1.5];
+    }
+    else
+    {
+        [_bottomImageTopConstraint setConstant:-1.0];
+    }
     [_topImageConstraint setConstant:-2.5];
     [_bottomImageConstraint setConstant:0.5];
-    [_bottomImageTopConstraint setConstant:-1.5];
     
+    [[[AppAPIHelper shared] getApplyAPI] shake:self];
     
     // Do any additional setup after loading the view.
+}
+
+-(void) reqeust:(id)reqeust didComplete:(id)data
+{
+    
+}
+
+-(void) reqeust:(id)reqeust didError:(NSError *)err
+{
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -94,6 +114,8 @@
             [UIView animateWithDuration:0.5 animations:^{
                 [_top setFrame:oldTopRect];
                 [_bottom setFrame:oldBottomRect];
+            } completion:^(BOOL finished) {
+                
             }];
         }];
         

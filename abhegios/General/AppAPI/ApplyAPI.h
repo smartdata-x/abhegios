@@ -16,4 +16,5 @@
 -(void) getSpecialTopics:(NSInteger) tID delegate:(id<ReqeustDelegate>) delegate;
 -(void) getAppPersonal:(id<ReqeustDelegate>) delegate;
 -(void) getGamePersonal:(id<ReqeustDelegate>) delegate;
+-(void) shake:(id<ReqeustDelegate>) delegate;
 @end

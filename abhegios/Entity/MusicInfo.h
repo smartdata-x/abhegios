@@ -8,6 +8,7 @@
 
 #import "BaseInfo.h"
 
-@interface MusicInfo : BaseInfoMoreONSP
-@property NSUInteger listen;
+@interface MusicInfo : BaseInfoMoreONS
+@property NSUInteger like;
+@property (nonatomic, copy) NSString *logo;
 @end

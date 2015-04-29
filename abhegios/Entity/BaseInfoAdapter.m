@@ -49,7 +49,7 @@
         case EntityType_Book:
             return [NSString stringWithFormat:@"阅读次数 %@",@([info read])];
         case EntityType_Music:
-            return [NSString stringWithFormat:@"试听次数 %@",@([info listen])];
+            return [NSString stringWithFormat:@"点赞次数 %@",@([info like])];
         case EntityType_Movie:
             return [NSString stringWithFormat:@"观看次数 %@",@([info play])];
         default:
