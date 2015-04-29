@@ -85,7 +85,6 @@
     [_shakeInfo setHidden:NO];
     [self AudioServicesPlaySystemSound:kShakeMatch];
     AudioServicesDisposeSystemSoundID(kSystemSoundID_Vibrate);
-    [self stopLoad];
 }
 
 -(void) shakeTask:(ShakeTask *)shakeTask didError:(NSError *)error
@@ -165,6 +164,7 @@
 }
 -(void) didShake
 {
+    [self stopLoad];
     [self AudioServicesPlaySystemSound:kShakeMale];
     CGRect oldTopRect = [_top frame];
     CGRect oldBottomRect = [_bottom frame];
