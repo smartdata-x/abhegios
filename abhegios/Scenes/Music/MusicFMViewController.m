@@ -12,6 +12,8 @@
 #import "GroupInfo.h"
 #import "MusicFMInfo.h"
 #import "MoviePlayViewController.h"
+#include "UserHelper.h"
+#import "UserInfo.h"
 
 @interface MusicFMViewController ()
 @property (nonatomic, retain) NSArray *sectionInfo;
@@ -177,6 +179,11 @@
         NSInteger sid = [[[[_sectionInfo objectAtIndex:indexPath.section-1] entitys] objectAtIndex:indexPath.row] sid];
         [PlayerInstance setMusicParams:dimension Sid:sid ForceReload:YES];
         [self.navigationController popViewControllerAnimated:YES];
+    }
+    else if (IS_SECTION(0)) {
+        if (IS_ROW(0)) {
+            [PlayerInstance setMusicClt:[[[UserHelper shared] currentUser] uid] ForceReload:YES];
+        }
     }
 }
 

@@ -13,4 +13,5 @@
 - (void)collectSong:(NSInteger)sid delegate:(id<ReqeustDelegate>)delegate;
 - (void)deleteCltSong:(NSInteger)sid delegate:(id<ReqeustDelegate>)delegate;
 - (void)hateSong:(NSInteger)sid delegate:(id<ReqeustDelegate>)delegate;
+- (void)getMusicClt:(NSInteger)tid delegate:(id<ReqeustDelegate>)delegate;
 @end

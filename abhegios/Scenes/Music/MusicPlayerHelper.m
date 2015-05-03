@@ -47,6 +47,11 @@
     }
 }
 
+- (void)setMusicClt:(NSInteger)tid ForceReload:(BOOL)reload {
+    [_musicList cleanList];
+    [[[AppAPIHelper shared] getMusicAPI] getMusicClt:tid delegate:self];
+}
+
 - (void)updateViewProgress:(id)view {
     MusicInfoViewStyle1 *viewStyle1 = (MusicInfoViewStyle1 *)view;
     [viewStyle1 updateProcessLine:[_musicPlayer getPlayProgress]];

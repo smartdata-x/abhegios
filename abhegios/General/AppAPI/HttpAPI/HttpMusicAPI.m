@@ -18,6 +18,13 @@
     }];
 }
 
+- (void)getMusicClt:(NSInteger)tid delegate:(id<ReqeustDelegate>)delegate {
+    static NSString *path = @"/music/1/getcltsongs.fcgi";
+    [self request:path parameter:[NSDictionary dictionaryWithObject:@(tid) forKey:@"tid"] delegate:delegate processBlock:^id(id data) {
+        return [GroupInfo initWithsConfigAndDataDictionarys:@"musicroom" groupsData:data entityClass:[MusicRoomInfo class]];
+    }];
+}
+
 - (void)collectSong:(NSInteger)sid delegate:(id<ReqeustDelegate>)delegate {
     NSString *path = @"/music/1/collectsong.fcgi";
     [self request:path parameter:[NSDictionary dictionaryWithObject:@(sid) forKey:@"songid"] delegate:delegate processBlock:^id(id data) {
