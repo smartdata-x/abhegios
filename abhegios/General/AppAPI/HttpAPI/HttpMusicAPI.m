@@ -25,17 +25,17 @@
     }];
 }
 
-- (void)collectSong:(NSInteger)sid delegate:(id<ReqeustDelegate>)delegate {
+- (void)collectSong:(NSInteger)sid tid:(NSInteger)tid dimension:(NSString *)dimension delegate:(id<ReqeustDelegate>)delegate {
     NSString *path = @"/music/1/collectsong.fcgi";
-    [self request:path parameter:[NSDictionary dictionaryWithObject:@(sid) forKey:@"songid"] delegate:delegate processBlock:^id(id data) {
-        return nil;
+    [self request:path parameter:[NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:@(sid), @(tid), dimension, nil] forKeys:[NSArray arrayWithObjects:@"songid", @"sid", @"dimension", nil]] delegate:delegate processBlock:^id(id data) {
+        return REQUEST_COLLECTSONG;
     }];
 }
 
 - (void)deleteCltSong:(NSInteger)sid delegate:(id<ReqeustDelegate>)delegate {
-    static NSString *path = @"/music/1/cdelcltsong.fcgi";
+    static NSString *path = @"/music/1/delcltsong.fcgi";
     [self request:path parameter:[NSDictionary dictionaryWithObject:@(sid) forKey:@"songid"] delegate:delegate processBlock:^id(id data) {
-        return nil;
+        return REQUEST_DELETESONG;
     }];
 }
 

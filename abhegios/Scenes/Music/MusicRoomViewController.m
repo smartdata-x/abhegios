@@ -85,16 +85,30 @@
 
 - (IBAction)doLove:(id)sender {
     MusicRoomInfo *currentInfo = [PlayerInstance getCurrentMusicInfo];
-    NSString *likeImg = @"love_icon.png";
     if (currentInfo.like) {
-        [[[AppAPIHelper shared] getMusicAPI] deleteCltSong:currentInfo.id delegate:nil];
+        [[[AppAPIHelper shared] getMusicAPI] deleteCltSong:currentInfo.id delegate:self];
     }
     else {
-        [[[AppAPIHelper shared] getMusicAPI] collectSong:currentInfo.id delegate:nil];
+        [[[AppAPIHelper shared] getMusicAPI] collectSong:currentInfo.id tid:PlayerInstance.sid dimension:PlayerInstance.dimension delegate:self];
+    }
+}
+
+- (void)reqeust:(id)reqeust didComplete:(id)data {
+    MusicRoomInfo *currentInfo = [PlayerInstance getCurrentMusicInfo];
+    NSString *resultStr = (NSString *)data;
+    NSString *likeImg = @"love_icon.png";
+    if ([resultStr isEqualToString:REQUEST_COLLECTSONG]) {
         likeImg = @"love_on.png";
+    }
+    else if ([resultStr isEqualToString:REQUEST_DELETESONG]) {
+        
     }
     [_love setBackgroundImage:[UIImage imageNamed:likeImg] forState:UIControlStateNormal];
     currentInfo.like = !currentInfo.like;
+}
+
+- (void)reqeust:(id)reqeust didError:(NSError *)err {
+    
 }
 
 - (void)gotoMusicFMView {

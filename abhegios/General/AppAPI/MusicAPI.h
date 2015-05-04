@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "ReqeustDelegate.h"
+#define REQUEST_COLLECTSONG     @"0x1C"
+#define REQUEST_DELETESONG      @"0x2D"
 @protocol MusicAPI <NSObject>
 - (void)getMusicDimension:(id<ReqeustDelegate>) delegate Dimension:(NSString *)dimension Sid:(NSInteger)sid;
-- (void)collectSong:(NSInteger)sid delegate:(id<ReqeustDelegate>)delegate;
+- (void)collectSong:(NSInteger)sid tid:(NSInteger)tid dimension:(NSString *)dimension delegate:(id<ReqeustDelegate>)delegate;
 - (void)deleteCltSong:(NSInteger)sid delegate:(id<ReqeustDelegate>)delegate;
 - (void)hateSong:(NSInteger)sid delegate:(id<ReqeustDelegate>)delegate;
 - (void)getMusicClt:(NSInteger)tid delegate:(id<ReqeustDelegate>)delegate;
