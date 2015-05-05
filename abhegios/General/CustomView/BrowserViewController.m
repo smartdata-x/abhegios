@@ -31,7 +31,7 @@
 - (void) webViewDidStartLoad:(UIWebView *)webView
 {
     _activityIndicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 32.0f, 32.0f)];
-    [_activityIndicator setCenter:self.view.center];
+    [_activityIndicator setCenter:_webView.center];
     [_activityIndicator setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
     [self.view addSubview:_activityIndicator];
     

@@ -23,6 +23,7 @@
 
 @interface OEZHScrollView : UIScrollView
 //@property(nonatomic,assign) id<OEZHScrollViewDelegate>  delegate;
+//@protected(nonatomic,retain) UIColor *selectBackgroundColor;
 - (id)dequeueReusableCellWithIdentifier:(NSString *)identifier;
 - (void) reloadData;
 @end
