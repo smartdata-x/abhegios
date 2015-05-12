@@ -14,12 +14,23 @@
     NSInteger currentMusicIndex;
 }
 
+- (id)init {
+    self = [super init];
+    if (self) {
+        
+        musicCount = 0;
+        currentMusicIndex = 0;
+    }
+    return self;
+}
+
 - (void)setMusicList:(NSArray *)musiclist {
     if (_musicListArray == nil) {
         _musicListArray = [[NSMutableArray alloc] init];
     }
     [_musicListArray addObjectsFromArray:musiclist];
     musicCount = [_musicListArray count];
+    currentMusicIndex = currentMusicIndex - 1;
 }
 
 - (void)cleanList {
@@ -31,14 +42,14 @@
 }
 
 - (MusicRoomInfo *)getCurrentMusicInfo {
-    if (currentMusicIndex < musicCount - 1 && currentMusicIndex >= 0) {
+    if (currentMusicIndex <= musicCount - 1 && currentMusicIndex >= 0) {
         return [_musicListArray objectAtIndex:currentMusicIndex];
     }
     return nil;
 }
 
 - (MusicRoomInfo *)getNextMusicInfo {
-    if (currentMusicIndex >= musicCount - 1) {
+    if (currentMusicIndex > musicCount - 1) {
         return nil;
     }
     currentMusicIndex++;

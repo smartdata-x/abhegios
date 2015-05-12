@@ -67,7 +67,7 @@
 
 - (void)doNext {
     MusicRoomInfo *nextMusicInfo = [_musicList getNextMusicInfo];
-    if ([_musicList isListHaveNext] && nextMusicInfo) {
+    if (nextMusicInfo) {
         [self playWithStrUrl:nextMusicInfo.url];
         [self MusicHelperStateChange:MusicPlayerHelperStateNext];
     }
